@@ -85,7 +85,8 @@ function Shell() {
       <a href="#main" className="skip">
         {t.skip}
       </a>
-      <Header go={go} current={current} />
+      {/* 캔버스는 사이트 헤더 없이 화면 전체를 쓴다. 돌아가는 길은 캔버스 줄의 ← Back 이 맡고, 단축키(⌘K·I·T)는 전역이라 그대로 산다 */}
+      {route.name !== "canvas" && <Header go={go} current={current} />}
       <main id="main">
         {route.name === "home" && <Home go={go} />}
         {route.name === "app" && <AppDetail slug={route.slug} go={go} />}
