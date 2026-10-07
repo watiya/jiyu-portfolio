@@ -143,6 +143,13 @@ export const APP_DETAILS: AppDetail[] = [
     stack: ["React", "TypeScript", "Capacitor", "PWA", "Hand-drawn SVG charts"],
     sections: [
       {
+        heading: "Why I made it",
+        body: [
+          "I use a university hospital's patient app myself. Every visit I ran into the same friction, so I wrote down what got in the way and rebuilt the app with those fixes applied.",
+          "The patient in the demo is made up; the problems below come from real use.",
+        ],
+      },
+      {
         heading: "The problem",
         body: [
           "The existing app opened on a promotion banner and a grid of icons. The next appointment hid behind a floating button, and visit notes were raw record text that buried the one thing to do, like a blood draw two hours before the visit.",
