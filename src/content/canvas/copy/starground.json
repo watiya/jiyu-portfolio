@@ -4,6 +4,10 @@
       "ko": "10월 - 캐릭터와 출시 다듬기",
       "en": "October - character and launch polish"
     },
+    "00-web": {
+      "ko": "웹 - 데스크톱 폭",
+      "en": "Web - desktop width"
+    },
     "01-v2": {
       "ko": "스타그라운드 v2",
       "en": "StarGround v2"
@@ -440,6 +444,86 @@
       "desc": {
         "ko": "같은 구조를 민트 강조의 밝은 바탕으로 옮긴 변형이다. 장소 클레이 그림을 문제 머리에 처음 올린 판이기도 하다.",
         "en": "The same structure moved onto a light ground with a mint accent. It is also the first build to put a clay place illustration at the head of a question."
+      }
+    },
+    "00-web/001-today": {
+      "title": {
+        "ko": "오늘",
+        "en": "Today"
+      },
+      "desc": {
+        "ko": "왼쪽 레일과 오늘의 픽 다섯, 이번 주 출석을 한 화면에 둔다.",
+        "en": "The left rail, today's five picks and this week's attendance on one screen."
+      }
+    },
+    "00-web/002-season": {
+      "title": {
+        "ko": "픽 · 시즌",
+        "en": "Picks and season"
+      },
+      "desc": {
+        "ko": "주간 시즌 기록과 연속 정답, 시즌 순위를 두 칸으로 나란히 본다.",
+        "en": "Weekly season record, answer streak and season ranking side by side."
+      }
+    },
+    "00-web/003-ranking": {
+      "title": {
+        "ko": "시즌 순위",
+        "en": "Season ranking"
+      },
+      "desc": {
+        "ko": "시즌 순위 전체 보기. 내 자리는 맨 아래에 붙어 따라온다.",
+        "en": "The full season ranking. Your own row stays pinned at the bottom."
+      }
+    },
+    "00-web/004-crew": {
+      "title": {
+        "ko": "친구 순위",
+        "en": "Friends ranking"
+      },
+      "desc": {
+        "ko": "친구끼리의 순위와 오늘의 픽 결과를 함께 본다.",
+        "en": "Ranking among friends, next to today's pick results."
+      }
+    },
+    "00-web/005-receipt": {
+      "title": {
+        "ko": "영수증 응모",
+        "en": "Receipt entry"
+      },
+      "desc": {
+        "ko": "지정 상점 영수증을 모으는 미션과 응모 내역.",
+        "en": "The mission to collect receipts from listed stores, and past entries."
+      }
+    },
+    "00-web/006-reward": {
+      "title": {
+        "ko": "리워드",
+        "en": "Rewards"
+      },
+      "desc": {
+        "ko": "순위에 따라 받는 리워드와 지급 일정을 먼저 보여 준다.",
+        "en": "Rewards by rank and the payout schedule, up front."
+      }
+    },
+    "00-web/007-me": {
+      "title": {
+        "ko": "별포인트",
+        "en": "Star points"
+      },
+      "desc": {
+        "ko": "잔액, 내역, 초대, 출석을 한 화면에 내린다.",
+        "en": "Balance, history, invites and attendance in one scroll."
+      }
+    },
+    "00-web/008-history": {
+      "title": {
+        "ko": "내역",
+        "en": "History"
+      },
+      "desc": {
+        "ko": "별포인트가 들고 난 기록을 날짜별로 묶는다.",
+        "en": "Star point ins and outs, grouped by date."
       }
     }
   }

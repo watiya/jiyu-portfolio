@@ -22,7 +22,7 @@ test("색인: 캔버스 49, 전부 works.ts 의 작업이고 장수가 프레임
     const n = docs.get(s)!.pages.reduce((a, p) => a + p.frames.length, 0);
     assert.equal(n, (index as Record<string, number>)[s], s);
   }
-  assert.equal(slugs.reduce((a, s) => a + (index as Record<string, number>)[s], 0), 1664);
+  assert.equal(slugs.reduce((a, s) => a + (index as Record<string, number>)[s], 0), 1672);
 });
 
 test("프레임: 경로는 실제 파일, 치수는 양수, id 는 페이지 안에서 고유", () => {
