@@ -8,6 +8,7 @@ export const CASE_IMAGES: Record<string, string[]> = {
   "entry-without-a-wallet": ["genesis-entry"],
   "design-system-in-code": ["design-system-tokens"],
   "exposure-as-a-build": ["valuation-entry"],
+  starground: ["picks"],
 };
 export const hasCaseImage = (slug: string, id: string) => CASE_IMAGES[slug]?.includes(id) ?? false;
 

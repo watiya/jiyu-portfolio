@@ -17,6 +17,7 @@ const CASE_IMAGES: Record<string, string[]> = {
   "entry-without-a-wallet": ["genesis-entry"],
   "design-system-in-code": ["design-system-tokens"],
   "exposure-as-a-build": ["valuation-entry"],
+  starground: ["picks"],
 };
 
 const figures: Record<string, string> = Object.fromEntries(readdirSync(join(CONTENT, "figures")).map((f) => [f.replace(/\.svg$/, ""), readFileSync(join(CONTENT, "figures", f), "utf8")]));
@@ -32,16 +33,16 @@ function read(lang: "ko" | "en") {
 const ko = read("ko");
 const en = read("en");
 
-test("사례 10편, ko 와 en 의 슬러그·순서가 같다", () => {
-  assert.equal(ko.length, 10);
-  assert.equal(en.length, 10);
+test("사례 11편, ko 와 en 의 슬러그·순서가 같다", () => {
+  assert.equal(ko.length, 11);
+  assert.equal(en.length, 11);
   assert.deepEqual(
     ko.map((d) => d.slug),
     en.map((d) => d.slug),
   );
   assert.deepEqual(
     ko.map((d) => d.order),
-    Array.from({ length: 10 }, (_, i) => i + 1),
+    Array.from({ length: 11 }, (_, i) => i + 1),
   );
 });
 
