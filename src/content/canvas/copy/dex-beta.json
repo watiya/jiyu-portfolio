@@ -142,8 +142,8 @@
         "en": "Market - hot, new and top gainers"
       },
       "desc": {
-        "ko": "상단에 Hot·New·Top Gainers 패널 셋, 아래는 검색·정렬과 그리드·차트·리스트 뷰 토글이 있는 토큰 카드 그리드다. 다크 판이다.",
-        "en": "Three panels on top (hot, new, top gainers), then a token card grid with search, sort and grid/chart/list toggles. Dark theme."
+        "ko": "상단에 Hot·New·Top Gainers 패널 셋, 아래는 검색·정렬과 그리드·차트·리스트 뷰 토글이 있는 토큰 카드 그리드다. 라이트 판이다.",
+        "en": "Three panels on top (hot, new, top gainers), then a token card grid with search, sort and grid/chart/list toggles. Light theme."
       }
     },
     "01-ga/008-portfolio": {
