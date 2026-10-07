@@ -23,6 +23,8 @@ export type Work = {
   desktopShots?: true;
   /** 표지가 웹 화면 한 장일 때 상세에서 브라우저 창에 담는다. 아이콘 그림·여러 장 시안 표지에는 두지 않는다 */
   coverFrame?: "browser";
+  /** 상세 표지와 별개로 목록 카드에만 웹 화면을 브라우저 창에 담아 보인다. /work/<slug>-web.webp */
+  cardWebCover?: true;
   /** 표지 이미지가 없는 항목. 있으면 /work/<slug>.webp */
   noCover?: true;
   /** 이 사이트 안에서 돌아가는 작업. 상세에서 이 경로로 여는 버튼이 선다 */
@@ -35,7 +37,7 @@ export const WORKS: Work[] = [
   { slug: "entry-without-a-wallet", name: "Starzip Genesis", tagline: { ko: "지갑 없이도 끝까지 보게 하고 지갑은 살 때만 묻다", en: "Letting people see all of it without a wallet, and asking for one only at purchase" }, category: "product-web", year: "2026", client: "Starzip", caseSlug: "entry-without-a-wallet", liveUrl: "https://genesis.starzip.io/", featured: true, coverFrame: "browser" },
   { slug: "exposure-as-a-build", name: "Store Valuation", tagline: { ko: "방화벽을 푸는 대신 나갈 것만 따로 짓다", en: "Building only what goes out, instead of opening the firewall" }, category: "product-web", year: "2026", client: "Starzip", caseSlug: "exposure-as-a-build", featured: true, coverFrame: "browser" },
   { slug: "dex-beta", name: "Starzip DEX", tagline: { ko: "지역 상점 토큰을 사고파는 거래소의 베타부터 GA 까지", en: "The exchange for local-store tokens, from beta to GA" }, category: "product-web", year: "2026", client: "Starzip", caseSlug: "dex-beta", liveUrl: "https://app.starzip.io/", role: { ko: "제품 화면 설계 및 UI 구현", en: "Product screen design and UI build" }, coverFrame: "browser" },
-  { slug: "starground", name: "스타그라운드", tagline: { ko: "서울 데이터로 하루 다섯 문제를 맞히는 모바일 게임", en: "A mobile game of five daily questions on Seoul data" }, category: "concept", year: "2026", client: "Starzip", caseSlug: "starground", role: { ko: "컨셉 설계 및 프로토타입 구현", en: "Concept design and prototype build" }, desktopShots: true },
+  { slug: "starground", name: "스타그라운드", tagline: { ko: "서울 데이터로 하루 다섯 문제를 맞히는 모바일 게임", en: "A mobile game of five daily questions on Seoul data" }, category: "concept", year: "2026", client: "Starzip", caseSlug: "starground", role: { ko: "컨셉 설계 및 프로토타입 구현", en: "Concept design and prototype build" }, desktopShots: true, cardWebCover: true },
   { slug: "por", name: "PoR", tagline: { ko: "지역 지수를 오른다 · 내린다 토큰으로 사고파는 오더북 시장", en: "An order-book market trading local indices as up and down tokens" }, category: "concept", year: "2026", client: "Starzip", role: { ko: "컨셉 설계 및 프로토타입 구현", en: "Concept design and prototype build" }, coverFrame: "browser" },
   { slug: "design-system-in-code", name: "Design System in Code", tagline: { ko: "디자인 도구를 기준 자리에서 내리고 코드를 공용 패키지로 올리다", en: "The design tool is no longer the source of truth, and the code moved into packages" }, category: "design-system", year: "2026", client: "Starzip", caseSlug: "design-system-in-code", featured: true, coverFrame: "browser" },
   { slug: "agent-console", name: "Agent Console", tagline: { ko: "단계를 사람이 채우는 대신 에이전트가 계획하고 사람이 승인하게 하다", en: "Letting an agent plan the steps and a person approve them" }, category: "product-web", year: "2026", client: "Starzip", role: { ko: "프로토타입 설계 및 구현", en: "Prototype design and build" }, coverFrame: "browser" },

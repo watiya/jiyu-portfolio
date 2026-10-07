@@ -39,14 +39,14 @@ export function Work({ go }: { go: (href: string) => void }) {
           const open = { href: `/work/${w.slug}`, onClick };
           return (
           <li key={w.slug} id={w.slug} className="wk" data-token="card.bg card.line card.radius">
-            <a className="wk__cover" {...open} aria-label={w.name} data-framed={w.coverFrame || undefined}>
+            <a className="wk__cover" {...open} aria-label={w.name} data-framed={w.coverFrame || (w.cardWebCover && "browser") || undefined}>
               {w.noCover ? (
                 <span className="wk__cover-empty mono" aria-hidden="true">
                   {W.noCover}
                 </span>
-              ) : w.coverFrame === "browser" ? (
+              ) : w.coverFrame === "browser" || w.cardWebCover ? (
                 <BrowserFrame url={w.liveUrl}>
-                  <img src={`/work/${w.slug}.webp`} alt="" loading={i < 6 ? "eager" : "lazy"} decoding="async" />
+                  <img src={`/work/${w.slug}${w.cardWebCover ? "-web" : ""}.webp`} alt="" loading={i < 6 ? "eager" : "lazy"} decoding="async" />
                 </BrowserFrame>
               ) : (
                 <img src={`/work/${w.slug}.webp`} alt="" loading={i < 6 ? "eager" : "lazy"} decoding="async" />
