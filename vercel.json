@@ -1,36 +1,80 @@
 {
   "redirects": [
     {
-      "source": "/en/:section(work|cases)/:rest*",
+      "source": "/",
       "has": [
         {
           "type": "host",
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/:section/:rest*",
+      "destination": "https://www.brainchild.kr/projects",
       "permanent": true
     },
     {
-      "source": "/ko/:section(work|cases)/:rest*",
+      "source": "/en/:section(work|cases)",
       "has": [
         {
           "type": "host",
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/:section/:rest*?lang=ko",
+      "destination": "https://www.brainchild.kr/:section",
       "permanent": true
     },
     {
-      "source": "/:section(work|cases)/:rest*",
+      "source": "/ko/:section(work|cases)",
       "has": [
         {
           "type": "host",
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/:section/:rest*",
+      "destination": "https://www.brainchild.kr/:section?lang=ko",
+      "permanent": true
+    },
+    {
+      "source": "/:section(work|cases)",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/:section",
+      "permanent": true
+    },
+    {
+      "source": "/en/:section(work|cases)/:rest+",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/:section/:rest+",
+      "permanent": true
+    },
+    {
+      "source": "/ko/:section(work|cases)/:rest+",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/:section/:rest+?lang=ko",
+      "permanent": true
+    },
+    {
+      "source": "/:section(work|cases)/:rest+",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/:section/:rest+",
       "permanent": true
     },
     {
