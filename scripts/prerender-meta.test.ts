@@ -31,11 +31,11 @@ const TEMPLATE = `<!doctype html>
 
 const count = (html: string, needle: string) => html.split(needle).length - 1;
 
-test("경로 목록: 첫 화면·홈·사례 목록·사례 10·앱 6·작업·글", () => {
+test("경로 목록: 첫 화면·홈·사례 목록·사례 10·앱 6·작업·글·이력서", () => {
   const paths = routes.map((r) => r.path);
-  assert.equal(paths.length, 21);
+  assert.equal(paths.length, 22);
   assert.equal(new Set(paths).size, paths.length);
-  for (const p of ["/", "/projects", "/cases", "/work", "/writing"]) assert.ok(paths.includes(p), p);
+  for (const p of ["/", "/projects", "/cases", "/work", "/writing", "/resume"]) assert.ok(paths.includes(p), p);
   assert.equal(paths.filter((p) => p.startsWith("/cases/")).length, 10);
   assert.equal(paths.filter((p) => p.startsWith("/apps/")).length, 6);
   assert.ok(paths.includes("/cases/dex-beta"));
@@ -101,7 +101,7 @@ test("본명·em-dash 가 어떤 경로 메타에도 없다", () => {
 
 test("사이트맵·robots", () => {
   const xml = buildSitemap(routes.map((r) => r.path));
-  assert.equal(count(xml, "<loc>"), 21);
+  assert.equal(count(xml, "<loc>"), 22);
   assert.ok(xml.includes(`<loc>${SITE}/</loc>`) && xml.includes(`<loc>${SITE}/cases/dex-beta</loc>`));
   assert.ok(buildRobots().includes(`Sitemap: ${SITE}/sitemap.xml`));
 });

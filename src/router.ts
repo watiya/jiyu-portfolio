@@ -9,6 +9,7 @@ export type Route =
   | { name: "cases" }
   | { name: "case"; slug: string }
   | { name: "work" }
+  | { name: "resume" }
   | { name: "notfound"; path: string };
 
 export function parseRoute(path: string): Route {
@@ -20,6 +21,7 @@ export function parseRoute(path: string): Route {
   // /case-studies 는 3단계까지의 주소. 바깥에 남은 링크를 위해 같은 화면으로 받는다
   if (clean === "/cases" || clean === "/case-studies") return { name: "cases" };
   if (clean === "/work") return { name: "work" };
+  if (clean === "/resume") return { name: "resume" };
   const app = clean.match(/^\/apps\/([a-z0-9-]+)$/);
   if (app) return { name: "app", slug: app[1] };
   const kase = clean.match(/^\/cases\/([a-z0-9-]+)$/);

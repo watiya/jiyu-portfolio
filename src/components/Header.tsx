@@ -9,6 +9,7 @@ const NAV = [
   { key: "cases", href: "/cases", match: "/cases" },
   { key: "work", href: "/work", match: "/work" },
   { key: "writing", href: "/writing", match: "/writing" },
+  { key: "resume", href: "/resume", match: "/resume" },
   { key: "contact", href: "/projects#contact", match: "" },
 ] as const;
 

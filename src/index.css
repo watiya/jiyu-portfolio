@@ -990,3 +990,40 @@ html[data-motion="off"] .hero__caret { display: none; }
 html[data-motion="off"] .card-wrap { opacity: 1; transform: none; transition: none; }
 html[data-motion="off"] .card:hover .card__stage .phone { transform: none; }
 html[data-motion="off"] .card__stage::after { display: none; }
+
+/* 이력서. 본문은 .prose 를 그대로 쓰고, 이력서에만 있는 이름·경력 줄·표·주석·구분선을 더한다 */
+.resume { padding-block: var(--space-7) var(--space-10); }
+.resume__print { font-size: var(--text-xs); color: var(--text-muted); background: none; border: 1px solid var(--line-default); border-radius: var(--button-radius); padding: 2px var(--space-2); cursor: pointer; }
+.resume__print:hover { color: var(--text-default); border-color: var(--text-muted); }
+.resume__doc { margin-top: var(--space-5); }
+.resume__doc h1 { font-family: var(--font-heading); font-weight: var(--heading-weight); font-style: var(--heading-style); letter-spacing: var(--heading-tracking); font-size: var(--text-3xl); line-height: 1.05; margin: 0; }
+.resume__doc h1 + p { margin-top: var(--space-2); font-size: var(--text-lg); }
+.resume__doc h1 + p strong { color: var(--accent-default); }
+.resume__doc h3 { font-size: var(--text-lg); font-weight: 600; margin: var(--space-6) 0 0; }
+.resume__doc h3 + p { margin-top: var(--space-1); }
+.resume__doc hr { border: 0; border-top: 1px solid var(--line-default); margin: var(--space-7) 0; max-width: 64ch; }
+.resume__doc table { border-collapse: collapse; margin-top: var(--space-3); font-family: var(--font-mono); font-size: var(--text-sm); }
+.resume__doc td { padding: 4px var(--space-4) 4px 0; border-bottom: 1px solid var(--line-default); color: var(--text-muted); vertical-align: top; }
+.resume__doc td:first-child { color: var(--text-subtle); white-space: nowrap; }
+.resume__doc blockquote { margin: var(--space-4) 0 0; padding-left: var(--space-3); border-left: 2px solid var(--line-default); }
+.resume__doc blockquote p { margin: 0; font-size: var(--text-sm); }
+
+/* 인쇄하면 이력서 본문만 A4 로 남는다. 토큰으로 바꾼 색과 상관없이 흰 바탕 검은 글자다 */
+@media print {
+  @page { size: A4; margin: 14mm 14mm 16mm; }
+  body:has(.resume) { background: #fff; }
+  body:has(.resume) .skip, body:has(.resume) .hdr, body:has(.resume) #main ~ *, .resume .seclabel { display: none !important; }
+  .resume { padding: 0; max-width: none; }
+  .resume__doc { margin: 0; font-size: 9.4pt; line-height: 1.55; }
+  .resume__doc, .resume__doc * { color: #16181d !important; }
+  .resume__doc p, .resume__doc ul, .resume__doc ol, .resume__doc hr { max-width: none; }
+  .resume__doc h1 { font-size: 21pt; }
+  .resume__doc h1 + p { font-size: 11pt; }
+  .resume__doc h2 { font-size: 12pt; margin: 15pt 0 6pt; padding-bottom: 3pt; border-bottom: 1.2pt solid #16181d; break-after: avoid; }
+  .resume__doc h3 { font-size: 10.6pt; margin: 12pt 0 1pt; break-after: avoid; }
+  .resume__doc hr { display: none; }
+  .resume__doc table { font-size: 8.6pt; }
+  .resume__doc td { border-color: #d8dbe0; padding: 2pt 10pt 2pt 0; }
+  .resume__doc li, .resume__doc tr, .resume__doc blockquote { break-inside: avoid; }
+  .resume__doc a { text-decoration: none; }
+}

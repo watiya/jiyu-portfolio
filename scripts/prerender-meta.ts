@@ -63,6 +63,7 @@ export function buildRoutes({ cases, appDetails, ui }: Sources, sizeOf: SizeOf):
     })),
     generic("/work", ui.titles.work),
     generic("/writing", ui.titles.writing),
+    generic("/resume", ui.titles.resume),
   ];
 }
 

@@ -17,7 +17,8 @@ const en = {
     title: "Brainchild-Jiyu",
   },
   // 헤더
-  nav: { apps: "Apps", craft: "Craft", cases: "Case studies", work: "Work", writing: "Writing", contact: "Contact" },
+  nav: { apps: "Apps", craft: "Craft", cases: "Case studies", work: "Work", writing: "Writing", resume: "Resume", contact: "Contact" },
+  resume: { print: "Print / PDF" },
   tools: {
     search: "Search",
     searchTitle: "Command palette (Cmd K)",
@@ -243,6 +244,7 @@ const en = {
     cases: "Case studies | Brainchild-Jiyu",
     case: (title: string) => `${title} | Brainchild-Jiyu`,
     work: "Work | Brainchild-Jiyu",
+    resume: "Resume | Brainchild-Jiyu",
     app: (name: string) => `${name} | Brainchild-Jiyu`,
     notFound: "Not found | Brainchild-Jiyu",
   },
@@ -262,7 +264,8 @@ const ko: UI = {
     hint: "T 를 눌러 색조를 돌려 보세요. 이 화면도 따라옵니다.",
     title: "Brainchild-Jiyu",
   },
-  nav: { apps: "앱", craft: "크래프트", cases: "사례", work: "작업", writing: "글", contact: "연락" },
+  nav: { apps: "앱", craft: "크래프트", cases: "사례", work: "작업", writing: "글", resume: "이력서", contact: "연락" },
+  resume: { print: "인쇄 / PDF" },
   tools: {
     search: "검색",
     searchTitle: "명령 팔레트 (⌘K)",
@@ -471,6 +474,7 @@ const ko: UI = {
     cases: "사례 | Brainchild-Jiyu",
     case: (title) => `${title} | Brainchild-Jiyu`,
     work: "작업 | Brainchild-Jiyu",
+    resume: "이력서 | Brainchild-Jiyu",
     app: (name) => `${name} | Brainchild-Jiyu`,
     notFound: "없는 경로 | Brainchild-Jiyu",
   },
