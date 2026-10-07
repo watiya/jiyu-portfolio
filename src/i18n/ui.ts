@@ -190,6 +190,8 @@ const en = {
     contrastFixed: (n: number) => `Contrast check: fixed ${n}`,
     reset: "Reset to source",
     copy: "Copy theme link",
+    export: "Take these tokens",
+    exportHint: "Built from the dials above",
   },
   // 검사 모드
   inspect: { status: "Inspect · hover or tab to an element ·", exits: "exits" },
@@ -201,6 +203,9 @@ const en = {
     undo: "Undo",
     linkCopied: "Theme link copied",
     linkFailed: "Could not copy. Link is in the address bar",
+    downloaded: (file: string) => `Downloaded ${file}`,
+    copied: (file: string) => `Copied ${file}`,
+    copyFailed: "Could not copy",
     dismiss: "Dismiss",
   },
   // 팔레트
@@ -219,6 +224,7 @@ const en = {
     openPanel: "Open token panel",
     reset: "Reset to source tokens",
     copyLink: "Copy theme link",
+    copyExport: (file: string) => `Copy tokens as ${file}`,
     inspect: "Toggle inspect mode",
     copyEmail: "Copy email",
     switchLang: "Switch to Korean",
@@ -413,6 +419,8 @@ const ko: UI = {
     contrastFixed: (n) => `대비 검사: ${n}개 보정`,
     reset: "기본으로",
     copy: "테마 링크 복사",
+    export: "이 토큰 가져가기",
+    exportHint: "위 다이얼 그대로 만들어집니다",
   },
   inspect: { status: "검사 · 요소에 올리거나 탭으로 이동 ·", exits: "로 종료" },
   toasts: {
@@ -422,6 +430,9 @@ const ko: UI = {
     undo: "되돌리기",
     linkCopied: "테마 링크를 복사했습니다",
     linkFailed: "복사하지 못했습니다. 주소창에 링크가 있습니다",
+    downloaded: (file) => `${file} 을 내려받았습니다`,
+    copied: (file) => `${file} 을 복사했습니다`,
+    copyFailed: "복사하지 못했습니다",
     dismiss: "닫기",
   },
   palette: {
@@ -439,6 +450,7 @@ const ko: UI = {
     openPanel: "토큰 패널 열기",
     reset: "기본 토큰으로",
     copyLink: "테마 링크 복사",
+    copyExport: (file) => `토큰을 ${file} 로 복사`,
     inspect: "검사 모드 전환",
     copyEmail: "이메일 복사",
     switchLang: "영어로 보기",

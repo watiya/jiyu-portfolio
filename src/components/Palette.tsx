@@ -4,6 +4,7 @@ import { APP_DETAILS } from "../appDetails.ts";
 import { getCases } from "../cases/content.ts";
 import { EMAIL } from "../data.ts";
 import { PRESETS } from "../tokens/engine.ts";
+import { EXPORTS } from "../tokens/export.ts";
 import { useTokens } from "../tokens/useTokens.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { fuzzyScore } from "../lib.ts";
@@ -11,7 +12,7 @@ import { fuzzyScore } from "../lib.ts";
 type Cmd = { id: string; label: string; hint: string; group: string; run: () => void };
 
 export function Palette({ go }: { go: (href: string) => void }) {
-  const { setPaletteOpen, set, dials, reset, applyPreset, copyLink, setInspect, setPanelOpen, toast } = useTokens();
+  const { setPaletteOpen, set, dials, tokens, reset, applyPreset, copyLink, setInspect, setPanelOpen, toast } = useTokens();
   const { lang, setLang, t } = useLang();
   const [q, setQ] = useState("");
   const [active, setActive] = useState(0);
@@ -87,6 +88,19 @@ export function Palette({ go }: { go: (href: string) => void }) {
           void copyLink();
         },
       },
+      ...EXPORTS.map((x) => ({
+        id: `export-${x.file}`,
+        label: p.copyExport(x.file),
+        hint: x.file === "DESIGN.md" ? p.hintShare : x.type.split("/")[1],
+        group: g.tokens,
+        run: () => {
+          close();
+          navigator.clipboard
+            .writeText(x.build(tokens))
+            .then(() => toast(t.toasts.copied(x.file)))
+            .catch(() => toast(t.toasts.copyFailed));
+        },
+      })),
       {
         id: "inspect",
         label: p.inspect,
@@ -121,7 +135,7 @@ export function Palette({ go }: { go: (href: string) => void }) {
         },
       },
     ];
-  }, [applyPreset, copyLink, dials.theme, go, lang, reset, set, setInspect, setLang, setPaletteOpen, setPanelOpen, t, toast]);
+  }, [applyPreset, copyLink, dials.theme, tokens, go, lang, reset, set, setInspect, setLang, setPaletteOpen, setPanelOpen, t, toast]);
 
   const results = useMemo(() => {
     const scored = cmds.map((c) => ({ c, s: fuzzyScore(q, `${c.label} ${c.hint}`) })).filter((x) => x.s > 0);

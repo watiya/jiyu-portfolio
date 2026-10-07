@@ -365,6 +365,11 @@ main { transition: margin-right var(--duration-2) var(--ease-default); }
 .panel__check { color: var(--text-subtle); }
 .panel__check[data-fixed] { color: var(--annot-color); }
 .panel__actions { display: flex; gap: var(--space-2); }
+.panel__export { display: flex; flex-direction: column; gap: var(--space-2); padding-bottom: var(--space-3); border-bottom: 1px dashed var(--line-default); }
+.panel__export-label { color: var(--annot-color); }
+.panel__export-label span { color: var(--text-subtle); }
+.panel__export-files { display: flex; gap: var(--space-2); }
+.panel__export-files .btn { flex: 1; padding-inline: var(--space-2); font-size: var(--text-xs); }
 .panel__actions .btn { flex: 1; }
 
 @media (max-width: 767px) {

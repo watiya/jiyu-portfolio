@@ -12,6 +12,7 @@ import {
   type Dials,
 } from "../tokens/engine.ts";
 import { useTokens } from "../tokens/useTokens.ts";
+import { EXPORTS, download } from "../tokens/export.ts";
 import { useLang } from "../i18n/useLang.ts";
 
 function Segmented<T extends string>({ name, value, options, onChange, labels }: { name: string; value: T; options: readonly T[]; onChange: (v: T) => void; labels: Record<string, string> }) {
@@ -40,7 +41,7 @@ function Field({ label, value, children }: { label: string; value?: string; chil
 }
 
 export function TokenPanel() {
-  const { dials, tokens, set, reset, applyPreset, copyLink, panelOpen, setPanelOpen, isDefault } = useTokens();
+  const { dials, tokens, set, reset, applyPreset, copyLink, panelOpen, setPanelOpen, isDefault, toast } = useTokens();
   const { t } = useLang();
   const L = t.panel;
   const ref = useRef<HTMLElement>(null);
@@ -167,6 +168,26 @@ export function TokenPanel() {
           <span className="mono panel__check" data-fixed={fixes > 0 || undefined}>
             {fixes === 0 ? L.contrastOk : L.contrastFixed(fixes)}
           </span>
+          <div className="panel__export">
+            <span className="mono panel__export-label">
+              {L.export} <span>· {L.exportHint}</span>
+            </span>
+            <div className="panel__export-files">
+              {EXPORTS.map((x) => (
+                <button
+                  key={x.file}
+                  type="button"
+                  className="btn btn--ghost btn--sm mono"
+                  onClick={() => {
+                    download(x.file, x.build(tokens), x.type);
+                    toast(t.toasts.downloaded(x.file));
+                  }}
+                >
+                  {x.file} ↓
+                </button>
+              ))}
+            </div>
+          </div>
           <div className="panel__actions">
             <button type="button" className="btn btn--ghost btn--sm" onClick={reset} disabled={isDefault}>
               {L.reset}
