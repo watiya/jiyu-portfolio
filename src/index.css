@@ -928,3 +928,48 @@ html[data-motion="off"] .landing { animation: none !important; }
 .contact__ver { margin: var(--space-4) 0 0; color: var(--text-subtle); }
 .contact__ver a { color: inherit; padding-block: var(--space-2); }
 .contact__ver a:hover { color: var(--text-default); }
+
+/* ---------- /projects 진입 모션 ----------
+   길이는 모션 다이얼(--duration-3)을 따른다. calm 이면 짧고 차분하게, lively 면 길고 튀게. off 면 전부 끈다 */
+.hero { --enter: calc(var(--duration-3) * 2.2); }
+.hero__w { display: inline-block; animation: hero-word var(--enter) var(--ease-emphasis) both; animation-delay: calc(var(--i) * 70ms + 80ms); }
+@keyframes hero-word {
+  from { opacity: 0; transform: translateY(0.4em) rotate(3deg); filter: blur(8px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+.hero .seclabel { animation: hero-up var(--enter) var(--ease-default) both; }
+.hero__sheet { animation: hero-rule calc(var(--enter) * 1.4) var(--ease-default) both; }
+@keyframes hero-rule { from { border-top-color: transparent; } }
+/* 치수선은 제목이 선 다음 그려진다 */
+.dim__line { transform-origin: top; animation: dim-y var(--enter) var(--ease-emphasis) both 700ms; }
+.dim__ruler { transform-origin: left; animation: dim-x var(--enter) var(--ease-emphasis) both 900ms; }
+.dim__label { animation: hero-fade var(--enter) var(--ease-default) both 950ms; }
+.dim--leading .dim__label { animation-delay: 1050ms; }
+.dim--tracking .dim__label { animation-delay: 1150ms; }
+.hero__spec > span { animation: hero-up var(--enter) var(--ease-default) both; animation-delay: calc(var(--i) * 60ms + 1000ms); }
+.hero__who { animation: hero-up var(--enter) var(--ease-default) both 650ms; }
+.hero__cta { animation: hero-up var(--enter) var(--ease-default) both 800ms; }
+@keyframes dim-y { from { transform: scaleY(0); } }
+@keyframes dim-x { from { transform: scaleX(0); } }
+@keyframes hero-fade { from { opacity: 0; } }
+@keyframes hero-up { from { opacity: 0; transform: translateY(var(--space-3)); } }
+
+/* 앱 카드: 화면에 들어오면 하나씩, 포인터를 따라 무대에 빛이 들고 폰이 기운다 */
+.card-wrap { opacity: 0; transform: translateY(var(--space-5)); transition: opacity calc(var(--duration-3) * 1.6) var(--ease-default), transform calc(var(--duration-3) * 1.6) var(--ease-emphasis); transition-delay: calc(var(--d, 0) * 90ms); }
+.card-wrap[data-revealed] { opacity: 1; transform: none; }
+.card { --mx: 0.5; --my: 0.5; }
+.card__stage::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0;
+  background: radial-gradient(240px circle at calc(var(--mx) * 100%) calc(var(--my) * 100% + 20%), color-mix(in oklab, var(--accent-default) 22%, transparent), transparent 70%);
+  transition: opacity var(--duration-2) var(--ease-default);
+}
+.card:hover .card__stage::after { opacity: 1; }
+.card__stage { perspective: 900px; }
+.card:hover .card__stage .phone {
+  transform: translateY(calc(var(--space-2) * -1)) rotateX(calc((0.5 - var(--my)) * 10deg)) rotateY(calc((var(--mx) - 0.5) * 14deg));
+}
+
+html[data-motion="off"] .hero *, html[data-motion="off"] .hero { animation: none !important; }
+html[data-motion="off"] .card-wrap { opacity: 1; transform: none; transition: none; }
+html[data-motion="off"] .card:hover .card__stage .phone { transform: none; }
+html[data-motion="off"] .card__stage::after { display: none; }

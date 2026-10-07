@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { EMAIL, SOCIALS, type Step } from "../data.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { formatDay, getAppDetails, getApps, getJourney, getNow, getRecentWriting, getSteps, metaValue } from "../i18n/content.ts";
@@ -86,7 +86,12 @@ function Hero({ go }: { go: (href: string) => void }) {
     ro.observe(h1);
     ro.observe(sheet);
     document.fonts.ready.then(measure);
-    return () => ro.disconnect();
+    // 단어 등장 중엔 transform 이 줄 상자를 밀어 두므로 끝날 때 다시 잰다
+    h1.addEventListener("animationend", measure);
+    return () => {
+      ro.disconnect();
+      h1.removeEventListener("animationend", measure);
+    };
   }, [size, leading, tracking, dials.pairing, dials.density, lang]);
 
   const style = {
@@ -103,7 +108,14 @@ function Hero({ go }: { go: (href: string) => void }) {
       <div className="hero__sheet" ref={sheetRef}>
         <Corners />
         <h1 id="hero-title" className="hero__title" ref={titleRef} data-token="text.default font.heading">
-          {t.hero.headline}
+          {t.hero.headline.split(" ").map((w, i, all) => (
+            <Fragment key={i}>
+              <span className="hero__w" style={{ "--i": i } as React.CSSProperties}>
+                {w}
+              </span>
+              {i < all.length - 1 && " "}
+            </Fragment>
+          ))}
         </h1>
 
         {/* 크기: 첫 줄 왼쪽의 세로 치수선 */}
@@ -135,13 +147,13 @@ function Hero({ go }: { go: (href: string) => void }) {
       </div>
 
       <div className="hero__spec mono" aria-label={t.hero.aside}>
-        <span>{family}</span>
-        <span>{pair.weight}</span>
-        <span>
+        <span style={{ "--i": 0 } as React.CSSProperties}>{family}</span>
+        <span style={{ "--i": 1 } as React.CSSProperties}>{pair.weight}</span>
+        <span style={{ "--i": 2 } as React.CSSProperties}>
           {size}/{lineBox}
         </span>
-        <span>{tracking.toFixed(3)}em</span>
-        <span className="hero__spec-live" data-token="accent.secondary">
+        <span style={{ "--i": 3 } as React.CSSProperties}>{tracking.toFixed(3)}em</span>
+        <span className="hero__spec-live" style={{ "--i": 4 } as React.CSSProperties} data-token="accent.secondary">
           {t.hero.live}
         </span>
       </div>
@@ -192,6 +204,7 @@ function Apps({ go }: { go: (href: string) => void }) {
   const active = activePresetOf(dials);
   const onClick = internalClick(go);
   const ref = useReveal<HTMLElement>();
+  const listRef = useCardReveal();
   return (
     <section id="apps" className="apps container reveal" ref={ref} aria-labelledby="apps-title">
       <SectionLabel index="02" title={t.sections.apps} aside={<>{t.apps.aside(apps.length)}</>} />
@@ -202,7 +215,7 @@ function Apps({ go }: { go: (href: string) => void }) {
         <p className="lede">{t.apps.lede}</p>
       </div>
 
-      <ul className="cards" role="list">
+      <ul className="cards" role="list" ref={listRef}>
         {apps.map((app, i) => {
           const slug = slugOf(app.name);
           const detail = details.find((d) => d.slug === slug);
@@ -212,7 +225,7 @@ function Apps({ go }: { go: (href: string) => void }) {
           const wearing = active?.slug === slug;
           return (
             <li key={slug} className="card-wrap">
-              <a className="card" href={`/apps/${slug}`} onClick={onClick} aria-label={`${app.name}: ${app.line}`} data-token="card.bg card.line card.radius card.pad">
+              <a className="card" href={`/apps/${slug}`} onClick={onClick} onPointerMove={trackPointer} aria-label={`${app.name}: ${app.line}`} data-token="card.bg card.line card.radius card.pad">
                 <div className="card__top mono">
                   <span>app / {String(i + 1).padStart(2, "0")}</span>
                   <span className="chip" data-current={wearing || undefined} data-token={wearing ? "badge.bg badge.fg" : "chip.bg chip.fg chip.radius"}>
@@ -259,6 +272,42 @@ function Apps({ go }: { go: (href: string) => void }) {
       </ul>
     </section>
   );
+}
+
+// 카드마다 화면에 들어올 때 등장. 같은 줄의 카드는 열 순서대로 조금씩 늦게
+function useCardReveal() {
+  const ref = useRef<HTMLUListElement>(null);
+  useEffect(() => {
+    const list = ref.current;
+    if (!list) return;
+    const items = Array.from(list.children) as HTMLElement[];
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((el) => (el.dataset.revealed = "true"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        const top = entries.filter((e) => e.isIntersecting).map((e) => e.target as HTMLElement);
+        top.forEach((el, k) => {
+          el.style.setProperty("--d", String(k));
+          el.dataset.revealed = "true";
+          io.unobserve(el);
+        });
+      },
+      { rootMargin: "0px 0px -6% 0px" },
+    );
+    items.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+  return ref;
+}
+
+// 포인터 위치를 카드 안의 0~1 좌표로. 무대의 빛과 폰 기울기가 이걸 읽는다
+function trackPointer(e: React.PointerEvent<HTMLAnchorElement>) {
+  if (e.pointerType !== "mouse") return;
+  const r = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty("--mx", ((e.clientX - r.left) / r.width).toFixed(3));
+  e.currentTarget.style.setProperty("--my", ((e.clientY - r.top) / r.height).toFixed(3));
 }
 
 // ---------- 03 How a system works ----------
