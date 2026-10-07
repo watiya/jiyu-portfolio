@@ -1091,7 +1091,7 @@ html[data-motion="off"] .card__stage::after { display: none; }
 .browser[data-large] .browser__bar i { width: 10px; height: 10px; }
 .browser[data-large] .browser__url { height: 20px; margin: 0 48px 0 20px; font-size: 12px; line-height: 20px; }
 .browser[data-large] .browser__screen { margin: 0 6px 6px; aspect-ratio: auto; border-radius: 11px; }
-.workdoc .caseimg[data-framed] img { max-height: none; border: 0; border-radius: 0; }
+.workdoc .caseimg[data-framed] img { max-height: min(72vh, 720px); width: 100%; object-fit: cover; object-position: top; border: 0; border-radius: 0; }
 .wkshots:hover { border-color: var(--card-line-hover); }
 
 /* ---------- /work/<slug>/canvas ---------- */
