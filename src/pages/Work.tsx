@@ -6,6 +6,7 @@ import { useLang } from "../i18n/useLang.ts";
 import { internalClick } from "../router.ts";
 import { WORKS, WORK_CATEGORIES, type WorkCategory } from "../works.ts";
 import { EARLY_WORKS } from "../works.early.ts";
+import { BrowserFrame } from "../components/BrowserFrame.tsx";
 
 export function Work({ go }: { go: (href: string) => void }) {
   const { lang, t } = useLang();
@@ -40,11 +41,15 @@ export function Work({ go }: { go: (href: string) => void }) {
           const open = { href: `/work/${w.slug}`, onClick };
           return (
           <li key={w.slug} id={w.slug} className="wk" data-token="card.bg card.line card.radius">
-            <a className="wk__cover" {...open} aria-label={w.name}>
+            <a className="wk__cover" {...open} aria-label={w.name} data-framed={w.coverFrame || undefined}>
               {w.noCover ? (
                 <span className="wk__cover-empty mono" aria-hidden="true">
                   {W.noCover}
                 </span>
+              ) : w.coverFrame === "browser" ? (
+                <BrowserFrame url={w.liveUrl}>
+                  <img src={`/work/${w.slug}.webp`} alt="" loading={i < 6 ? "eager" : "lazy"} decoding="async" />
+                </BrowserFrame>
               ) : (
                 <img src={`/work/${w.slug}.webp`} alt="" loading={i < 6 ? "eager" : "lazy"} decoding="async" />
               )}
