@@ -1,4 +1,4 @@
-// v4(portfolio.brainchild.kr) 작업 목록. lib/data.ts 에서 기계로 옮겼다. 손으로 고치지 말고 v4 를 고친 뒤 다시 뽑는다.
+// v4(portfolio.brainchild.kr) 작업 목록. lib/data.ts 에서 기계로 옮겼다. v4 는 2026-10-07 에 정리됐다(portfolio.brainchild.kr 은 이 사이트로 리다이렉트). 이제 이 파일이 정본이라 여기서 고친다.
 // 제목·연도·분류·주소는 v4 에서 확인한 값이다. 예외: 한 줄 설명이 v4 에서 비어 있던 셋(bora-2-renewal, naoda-concept, metapick)은 이력서 문장으로 직접 채웠다. 다시 뽑으면 이 셋을 되살린다.
 import type { Lang } from "./i18n/lang.ts";
 

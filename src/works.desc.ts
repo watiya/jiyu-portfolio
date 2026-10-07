@@ -1,4 +1,4 @@
-// v4(portfolio.brainchild.kr) 작업 설명 문단. scripts/import-v4.ts 가 lib/data.ts 에서 기계로 뽑았다. 손으로 고치지 말고 v4 를 고친 뒤 다시 뽑는다.
+// v4(portfolio.brainchild.kr) 작업 설명 문단. scripts/import-v4.ts 가 lib/data.ts 에서 기계로 뽑았다. v4 는 2026-10-07 에 정리됐다(portfolio.brainchild.kr 은 이 사이트로 리다이렉트). 이제 이 파일이 정본이라 여기서 고친다.
 // 문단은 빈 줄로 갈린다. 설명이 비어 있던 항목은 여기 없고, 상세 화면이 그 자리를 빈 것으로 그린다.
 import type { Lang } from "./i18n/lang.ts";
 

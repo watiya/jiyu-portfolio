@@ -1,5 +1,6 @@
 // v4(portfolio.brainchild.kr) 에서 작업 설명·캔버스 문안·캔버스 이미지를 기계로 가져온다. 손으로 옮기지 않는다.
 // v4 를 고친 뒤 다시 돌리면 같은 자리가 같은 값으로 덮인다. 인자는 v4 의 demo 폴더. 기본은 옆 폴더다.
+// 2026-10-07 v4 정리 뒤로는 이 사이트 쪽이 정본이다. 다시 돌리면 여기서 고친 설명·문안이 v4 값으로 덮이니 돌리지 않는다. v4 는 _archive/jiyu-portfolio-v4 에 있다.
 //   node scripts/import-v4.ts [../jiyu-portfolio-v4/demo]
 // 끝나면 scripts/canvas-manifest.ts 를 이어서 돌려 프레임 목록을 다시 뽑는다.
 import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";

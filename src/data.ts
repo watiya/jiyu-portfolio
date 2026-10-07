@@ -4,7 +4,6 @@ export const EMAIL = "brainchild.jiyu@gmail.com";
 export const SOCIALS = [
   { label: "GitHub", href: "https://github.com/watiya" },
   { label: "X", href: "https://twitter.com/brainchild_jiyu" },
-  { label: "Portfolio", href: "https://portfolio.brainchild.kr" },
   { label: "Team · Brainchild Works", href: "https://brainchild.works" },
 ] as const;
 

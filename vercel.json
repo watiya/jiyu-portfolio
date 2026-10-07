@@ -1,18 +1,207 @@
 {
   "redirects": [
-    { "source": "/projects/canon-and-mirrors", "destination": "/cases/canon-and-mirrors", "permanent": true },
-    { "source": "/projects/content-studio", "destination": "/cases/content-studio", "permanent": true },
-    { "source": "/projects/delivery-operations", "destination": "/cases/delivery-operations", "permanent": true },
-    { "source": "/projects/design-system-in-code", "destination": "/cases/design-system-in-code", "permanent": true },
-    { "source": "/projects/entry-without-a-wallet", "destination": "/cases/entry-without-a-wallet", "permanent": true },
-    { "source": "/projects/exposure-as-a-build", "destination": "/cases/exposure-as-a-build", "permanent": true },
-    { "source": "/projects/wording-as-risk", "destination": "/cases/wording-as-risk", "permanent": true },
-    { "source": "/projects/seoul-boom", "destination": "/apps/seoul-boom", "permanent": true },
-    { "source": "/projects/runpop", "destination": "/apps/runpop", "permanent": true },
-    { "source": "/projects/all", "destination": "/work", "permanent": true },
-    { "source": "/projects/:path+", "destination": "/cases", "permanent": true },
-    { "source": "/case-studies", "destination": "/cases", "permanent": true },
-    { "source": "/contact", "destination": "/projects#contact", "permanent": true }
+    {
+      "source": "/en/:section(work|cases)/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/:section/:rest*",
+      "permanent": true
+    },
+    {
+      "source": "/ko/:section(work|cases)/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/:section/:rest*?lang=ko",
+      "permanent": true
+    },
+    {
+      "source": "/:section(work|cases)/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/:section/:rest*",
+      "permanent": true
+    },
+    {
+      "source": "/en/about",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/resume",
+      "permanent": true
+    },
+    {
+      "source": "/ko/about",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/resume?lang=ko",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/resume",
+      "permanent": true
+    },
+    {
+      "source": "/print/ko",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/resume?lang=ko",
+      "permanent": true
+    },
+    {
+      "source": "/print/:lang",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/resume",
+      "permanent": true
+    },
+    {
+      "source": "/design-system/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://archive.brainchild.kr/v4/design-system/:rest*",
+      "permanent": true
+    },
+    {
+      "source": "/playground/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://archive.brainchild.kr/v4/playground/:rest*",
+      "permanent": true
+    },
+    {
+      "source": "/ko",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/projects?lang=ko",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://www.brainchild.kr/projects",
+      "permanent": true
+    },
+    {
+      "source": "/projects/canon-and-mirrors",
+      "destination": "/cases/canon-and-mirrors",
+      "permanent": true
+    },
+    {
+      "source": "/projects/content-studio",
+      "destination": "/cases/content-studio",
+      "permanent": true
+    },
+    {
+      "source": "/projects/delivery-operations",
+      "destination": "/cases/delivery-operations",
+      "permanent": true
+    },
+    {
+      "source": "/projects/design-system-in-code",
+      "destination": "/cases/design-system-in-code",
+      "permanent": true
+    },
+    {
+      "source": "/projects/entry-without-a-wallet",
+      "destination": "/cases/entry-without-a-wallet",
+      "permanent": true
+    },
+    {
+      "source": "/projects/exposure-as-a-build",
+      "destination": "/cases/exposure-as-a-build",
+      "permanent": true
+    },
+    {
+      "source": "/projects/wording-as-risk",
+      "destination": "/cases/wording-as-risk",
+      "permanent": true
+    },
+    {
+      "source": "/projects/seoul-boom",
+      "destination": "/apps/seoul-boom",
+      "permanent": true
+    },
+    {
+      "source": "/projects/runpop",
+      "destination": "/apps/runpop",
+      "permanent": true
+    },
+    {
+      "source": "/projects/all",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/projects/:path+",
+      "destination": "/cases",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/cases",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/projects#contact",
+      "permanent": true
+    }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
