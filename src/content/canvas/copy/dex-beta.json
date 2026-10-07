@@ -92,8 +92,8 @@
         "en": "Announcements filtered by type"
       },
       "desc": {
-        "ko": "점검·이벤트·신규 상장·거래 정지 같은 유형 칩이 위에 서고, 진행 중인 점검에는 Ongoing 배지가 붙는다. 다크 판이다.",
-        "en": "Type chips (maintenance, event, new listing, trading halt) sit on top, and an ongoing maintenance gets its own badge. Dark theme."
+        "ko": "점검·이벤트·신규 상장·거래 정지 같은 유형 칩이 위에 서고, 진행 중인 점검에는 Ongoing 배지가 붙는다. 라이트 판이다.",
+        "en": "Type chips (maintenance, event, new listing, trading halt) sit on top, and an ongoing maintenance gets its own badge. Light theme."
       }
     },
     "01-ga/003-favorites": {
