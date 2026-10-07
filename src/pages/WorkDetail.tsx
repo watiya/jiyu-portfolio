@@ -12,25 +12,40 @@ import { BrowserFrame } from "../components/BrowserFrame.tsx";
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
-// 캔버스 첫 페이지의 앞 여섯 장. 상세에서 캔버스로 들어가기 전에 무엇이 있는지 보여 준다
-function Shots({ slug, url, go, label, frameLabel }: { slug: string; url?: string; go: (href: string) => void; label: string; frameLabel: (n: number) => string }) {
+// 웹 캡처는 폭 1280 이상이다. 모바일 캡처도 3배율이면 1000 을 넘어서(1152 등) 폭만으로는 1280 을 기준으로 가른다
+const isWeb = (f: CanvasFrame) => f.w >= 1280;
+const isPhone = (f: CanvasFrame) => f.w < 1280 && f.h / f.w >= 1.6;
+// 웹·모바일 중 캡처가 많은 쪽만 여섯 장 고른다. 섞지 않는다.
+// 웹은 제품 웹 작업일 때만 브라우저 창에 담는다. 다른 분류의 넓은 캡처는 시안 보드라 프레임 없이 둔다
+type Shot = { frame: CanvasFrame; kind: "browser" | "phone" | "plain" };
+function pickShots(all: CanvasFrame[], webProduct: boolean): Shot[] {
+  const web = all.filter(isWeb);
+  const phone = all.filter(isPhone);
+  if (phone.length > web.length) return phone.slice(0, 6).map((frame) => ({ frame, kind: "phone" }));
+  if (webProduct && web.length > 0) return web.slice(0, 6).map((frame) => ({ frame, kind: "browser" }));
+  return all.slice(0, 6).map((frame) => ({ frame, kind: "plain" }));
+}
+
+// 캔버스 화면 여섯 장. 상세에서 캔버스로 들어가기 전에 무엇이 있는지 보여 준다
+function Shots({ slug, url, webProduct, go, label, frameLabel }: { slug: string; url?: string; webProduct: boolean; go: (href: string) => void; label: string; frameLabel: (n: number) => string }) {
   // 어느 슬러그의 것인지 함께 둔다. 슬러그가 바뀌면 이전 작업의 띠가 잠깐 남지 않는다
-  const [loaded, setLoaded] = useState<{ slug: string; frames: CanvasFrame[] } | null>(null);
+  const [loaded, setLoaded] = useState<{ slug: string; shots: Shot[] } | null>(null);
   useEffect(() => {
     let live = true;
-    loadCanvas(slug).then((d) => live && setLoaded({ slug, frames: d?.pages[0]?.frames.slice(0, 6) ?? [] }));
+    loadCanvas(slug).then((d) => live && setLoaded({ slug, shots: pickShots(d?.pages.flatMap((p) => p.frames) ?? [], webProduct) }));
     return () => {
       live = false;
     };
-  }, [slug]);
-  const frames = loaded?.slug === slug ? loaded.frames : [];
-  if (frames.length === 0) return null;
+  }, [slug, webProduct]);
+  const shots = loaded?.slug === slug ? loaded.shots : [];
+  if (shots.length === 0) return null;
   return (
     <a className="wkshots" href={`/work/${slug}/canvas`} onClick={internalClick(go)} aria-label={label} data-token="card.bg card.line">
-      {frames.map((f, k) => {
+      {shots.map(({ frame: f, kind }, k) => {
         const img = <img src={f.src} alt={frameLabel(k + 1)} width={f.w} height={f.h} loading="lazy" decoding="async" />;
-        // 넓은 캡처는 웹 화면이라 브라우저 창에, 좁은 캡처는 폰에 담는다. 긴 전체 페이지 캡처는 첫 화면만 보인다
-        return f.w >= 1000 ? (
+        // 긴 전체 페이지 캡처는 첫 화면만 보인다
+        if (kind === "plain") return <span key={f.id} className="wkshots__plain">{img}</span>;
+        return kind === "browser" ? (
           <BrowserFrame key={f.id} url={url}>
             {img}
           </BrowserFrame>
@@ -148,7 +163,7 @@ export function WorkDetail({ slug, go }: { slug: string; go: (href: string) => v
               ))}
             </div>
           )}
-          {canvas && <Shots slug={slug} url={w.liveUrl} go={go} label={W.openCanvas} frameLabel={(n) => W.canvas.frame(w.name, n)} />}
+          {canvas && <Shots slug={slug} url={w.liveUrl} webProduct={w.category === "product-web"} go={go} label={W.openCanvas} frameLabel={(n) => W.canvas.frame(w.name, n)} />}
         </div>
       </div>
       <nav className="detail__nav" aria-label={W.otherWork}>

@@ -1074,6 +1074,8 @@ html[data-motion="off"] .card__stage::after { display: none; }
 .wkshots { align-items: flex-end; gap: var(--space-4); padding: var(--space-5); }
 .wkshots img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .wkshots .phone { width: 150px; }
+.wkshots__plain { flex: none; height: 200px; overflow: hidden; border: 1px solid var(--line-default); border-radius: var(--radius-1); background: var(--surface-sunken); }
+.wkshots__plain img { width: auto; max-height: 100%; }
 .wkshots .phone__screen { aspect-ratio: 9 / 19.5; }
 /* 브라우저 프레임. 폰 프레임과 같은 베젤 색을 쓴다 */
 .browser { display: block; flex: none; width: 380px; overflow: hidden; background: var(--phone-bezel); border-radius: 12px; box-shadow: 0 0 0 1px var(--line-default); }
