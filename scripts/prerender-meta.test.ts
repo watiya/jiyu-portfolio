@@ -124,8 +124,9 @@ test("사이트맵·robots", () => {
 });
 
 test("vercel redirects 의 옛 주소와 겹치지 않는다", () => {
-  const { redirects } = JSON.parse(readFileSync(join(ROOT, "vercel.json"), "utf8")) as { redirects: { source: string }[] };
-  const exact = new Set(redirects.filter((r) => !r.source.includes(":")).map((r) => r.source));
+  const { redirects } = JSON.parse(readFileSync(join(ROOT, "vercel.json"), "utf8")) as { redirects: { source: string; has?: unknown[] }[] };
+  // 호스트 조건이 붙은 것(portfolio.brainchild.kr 옛 v4 주소)은 이 사이트 경로와 겹치지 않는다
+  const exact = new Set(redirects.filter((r) => !r.has && !r.source.includes(":")).map((r) => r.source));
   for (const r of routes) assert.ok(!exact.has(r.path), r.path);
 });
 
