@@ -109,7 +109,7 @@ export function Landing({ go }: { go: (href: string) => void }) {
       <div className="landing__meta mono" aria-hidden="true">
         <span>brainchild.kr</span>
         <span>
-          v8 · {dials.hue}° · {dials.theme}
+          {dials.hue}° · {dials.theme}
         </span>
       </div>
 

@@ -116,7 +116,6 @@ html[data-inspect="on"] :is(.card, .hero__sheet, .dim, .panel):is(:hover, :focus
 .hdr { position: sticky; top: 0; z-index: 30; background: var(--surface-canvas); border-bottom: 1px solid var(--line-default); transition: background-color var(--duration-2) var(--ease-default); }
 .hdr__row { height: var(--header-h); display: flex; align-items: center; gap: var(--space-6); }
 .hdr__brand { display: inline-flex; align-items: baseline; gap: var(--space-2); font-weight: 600; text-decoration: none; font-size: var(--text-md); letter-spacing: -0.01em; }
-.hdr__ver { color: var(--text-subtle); }
 .hdr__nav { display: none; gap: var(--space-5); margin-left: var(--space-4); }
 .hdr__nav a { font-size: var(--text-sm); color: var(--text-muted); text-decoration: none; padding: var(--space-1) 0; border-bottom: 1px solid transparent; transition: color var(--duration-1) var(--ease-default), border-color var(--duration-1) var(--ease-default); }
 .hdr__nav a:hover { color: var(--text-default); border-bottom-color: var(--line-strong); }
@@ -124,6 +123,14 @@ html[data-inspect="on"] :is(.card, .hero__sheet, .dim, .panel):is(:hover, :focus
 .hdr__tools { margin-left: auto; display: flex; gap: var(--space-2); }
 /* 항목이 여섯이 되어 1040px 안팎까지 한 줄에 안 들어간다. 그 아래는 팔레트로 이동한다 */
 @media (min-width: 1060px) { .hdr__nav { display: flex; } }
+/* 모바일 · 태블릿 메뉴. 1060px 위에서는 가로 메뉴가 있어 버튼과 펼침을 숨긴다 */
+.hdr__menu { border-top: 1px solid var(--line-default); background: var(--surface-canvas); }
+.hdr__menu[hidden] { display: none; }
+.hdr__menu .container { display: flex; flex-direction: column; padding-block: var(--space-2) var(--space-4); }
+.hdr__menu a { padding: var(--space-3) 0; font-size: var(--text-md); color: var(--text-muted); text-decoration: none; border-bottom: 1px solid var(--line-default); }
+.hdr__menu a:last-child { border-bottom: 0; }
+.hdr__menu a[aria-current="page"] { color: var(--text-default); }
+@media (min-width: 1060px) { .tool--menu, .hdr__menu { display: none !important; } }
 
 .tool {
   display: inline-flex; align-items: center; gap: var(--space-2); height: 32px; padding: 0 var(--space-3);
@@ -152,6 +159,8 @@ html[data-inspect="on"] :is(.card, .hero__sheet, .dim, .panel):is(:hover, :focus
   .tool { padding: 0 var(--space-2); }
   .tool kbd, .tool__meta { display: none; }
   .tool--palette .tool__label, .tool--inspect .tool__label { display: none; }
+  /* 검사는 마우스를 올려 보는 기능이라 터치 폭에서는 빼고 그 자리를 메뉴에 준다 */
+  .tool--inspect { display: none; }
   .lang__opt { min-width: 32px; padding: 0 var(--space-1); }
 }
 @media (max-width: 379px) { .tool--tokens .tool__label { display: none; } }
@@ -379,6 +388,10 @@ main { transition: margin-right var(--duration-2) var(--ease-default); }
     transform: translateY(100%);
   }
   .panel[data-open] { transform: none; }
+  /* 패널 전체를 한 번에 스크롤한다. 본문만 스크롤하면 아래 내보내기 묶음이 높이를 다 먹어
+     본문이 색 한 줄 높이로 눌리고 글꼴 · 모서리 · 프리셋이 안 보였다 (2026-10-07) */
+  .panel { overflow-y: auto; overscroll-behavior: contain; max-height: 85dvh; }
+  .panel__body { flex: none; overflow: visible; }
   .panel__grab { display: block; width: 40px; height: 4px; margin: var(--space-2) auto 0; border-radius: var(--radius-full); background: var(--line-strong); }
 }
 

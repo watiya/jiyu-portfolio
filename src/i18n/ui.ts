@@ -27,6 +27,7 @@ const en = {
     tokens: "Tokens",
     tokensTitle: "Open the token panel (T)",
     language: "Language",
+    menu: "Menu",
   },
   // 섹션 라벨
   sections: { hero: "Hero", apps: "Apps", system: "How a system works", craft: "Craft", cases: "Case studies", work: "Work", journey: "Journey", contact: "Contact", writing: "Writing", notFound: "Not found" },
@@ -274,6 +275,7 @@ const ko: UI = {
     tokens: "토큰",
     tokensTitle: "토큰 패널 열기 (T)",
     language: "언어",
+    menu: "메뉴",
   },
   sections: { hero: "히어로", apps: "앱", system: "시스템이 움직이는 법", craft: "크래프트", cases: "사례", work: "작업", journey: "여정", contact: "연락", writing: "글", notFound: "없는 경로" },
   hero: {

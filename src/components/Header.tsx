@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { internalClick } from "../router.ts";
 import { useTokens } from "../tokens/useTokens.ts";
 import { useLang } from "../i18n/useLang.ts";
@@ -17,12 +18,24 @@ export function Header({ go, current }: { go: (href: string) => void; current: s
   const { panelOpen, setPanelOpen, inspect, setInspect, setPaletteOpen, dials } = useTokens();
   const { lang, setLang, t } = useLang();
   const onClick = internalClick(go);
+  // 1060px 아래에서는 가로 메뉴가 숨는다. 그 자리를 펼침 메뉴가 대신한다.
+  const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => setMenuOpen(false), [current]);
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+  const onMenuClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setMenuOpen(false);
+    onClick(e);
+  };
   return (
     <header className="hdr" data-token="surface.canvas line.default">
       <div className="container hdr__row">
         <a href="/projects" className="hdr__brand" onClick={onClick}>
           {t.siteName}
-          <span className="mono hdr__ver" aria-hidden="true">v8</span>
         </a>
         <nav className="hdr__nav" aria-label="Primary">
           {NAV.map((n) => (
@@ -32,6 +45,22 @@ export function Header({ go, current }: { go: (href: string) => void; current: s
           ))}
         </nav>
         <div className="hdr__tools">
+          <button
+            type="button"
+            className="tool tool--menu"
+            aria-expanded={menuOpen}
+            aria-controls="hdr-menu"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label={t.tools.menu}
+          >
+            <svg className="tool__icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
+              {menuOpen ? (
+                <path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              ) : (
+                <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              )}
+            </svg>
+          </button>
           <button type="button" className="tool tool--palette" onClick={() => setPaletteOpen(true)} title={t.tools.searchTitle} aria-label={t.tools.search}>
             <svg className="tool__icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
               <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -74,6 +103,15 @@ export function Header({ go, current }: { go: (href: string) => void; current: s
           </div>
         </div>
       </div>
+      <nav id="hdr-menu" className="hdr__menu" data-open={menuOpen || undefined} aria-label="Primary" hidden={!menuOpen}>
+        <div className="container">
+          {NAV.map((n) => (
+            <a key={n.key} href={n.href} onClick={onMenuClick} aria-current={n.match && current === n.match ? "page" : undefined}>
+              {t.nav[n.key]}
+            </a>
+          ))}
+        </div>
+      </nav>
     </header>
   );
 }

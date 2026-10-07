@@ -682,8 +682,7 @@ function Contact({ go }: { go: (href: string) => void }) {
   const { lang, t } = useLang();
   const time = useClock("Asia/Seoul");
   const ref = useReveal<HTMLElement>();
-  // 릴리스 번호는 체인지로그의 가장 늦은 항목에서, 갱신일은 지금 목록을 확인한 날에서 센다
-  const release = Math.max(...getCases(lang).map((d) => d.order));
+  // 갱신일은 지금 목록을 확인한 날에서 센다
   const updated = formatDay(getNow(lang).asOf, lang);
   const copy = async (e: React.MouseEvent<HTMLAnchorElement>) => {
     try {
@@ -718,7 +717,6 @@ function Contact({ go }: { go: (href: string) => void }) {
         </span>
       </div>
       <p className="mono contact__ver">
-        v8.{release} ·{" "}
         <a href="/projects#work" onClick={internalClick(go)}>
           {t.contact.changelog}
         </a>{" "}
