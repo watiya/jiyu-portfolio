@@ -7,37 +7,7 @@ export const SOCIALS = [
   { label: "Team · Brainchild Works", href: "https://brainchild.works" },
 ] as const;
 
-export const COMPANIES = ["Starzip", "OVERTAKE", "Flask", "Friends Games", "METABORA", "Way2bit", "BORA", "SocialApps"];
-
 // 회사 사례는 src/cases/(md 원문), 이전 포트폴리오 작업 색인은 src/works.ts 에 있다.
-
-export const SERVICES = [
-  {
-    icon: "layers",
-    title: "Design systems",
-    body: "Primitive and semantic token layers, theme checks, and promotion criteria. The standard lives in running code, and drift is caught by machine.",
-  },
-  {
-    icon: "layout",
-    title: "Information architecture",
-    body: "Structure first, then screens. Navigation, states, and edge cases designed as one system rather than page by page.",
-  },
-  {
-    icon: "scale",
-    title: "Product policy",
-    body: "Wording systems for regulated screens, confirmed state, and acceptance criteria that can actually be verified.",
-  },
-  {
-    icon: "code",
-    title: "Build in code",
-    body: "React and Next.js, with Claude Code in the daily loop. Most product screens, backend aside, I build myself.",
-  },
-  {
-    icon: "rocket",
-    title: "Delivery operations",
-    body: "Role boundaries written down, one release gate, and progress that aggregates itself on every ticket.",
-  },
-] as const;
 
 export type Step = { title: string; body: string };
 export const STEPS: Step[] = [
@@ -46,15 +16,6 @@ export const STEPS: Step[] = [
   { title: "Design the system", body: "Tokens, structure, and policy before individual screens." },
   { title: "Build it in code", body: "Screens and the source of truth, shipped as running code." },
   { title: "Turn rules into checks", body: "Silent failures become checks that fail loudly." },
-];
-
-export const TOOLS = [
-  { id: "figma", name: "Figma", desc: "Design and prototyping", tag: "Since 2016" },
-  { id: "react", name: "React", desc: "Product screens in code", tag: "Daily" },
-  { id: "nextdotjs", name: "Next.js", desc: "Sites and apps", tag: "Daily" },
-  { id: "claude", name: "Claude Code", desc: "The daily build loop", tag: "Daily" },
-  { id: "tailwindcss", name: "Tailwind CSS", desc: "Tokens to utilities", tag: "Daily" },
-  { id: "framer", name: "Framer", desc: "Landing and marketing sites", tag: "Often" },
 ];
 
 export const JOURNEY = [
@@ -69,29 +30,6 @@ export const JOURNEY = [
   { year: 2015, role: "UI/UX Designer", company: "Freelance", period: "2015 - 2017" },
   { year: 2012, role: "UI/UX Designer", company: "SocialApps", period: "2012 - 2016" },
   { year: 2003, role: "UI Designer", company: "PNP Soft, NSoft", period: "2003 - 2011" },
-];
-
-export const FAQ = [
-  {
-    q: "What kind of role are you looking for?",
-    a: "Design leadership where the system, the policy, and the screens sit in one seat. Product teams that want a designer who also ships code.",
-  },
-  {
-    q: "Do you write production code?",
-    a: "Yes. React and Next.js, with Claude Code in the daily loop. At Starzip I built most product screens myself, 2,621 commits in 3.8 months.",
-  },
-  {
-    q: "Which domains have you worked in?",
-    a: "Mostly blockchain and gaming products: BORA, Play2bit, NAODA, OVERTAKE, and Starzip, plus regulated wording for financial screens.",
-  },
-  {
-    q: "Do you take freelance or side projects?",
-    a: "Yes, through Brainchild Works. Sites, design systems, and product screens built end to end.",
-  },
-  {
-    q: "Where are you based?",
-    a: "Seoul, Korea. Working in Korean and English, available remotely.",
-  },
 ];
 
 export const WRITING: { slug: string; title: string }[] = [
@@ -128,12 +66,3 @@ const ALL_APPS: App[] = [
   { name: "Finishline", badge: "iPhone + Health", kind: "Running", note: "iOS", line: "Pick a race and a date, and the app builds the training plan backward from race day.", image: "/side/finishline.png" },
 ];
 export const APPS: App[] = ALL_APPS.filter((a) => !isHiddenApp(a.name.toLowerCase().replace(/\s+/g, "-")));
-
-export const OFFER = [
-  "Design system in code",
-  "Information architecture",
-  "Regulated wording review",
-  "Screens built in React",
-  "Release gate and checks",
-  "Korean and English",
-];
