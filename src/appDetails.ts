@@ -353,6 +353,7 @@ const ALL_APP_DETAILS: AppDetail[] = [
           "A three-step onboarding: the race and its date, your current long run, and the days you can train. Races come from a public race calendar, searchable by name, region, or venue, with open registration listed first.",
           "A plan generator for 5K, 10K, 15K, and the half. It starts on the day you save or the next Monday, runs up to sixteen weeks, and grows the long run by no more than ten percent a week toward a peak.",
           "Two goals. Finish keeps three easy runs a week. A time goal adds a fourth day with intervals and tempo, and every pace is derived from the target time.",
+          "More than one race. A spring half and an autumn 10K can sit side by side, each with its own checks and logs. Once race day passes, it moves to past races with the finish time, pace, sessions done, and distance trained.",
         ],
       },
       {
@@ -361,11 +362,12 @@ const ALL_APP_DETAILS: AppDetail[] = [
           "The original Wishrun plan stays in the app as the sample, unchanged. The screens read one plan object, so the generated plan and the hand-written one look the same.",
           "Longer plans get a recovery week every fourth week, and races of 10K and up get a one-week taper only when there are nine weeks or more. When time is short, the peak comes down and the plan says so, instead of cramming.",
           "Intervals and tempo start in week three. The first two weeks are easy running only.",
-          "Changing the race clears progress, because a session id like week 3 Tuesday now points at a different workout. Logged runs are kept as dated runs, so the trend charts lose nothing.",
+          "Progress belongs to a race, not to the app. A session id like week 3 Tuesday means a different workout in another plan, so switching races shelves the current one with all its checks and brings the other back as it was.",
+          "The finish time is just the log on the race session. There is no separate result form; the record screen reads what you already entered on race day.",
         ],
       },
     ],
-    shots: [],
+    shots: ["/apps/finishline/today.png", "/apps/finishline/calendar.png", "/apps/finishline/races.png", "/apps/finishline/past-race.png"],
   },
 ];
 
