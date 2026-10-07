@@ -7,6 +7,8 @@ import { fileURLToPath } from "node:url";
 import { buildCase, type CaseDoc } from "../src/cases/parse.ts";
 import { APP_DETAILS, type AppDetail } from "../src/appDetails.ts";
 import { STRINGS, type UI } from "../src/i18n/ui.ts";
+import { WORKS, type Work } from "../src/works.ts";
+import canvasIndex from "../src/content/canvas/index.json" with { type: "json" };
 
 export const SITE = "https://www.brainchild.kr";
 export const DEFAULT_IMAGE = "/og.png";
@@ -26,12 +28,15 @@ export type RouteMeta = {
   image: Image;
 };
 
-export type Sources = { cases: CaseDoc[]; appDetails: AppDetail[]; ui: UI };
+export type Sources = { cases: CaseDoc[]; appDetails: AppDetail[]; works: Work[]; canvasSlugs: string[]; ui: UI };
+
+/** 캔버스가 있는 작업 슬러그. scripts/canvas-manifest.ts 가 만든 색인에서 읽는다 */
+export const CANVAS_SLUGS = Object.keys(canvasIndex);
 
 /** 이미지 경로(/로 시작) → 크기. 모르면 undefined */
 export type SizeOf = (publicPath: string) => Size | undefined;
 
-export function buildRoutes({ cases, appDetails, ui }: Sources, sizeOf: SizeOf): RouteMeta[] {
+export function buildRoutes({ cases, appDetails, works, canvasSlugs, ui }: Sources, sizeOf: SizeOf): RouteMeta[] {
   const image = (path: string): Image => ({ url: SITE + path, size: sizeOf(path) });
   const generic = (path: string, title: string, ogTitle?: string): RouteMeta => ({
     path,
@@ -62,6 +67,23 @@ export function buildRoutes({ cases, appDetails, ui }: Sources, sizeOf: SizeOf):
       image: image(DEFAULT_IMAGE),
     })),
     generic("/work", ui.titles.work),
+    // 작업 상세와 캔버스. 슬러그는 v4 와 1:1 이다. 표지가 있으면 표지, 없으면 브랜드 카드
+    ...works.map((w): RouteMeta => ({
+      path: `/work/${w.slug}`,
+      title: ui.titles.workDetail(w.name),
+      description: w.tagline.en,
+      ogDescription: w.tagline.en,
+      image: image(w.noCover ? DEFAULT_IMAGE : `/work/${w.slug}.webp`),
+    })),
+    ...works
+      .filter((w) => canvasSlugs.includes(w.slug))
+      .map((w): RouteMeta => ({
+        path: `/work/${w.slug}/canvas`,
+        title: ui.titles.canvas(w.name),
+        description: w.tagline.en,
+        ogDescription: w.tagline.en,
+        image: image(w.noCover ? DEFAULT_IMAGE : `/work/${w.slug}.webp`),
+      })),
     generic("/writing", ui.titles.writing),
     generic("/resume", ui.titles.resume),
   ];
@@ -158,7 +180,7 @@ function main() {
     const file = join(ROOT, "public", p);
     return existsSync(file) ? imageSize(readFileSync(file)) : undefined;
   };
-  const routes = buildRoutes({ cases: readEnglishCases(ROOT), appDetails: APP_DETAILS, ui: STRINGS.en }, sizeOf);
+  const routes = buildRoutes({ cases: readEnglishCases(ROOT), appDetails: APP_DETAILS, works: WORKS, canvasSlugs: CANVAS_SLUGS, ui: STRINGS.en }, sizeOf);
 
   for (const m of routes) {
     const out = join(dist, m.path === "/" ? "" : m.path, "index.html");

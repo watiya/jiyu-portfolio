@@ -1,10 +1,10 @@
 // 작업 색인. v4(portfolio.brainchild.kr) 의 작업 56건을 표지와 메타로 세우고, 그 뒤에 2019 이전 작업 23건(works.early.ts)을 잇는다.
-// 항목을 열면 v4 캔버스가 새 창에서 열린다(v4 이후 작업은 이 사이트 안의 자리로 간다). 사례가 있는 작업은 이 사이트의 사례로도 이어진다. 이전 작업은 캔버스가 없어 표지 이미지가 열린다.
+// 항목을 열면 이 사이트의 작업 상세(/work/<slug>)로 간다. 상세에서 사례·캔버스·라이브로 갈린다. 이전 작업은 v4 에 상세가 없어 표지 이미지가 열린다.
 import { useState } from "react";
 import { SectionLabel } from "../components/Annot.tsx";
 import { useLang } from "../i18n/useLang.ts";
 import { internalClick } from "../router.ts";
-import { WORKS, WORK_CATEGORIES, canvasUrl, type WorkCategory } from "../works.ts";
+import { WORKS, WORK_CATEGORIES, type WorkCategory } from "../works.ts";
 import { EARLY_WORKS } from "../works.early.ts";
 
 export function Work({ go }: { go: (href: string) => void }) {
@@ -37,12 +37,10 @@ export function Work({ go }: { go: (href: string) => void }) {
       </div>
       <ul className="wk-grid" role="list">
         {shown.map((w, i) => {
-          const open = w.here
-            ? { href: w.here, onClick }
-            : { href: canvasUrl(lang, w.slug), target: "_blank", rel: "noreferrer" };
+          const open = { href: `/work/${w.slug}`, onClick };
           return (
           <li key={w.slug} id={w.slug} className="wk" data-token="card.bg card.line card.radius">
-            <a className="wk__cover" {...open} aria-label={`${w.name} · ${W.canvas}`}>
+            <a className="wk__cover" {...open} aria-label={w.name}>
               {w.noCover ? (
                 <span className="wk__cover-empty mono" aria-hidden="true">
                   {W.noCover}
@@ -57,7 +55,7 @@ export function Work({ go }: { go: (href: string) => void }) {
                 {w.client ? ` · ${w.client}` : ""}
               </span>
               <a className="wk__name" {...open}>
-                {w.name} <span aria-hidden="true">{w.here ? "→" : "↗"}</span>
+                {w.name} <span aria-hidden="true">→</span>
               </a>
               {w.tagline[lang] && <p className="wk__tag">{w.tagline[lang]}</p>}
               {w.caseSlug && (

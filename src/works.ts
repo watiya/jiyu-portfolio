@@ -21,7 +21,7 @@ export type Work = {
   role?: Record<Lang, string>;
   /** 표지 이미지가 없는 항목. 있으면 /work/<slug>.webp */
   noCover?: true;
-  /** v4 에 캔버스가 없고 이 사이트 안에서 돌아가는 작업. 캔버스 대신 이 경로로 연다 */
+  /** 이 사이트 안에서 돌아가는 작업. 상세에서 이 경로로 여는 버튼이 선다 */
   here?: string;
 };
 
@@ -84,6 +84,3 @@ export const WORKS: Work[] = [
   { slug: "spera-luckydaybet", name: "Spera - LuckyDayBet", tagline: { ko: "스테이블코인으로 입출금하는 게이밍 플랫폼", en: "A gaming platform with stablecoin deposits and withdrawals" }, category: "product-web", year: "2022" },
   { slug: "todayis", name: "Todayis", tagline: { ko: "오늘을 기록하고 디지털 자산으로 보관하다", en: "Recording today and keeping it as a digital asset" }, category: "app-ui", year: "2022" },
 ];
-
-export const CANVAS_BASE = "https://portfolio.brainchild.kr";
-export const canvasUrl = (lang: Lang, slug: string) => `${CANVAS_BASE}/${lang}/work/${slug}`;
