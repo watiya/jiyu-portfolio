@@ -41,6 +41,7 @@ export const APPS_KO: Record<string, { koName: string; badge: string; kind: stri
   Ppopjido: { koName: "뽑지도", badge: "지도 + 카드", kind: "수집", note: "웹", line: "한국과 일본의 캡슐토이와 포켓몬 카드 지도." },
   Tory: { koName: "토리", badge: "프로토타입", kind: "커플", note: "웹 프로토타입", line: "하나의 실로 이어진 커플 앱. 타임라인과 실시간 데이트 모드." },
   Wishrun: { koName: "위시런", badge: "iPhone + 건강", kind: "러닝", note: "iOS", line: "첫 5km 대회를 위한 7주 플랜을 앱으로. 애플 건강에서 달리기 기록을 읽습니다." },
+  Finishline: { koName: "피니시라인", badge: "iPhone + 건강", kind: "러닝", note: "iOS", line: "대회와 날짜를 고르면 D-day 에서 거꾸로 훈련 플랜을 짜 주는 러닝 코치." },
   Bapsim: { koName: "밥심", badge: "설계 중", kind: "식단", note: "설계 캔버스", line: "한 상 그대로 기록하는 한식 식단. 밥, 국, 반찬을 네 번 탭으로." },
 };
 

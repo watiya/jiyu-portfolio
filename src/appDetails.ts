@@ -327,6 +327,46 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     shots: [],
   },
+  {
+    slug: "finishline",
+    name: "Finishline",
+    title: "Any race, planned backward from race day",
+    dek: "Wishrun was built for one race. Finishline turns the plan into data: pick an event and a date, say how far you run today and which days you are free, and it writes the weeks between now and the start line.",
+    date: "Oct 2026",
+    meta: [
+      { label: "Role", value: "Product, design, and build" },
+      { label: "Platform", value: "iOS, Apple Health" },
+      { label: "Status", value: "In progress" },
+    ],
+    stack: ["Expo", "React Native", "TypeScript", "HealthKit"],
+    sections: [
+      {
+        heading: "The problem",
+        body: [
+          "Wishrun kept one PDF plan word for word, so it only worked for one 5K. Signing up for another race meant writing a new app.",
+          "Most people do not have a coach's plan at all. They have a race, a date, and a guess about how far they can run now.",
+        ],
+      },
+      {
+        heading: "What I built",
+        body: [
+          "A three-step onboarding: the race and its date, your current long run, and the days you can train. Races come from a public race calendar, searchable by name, region, or venue, with open registration listed first.",
+          "A plan generator for 5K, 10K, 15K, and the half. It starts on the day you save or the next Monday, runs up to sixteen weeks, and grows the long run by no more than ten percent a week toward a peak.",
+          "Two goals. Finish keeps three easy runs a week. A time goal adds a fourth day with intervals and tempo, and every pace is derived from the target time.",
+        ],
+      },
+      {
+        heading: "Decisions worth noting",
+        body: [
+          "The original Wishrun plan stays in the app as the sample, unchanged. The screens read one plan object, so the generated plan and the hand-written one look the same.",
+          "Longer plans get a recovery week every fourth week, and races of 10K and up get a one-week taper only when there are nine weeks or more. When time is short, the peak comes down and the plan says so, instead of cramming.",
+          "Intervals and tempo start in week three. The first two weeks are easy running only.",
+          "Changing the race clears progress, because a session id like week 3 Tuesday now points at a different workout. Logged runs are kept as dated runs, so the trend charts lose nothing.",
+        ],
+      },
+    ],
+    shots: [],
+  },
 ];
 
 export const APP_DETAILS: AppDetail[] = ALL_APP_DETAILS.filter((d) => !isHiddenApp(d.slug));
