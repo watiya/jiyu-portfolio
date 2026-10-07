@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c0c0d" />
+    <title>Brainchild-Jiyu</title>
+    <meta name="description" content="Design engineer. I turn messy product rules into systems that ship. 14 years in product design, building the source of truth in code. This site is a living design system: turn the tokens and everything follows." />
+    <!-- 공유 미리보기 기본값. 빌드 뒤 scripts/prerender-meta.ts 가 경로별 dist/<경로>/index.html 에 이 값을 갈아 쓴다 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Brainchild-Jiyu" />
+    <meta property="og:title" content="Brainchild-Jiyu | Design Engineer" />
+    <meta property="og:description" content="I turn messy product rules into systems that ship. 14 years in product design, building the source of truth in code." />
+    <meta property="og:url" content="https://www.brainchild.kr/" />
+    <meta property="og:image" content="https://www.brainchild.kr/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // 첫 칠 색만 미리 정한다. 전체 토큰은 앱이 심는다
+      try {
+        var q = new URLSearchParams(location.search);
+        var t = q.get("theme");
+        if (!t) { var s = localStorage.getItem("v8.tokens"); if (s) t = JSON.parse(s).theme; }
+        if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+        var l = q.get("lang") || localStorage.getItem("v8.lang") || (/^ko/i.test(navigator.language) ? "ko" : "en");
+        if (l === "ko" || l === "en") document.documentElement.lang = l;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<svg viewBox="0 0 300 594" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="inherit" role="img" aria-label="정상 화면 하나만 넘기면 나머지 상태를 구현자가 정하고, 상태를 한 화면에 나열하면 정할 것이 남지 않는다">
+<style>
+.fx-t1{fill:var(--text-default,#191a1b)}
+.fx-t2{fill:var(--text-muted,#3a3d44)}
+.fx-t3{fill:var(--text-subtle,#62666d)}
+.fx-card{fill:var(--surface-sunken,#f2f3f5);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-inset{fill:var(--surface-raised,#fff);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-ghost{fill:none;stroke:var(--line-default,#ccd3dd);stroke-width:1.25;stroke-dasharray:5 4;vector-effect:non-scaling-stroke}
+.fx-key{fill:var(--accent-default,#08090a)}
+.fx-on{fill:var(--accent-on,#fff)}
+.fx-sk{fill:var(--text-subtle,#62666d);opacity:.2}
+.fx-sk-on{fill:var(--accent-on,#fff);opacity:.2}
+.fx-ln{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-ln-on{fill:none;stroke:var(--accent-on,#fff);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-dot{stroke-dasharray:.5 5}
+.fx-rule{fill:none;stroke:var(--line-strong,#dfe1e5);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-rule-on{fill:none;stroke:var(--accent-on,#fff);stroke-opacity:.16;stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-mk{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.25}
+</style>
+<circle cx="8" cy="9.3" r="8" class="fx-mk"/>
+<path d="M5 6.3 L11 12.4 M11 6.3 L5 12.4" class="fx-ln" style="stroke-width:1.25"/>
+<text x="24" y="14" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">정상 화면 하나</text>
+<rect x="0" y="30" width="142" height="86" rx="8" class="fx-card"/>
+<text x="14" y="56" font-size="15" font-weight="600" class="fx-t1">정상</text>
+<rect x="14" y="70" width="114" height="10" rx="3" class="fx-sk"/>
+<rect x="14" y="88" width="79.8" height="10" rx="3" class="fx-sk"/>
+<rect x="158" y="30" width="142" height="86" rx="8" class="fx-ghost"/>
+<text x="229" y="78" font-size="18" font-weight="600" text-anchor="middle" opacity="0.5" class="fx-t3">?</text>
+<text x="229" y="102" font-size="12.5" font-weight="500" text-anchor="middle" class="fx-t3">콘텐츠 미정</text>
+<rect x="0" y="132" width="142" height="86" rx="8" class="fx-ghost"/>
+<text x="71" y="180" font-size="18" font-weight="600" text-anchor="middle" opacity="0.5" class="fx-t3">?</text>
+<text x="71" y="204" font-size="12.5" font-weight="500" text-anchor="middle" class="fx-t3">콘텐츠 미정</text>
+<rect x="158" y="132" width="142" height="86" rx="8" class="fx-ghost"/>
+<text x="229" y="180" font-size="18" font-weight="600" text-anchor="middle" opacity="0.5" class="fx-t3">?</text>
+<text x="229" y="204" font-size="12.5" font-weight="500" text-anchor="middle" class="fx-t3">콘텐츠 미정</text>
+<text x="0" y="244" font-size="13" font-weight="500" class="fx-t3">나머지는 구현하는 사람이 정한다</text>
+<path d="M0 270 H300" class="fx-rule"/>
+<circle cx="8" cy="299.3" r="8" class="fx-key"/>
+<path d="M4.6 299.5 L7.2 302 L11.5 296.9" class="fx-ln-on" style="stroke-width:1.5"/>
+<text x="24" y="304" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">상태를 한 화면에</text>
+<rect x="0" y="320" width="300" height="240" rx="8" class="fx-key"/>
+<circle cx="20" cy="345" r="3" class="fx-on" opacity=".55"/>
+<text x="34" y="350" font-size="14" class="fx-on"><tspan font-weight="600">로딩</tspan></text>
+<path d="M14 364 H286" class="fx-rule-on"/>
+<circle cx="20" cy="383" r="3" class="fx-on" opacity=".55"/>
+<text x="34" y="388" font-size="14" class="fx-on"><tspan font-weight="600">빈</tspan><tspan opacity="0.72"> · 상장 없음</tspan></text>
+<path d="M14 402 H286" class="fx-rule-on"/>
+<circle cx="20" cy="421" r="3" class="fx-on" opacity=".55"/>
+<text x="34" y="426" font-size="14" class="fx-on"><tspan font-weight="600">빈</tspan><tspan opacity="0.72"> · 필터 좁음</tspan></text>
+<path d="M14 440 H286" class="fx-rule-on"/>
+<circle cx="20" cy="459" r="3" class="fx-on" opacity=".55"/>
+<text x="34" y="464" font-size="14" class="fx-on"><tspan font-weight="600">빈</tspan><tspan opacity="0.72"> · 검색 없음</tspan></text>
+<path d="M14 478 H286" class="fx-rule-on"/>
+<circle cx="20" cy="497" r="3" class="fx-on" opacity=".55"/>
+<text x="34" y="502" font-size="14" class="fx-on"><tspan font-weight="600">에러</tspan><tspan opacity="0.72"> · 불러오기 실패</tspan></text>
+<path d="M14 516 H286" class="fx-rule-on"/>
+<circle cx="20" cy="535" r="3" class="fx-on" opacity=".55"/>
+<text x="34" y="540" font-size="14" class="fx-on"><tspan font-weight="600">모바일</tspan><tspan opacity="0.72"> · 바텀시트</tspan></text>
+<text x="0" y="586" font-size="13" font-weight="500" class="fx-t2">코드가 1차 안 → 디자인 파일로 역반영</text>
+</svg>

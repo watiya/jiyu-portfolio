@@ -1,0 +1,51 @@
+<svg viewBox="0 0 880 352" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="inherit" role="img" aria-label="정본 하나와 미러 셋의 관계도">
+<style>
+.fx-t1{fill:var(--text-default,#191a1b)}
+.fx-t2{fill:var(--text-muted,#3a3d44)}
+.fx-t3{fill:var(--text-subtle,#62666d)}
+.fx-card{fill:var(--surface-sunken,#f2f3f5);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-inset{fill:var(--surface-raised,#fff);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-ghost{fill:none;stroke:var(--line-default,#ccd3dd);stroke-width:1.25;stroke-dasharray:5 4;vector-effect:non-scaling-stroke}
+.fx-key{fill:var(--accent-default,#08090a)}
+.fx-on{fill:var(--accent-on,#fff)}
+.fx-sk{fill:var(--text-subtle,#62666d);opacity:.2}
+.fx-sk-on{fill:var(--accent-on,#fff);opacity:.2}
+.fx-ln{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-ln-on{fill:none;stroke:var(--accent-on,#fff);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-dot{stroke-dasharray:.5 5}
+.fx-rule{fill:none;stroke:var(--line-strong,#dfe1e5);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-rule-on{fill:none;stroke:var(--accent-on,#fff);stroke-opacity:.16;stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-mk{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.25}
+</style>
+<text x="0" y="14" font-size="13" font-weight="600" letter-spacing="0.6" class="fx-t2">SOURCE OF TRUTH</text>
+<text x="430" y="14" font-size="13" font-weight="600" letter-spacing="0.6" class="fx-t2">MIRRORS</text>
+<rect x="430" y="32" width="450" height="92" rx="8" class="fx-card"/>
+<path d="M430 62 V40 Q430 32 438 32 H872 Q880 32 880 40 V62 Z" class="fx-key"/>
+<circle cx="445" cy="47" r="3" class="fx-ln-on" opacity=".7"/>
+<text x="456" y="51.3" font-size="12" font-weight="500" opacity="0.85" class="fx-on">정본 경로 · 동기화 날짜</text>
+<text x="444" y="98.8" font-size="16" font-weight="600" class="fx-t1">공유 문서</text>
+<rect x="430" y="146" width="450" height="92" rx="8" class="fx-card"/>
+<path d="M430 176 V154 Q430 146 438 146 H872 Q880 146 880 154 V176 Z" class="fx-key"/>
+<circle cx="445" cy="161" r="3" class="fx-ln-on" opacity=".7"/>
+<text x="456" y="165.3" font-size="12" font-weight="500" opacity="0.85" class="fx-on">정본 경로 · 동기화 날짜</text>
+<text x="444" y="212.8" font-size="16" font-weight="600" class="fx-t1">인용 표면</text>
+<rect x="430" y="260" width="450" height="92" rx="8" class="fx-card"/>
+<path d="M430 290 V268 Q430 260 438 260 H872 Q880 260 880 268 V290 Z" class="fx-key"/>
+<circle cx="445" cy="275" r="3" class="fx-ln-on" opacity=".7"/>
+<text x="456" y="279.3" font-size="12" font-weight="500" opacity="0.85" class="fx-on">정본 경로 · 동기화 날짜</text>
+<text x="444" y="326.8" font-size="16" font-weight="600" class="fx-t1">파생 데이터</text>
+<rect x="0" y="112" width="270" height="160" rx="8" class="fx-key"/>
+<text x="22" y="226" font-size="28" font-weight="700" class="fx-on">정본</text>
+<text x="22" y="252" font-size="13.5" opacity="0.72" class="fx-on">고치는 자리는 하나</text>
+<path d="M278 192 L422 192" class="fx-ln"/>
+<path d="M416 196.5 L422 192 L416 187.5" class="fx-ln"/>
+<path d="M350 192 V88 Q350 78 360 78 H422" class="fx-ln"/>
+<path d="M350 192 V296 Q350 306 360 306 H422" class="fx-ln"/>
+<path d="M410 78 L422 78" class="fx-ln"/>
+<path d="M416 82.5 L422 78 L416 73.5" class="fx-ln"/>
+<path d="M410 306 L422 306" class="fx-ln"/>
+<path d="M416 310.5 L422 306 L416 301.5" class="fx-ln"/>
+<circle cx="350" cy="192" r="3.5" class="fx-t3"/>
+<text x="0" y="306" font-size="15" font-weight="500" class="fx-t2">미러를 없애지 않는다.</text>
+<text x="0" y="328.5" font-size="15" font-weight="500" class="fx-t2">자기가 미러임을 말하게 한다.</text>
+</svg>

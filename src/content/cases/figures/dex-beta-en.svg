@@ -1,0 +1,60 @@
+<svg viewBox="0 0 880 336" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="inherit" role="img" aria-label="Hand over one happy screen and the implementer decides the rest; list the states on one page and nothing is left to decide">
+<style>
+.fx-t1{fill:var(--text-default,#191a1b)}
+.fx-t2{fill:var(--text-muted,#3a3d44)}
+.fx-t3{fill:var(--text-subtle,#62666d)}
+.fx-card{fill:var(--surface-sunken,#f2f3f5);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-inset{fill:var(--surface-raised,#fff);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-ghost{fill:none;stroke:var(--line-default,#ccd3dd);stroke-width:1.25;stroke-dasharray:5 4;vector-effect:non-scaling-stroke}
+.fx-key{fill:var(--accent-default,#08090a)}
+.fx-on{fill:var(--accent-on,#fff)}
+.fx-sk{fill:var(--text-subtle,#62666d);opacity:.2}
+.fx-sk-on{fill:var(--accent-on,#fff);opacity:.2}
+.fx-ln{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-ln-on{fill:none;stroke:var(--accent-on,#fff);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-dot{stroke-dasharray:.5 5}
+.fx-rule{fill:none;stroke:var(--line-strong,#dfe1e5);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-rule-on{fill:none;stroke:var(--accent-on,#fff);stroke-opacity:.16;stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-mk{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.25}
+</style>
+<circle cx="8" cy="9.3" r="8" class="fx-mk"/>
+<path d="M5 6.3 L11 12.4 M11 6.3 L5 12.4" class="fx-ln" style="stroke-width:1.25"/>
+<text x="24" y="14" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">One happy screen</text>
+<rect x="0" y="34" width="190" height="124" rx="8" class="fx-card"/>
+<text x="14" y="60" font-size="16" font-weight="600" class="fx-t1">Happy</text>
+<rect x="14" y="74" width="162" height="10" rx="3" class="fx-sk"/>
+<rect x="14" y="92" width="113.4" height="10" rx="3" class="fx-sk"/>
+<rect x="14" y="110" width="72.9" height="10" rx="3" class="fx-sk"/>
+<rect x="206" y="34" width="190" height="124" rx="8" class="fx-ghost"/>
+<text x="301" y="101" font-size="18" font-weight="600" text-anchor="middle" opacity="0.5" class="fx-t3">?</text>
+<text x="301" y="144" font-size="12" font-weight="500" text-anchor="middle" class="fx-t3">Content TBD</text>
+<rect x="0" y="174" width="190" height="124" rx="8" class="fx-ghost"/>
+<text x="95" y="241" font-size="18" font-weight="600" text-anchor="middle" opacity="0.5" class="fx-t3">?</text>
+<text x="95" y="284" font-size="12" font-weight="500" text-anchor="middle" class="fx-t3">Content TBD</text>
+<rect x="206" y="174" width="190" height="124" rx="8" class="fx-ghost"/>
+<text x="301" y="241" font-size="18" font-weight="600" text-anchor="middle" opacity="0.5" class="fx-t3">?</text>
+<text x="301" y="284" font-size="12" font-weight="500" text-anchor="middle" class="fx-t3">Content TBD</text>
+<text x="0" y="328" font-size="13.5" font-weight="500" class="fx-t3">The rest gets decided by whoever builds it</text>
+<circle cx="468" cy="9.3" r="8" class="fx-key"/>
+<path d="M464.6 9.5 L467.2 12 L471.5 6.9" class="fx-ln-on" style="stroke-width:1.5"/>
+<text x="484" y="14" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">Every state on one page</text>
+<rect x="460" y="34" width="420" height="264" rx="8" class="fx-key"/>
+<circle cx="480" cy="61" r="3" class="fx-on" opacity=".55"/>
+<text x="494" y="66.4" font-size="15" class="fx-on"><tspan font-weight="600">Loading</tspan></text>
+<path d="M474 82 H866" class="fx-rule-on"/>
+<circle cx="480" cy="103" r="3" class="fx-on" opacity=".55"/>
+<text x="494" y="108.4" font-size="15" class="fx-on"><tspan font-weight="600">Empty</tspan><tspan opacity="0.72"> · nothing listed</tspan></text>
+<path d="M474 124 H866" class="fx-rule-on"/>
+<circle cx="480" cy="145" r="3" class="fx-on" opacity=".55"/>
+<text x="494" y="150.4" font-size="15" class="fx-on"><tspan font-weight="600">Empty</tspan><tspan opacity="0.72"> · filter too narrow</tspan></text>
+<path d="M474 166 H866" class="fx-rule-on"/>
+<circle cx="480" cy="187" r="3" class="fx-on" opacity=".55"/>
+<text x="494" y="192.4" font-size="15" class="fx-on"><tspan font-weight="600">Empty</tspan><tspan opacity="0.72"> · no results</tspan></text>
+<path d="M474 208 H866" class="fx-rule-on"/>
+<circle cx="480" cy="229" r="3" class="fx-on" opacity=".55"/>
+<text x="494" y="234.4" font-size="15" class="fx-on"><tspan font-weight="600">Error</tspan><tspan opacity="0.72"> · fetch failed</tspan></text>
+<path d="M474 250 H866" class="fx-rule-on"/>
+<circle cx="480" cy="271" r="3" class="fx-on" opacity=".55"/>
+<text x="494" y="276.4" font-size="15" class="fx-on"><tspan font-weight="600">Mobile</tspan><tspan opacity="0.72"> · bottom sheet</tspan></text>
+<text x="460" y="328" font-size="13.5" font-weight="500" class="fx-t2">Code is the first draft → reflected into the design file</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg viewBox="0 0 300 719" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="inherit" role="img" aria-label="The difference between leading with the wallet and splitting browsing from buying">
+<style>
+.fx-t1{fill:var(--text-default,#191a1b)}
+.fx-t2{fill:var(--text-muted,#3a3d44)}
+.fx-t3{fill:var(--text-subtle,#62666d)}
+.fx-card{fill:var(--surface-sunken,#f2f3f5);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-inset{fill:var(--surface-raised,#fff);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-ghost{fill:none;stroke:var(--line-default,#ccd3dd);stroke-width:1.25;stroke-dasharray:5 4;vector-effect:non-scaling-stroke}
+.fx-key{fill:var(--accent-default,#08090a)}
+.fx-on{fill:var(--accent-on,#fff)}
+.fx-sk{fill:var(--text-subtle,#62666d);opacity:.2}
+.fx-sk-on{fill:var(--accent-on,#fff);opacity:.2}
+.fx-ln{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-ln-on{fill:none;stroke:var(--accent-on,#fff);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-dot{stroke-dasharray:.5 5}
+.fx-rule{fill:none;stroke:var(--line-strong,#dfe1e5);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-rule-on{fill:none;stroke:var(--accent-on,#fff);stroke-opacity:.16;stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-mk{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.25}
+</style>
+<circle cx="8" cy="9.3" r="8" class="fx-mk"/>
+<path d="M5 6.3 L11 12.4 M11 6.3 L5 12.4" class="fx-ln" style="stroke-width:1.25"/>
+<text x="24" y="14" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">Leading with the wallet</text>
+<rect x="0" y="30" width="196" height="48" rx="6" class="fx-key"/>
+<text x="12" y="58.5" font-size="12.5" font-weight="500" opacity="0.6" class="fx-on">01</text>
+<text x="35.4" y="59.4" font-size="15" font-weight="600" class="fx-on">Connect wallet</text>
+<rect x="0" y="100" width="196" height="48" rx="6" class="fx-ghost"/>
+<text x="12" y="128.5" font-size="12.5" font-weight="500" class="fx-t3">02</text>
+<text x="38.3" y="129.4" font-size="15" font-weight="500" class="fx-t3">See the product</text>
+<rect x="0" y="170" width="196" height="48" rx="6" class="fx-ghost"/>
+<text x="12" y="198.5" font-size="12.5" font-weight="500" class="fx-t3">03</text>
+<text x="38.2" y="199.4" font-size="15" font-weight="500" class="fx-t3">Buy</text>
+<path d="M98 83 L98 95" class="fx-ln fx-dot"/>
+<path d="M93.5 89 L98 95 L102.5 89" class="fx-ln"/>
+<path d="M98 153 L98 165" class="fx-ln fx-dot"/>
+<path d="M93.5 159 L98 165 L102.5 159" class="fx-ln"/>
+<path d="M204 54 L278 54 L278 253 L221.4 253" class="fx-ln fx-dot"/>
+<path d="M227.4 248.5 L221.4 253 L227.4 257.5" class="fx-ln"/>
+<text x="0" y="258" font-size="14" font-weight="600" class="fx-t1">They leave having seen nothing</text>
+<text x="0" y="279" font-size="13" class="fx-t3">Uninterested or unequipped, the two look identical</text>
+<path d="M0 305 H300" class="fx-rule"/>
+<circle cx="8" cy="334.3" r="8" class="fx-key"/>
+<path d="M4.6 334.5 L7.2 337 L11.5 331.9" class="fx-ln-on" style="stroke-width:1.5"/>
+<text x="24" y="339" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">Splitting browsing from buying</text>
+<rect x="0" y="355" width="196" height="48" rx="6" class="fx-card"/>
+<text x="12" y="383.5" font-size="12.5" font-weight="500" class="fx-t3">01</text>
+<text x="35.4" y="384.4" font-size="15" font-weight="600" class="fx-t1">Log in</text>
+<rect x="0" y="425" width="196" height="48" rx="6" class="fx-card"/>
+<text x="12" y="453.5" font-size="12.5" font-weight="500" class="fx-t3">02</text>
+<text x="38.3" y="454.4" font-size="15" font-weight="600" class="fx-t1">Whole product</text>
+<rect x="0" y="495" width="196" height="48" rx="6" class="fx-key"/>
+<text x="12" y="523.5" font-size="12.5" font-weight="500" opacity="0.6" class="fx-on">03</text>
+<text x="38.2" y="524.4" font-size="15" font-weight="600" class="fx-on">Connect wallet</text>
+<rect x="0" y="565" width="196" height="48" rx="6" class="fx-card"/>
+<text x="12" y="593.5" font-size="12.5" font-weight="500" class="fx-t3">04</text>
+<text x="38.2" y="594.4" font-size="15" font-weight="600" class="fx-t1">Buy</text>
+<path d="M98 408 L98 420" class="fx-ln"/>
+<path d="M93.5 414 L98 420 L102.5 414" class="fx-ln"/>
+<path d="M98 478 L98 490" class="fx-ln"/>
+<path d="M93.5 484 L98 490 L102.5 484" class="fx-ln"/>
+<path d="M98 548 L98 560" class="fx-ln"/>
+<path d="M93.5 554 L98 560 L102.5 554" class="fx-ln"/>
+<path d="M204 356 H210 V542 H204" class="fx-ln" style="stroke-width:1.25"/>
+<text x="0" y="649" font-size="14" font-weight="600" class="fx-t1">By here the reason to go get the prerequisite</text>
+<text x="0" y="670" font-size="14" font-weight="600" class="fx-t1">already exists</text>
+<text x="0" y="691" font-size="13" class="fx-t3">The wallet is not issued for them, so no place is</text>
+<text x="0" y="710.5" font-size="13" class="fx-t3">created for a key to pass through</text>
+</svg>

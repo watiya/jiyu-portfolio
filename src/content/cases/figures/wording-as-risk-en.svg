@@ -1,0 +1,48 @@
+<svg viewBox="0 0 880 282" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="inherit" role="img" aria-label="Changing the verb versus moving the subject">
+<style>
+.fx-t1{fill:var(--text-default,#191a1b)}
+.fx-t2{fill:var(--text-muted,#3a3d44)}
+.fx-t3{fill:var(--text-subtle,#62666d)}
+.fx-card{fill:var(--surface-sunken,#f2f3f5);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-inset{fill:var(--surface-raised,#fff);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-ghost{fill:none;stroke:var(--line-default,#ccd3dd);stroke-width:1.25;stroke-dasharray:5 4;vector-effect:non-scaling-stroke}
+.fx-key{fill:var(--accent-default,#08090a)}
+.fx-on{fill:var(--accent-on,#fff)}
+.fx-sk{fill:var(--text-subtle,#62666d);opacity:.2}
+.fx-sk-on{fill:var(--accent-on,#fff);opacity:.2}
+.fx-ln{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-ln-on{fill:none;stroke:var(--accent-on,#fff);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-dot{stroke-dasharray:.5 5}
+.fx-rule{fill:none;stroke:var(--line-strong,#dfe1e5);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-rule-on{fill:none;stroke:var(--accent-on,#fff);stroke-opacity:.16;stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-mk{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.25}
+</style>
+<text x="230" y="14" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">SUBJECT</text>
+<text x="440" y="14" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">VERB</text>
+<path d="M230 28 H880" class="fx-rule"/>
+<circle cx="8" cy="74" r="3.5" class="fx-t3"/>
+<text x="28" y="79.4" font-size="15" font-weight="600" class="fx-t2">Before</text>
+<rect x="230" y="44" width="190" height="60" rx="6" class="fx-card"/>
+<text x="246" y="80.1" font-size="17" font-weight="600" class="fx-t1">The company</text>
+<rect x="440" y="44" width="240" height="60" rx="6" class="fx-card"/>
+<text x="456" y="80.1" font-size="17" font-weight="600" class="fx-t1">approves</text>
+<text x="704" y="78.9" font-size="13.5" class="fx-t3">Grants authority</text>
+<circle cx="8" cy="162" r="8" class="fx-mk"/>
+<path d="M5 159 L11 165 M11 159 L5 165" class="fx-ln" style="stroke-width:1.25"/>
+<text x="28" y="167.4" font-size="15" font-weight="600" class="fx-t1">Softening only the verb</text>
+<rect x="230" y="132" width="190" height="60" rx="6" class="fx-card"/>
+<text x="246" y="168.1" font-size="17" font-weight="600" class="fx-t1">The company</text>
+<rect x="440" y="132" width="240" height="60" rx="6" class="fx-card"/>
+<text x="456" y="168.1" font-size="17" font-weight="600" class="fx-t1">checks requirements</text>
+<text x="704" y="166.9" font-size="13.5" class="fx-t3">Still there</text>
+<circle cx="8" cy="250" r="8" class="fx-key"/>
+<path d="M4.6 250.2 L7.2 252.7 L11.5 247.6" class="fx-ln-on" style="stroke-width:1.5"/>
+<text x="28" y="255.4" font-size="15" font-weight="600" class="fx-t1">Removing the subject</text>
+<rect x="230" y="220" width="190" height="60" rx="6" class="fx-ghost"/>
+<rect x="440" y="220" width="240" height="60" rx="6" class="fx-key"/>
+<text x="456" y="256.1" font-size="17" font-weight="600" class="fx-on">Submitted</text>
+<text x="704" y="254.9" font-size="13.5" class="fx-t3">A state, not an act</text>
+<path d="M8 86 V150" class="fx-rule"/>
+<path d="M8 174 V238" class="fx-rule"/>
+<path d="M325 110 L325 126" class="fx-ln fx-dot"/>
+</svg>

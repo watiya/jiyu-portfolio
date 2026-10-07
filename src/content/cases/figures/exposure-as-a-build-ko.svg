@@ -1,0 +1,54 @@
+<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="inherit" role="img" aria-label="방화벽만 푼 경우와 나갈 것만 따로 빌드한 경우의 노출 범위 차이">
+<style>
+.fx-t1{fill:var(--text-default,#191a1b)}
+.fx-t2{fill:var(--text-muted,#3a3d44)}
+.fx-t3{fill:var(--text-subtle,#62666d)}
+.fx-card{fill:var(--surface-sunken,#f2f3f5);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-inset{fill:var(--surface-raised,#fff);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-ghost{fill:none;stroke:var(--line-default,#ccd3dd);stroke-width:1.25;stroke-dasharray:5 4;vector-effect:non-scaling-stroke}
+.fx-key{fill:var(--accent-default,#08090a)}
+.fx-on{fill:var(--accent-on,#fff)}
+.fx-sk{fill:var(--text-subtle,#62666d);opacity:.2}
+.fx-sk-on{fill:var(--accent-on,#fff);opacity:.2}
+.fx-ln{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-ln-on{fill:none;stroke:var(--accent-on,#fff);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-dot{stroke-dasharray:.5 5}
+.fx-rule{fill:none;stroke:var(--line-strong,#dfe1e5);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-rule-on{fill:none;stroke:var(--accent-on,#fff);stroke-opacity:.16;stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-mk{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.25}
+</style>
+<circle cx="8" cy="9.3" r="8" class="fx-mk"/>
+<path d="M5 6.3 L11 12.4 M11 6.3 L5 12.4" class="fx-ln" style="stroke-width:1.25"/>
+<text x="24" y="14" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">방화벽만 풀면</text>
+<rect x="0" y="32" width="880" height="100" rx="8" class="fx-card"/>
+<text x="16" y="58" font-size="12" font-weight="500" letter-spacing="0.2" class="fx-t3">한 번들</text>
+<rect x="16" y="70" width="200" height="48" rx="6" class="fx-key"/>
+<text x="32" y="99.8" font-size="16" font-weight="600" class="fx-on">가치평가</text>
+<rect x="232" y="70" width="200" height="48" rx="6" class="fx-inset"/>
+<text x="248" y="99.8" font-size="16" font-weight="600" class="fx-t1">콘솔</text>
+<rect x="448" y="70" width="200" height="48" rx="6" class="fx-inset"/>
+<text x="464" y="99.8" font-size="16" font-weight="600" class="fx-t1">관리자</text>
+<rect x="664" y="70" width="200" height="48" rx="6" class="fx-inset"/>
+<text x="680" y="99.8" font-size="16" font-weight="600" class="fx-t1">내부 문서</text>
+<path d="M116 140 L116 177 L142 177" class="fx-ln"/>
+<path d="M136 181.5 L142 177 L136 172.5" class="fx-ln"/>
+<text x="154" y="182" font-size="15" font-weight="600" class="fx-t1">화면 하나를 열려고 했는데 상자가 열립니다</text>
+<text x="154" y="206" font-size="13.5" class="fx-t3">호스트를 여는 것이 곧 안에 든 것을 전부 여는 것입니다</text>
+<path d="M0 240 H880" class="fx-rule"/>
+<circle cx="8" cy="275.3" r="8" class="fx-key"/>
+<path d="M4.6 275.5 L7.2 278 L11.5 272.9" class="fx-ln-on" style="stroke-width:1.5"/>
+<text x="24" y="280" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">나갈 것만 따로 지으면</text>
+<rect x="0" y="298" width="232" height="100" rx="8" class="fx-card"/>
+<text x="16" y="324" font-size="12" font-weight="500" letter-spacing="0.2" class="fx-t3">밖으로 나가는 산출물</text>
+<rect x="16" y="336" width="200" height="48" rx="6" class="fx-key"/>
+<text x="32" y="365.8" font-size="16" font-weight="600" class="fx-on">가치평가</text>
+<rect x="256" y="336" width="192" height="48" rx="6" class="fx-ghost"/>
+<text x="272" y="365.8" font-size="16" font-weight="500" class="fx-t3">콘솔</text>
+<rect x="464" y="336" width="192" height="48" rx="6" class="fx-ghost"/>
+<text x="480" y="365.8" font-size="16" font-weight="500" class="fx-t3">관리자</text>
+<rect x="672" y="336" width="192" height="48" rx="6" class="fx-ghost"/>
+<text x="688" y="365.8" font-size="16" font-weight="500" class="fx-t3">내부 문서</text>
+<text x="256" y="324" font-size="12" font-weight="500" letter-spacing="0.2" class="fx-t3">산출물에 존재하지 않습니다</text>
+<text x="0" y="438" font-size="15" font-weight="600" class="fx-t1">무엇을 부르는지 적은 파일 하나가 노출 범위의 정의입니다</text>
+<text x="0" y="462" font-size="13.5" class="fx-t3">경계가 규칙이 아니라 산출물이라 지켜지는지 확인할 일이 없습니다</text>
+</svg>

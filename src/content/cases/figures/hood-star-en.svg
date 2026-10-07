@@ -1,0 +1,81 @@
+<svg viewBox="0 0 880 362" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="inherit" role="img" aria-label="A map home and a feed home are empty right after launch; a today's-one-round home is full with thirteen stores">
+<style>
+.fx-t1{fill:var(--text-default,#191a1b)}
+.fx-t2{fill:var(--text-muted,#3a3d44)}
+.fx-t3{fill:var(--text-subtle,#62666d)}
+.fx-card{fill:var(--surface-sunken,#f2f3f5);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-inset{fill:var(--surface-raised,#fff);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-ghost{fill:none;stroke:var(--line-default,#ccd3dd);stroke-width:1.25;stroke-dasharray:5 4;vector-effect:non-scaling-stroke}
+.fx-key{fill:var(--accent-default,#08090a)}
+.fx-on{fill:var(--accent-on,#fff)}
+.fx-sk{fill:var(--text-subtle,#62666d);opacity:.2}
+.fx-sk-on{fill:var(--accent-on,#fff);opacity:.2}
+.fx-ln{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-ln-on{fill:none;stroke:var(--accent-on,#fff);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-dot{stroke-dasharray:.5 5}
+.fx-rule{fill:none;stroke:var(--line-strong,#dfe1e5);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-rule-on{fill:none;stroke:var(--accent-on,#fff);stroke-opacity:.16;stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-mk{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.25}
+</style>
+<circle cx="8" cy="9.3" r="8" class="fx-mk"/>
+<path d="M5 6.3 L11 12.4 M11 6.3 L5 12.4" class="fx-ln" style="stroke-width:1.25"/>
+<text x="24" y="14" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">v1 - v6 · shells only</text>
+<rect x="0" y="34" width="186" height="290" rx="16" class="fx-card"/>
+<rect x="75" y="44" width="36" height="5" rx="2.5" class="fx-sk"/>
+<rect x="12" y="60" width="162" height="224" rx="8" class="fx-inset"/>
+<path d="M12 116 H174" class="fx-rule"/>
+<path d="M52.5 60 V284" class="fx-rule"/>
+<path d="M12 172 H174" class="fx-rule"/>
+<path d="M93 60 V284" class="fx-rule"/>
+<path d="M12 228 H174" class="fx-rule"/>
+<path d="M133.5 60 V284" class="fx-rule"/>
+<circle cx="41.2" cy="91.4" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="96.2" cy="82.4" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="144.8" cy="104.8" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="60.6" cy="127.2" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="118.9" cy="140.6" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="31.4" cy="163" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="83.3" cy="172" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="151.3" cy="176.5" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="54.1" cy="207.8" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="109.2" cy="216.8" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="141.6" cy="239.2" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="76.8" cy="252.6" r="3" class="fx-t3" opacity=".55"/>
+<circle cx="34.7" cy="257.1" r="3" class="fx-t3" opacity=".55"/>
+<text x="93" y="309" font-size="14" font-weight="600" text-anchor="middle" class="fx-t2">Map home</text>
+<rect x="206" y="34" width="186" height="290" rx="16" class="fx-card"/>
+<rect x="281" y="44" width="36" height="5" rx="2.5" class="fx-sk"/>
+<rect x="218" y="60" width="162" height="50" rx="6" class="fx-ghost"/>
+<rect x="218" y="118" width="162" height="50" rx="6" class="fx-ghost"/>
+<rect x="218" y="176" width="162" height="50" rx="6" class="fx-ghost"/>
+<rect x="218" y="234" width="162" height="50" rx="6" class="fx-ghost"/>
+<text x="299" y="309" font-size="14" font-weight="600" text-anchor="middle" class="fx-t2">Feed home</text>
+<text x="0" y="354" font-size="13.5" font-weight="500" class="fx-t3">13 pins · 0 users = empty</text>
+<path d="M424 34 V324" class="fx-rule"/>
+<circle cx="484" cy="9.3" r="8" class="fx-key"/>
+<path d="M480.6 9.5 L483.2 12 L487.5 6.9" class="fx-ln-on" style="stroke-width:1.5"/>
+<text x="500" y="14" font-size="13" font-weight="600" letter-spacing="0.2" class="fx-t2">v7 · structure</text>
+<rect x="476" y="34" width="186" height="290" rx="16" class="fx-key"/>
+<rect x="551" y="44" width="36" height="5" rx="2.5" class="fx-sk-on"/>
+<text x="490" y="82" font-size="16" font-weight="700" class="fx-on">Today's one round</text>
+<rect x="488" y="96" width="162" height="75" rx="6" class="fx-sk-on"/>
+<rect x="488" y="179" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="530" y="179" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="572" y="179" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="614" y="179" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="488" y="213.3" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="530" y="213.3" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="572" y="213.3" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="614" y="213.3" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="488" y="247.5" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="530" y="247.5" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="572" y="247.5" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="614" y="247.5" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<rect x="488" y="281.8" width="36" height="28.3" rx="3" class="fx-sk-on" style="opacity:.32"/>
+<text x="476" y="354" font-size="13.5" font-weight="500" class="fx-t2">Full with 13 stores</text>
+<path d="M690 104 H880" class="fx-rule"/>
+<text x="690" y="132" font-size="15" font-weight="600" class="fx-t1">Map · feed come later</text>
+<path d="M690 158 H880" class="fx-rule"/>
+<text x="690" y="186" font-size="15" font-weight="600" class="fx-t1">Share card · carries no</text>
+<text x="690" y="208.5" font-size="15" font-weight="600" class="fx-t1">answer</text>
+</svg>

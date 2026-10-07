@@ -1,0 +1,51 @@
+<svg viewBox="0 0 300 511" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="inherit" role="img" aria-label="One source of truth and three mirrors">
+<style>
+.fx-t1{fill:var(--text-default,#191a1b)}
+.fx-t2{fill:var(--text-muted,#3a3d44)}
+.fx-t3{fill:var(--text-subtle,#62666d)}
+.fx-card{fill:var(--surface-sunken,#f2f3f5);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-inset{fill:var(--surface-raised,#fff);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-ghost{fill:none;stroke:var(--line-default,#ccd3dd);stroke-width:1.25;stroke-dasharray:5 4;vector-effect:non-scaling-stroke}
+.fx-key{fill:var(--accent-default,#08090a)}
+.fx-on{fill:var(--accent-on,#fff)}
+.fx-sk{fill:var(--text-subtle,#62666d);opacity:.2}
+.fx-sk-on{fill:var(--accent-on,#fff);opacity:.2}
+.fx-ln{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-ln-on{fill:none;stroke:var(--accent-on,#fff);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-dot{stroke-dasharray:.5 5}
+.fx-rule{fill:none;stroke:var(--line-strong,#dfe1e5);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-rule-on{fill:none;stroke:var(--accent-on,#fff);stroke-opacity:.16;stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-mk{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.25}
+</style>
+<text x="0" y="14" font-size="13" font-weight="600" letter-spacing="0.6" class="fx-t2">SOURCE OF TRUTH</text>
+<rect x="0" y="28" width="300" height="92" rx="8" class="fx-key"/>
+<text x="14" y="80" font-size="22" font-weight="700" class="fx-on">Source</text>
+<text x="14" y="104" font-size="13" opacity="0.72" class="fx-on">Edited in one place</text>
+<text x="40" y="160" font-size="13" font-weight="600" letter-spacing="0.6" class="fx-t2">MIRRORS</text>
+<rect x="40" y="174" width="260" height="80" rx="8" class="fx-card"/>
+<path d="M40 202 V182 Q40 174 48 174 H292 Q300 174 300 182 V202 Z" class="fx-key"/>
+<circle cx="55" cy="188" r="3" class="fx-ln-on" opacity=".7"/>
+<text x="66" y="192.5" font-size="12.5" font-weight="500" opacity="0.85" class="fx-on">Source path · synced on</text>
+<text x="54" y="233.4" font-size="15" font-weight="600" class="fx-t1">Shared docs</text>
+<rect x="40" y="270" width="260" height="80" rx="8" class="fx-card"/>
+<path d="M40 298 V278 Q40 270 48 270 H292 Q300 270 300 278 V298 Z" class="fx-key"/>
+<circle cx="55" cy="284" r="3" class="fx-ln-on" opacity=".7"/>
+<text x="66" y="288.5" font-size="12.5" font-weight="500" opacity="0.85" class="fx-on">Source path · synced on</text>
+<text x="54" y="329.4" font-size="15" font-weight="600" class="fx-t1">Citation surface</text>
+<rect x="40" y="366" width="260" height="80" rx="8" class="fx-card"/>
+<path d="M40 394 V374 Q40 366 48 366 H292 Q300 366 300 374 V394 Z" class="fx-key"/>
+<circle cx="55" cy="380" r="3" class="fx-ln-on" opacity=".7"/>
+<text x="66" y="384.5" font-size="12.5" font-weight="500" opacity="0.85" class="fx-on">Source path · synced on</text>
+<text x="54" y="425.4" font-size="15" font-weight="600" class="fx-t1">Derived data</text>
+<path d="M16 126 V412 Q16 420 24 420 H33" class="fx-ln"/>
+<path d="M16 228 H33" class="fx-ln"/>
+<path d="M16 324 H33" class="fx-ln"/>
+<path d="M24 228 L33 228" class="fx-ln"/>
+<path d="M27 232.5 L33 228 L27 223.5" class="fx-ln"/>
+<path d="M24 324 L33 324" class="fx-ln"/>
+<path d="M27 328.5 L33 324 L27 319.5" class="fx-ln"/>
+<path d="M24 420 L33 420" class="fx-ln"/>
+<path d="M27 424.5 L33 420 L27 415.5" class="fx-ln"/>
+<text x="0" y="482" font-size="14" font-weight="500" class="fx-t2">Mirrors are not removed.</text>
+<text x="0" y="503" font-size="14" font-weight="500" class="fx-t2">Each one says it is a mirror.</text>
+</svg>

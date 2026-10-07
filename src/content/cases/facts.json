@@ -1,0 +1,291 @@
+{
+  "generatedAt": "2026-08-10",
+  "note": "기계 생성. 손으로 고치지 말 것. 다시 뽑으려면 node scripts/harvest.mjs",
+  "window": {
+    "first": "2026-04-15",
+    "last": "2026-08-10",
+    "months": 3.8
+  },
+  "totals": {
+    "repos": 11,
+    "commits": 2621,
+    "activeDays": 97,
+    "filesTouched": 17813
+  },
+  "repos": [
+    {
+      "roleKey": "design-system-and-product-surfaces",
+      "commits": 1182,
+      "totalCommits": 1634,
+      "sharePct": 72.3,
+      "first": "2026-04-23",
+      "last": "2026-08-10",
+      "activeDays": 72,
+      "byMonth": {
+        "2026-04": 4,
+        "2026-05": 522,
+        "2026-06": 386,
+        "2026-07": 194,
+        "2026-08": 76
+      },
+      "filtered": {
+        "excludedFiles": 132,
+        "binaryFiles": 506
+      },
+      "_diffLines": {
+        "insertions": 611498,
+        "deletions": 168954,
+        "filesTouched": 10868
+      }
+    },
+    {
+      "roleKey": "product-decisions-and-delivery",
+      "commits": 970,
+      "totalCommits": 1009,
+      "sharePct": 96.1,
+      "first": "2026-04-15",
+      "last": "2026-08-10",
+      "activeDays": 85,
+      "byMonth": {
+        "2026-04": 60,
+        "2026-05": 89,
+        "2026-06": 201,
+        "2026-07": 457,
+        "2026-08": 163
+      },
+      "filtered": {
+        "excludedFiles": 3,
+        "binaryFiles": 187
+      },
+      "_diffLines": {
+        "insertions": 180425,
+        "deletions": 14528,
+        "filesTouched": 2811
+      }
+    },
+    {
+      "roleKey": "brand-and-content",
+      "commits": 213,
+      "totalCommits": 214,
+      "sharePct": 99.5,
+      "first": "2026-04-20",
+      "last": "2026-06-09",
+      "activeDays": 15,
+      "byMonth": {
+        "2026-04": 134,
+        "2026-05": 76,
+        "2026-06": 3
+      },
+      "filtered": {
+        "excludedFiles": 9,
+        "binaryFiles": 362
+      },
+      "_diffLines": {
+        "insertions": 153064,
+        "deletions": 140642,
+        "filesTouched": 2790
+      }
+    },
+    {
+      "roleKey": "design-tooling",
+      "commits": 151,
+      "totalCommits": 151,
+      "sharePct": 100,
+      "first": "2026-05-17",
+      "last": "2026-06-10",
+      "activeDays": 5,
+      "byMonth": {
+        "2026-05": 144,
+        "2026-06": 7
+      },
+      "filtered": {
+        "excludedFiles": 7,
+        "binaryFiles": 20
+      },
+      "_diffLines": {
+        "insertions": 31490,
+        "deletions": 6716,
+        "filesTouched": 587
+      }
+    },
+    {
+      "roleKey": "mobile-spike",
+      "commits": 41,
+      "totalCommits": 41,
+      "sharePct": 100,
+      "first": "2026-06-17",
+      "last": "2026-07-29",
+      "activeDays": 8,
+      "byMonth": {
+        "2026-06": 31,
+        "2026-07": 10
+      },
+      "filtered": {
+        "excludedFiles": 7,
+        "binaryFiles": 131
+      },
+      "_diffLines": {
+        "insertions": 11715,
+        "deletions": 1180,
+        "filesTouched": 233
+      }
+    },
+    {
+      "roleKey": "company-portal",
+      "commits": 40,
+      "totalCommits": 47,
+      "sharePct": 85.1,
+      "first": "2026-06-30",
+      "last": "2026-07-28",
+      "activeDays": 12,
+      "byMonth": {
+        "2026-06": 2,
+        "2026-07": 38
+      },
+      "filtered": {
+        "excludedFiles": 3,
+        "binaryFiles": 0
+      },
+      "_diffLines": {
+        "insertions": 22735,
+        "deletions": 1415,
+        "filesTouched": 191
+      }
+    },
+    {
+      "roleKey": "marketing-site",
+      "commits": 8,
+      "totalCommits": 194,
+      "sharePct": 4.1,
+      "first": "2026-07-20",
+      "last": "2026-08-10",
+      "activeDays": 3,
+      "byMonth": {
+        "2026-07": 4,
+        "2026-08": 4
+      },
+      "filtered": {
+        "excludedFiles": 0,
+        "binaryFiles": 0
+      },
+      "_diffLines": {
+        "insertions": 962,
+        "deletions": 42,
+        "filesTouched": 16
+      }
+    },
+    {
+      "roleKey": "public-docs",
+      "commits": 6,
+      "totalCommits": 98,
+      "sharePct": 6.1,
+      "first": "2026-06-04",
+      "last": "2026-08-06",
+      "activeDays": 4,
+      "byMonth": {
+        "2026-06": 1,
+        "2026-07": 3,
+        "2026-08": 2
+      },
+      "filtered": {
+        "excludedFiles": 0,
+        "binaryFiles": 0
+      },
+      "_diffLines": {
+        "insertions": 2259,
+        "deletions": 472,
+        "filesTouched": 132
+      }
+    },
+    {
+      "roleKey": "native-shell",
+      "commits": 6,
+      "totalCommits": 6,
+      "sharePct": 100,
+      "first": "2026-06-18",
+      "last": "2026-06-24",
+      "activeDays": 2,
+      "byMonth": {
+        "2026-06": 6
+      },
+      "filtered": {
+        "excludedFiles": 2,
+        "binaryFiles": 131
+      },
+      "_diffLines": {
+        "insertions": 14774,
+        "deletions": 1635,
+        "filesTouched": 110
+      }
+    },
+    {
+      "roleKey": "genesis-campaign",
+      "commits": 2,
+      "totalCommits": 213,
+      "sharePct": 0.9,
+      "first": "2026-07-28",
+      "last": "2026-07-28",
+      "activeDays": 1,
+      "byMonth": {
+        "2026-07": 2
+      },
+      "filtered": {
+        "excludedFiles": 0,
+        "binaryFiles": 0
+      },
+      "_diffLines": {
+        "insertions": 14,
+        "deletions": 13,
+        "filesTouched": 8
+      }
+    },
+    {
+      "roleKey": "prototype-lab",
+      "commits": 2,
+      "totalCommits": 705,
+      "sharePct": 0.3,
+      "first": "2026-05-17",
+      "last": "2026-05-17",
+      "activeDays": 1,
+      "byMonth": {
+        "2026-05": 2
+      },
+      "filtered": {
+        "excludedFiles": 1,
+        "binaryFiles": 0
+      },
+      "_diffLines": {
+        "insertions": 7788,
+        "deletions": 34,
+        "filesTouched": 67
+      }
+    }
+  ],
+  "surfaces": {
+    "routes": 444,
+    "componentsByPackage": {
+      "core": 485,
+      "console": 174,
+      "dex": 99,
+      "member": 52,
+      "admin": 79
+    },
+    "componentsTotal": 889,
+    "tokenDefinitions": 544,
+    "documents": {
+      "decisions": 45,
+      "policies": 17,
+      "features": 62,
+      "conventions": 11,
+      "delivery": 124,
+      "design": 50,
+      "meetings": 60
+    }
+  },
+  "missingRepos": [],
+  "_diffLinesUnreliable": {
+    "why": "파일 이동과 리팩터가 삽입으로 재계상됨. 표시용으로 쓰지 말 것",
+    "insertions": 1036724,
+    "deletions": 335631
+  }
+}
