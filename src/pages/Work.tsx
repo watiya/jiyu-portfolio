@@ -1,5 +1,5 @@
 // 작업 색인. v4(portfolio.brainchild.kr) 의 작업 56건을 표지와 메타로 세우고, 그 뒤에 2019 이전 작업 23건(works.early.ts)을 잇는다.
-// 항목을 열면 v4 캔버스가 새 창에서 열린다. 사례가 있는 작업은 이 사이트의 사례로도 이어진다. 이전 작업은 캔버스가 없어 표지 이미지가 열린다.
+// 항목을 열면 v4 캔버스가 새 창에서 열린다(v4 이후 작업은 이 사이트 안의 자리로 간다). 사례가 있는 작업은 이 사이트의 사례로도 이어진다. 이전 작업은 캔버스가 없어 표지 이미지가 열린다.
 import { useState } from "react";
 import { SectionLabel } from "../components/Annot.tsx";
 import { useLang } from "../i18n/useLang.ts";
@@ -36,9 +36,13 @@ export function Work({ go }: { go: (href: string) => void }) {
         </span>
       </div>
       <ul className="wk-grid" role="list">
-        {shown.map((w, i) => (
+        {shown.map((w, i) => {
+          const open = w.here
+            ? { href: w.here, onClick }
+            : { href: canvasUrl(lang, w.slug), target: "_blank", rel: "noreferrer" };
+          return (
           <li key={w.slug} id={w.slug} className="wk" data-token="card.bg card.line card.radius">
-            <a className="wk__cover" href={canvasUrl(lang, w.slug)} target="_blank" rel="noreferrer" aria-label={`${w.name} · ${W.canvas}`}>
+            <a className="wk__cover" {...open} aria-label={`${w.name} · ${W.canvas}`}>
               {w.noCover ? (
                 <span className="wk__cover-empty mono" aria-hidden="true">
                   {W.noCover}
@@ -52,8 +56,8 @@ export function Work({ go }: { go: (href: string) => void }) {
                 {w.year} · {W.categories[w.category]}
                 {w.client ? ` · ${w.client}` : ""}
               </span>
-              <a className="wk__name" href={canvasUrl(lang, w.slug)} target="_blank" rel="noreferrer">
-                {w.name} <span aria-hidden="true">↗</span>
+              <a className="wk__name" {...open}>
+                {w.name} <span aria-hidden="true">{w.here ? "→" : "↗"}</span>
               </a>
               {w.tagline[lang] && <p className="wk__tag">{w.tagline[lang]}</p>}
               {w.caseSlug && (
@@ -63,7 +67,8 @@ export function Work({ go }: { go: (href: string) => void }) {
               )}
             </div>
           </li>
-        ))}
+          );
+        })}
       </ul>
       {shownEarly.length > 0 && (
         <div className="wk-early">

@@ -21,10 +21,12 @@ export type Work = {
   role?: Record<Lang, string>;
   /** 표지 이미지가 없는 항목. 있으면 /work/<slug>.webp */
   noCover?: true;
+  /** v4 에 캔버스가 없고 이 사이트 안에서 돌아가는 작업. 캔버스 대신 이 경로로 연다 */
+  here?: string;
 };
 
 export const WORKS: Work[] = [
-  { slug: "dials-to-design-md", name: "Token Export", tagline: { ko: "토큰을 보여 주는 데서 그치지 않고 가져가게 하다", en: "Not just showing the tokens, but letting people take them" }, category: "design-system", year: "2026", caseSlug: "dials-to-design-md", liveUrl: "https://www.brainchild.kr/projects#system", role: { ko: "설계 및 구현", en: "Design and build" }, noCover: true },
+  { slug: "dials-to-design-md", name: "Token Export", tagline: { ko: "토큰을 보여 주는 데서 그치지 않고 가져가게 하다", en: "Not just showing the tokens, but letting people take them" }, category: "design-system", year: "2026", caseSlug: "dials-to-design-md", here: "/projects#system", liveUrl: "https://www.brainchild.kr/projects#system", role: { ko: "설계 및 구현", en: "Design and build" }, noCover: true },
   { slug: "design-system-in-code", name: "Design System in Code", tagline: { ko: "디자인 도구를 기준 자리에서 내리고 코드를 공용 패키지로 올리다", en: "The design tool is no longer the source of truth, and the code moved into packages" }, category: "design-system", year: "2026", client: "Starzip", caseSlug: "design-system-in-code", featured: true },
   { slug: "screen-spec-board", name: "Screen Spec Board", tagline: { ko: "화면을 말로 세지 않고 판으로 세다", en: "Counting screens on a board instead of in conversation" }, category: "product-web", year: "2026", client: "Starzip", caseSlug: "design-system-in-code" },
   { slug: "wording-as-risk", name: "Wording as Risk", tagline: { ko: "단어 하나를 규제 리스크로 다루다", en: "Treating a single verb as regulatory exposure" }, category: "product-web", year: "2026", client: "Starzip", caseSlug: "wording-as-risk" },
