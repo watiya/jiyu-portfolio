@@ -7,6 +7,7 @@ import { APP_DETAILS } from "../appDetails.ts";
 import { APP_DETAILS_KO } from "../appDetails.ko.ts";
 import { formatDay, getAppDetails, getApps, getJourney, getNow, getRecentWriting } from "./content.ts";
 import { STRINGS } from "./ui.ts";
+import { HIDDEN_APPS } from "../hidden.ts";
 
 const hangul = /[가-힣]/;
 const nonEmpty = (s: string) => typeof s === "string" && s.trim().length > 0;
@@ -18,7 +19,8 @@ test("APPS: every app has a ko entry with all fields", () => {
     for (const f of ["koName", "badge", "kind", "note", "line"] as const) assert.ok(nonEmpty(k[f]), `${a.name}.${f} empty`);
     assert.ok(hangul.test(k.line), `${a.name}.line has no Hangul`);
   }
-  assert.equal(Object.keys(APPS_KO).length, APPS.length, "ko map has extra apps");
+  // 숨긴 앱(src/hidden.ts)은 한국어판을 남겨 둔다. 되살릴 때 다시 쓰지 않도록
+  assert.equal(Object.keys(APPS_KO).length, APPS.length + HIDDEN_APPS.size, "ko map has extra apps");
 });
 
 test("APP_DETAILS: every slug has a ko entry with same section count", () => {
@@ -33,7 +35,7 @@ test("APP_DETAILS: every slug has a ko entry with same section count", () => {
       for (const p of s.body) assert.ok(hangul.test(p), `${d.slug} section ${i} paragraph without Hangul`);
     });
   }
-  assert.equal(Object.keys(APP_DETAILS_KO).length, APP_DETAILS.length);
+  assert.equal(Object.keys(APP_DETAILS_KO).length, APP_DETAILS.length + HIDDEN_APPS.size);
   // 앱 이름은 두 언어에서 같다
   for (const d of getAppDetails("ko")) assert.ok(APPS.some((a) => a.name === d.name), `${d.slug} name changed in ko`);
 });
@@ -76,7 +78,7 @@ test("formatDay and getRecentWriting", () => {
   assert.equal(formatDay("2026-10-07", "ko"), "2026. 10. 7.");
   const en = getRecentWriting("en", 3);
   assert.equal(en.length, 3);
-  assert.deepEqual(en.map((w) => w.slug), ["wording-as-risk", "delivery-operations", "content-studio"]);
+  assert.deepEqual(en.map((w) => w.slug), ["dials-to-design-md", "wording-as-risk", "delivery-operations"]);
   assert.deepEqual(getRecentWriting("ko", 3).map((w) => w.slug), en.map((w) => w.slug));
   assert.ok(getRecentWriting("ko", 3).every((w) => hangul.test(w.title)));
 });

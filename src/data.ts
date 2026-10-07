@@ -1,4 +1,5 @@
 // 콘텐츠 정본은 resume/resume.en.md 와 brainchild/content/projects. 여기는 화면용 발췌다.
+import { isHiddenApp } from "./hidden.ts";
 export const EMAIL = "brainchild.jiyu@gmail.com";
 export const SOCIALS = [
   { label: "GitHub", href: "https://github.com/watiya" },
@@ -95,6 +96,7 @@ export const FAQ = [
 ];
 
 export const WRITING: { slug: string; title: string }[] = [
+  { slug: "dials-to-design-md", title: "Not just showing the tokens, but letting people take them" },
   { slug: "wording-as-risk", title: "Treating a single verb as regulatory exposure" },
   { slug: "delivery-operations", title: "Collapsing a release schedule to one gate" },
   { slug: "content-studio", title: "Building the tool so nobody waits for a designer" },
@@ -112,9 +114,10 @@ export const NOW: { asOf: string; items: string[] } = {
 };
 
 // v6(Kaden) 의 중심: 개인 신규 앱. 화면은 라이브 캡처(밥심은 설계 화면, 런팝은 스토어 스크린샷)
-export type App = { name: string; badge: string; kind: string; note: string; line: string; image: string; href: string };
+// href 가 없으면 공개 주소가 없는 앱(개인 기기 설치만)이다
+export type App = { name: string; badge: string; kind: string; note: string; line: string; image: string; href?: string };
 
-export const APPS: App[] = [
+const ALL_APPS: App[] = [
   { name: "Seoul Boom", badge: "Live now", kind: "Travel", note: "iPhone + web", line: "Live crowd levels for Seoul's busiest spots, with widgets and quiet-hour alerts.", image: "/side/seoulboom.png", href: "https://seoulboom.com" },
   { name: "Runpop", badge: "iPhone + Watch", kind: "Running", note: "iOS + watchOS", line: "A running metronome that keeps your music and adds one quiet click per step.", image: "/side/runpop.png", href: "https://runpop.app" },
   { name: "Ttokuoka", badge: "Newest", kind: "Travel", note: "iPhone + web", line: "A Fukuoka companion in Korean: yatai, phrases, tax-free help, works offline.", image: "/side/ttokuoka.png", href: "https://ttokuoka.vercel.app" },
@@ -122,7 +125,9 @@ export const APPS: App[] = [
   { name: "Ppopjido", badge: "Map + cards", kind: "Collectors", note: "Web", line: "A map for capsule toys and Pokemon cards across Korea and Japan.", image: "/side/ppopjido.png", href: "https://ppopjido.vercel.app" },
   { name: "Tory", badge: "Prototype", kind: "Couples", note: "Web prototype", line: "A couple app built on one shared thread: a timeline and a live date mode.", image: "/side/tory.png", href: "https://tory-ashen.vercel.app" },
   { name: "Bapsim", badge: "In design", kind: "Food", note: "Design canvas", line: "Korean meal logging as a tray: rice, soup, and sides in four taps.", image: "/side/bapsim.png", href: "https://bapsim-app.vercel.app/design/" },
+  { name: "Wishrun", badge: "iPhone + Health", kind: "Running", note: "iOS", line: "A seven-week plan for a first 5K, turned into an app that reads runs from Apple Health.", image: "/side/wishrun.png" },
 ];
+export const APPS: App[] = ALL_APPS.filter((a) => !isHiddenApp(a.name.toLowerCase().replace(/\s+/g, "-")));
 
 export const OFFER = [
   "Design system in code",

@@ -32,16 +32,16 @@ function read(lang: "ko" | "en") {
 const ko = read("ko");
 const en = read("en");
 
-test("사례 9편, ko 와 en 의 슬러그·순서가 같다", () => {
-  assert.equal(ko.length, 9);
-  assert.equal(en.length, 9);
+test("사례 10편, ko 와 en 의 슬러그·순서가 같다", () => {
+  assert.equal(ko.length, 10);
+  assert.equal(en.length, 10);
   assert.deepEqual(
     ko.map((d) => d.slug),
     en.map((d) => d.slug),
   );
   assert.deepEqual(
     ko.map((d) => d.order),
-    Array.from({ length: 9 }, (_, i) => i + 1),
+    Array.from({ length: 10 }, (_, i) => i + 1),
   );
 });
 
@@ -87,8 +87,8 @@ test("마크다운 렌더: 문단·절·목록·강조·코드, 미지원은 던
   assert.equal(renderMarkdown("<b>x</b>", "t"), "<p>&lt;b&gt;x&lt;/b&gt;</p>");
 });
 
-test("작업 56건: 분류가 다섯 중 하나, 표지는 디스크에, 사례 링크는 실제 사례로", () => {
-  assert.equal(WORKS.length, 56);
+test("작업 57건: 분류가 다섯 중 하나, 표지는 디스크에, 사례 링크는 실제 사례로", () => {
+  assert.equal(WORKS.length, 57);
   const slugs = new Set(ko.map((d) => d.slug));
   const seen = new Set<string>();
   for (const w of WORKS) {

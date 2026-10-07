@@ -25,6 +25,7 @@ export const JOURNEY_KO: Record<string, { role: string; company: string; period:
 };
 
 export const WRITING_KO: Record<string, { title: string }> = {
+  "dials-to-design-md": { title: "토큰을 보여 주는 데서 그치지 않고 가져가게 하기" },
   "wording-as-risk": { title: "동사 하나를 규제 노출로 다루기" },
   "delivery-operations": { title: "출시 일정을 게이트 하나로 접기" },
   "content-studio": { title: "디자이너를 기다리지 않게 도구를 만들기" },
@@ -39,6 +40,7 @@ export const APPS_KO: Record<string, { koName: string; badge: string; kind: stri
   Carenote: { koName: "케어노트", badge: "iPhone 프로토타입", kind: "건강", note: "iPhone + 웹", line: "이식 환자의 진료일, 약, 검사 추이를 중심으로 다시 설계한 병원 앱." },
   Ppopjido: { koName: "뽑지도", badge: "지도 + 카드", kind: "수집", note: "웹", line: "한국과 일본의 캡슐토이와 포켓몬 카드 지도." },
   Tory: { koName: "토리", badge: "프로토타입", kind: "커플", note: "웹 프로토타입", line: "하나의 실로 이어진 커플 앱. 타임라인과 실시간 데이트 모드." },
+  Wishrun: { koName: "위시런", badge: "iPhone + 건강", kind: "러닝", note: "iOS", line: "첫 5km 대회를 위한 7주 플랜을 앱으로. 애플 건강에서 달리기 기록을 읽습니다." },
   Bapsim: { koName: "밥심", badge: "설계 중", kind: "식단", note: "설계 캔버스", line: "한 상 그대로 기록하는 한식 식단. 밥, 국, 반찬을 네 번 탭으로." },
 };
 

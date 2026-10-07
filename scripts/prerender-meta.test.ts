@@ -31,13 +31,13 @@ const TEMPLATE = `<!doctype html>
 
 const count = (html: string, needle: string) => html.split(needle).length - 1;
 
-test("경로 목록: 첫 화면·홈·사례 목록·사례 9·앱 7·작업·글", () => {
+test("경로 목록: 첫 화면·홈·사례 목록·사례 10·앱 6·작업·글", () => {
   const paths = routes.map((r) => r.path);
   assert.equal(paths.length, 21);
   assert.equal(new Set(paths).size, paths.length);
   for (const p of ["/", "/projects", "/cases", "/work", "/writing"]) assert.ok(paths.includes(p), p);
-  assert.equal(paths.filter((p) => p.startsWith("/cases/")).length, 9);
-  assert.equal(paths.filter((p) => p.startsWith("/apps/")).length, 7);
+  assert.equal(paths.filter((p) => p.startsWith("/cases/")).length, 10);
+  assert.equal(paths.filter((p) => p.startsWith("/apps/")).length, 6);
   assert.ok(paths.includes("/cases/dex-beta"));
 });
 

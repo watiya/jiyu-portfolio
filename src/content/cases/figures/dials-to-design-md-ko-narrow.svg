@@ -1,0 +1,53 @@
+<svg viewBox="0 0 360 612" xmlns="http://www.w3.org/2000/svg" fill="none" font-family="inherit" role="img" aria-label="다이얼에서 엔진을 거쳐 세 파일로 내보내는 흐름">
+<style>
+.fx-t1{fill:var(--text-default,#191a1b)}
+.fx-t2{fill:var(--text-muted,#3a3d44)}
+.fx-t3{fill:var(--text-subtle,#62666d)}
+.fx-card{fill:var(--surface-sunken,#f2f3f5);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-inset{fill:var(--surface-raised,#fff);stroke:var(--line-default,#ccd3dd);stroke-width:1;vector-effect:non-scaling-stroke}
+.fx-key{fill:var(--accent-default,#08090a)}
+.fx-on{fill:var(--accent-on,#fff)}
+.fx-acc{fill:var(--accent-text,#2b62ef)}
+.fx-ln{fill:none;stroke:var(--text-subtle,#62666d);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fx-ln-on{fill:none;stroke:var(--accent-on,#fff);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+</style>
+<text x="0" y="14" font-size="12" font-weight="500" class="fx-t3">01 입력</text>
+<rect x="0" y="26" width="360" height="132" rx="8" class="fx-card"/>
+<text x="16" y="52" font-size="16" font-weight="700" class="fx-t1">다이얼 7</text>
+<rect x="16" y="71" width="8" height="8" rx="2" class="fx-key" opacity="0.95"/>
+<text x="32" y="80" font-size="13" class="fx-t2">테마</text>
+<rect x="188" y="71" width="8" height="8" rx="2" class="fx-key" opacity="0.84"/>
+<text x="204" y="80" font-size="13" class="fx-t2">강조색</text>
+<rect x="16" y="93" width="8" height="8" rx="2" class="fx-key" opacity="0.73"/>
+<text x="32" y="102" font-size="13" class="fx-t2">중립 온도</text>
+<rect x="188" y="93" width="8" height="8" rx="2" class="fx-key" opacity="0.62"/>
+<text x="204" y="102" font-size="13" class="fx-t2">서체 조합</text>
+<rect x="16" y="115" width="8" height="8" rx="2" class="fx-key" opacity="0.51"/>
+<text x="32" y="124" font-size="13" class="fx-t2">모서리</text>
+<rect x="188" y="115" width="8" height="8" rx="2" class="fx-key" opacity="0.40"/>
+<text x="204" y="124" font-size="13" class="fx-t2">밀도</text>
+<rect x="16" y="137" width="8" height="8" rx="2" class="fx-key" opacity="0.29"/>
+<text x="32" y="146" font-size="13" class="fx-t2">모션</text>
+<path d="M180 166 L180 196" class="fx-ln"/>
+<path d="M175.5 190 L180 196 L184.5 190" class="fx-ln"/>
+<text x="0" y="200" font-size="12" font-weight="500" class="fx-t3">02 계산</text>
+<rect x="0" y="208" width="360" height="96" rx="8" class="fx-key"/>
+<text x="16" y="238" font-size="18" font-weight="700" class="fx-on">엔진</text>
+<text x="16" y="264" font-size="14" class="fx-on" opacity="0.85">변수 91개</text>
+<text x="16" y="288" font-size="13" class="fx-on" opacity="0.72">대비 AA 보정 포함</text>
+<path d="M180 312 L180 342" class="fx-ln"/>
+<path d="M175.5 336 L180 342 L184.5 336" class="fx-ln"/>
+<text x="0" y="346" font-size="12" font-weight="500" class="fx-t3">03 내보내기</text>
+<rect x="0" y="354" width="360" height="56" rx="8" class="fx-inset"/>
+<text x="16" y="378" font-size="15" font-weight="600" class="fx-t1">tokens.css</text>
+<text x="16" y="398" font-size="13" class="fx-t3">개발자 · :root 변수</text>
+<rect x="0" y="420" width="360" height="56" rx="8" class="fx-inset"/>
+<text x="16" y="444" font-size="15" font-weight="600" class="fx-t1">tokens.json</text>
+<text x="16" y="464" font-size="13" class="fx-t3">도구 · 별칭으로 층 유지</text>
+<rect x="0" y="486" width="360" height="56" rx="8" class="fx-inset"/>
+<text x="16" y="510" font-size="15" font-weight="600" class="fx-acc">DESIGN.md</text>
+<text x="16" y="530" font-size="13" class="fx-t3">사람과 에이전트 · 원칙과 규칙</text>
+<circle cx="8" cy="580" r="8" class="fx-key"/>
+<path d="M4.6 580.2 L7.2 582.7 L11.5 577.6" class="fx-ln-on"/>
+<text x="24" y="584.9" font-size="13.5" font-weight="500" class="fx-t2">세 파일과 엔진의 일치는 테스트가 대조한다</text>
+</svg>
