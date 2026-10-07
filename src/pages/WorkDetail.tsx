@@ -8,12 +8,12 @@ import { WORKS } from "../works.ts";
 import { WORK_DESCRIPTIONS } from "../works.desc.ts";
 import { CANVAS_COUNT, hasCanvas, loadCanvas, type CanvasFrame } from "../canvas/data.ts";
 import { NotFound } from "./AppDetail.tsx";
+import { BrowserFrame } from "../components/BrowserFrame.tsx";
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
 // 캔버스 첫 페이지의 앞 여섯 장. 상세에서 캔버스로 들어가기 전에 무엇이 있는지 보여 준다
 function Shots({ slug, url, go, label, frameLabel }: { slug: string; url?: string; go: (href: string) => void; label: string; frameLabel: (n: number) => string }) {
-  const host = url ? new URL(url).host.replace(/^www\./, "") : "";
   // 어느 슬러그의 것인지 함께 둔다. 슬러그가 바뀌면 이전 작업의 띠가 잠깐 남지 않는다
   const [loaded, setLoaded] = useState<{ slug: string; frames: CanvasFrame[] } | null>(null);
   useEffect(() => {
@@ -31,15 +31,9 @@ function Shots({ slug, url, go, label, frameLabel }: { slug: string; url?: strin
         const img = <img src={f.src} alt={frameLabel(k + 1)} width={f.w} height={f.h} loading="lazy" decoding="async" />;
         // 넓은 캡처는 웹 화면이라 브라우저 창에, 좁은 캡처는 폰에 담는다. 긴 전체 페이지 캡처는 첫 화면만 보인다
         return f.w >= 1000 ? (
-          <span key={f.id} className="browser">
-            <span className="browser__bar" aria-hidden="true">
-              <i />
-              <i />
-              <i />
-              <span className="browser__url mono">{host}</span>
-            </span>
-            <span className="browser__screen">{img}</span>
-          </span>
+          <BrowserFrame key={f.id} url={url}>
+            {img}
+          </BrowserFrame>
         ) : (
           <span key={f.id} className="phone">
             <span className="phone__island" aria-hidden="true" />
@@ -137,8 +131,14 @@ export function WorkDetail({ slug, go }: { slug: string; go: (href: string) => v
           <h1 className="h1">{w.name}</h1>
           <p className="lede">{tagline}</p>
           {!w.noCover && (
-            <figure className="caseimg" data-token="line.default radius.2">
-              <img src={`/work/${slug}.webp`} alt={W.cover(w.name)} width={1600} height={1000} loading="eager" decoding="async" />
+            <figure className="caseimg" data-token="line.default radius.2" data-framed={w.coverFrame || undefined}>
+              {w.coverFrame === "browser" ? (
+                <BrowserFrame url={w.liveUrl} large>
+                  <img src={`/work/${slug}.webp`} alt={W.cover(w.name)} width={1600} height={1000} loading="eager" decoding="async" />
+                </BrowserFrame>
+              ) : (
+                <img src={`/work/${slug}.webp`} alt={W.cover(w.name)} width={1600} height={1000} loading="eager" decoding="async" />
+              )}
             </figure>
           )}
           {paragraphs.length > 0 && (
