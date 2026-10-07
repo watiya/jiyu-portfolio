@@ -1,5 +1,6 @@
 // 다이얼 -> 원시 -> 의미 -> 컴포넌트 토큰. 결과는 CSS 변수 맵과 보정 기록.
 import { AA_TEXT, contrast, hexToOklch, oklchToHex } from "./color.ts";
+import { isHiddenApp } from "../hidden.ts";
 
 export type Neutral = "cool" | "neutral" | "warm";
 export type Pairing = "geist" | "editorial" | "grotesk" | "funnel";
@@ -390,7 +391,7 @@ export type Preset = {
 
 export const hueOf = (hex: string) => Math.round(hexToOklch(hex).h);
 
-export const PRESETS: Preset[] = [
+const ALL_PRESETS: Preset[] = [
   {
     slug: "seoul-boom",
     name: "Seoul Boom",
@@ -460,7 +461,19 @@ export const PRESETS: Preset[] = [
     ],
     dials: { hue: hueOf("#f8875f"), secondary: "#f5e9c8", neutral: "warm", radius: 22, theme: "dark", pairing: "geist" },
   },
+  {
+    slug: "wishrun",
+    name: "Wishrun",
+    swatches: [
+      { hex: "#ff1715", label: "red" },
+      { hex: "#172021", label: "ink" },
+      { hex: "#f6f6f6", label: "muted" },
+    ],
+    dials: { hue: hueOf("#ff1715"), secondary: "#172021", neutral: "neutral", radius: 24, theme: "light", pairing: "geist" },
+  },
 ];
+
+export const PRESETS: Preset[] = ALL_PRESETS.filter((p) => !isHiddenApp(p.slug));
 
 export const presetBySlug = (slug: string) => PRESETS.find((p) => p.slug === slug);
 

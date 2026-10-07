@@ -1,4 +1,5 @@
 // 앱 상세(/apps/:slug) 본문. 사실은 각 프로젝트 레포와 진행 기록에서 옮겼다. 숫자를 지어내지 않는다.
+import { isHiddenApp } from "./hidden.ts";
 export type AppDetail = {
   slug: string;
   name: string; // APPS 의 name 과 같아야 한다
@@ -11,7 +12,7 @@ export type AppDetail = {
   shots: string[]; // public/apps/<slug>/ 아래 화면들. 비어 있으면 카드 화면 하나만 쓴다
 };
 
-export const APP_DETAILS: AppDetail[] = [
+const ALL_APP_DETAILS: AppDetail[] = [
   {
     slug: "seoul-boom",
     name: "Seoul Boom",
@@ -286,4 +287,46 @@ export const APP_DETAILS: AppDetail[] = [
     ],
     shots: ["/apps/bapsim/today.png", "/apps/bapsim/menu.png", "/apps/bapsim/records.png", "/apps/bapsim/coach.png"],
   },
+  {
+    slug: "wishrun",
+    name: "Wishrun",
+    title: "A race plan that knows what today is",
+    dek: "A seven-week training plan for a first 5K came as a PDF. The app keeps the plan word for word and adds what a PDF cannot: today's session, the week you are in, and how the runs are trending.",
+    date: "Aug 2026",
+    meta: [
+      { label: "Role", value: "Product, design, and build" },
+      { label: "Platform", value: "iOS, Apple Health" },
+      { label: "Status", value: "Personal build" },
+    ],
+    stack: ["Expo", "React Native", "TypeScript", "HealthKit"],
+    sections: [
+      {
+        heading: "The problem",
+        body: [
+          "The plan for a 5K race in Hanam arrived as a PDF: seven weeks of sessions by day, heart-rate zones, two gym routines, and race-day checklists.",
+          "A PDF cannot tell you which day it is, which week you are in, or whether your runs are actually getting easier.",
+        ],
+      },
+      {
+        heading: "What I built",
+        body: [
+          "Ten screens on one source. The plan text lives in a single file and is never reworded. The week and the countdown are computed from today's date.",
+          "Today's session with its heart-rate zone, a seven-week card stack, the gym routines with a minimum version, a race checklist and timeline, and a trend page drawing planned against actual distance, pace, and heart rate.",
+          "Runs come in from Apple Health, read only, matched by date.",
+        ],
+      },
+      {
+        heading: "Decisions worth noting",
+        body: [
+          "The web build was removed. Apple Watch data cannot be reached from Safari, so the web version was always half the app.",
+          "Runs outside the plan count toward pace and heart rate but not toward the weekly distance bars. Those bars measure keeping to the plan, and counting extra runs would make a missed week look kept.",
+          "On a day with two runs, only the longer one is used. Merging them would average two different workouts into a pace that means nothing. Entries typed by hand are never overwritten by a sync.",
+          "Only the style was borrowed from an airline UI kit: color, type, radius, and the language of its cards. The screens themselves are original.",
+        ],
+      },
+    ],
+    shots: [],
+  },
 ];
+
+export const APP_DETAILS: AppDetail[] = ALL_APP_DETAILS.filter((d) => !isHiddenApp(d.slug));

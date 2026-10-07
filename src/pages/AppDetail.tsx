@@ -56,7 +56,7 @@ export function AppDetail({ slug, go }: { slug: string; go: (href: string) => vo
                 {wearing ? D.wearing : D.wear}
               </button>
             )}
-            {app && (
+            {app?.href && (
               <a className="btn btn--ghost btn--sm" href={app.href} target="_blank" rel="noreferrer">
                 {D.open}
               </a>
