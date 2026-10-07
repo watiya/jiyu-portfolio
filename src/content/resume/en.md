@@ -114,10 +114,6 @@ Explorer, Wallet, Membership, Ecosystem).
 - **PNP Soft, NSoft** · 2003.08 - 2011.10 · UI Designer / Full-time, Freelancer
 - **SK T Academy** · from 2010.06 · UX/UI lecturer
 
-## Education
-
-Kaywon University of Art and Design, Multimedia · 1998.03 - 2000.02
-
 <!--
 - Starzip figures come from facts.json (machine-generated, 2026-08-10)
 - Phone number deliberately omitted. Add it at the top per application if needed.
