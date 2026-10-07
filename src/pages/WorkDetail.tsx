@@ -12,7 +12,8 @@ import { NotFound } from "./AppDetail.tsx";
 const pad = (n: number) => String(n).padStart(2, "0");
 
 // 캔버스 첫 페이지의 앞 여섯 장. 상세에서 캔버스로 들어가기 전에 무엇이 있는지 보여 준다
-function Shots({ slug, go, label, frameLabel }: { slug: string; go: (href: string) => void; label: string; frameLabel: (n: number) => string }) {
+function Shots({ slug, url, go, label, frameLabel }: { slug: string; url?: string; go: (href: string) => void; label: string; frameLabel: (n: number) => string }) {
+  const host = url ? new URL(url).host.replace(/^www\./, "") : "";
   // 어느 슬러그의 것인지 함께 둔다. 슬러그가 바뀌면 이전 작업의 띠가 잠깐 남지 않는다
   const [loaded, setLoaded] = useState<{ slug: string; frames: CanvasFrame[] } | null>(null);
   useEffect(() => {
@@ -26,9 +27,26 @@ function Shots({ slug, go, label, frameLabel }: { slug: string; go: (href: strin
   if (frames.length === 0) return null;
   return (
     <a className="wkshots" href={`/work/${slug}/canvas`} onClick={internalClick(go)} aria-label={label} data-token="card.bg card.line">
-      {frames.map((f, k) => (
-        <img key={f.id} src={f.src} alt={frameLabel(k + 1)} width={f.w} height={f.h} loading="lazy" decoding="async" />
-      ))}
+      {frames.map((f, k) => {
+        const img = <img src={f.src} alt={frameLabel(k + 1)} width={f.w} height={f.h} loading="lazy" decoding="async" />;
+        // 넓은 캡처는 웹 화면이라 브라우저 창에, 좁은 캡처는 폰에 담는다. 긴 전체 페이지 캡처는 첫 화면만 보인다
+        return f.w >= 1000 ? (
+          <span key={f.id} className="browser">
+            <span className="browser__bar" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+              <span className="browser__url mono">{host}</span>
+            </span>
+            <span className="browser__screen">{img}</span>
+          </span>
+        ) : (
+          <span key={f.id} className="phone">
+            <span className="phone__island" aria-hidden="true" />
+            <span className="phone__screen">{img}</span>
+          </span>
+        );
+      })}
     </a>
   );
 }
@@ -130,7 +148,7 @@ export function WorkDetail({ slug, go }: { slug: string; go: (href: string) => v
               ))}
             </div>
           )}
-          {canvas && <Shots slug={slug} go={go} label={W.openCanvas} frameLabel={(n) => W.canvas.frame(w.name, n)} />}
+          {canvas && <Shots slug={slug} url={w.liveUrl} go={go} label={W.openCanvas} frameLabel={(n) => W.canvas.frame(w.name, n)} />}
         </div>
       </div>
       <nav className="detail__nav" aria-label={W.otherWork}>

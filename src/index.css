@@ -1069,7 +1069,16 @@ html[data-motion="off"] .card__stage::after { display: none; }
 .workdoc .prose p:first-child { margin-top: 0; }
 /* 캔버스 첫 장들의 띠. 한 줄로 흘리고 넘치면 가로로 민다. 누르면 캔버스로 */
 .wkshots { display: flex; gap: var(--space-2); margin-top: var(--space-7); padding: var(--space-2); overflow-x: auto; background: var(--card-bg); border: 1px solid var(--card-line); border-radius: var(--card-radius); scrollbar-width: thin; }
-.wkshots img { flex: 0 0 auto; width: auto; height: 180px; border: 1px solid var(--line-default); border-radius: var(--radius-1); background: var(--surface-sunken); }
+.wkshots { align-items: flex-end; gap: var(--space-4); padding: var(--space-5); }
+.wkshots img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.wkshots .phone { width: 150px; }
+.wkshots .phone__screen { aspect-ratio: 9 / 19.5; }
+/* 브라우저 프레임. 폰 프레임과 같은 베젤 색을 쓴다 */
+.browser { display: block; flex: none; width: 380px; overflow: hidden; background: var(--phone-bezel); border-radius: 12px; box-shadow: 0 0 0 1px var(--line-default); }
+.browser__bar { display: flex; align-items: center; gap: 5px; height: 24px; padding: 0 10px; }
+.browser__bar i { width: 7px; height: 7px; border-radius: var(--radius-full); background: rgb(255 255 255 / 0.28); }
+.browser__url { flex: 1; min-width: 0; height: 14px; margin: 0 26px 0 12px; overflow: hidden; border-radius: var(--radius-full); background: rgb(255 255 255 / 0.1); color: rgb(255 255 255 / 0.6); font-size: 9px; line-height: 14px; text-align: center; white-space: nowrap; }
+.browser__screen { display: block; margin: 0 4px 4px; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 8px; background: #fff; }
 .wkshots:hover { border-color: var(--card-line-hover); }
 
 /* ---------- /work/<slug>/canvas ---------- */
