@@ -1088,7 +1088,7 @@ body:has(.canvas) .toasts { top: var(--space-3); }
 .canvas__count { margin-left: auto; flex: 0 0 auto; color: var(--text-subtle); }
 /* 도면 바닥. 점 격자는 선 색을 따라가서 테마가 바뀌면 같이 바뀐다 */
 .canvas__stage { position: relative; flex: 1; min-height: 0; }
-.canvas__viewport { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; background-color: var(--surface-sunken); background-image: radial-gradient(color-mix(in oklab, var(--line-strong) 70%, transparent) 1px, transparent 1px); background-size: 24px 24px; }
+.canvas__viewport { position: absolute; inset: 0; overflow: hidden; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; background-color: var(--surface-sunken); background-image: radial-gradient(color-mix(in oklab, var(--line-strong) 70%, transparent) 1px, transparent 1px); background-size: 24px 24px; }
 .canvas__viewport:active { cursor: grabbing; }
 .canvas__content { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; }
 .canvas__frame { break-inside: avoid; margin: 0 0 72px; }
