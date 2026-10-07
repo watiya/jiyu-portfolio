@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/writing",
+      "destination": "/cases",
+      "permanent": true
+    },
+    {
       "source": "/",
       "has": [
         {

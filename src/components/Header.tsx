@@ -9,7 +9,6 @@ const NAV = [
   { key: "craft", href: "/projects#craft", match: "" },
   { key: "cases", href: "/cases", match: "/cases" },
   { key: "work", href: "/work", match: "/work" },
-  { key: "writing", href: "/writing", match: "/writing" },
   { key: "resume", href: "/resume", match: "/resume" },
   { key: "contact", href: "/projects#contact", match: "" },
 ] as const;

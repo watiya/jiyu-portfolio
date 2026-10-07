@@ -34,7 +34,6 @@ export function Palette({ go }: { go: (href: string) => void }) {
       { id: "craft", label: t.sections.craft, hint: "/projects#craft", group: g.go, run: nav("/projects#craft") },
       { id: "cases", label: t.sections.cases, hint: "/cases", group: g.go, run: nav("/cases") },
       { id: "work", label: t.sections.work, hint: "/work", group: g.go, run: nav("/work") },
-      { id: "writing", label: t.sections.writing, hint: "/writing", group: g.go, run: nav("/writing") },
       { id: "contact", label: t.sections.contact, hint: "/projects#contact", group: g.go, run: nav("/projects#contact") },
       ...APP_DETAILS.map((d) => ({ id: `app-${d.slug}`, label: p.openApp(d.name), hint: `/apps/${d.slug}`, group: g.apps, run: nav(`/apps/${d.slug}`) })),
       ...getCases(lang).map((d) => ({ id: `case-${d.slug}`, label: p.openCase(d.title), hint: `/cases/${d.slug}`, group: g.cases, run: nav(`/cases/${d.slug}`) })),

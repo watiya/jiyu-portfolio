@@ -11,8 +11,8 @@ import { CANVAS_SLUGS, SITE, applyMeta, buildRobots, buildRoutes, buildSitemap, 
 const ROOT = new URL("..", import.meta.url).pathname;
 const sizeOf = (p: string) => imageSize(readFileSync(join(ROOT, "public", p)));
 const routes = buildRoutes({ cases: readEnglishCases(ROOT), appDetails: APP_DETAILS, works: WORKS, canvasSlugs: CANVAS_SLUGS, ui: STRINGS.en }, sizeOf);
-// 고정 6 + 사례 11 + 앱 6 + 작업 57 + 캔버스 49
-const ROUTE_COUNT = 6 + 11 + 6 + WORKS.length + CANVAS_SLUGS.length;
+// 고정 5 + 사례 11 + 앱 6 + 작업 57 + 캔버스 49
+const ROUTE_COUNT = 5 + 11 + 6 + WORKS.length + CANVAS_SLUGS.length;
 
 const TEMPLATE = `<!doctype html>
 <html lang="en">
@@ -34,7 +34,7 @@ const TEMPLATE = `<!doctype html>
 
 const count = (html: string, needle: string) => html.split(needle).length - 1;
 
-test("경로 목록: 첫 화면·홈·사례 목록·사례 11·앱 6·작업·작업 상세 57·캔버스 49·글·이력서", () => {
+test("경로 목록: 첫 화면·홈·사례 목록·사례 11·앱 6·작업·작업 상세 57·캔버스 49·이력서", () => {
   const paths = routes.map((r) => r.path);
   assert.equal(paths.length, ROUTE_COUNT);
   assert.equal(WORKS.length, 57);
@@ -45,7 +45,7 @@ test("경로 목록: 첫 화면·홈·사례 목록·사례 11·앱 6·작업·�
   // 캔버스 경로는 전부 작업 상세가 있는 슬러그다
   for (const s of CANVAS_SLUGS) assert.ok(paths.includes(`/work/${s}`), s);
   assert.equal(new Set(paths).size, paths.length);
-  for (const p of ["/", "/projects", "/cases", "/work", "/writing", "/resume"]) assert.ok(paths.includes(p), p);
+  for (const p of ["/", "/projects", "/cases", "/work", "/resume"]) assert.ok(paths.includes(p), p);
   assert.equal(paths.filter((p) => p.startsWith("/cases/")).length, 11);
   assert.equal(paths.filter((p) => p.startsWith("/apps/")).length, 6);
   assert.ok(paths.includes("/cases/dex-beta"));
@@ -61,7 +61,6 @@ test("제목은 앱의 document.title 규칙과 같다", () => {
   assert.equal(by("/work/starground").title, t.titles.workDetail("스타그라운드"));
   assert.equal(by("/work/starground/canvas").title, t.titles.canvas("스타그라운드"));
   assert.equal(by("/work/starground").description, WORKS.find((w) => w.slug === "starground")!.tagline.en);
-  assert.equal(by("/writing").title, t.titles.writing);
   assert.equal(by("/apps/seoul-boom").title, t.titles.app("Seoul Boom"));
   assert.match(by("/cases/dex-beta").title, / \| Brainchild-Jiyu$/);
 });

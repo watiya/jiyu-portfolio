@@ -623,11 +623,11 @@ function CaseStudies({ go }: { go: (href: string) => void }) {
           {t.cases.moreOnWork} →
         </a>
       </p>
-      {/* 글 한 줄씩. /writing 의 글은 사례 본문으로 이어지므로 여기서도 사례 페이지로 보낸다 */}
+      {/* 글 한 줄씩. 글은 사례 본문으로 이어지므로 사례 페이지로 보낸다(/writing 은 10-07 에 접음) */}
       <div className="recent">
         <div className="recent__head mono">
           <span>{t.writing.recent}</span>
-          <a href="/writing" onClick={onClick}>
+          <a href="/cases" onClick={onClick}>
             {t.writing.all} →
           </a>
         </div>

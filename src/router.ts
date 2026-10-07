@@ -5,7 +5,6 @@ export type Route =
   | { name: "landing" }
   | { name: "home" }
   | { name: "app"; slug: string }
-  | { name: "writing" }
   | { name: "cases" }
   | { name: "case"; slug: string }
   | { name: "work" }
@@ -19,7 +18,8 @@ export function parseRoute(path: string): Route {
   // 루트는 brainchild.kr 의 첫 화면, 포트폴리오 홈은 옛 주소 그대로 /projects
   if (clean === "/") return { name: "landing" };
   if (clean === "/projects") return { name: "home" };
-  if (clean === "/writing") return { name: "writing" };
+  // /writing 은 사례와 겹쳐 10-07 에 접었다. 남은 링크는 사례 목록으로 받는다
+  if (clean === "/writing") return { name: "cases" };
   // /case-studies 는 3단계까지의 주소. 바깥에 남은 링크를 위해 같은 화면으로 받는다
   if (clean === "/cases" || clean === "/case-studies") return { name: "cases" };
   if (clean === "/work") return { name: "work" };

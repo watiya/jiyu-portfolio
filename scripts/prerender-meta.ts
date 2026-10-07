@@ -84,7 +84,6 @@ export function buildRoutes({ cases, appDetails, works, canvasSlugs, ui }: Sourc
         ogDescription: w.tagline.en,
         image: image(w.noCover ? DEFAULT_IMAGE : `/work/${w.slug}.webp`),
       })),
-    generic("/writing", ui.titles.writing),
     generic("/resume", ui.titles.resume),
   ];
 }
