@@ -466,6 +466,8 @@ html[data-inspect="on"] .gridlines { display: block; }
 /* ---------- 상세·글·404 ---------- */
 .detail, .writing, .notfound { padding-block: var(--space-7) var(--space-10); }
 .detail__grid { display: grid; gap: var(--space-7); }
+/* 가로로 흐르는 화면 띠가 칸을 넓히지 않게 한다. 없으면 표지까지 띠 폭만큼 늘어난다 */
+.detail__grid > * { min-width: 0; }
 .detail__meta { display: flex; flex-direction: column; gap: var(--space-5); align-self: start; }
 .detail__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .detail__body p { max-width: 64ch; margin: var(--space-3) 0 0; color: var(--text-muted); text-wrap: pretty; }
