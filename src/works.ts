@@ -31,9 +31,10 @@ export type Work = {
   here?: string;
 };
 
-// 순서가 곧 /work 목록과 상세의 이전·다음 순서다. Starzip 전부(화면이 보이는 대표 다섯 먼저: Genesis · Store Valuation · DEX · 스타그라운드 · PoR), 그다음 OVERTAKE 전부(대표작 먼저),
+// 순서가 곧 /work 목록과 상세의 이전·다음 순서다. 이 사이트 자체 작업(Token Export) 맨 앞, 그다음 Starzip 전부(화면이 보이는 대표 다섯 먼저: Genesis · Store Valuation · DEX · 스타그라운드 · PoR), 그다음 OVERTAKE 전부(대표작 먼저),
 // 나머지는 최신 연도순. 같은 해 안에서는 BORA · Play2bit · 개인 순으로 묶고, 클라이언트 묶음 안에서 컨셉은 뒤로 둔다
 export const WORKS: Work[] = [
+  { slug: "dials-to-design-md", name: "Token Export", tagline: { ko: "토큰을 보여 주는 데서 그치지 않고 가져가게 하다", en: "Not just showing the tokens, but letting people take them" }, category: "design-system", year: "2026", caseSlug: "dials-to-design-md", here: "/projects#system", liveUrl: "https://www.brainchild.kr/projects#system", role: { ko: "설계 및 구현", en: "Design and build" }, coverFrame: "browser" },
   { slug: "entry-without-a-wallet", name: "Starzip Genesis", tagline: { ko: "지갑 없이도 끝까지 보게 하고 지갑은 살 때만 묻다", en: "Letting people see all of it without a wallet, and asking for one only at purchase" }, category: "product-web", year: "2026", client: "Starzip", caseSlug: "entry-without-a-wallet", liveUrl: "https://genesis.starzip.io/", featured: true, coverFrame: "browser" },
   { slug: "exposure-as-a-build", name: "Store Valuation", tagline: { ko: "방화벽을 푸는 대신 나갈 것만 따로 짓다", en: "Building only what goes out, instead of opening the firewall" }, category: "product-web", year: "2026", client: "Starzip", caseSlug: "exposure-as-a-build", featured: true, coverFrame: "browser" },
   { slug: "dex-beta", name: "Starzip DEX", tagline: { ko: "지역 상점 토큰을 사고파는 거래소의 베타부터 GA 까지", en: "The exchange for local-store tokens, from beta to GA" }, category: "product-web", year: "2026", client: "Starzip", caseSlug: "dex-beta", liveUrl: "https://app.starzip.io/", role: { ko: "제품 화면 설계 및 UI 구현", en: "Product screen design and UI build" }, coverFrame: "browser" },
@@ -69,7 +70,6 @@ export const WORKS: Work[] = [
   { slug: "overtake-brand", name: "Brand Identity", tagline: { ko: "브랜드가 무엇을 말하는지를 규칙으로 적다", en: "Writing down what the brand says, as rules" }, category: "brand", year: "2025", client: "OVERTAKE" },
   { slug: "overtake-quest", name: "Quest Platform", tagline: { ko: "퀘스트를 끝낼수록 자격이 쌓이는 것을 보이게 하다", en: "Showing eligibility accumulate as quests are completed" }, category: "product-web", year: "2024", client: "OVERTAKE", liveUrl: "https://airdrop.overtake.world/landing", coverFrame: "browser" },
   { slug: "overtake-quest-market", name: "Quest Platform Marketplace", tagline: { ko: "수집품을 찾아낼 수 있게 만든 거래 화면", en: "A trading surface built so collectibles can be found" }, category: "product-web", year: "2024", client: "OVERTAKE", liveUrl: "https://market.overtake.world/project-drops/SOMNIS?tab=trade", coverFrame: "browser" },
-  { slug: "dials-to-design-md", name: "Token Export", tagline: { ko: "토큰을 보여 주는 데서 그치지 않고 가져가게 하다", en: "Not just showing the tokens, but letting people take them" }, category: "design-system", year: "2026", caseSlug: "dials-to-design-md", here: "/projects#system", liveUrl: "https://www.brainchild.kr/projects#system", role: { ko: "설계 및 구현", en: "Design and build" }, coverFrame: "browser" },
   { slug: "stakehouse", name: "Stakehouse", tagline: { ko: "복잡한 규칙을 사용자가 읽을 수 있는 화면으로", en: "Turning protocol rules into something a person can read" }, category: "product-web", year: "2025", liveUrl: "https://stakehouse.fun/", coverFrame: "browser" },
   { slug: "tiktem", name: "tiktem.gg", tagline: { ko: "판매자가 자기 상점을 갖고 구매자와 직접 말하는 장터", en: "A marketplace where sellers keep a shop and talk to buyers directly" }, category: "product-web", year: "2025", coverFrame: "browser" },
   { slug: "shadcn-figma", name: "shadcn/ui Figma Design System", tagline: { ko: "웹 부품을 디자인 원시 요소로 옮겨 온 라이브러리", en: "A library translating web components into design primitives" }, category: "design-system", year: "2025", coverFrame: "browser" },
