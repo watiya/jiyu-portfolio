@@ -115,7 +115,7 @@ html[data-inspect="on"] :is(.card, .hero__sheet, .dim, .panel):is(:hover, :focus
 /* ---------- 헤더 ---------- */
 .hdr { position: sticky; top: 0; z-index: 30; background: var(--surface-canvas); border-bottom: 1px solid var(--line-default); transition: background-color var(--duration-2) var(--ease-default); }
 .hdr__row { height: var(--header-h); display: flex; align-items: center; gap: var(--space-6); }
-.hdr__brand { display: inline-flex; align-items: baseline; gap: var(--space-2); font-weight: 600; text-decoration: none; font-size: var(--text-md); letter-spacing: -0.01em; }
+.hdr__brand { display: inline-flex; align-items: baseline; gap: var(--space-2); font-weight: 600; text-decoration: none; font-size: var(--text-md); letter-spacing: -0.01em; white-space: nowrap; }
 .hdr__nav { display: none; gap: var(--space-5); margin-left: var(--space-4); }
 .hdr__nav a { font-size: var(--text-sm); color: var(--text-muted); text-decoration: none; padding: var(--space-1) 0; border-bottom: 1px solid transparent; transition: color var(--duration-1) var(--ease-default), border-color var(--duration-1) var(--ease-default); }
 .hdr__nav a:hover { color: var(--text-default); border-bottom-color: var(--line-strong); }
@@ -154,16 +154,18 @@ html[data-inspect="on"] :is(.card, .hero__sheet, .dim, .panel):is(:hover, :focus
 .lang__opt[aria-pressed="true"] { background: var(--surface-inverse); color: var(--text-inverse); }
 .lang__opt:focus-visible { outline: 2px solid var(--focus-ring, var(--accent-default)); outline-offset: -2px; }
 @media (max-width: 639px) {
-  .hdr__row { gap: var(--space-3); }
+  .hdr__row { gap: var(--space-2); }
   .hdr__tools { gap: var(--space-1); }
-  .tool { padding: 0 var(--space-2); }
+  /* 아이콘만 남는 버튼도 손가락 폭은 지킨다 */
+  .tool { padding: 0 var(--space-2); min-width: 40px; justify-content: center; }
   .tool kbd, .tool__meta { display: none; }
   .tool--palette .tool__label, .tool--inspect .tool__label { display: none; }
   /* 검사는 마우스를 올려 보는 기능이라 터치 폭에서는 빼고 그 자리를 메뉴에 준다 */
   .tool--inspect { display: none; }
   .lang__opt { min-width: 32px; padding: 0 var(--space-1); }
 }
-@media (max-width: 379px) { .tool--tokens .tool__label { display: none; } }
+/* 390px 영어에서 "Tokens" 라벨까지 두면 브랜드가 두 줄로 꺾였다 (2026-10-07). 라벨은 점으로 대신한다 */
+@media (max-width: 429px) { .tool--tokens .tool__label { display: none; } }
 
 /* ---------- 버튼·칩 ---------- */
 .btn {
@@ -632,6 +634,11 @@ html[data-motion="off"] .reveal { opacity: 1; transform: none; transition: none;
 .casefig__narrow { max-width: 440px; margin-inline: auto; }
 @media (min-width: 900px) { .casefig__box { padding: var(--space-7); } .casefig__wide { display: block; } .casefig__narrow { display: none; } }
 .casedoc .detail__nav a { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* 좁은 폭에서는 세 링크가 한 줄에 못 들어가 가운데 "사례 목록"이 "사…"로 잘렸다. 한 줄씩 세운다 */
+@media (max-width: 639px) {
+  .casedoc .detail__nav { flex-direction: column; gap: var(--space-2); }
+  .casedoc .detail__nav a { white-space: normal; }
+}
 
 /* ---------- /work ---------- */
 .work { padding-block: var(--space-7) var(--space-10); }
@@ -705,10 +712,19 @@ html[data-motion="off"] .inspector__dot { animation: none; }
   .lang { height: 44px; }
   .lang__opt { min-width: 44px; }
   .hdr__nav a, .contact__socials a, .detail__nav a, .rel__title, .case__title { padding-block: var(--space-3); }
+  /* 본문 속 인라인 링크는 줄 높이를 바꾸지 않고 손가락 폭만 넓힌다 */
+  .wk__name, .wk__case, .row__title, .seclabel__link, .craft__meta a, .cases__more a, .rel__more a, .prose a, .caseimg figcaption a { padding-block: var(--space-3); }
+  .layers__take-dials { padding-block: var(--space-3); margin-block: calc(var(--space-3) * -1); }
+  .wkfilter { min-height: 40px; }
   .scrub { padding-block: var(--space-4); margin-block: calc(var(--space-4) * -1); }
   .toast__close { width: 44px; }
   .range { height: 44px; }
   .range::-webkit-slider-thumb { width: 24px; height: 24px; margin-top: -9px; }
+  /* 첫 화면의 메뉴 · 입장 · 언어 버튼 */
+  .landing__nav a { padding-block: var(--space-3); }
+  /* flex 가 되면 글자와 화살표 사이 공백이 사라져 gap 으로 돌려준다 */
+  .landing__enter { min-height: 44px; display: inline-flex; align-items: center; gap: var(--space-1); }
+  .landing__lang button { min-width: 44px; min-height: 44px; }
 }
 
 /* ---------- 커서: 설계 도면 십자선 ---------- */
@@ -911,6 +927,7 @@ html[data-motion="off"] .landing { animation: none !important; }
 .cr-con__picks { display: inline-flex; gap: var(--space-1); }
 .cr-con__pick { width: 28px; height: 28px; border-radius: var(--radius-full); box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.15); }
 .cr-con__pick[aria-pressed="true"] { outline: 2px solid var(--text-default); outline-offset: 2px; }
+@media (pointer: coarse) { .cr-con__color, .cr-con__pick { width: 40px; height: 40px; } }
 
 /* 토큰 사슬 */
 .cr-ins__stage { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
@@ -952,6 +969,10 @@ html[data-motion="off"] .landing { animation: none !important; }
 .recent__row { display: block; padding: var(--space-3) 0; border-bottom: 1px solid var(--line-default); }
 .recent__title { display: inline-block; padding-block: 2px; color: var(--text-default); text-decoration: none; font-size: var(--text-md); }
 .recent__title:hover { text-decoration: underline; text-decoration-color: var(--accent-default); text-underline-offset: 3px; }
+@media (pointer: coarse) {
+  .recent__title { padding-block: var(--space-3); margin-block: calc(var(--space-3) * -1); }
+  .recent__head a { padding-block: var(--space-2); margin-block: calc(var(--space-2) * -1); }
+}
 .contact__ver { margin: var(--space-4) 0 0; color: var(--text-subtle); }
 .contact__ver a { color: inherit; padding-block: var(--space-2); }
 .contact__ver a:hover { color: var(--text-default); }

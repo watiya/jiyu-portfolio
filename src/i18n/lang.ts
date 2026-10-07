@@ -1,8 +1,8 @@
-// 언어 상태의 순수 부분. 결정 순서: URL ?lang > localStorage > ko
-// 첫 진입은 기기 언어와 상관없이 한국어다 (2026-10-07). 영어는 토글로 고르면 저장된다.
+// 언어 상태의 순수 부분. 결정 순서: URL ?lang > localStorage > en
+// 첫 진입은 기기 언어와 상관없이 영어다 (2026-10-07). navigator.language 는 보지 않는다. 한국어는 토글로 고르면 저장된다.
 export type Lang = "en" | "ko";
 export const LANGS: Lang[] = ["en", "ko"];
-export const DEFAULT_LANG: Lang = "ko";
+export const DEFAULT_LANG: Lang = "en";
 export const LANG_KEY = "v8.lang";
 
 export const isLang = (v: unknown): v is Lang => v === "en" || v === "ko";

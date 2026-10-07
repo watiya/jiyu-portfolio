@@ -10,13 +10,13 @@ test("lang: URL beats storage beats default", () => {
   assert.equal(resolveLang(null, "en"), "en");
 });
 
-test("lang: first visit is Korean", () => {
-  assert.equal(resolveLang(null, null), "ko");
-  assert.equal(resolveLang(undefined, undefined), "ko");
+test("lang: first visit is English", () => {
+  assert.equal(resolveLang(null, null), "en");
+  assert.equal(resolveLang(undefined, undefined), "en");
 });
 
 test("lang: unknown values fall through", () => {
-  assert.equal(resolveLang("jp", "fr"), "ko");
-  assert.equal(resolveLang("jp", "en"), "en");
-  assert.equal(resolveLang("", "en"), "en");
+  assert.equal(resolveLang("jp", "fr"), "en");
+  assert.equal(resolveLang("jp", "ko"), "ko");
+  assert.equal(resolveLang("", "ko"), "ko");
 });
