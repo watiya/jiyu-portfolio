@@ -1,4 +1,4 @@
-// history API 위의 작은 라우터. 경로가 여덟이라 라이브러리는 두지 않는다.
+// history API 위의 작은 라우터. 경로가 열이라 라이브러리는 두지 않는다.
 import { useCallback, useEffect, useState, type MouseEvent } from "react";
 
 export type Route =
@@ -9,6 +9,8 @@ export type Route =
   | { name: "cases" }
   | { name: "case"; slug: string }
   | { name: "work" }
+  | { name: "workDetail"; slug: string }
+  | { name: "canvas"; slug: string }
   | { name: "resume" }
   | { name: "notfound"; path: string };
 
@@ -26,6 +28,11 @@ export function parseRoute(path: string): Route {
   if (app) return { name: "app", slug: app[1] };
   const kase = clean.match(/^\/cases\/([a-z0-9-]+)$/);
   if (kase) return { name: "case", slug: kase[1] };
+  // 작업 상세와 캔버스. 슬러그는 v4(portfolio.brainchild.kr) 의 /work/<slug> 와 1:1 이라 그쪽 주소를 그대로 넘겨받는다
+  const canvas = clean.match(/^\/work\/([a-z0-9-]+)\/canvas$/);
+  if (canvas) return { name: "canvas", slug: canvas[1] };
+  const work = clean.match(/^\/work\/([a-z0-9-]+)$/);
+  if (work) return { name: "workDetail", slug: work[1] };
   return { name: "notfound", path: clean };
 }
 
