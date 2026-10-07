@@ -1,0 +1,733 @@
+{
+  "pages": {
+    "01-screens": { "ko": "화면", "en": "Screens" },
+    "02-pages": { "ko": "페이지 전체", "en": "Full pages" },
+    "03-design-system": { "ko": "디자인 시스템", "en": "Design system" },
+    "04-market": { "ko": "마켓", "en": "Marketplace" }
+  },
+  "frames": {
+    "01-screens/001-login": {
+      "title": { "ko": "로그인", "en": "Sign in" },
+      "desc": {
+        "ko": "이메일과 비밀번호를 위에, 구글과 애플을 아래에 뒀다. 어두운 바닥에 채운 버튼은 하나뿐이라 다음 걸음이 어디인지 헷갈리지 않는다.",
+        "en": "Email and password up top, Google and Apple below. Only one button is filled on the dark ground, so the next step is never in question."
+      }
+    },
+    "01-screens/003-login_app": {
+      "title": { "ko": "다른 서비스로 들어가는 로그인", "en": "Signing into another service" },
+      "desc": {
+        "ko": "NAODA 계정으로 남의 앱에 들어가는 자리다. 앱 아이콘과 이름을 제목에 세우고, 아직 확인되지 않은 앱이면 입력 칸보다 먼저 그 사실을 알린다.",
+        "en": "Where a NAODA account opens someone else's app. The app's icon and name head the page, and if the app is not verified yet, that warning lands above the fields - not after them."
+      }
+    },
+    "01-screens/009-login_error": {
+      "title": { "ko": "로그인 실패", "en": "Sign-in failed" },
+      "desc": {
+        "ko": "틀린 곳과 일어난 일을 갈라 적었다. 형식이 어긋난 것은 그 칸 아래에, 로그인이 거절된 것은 오른쪽 위 알림에 둔다.",
+        "en": "What is malformed and what actually happened are told in two different places: the rule sits under the field, the rejection arrives as a notice in the top corner."
+      }
+    },
+    "01-screens/013-sign": {
+      "title": { "ko": "가입", "en": "Create an account" },
+      "desc": {
+        "ko": "비밀번호 규칙을 치기 전에 카드로 먼저 보여준다. 이메일·비밀번호·확인·추천 코드·약관 동의를 한 화면에 세로로 세웠다.",
+        "en": "The password rules are shown as a card before anything is typed. Email, password, confirmation, referral code and consent all stack into one screen."
+      }
+    },
+    "01-screens/014-oauth_consent": {
+      "title": { "ko": "정보 제공 동의", "en": "Consent to share" },
+      "desc": {
+        "ko": "무엇이 넘어가는지를 문장으로 적는다 - 로그인 정보는 넘기지 않고 숫자 식별자만 넘어가며, 그 앱은 그것으로 계정을 알아본다.",
+        "en": "It spells out what crosses over: the sign-in credentials do not, a numeric identifier does, and that is how the app recognises the account."
+      }
+    },
+    "01-screens/017-sign_error": {
+      "title": { "ko": "가입 입력 오류 세 벌", "en": "Three ways signup fails" },
+      "desc": {
+        "ko": "이메일 형식·비밀번호 규칙·확인 불일치를 한 프레임에 나란히 뒀다. 세 경우 모두 틀린 칸만 붉게 두르고 나머지는 건드리지 않는다.",
+        "en": "Malformed email, weak password, mismatched confirmation - laid side by side in one frame. In all three, only the offending field is outlined; the rest stay untouched."
+      }
+    },
+    "01-screens/018-verify": {
+      "title": { "ko": "메일 코드 확인", "en": "Email code check" },
+      "desc": {
+        "ko": "여섯 칸과 5분 타이머를 나란히 두고, 코드가 안 맞으면 칸 아래에 적는다. 이름은 확인 화면이지만 그려진 것은 틀린 상태다.",
+        "en": "Six boxes with a five-minute timer beside them, and a mismatch is written under the row. The file is named for the step; what is drawn is the failed state."
+      }
+    },
+    "01-screens/021-oauth_terms": {
+      "title": { "ko": "소셜로 들어온 가입 마무리", "en": "Finishing a social signup" },
+      "desc": {
+        "ko": "구글·애플로 들어오면 이메일은 이미 확인된 상태라 추천 코드와 약관만 남는다. 남는 것만 남기고 나머지 칸을 지웠다.",
+        "en": "Arriving through Google or Apple, the address is already verified, so only the referral code and consent remain. Everything already settled is dropped from the form."
+      }
+    },
+    "01-screens/024-welcome": {
+      "title": { "ko": "가입 완료", "en": "Signed up" },
+      "desc": {
+        "ko": "끝났다는 말과 버튼 하나만 남긴다. 축하 그림을 붙이지 않고 다음 자리로 보내는 데만 쓴다.",
+        "en": "One sentence that it is done, and one button. No celebration art - the screen exists to hand the person onward."
+      }
+    },
+    "01-screens/029-cancel_unsubscription1": {
+      "title": { "ko": "탈퇴 요청 철회", "en": "Withdrawing a delete request" },
+      "desc": {
+        "ko": "삭제를 신청한 계정으로 다시 들어오면 신청 날짜부터 보여준다. 15일 안에는 되돌릴 수 있고 그 뒤에는 못 되돌린다는 것을 버튼 아래에 적었다.",
+        "en": "Signing back into an account that asked to be deleted shows the request date first. Fifteen days to take it back, and no recovery after - written under the buttons, not hidden in a policy."
+      }
+    },
+    "01-screens/032-cancel_unsubscription2": {
+      "title": { "ko": "철회 코드 확인", "en": "Confirming the withdrawal" },
+      "desc": {
+        "ko": "되돌리는 것도 메일 코드를 받는다. 다섯 번 틀리면 코드를 다시 받아야 한다는 것을 시도 횟수와 함께 적는다.",
+        "en": "Taking it back needs a mailed code too. Five misses and the code must be reissued - the count is shown as it climbs."
+      }
+    },
+    "01-screens/035-cancel_unsubscription3": {
+      "title": { "ko": "철회 완료", "en": "Request withdrawn" },
+      "desc": {
+        "ko": "계정이 살아났다는 말과 서비스로 돌아가는 버튼 하나. 앞의 완료 화면과 같은 뼈대를 쓴다.",
+        "en": "The account is alive again, and one button back into the service - the same skeleton as the other done screens."
+      }
+    },
+    "01-screens/038-reset_password1": {
+      "title": { "ko": "비밀번호 재설정 - 메일 주소", "en": "Reset - the address" },
+      "desc": {
+        "ko": "가입한 주소를 받아 코드를 보낸다. 형식이 틀리면 보내기 전에 칸 아래에서 걸러 헛되이 기다리는 일을 만들지 않는다.",
+        "en": "It takes the registered address and mails a code. A malformed one is caught under the field before sending, so nobody waits for a mail that was never going to arrive."
+      }
+    },
+    "01-screens/041-reset_password2": {
+      "title": { "ko": "재설정 코드", "en": "Reset code" },
+      "desc": {
+        "ko": "가입 확인과 같은 여섯 칸을 쓴다. 다섯 번 틀리면 코드를 새로 받아야 하고, 그 횟수를 세어 보여준다.",
+        "en": "The same six boxes as signup verification. Five wrong tries and the code is reissued - the tally is shown while it counts."
+      }
+    },
+    "01-screens/044-reset_password3": {
+      "title": { "ko": "새 비밀번호", "en": "The new password" },
+      "desc": {
+        "ko": "규칙을 카드가 아니라 제목 아래 문장으로 놓았다. 새로 치는 칸과 확인하는 칸만 남기고, 안 맞으면 두 번째 칸을 두른다.",
+        "en": "Here the rules sit as a sentence under the heading rather than in a card. Only the new field and its confirmation remain, and a mismatch outlines the second one."
+      }
+    },
+    "01-screens/047-reset_password4": {
+      "title": { "ko": "재설정 완료", "en": "Password reset" },
+      "desc": {
+        "ko": "끝났다는 한 줄과 로그인으로 가는 버튼. 새 비밀번호로 바로 들어가라고 로그인 자리로만 보낸다.",
+        "en": "One line that it is done, and a button to sign in - the only place it sends you, since the new password is what you now have."
+      }
+    },
+    "01-screens/050-setting_account": {
+      "title": { "ko": "설정 - 계정", "en": "Settings - account" },
+      "desc": {
+        "ko": "커버와 아바타를 맨 위에 두고 표시 이름·소개·이메일을 잇는다. 연결한 앱 관리와 비밀번호 변경은 각각 버튼으로 빼고, 계정 삭제는 맨 아래 회색 링크로 내렸다.",
+        "en": "Cover and avatar first, then display name, bio and address. Connected-app access and password each get their own button, and deleting the account drops to a grey link at the very bottom."
+      }
+    },
+    "01-screens/051-oauth_manage": {
+      "title": { "ko": "연결한 앱 관리", "en": "Connected applications" },
+      "desc": {
+        "ko": "NAODA 계정으로 들어간 앱을 한 줄씩 세우고 각 줄을 펼쳐 권한을 본다. 계정을 준 자리와 거두는 자리를 같은 목록에 둔 셈이다.",
+        "en": "Every app the account has opened, one row each, expanding to its permissions - the place that grants access and the place that takes it back are the same list."
+      }
+    },
+    "01-screens/058-faq": {
+      "title": { "ko": "자주 묻는 질문", "en": "FAQ" },
+      "desc": {
+        "ko": "묶음 넷을 카드로 세우고 고른 것만 희게 뒤집는다. 아래 아코디언은 한 번에 하나만 펴지고, 펴진 줄만 × 를 갖는다. 본문은 아직 더미다.",
+        "en": "Four groups as cards, the chosen one inverted to white. The accordion below opens one row at a time, and only the open row carries a close mark. The answers are still dummy text."
+      }
+    },
+    "01-screens/062-about": {
+      "title": { "ko": "소개 페이지", "en": "About, full page" },
+      "desc": {
+        "ko": "로고 오브젝트를 건 히어로, 무엇을 하는 곳인지 세 줄로 나눈 구간, 그리고 보도자료 격자까지 한 프레임에 이어 붙였다. 밝기를 바꿔 구간을 가른다.",
+        "en": "Hero with the logo object, a three-column statement of what the place does, and a press grid - one continuous frame. Bands change brightness to mark where one section ends."
+      }
+    },
+    "01-screens/063-policy": {
+      "title": { "ko": "개인정보 처리방침", "en": "Privacy policy" },
+      "desc": {
+        "ko": "조항 본문 아래에 수집 항목 표를 붙였다. 쓰는 목적·받는 항목·근거를 한 줄로 맞춰, 문장으로 흩어 두면 안 읽히는 것을 표로 세운다.",
+        "en": "Articles first, then a table of what is collected. Purpose, fields and basis line up in a row - the part that never gets read as prose is set as a grid."
+      }
+    },
+    "01-screens/067-profile1": {
+      "title": { "ko": "계정 패널 - 지갑 연결 전", "en": "Account panel, no wallet" },
+      "desc": {
+        "ko": "홈 위로 오른쪽 패널을 덮는다. 지갑이 없으면 연결 버튼이 그 자리를 차지하고, 아주 긴 이름은 말줄임으로 자른다.",
+        "en": "A right-hand panel over the home screen. With no wallet, the connect button holds that slot, and an over-long name is clipped rather than allowed to wrap."
+      }
+    },
+    "01-screens/070-profile2": {
+      "title": { "ko": "계정 패널 - 지갑 연결 후", "en": "Account panel, wallet linked" },
+      "desc": {
+        "ko": "같은 패널에서 버튼 자리가 주소 칩으로 바뀐다. 주소는 앞뒤만 남겨 줄이고 복사와 연결 해제를 그 옆에 붙였다.",
+        "en": "The same panel with the button replaced by an address chip. The address keeps only its head and tail, with copy and disconnect sitting beside it."
+      }
+    },
+    "01-screens/073-unsupported_browser": {
+      "title": { "ko": "지원하지 않는 브라우저", "en": "Unsupported browser" },
+      "desc": {
+        "ko": "권하는 쪽을 채운 버튼으로, 그래도 들어가는 쪽을 그 아래에 뒀다. 막지는 않고 무엇을 권하는지만 분명히 한다.",
+        "en": "The recommended path is the filled button, and going ahead anyway sits under it. Nothing is blocked - the recommendation is just made unambiguous."
+      }
+    },
+    "01-screens/076-cookies": {
+      "title": { "ko": "쿠키 · 개인정보 설정", "en": "Cookie and privacy settings" },
+      "desc": {
+        "ko": "아래 띠에서 「더 보기」로 들어오면 이 창이 열린다. 항목별로 켜고 끄되 필수는 잠근 채 두고, 저장·거부·전체 허용을 나란히 세웠다.",
+        "en": "The strip at the bottom opens this panel. Each tag can be switched, the essential one stays locked, and save / deny / accept-all stand in a row."
+      }
+    },
+    "01-screens/079-connect-wallet": {
+      "title": { "ko": "지갑 고르기", "en": "Choose a wallet" },
+      "desc": {
+        "ko": "지갑 셋을 줄로 세우고, 특정 게임의 보상을 받으려면 어느 지갑이어야 하는지를 목록 아래에 따로 적었다. 고르기 전에 알아야 하는 조건이라 목록 밖으로 뺐다.",
+        "en": "Three wallets as rows, with a note under them about which one a particular game's rewards require. It is a condition you need before choosing, so it sits outside the list."
+      }
+    },
+    "01-screens/082-connect-wallet_warning": {
+      "title": { "ko": "지갑 연결 전 경고 - 두 상태", "en": "Warning before connecting, both states" },
+      "desc": {
+        "ko": "읽었다는 체크가 없으면 확인 버튼이 죽어 있고, 체크하면 살아난다. 한 프레임에 두 상태를 나란히 그려 무엇이 버튼을 여는지 보이게 했다.",
+        "en": "Without the acknowledgement ticked the confirm button is dead; ticking it brings the button to life. Both states are drawn side by side so the condition is visible, not implied."
+      }
+    },
+    "01-screens/087-home": {
+      "title": { "ko": "홈 전체", "en": "Home, end to end" },
+      "desc": {
+        "ko": "게임 히어로 캐러셀로 열고, 로드맵을 분기별 타임라인으로 세우고, 파트너 로고와 커뮤니티 배너로 닫는다. 히어로만 그림이고 나머지는 글자와 선으로 끌고 간다.",
+        "en": "Opens on a game hero carousel, sets the roadmap as a quarter-by-quarter timeline, and closes on partner logos and a community banner. Only the hero is artwork; the rest is carried by type and rules."
+      }
+    },
+    "01-screens/093-setting_account_edit": {
+      "title": { "ko": "설정 - 계정 편집 중", "en": "Settings - account, editing" },
+      "desc": {
+        "ko": "커버와 아바타 위에 교체 아이콘이 얹히고 표시 이름 칸이 열린다. 이미 쓰는 이름이면 저장 버튼 옆이 아니라 칸 바로 아래에서 걸린다.",
+        "en": "A replace icon lands on the cover and the avatar, and the display-name field opens. A name already taken is caught right under the field rather than beside the save button."
+      }
+    },
+    "01-screens/094-setting_wallet": {
+      "title": { "ko": "설정 - 지갑", "en": "Settings - wallet" },
+      "desc": {
+        "ko": "연결한 주소는 지갑 아이콘·체인 표시·복사·해제를 한 줄에 담고, 그 아래 빈 칸을 하나 더 열어 두 번째 지갑을 붙일 자리를 보여준다.",
+        "en": "A linked address carries its wallet mark, chain, copy and disconnect on one row, and an empty slot below shows where a second wallet would go."
+      }
+    },
+    "01-screens/100-setting_social": {
+      "title": { "ko": "설정 - 소셜 연결", "en": "Settings - social links" },
+      "desc": {
+        "ko": "연결한 것은 계정 이름을 달고 테두리 버튼으로 끊게, 안 한 것은 「연결」을 채운 버튼으로 둔다. 버튼 모양만 봐도 어느 줄이 이어져 있는지 안다.",
+        "en": "A linked service shows its handle and an outlined button to break it; an unlinked one gets a filled Link button. The button style alone tells you which rows are connected."
+      }
+    },
+    "01-screens/103-setting_referral": {
+      "title": { "ko": "설정 - 추천", "en": "Settings - referral" },
+      "desc": {
+        "ko": "왼쪽은 내보내는 것(코드와 초대 링크, 각각 복사), 오른쪽은 들어온 것(가입자와 가입 시각)이다. 주는 쪽과 받는 쪽을 좌우로 갈랐다.",
+        "en": "The left column is what goes out - the code and the invite link, each with its own copy - and the right is what came back. Giving and receiving are split across the axis."
+      }
+    },
+    "01-screens/106-setting_coupon": {
+      "title": { "ko": "설정 - 프로모션", "en": "Settings - promotions" },
+      "desc": {
+        "ko": "탭이 하나 더 붙고 화면에는 코드 칸과 등록 버튼만 남는다. 결과를 보여줄 목록이 아직 없어 빈 채로 둔 자리다.",
+        "en": "One more tab, and the page holds only a code field and a redeem button. There is no result list yet, and the space is left empty rather than filled."
+      }
+    },
+    "01-screens/109-setting_history-이후스펙": {
+      "title": { "ko": "설정 - 획득 이력", "en": "Settings - acquisition history" },
+      "desc": {
+        "ko": "무엇을·어떤 POP·어느 트랜잭션·언제를 한 표로 세우고 해시만 링크로 뺐다. 파일 이름이 「이후 스펙」이라 적힌, 나중 단계로 미뤄 둔 화면이다.",
+        "en": "Event, POP, transaction and date in one table, with only the hash as a link. The file is marked as a later spec - a screen parked for a subsequent phase."
+      }
+    },
+    "01-screens/110-unsubscription": {
+      "title": { "ko": "계정 삭제 요청", "en": "Requesting deletion" },
+      "desc": {
+        "ko": "무엇을 잃는지·되돌릴 수 있는 기간·같은 메일과 지갑을 다시 못 쓴다는 것을 세 묶음으로 적고, 읽었다는 체크 뒤에야 확인을 누르게 했다.",
+        "en": "What is lost, how long it can be undone, and that the same address and wallet cannot return - three blocks, and confirm only opens after the acknowledgement."
+      }
+    },
+    "01-screens/113-unsubscription2": {
+      "title": { "ko": "삭제 요청 접수", "en": "Delete request submitted" },
+      "desc": {
+        "ko": "접수됐다는 말과 함께 15일 안에 다시 로그인하면 되돌릴 수 있다는 것을 카드로 남긴다. 나가는 화면에서 돌아올 길을 마지막으로 한 번 더 적는다.",
+        "en": "It confirms receipt and leaves the way back in a card: sign in within fifteen days and the request is void. The exit screen states the return path one last time."
+      }
+    },
+    "01-screens/114-change_password": {
+      "title": { "ko": "비밀번호 변경", "en": "Change password" },
+      "desc": {
+        "ko": "왼쪽에 캐릭터 띠를 세우고 오른쪽에 폼을 붙인 두 칸 짜임이다. 새 비밀번호는 쓰던 것과 달라야 한다는 조건을 제목 아래에 먼저 적었다.",
+        "en": "A two-column layout: a character band on the left, the form on the right. The condition - the new password must differ from the old - is stated under the heading, before any field."
+      }
+    },
+    "01-screens/115-change_password2": {
+      "title": { "ko": "비밀번호 변경 완료", "en": "Password changed" },
+      "desc": {
+        "ko": "같은 두 칸 짜임을 유지한 채 폼만 걷어냈다. 설정으로 돌아가는 버튼 하나만 남는다.",
+        "en": "The same two-column frame with the form taken out. One button back to settings is all that remains."
+      }
+    },
+    "02-pages/01": {
+      "title": { "ko": "홈 - 페이지 한 장", "en": "Home as one page" },
+      "desc": {
+        "ko": "히어로 캐러셀·로드맵·파트너를 끊지 않고 이어 붙인 판이다. 화면 탭의 홈과 같은 페이지를 통째로 놓고 구간 사이 간격을 보는 자리다.",
+        "en": "Hero carousel, roadmap and partners in one uncut composition - the same page the Screens tab holds, laid out whole so the spacing between bands can be judged."
+      }
+    },
+    "02-pages/02": {
+      "title": { "ko": "POP 소개 페이지", "en": "The POP page" },
+      "desc": {
+        "ko": "POP 이 무엇인지 문단으로 풀고, 아래에서 NFT·SBT·POP 셋을 카드로 나란히 갈라 놓는다. 개념을 설명하는 글과 개념을 구분하는 표를 위아래로 나눴다.",
+        "en": "A paragraph pass at what a POP is, then three cards setting NFT, SBT and POP side by side. Prose that explains and a grid that distinguishes, stacked in that order."
+      }
+    },
+    "02-pages/03": {
+      "title": { "ko": "설정 - 페이지 한 장", "en": "Settings as one page" },
+      "desc": {
+        "ko": "계정 탭을 푸터까지 담은 판이다. 항목마다 붙는 편집 버튼의 크기와 간격을 페이지 전체에서 본다.",
+        "en": "The account tab carried down to the footer, so the size and rhythm of the per-row edit buttons can be read across the whole page."
+      }
+    },
+    "02-pages/04": {
+      "title": { "ko": "POP 상세 - 모달", "en": "POP detail modal" },
+      "desc": {
+        "ko": "카드와 설명 위쪽에 등급·분류를 얹고, 아래를 기술 정보와 미션으로 갈랐다. 컨트랙트 주소·토큰 규격·메타데이터는 접지 않고 그대로 세워 두었다.",
+        "en": "Grade and category sit above the card and its blurb; below, the panel splits into technical facts and the mission list. Contract, token standard and metadata are left in the open rather than folded away."
+      }
+    },
+    "02-pages/05": {
+      "title": { "ko": "내 POP 컬렉션", "en": "A POP collection" },
+      "desc": {
+        "ko": "커버와 소개 옆에 보상 카드를 세우고, 아래는 분류 칩으로 거르는 카드 격자다. 카드마다 달성률 막대를 달아 모은 것과 모으는 중인 것을 한눈에 가른다.",
+        "en": "Cover and bio with a reward card beside them, then a card grid filtered by category chips. Each card carries a completion bar, so collected and in-progress read apart at a glance."
+      }
+    },
+    "02-pages/06": {
+      "title": { "ko": "게임 상세 - 다른 내비게이션 판", "en": "Game detail, a different nav generation" },
+      "desc": {
+        "ko": "상단 메뉴가 GAMES·POP·MARKETPLACE 로 다르고 오른쪽에 로그인·가입이 따로 선다. 게임 소개·매칭 규칙·소식·미디어·로드맵을 한 페이지에 쌓은 판이다.",
+        "en": "A different top menu - Games, POP, Marketplace - with sign in and sign up standing apart on the right. Game intro, matching rules, news, media and roadmap stack into a single page."
+      }
+    },
+    "03-design-system/001-logo": {
+      "title": { "ko": "로고", "en": "Logo" },
+      "desc": {
+        "ko": "워드마크의 O 를 육각 구멍으로 판 글자꼴이다. 아래에 NAODA·MOIDA·PLAYFOLIO 세 벌의 조합 규칙을 여백째 붙여 두었다.",
+        "en": "A wordmark whose O is cut as a hexagonal aperture. Below it, three lockups - NAODA, MOIDA, PLAYFOLIO - are pinned with their clear space."
+      }
+    },
+    "03-design-system/002-typography": {
+      "title": { "ko": "타이포그래피", "en": "Typography" },
+      "desc": {
+        "ko": "본문 서체는 SUIT 하나다. 크기는 text-xs 부터 text-9xl 까지 Tailwind 이름 그대로 쓰고 rem·px·행간을 옆에 같이 적어, 디자인 이름과 코드 이름이 어긋날 자리를 없앴다.",
+        "en": "One typeface, SUIT. The ramp runs text-xs to text-9xl under Tailwind's own names, with rem, px and leading written alongside - so the design name and the code name cannot drift apart."
+      }
+    },
+    "03-design-system/003-surfaces": {
+      "title": { "ko": "표면 - 라운드·그림자·블러", "en": "Surfaces - radius, shadow, blur" },
+      "desc": {
+        "ko": "모서리 반경 9단, 그림자 7단, 배경 블러 8단을 각각 견본으로 세웠다. 블러는 실제 게임 아트 위에 얹어 어두운 화면에서 얼마나 걷히는지를 보인다.",
+        "en": "Nine radii, seven shadows and eight backdrop blurs, each as a swatch. The blurs are laid over real game art, which is the only way to judge them on a dark ground."
+      }
+    },
+    "03-design-system/004-color-system": {
+      "title": { "ko": "색 체계", "en": "Colour system" },
+      "desc": {
+        "ko": "회색 7단에 주색(민트)과 보조색(보라)을 불투명·반투명 두 벌로 두고, 오류·성공·정보 램프를 붙였다. 라벨이 ERROR 로 두 번 붙어 있는데 아래 줄은 노란 경고 램프다.",
+        "en": "Seven greys, a mint primary and a violet secondary each in solid and translucent runs, then error, success and info ramps. Two rows are labelled ERROR in the original; the lower one is the amber warning ramp."
+      }
+    },
+    "03-design-system/005-breakpoints": {
+      "title": { "ko": "브레이크포인트", "en": "Breakpoints" },
+      "desc": {
+        "ko": "375·640·768·1024·1280·1536 여섯 폭을 실제 크기의 상자로 세워 두었다. 표로 적지 않고 크기 그대로 그려서 다음 폭이 얼마나 넓어지는지를 눈으로 재게 했다.",
+        "en": "Six widths - 375, 640, 768, 1024, 1280, 1536 - drawn as boxes at true size rather than listed in a table, so the jump between steps is measured by eye."
+      }
+    },
+    "03-design-system/006-layout": {
+      "title": { "ko": "레이아웃 - 컨테이너와 간격", "en": "Layout - containers and spacing" },
+      "desc": {
+        "ko": "컨테이너 다섯과 간격 스물여섯을 이름·rem·px 세 칸으로 맞춰 적고 그 옆에 실제 길이의 막대를 그렸다. 숫자와 길이를 나란히 두면 고를 때 재지 않아도 된다.",
+        "en": "Five containers and twenty-six spacing steps, each as name, rem and px, with a bar drawn at true length beside it. Number and length side by side means no measuring when choosing."
+      }
+    },
+    "03-design-system/007-accordion": {
+      "title": { "ko": "아코디언", "en": "Accordion" },
+      "desc": {
+        "ko": "두 벌이다. 하나는 테두리와 드래그 손잡이를 가진 목록형, 다른 하나는 설명 줄이 붙는 카드형이다. 기본·선택·펼침·비활성 네 상태를 각각 세워 두었다.",
+        "en": "Two styles: a bordered list row with a drag handle, and a card that carries a description line. Each is drawn in default, selected, open and disabled."
+      }
+    },
+    "03-design-system/008-alert": {
+      "title": { "ko": "경고 배너", "en": "Alert" },
+      "desc": {
+        "ko": "한 줄짜리 띠 다섯 색과 액션 둘이 붙는 카드형 넷을 갈랐다. 색이 뜻을 지고, 라벨·버튼·닫기의 자리는 색과 상관없이 고정이다.",
+        "en": "A one-line band in five colours, and a card form with two actions. Colour carries the meaning; the label, button and close positions stay fixed regardless of it."
+      }
+    },
+    "03-design-system/009-avatar": {
+      "title": { "ko": "아바타", "en": "Avatar" },
+      "desc": {
+        "ko": "여덟 크기를 아이콘·이니셜·사진 세 줄로 나란히 두고, 붙는 상태 점도 크기마다 따로 그렸다. 점이 작아지는 비율까지 정해 둔 것이다.",
+        "en": "Eight sizes across three rows - icon, initials, photo - with the status dot drawn separately at every size, so even the way the dot shrinks is settled."
+      }
+    },
+    "03-design-system/010-badge": {
+      "title": { "ko": "배지", "en": "Badge" },
+      "desc": {
+        "ko": "연한 바탕과 찬 바탕 두 벌을 여섯 색으로 세우고, 상태 점 목록과 숫자 배지를 옆에 뒀다. 숫자는 99 를 넘기면 어떻게 줄이는지까지 그려져 있다.",
+        "en": "Six colours in a soft-fill and a solid-fill run, with the status dots and the count badge beside them - including what the count does once it passes 99."
+      }
+    },
+    "03-design-system/011-button": {
+      "title": { "ko": "버튼 전체", "en": "The button matrix" },
+      "desc": {
+        "ko": "다섯 묶음으로 색·크기·아이콘 유무·상태를 곱해 놓은 판이다. 이 킷에서 가장 넓은 프레임이고, 버튼 하나를 고를 때 옆 칸이 곧 다른 선택지가 된다.",
+        "en": "Five blocks multiplying colour, size, icon and state. It is the widest frame in the kit, and picking a button means reading the neighbouring cells as the alternatives."
+      }
+    },
+    "03-design-system/012-breadcumbers": {
+      "title": { "ko": "브레드크럼", "en": "Breadcrumbs" },
+      "desc": {
+        "ko": "구분자를 / 와 > 두 벌로 두고 1~4단계와 말줄임 형태를 함께 세웠다. 아래 표에서 기본·현재·아이콘 붙은 조각을 따로 정의한다.",
+        "en": "Two separators, slash and chevron, across one to four levels plus the truncated form. The table underneath defines the default, current and icon-bearing pieces on their own."
+      }
+    },
+    "03-design-system/013-card": {
+      "title": { "ko": "카드", "en": "Card" },
+      "desc": {
+        "ko": "글자만·버튼 하나·버튼 둘을 이미지 없는 판과 이미지 붙은 판으로 각각 그렸다. 이미지가 위로 가고 글이 아래로 오는 한 방향만 쓴다.",
+        "en": "Text only, one button and two buttons, each drawn with and without an image. The image always sits above the text - the other order is not offered."
+      }
+    },
+    "03-design-system/014-comment": {
+      "title": { "ko": "댓글", "en": "Comment" },
+      "desc": {
+        "ko": "쓴 댓글 한 줄과 쓰는 칸을 한 묶음으로 뒀다. 좋아요·싫어요·답글이 본문 아래 작은 줄로 붙고, 입력 칸은 100자 세는 숫자를 오른쪽 아래에 단다.",
+        "en": "A posted comment and the box for writing one, kept as a single unit. Like, dislike and reply run small under the body, and the field counts to 100 in its lower corner."
+      }
+    },
+    "03-design-system/015-date---time-picker": {
+      "title": { "ko": "날짜·시간 선택", "en": "Date and time picker" },
+      "desc": {
+        "ko": "필드와 달력, 필드와 시간 목록을 각각 상태별로 세우고 마지막에 둘을 나란히 놓는다. 날짜 하나를 고르는 경우와 사이를 고르는 경우를 다른 색으로 갈랐다.",
+        "en": "Field with calendar, field with a time list, each through its states, then the two set side by side. Picking one date and picking a range are separated by colour."
+      }
+    },
+    "03-design-system/016-dropdown": {
+      "title": { "ko": "드롭다운", "en": "Dropdown" },
+      "desc": {
+        "ko": "기본·아이콘·체크박스·2단 체크박스·접힘·위험·상태 일곱 갈래를 각각 세 상태로 그렸다. 아래는 두 줄부터 일곱 줄까지 목록 높이 견본이다.",
+        "en": "Seven kinds - plain, with icon, checkbox, nested checkbox, collapsed, danger, status - each in three states, over a set of list heights from two rows to seven."
+      }
+    },
+    "03-design-system/017-input": {
+      "title": { "ko": "입력 칸", "en": "Input" },
+      "desc": {
+        "ko": "작음·보통·큼 세 크기를 세로로, 기본부터 오류·비활성까지를 가로로 놓은 격자다. 오른쪽에 여러 줄 입력과 숫자 스테퍼를 따로 뒀다.",
+        "en": "A grid: three sizes down, states from default to error and disabled across. The multi-line field and the number stepper stand apart on the right."
+      }
+    },
+    "03-design-system/018-modal": {
+      "title": { "ko": "모달", "en": "Modal" },
+      "desc": {
+        "ko": "통째로 그리지 않고 머리·바닥·제목 줄로 쪼개 정의한다. 제목 줄에는 탭과 배지까지 들어가고, 마지막에 메시지 모달만 완성형으로 세웠다.",
+        "en": "Defined in parts - header, footer, title row - rather than as whole dialogs. The title row can carry tabs and a badge, and only the message modal is drawn complete."
+      }
+    },
+    "03-design-system/019-notification": {
+      "title": { "ko": "알림", "en": "Notification" },
+      "desc": {
+        "ko": "아이콘이 붙는 판과 안 붙는 판 둘뿐이다. 액션 둘은 오른쪽 아래에 글자 버튼으로 두고 닫기는 오른쪽 위에 고정한다.",
+        "en": "Just two: with an icon and without. The two actions sit as text buttons in the lower right, the close fixed in the upper right."
+      }
+    },
+    "03-design-system/020-pagination": {
+      "title": { "ko": "페이지 넘기기", "en": "Pagination" },
+      "desc": {
+        "ko": "화살표만·숫자만·이전/다음 글자·번호와 말줄임을 섞은 완성형까지 네 벌이다. 옆에 페이지당 항목 수 드롭다운을 붙여 한 묶음으로 봤다.",
+        "en": "Four forms - arrows only, numbers only, previous/next in words, and the full run with ellipsis - with the entries-per-page dropdown kept in the same group."
+      }
+    },
+    "03-design-system/021-progress": {
+      "title": { "ko": "진행 표시", "en": "Progress" },
+      "desc": {
+        "ko": "막대는 로딩·완료·오류 세 상태로 색과 아이콘이 같이 바뀌고, 원형 로더는 진행 정도와 굵기를 따로 그렸다. 칸 단위로 채우는 단계 막대도 함께 있다.",
+        "en": "The bar changes colour and icon together across loading, done and error; the circular loader is drawn for both progress and stroke weight. A segmented step bar sits with them."
+      }
+    },
+    "03-design-system/022-rate": {
+      "title": { "ko": "별점", "en": "Rating" },
+      "desc": {
+        "ko": "별과 표정 두 벌을 같은 규칙으로 세웠다. 반 칸을 인정해서 5·4.5·3.5·1.5·0 을 그려 두었다.",
+        "en": "Two sets, stars and faces, under the same rule. Half steps count, so five, four and a half, three and a half, one and a half and zero are all drawn."
+      }
+    },
+    "03-design-system/023-slider": {
+      "title": { "ko": "슬라이더", "en": "Slider" },
+      "desc": {
+        "ko": "손잡이 하나짜리와 사이를 고르는 두 개짜리를 기본·활성·비활성 세 상태로 뒀다. 지난 구간만 색이 차고 남은 구간은 회색으로 남는다.",
+        "en": "Single handle and range, each in default, active and disabled. Only the travelled part takes colour; the rest stays grey."
+      }
+    },
+    "03-design-system/024-skeleton": {
+      "title": { "ko": "스켈레톤", "en": "Skeleton" },
+      "desc": {
+        "ko": "아바타·버튼·이미지·제목·부제·본문·배지를 이름 붙여 세우고 SM·MD·LG 세 벌로 키웠다. 무엇이 자리를 지키는 중인지 이름으로 알 수 있게 했다.",
+        "en": "Avatar, button, image, heading, subhead, paragraph and badge, each named and grown through SM, MD and LG - so it is legible which element each placeholder is holding."
+      }
+    },
+    "03-design-system/025-step": {
+      "title": { "ko": "단계 표시", "en": "Steps" },
+      "desc": {
+        "ko": "동그라미 다섯 상태(완료·현재·예정·비활성)를 먼저 정의하고, 세로·가로 두 방향과 라벨·부라벨이 붙는 판까지 이어 세웠다.",
+        "en": "The five dot states - done, current, upcoming, disabled - are defined first, then carried into vertical and horizontal runs, with and without label and subtext."
+      }
+    },
+    "03-design-system/026-switch--checkbox----radio-button": {
+      "title": { "ko": "선택 컨트롤", "en": "Select controls" },
+      "desc": {
+        "ko": "토글·라디오·체크박스를 한 장에 모으고, 라벨만·라벨과 설명·라벨과 아이콘 조합을 각각 붙였다. 카드로 감싼 라디오는 따로 정의한다.",
+        "en": "Toggle, radio and checkbox on one sheet, each paired with label only, label and description, label and icon. The card-wrapped radio is defined on its own."
+      }
+    },
+    "03-design-system/027-tab": {
+      "title": { "ko": "탭", "en": "Tabs" },
+      "desc": {
+        "ko": "밑줄로 고르는 판과 칸을 칠해 고르는 판 둘을 아이콘·개수 배지와 함께 세웠다. 아래 예시에서 다섯 개 탭이 실제로 어떻게 늘어서는지를 보인다.",
+        "en": "Two ways of marking the current tab - underline and filled cell - with icon and count badge, then an example showing how five of them actually line up."
+      }
+    },
+    "03-design-system/028-tag": {
+      "title": { "ko": "태그", "en": "Tags" },
+      "desc": {
+        "ko": "지우기가 붙은 칩과, 그 칩이 들어앉는 다중 선택 입력을 함께 정의한다. 칩이 두 개 들어간 뒤의 높이와 오류·비활성 상태까지 그려 두었다.",
+        "en": "A chip with its own remove, and the multi-select field the chips live in - drawn down to what the field's height becomes with two chips in it, plus error and disabled."
+      }
+    },
+    "03-design-system/029-tooltip": {
+      "title": { "ko": "툴팁", "en": "Tooltip" },
+      "desc": {
+        "ko": "네 방향(위·아래·왼쪽·오른쪽)을 세로로, 기본·버튼 딸린 판을 가로로 놓고 그것을 기본색·오류색·강조색 세 벌로 반복했다. 꼬리 위치가 방향마다 다시 정의된다.",
+        "en": "Four directions down, plain and with-button across, and the whole matrix repeated in neutral, error and brand fills. The tail is redefined for every direction."
+      }
+    },
+    "03-design-system/030-design-system-header": {
+      "title": { "ko": "장 머리글 조각", "en": "The page header, on its own" },
+      "desc": {
+        "ko": "「FOUNDATION」 표시와 장 제목만 담긴 얇은 띠다. 툴팁 장의 머리글이 본문과 따로 잘려 나온 조각이라, 화면이 아니라 부품으로 봐야 한다.",
+        "en": "A thin strip holding only the Foundation mark and a page title - the tooltip page's header exported apart from its body. It is a part, not a screen."
+      }
+    },
+    "03-design-system/031-upload": {
+      "title": { "ko": "업로드", "en": "Upload" },
+      "desc": {
+        "ko": "끌어다 놓는 자리와 올린 뒤의 목록을 갈라 놓았다. 파일 줄·카드·미리보기 세 형태에서 올리는 중·실패·성공을 각각 그리고, 실패한 줄만 붉게 남긴다.",
+        "en": "The drop target and the aftermath are separated. Uploading, failed and done are drawn for the row, the card and the thumbnail alike, with only the failed one left in red."
+      }
+    },
+    "03-design-system/032-calendar": {
+      "title": { "ko": "캘린더", "en": "Calendar" },
+      "desc": {
+        "ko": "날짜 칸·머리글·일정 칩 같은 조각을 먼저 정의하고 월·주·일 세 보기를 차례로 세웠다. 하루를 넘기는 일정은 칸을 가로지르는 띠로, 지금 시각은 붉은 선으로 긋는다.",
+        "en": "The parts - day cell, header, event chip - are defined first, then month, week and day views follow. A multi-day event runs as a band across cells, and now is a red rule."
+      }
+    },
+    "03-design-system/033-table": {
+      "title": { "ko": "표", "en": "Table" },
+      "desc": {
+        "ko": "머리 칸과 셀을 조각으로 정의하고, 거르기 팝오버 넷과 열 고르기를 붙인 뒤 마지막에 실제 표를 세웠다. 상태 값은 글자가 아니라 배지로 읽게 했다.",
+        "en": "Header and cell defined as parts, then four filter popovers and a column chooser, and finally a real table. Status is read as a badge rather than as a word."
+      }
+    },
+    "04-market/004-main_01": {
+      "title": { "ko": "마켓 홈", "en": "Marketplace home" },
+      "desc": {
+        "ko": "계정 화면과 달리 흰 바탕을 쓰고 왼쪽에 아이콘 레일을 세운다. 히어로 아래로 진행 중인 프리세일, 인기 프로젝트, 분류, 안내 글, 예치 배너를 차례로 쌓았다.",
+        "en": "Unlike the account screens this runs on white, with an icon rail down the left. Under the hero come ongoing pre-sales, hot projects, categories, help articles and a staking banner."
+      }
+    },
+    "04-market/007-pre-sale_list": {
+      "title": { "ko": "프리세일 목록", "en": "Pre-sale list" },
+      "desc": {
+        "ko": "진행 중인 것만 큰 카드로 앞에 세우고 끝난 것은 작은 카드로 격자에 내린다. 남은 시간과 민팅 진행률은 진행 중인 카드만 갖는다.",
+        "en": "Live sales lead as large cards; finished ones drop to a grid of small ones. Countdown and mint progress belong only to the cards that still have them."
+      }
+    },
+    "04-market/008-profile_item": {
+      "title": { "ko": "프로필 - 보유 항목", "en": "Profile - items" },
+      "desc": {
+        "ko": "가진 것을 표로 세우고 줄마다 팔기·수정 버튼을 붙였다. 아래에 결과 없음 상태를 같은 프레임에 이어 그려, 표가 비었을 때 무엇이 남는지를 함께 정했다.",
+        "en": "Holdings as a table with sell or update on each row - and the empty state drawn into the same frame, so what remains when the table has nothing is settled alongside it."
+      }
+    },
+    "04-market/009-profile_activity": {
+      "title": { "ko": "프로필 - 거래 내역", "en": "Profile - activity" },
+      "desc": {
+        "ko": "단가와 총액을 나란히 두고 보낸 주소·받은 주소·거래 종류·시각을 잇는다. 판매·제안·전송·등록·민팅을 한 표에서 종류 칸으로만 가른다.",
+        "en": "Unit and total price side by side, then from, to, kind and time. Sale, offer, transfer, listing and mint all live in one table, separated only by the kind column."
+      }
+    },
+    "04-market/010-item_pre-sale": {
+      "title": { "ko": "프리세일 상세", "en": "Pre-sale detail" },
+      "desc": {
+        "ko": "왼쪽은 그림, 오른쪽은 설명·남은 시간·민팅 진행률·가격·민팅 버튼이다. 아래 일정 아코디언이 회차를 시각까지 적어 언제 열리는지를 남긴다.",
+        "en": "Art on the left; description, countdown, mint progress, price and the mint button on the right. The schedule accordion below records each round down to the hour."
+      }
+    },
+    "04-market/011-item_pre-sale2": {
+      "title": { "ko": "프리세일 상세 - 화이트리스트 판", "en": "Pre-sale detail, whitelist round" },
+      "desc": {
+        "ko": "상단 메뉴가 다른 판이고, 자격이 없으면 수량 조절과 버튼이 통째로 죽는다. 못 사는 이유를 버튼 글자에 적어 「명단에 없음」으로 남겼다.",
+        "en": "A different top menu, and without eligibility the quantity stepper and button die together. The reason sits in the button's own label - not on whitelist."
+      }
+    },
+    "04-market/012-item_details": {
+      "title": { "ko": "아이템 상세", "en": "Item detail" },
+      "desc": {
+        "ko": "왼쪽 열에 특성·정보, 오른쪽에 가격과 사기·제안하기를 두고 그 아래를 등록·제안·활동 세 표로 잇는다. 파는 값과 부르는 값을 다른 표로 갈랐다.",
+        "en": "Traits and details in the left column, price with buy and offer on the right, then listings, offers and activity as three tables - asking prices and bids kept apart."
+      }
+    },
+    "04-market/013-item_bar": {
+      "title": { "ko": "아이템 상세 - 상단 고정 바", "en": "Item detail, sticky bar" },
+      "desc": {
+        "ko": "표를 내려 읽는 동안 썸네일·이름·단가·사기 버튼이 상단에 붙는다. 살 수 있는 자리를 화면 밖으로 내보내지 않으려는 것이다.",
+        "en": "As the tables scroll past, the thumbnail, name, price and buy button pin to the top - so the place where you can actually buy never leaves the screen."
+      }
+    },
+    "04-market/039-gnb_signout": {
+      "title": { "ko": "상단·측면 바 - 로그아웃", "en": "Navigation, signed out" },
+      "desc": {
+        "ko": "알림과 지갑 자리가 로그인·가입 버튼으로 바뀐다. 아이콘 레일은 그대로 남아, 안 들어와도 볼 수 있는 곳과 아닌 곳을 구분하지 않는다.",
+        "en": "The notification and wallet slots become sign in and sign up. The icon rail stays as it is - browsing is not gated behind an account."
+      }
+    },
+    "04-market/040-gnb_signin": {
+      "title": { "ko": "측면 바 펼침", "en": "The rail, expanded" },
+      "desc": {
+        "ko": "아이콘만 있던 레일이 이름을 달고 넓어진다. 프로젝트와 NAODA 는 하위가 더 있어 + 를 갖고, 도움말 두 줄은 선 아래로 내렸다.",
+        "en": "The icon rail widens and takes labels. Project and NAODA carry a plus for what sits under them, and the two help entries drop below a rule."
+      }
+    },
+    "04-market/068-project_01": {
+      "title": { "ko": "프로젝트 - 안 그린 자리", "en": "Project page, left undrawn" },
+      "desc": {
+        "ko": "레일과 검색 칸 조각만 있고 본문이 없다. 이름은 프로젝트 화면이지만 실제로는 껍데기만 놓인 자리다.",
+        "en": "Only the rail and a fragment of the search field; no body. The file is named for a project page, but what is actually here is the shell."
+      }
+    },
+    "04-market/074-category_item1": {
+      "title": { "ko": "컬렉션 - 아이템", "en": "Collection - items" },
+      "desc": {
+        "ko": "프로젝트 배너 아래에 무기 종류 칩을 한글로 늘어놓고, 바닥가·24시간 거래량·총 거래량을 오른쪽에 붙였다. 실시간 표시와 결과 수를 격자 바로 위에 둔다.",
+        "en": "Under the project banner, weapon-type chips run in Korean, with floor price, 24-hour and total volume pinned right. The live marker and result count sit directly above the grid."
+      }
+    },
+    "04-market/075-category_item2": {
+      "title": { "ko": "컬렉션 - 카드 위 동작", "en": "Collection - card actions" },
+      "desc": {
+        "ko": "카드에 손을 얹으면 항목 보기·프리세일 보기·바로 사기 셋이 그림 위로 올라온다. 카드를 눌러 들어가는 것 말고도 두 갈래를 더 열어 둔 것이다.",
+        "en": "Hovering a card raises three actions over the art - view item, view pre-sale, buy now - so the card offers two more doors than just opening itself."
+      }
+    },
+    "04-market/076-category_sticky1": {
+      "title": { "ko": "컬렉션 - 필터 고정", "en": "Collection - filters pinned" },
+      "desc": {
+        "ko": "배너가 위로 지나가면 분류 칩과 지표, 정렬 줄만 상단에 남는다. 목록을 훑는 동안 거르는 수단은 사라지지 않는다.",
+        "en": "Once the banner scrolls away, only the chips, the figures and the sort row remain at the top - the means of filtering never scroll out with the header."
+      }
+    },
+    "04-market/077-category_sticky2": {
+      "title": { "ko": "컬렉션 - 고정 뒤 격자", "en": "Collection - grid under the pin" },
+      "desc": {
+        "ko": "고정 줄 아래로 카드가 네 열로 흐른다. 앞 판보다 카드가 커져, 같은 화면이 밀도를 바꿔 서는 것을 볼 수 있다.",
+        "en": "Below the pinned row the cards run four across. They are larger than in the previous frame - the same screen standing at a different density."
+      }
+    },
+    "04-market/082-category_activity": {
+      "title": { "ko": "컬렉션 - 활동", "en": "Collection - activity" },
+      "desc": {
+        "ko": "탭을 넘기면 격자가 표로 바뀌고, 종류와 기간 두 개의 거르개가 분류 칩 아래 붙는다. 칩은 탭이 바뀌어도 그대로 남는다.",
+        "en": "The tab turns the grid into a table and adds two filters - event kind and period - under the chips. The chips themselves survive the tab change."
+      }
+    },
+    "04-market/086-category3": {
+      "title": { "ko": "컬렉션 - 가장 촘촘한 격자", "en": "Collection - densest grid" },
+      "desc": {
+        "ko": "상단 메뉴가 다른 판이고, 거르개가 칩이 아니라 드롭다운 넉 줄로 선다. 오른쪽 밀도 단추 셋 중 가장 촘촘한 것을 골라 여섯 열이 된다.",
+        "en": "A different top menu, and the filters stand as four dropdowns rather than chips. The densest of the three layout buttons is chosen, giving six columns."
+      }
+    },
+    "04-market/087-category2": {
+      "title": { "ko": "컬렉션 - 목록 보기", "en": "Collection - list view" },
+      "desc": {
+        "ko": "같은 목록을 표로 바꾸면 그림이 작아지고 현재가·최근 거래가·소유자·등록 시각이 열로 선다. 줄마다 펼침 화살표가 있어 안을 더 볼 수 있다.",
+        "en": "As a table the art shrinks and current price, last sale, owner and listing time become columns. Each row keeps a chevron for what is folded inside it."
+      }
+    },
+    "04-market/088-category1": {
+      "title": { "ko": "컬렉션 - 카드 상태", "en": "Collection - card states" },
+      "desc": {
+        "ko": "프리세일 중인 카드는 그림 위에 초록 배지를 달고, 안 팔리는 카드는 가격 자리에 「등록 안 됨」이 대신 든다. 빈칸을 남기지 않는다.",
+        "en": "A card in pre-sale takes a green badge over the art; one that is not for sale puts \"not listed\" where the price would be. No slot is left blank."
+      }
+    },
+    "04-market/089-category_sticky3": {
+      "title": { "ko": "컬렉션 - 고정 줄만", "en": "Collection - the pinned row alone" },
+      "desc": {
+        "ko": "칩과 드롭다운 줄만 남고 아래가 비어 있다. 고정 줄 자체를 재는 조각이라 목록은 그리지 않았다.",
+        "en": "Only the chips and the dropdown row, with nothing under them. It is a fragment for measuring the pinned row itself, so the list was not drawn."
+      }
+    },
+    "04-market/092-nft_filter": {
+      "title": { "ko": "거르기 - 걸기 전", "en": "Filters, before" },
+      "desc": {
+        "ko": "네 드롭다운이 아직 닫혀 있고 결과 줄에는 실시간 표시와 개수만 있다. 다음 장과 짝을 이루는 앞 상태다.",
+        "en": "The four dropdowns are still closed and the result row carries only the live marker and the count - the before half of a pair."
+      }
+    },
+    "04-market/093-nft_filter_action": {
+      "title": { "ko": "거르기 - 건 뒤", "en": "Filters, after" },
+      "desc": {
+        "ko": "고른 조건이 결과 줄에 칩으로 올라오고 칩마다 지우기가 붙는다. 무엇을 걸었는지와 그것을 푸는 자리를 같은 줄에 뒀다.",
+        "en": "The chosen conditions rise into the result row as chips, each with its own remove - what is filtered and how to undo it kept on the same line."
+      }
+    },
+    "04-market/106-category_filter": {
+      "title": { "ko": "거르기 패널 열기", "en": "The filter panel, open" },
+      "desc": {
+        "ko": "왼쪽에 패널이 열리면 격자가 밀려 세 열이 된다. 상태·가격·수량 위에 특성이 따로 묶이고 항목 수가 옆에 적힌다.",
+        "en": "The panel opens on the left and pushes the grid to three columns. Status, price and quantity sit above traits, which are grouped apart with their counts."
+      }
+    },
+    "04-market/107-category_filter_action": {
+      "title": { "ko": "거르기 패널 - 고른 뒤", "en": "The filter panel, applied" },
+      "desc": {
+        "ko": "패널에서 상태를 펼쳐 고르면 목록 위에 적용된 칩이 함께 뜬다. 패널과 칩이 같은 것을 두 자리에서 보여 주는 구조다.",
+        "en": "Expanding status in the panel and choosing puts the applied chips above the list as well - panel and chips showing the same state in two places."
+      }
+    }
+  },
+  "flow": [
+    ["01-screens/029-cancel_unsubscription1", "01-screens/032-cancel_unsubscription2"],
+    ["01-screens/032-cancel_unsubscription2", "01-screens/035-cancel_unsubscription3"],
+    ["01-screens/038-reset_password1", "01-screens/041-reset_password2"],
+    ["01-screens/041-reset_password2", "01-screens/044-reset_password3"],
+    ["01-screens/044-reset_password3", "01-screens/047-reset_password4"],
+    ["01-screens/050-setting_account", "01-screens/051-oauth_manage"],
+    ["01-screens/067-profile1", "01-screens/070-profile2"],
+    ["01-screens/110-unsubscription", "01-screens/113-unsubscription2"],
+    ["01-screens/114-change_password", "01-screens/115-change_password2"],
+    ["04-market/008-profile_item", "04-market/009-profile_activity"],
+    ["04-market/012-item_details", "04-market/013-item_bar"],
+    ["04-market/074-category_item1", "04-market/075-category_item2"],
+    ["04-market/092-nft_filter", "04-market/093-nft_filter_action"],
+    ["04-market/106-category_filter", "04-market/107-category_filter_action"]
+  ]
+}

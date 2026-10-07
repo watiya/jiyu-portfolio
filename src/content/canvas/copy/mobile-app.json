@@ -1,0 +1,386 @@
+{
+  "pages": {
+    "01-embed": {
+      "ko": "앱을 그대로 띄운 자리",
+      "en": "The app, embedded"
+    },
+    "02-wallet": {
+      "ko": "지갑 앱",
+      "en": "Wallet app"
+    },
+    "03-super-app": {
+      "ko": "슈퍼앱 화면",
+      "en": "Super app screens"
+    }
+  },
+  "flow": [
+    [
+      "01-embed/001-super-app",
+      "01-embed/002-app-spike"
+    ],
+    [
+      "01-embed/002-app-spike",
+      "01-embed/003-dex-app"
+    ],
+    [
+      "01-embed/003-dex-app",
+      "01-embed/004-dex-catalog"
+    ],
+    [
+      "02-wallet/001-owner-passkey",
+      "02-wallet/002-user-v2"
+    ],
+    [
+      "03-super-app/014-onboarding",
+      "03-super-app/002-home"
+    ],
+    [
+      "03-super-app/002-home",
+      "03-super-app/007-markets"
+    ],
+    [
+      "03-super-app/007-markets",
+      "03-super-app/019-trade-HODU"
+    ],
+    [
+      "03-super-app/002-home",
+      "03-super-app/003-launchpad"
+    ],
+    [
+      "03-super-app/003-launchpad",
+      "03-super-app/004-launchpad-atelier-lumiere"
+    ],
+    [
+      "03-super-app/002-home",
+      "03-super-app/022-wallet"
+    ],
+    [
+      "03-super-app/022-wallet",
+      "03-super-app/009-money-accounts"
+    ],
+    [
+      "03-super-app/022-wallet",
+      "03-super-app/011-money-pay"
+    ],
+    [
+      "03-super-app/011-money-pay",
+      "03-super-app/012-money-send"
+    ],
+    [
+      "03-super-app/010-money-activity",
+      "03-super-app/013-money-transaction-t1"
+    ]
+  ],
+  "frames": {
+    "01-embed/001-super-app": {
+      "title": {
+        "ko": "슈퍼앱 - 화면·기기·스펙을 한 줄에",
+        "en": "Super app - list, device, spec in one row"
+      },
+      "desc": {
+        "ko": "왼쪽에서 화면을 고르면 가운데 iPhone 15 Pro 프레임에 앱이 실제로 렌더되고, 오른쪽에 그 화면의 PRD 초안이 붙는다. PRD 는 지어낸 게 아니라 app-spike 실제 화면 코드에서 뽑았다. 화면 열일곱 장이 목록으로 서 있고, 「화면 출처」를 번들(정적)과 라이브 dev 서버 사이에서 바꿀 수 있다.",
+        "en": "Pick a screen on the left, the app renders for real in an iPhone 15 Pro frame in the middle, and a draft PRD for that screen sits on the right. The PRD is extracted from the app's own screen code rather than written separately. Seventeen screens stand as a list, and the source can be switched between the static bundle and a live dev server."
+      }
+    },
+    "01-embed/002-app-spike": {
+      "title": {
+        "ko": "스파이크 - dev 서버가 없으면 빈 기기",
+        "en": "Spike - an empty device without a dev server"
+      },
+      "desc": {
+        "ko": "같은 얼개인데 화면 출처가 라이브 dev 서버뿐이라, 8081 이 안 떠 있으면 기기 안이 「앱이 보이지 않나요? npm run web」으로 비어 버린다. 이 캡처가 그 상태다 - 앞의 슈퍼앱은 번들을 실어 두었기 때문에 서버 없이도 그려진다. 이 작업이 고친 것이 바로 이 차이다.",
+        "en": "The same layout, but the only source is a live dev server, so with nothing on port 8081 the device sits empty behind \"can't see the app? npm run web\". This capture is that state - the super app before it renders without a server because its build ships along. This gap is what the work closed."
+      }
+    },
+    "01-embed/003-dex-app": {
+      "title": {
+        "ko": "DEX 앱 - 실제로 눌러 보는 판",
+        "en": "DEX app - the one you actually tap"
+      },
+      "desc": {
+        "ko": "탭·푸시·시트·탭바 전환이 진짜로 도는 단일 프레임. 오른쪽에 지금 네비게이션 상태(onboarding·active tab·stack·sheet)를 실시간으로 찍어 주고, 그 아래 조작 방법을 아홉 줄로 적었다. 보는 사람이 어디를 눌러야 하는지 몰라 멈추는 일이 없다.",
+        "en": "A single frame where taps, pushes, sheets and tab switches genuinely work. The panel on the right prints the live navigation state - onboarding, active tab, stack, sheet - and nine lines below say what to press, so nobody stalls wondering where to click."
+      }
+    },
+    "01-embed/004-dex-catalog": {
+      "title": {
+        "ko": "DEX 카탈로그 - 열 화면과 지켜야 할 것",
+        "en": "DEX catalogue - ten screens and the rules"
+      },
+      "desc": {
+        "ko": "화면 열 장을 탭/푸시/시트와 상태 수까지 달아 격자로 세운다. 아래 「제약(필수 검수 포인트)」이 이 판의 값이다 - 공용 컴포넌트 킷만 · raw hex 0개 · 프레임 안은 영문, 밖은 한글 · Buy 는 검정 Sell 은 빨강. 무엇을 그렸는지가 아니라 무엇을 안 어겼는지를 같이 적었다.",
+        "en": "Ten screens in a grid, each labelled tab, push or sheet with its state count. The constraints block below is what gives the page its value - components only from the kit, zero raw hex, English inside the frame and Korean outside, buy in black and sell in red. It records not just what was drawn but what was not broken."
+      }
+    },
+    "02-wallet/001-owner-passkey": {
+      "title": {
+        "ko": "지갑 v1 - 사업주 Passkey",
+        "en": "Wallet v1 - the owner's passkey"
+      },
+      "desc": {
+        "ko": "사업주(Passkey + AA + 가스비 0)를 먼저 페르소나로 잡고 온보딩·잔고·받기·보내기 넉 장만 세운 1차다. 카드마다 상태 수(3 상태·2 상태)를 적어 「화면 넷」이 아니라 「상태 열둘」임을 드러낸다.",
+        "en": "A first pass that takes the store owner - passkey, account abstraction, zero gas - as the persona and stands up only four screens: onboarding, balance, receive, send. Each card notes its state count, so it reads as twelve states rather than four screens."
+      }
+    },
+    "02-wallet/002-user-v2": {
+      "title": {
+        "ko": "지갑 v2 - 일반 사용자와 스토리보드",
+        "en": "Wallet v2 - the ordinary user, storyboarded"
+      },
+      "desc": {
+        "ko": "페르소나를 일반 사용자로 바꾼 별개 갈래다. 화면을 낱장으로 늘어놓는 대신 AUTH·HOME·FEATURES·PROFILE 네 줄의 스토리보드로 1/45 축소해 붙였고, 커넥터가 없어 세로 점선으로 흐름을 대신했다. 원본 Figma 는 외부 레퍼런스지 우리 시스템 파일이 아니라고 밝혀 뒀다.",
+        "en": "A separate branch that swaps the persona for an ordinary user. Instead of loose screens it lays out a storyboard in four columns - auth, home, features, profile - at 1/45 scale, standing in for missing connectors with vertical dotted lines. It states plainly that the source Figma is an outside reference, not one of our system files."
+      }
+    },
+    "02-wallet/003-figma-parity": {
+      "title": {
+        "ko": "Figma 1:1 정합 데모",
+        "en": "Figma parity demo"
+      },
+      "desc": {
+        "ko": "홈·송금·수취인 추가·요청·QR 스캔·계좌·거래 상세·명세서를 구간마다 폰 한두 대와 스펙 메모로 이어 붙인 긴 판이다. 맨 아래에 「Upcoming sections」로 아직 안 그린 것(가입·카드 관리·알림·프로필)을 남겨, 끝난 데까지가 어디인지 판 안에서 드러난다.",
+        "en": "A long sheet running home, send, add payee, request, QR scan, accounts, transaction detail and statements, each section a phone or two with its spec notes. An Upcoming sections block at the foot lists what is not drawn yet, so how far the work got is visible inside the sheet itself."
+      }
+    },
+    "02-wallet/004-store-redeem": {
+      "title": {
+        "ko": "상점 지갑 - 토큰을 매장에서 쓴다",
+        "en": "Store wallet - spending the token in the shop"
+      },
+      "desc": {
+        "ko": "지갑 잔고에서 매장 선택, 금액 지정, QR 을 직원에게 보이기, 사용 완료까지 여섯 구간을 번호대로 잇는다. 300 BREW 는 통과하고 900 FITZ 는 빨갛게 「Exceeds balance」로 막히는 두 판을 나란히 둬서, 되는 경우만 그린 판이 아님을 보인다. 마지막은 Passkey 기기 관리다.",
+        "en": "Six numbered sections from wallet balance through picking a store, setting an amount, showing a QR to staff, and redemption. A passing 300 BREW sits beside a 900 FITZ blocked in red as over balance, so it is not a sheet that only draws the happy path. It ends on passkey device management."
+      }
+    },
+    "02-wallet/005-chrome-extension": {
+      "title": {
+        "ko": "크롬 확장 - 거절하는 판까지",
+        "en": "Chrome extension - including the refusals"
+      },
+      "desc": {
+        "ko": "잠김·팝업 홈·연결 요청·서명 요청·Passkey 대기·서명 실패·서명 완료·미지원 네트워크·연결된 사이트 아홉 구간이다. 아홉 중 셋이 거절되거나 실패하는 판이라, 확장 프로그램에서 정작 어려운 자리가 어디인지가 개수로 드러난다. 뒤에는 Passkey 와 SDK 를 견준 판단 기록을 붙였다.",
+        "en": "Nine sections: locked, popup home, connect request, sign request, passkey pending, signature failed, transaction signed, unsupported network, connected sites. Three of the nine are a refusal or a failure, so the count itself shows where an extension actually gets hard. A written comparison of passkey against an SDK is appended at the end."
+      }
+    },
+    "03-super-app/001-activity": {
+      "title": {
+        "ko": "활동 - 거래와 이체를 한 줄기로",
+        "en": "Activity - trades and transfers in one stream"
+      },
+      "desc": {
+        "ko": "매수·매도·입금·출금이 시간순 한 목록에 서고 전체·거래·이체 칩으로 가른다. 들어온 것은 초록, 나간 것은 빨강으로 부호만 갈랐다.",
+        "en": "Buys, sells, deposits and withdrawals in one chronological list, split by all, trades and transfers chips. Inflows are green and outflows red; nothing else distinguishes them."
+      }
+    },
+    "03-super-app/002-home": {
+      "title": {
+        "ko": "홈 - 잔고 카드와 추천 상점",
+        "en": "Home - balance card and featured shops"
+      },
+      "desc": {
+        "ko": "총 잔고 카드에 현금과 투자를 나눠 적고 보내기·받기·스캔·스왑 넷을 붙였다. 아래는 시즌 리더보드 배너와 추천 상점 카드가 가로로 흐른다.",
+        "en": "A total-balance card splits cash and investments and carries send, receive, scan and swap. Below, a season leaderboard banner and featured shop cards scroll sideways."
+      }
+    },
+    "03-super-app/003-launchpad": {
+      "title": {
+        "ko": "런치패드 - 상장 전 상점 셋",
+        "en": "Launchpad - three stores before listing"
+      },
+      "desc": {
+        "ko": "지금 열린 판매 셋을 사진·업종·도시·모금 진행 막대로 세운다. 「상장 전에 동네 상점을 후원한다」는 한 줄이 이 탭의 전제다.",
+        "en": "Three live sales as cards with photo, category, city and a raise progress bar. The one-line premise - back local shops before they list - heads the tab."
+      }
+    },
+    "03-super-app/004-launchpad-atelier-lumiere": {
+      "title": {
+        "ko": "런치패드 상세 - 모금과 토큰 조건",
+        "en": "Launchpad detail - the raise and the token terms"
+      },
+      "desc": {
+        "ko": "모금 카드 아래 토큰·가격·목표·총량·소프트캡·네트워크를 표로 세우고 「이 상점 후원하기」를 하단에 고정했다. 소프트캡 도달은 초록 한 줄로 알린다.",
+        "en": "Under the raise card a table lists token, price, target, supply, soft cap and network, with 'back this store' pinned at the bottom. Soft cap reached is a single green line."
+      }
+    },
+    "03-super-app/005-launchpad-velvet-note": {
+      "title": {
+        "ko": "런치패드 상세 - 같은 틀, 다른 상점",
+        "en": "Launchpad detail - same frame, another store"
+      },
+      "desc": {
+        "ko": "앞 판과 같은 얼개에 다른 상점을 넣은 캡처다. 사진과 수치만 바뀌고 표의 행과 버튼 자리가 그대로라, 상세가 템플릿으로 도는지 확인하는 용도다.",
+        "en": "The same layout with a different store. Only the photo and figures change while the table rows and button stay put - a check that the detail screen runs as a template."
+      }
+    },
+    "03-super-app/006-leaderboard": {
+      "title": {
+        "ko": "리더보드 - 등수별 보상 먼저",
+        "en": "Leaderboard - rewards by rank first"
+      },
+      "desc": {
+        "ko": "시즌 안내 아래 1위·2-3위·4-10위·11-50위 보상을 카드로 먼저 세우고, 그 아래 거래·참여 탭과 내 순위·거래량·상점 수를 둔다. 상위 트레이더 표에는 워시 트레이드 필터 배지가 붙었다.",
+        "en": "Season rewards for 1st, 2nd-3rd, 4th-10th and 11th-50th come first as cards, then trading and participation tabs with my rank, volume and store count. The top-traders table carries a wash-trade filter badge."
+      }
+    },
+    "03-super-app/007-markets": {
+      "title": {
+        "ko": "마켓 - 핫·신규와 카드 격자",
+        "en": "Market - hot, new, and a card grid"
+      },
+      "desc": {
+        "ko": "상단에 핫·신규 토큰 목록을 가로로 두고, 검색과 관심·인기·상승·신규 칩 아래 상점 카드가 격자로 선다. 카드마다 티커·상점명·변동률·사진·업종·도시를 넣었다.",
+        "en": "Hot and new token lists scroll across the top; under the search and the watchlist, popular, gainers and newest chips, store cards fill a grid with ticker, name, change, photo, category and city."
+      }
+    },
+    "03-super-app/008-menu": {
+      "title": {
+        "ko": "메뉴 - 계정 카드와 목록",
+        "en": "Menu - account card and a list"
+      },
+      "desc": {
+        "ko": "핸들과 주소, 플랫폼 토큰 잔고를 카드로 두고 포트폴리오·런치패드·리더보드·활동·패스키·설정을 세로로 세웠다. 로그아웃은 빨간 글씨로 맨 아래다.",
+        "en": "A card with handle, address and platform-token balance, then portfolio, launchpad, leaderboard, activity, passkey and settings as a list. Sign out sits last in red."
+      }
+    },
+    "03-super-app/009-money-accounts": {
+      "title": {
+        "ko": "계좌 - 현금과 가스를 따로",
+        "en": "Accounts - cash and gas kept apart"
+      },
+      "desc": {
+        "ko": "총 현금 아래 스테이블코인 한 줄, 그 아래 가스용 코인을 따로 묶었다. 스마트 계정이 가스를 직접 쓰지 않고 플랫폼이 대신 낸다는 설명을 한 문단으로 붙였다.",
+        "en": "Total cash, one stablecoin row, and the gas coin grouped separately underneath. A paragraph explains the smart account does not spend gas itself - the platform covers it."
+      }
+    },
+    "03-super-app/010-money-activity": {
+      "title": {
+        "ko": "머니 활동 - 한 건뿐인 목록",
+        "en": "Money activity - a one-item list"
+      },
+      "desc": {
+        "ko": "받은 스테이블코인 한 건만 있는 상태다. 보낸 주소를 줄여 적고 금액은 초록이다. 빈 상태 문구 없이 목록만 있어 첫 사용자 화면으로는 허전하다.",
+        "en": "A single received stablecoin entry. The sender address is truncated, the amount green. No empty-state copy, only the list, so as a first-user screen it feels bare."
+      }
+    },
+    "03-super-app/011-money-pay": {
+      "title": {
+        "ko": "결제 허브 - 스캔·보내기·받기",
+        "en": "Pay hub - scan, send, receive"
+      },
+      "desc": {
+        "ko": "QR 로 상점이나 사람에게 결제, 연락처에 보내기, 내 QR·결제 링크 보이기 셋만 세로로 세웠다. 결제 관련 동작을 한 자리로 모은 진입점이다.",
+        "en": "Three rows - scan to pay a store or person, send to a contact, show my QR or payment link. An entry point that gathers every payment action in one place."
+      }
+    },
+    "03-super-app/012-money-send": {
+      "title": {
+        "ko": "보내기 - 연락처 먼저, 금액은 키패드",
+        "en": "Send - contact first, amount on a keypad"
+      },
+      "desc": {
+        "ko": "상단에 최근 연락처를 원형으로 두고 받는 사람을 먼저 고른 뒤 금액을 키패드로 친다. 가용 잔고와 「가스 없음」을 금액 아래 한 줄로 적고 빠른 금액 칩을 키패드 위에 붙였다.",
+        "en": "Recent contacts as circles on top - pick the recipient first, then type the amount on a keypad. Available balance and 'gas-free' sit under the amount, quick-amount chips above the keys."
+      }
+    },
+    "03-super-app/013-money-transaction-t1": {
+      "title": {
+        "ko": "거래 상세 - 받은 돈 한 건",
+        "en": "Transaction detail - one incoming transfer"
+      },
+      "desc": {
+        "ko": "보낸 사람 아바타와 금액을 크게 두고 유형·상세·날짜·네트워크 수수료·상태 다섯 줄을 표로 적었다. 수수료 칸이 「무료(Paymaster)」인 것이 이 지갑의 특징이다.",
+        "en": "Sender avatar and amount large, then five rows - type, detail, date, network fee, status. The fee reading 'free (paymaster)' is what marks this wallet."
+      }
+    },
+    "03-super-app/014-onboarding": {
+      "title": {
+        "ko": "온보딩 1/3 - 동네를 거래한다",
+        "en": "Onboarding 1/3 - trade your neighborhood"
+      },
+      "desc": {
+        "ko": "상점 토큰 카드 하나와 「동네를 거래한다」 한 문장으로 첫 장을 채웠다. 점 셋과 다음·건너뛰기만 있고 로그인은 아직 묻지 않는다.",
+        "en": "One store-token card and one line - trade your neighborhood - fill the first page. Three dots, next and skip; login is not asked yet."
+      }
+    },
+    "03-super-app/015-portfolio": {
+      "title": {
+        "ko": "포트폴리오 - 총액과 기간 그래프",
+        "en": "Portfolio - total and a period chart"
+      },
+      "desc": {
+        "ko": "총 자산과 24시간·전체 변동을 위에, 입금·출금 버튼과 리더보드 배너를 그 아래 두었다. 기간 그래프 다음에 가용 현금·보유 상점 토큰 수·런치패드에 묶인 금액을 셋으로 나눴다.",
+        "en": "Total value with 24h and all-time change on top, deposit and withdraw buttons and the leaderboard banner under it. After the 24H/7D/30D chart, three tiles split available cash, store tokens held and money committed in launchpad."
+      }
+    },
+    "03-super-app/016-profile": {
+      "title": {
+        "ko": "프로필 - 요약 셋과 최근 활동",
+        "en": "Profile - three summaries and recent activity"
+      },
+      "desc": {
+        "ko": "아바타·이메일·홀더 배지 아래 포트폴리오·보유 토큰·24시간 변동 세 칸을 두고 지갑 주소 한 줄을 붙였다. 최근 활동 셋과 설정·리워드·계정·문서 목록이 이어진다.",
+        "en": "Under the avatar, email and holder badge sit three tiles - portfolio, store tokens, 24h change - and one wallet-address row. Three recent activities and a settings, reward, account, docs list follow."
+      }
+    },
+    "03-super-app/017-search": {
+      "title": {
+        "ko": "검색 - 비어 있을 때는 트렌딩",
+        "en": "Search - trending while empty"
+      },
+      "desc": {
+        "ko": "입력 전에는 트렌딩 여섯 개를 티커·상점명·업종·가격·변동률로 세운다. 빈 검색창이 빈 화면이 되지 않게 했다.",
+        "en": "Before typing, six trending tokens with ticker, store, category, price and change. An empty search box does not mean an empty screen."
+      }
+    },
+    "03-super-app/018-sign-connect-wallet": {
+      "title": {
+        "ko": "외부 지갑 연결 - 다섯 중 하나",
+        "en": "Connect an outside wallet - one of five"
+      },
+      "desc": {
+        "ko": "외부 지갑 다섯을 목록으로 두고 맨 아래에 「키를 보관하지 않는다」를 적었다. 패스키 스마트 계정과 별개로 외부 지갑을 붙이는 자리다.",
+        "en": "Five wallets - MetaMask, WalletConnect, Trust, Coinbase, Rabby - as a list, with 'never holds your keys' at the foot. This attaches an outside wallet, separate from the passkey smart account."
+      }
+    },
+    "03-super-app/019-trade-HODU": {
+      "title": {
+        "ko": "거래 - 상점 사진 위에 차트",
+        "en": "Trade - a chart under the store photo"
+      },
+      "desc": {
+        "ko": "상점 사진과 인증 배지, 현재가와 변동률, 차트·분할·호가·정보 탭, 봉 차트, 고가·저가·거래량 셋, 상점 소개가 세로로 선다. 매수는 초록, 매도는 빨강으로 하단에 고정했다.",
+        "en": "Store photo with a verified badge, price and change, chart/split/book/info tabs, candles, high/low/volume tiles and the store blurb stack vertically. Buy in green and sell in red are pinned at the bottom."
+      }
+    },
+    "03-super-app/020-trade-PASTOR": {
+      "title": {
+        "ko": "거래 - 같은 틀, 상승 종목",
+        "en": "Trade - same frame, a rising token"
+      },
+      "desc": {
+        "ko": "앞 판과 같은 거래 화면에 다른 상점을 넣은 캡처다. 두 자리 상승률과 더 큰 거래량에도 배치가 흔들리지 않는지 보는 용도다.",
+        "en": "The same trade screen with another store. A check that a double-digit gain and larger volume do not disturb the layout."
+      }
+    },
+    "03-super-app/021-trade-WAVE": {
+      "title": {
+        "ko": "거래 - 하락 종목은 빨강으로",
+        "en": "Trade - a falling token goes red"
+      },
+      "desc": {
+        "ko": "하락 중인 상점을 넣은 판이다. 현재가·변동률·시가고저종가 줄이 전부 빨강으로 바뀌고 나머지는 그대로다. 색 규칙이 화면 전체에 일관되게 걸리는지 보는 캡처다.",
+        "en": "A store in decline. Price, change and the OHLC row all turn red while everything else stays - a check that the colour rule holds across the whole screen."
+      }
+    },
+    "03-super-app/022-wallet": {
+      "title": {
+        "ko": "지갑 탭 - 현금 하나, 토큰은 수량만",
+        "en": "Wallet tab - one cash figure, tokens by amount"
+      },
+      "desc": {
+        "ko": "현금 잔고를 헤드라인으로 두고 보내기·받기·스캔·충전 넷을 붙였다. 계좌·투자 진입 둘 아래 토큰 목록은 수량만 적고, 평가액은 투자 화면에 있다고 부제로 밝혔다.",
+        "en": "Cash balance as the headline with send, receive, scan and top-up. Under the accounts and investments rows, the token list shows amounts only - the subtitle says market value lives in investments."
+      }
+    }
+  }
+}

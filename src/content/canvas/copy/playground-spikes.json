@@ -1,0 +1,400 @@
+{
+  "pages": {
+    "01-dex": {
+      "ko": "DEX",
+      "en": "DEX"
+    },
+    "02-site": {
+      "ko": "코퍼레이트 사이트",
+      "en": "Corporate site"
+    },
+    "03-partner": {
+      "ko": "파트너 아틀라스",
+      "en": "Partner atlas"
+    },
+    "04-3d": {
+      "ko": "3D",
+      "en": "3D"
+    },
+    "05-surface": {
+      "ko": "서피스 · 대비",
+      "en": "Surfaces and contrast"
+    }
+  },
+  "flow": [
+    [
+      "01-dex/002-dex-leaderboard-active-stores",
+      "01-dex/003-dex-leaderboard-my-level"
+    ],
+    [
+      "01-dex/003-dex-leaderboard-my-level",
+      "01-dex/004-dex-leaderboard-season"
+    ],
+    [
+      "01-dex/006-dex-restyle",
+      "01-dex/007-dex-restyle-shop"
+    ],
+    [
+      "01-dex/007-dex-restyle-shop",
+      "01-dex/008-dex-restyle-vending"
+    ],
+    [
+      "02-site/001-site",
+      "02-site/008-site-merchants"
+    ],
+    [
+      "02-site/001-site",
+      "02-site/007-site-investors"
+    ],
+    [
+      "02-site/001-site",
+      "02-site/009-site-partners"
+    ],
+    [
+      "03-partner/001-atlas",
+      "03-partner/006-partner-landing"
+    ],
+    [
+      "03-partner/004-partner-atlas-tabs",
+      "03-partner/003-partner-atlas-map-home"
+    ],
+    [
+      "03-partner/003-partner-atlas-map-home",
+      "03-partner/005-partner-atlas-workbench"
+    ],
+    [
+      "03-partner/005-partner-atlas-workbench",
+      "03-partner/002-partner-atlas-console"
+    ],
+    [
+      "01-dex/008-dex-restyle-vending",
+      "01-dex/010-dex-vending-sold"
+    ],
+    [
+      "01-dex/010-dex-vending-sold",
+      "01-dex/011-dex-vending-listed"
+    ]
+  ],
+  "frames": {
+    "01-dex/001-dex-identity": {
+      "title": {
+        "ko": "DEX 아이덴티티 - 랜딩 변형안 여덟",
+        "en": "DEX identity - eight landing variants"
+      },
+      "desc": {
+        "ko": "현재 판과 A~F, 라이브 후보까지 탭으로 오가며 랜딩 전체를 비교하는 스파이크. 각 안은 첫 화면이 무엇을 약속하는지, 지구본·상점 카드·시장 표의 순서가 다르다.",
+        "en": "A spike that tabs through the current landing, variants A to F and the live candidates. Each one changes what the hero promises and the order of globe, shop cards and market table."
+      }
+    },
+    "01-dex/002-dex-leaderboard-active-stores": {
+      "title": {
+        "ko": "리더보드 1 - 활동 상점",
+        "en": "Leaderboard 1 - active stores"
+      },
+      "desc": {
+        "ko": "24시간 거래량으로 상점을 줄 세운 새 화면. 가격·등락·시총을 일부러 뺐고, 상단 노트에 왜 뺐는지와 남은 의존을 적어 두었다.",
+        "en": "A new screen ranking stores by 24-hour volume. Price, change and market cap are left out on purpose, and the note on top says why and what is still pending."
+      }
+    },
+    "01-dex/003-dex-leaderboard-my-level": {
+      "title": {
+        "ko": "리더보드 2 - 내 등급",
+        "en": "Leaderboard 2 - my level"
+      },
+      "desc": {
+        "ko": "거래량 기반 수수료 등급의 첫 제안. 등급 구간이 미정이라 TBD 를 그대로 두고, 앞 판과 달리 순위표가 아니라 내 상태 카드 하나로 시작한다.",
+        "en": "The first proposal for volume-based fee tiers. Bands are undecided so TBD stays visible, and unlike screen 1 this opens with a single status card, not a ranking."
+      }
+    },
+    "01-dex/004-dex-leaderboard-season": {
+      "title": {
+        "ko": "리더보드 3 - 시즌 순위",
+        "en": "Leaderboard 3 - season ranking"
+      },
+      "desc": {
+        "ko": "셋 중 유일하게 피처 플래그 뒤에 둔 화면. 메이커·테이커 가중치와 상점 수 배수로 점수를 내고, 규제 판단 때문에 따로 끌 수 있게 했다.",
+        "en": "The only one of the three behind a feature flag. Score comes from maker and taker weights and a store multiplier, and it can be switched off alone for regulatory reasons."
+      }
+    },
+    "01-dex/005-dex-market": {
+      "title": {
+        "ko": "마켓 카드 4안, 현재 판과 나란히",
+        "en": "Four market-card treatments beside the current one"
+      },
+      "desc": {
+        "ko": "현재 판을 대조군으로 두고 액자 사진·티커 행·시세 카드·벤토를 탭으로 바꿔 본다. 사진이 카드에서 얼마나 큰 자리를 차지해야 하는지가 질문이었다.",
+        "en": "The current screen is the control; framed photo, ticker rows, quote card and bento swap in by tab. The question was how much room the photo deserves in a card."
+      }
+    },
+    "01-dex/006-dex-restyle": {
+      "title": {
+        "ko": "DEX 리스타일 - 홈",
+        "en": "DEX restyle - home"
+      },
+      "desc": {
+        "ko": "왼쪽 고정 사이드바와 큰 헤드라인, 지구본으로 여는 다크 홈. 앞의 아이덴티티 스파이크에서 고른 방향을 앱 셸 위에 실제 크기로 얹어 본 판이다.",
+        "en": "A dark home with a fixed left sidebar, big headline and globe. The direction picked in the identity spike, laid onto the real app shell at full size."
+      }
+    },
+    "01-dex/007-dex-restyle-shop": {
+      "title": {
+        "ko": "DEX 리스타일 - 상점 페이지",
+        "en": "DEX restyle - shop page"
+      },
+      "desc": {
+        "ko": "커버 사진과 원형 로고, 오른쪽에 토큰 카드가 붙는 상점 상세. 토큰을 쥐면 무엇을 받는지를 불릿으로 먼저 쓰고 거래 버튼은 그 옆에 뒀다.",
+        "en": "Shop detail with a cover photo, round logo and a token card pinned right. What holding the token means comes first as bullets, with the trade button beside it."
+      }
+    },
+    "01-dex/008-dex-restyle-vending": {
+      "title": {
+        "ko": "DEX 리스타일 - 토큰 세일 페이지",
+        "en": "DEX restyle - token sale page"
+      },
+      "desc": {
+        "ko": "상점 페이지 자리에 세일 카드가 들어온 판. 시작가에서 상장가까지 직선으로 오르는 가격 곡선을 그래프로 보여주고, 마감·환불이 없다는 규칙을 그 아래 적었다.",
+        "en": "The shop page with a sale card in its slot. A straight price line from start to listing is drawn as a chart, with the no-deadline, no-refund rules written beneath."
+      }
+    },
+    "01-dex/009-dex-vending-flow": {
+      "title": {
+        "ko": "자판기 세일 흐름도",
+        "en": "Vending-machine sale flow"
+      },
+      "desc": {
+        "ko": "찾기·구매·상장 후의 세 줄로 구매자 화면을 잇는 흐름도. 결정된 것과 미정인 게이트를 색으로 갈라 어디가 아직 열려 있는지 보이게 했다.",
+        "en": "A flow chart tying buyer screens across find, buy and after listing. Decided screens and undecided gates get different colours so the open questions stand out."
+      }
+    },
+    "02-site/001-site": {
+      "title": {
+        "ko": "코퍼레이트 사이트 - 첫 안",
+        "en": "Corporate site - first pass"
+      },
+      "desc": {
+        "ko": "다크 배경에 큰 제목과 앱 목업을 세운 랜딩. 왜·어떻게·신뢰·FAQ 를 한 페이지에 순서대로 두고, 상점·투자자·파트너로 갈라지는 링크를 히어로에 넣었다.",
+        "en": "A dark landing with a big headline and an app mockup. Why, how, trust and FAQ run down one page, and the hero links split off to merchants, investors and partners."
+      }
+    },
+    "02-site/002-site-ga": {
+      "title": {
+        "ko": "GA 사이트 - 편집형 분할 히어로",
+        "en": "GA site - editorial split hero"
+      },
+      "desc": {
+        "ko": "왼쪽 큰 세리프 없는 헤드라인, 오른쪽 도시 사진과 콘솔 카드로 화면을 반으로 가른 안. 아래로 상점 티커가 흐른다. 스크롤 아래 섹션은 캡처에서 비어 보인다.",
+        "en": "A half-and-half hero: big headline left, city photo and console card right, with a store ticker running below. Sections further down came out blank in this capture."
+      }
+    },
+    "02-site/003-site-ga-brand": {
+      "title": {
+        "ko": "GA 사이트 - 브랜드 안",
+        "en": "GA site - brand direction"
+      },
+      "desc": {
+        "ko": "앞 안과 같은 분할 히어로를 브랜드 톤으로 다시 잡은 판. 상단은 앞 판과 거의 같고 차이는 스크롤 아래 섹션 구성에 있는데, 이 캡처에서는 그 부분이 렌더되지 않았다.",
+        "en": "The same split hero reworked for brand tone. The top matches the previous variant; the difference lives in the lower sections, which did not render in this capture."
+      }
+    },
+    "02-site/004-site-ga-console": {
+      "title": {
+        "ko": "GA 사이트 - 콘솔 강조 안",
+        "en": "GA site - console-led direction"
+      },
+      "desc": {
+        "ko": "가운데 정렬 헤드라인 아래 브라우저 프레임 안의 마켓 화면을 크게 넣은 안. 제품을 보여주는 것이 문장보다 먼저라는 판단이다.",
+        "en": "A centred headline with a large market screen inside a browser frame. The judgment here is that showing the product beats describing it."
+      }
+    },
+    "02-site/005-site-ga-dark": {
+      "title": {
+        "ko": "GA 사이트 - 다크 안",
+        "en": "GA site - dark direction"
+      },
+      "desc": {
+        "ko": "검은 바탕에 파란 발광 로고를 깔고 오른쪽에 번호 매긴 메뉴 격자를 세운 안. 다른 안과 달리 화면 목업 없이 타이포와 빛으로만 첫 화면을 만든다.",
+        "en": "Black ground, a glowing blue logo and a numbered menu grid on the right. Unlike the others, the hero is built from type and light alone, with no screen mockup."
+      }
+    },
+    "02-site/006-site-ga-product": {
+      "title": {
+        "ko": "GA 사이트 - 제품 안",
+        "en": "GA site - product direction"
+      },
+      "desc": {
+        "ko": "콘솔 안과 같은 구조에 헤드라인을 두 줄로 나누고 회색으로 강약을 준 판. 아래 섹션 제목만 남고 본문 카드가 비어 있어 캡처가 불완전하다.",
+        "en": "Same skeleton as the console variant, with the headline split into two weights. Only section titles survived below; the body cards are empty in this capture."
+      }
+    },
+    "02-site/007-site-investors": {
+      "title": {
+        "ko": "투자자 페이지",
+        "en": "Investors page"
+      },
+      "desc": {
+        "ko": "다크 톤에 4단계 순서와 마켓 미리보기로 이어지는 하위 페이지. 상점·파트너 페이지와 같은 틀을 쓰되 문장만 투자자 쪽으로 바꿨다.",
+        "en": "A dark sub-page with a four-step sequence and a market preview. Same frame as the merchants and partners pages, with only the copy turned toward investors."
+      }
+    },
+    "02-site/008-site-merchants": {
+      "title": {
+        "ko": "상점 페이지",
+        "en": "Merchants page"
+      },
+      "desc": {
+        "ko": "라이트 톤으로 바뀐 상점용 하위 페이지. 가입에서 상장까지 4단계, 콘솔 미리보기, 어떤 가게가 맞는지의 격자를 순서대로 뒀다.",
+        "en": "The merchants sub-page, switched to a light tone. Four steps from sign-up to listing, a console preview, then a grid of which stores fit."
+      }
+    },
+    "02-site/009-site-partners": {
+      "title": {
+        "ko": "파트너 페이지",
+        "en": "Partners page"
+      },
+      "desc": {
+        "ko": "파트너 모집용 하위 페이지. 5단계 절차와 파이프라인 미리보기, 보상 흐름 카드가 한 줄로 이어진다. 상점 페이지와 같은 라이트 톤이다.",
+        "en": "The partner recruitment sub-page. A five-step sequence, a pipeline preview and reward-flow cards run in one line. Light tone, matching the merchants page."
+      }
+    },
+    "02-site/010-site-own-index": {
+      "title": {
+        "ko": "정적 빌드본 - 사진 히어로",
+        "en": "Static build - photo hero"
+      },
+      "desc": {
+        "ko": "항공 사진 위에 두 줄 헤드라인과 시장 수치를 얹은 별도 빌드본. 로고 이미지가 깨져 대체 텍스트가 보이고, 스크롤 아래는 대부분 빈 섹션이다.",
+        "en": "A separate static build with a two-line headline and market figures over an aerial photo. The logo image is broken, showing its alt text, and most sections below are empty."
+      }
+    },
+    "03-partner/001-atlas": {
+      "title": {
+        "ko": "파트너 아틀라스 랜딩",
+        "en": "Partner atlas landing"
+      },
+      "desc": {
+        "ko": "검은 바탕에 열린 지역 수와 나라·도시 수를 크게 쓴 모집 페이지. 여섯 가지 일을 번호 순서대로 두어 파트너가 무엇을 하는지부터 읽게 했다.",
+        "en": "A recruitment page on black with the count of open areas, countries and cities set large. Six jobs run in numbered order so what a partner does comes first."
+      }
+    },
+    "03-partner/002-partner-atlas-console": {
+      "title": {
+        "ko": "아틀라스 D안 - 콘솔 셸",
+        "en": "Atlas variant D - console shell"
+      },
+      "desc": {
+        "ko": "콘솔의 아이콘 레일 안에 지구본과 오른쪽 파이프라인 패널을 넣은 안. 파트너 화면을 독립 앱이 아니라 콘솔의 한 탭으로 볼 때의 모습이다.",
+        "en": "The globe and a right-hand pipeline panel inside the console's icon rail. What the partner screen looks like as one console tab rather than its own app."
+      }
+    },
+    "03-partner/003-partner-atlas-map-home": {
+      "title": {
+        "ko": "아틀라스 B안 - 지도 홈",
+        "en": "Atlas variant B - map home"
+      },
+      "desc": {
+        "ko": "왼쪽에 파이프라인·카테고리·판매 웨이브 필터를 세로로 쌓고 지도를 가운데 둔 안. 오른쪽은 아무것도 고르지 않은 빈 상태로 시작한다.",
+        "en": "Pipeline, category and sales-wave filters stacked on the left, map in the middle. The right column opens in its empty, nothing-picked state."
+      }
+    },
+    "03-partner/004-partner-atlas-tabs": {
+      "title": {
+        "ko": "아틀라스 A안 - 탭",
+        "en": "Atlas variant A - tabs"
+      },
+      "desc": {
+        "ko": "지도를 아틀라스 탭 하나로 떼어 놓은 안. 상단 노트가 이 안의 약점을 적는다 - 상점을 골라도 스카우트로 가는 길이 없어 다시 손으로 입력해야 한다.",
+        "en": "The map as its own Atlas tab. The note on top records the weakness: picking a store leads nowhere into Scout, so the shop still has to be typed in by hand."
+      }
+    },
+    "03-partner/005-partner-atlas-workbench": {
+      "title": {
+        "ko": "아틀라스 C안 - 워크벤치",
+        "en": "Atlas variant C - workbench"
+      },
+      "desc": {
+        "ko": "필터를 상단 한 줄로 올리고 지도와 내 작업 목록을 나란히 둔 안. 목록의 행을 고르면 지도가 움직이고 지도의 점을 고르면 목록에 추가된다.",
+        "en": "Filters move to one row on top, with map and my-work list side by side. Picking a row moves the map; picking a store dot adds it to the list."
+      }
+    },
+    "03-partner/006-partner-landing": {
+      "title": {
+        "ko": "파트너 랜딩 - 콘솔 판",
+        "en": "Partner landing - console edition"
+      },
+      "desc": {
+        "ko": "아틀라스 랜딩의 문장을 콘솔 셸 안에서 가운데 정렬로 다시 잡은 판. 보상 조건 카드가 히어로 바로 아래로 올라왔고, 읽는 법 주석을 카드 안에 넣었다.",
+        "en": "The atlas landing's copy re-set centred inside the console shell. The payout card moves up directly under the hero, with a how-to-read note inside it."
+      }
+    },
+    "04-3d/001-gen-crystal": {
+      "title": {
+        "ko": "프로시저럴 크리스탈 뷰어",
+        "en": "Procedural crystal viewer"
+      },
+      "desc": {
+        "ko": "Blender 로 생성한 결정 클러스터를 model-viewer 로 띄우는 스파이크. 회전·노출·기울기 슬라이더가 붙어 있고 캡처에서는 모델 대신 파란 발광만 남았다.",
+        "en": "A spike loading a Blender-generated crystal cluster in model-viewer, with rotation, exposure and tilt sliders. In this capture only the blue glow rendered, not the model."
+      }
+    },
+    "04-3d/002-local-block": {
+      "title": {
+        "ko": "동네 블록 3D",
+        "en": "Local block in 3D"
+      },
+      "desc": {
+        "ko": "OSM 건물 데이터로 만든 동네 한 블록 위에 상점 핀을 세운 스파이크. 3D·2.5D·줌 시퀀스 세 렌더 방식을 상단 토글로 바꿔 비교한다.",
+        "en": "One neighbourhood block built from OSM buildings with shop pins on top. Three render modes, 3D, 2.5D and a zoom sequence, swap with the toggle up top."
+      }
+    },
+    "04-3d/003-logo-3d": {
+      "title": {
+        "ko": "3D 유리 로고 뷰어",
+        "en": "3D glass logo viewer"
+      },
+      "desc": {
+        "ko": "브랜드 아이콘을 유리 재질 3D 로 띄우고 일곱 가지 재질 프리셋을 버튼으로 바꿔 본다. 회전·노출·기울기 슬라이더는 크리스탈 뷰어와 같은 패널이다.",
+        "en": "The brand icon as glass in 3D, with seven material presets on buttons. The rotation, exposure and tilt sliders share the same panel as the crystal viewer."
+      }
+    },
+    "05-surface/002-dark-surface": {
+      "title": {
+        "ko": "다크 표면 비교 - 좌우 나란히",
+        "en": "Dark surface comparison, side by side"
+      },
+      "desc": {
+        "ko": "같은 거래 화면을 이전 표면값과 코드 그대로로 좌우에 놓고 본다. 카드 표면·테두리·흐린 글자 값이 어떻게 달라 보이는지를 실물 크기로 확인하는 자리다.",
+        "en": "The same trade screen with the earlier surface values on the left and the code as-is on the right. A place to see at full size how card surface, border and muted text differ."
+      }
+    },
+    "05-surface/003-light-surface": {
+      "title": {
+        "ko": "라이트 표면 비교 - 선 한 단 낮춤",
+        "en": "Light surface comparison, one step softer lines"
+      },
+      "desc": {
+        "ko": "마켓 화면을 코드 그대로와 선을 한 단 낮춘 D안으로 나란히 둔다. 상단 한 줄에 판과 바탕의 대비 수치를 적어 눈으로 본 차이를 숫자로도 남겼다.",
+        "en": "The market screen as coded beside variant D with lines one step softer. The top line records the card-to-ground contrast ratio, so the visible difference also has a number."
+      }
+    },
+    "01-dex/010-dex-vending-sold": {
+      "title": {
+        "ko": "토큰 세일 - 판매 중",
+        "en": "Token sale - on sale"
+      },
+      "desc": {
+        "ko": "같은 세일 페이지에서 물량이 팔려 나가는 중인 상태다. 곡선 위 현재가와 판매 비율, 모인 금액, 최근 구매 내역이 오른쪽 레일과 함께 움직인다.",
+        "en": "The same sale page while supply is selling. The current price on the curve, the share sold, the amount raised and recent purchases move together with the right rail."
+      }
+    },
+    "01-dex/011-dex-vending-listed": {
+      "title": {
+        "ko": "토큰 세일 - 판매 완료와 상장",
+        "en": "Token sale - sold out and listed"
+      },
+      "desc": {
+        "ko": "물량이 다 팔리면 곡선이 상장가에서 멈추고, 페이지는 거래로 넘어가는 안내로 바뀐다. 세일 카드 자리에 상장 뒤 거래 버튼이 들어선다.",
+        "en": "Once supply sells out the curve stops at the listing price and the page turns into a pointer to trading. The sale card's slot becomes a button to trade after listing."
+      }
+    }
+  }
+}

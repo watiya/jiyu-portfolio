@@ -1,0 +1,345 @@
+{
+  "pages": {
+    "01-screens": { "ko": "화면", "en": "Screens" },
+    "02-pages": { "ko": "추린 열 장", "en": "Selected ten" }
+  },
+  "flow": [
+    ["01-screens/017-pop2", "01-screens/019-pop_detail"],
+    ["01-screens/024-layout", "01-screens/025-layout"],
+    ["01-screens/030-deatails", "01-screens/031-deatails"],
+    ["01-screens/033-pop_discover", "01-screens/034-pop_detail2"],
+    ["01-screens/035-verify", "01-screens/036-connect-wallet"]
+  ],
+  "frames": {
+    "01-screens/001-12": {
+      "title": { "ko": "덱 12쪽 - 라이트 랜딩 전문", "en": "Deck p.12 - the light landing in full" },
+      "desc": {
+        "ko": "히어로 아래로 체인 로고 줄·「What is Naoda Network?」·팀 여덟 명·메일링 가입까지 이어지는 한 판. 팀 여덟 칸은 「Bj Lee / CEO」와 「Changmin Lee / Text」 두 벌을 되풀이한 자리표시고, 왼쪽에는 참고로 붙여 둔 링크(ethereum.org·avax.network·figma.com/prototyping 등)가 지워지지 않고 남았다.",
+        "en": "Top to bottom - hero, chain logos, What is Naoda Network, eight team cards, mailing-list block. The eight cards are two placeholders repeated, and the reference links pinned beside the frame (ethereum.org, avax.network, figma.com/prototyping) were never cleared."
+      }
+    },
+    "01-screens/002-11": {
+      "title": { "ko": "덱 11쪽 - 다크 랜딩, 메뉴 펼침", "en": "Deck p.11 - dark landing, mega menu open" },
+      "desc": {
+        "ko": "같은 랜딩의 다크 판. 상단 메뉴가 Dex·NFTs·Drops(NEW)·ODA Scan·Developers 로 펼쳐져 있고 실적 세 칸(1.5 million user·27 million trades·$243 million staked)과 ODA 스왑 구간의 토큰 수치가 붙는다. 그 수치는 소각량(399,651,962)이 총발행량(278,041,931)보다 많다.",
+        "en": "The dark twin, with the mega menu open - Dex, NFTs, Drops NEW, ODA Scan, Developers - three headline stats and a token table under the ODA-swap section. That table burns more tokens (399,651,962) than the total supply it states (278,041,931)."
+      }
+    },
+    "01-screens/003-10": {
+      "title": { "ko": "덱 10쪽 - 다른 세대의 라이트 랜딩", "en": "Deck p.10 - a different-generation light landing" },
+      "desc": {
+        "ko": "「Paving the way to the open internet of the future.」로 여는 파란 아이소메트릭 판. NAODA ECOSYSTEM·Always On, All Around the World·A Decentralized Economy·DAO-Governed and DAO-Secured 로 구간이 갈리는데, DAO 문단에는 가져온 원문의 「Ankr coverage staking contracts」가 그대로 남아 있다.",
+        "en": "A blue isometric take opening on Paving the way to the open internet of the future. Its DAO-Governed section still names Ankr coverage staking contracts - the source copy was lifted and never rewritten."
+      }
+    },
+    "01-screens/004-9": {
+      "title": { "ko": "덱 9쪽 - 라이트 히어로, 플랫 일러스트", "en": "Deck p.9 - light hero, flat illustration" },
+      "desc": {
+        "ko": "같은 헤드라인을 플랫 일러스트로 받은 히어로 한 장. 버튼은 Learn more 와 Show More 둘이다.",
+        "en": "The hero on its own, carried by a flat illustration, with Learn more and Show More beneath it."
+      }
+    },
+    "01-screens/005-8": {
+      "title": { "ko": "덱 8쪽 - 다크 히어로, 코인 키비주얼", "en": "Deck p.8 - dark hero, coin key visual" },
+      "desc": {
+        "ko": "네온 코인 셋이 궤도 위에 뜬 다크 히어로. 아래로 ethereum·XRP·Klaytn·SOLANA·AVALANCHE·Polkadot 로고 줄이 붙는데 버튼 이름은 아직 「Button」이다.",
+        "en": "Three neon coins over an orbit, with a row of ethereum, XRP, Klaytn, SOLANA, AVALANCHE and Polkadot beneath - and buttons still labelled Button."
+      }
+    },
+    "01-screens/006-7": {
+      "title": { "ko": "덱 7쪽 - NAODA ECOSYSTEM", "en": "Deck p.7 - NAODA ECOSYSTEM" },
+      "desc": {
+        "ko": "N·A·O·D·A 다섯 글자를 아이소메트릭 블록으로 쌓은 라이트 히어로. 「Create, explore and trade in the first-ever virtual world owned by its users」 한 줄을 붙였다.",
+        "en": "A light hero stacking N, A, O, D, A as isometric blocks under one line - Create, explore and trade in the first-ever virtual world owned by its users."
+      }
+    },
+    "01-screens/007-6": {
+      "title": { "ko": "덱 6쪽 - 구간 표지 「01 Key Visual」", "en": "Deck p.6 - section divider, 01 Key Visual" },
+      "desc": {
+        "ko": "검은 바탕에 번호와 제목만 놓은 구간 표지. 번호가 「01」인데 앞선 로고 표지(012)도 「01」이라 둘이 겹친다.",
+        "en": "A black divider carrying only a number and a title. It is numbered 01 - the number the logo divider at 012 already took."
+      }
+    },
+    "01-screens/008-5": {
+      "title": { "ko": "덱 5쪽 - 로고 시안: 워드마크", "en": "Deck p.5 - logo concept: wordmark" },
+      "desc": {
+        "ko": "NAODA 워드마크를 그라디언트로 앉힌 판. 가운데 O 자리에 심볼을 끼워 넣어 글자와 마크를 한 몸으로 만든다.",
+        "en": "The NAODA wordmark in gradient, with the symbol slotted into the O so mark and letters read as one."
+      }
+    },
+    "01-screens/009-4": {
+      "title": { "ko": "덱 4쪽 - 로고 시안: 심볼과 코인", "en": "Deck p.4 - logo concept: symbol on coins" },
+      "desc": {
+        "ko": "N 모노그램을 원 안에 가둔 심볼과, 같은 마크를 새긴 3D 코인 렌더를 나란히 놓았다.",
+        "en": "The N monogram locked inside a circle, set next to 3D coin renders stamped with the same mark."
+      }
+    },
+    "01-screens/010-3": {
+      "title": { "ko": "덱 3쪽 - 로고 시안: 앱 아이콘", "en": "Deck p.3 - logo concept: app icon" },
+      "desc": {
+        "ko": "보라·파랑 그라디언트 앱 아이콘과 흰 스퀘어클 목업을 함께 세운 판. 오른쪽 위에 워드마크 두 벌을 겹쳐 굵기를 견준다.",
+        "en": "A purple-to-blue app icon shown with a white squircle mockup, and two wordmark cuts stacked at the top right to compare weights."
+      }
+    },
+    "01-screens/011-2": {
+      "title": { "ko": "덱 2쪽 - 로고 스케치 모음", "en": "Deck p.2 - logo sketches" },
+      "desc": {
+        "ko": "마크 스물몇 개를 한 판에 늘어놓은 탐색 시트. 육각형·물방울·N 변형이 섞여 있고 몇몇은 「TOKEN ECONOMY NAODA」와 짝지어 놓았다.",
+        "en": "Two dozen marks on one sheet - hexagons, droplets, N variants - a few of them paired with the line TOKEN ECONOMY NAODA."
+      }
+    },
+    "01-screens/012-1": {
+      "title": { "ko": "덱 1쪽 - 구간 표지 「01 LOGO」", "en": "Deck p.1 - section divider, 01 LOGO" },
+      "desc": {
+        "ko": "덱의 첫 구간 표지. 여기서 로고 작업이 시작하고 키비주얼은 007 에서 갈린다.",
+        "en": "The deck's first divider: logo work starts here, key visual branches off at 007."
+      }
+    },
+    "01-screens/013-cover": {
+      "title": { "ko": "덱 표지 - NAODA Design Concept", "en": "Deck cover - NAODA Design Concept" },
+      "desc": {
+        "ko": "검은 표지에 제목과 오른쪽 위 심볼만 놓았다. 파일 번호 001~013 은 덱 차례와 거꾸로다 - 013 이 표지고 001 이 마지막 12쪽이다. 아래 저작권 줄은 「CREARED BY © 2022. NAODA」로 CREATED 의 오타다.",
+        "en": "A black cover with the title and the mark alone. File numbers 001-013 run backwards against the deck: 013 is the cover and 001 is the last page. The credit line reads CREARED BY © 2022. NAODA - a typo for CREATED."
+      }
+    },
+    "01-screens/014-pop_intro": {
+      "title": { "ko": "SOULS·POP 소개 페이지", "en": "SOULS·POP intro page" },
+      "desc": {
+        "ko": "「PARTICIPATE IS THE ONLY WAY TO EARN POP!」 히어로에 HELLO POP! 카드 석 장을 세우고 WHAT IS POP? 과 POP 구간으로 이어진다. 아래 카드 셋(WHAT IS SOULS·WHAT IS SBT·WHAT IS POP)은 본문이 셋 다 같은 SOULS 설명이다.",
+        "en": "Opens on PARTICIPATE IS THE ONLY WAY TO EARN POP! with three HELLO POP! cards, then What is POP and a POP section. The three cards at the foot - Souls, SBT, POP - all carry the same Souls copy."
+      }
+    },
+    "01-screens/015-10": {
+      "title": { "ko": "라이트 홈 - 오렌지 키비주얼", "en": "Light home - orange key visual" },
+      "desc": {
+        "ko": "같은 헤드라인을 오렌지 코인 일러스트로 받은 또 다른 홈. Home·About·Games·Souls/POP·Docs 내비와 붉은 주버튼이 앞의 파란 판과 다른 계열이다.",
+        "en": "The same headline again, this time on an orange coin illustration, with a Home / About / Games / Souls-POP / Docs nav and a red primary button instead of the blue set."
+      }
+    },
+    "01-screens/016-about": {
+      "title": { "ko": "About - 소개와 핵심 기능", "en": "About - introduction and key features" },
+      "desc": {
+        "ko": "밝은 히어로에서 어두운 소개 구간, 다시 밝은 Key features 로 명암이 세 번 뒤집히는 페이지. 소개 제목은 「Intoduction」 오타고 Key features 카드 셋은 본문이 셋 다 같은 문장이다.",
+        "en": "Flips light, dark, light down the page - hero, introduction, key features. The heading reads Intoduction, and all three feature cards repeat one sentence."
+      }
+    },
+    "01-screens/017-pop2": {
+      "title": { "ko": "POP 프로필과 컬렉션 - 카드형", "en": "POP profile and collection - card treatment" },
+      "desc": {
+        "ko": "커버·아바타·지갑 주소·소개글에 REWARD POINTS 패널을 붙인 프로필. 아래 컬렉션은 같은 목록을 카드·원형 배지·기울인 3D 카드 세 벌로 한 화면에서 나란히 시험한다.",
+        "en": "Cover, avatar, wallet address and bio with a REWARD POINTS panel beside them. Below, the same collection is tried three ways at once - flat cards, circular badges and tilted 3D cards."
+      }
+    },
+    "01-screens/018-home": {
+      "title": { "ko": "SOULS·POP 홈 - 다크", "en": "SOULS·POP home - dark" },
+      "desc": {
+        "ko": "「CREATE YOUR LEGACY / Collect POP and make your story」에 AWAKE YOUR SOUL 버튼을 두었다. 오른쪽 일러스트 카드가 01-03 캐러셀이고 아래에 쿠키 배너가 떠 있다.",
+        "en": "CREATE YOUR LEGACY over Collect POP and make your story, with an AWAKE YOUR SOUL button, a 01-03 illustration carousel and a cookie banner."
+      }
+    },
+    "01-screens/019-pop_detail": {
+      "title": { "ko": "POP 상세 - 미션 진행", "en": "POP detail - mission progress" },
+      "desc": {
+        "ko": "컬렉션 위에 뜬 상세 모달. NAODA LOVER 의 미션 셋(프로필 만들기 완료·지갑 연결·소개 영상)이 1/3 이고, 자격 확인 시각은 「Jan 143, 2023」로 있을 수 없는 날짜다.",
+        "en": "A detail modal over the collection. NAODA LOVER's three missions stand at 1/3, and the last eligibility check is stamped Jan 143, 2023 - a date that cannot exist."
+      }
+    },
+    "01-screens/020-home_l": {
+      "title": { "ko": "SOULS·POP 홈 - 라이트", "en": "SOULS·POP home - light" },
+      "desc": {
+        "ko": "일러스트는 018 과 같은데 문안이 통째로 다르다 - 「BUILD A BETTER GAMING COMMUNITY TOGETHER / Play-to-Earn / READ MORE」. 명암만 뒤집은 판이 아니다.",
+        "en": "Same illustration as 018, entirely different copy - BUILD A BETTER GAMING COMMUNITY TOGETHER, Play-to-Earn, READ MORE. Not a light repaint but another pitch."
+      }
+    },
+    "01-screens/021-pop2": {
+      "title": { "ko": "POP 프로필과 컬렉션 - 배지형, 2022", "en": "POP profile and collection - badge treatment, 2022" },
+      "desc": {
+        "ko": "같은 프로필의 앞선 판. 컬렉션이 등급 테두리를 두른 원형 배지뿐이고 Tutorial·Title 로 묶이며 필터 칩은 아직 「Title·Button·Button」 자리표시다. 푸터가 © Flask 2022 로 017(2023)보다 이르다.",
+        "en": "An earlier take on the same profile: the collection is circular badges ringed by rarity, grouped under Tutorial and Title, and the filter chips still read Title, Button, Button. Its footer says © Flask 2022 against 017's 2023."
+      }
+    },
+    "01-screens/022-layout": {
+      "title": { "ko": "마켓 히어로 - 두 카드 나란히", "en": "Market hero - two cards side by side" },
+      "desc": {
+        "ko": "Project Alike 와 Project Alien 을 카드 두 장으로 세운 배치안. 이미지는 회색 자리만 잡아 두었고 Market 드롭다운을 연 채로 뒀다.",
+        "en": "A layout study putting Project Alike and Project Alien in two cards. The art is still grey blocks, with the Market dropdown left open."
+      }
+    },
+    "01-screens/023-layout": {
+      "title": { "ko": "마켓 히어로 - 한 장, 왼쪽 제목", "en": "Market hero - one card, title at left" },
+      "desc": {
+        "ko": "같은 자리의 다른 안. 제목을 왼쪽으로 크게 빼고 오른쪽에 이미지 한 장만 둔 뒤 01-02 캐러셀을 붙였다.",
+        "en": "The other option for the same slot: the title pulled large to the left, one image at the right, and a 01-02 carousel below."
+      }
+    },
+    "01-screens/024-layout": {
+      "title": { "ko": "Alike 컬렉션 - 4열", "en": "Alike collection - four across" },
+      "desc": {
+        "ko": "마켓의 컬렉션 페이지. 통계 여덟 칸(Floor 1,625·Listed 178·Items 12.7K·Owners 4K와 30일 차트)을 머리에 두고 아이템을 4열로 흘린다. 소개글은 콜드플레이 「Fix You」 가사, 아이템은 전부 같은 이름에 컵헤드 그림이라 내용이 통째로 자리표시다.",
+        "en": "The marketplace collection page: eight stat cells (floor 1,625, listed 178, items 12.7K, owners 4K and 30-day charts) above a four-across grid. The blurb is Coldplay's Fix You, every item carries the same title, and the art is Cuphead - placeholder all the way down."
+      }
+    },
+    "01-screens/025-layout": {
+      "title": { "ko": "Alike 컬렉션 - 6열 조밀", "en": "Alike collection - six across, compact" },
+      "desc": {
+        "ko": "같은 페이지의 조밀 보기. 오른쪽 위 격자 토글로 6열까지 좁히면 이름이 「We are Bulletproof : the Ete…」로 잘린다.",
+        "en": "The dense view of the same page: the grid toggle takes it to six across and the titles clip to We are Bulletproof : the Ete…"
+      }
+    },
+    "01-screens/026-layout": {
+      "title": { "ko": "Alike 컬렉션 - 필터 펼침, 4열", "en": "Alike collection - filter open, four across" },
+      "desc": {
+        "ko": "왼쪽 필터를 열어 Status(Buy Now 체크)·Price·Quantity·Currency 를 세우고 격자를 4열로 좁힌 상태. 필터의 마지막 항목은 「Currnecy」 오타다.",
+        "en": "The left filter opened - Status with Buy Now ticked, then Price, Quantity, Currency - pushing the grid to four across. The last filter label is misspelled Currnecy."
+      }
+    },
+    "01-screens/027-layout": {
+      "title": { "ko": "Alike 컬렉션 - 필터 펼침, 3열", "en": "Alike collection - filter open, three across" },
+      "desc": {
+        "ko": "같은 필터 상태에서 격자만 3열로 넓힌 판. 카드가 커지는 대신 한 화면에 여섯 장만 선다.",
+        "en": "The same filter state with the grid widened to three across: bigger cards, six to a screen."
+      }
+    },
+    "01-screens/028-layout": {
+      "title": { "ko": "Alike 컬렉션 - 가운데 정렬 머리", "en": "Alike collection - centred header" },
+      "desc": {
+        "ko": "머리를 가운데 정렬로 다시 짠 안. 통계가 다섯 칸으로 줄었는데 Floor price 가 두 번 서고 Currency 칸에는 통화 대신 $23K 가 들어가 있다. 필터는 Price 를 펼쳐 슬라이더와 Apply 를 보인다.",
+        "en": "A recut of the header, centred. The stat row drops to five cells but lists Floor price twice and puts $23K under Currency, where a currency name belongs. The filter shows Price expanded with its slider and Apply."
+      }
+    },
+    "01-screens/029-filter": {
+      "title": { "ko": "필터 패널 상태 모음", "en": "Filter panel - every state" },
+      "desc": {
+        "ko": "화면이 아니라 필터 하나만 떼어 접힘·Status·Price·Quantity·Currency 펼침을 다섯 벌로 늘어놓은 판. 통화는 ODA·MATIC·USDC 셋이고, 접힌 라벨은 여기서도 「Currnecy」다.",
+        "en": "Not a screen but the filter alone, laid out in five states - collapsed, Status, Price, Quantity, Currency. The currencies are ODA, MATIC and USDC, and the collapsed label again reads Currnecy."
+      }
+    },
+    "01-screens/030-deatails": {
+      "title": { "ko": "아이템 상세 - 두 단 배치", "en": "Item detail - two columns" },
+      "desc": {
+        "ko": "왼쪽 그림, 오른쪽 값과 버튼을 두고 아래로 Details(ERC721·Ethereum)·Price history 꺾은선·Activity 표가 이어진다. 값은 ODA 로 매기면서 체인은 Ethereum 이고, 파일 이름의 deatails 는 details 오타다(030·031·032 셋 다).",
+        "en": "Art left, price and buttons right, then Details (ERC721, Ethereum), a price-history line and an activity table. The price is quoted in ODA while the chain reads Ethereum, and the file name misspells details - all three of 030, 031 and 032 do."
+      }
+    },
+    "01-screens/031-deatails": {
+      "title": { "ko": "구매 확인 모달", "en": "Order confirmation modal" },
+      "desc": {
+        "ko": "상세 위에 뜬 Order 모달. Total 1.00 ODA($1,763.85)에 Confirm Transaction·Cancel 인데 Contract 와 Seller 에 같은 주소 0x7525…a771 이 들어가 있다.",
+        "en": "An Order modal over the detail page - total 1.00 ODA ($1,763.85), Confirm Transaction and Cancel. Contract and Seller carry the very same address, 0x7525…a771."
+      }
+    },
+    "01-screens/032-deatails": {
+      "title": { "ko": "아이템 상세 - 가운데 정렬, 탭", "en": "Item detail - centred and tabbed" },
+      "desc": {
+        "ko": "같은 상세의 다른 안. 그림을 가운데 위에 놓고 제목과 값을 아래로 내린 뒤, 길게 늘어놓던 정보를 Overview·History 두 탭으로 접었다.",
+        "en": "The other option for the same page: art centred at the top, title and price below it, and the long information block folded into Overview and History tabs."
+      }
+    },
+    "01-screens/033-pop_discover": {
+      "title": { "ko": "POP 둘러보기", "en": "POP discover" },
+      "desc": {
+        "ko": "발급된 POP 을 원형 배지로 늘어놓은 목록. 테두리 색이 곧 등급(LEGENDARY·EPIC·RARE·UNCOMMON·COMMON)이고 BUILDERBAND 2·SEASON ONE·LOLLAPALOOZA 2023 처럼 실제 행사 배지가 섞여 있다.",
+        "en": "Issued POPs as circular badges, the ring colour carrying the rarity - legendary, epic, rare, uncommon, common - with real event badges like BUILDERBAND 2, SEASON ONE and LOLLAPALOOZA 2023 among them."
+      }
+    },
+    "01-screens/034-pop_detail2": {
+      "title": { "ko": "POP 상세 - 댓글까지", "en": "POP detail - with comments" },
+      "desc": {
+        "ko": "Mint 버튼과 Label·Owner 탭, 80% 진행 막대에 댓글 창까지 붙인 상세 모달. 「182개 중 1-15」라 적어 놓고 실제로는 같은 사람(Crush Hour)의 같은 문장 둘이 번갈아 네 번 설 뿐이다.",
+        "en": "A detail modal carrying a Mint button, Label and Owner tabs, an 80% progress bar and a comment thread. It says showing 1-15 of 182 while actually alternating two sentences from one account, Crush Hour, four times."
+      }
+    },
+    "01-screens/035-verify": {
+      "title": { "ko": "이메일 인증 - 코드 불일치", "en": "Email verification - code mismatch" },
+      "desc": {
+        "ko": "가입 뒤 여섯 자리 코드 화면. 세 자리만 채운 채 「The verification code does not match」 오류와 04:52 남은 시간을 함께 보인다. 재전송 문구는 「Don't receive the code?」로 Didn't 이어야 한다.",
+        "en": "The six-digit code step after sign-up, caught with three digits entered, the error The verification code does not match and 04:52 left on the clock. The resend line reads Don't receive the code? where it should read Didn't."
+      }
+    },
+    "01-screens/036-connect-wallet": {
+      "title": { "ko": "지갑 연결 - 설치 전후 두 벌", "en": "Connect wallet - installed and not" },
+      "desc": {
+        "ko": "한 프레임에 모달 두 벌을 나란히 뒀다. 왼쪽은 MetaMask·Coinbase Wallet·Wallet Connect 목록, 오른쪽은 같은 목록에 「Install」이 붙은 미설치 상태이고 위에는 「The user rejected the request.」 알림이 떠 있다.",
+        "en": "Two modal states set side by side in one frame: the provider list on the left, the same list prefixed with Install on the right, and a The user rejected the request. toast above both."
+      }
+    },
+    "01-screens/037-home2": {
+      "title": { "ko": "SOULS·POP 홈 - 3D 캐릭터 판", "en": "SOULS·POP home - 3D character art" },
+      "desc": {
+        "ko": "020 과 문안은 같고 그림만 3D 캐릭터 셋으로 바꾼 다크 판. 01-03 캐러셀과 쿠키 배너는 그대로 따라온다.",
+        "en": "The same copy as 020 on a dark ground, with the flat illustration swapped for three 3D characters. The 01-03 carousel and the cookie banner come along unchanged."
+      }
+    },
+
+    "02-pages/01": {
+      "title": { "ko": "1 - SOULS·POP 홈", "en": "1 - SOULS·POP home" },
+      "desc": {
+        "ko": "둘러보기의 출발점. 이 탭 열 장은 모두 01-screens 에서 골라 온 같은 파일이고, 이 장은 01-screens/018-home 이다.",
+        "en": "Where the walkthrough starts. All ten frames in this tab are files picked out of 01-screens; this one is 01-screens/018-home."
+      }
+    },
+    "02-pages/02": {
+      "title": { "ko": "2 - POP 상세 모달", "en": "2 - POP detail modal" },
+      "desc": {
+        "ko": "미션 진행을 보이는 상세. 01-screens/019-pop_detail 과 같은 파일이다.",
+        "en": "The detail modal with its mission progress - the same file as 01-screens/019-pop_detail."
+      }
+    },
+    "02-pages/03": {
+      "title": { "ko": "3 - 프로필과 컬렉션", "en": "3 - profile and collection" },
+      "desc": {
+        "ko": "카드·배지·3D 세 벌을 한 화면에서 견주는 프로필. 01-screens/017-pop2 와 같은 파일이다.",
+        "en": "The profile weighing cards, badges and 3D against each other - the same file as 01-screens/017-pop2."
+      }
+    },
+    "02-pages/04": {
+      "title": { "ko": "4 - SOULS·POP 소개", "en": "4 - SOULS·POP intro" },
+      "desc": {
+        "ko": "POP 이 무엇인지 설명하는 소개 페이지. 01-screens/014-pop_intro 와 같은 파일이다.",
+        "en": "The page that explains what a POP is - the same file as 01-screens/014-pop_intro."
+      }
+    },
+    "02-pages/05": {
+      "title": { "ko": "5-3D 캐릭터 홈", "en": "5-3D character home" },
+      "desc": {
+        "ko": "3D 캐릭터 셋을 세운 다크 홈. 01-screens/037-home2 와 같은 파일이다.",
+        "en": "The dark home carried by three 3D characters - the same file as 01-screens/037-home2."
+      }
+    },
+    "02-pages/06": {
+      "title": { "ko": "6 - 이메일 인증", "en": "6 - email verification" },
+      "desc": {
+        "ko": "가입 뒤 코드 입력 화면. 01-screens/035-verify 와 같은 파일이다.",
+        "en": "The code step after sign-up - the same file as 01-screens/035-verify."
+      }
+    },
+    "02-pages/07": {
+      "title": { "ko": "7 - 배지형 컬렉션", "en": "7 - badge collection" },
+      "desc": {
+        "ko": "원형 배지만으로 짠 앞선 판의 프로필. 01-screens/021-pop2 와 같은 파일이다.",
+        "en": "The earlier profile built out of circular badges alone - the same file as 01-screens/021-pop2."
+      }
+    },
+    "02-pages/08": {
+      "title": { "ko": "8 - 댓글 달린 POP 상세", "en": "8 - POP detail with comments" },
+      "desc": {
+        "ko": "Mint 와 댓글까지 붙인 상세 모달. 01-screens/034-pop_detail2 와 같은 파일이다.",
+        "en": "The detail modal that carries minting and comments - the same file as 01-screens/034-pop_detail2."
+      }
+    },
+    "02-pages/09": {
+      "title": { "ko": "9 - NAODA ECOSYSTEM", "en": "9 - NAODA ECOSYSTEM" },
+      "desc": {
+        "ko": "여기서 SOULS·POP 여덟 장이 끝나고 NAODA 본체 두 장으로 넘어간다. 01-screens/006-7 과 같은 파일이다.",
+        "en": "The eight SOULS·POP frames end here and two NAODA pages follow - this one is 01-screens/006-7."
+      }
+    },
+    "02-pages/10": {
+      "title": { "ko": "10 - NAODA 라이트 홈", "en": "10 - NAODA light home" },
+      "desc": {
+        "ko": "오렌지 키비주얼을 쓴 라이트 홈으로 추림을 닫는다. 01-screens/015-10 과 같은 파일이다.",
+        "en": "The walkthrough closes on the light home with the orange key visual - the same file as 01-screens/015-10."
+      }
+    }
+  }
+}

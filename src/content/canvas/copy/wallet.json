@@ -1,0 +1,90 @@
+{
+  "pages": {
+    "01-wallet": {
+      "ko": "지갑",
+      "en": "Wallet"
+    }
+  },
+  "flow": [
+    [
+      "01-wallet/003-wallet-flow",
+      "01-wallet/001-wallet-app"
+    ],
+    [
+      "01-wallet/003-wallet-flow",
+      "01-wallet/002-wallet-ext"
+    ]
+  ],
+  "frames": {
+    "01-wallet/001-wallet-app": {
+      "title": {
+        "ko": "웹 지갑 - 폰 규칙을 데스크톱으로",
+        "en": "Web wallet - phone rules on a desktop"
+      },
+      "desc": {
+        "ko": "데스크톱 브라우저 창에 자산 화면을 세운 판이다. 헤드라인은 쓸 수 있는 잔액 하나, 상점 토큰은 수량만, 등재 밖은 접힌다. 기기가 하나뿐이면 경고 배너가 상시로 뜨고, 아래에 이 판이 담지 못한 것 셋을 적었다.",
+        "en": "The assets screen inside a desktop browser window. One spendable balance as the headline, store tokens by amount only, unlisted ones folded. With a single device a warning banner stays up, and three things the sheet does not cover are listed below."
+      }
+    },
+    "01-wallet/002-wallet-ext": {
+      "title": {
+        "ko": "크롬 확장 검토판 - 잠김에서 연결까지",
+        "en": "Chrome extension review - locked to connected"
+      },
+      "desc": {
+        "ko": "DEX 페이지 위에 팝업으로 뜨는 지갑을 잠김·홈·연결 요청·연결됨·서명 순으로 세로로 이었다. 시드가 없으니 푸는 것은 비밀번호가 아니라 패스키다. 정본이 아니라 검토용이라고 머리에 밝혔다.",
+        "en": "The wallet as a popup over a DEX page, laid out top to bottom: locked, home, connect request, connected, sign. With no seed, unlocking is a passkey rather than a password. The header says this is a review sheet, not canon."
+      }
+    },
+    "01-wallet/003-wallet-flow": {
+      "title": {
+        "ko": "지갑 플로우 - 지금 웹에 서 있는 것",
+        "en": "Wallet flow - what stands on the web today"
+      },
+      "desc": {
+        "ko": "DEX 가 여는 팝업 여섯 단계와 독립 웹 셸을 노드로 잇고, 화면·팝업·상태·미정·정책을 색으로 가른다. 확인 불가 게이트를 기본 거절로 둔 것이 이 도표의 논점이다.",
+        "en": "Six popup steps opened by the DEX and the standalone web shell as connected nodes, colour-coded screen, popup, state, undecided and policy. The cannot-verify gate defaulting to reject is the point of the diagram."
+      }
+    },
+    "01-wallet/004-user-wallet": {
+      "title": {
+        "ko": "일반 유저 지갑 - 화면 카탈로그",
+        "en": "User wallet - the screen catalogue"
+      },
+      "desc": {
+        "ko": "기획서 절마다 화면과 프레임 수를 카드로 세운 목차다. 첫 지갑 만들기부터 보내기·기기 복구·서명 요청·웹 판까지 열일곱 묶음이고, 패스키는 본인이 발행하고 시드는 없다는 전제를 머리에 적었다.",
+        "en": "A catalogue mapping each spec section to a card with its screen and frame count - seventeen groups from first wallet through send, device recovery, sign requests and the web build. The header states the premise: the user issues the passkey, there is no seed."
+      }
+    },
+    "01-wallet/005-wallet-extension": {
+      "title": {
+        "ko": "크롬 확장 프로토타입 - 눌러 보는 판",
+        "en": "Chrome extension prototype - click-through"
+      },
+      "desc": {
+        "ko": "외부 dApp 위에 뜬 확장 팝업을 잠김·홈·연결·서명·패스키·완료 순으로 눌러 볼 수 있다. 시드 지갑이 비밀번호를 묻는 자리에 「비밀번호도 시드도 없다」를 적어 다른 점을 그 자리에서 말한다.",
+        "en": "An extension popup over an outside dApp that can be clicked through locked, home, connect, sign, passkey, done. Where a seed wallet asks for a password it says 'no password, no seed phrase', stating the difference in the same spot."
+      }
+    },
+    "01-wallet/006-wallet-mobile-demo": {
+      "title": {
+        "ko": "모바일 지갑 - Figma 1:1 정합",
+        "en": "Mobile wallet - 1:1 with Figma"
+      },
+      "desc": {
+        "ko": "Figma 스토리보드를 구간별로 폰 프레임에 1:1 로 옮긴 판이다. 홈·보내기·받기·QR 스캔 순으로 이어지고, 프레임마다 원본에서 무엇을 바꿨는지(폰트 대체·장식 축소)를 메모로 달았다.",
+        "en": "The Figma storyboard rebuilt section by section in phone frames at 1:1 - home, send, receive, QR scan. Each frame carries a note on what changed from the source, such as font substitution and trimmed decoration."
+      }
+    },
+    "01-wallet/007-wallet-store-mobile": {
+      "title": {
+        "ko": "상점 지갑 - 매장에서 쓰는 토큰",
+        "en": "Store wallet - spending tokens in the shop"
+      },
+      "desc": {
+        "ko": "홈·상점 선택·금액·QR·완료 다섯 단계를 눌러 보는 프로토타입이다. 자산을 현금·플랫폼·상점 토큰·가스 넷으로 묶고, 한도를 넘긴 금액은 토스트 없이 숫자 아래 빨간 한 줄로 막는다.",
+        "en": "A five-step prototype - home, store select, amount, QR, done. Assets are grouped as cash, platform, store tokens and gas, and an over-limit amount is blocked by a red line under the number rather than a toast."
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "pages": {
+    "01-hub": {
+      "ko": "허브 · 화면 지도",
+      "en": "Hub and screen map"
+    },
+    "02-design-system": {
+      "ko": "디자인 시스템 문서",
+      "en": "Design-system docs"
+    },
+    "03-examples": {
+      "ko": "예제",
+      "en": "Examples"
+    }
+  },
+  "flow": [
+    [
+      "01-hub/003-ux",
+      "01-hub/004-ux-screen-map"
+    ],
+    [
+      "02-design-system/004-foundations",
+      "02-design-system/002-base"
+    ],
+    [
+      "02-design-system/002-base",
+      "02-design-system/001-application"
+    ]
+  ],
+  "frames": {
+    "01-hub/002-knowledge": {
+      "title": {
+        "ko": "지식 허브, 다크",
+        "en": "Knowledge hub, dark"
+      },
+      "desc": {
+        "ko": "제품을 몇 장으로 압축한 내부 참고서의 입구. 스냅샷 한 문단과 여섯 개 수치 카드, 두 엔진 카드로 첫 화면을 채운다. 사이드바는 제품 정본과 기획 문서를 나눈다.",
+        "en": "The entrance to an internal reference that compresses the product into a few pages. One snapshot paragraph, six figure cards and two engine cards fill the first screen. The sidebar splits canon from planning docs."
+      }
+    },
+    "01-hub/003-ux": {
+      "title": {
+        "ko": "UX 허브",
+        "en": "UX hub"
+      },
+      "desc": {
+        "ko": "리서치 자산과 실제 제품 화면이 사는 곳의 인덱스. 사이드바 항목마다 라우트 수가 붙어 있어 어느 영역이 얼마나 큰지 목록에서 바로 읽힌다.",
+        "en": "The index for where research assets and real product screens live. Each sidebar entry carries its route count, so the size of each area reads straight off the list."
+      }
+    },
+    "01-hub/004-ux-screen-map": {
+      "title": {
+        "ko": "화면 지도 - DEX",
+        "en": "Screen map - DEX"
+      },
+      "desc": {
+        "ko": "화면·모달·상태·정책 노트를 색으로 가르고 화살표로 이은 캔버스. 각 카드에 헤드라인과 섹션 목록을 적어 지도만 보고도 화면 내용을 짐작하게 했다.",
+        "en": "A canvas where screens, modals, states and policy notes get their own colours and arrows. Each card lists its headline and sections, so the map alone tells what a screen holds."
+      }
+    },
+    "02-design-system/001-application": {
+      "title": {
+        "ko": "애플리케이션 - 앱 내비게이션",
+        "en": "Application - app navigation"
+      },
+      "desc": {
+        "ko": "사이드바 다섯 변형과 헤더 네 변형을 카드마다 라이브 미리보기로 보여주는 문서. 각 카드 아래 폭·동작 메모와 데모 링크를 붙였다.",
+        "en": "A doc showing five sidebar and four header variants, each as a live preview card. Width and behaviour notes plus a demo link sit under every card."
+      }
+    },
+    "02-design-system/002-base": {
+      "title": {
+        "ko": "베이스 - 아바타 플레이그라운드",
+        "en": "Base - avatar playground"
+      },
+      "desc": {
+        "ko": "크기·대체 방식·상태 점·인증 표시를 토글로 바꿔 보는 아바타 문서. 문서가 정적 캡처가 아니라 실제 컴포넌트를 돌린다는 점이 이 작업대의 원칙이다.",
+        "en": "The avatar doc with toggles for size, fallback, status dot and verified tick. The doc runs the real component rather than a static capture, which is the workbench's rule."
+      }
+    },
+    "02-design-system/004-foundations": {
+      "title": {
+        "ko": "파운데이션 - 타이포그래피",
+        "en": "Foundations - typography"
+      },
+      "desc": {
+        "ko": "디스플레이 램프 여섯 단계를 같은 문장으로 한 줄씩 보여주는 문서. 토큰 이름을 왼쪽에 붙여 눈으로 본 크기와 코드의 이름을 같은 자리에서 잇는다.",
+        "en": "The display ramp's six sizes, one line each with the same sentence. Token names on the left tie what the eye sees to the name in code, in the same row."
+      }
+    }
+  }
+}

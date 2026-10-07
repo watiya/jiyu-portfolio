@@ -1,0 +1,576 @@
+{
+  "pages": {
+    "01-por15": {
+      "ko": "본판 v15 - 웹과 모바일 앱",
+      "en": "Main board v15 - web and mobile app"
+    },
+    "02-por13": {
+      "ko": "본판 v13 · v14",
+      "en": "Main board v13 and v14"
+    },
+    "03-por11": {
+      "ko": "본판 v11 · v12",
+      "en": "Main board v11 and v12"
+    },
+    "04-por10": {
+      "ko": "DUST 대결 v10",
+      "en": "DUST match-up v10"
+    },
+    "05-por9": {
+      "ko": "지난 판 v8 · v9",
+      "en": "Earlier boards v8 and v9"
+    },
+    "06-por-early": {
+      "ko": "초기 탐색 v1 · v2",
+      "en": "Early exploration v1 and v2"
+    }
+  },
+  "flow": [
+    [
+      "01-por15/001-board",
+      "01-por15/002-market"
+    ],
+    [
+      "01-por15/002-market",
+      "01-por15/003-order-review"
+    ],
+    [
+      "01-por15/003-order-review",
+      "01-por15/004-order-partial"
+    ],
+    [
+      "01-por15/009-m-home",
+      "01-por15/010-m-market"
+    ],
+    [
+      "01-por15/010-m-market",
+      "01-por15/011-m-order-sheet"
+    ],
+    [
+      "01-por15/011-m-order-sheet",
+      "01-por15/012-m-fill"
+    ],
+    [
+      "01-por15/012-m-fill",
+      "01-por15/014-m-assets"
+    ],
+    [
+      "02-por13/001-board",
+      "02-por13/002-market"
+    ],
+    [
+      "03-por11/001-board",
+      "03-por11/002-market-open"
+    ],
+    [
+      "03-por11/002-market-open",
+      "03-por11/003-market-resolved"
+    ],
+    [
+      "03-por11/002-market-open",
+      "03-por11/004-market-void"
+    ],
+    [
+      "03-por11/006-wallet",
+      "03-por11/002-market-open"
+    ],
+    [
+      "04-por10/001-index-hero",
+      "04-por10/003-index"
+    ],
+    [
+      "04-por10/003-index",
+      "04-por10/004-trade"
+    ],
+    [
+      "06-por-early/005-por-v1-credit",
+      "06-por-early/008-por-v1-home"
+    ],
+    [
+      "06-por-early/008-por-v1-home",
+      "06-por-early/006-por-v1-detail"
+    ],
+    [
+      "06-por-early/006-por-v1-detail",
+      "06-por-early/009-por-v1-locked"
+    ],
+    [
+      "06-por-early/009-por-v1-locked",
+      "06-por-early/013-por-v1-result"
+    ],
+    [
+      "06-por-early/011-por-v1-me",
+      "06-por-early/007-por-v1-gacha"
+    ],
+    [
+      "06-por-early/011-por-v1-me",
+      "06-por-early/010-por-v1-lotto"
+    ],
+    [
+      "06-por-early/015-por-v2-landing",
+      "06-por-early/014-por-v2-home"
+    ]
+  ],
+  "frames": {
+    "01-por15/001-board": {
+      "title": {
+        "ko": "웹 보드 - 지수를 오른다 · 내린다 두 토큰으로",
+        "en": "Web board - an index as two tokens, up and down"
+      },
+      "desc": {
+        "ko": "지역 가게 결제로 만든 지수가 지난달보다 오를지를 Up · Down 두 토큰으로 사고판다. 맞힌 쪽이 발표 뒤 1 USDT 를 받고, 두 값의 합은 언제나 1 이다. v13 구성 위에 월렛과 같은 색 · 표 · 카드 스타일을 입힌 판이다.",
+        "en": "Players buy and sell Up and Down tokens on whether an index built from local shop spending rises over last month. The right side receives 1 USDT after the announcement, and the two prices always add up to one. This build puts the wallet's colour, table and card style on the v13 layout."
+      }
+    },
+    "01-por15/002-market": {
+      "title": {
+        "ko": "마켓 상세 - 차트, 호가창, 주문 패널",
+        "en": "Market detail - chart, order book, order panel"
+      },
+      "desc": {
+        "ko": "한 시장의 계단선 차트와 지난 발표값 기준선, 호가창과 최근 체결이 한 화면에 선다. 오른쪽 주문 패널에서 편과 지정가 · 시장가를 고르고, 맞히면 받는 돈을 고른 편 색으로 보여 준다.",
+        "en": "One market's step chart with the last announced value as a baseline, the order book and recent fills share one screen. The order panel on the right picks a side and a limit or market order, and shows the payout if right in the chosen side's colour."
+      }
+    },
+    "01-por15/003-order-review": {
+      "title": {
+        "ko": "주문 확인 - 지금 체결될 몫과 호가에 걸릴 몫",
+        "en": "Order review - what fills now and what rests"
+      },
+      "desc": {
+        "ko": "주문 버튼이 한 줄 안내로 끝나던 것을 단계 화면으로 바꿨다. 확인 단계에서 반대편 호가에 바로 닿는 몫과 호가창에 남을 몫을 나눠 보여 주고, 지갑 서명으로 넘어간다.",
+        "en": "The order button used to end in a one-line notice; it now opens a sequence of steps. The review step splits the part that meets the other side right away from the part that will rest in the book, then hands over to the wallet signature."
+      }
+    },
+    "01-por15/004-order-partial": {
+      "title": {
+        "ko": "체결 결과 - 일부 체결과 나머지 걸림",
+        "en": "Fill result - partly filled, the rest resting"
+      },
+      "desc": {
+        "ko": "결과는 전부 체결, 일부 체결, 전부 걸림 셋이고 실패는 서명 거절과 가격 밀림 둘이다. 일부 체결이면 체결된 몫은 보유로, 남은 몫은 미체결 주문으로 바로 옮겨 적는다.",
+        "en": "There are three outcomes - fully filled, partly filled, fully resting - and two failures, a rejected signature and slippage. On a partial fill the filled part moves to holdings and the rest to open orders straight away."
+      }
+    },
+    "01-por15/005-index": {
+      "title": {
+        "ko": "지수 - 숫자가 어디서 오는지",
+        "en": "Indices - where the number comes from"
+      },
+      "desc": {
+        "ko": "거래 대상이 되는 지수의 정의와 나라별 발표 주기, 지난 발표값을 한 달 한 칸 계단선으로 보여 준다. 거래 화면에서 한 번 더 눌러 근거를 확인하는 자리다.",
+        "en": "The definition of each traded index, its release cadence by country and past values drawn as a step line, one month per step. It is the place to check the evidence one tap away from trading."
+      }
+    },
+    "01-por15/006-pick": {
+      "title": {
+        "ko": "매치업 - 나라 대 나라 지수 대결",
+        "en": "Match-ups - country against country"
+      },
+      "desc": {
+        "ko": "두 나라 지수 중 더 오를 쪽을 DUST 로 고르는 대결 화면이다. 편 색은 바이올렛과 앰버로 두어 UP · DOWN 의 초록 · 빨강, 강조색 파랑과 겹치지 않게 했다.",
+        "en": "A match-up where DUST goes on whichever of two country indices rises more. The sides are violet and amber so they never clash with the green and red of Up and Down or the blue accent."
+      }
+    },
+    "01-por15/007-rewards": {
+      "title": {
+        "ko": "순위와 보상 - 월간 구간 띠",
+        "en": "Rankings and rewards - monthly tiers"
+      },
+      "desc": {
+        "ko": "월간 순위를 구간 띠로 보여 주고 칸마다 막대와 보상 칩, 내 구간 표시를 둔다. 어느 구간이 무엇을 받는지는 정하는 중이라 「확정 전」으로 적었다.",
+        "en": "The monthly ranking reads as a band of tiers, each with a bar, a reward chip and a marker for my tier. Which tier receives what is still being decided, so the chips say not final."
+      }
+    },
+    "01-por15/008-assets": {
+      "title": {
+        "ko": "내 자산 - 잔액, 보유, 청구",
+        "en": "My assets - balance, holdings, claims"
+      },
+      "desc": {
+        "ko": "비수탁 구조라 잔액은 내 지갑의 값이고, 화면은 보유 토큰과 미체결 주문, 정산 뒤 청구할 몫을 모아 보여 준다. 입출금 화면은 따로 두지 않았다.",
+        "en": "It is non-custodial, so the balance is simply what the wallet holds; the screen gathers token holdings, open orders and amounts to claim after settlement. There is no deposit or withdrawal screen."
+      }
+    },
+    "01-por15/009-m-home": {
+      "title": {
+        "ko": "모바일 앱 - 홈",
+        "en": "Mobile app - home"
+      },
+      "desc": {
+        "ko": "같은 오더북 방식을 폰 앱 형태로 다시 짠 별도 판이다. 웹처럼 대표 마켓 한 장을 히어로로 두고, 두 매수 버튼을 한 줄에 같은 폭으로 맞췄다.",
+        "en": "A separate build that reworks the same order-book model as a phone app. Like the web, one lead market is the hero, and the two buy buttons sit on one line at equal width."
+      }
+    },
+    "01-por15/010-m-market": {
+      "title": {
+        "ko": "모바일 앱 - 마켓 상세",
+        "en": "Mobile app - market detail"
+      },
+      "desc": {
+        "ko": "차트, 호가창, 체결을 탭으로 나눠 폰 폭 한 화면에 담았다. 내 보유와 미체결 주문이 아래로 이어지고, 두 매수 버튼은 하단에 고정된다.",
+        "en": "Chart, order book and trades are split into tabs to fit one phone-width screen. My holdings and open orders follow below, and the two buy buttons stay pinned to the bottom."
+      }
+    },
+    "01-por15/011-m-order-sheet": {
+      "title": {
+        "ko": "모바일 앱 - 주문 시트",
+        "en": "Mobile app - order sheet"
+      },
+      "desc": {
+        "ko": "편과 지정가 · 시장가, 수량을 하단 시트 하나에서 고른다. 숫자 패드와 빠른 금액 칩을 두고, 맞히면 받는 돈을 입력할 때마다 다시 계산한다.",
+        "en": "Side, limit or market, and size are all chosen in one bottom sheet. A number pad and quick amount chips sit underneath, and the payout if right is recalculated on every input."
+      }
+    },
+    "01-por15/012-m-fill": {
+      "title": {
+        "ko": "모바일 앱 - 체결 완료",
+        "en": "Mobile app - order filled"
+      },
+      "desc": {
+        "ko": "웹 패널 안의 체결 흐름을 시트 안으로 옮긴 판이다. 체결 수량과 평균가, 수수료, 바뀐 잔액을 한 장에 정리하고 보유 화면으로 잇는다.",
+        "en": "The fill flow from the web panel, moved into the sheet. Filled size, average price, fee and the new balance are summed up on one card that leads on to holdings."
+      }
+    },
+    "01-por15/013-m-pick": {
+      "title": {
+        "ko": "모바일 앱 - 매치업",
+        "en": "Mobile app - match-ups"
+      },
+      "desc": {
+        "ko": "나라 대 나라 대결을 카드로 세우고, 어느 쪽에 DUST 가 더 몰렸는지 비율 막대로 보여 준다. 금액 칩을 고른 뒤 편을 누르는 순서다.",
+        "en": "Country match-ups stand as cards, with a split bar showing which side has drawn more DUST. Pick an amount chip first, then tap a side."
+      }
+    },
+    "01-por15/014-m-assets": {
+      "title": {
+        "ko": "모바일 앱 - 내 자산",
+        "en": "Mobile app - my assets"
+      },
+      "desc": {
+        "ko": "총 가치와 USDT · DUST 잔액을 머리에 두고, 보유 · 미체결 · 청구 가능 · 활동을 탭으로 나눴다. 보유 줄마다 평가 손익을 붙였다.",
+        "en": "Total value and USDT and DUST balances sit at the top, with holdings, open orders, claimable and activity split into tabs. Each holding row carries its unrealised gain or loss."
+      }
+    },
+    "02-por13/001-board": {
+      "title": {
+        "ko": "v13 보드 - 참여 방법과 편 고르기",
+        "en": "v13 board - how to play and picking a side"
+      },
+      "desc": {
+        "ko": "v11 보드 위에 참여 방법 절과 DUST 편 고르기를 더하고 라이트 토글을 달았다. 무효일 때 양쪽 토큰이 같은 금액을 받는다는 규칙을 한 줄로 적고, 빈 호가 카드는 걷어 냈다.",
+        "en": "The v11 board gains a how-to-play section, a DUST side picker and a light toggle. The rule that both tokens receive the same amount on a void is stated in one line, and the empty-book cards are gone."
+      }
+    },
+    "02-por13/002-market": {
+      "title": {
+        "ko": "v14 마켓 - 오더북 상세",
+        "en": "v14 market - order book detail"
+      },
+      "desc": {
+        "ko": "내 보유와 평균 매입가, 미체결 주문과 취소, 최근 체결 열 줄을 더했다. 반대편에 닿는 지정가는 닿는 몫만 바로 체결하고 남은 몫을 걸어 두는 규칙을 화면에서 보이게 했다.",
+        "en": "Adds my holdings with average cost, open orders with cancel, and the last ten fills. A limit order that meets the other side fills only the overlapping part at once and rests the rest, and the screen shows it."
+      }
+    },
+    "03-por11/001-board": {
+      "title": {
+        "ko": "v11 보드 - 대표 마켓을 히어로로",
+        "en": "v11 board - a lead market as the hero"
+      },
+      "desc": {
+        "ko": "본판 v0.7 의 첫 프로토타입을 DUST 대결 판의 셸과 부품으로 다시 칠한 보드다. 대표 마켓 하나를 사진 배경 히어로로 세우고, 그 아래 매치업과 Up · Down 마켓 격자를 이었다.",
+        "en": "The first prototype of main board v0.7, repainted with the shell and parts of the DUST match-up build. One lead market becomes a photo hero, followed by match-ups and a grid of Up and Down markets."
+      }
+    },
+    "03-por11/002-market-open": {
+      "title": {
+        "ko": "마켓 - 거래 중",
+        "en": "Market - trading"
+      },
+      "desc": {
+        "ko": "시장 상세의 기본 상태다. 차트와 통계 타일, 호가창, 주문 패널이 함께 선다. 화면 말은 「확률」 대신 「가능성」으로, 업계 용어는 쉬운 말로 옮겼다.",
+        "en": "The default state of a market. Chart, stat tiles, order book and order panel stand together. On screen, probability became likelihood and trading jargon was put into plain words."
+      }
+    },
+    "03-por11/003-market-resolved": {
+      "title": {
+        "ko": "마켓 - 정산 완료",
+        "en": "Market - settled"
+      },
+      "desc": {
+        "ko": "발표값과 지난값을 근거로 결과가 확정된 상태다. 맞힌 쪽 토큰은 1 USDT 로 청구할 수 있고, 청구 버튼이 주문 패널 자리를 대신한다.",
+        "en": "The result is final, backed by the announced and previous values. Tokens on the right side can be claimed at 1 USDT, and a claim button takes the order panel's place."
+      }
+    },
+    "03-por11/004-market-void": {
+      "title": {
+        "ko": "마켓 - 무효",
+        "en": "Market - void"
+      },
+      "desc": {
+        "ko": "발표 지연 같은 사유로 회차가 무효가 된 상태다. 양쪽 토큰에 같은 금액을 돌려준다는 것과 그 사유를 한 줄씩 보여 준다.",
+        "en": "The round is void, for example because the announcement was delayed. One line says both tokens are paid back the same amount, another gives the reason."
+      }
+    },
+    "03-por11/005-assets": {
+      "title": {
+        "ko": "내 자산",
+        "en": "My assets"
+      },
+      "desc": {
+        "ko": "지갑 잔액과 마켓별 보유, 청구 대기를 한 표로 모았다. 입출금은 지갑의 일이라 이 화면에 두지 않았다.",
+        "en": "Wallet balance, holdings by market and pending claims in one table. Deposits and withdrawals belong to the wallet, so they are not here."
+      }
+    },
+    "03-por11/006-wallet": {
+      "title": {
+        "ko": "지갑 연결 - 첫 주문 전에",
+        "en": "Wallet connect - before the first order"
+      },
+      "desc": {
+        "ko": "보드와 마켓은 연결 없이 둘러볼 수 있고, 첫 주문 때 지갑을 잇는다. 본인확인과 지역 안내는 정해지기 전이라 상태 칸으로만 남겼다.",
+        "en": "Board and markets can be browsed without connecting; the wallet is linked at the first order. Identity checks and regional notices are not decided yet, so they stay as status rows only."
+      }
+    },
+    "03-por11/007-flow-v7": {
+      "title": {
+        "ko": "흐름 지도 - 본판 v0.7",
+        "en": "Flow map - main board v0.7"
+      },
+      "desc": {
+        "ko": "본판, DUST 대결, 존속이 정해지지 않은 맞히는 판 세 갈래와 화면 사이 흐름을 보드 한 장에 그렸다. 화면, 모달, 상태, 미결 게이트, 정책 주석을 색으로 갈라 어디가 아직 열려 있는지 보이게 했다.",
+        "en": "The three branches - main board, DUST match-up, and a guessing product whose future is undecided - and the flow between screens on one board. Screens, modals, states, open gates and policy notes get their own colours so the open questions stand out."
+      }
+    },
+    "03-por11/008-por12-live": {
+      "title": {
+        "ko": "v12 - 라이브 티커와 카운트다운",
+        "en": "v12 - live ticker and countdown"
+      },
+      "desc": {
+        "ko": "보드 머리에 지수 티커와 마감 카운트다운을 두고 다크를 기본으로 했다. 값과 그래프가 틱마다 움직여 시장이 열려 있다는 감각을 먼저 준다.",
+        "en": "An index ticker and a closing countdown at the head of the board, dark by default. Values and charts move on every tick, so the first impression is a market that is open."
+      }
+    },
+    "04-por10/001-index-hero": {
+      "title": {
+        "ko": "DUST 대결 홈 - 숫자 하나",
+        "en": "DUST match-up home - one number"
+      },
+      "desc": {
+        "ko": "편의점 지수 하나를 히어로로 세우고, 그 아래 나라 대 나라 대결, 이번 주 마감 회차, 거래할 수 있는 상품을 이었다. 겨루기는 DUST 로만 하고 DUST 는 살 수 없다.",
+        "en": "One corner-store index is the hero, followed by country match-ups, this week's closing rounds and the products open to trade. Play is in DUST only, and DUST cannot be bought."
+      }
+    },
+    "04-por10/002-cards": {
+      "title": {
+        "ko": "지금 열 수 있는 상품 다섯",
+        "en": "Five products that could open now"
+      },
+      "desc": {
+        "ko": "판 종류를 카드 다섯으로 나란히 놓고 각각의 주기와 마감, 참여 방식을 적었다. 어떤 상품을 먼저 열지 회의에서 고르도록 만든 비교판이다.",
+        "en": "Five product types side by side as cards, each with its cadence, close and way of playing. It is a comparison sheet made so a meeting could choose which to open first."
+      }
+    },
+    "04-por10/003-index": {
+      "title": {
+        "ko": "지수 상세 - 편의점 지수",
+        "en": "Index detail - corner store index"
+      },
+      "desc": {
+        "ko": "기준 시점 대비 값과 나라별 움직임, 지수의 정의와 발표 주기를 한 페이지에 모았다. 거래 가격은 통계값이 아니라 곡선 위 체결가라는 점을 따로 적었다.",
+        "en": "Value against the base period, movement by country, the definition and the release cadence on one page. It notes separately that the trade price is a fill on a curve, not the statistic itself."
+      }
+    },
+    "04-por10/004-trade": {
+      "title": {
+        "ko": "지수 토큰 - 곡선을 따르는 가격",
+        "en": "Index token - a price on a curve"
+      },
+      "desc": {
+        "ko": "사는 만큼 가격이 오르는 곡선 위에서 지수 토큰을 사고판다. 수수료와 상한은 정해지지 않아 숫자 없이 자리만 그렸다.",
+        "en": "Index tokens are bought and sold on a curve where buying pushes the price up. Fees and limits are not decided, so they are drawn as empty slots without numbers."
+      }
+    },
+    "04-por10/005-round": {
+      "title": {
+        "ko": "회차 - 구간 고르기",
+        "en": "Round - pick a band"
+      },
+      "desc": {
+        "ko": "발표값이 들어갈 구간을 DUST 로 고르는 회차형 판이다. 구간별 참여자 수를 보여 주고, 정산식이 정해지기 전이라 받는 몫은 비워 두었다.",
+        "en": "A round where DUST goes on the band the announced value will land in. Participants per band are shown; payouts stay blank because the settlement formula is not set."
+      }
+    },
+    "05-por9/001-air": {
+      "title": {
+        "ko": "v9 - 편의점 지수 보드",
+        "en": "v9 - corner store index board"
+      },
+      "desc": {
+        "ko": "PoR 을 하나의 지수와 그 위의 상품들로 다시 묶던 시기의 보드다. 지수 값과 마감 회차, 거래 상품, 두 지수의 발표 일정을 한 화면에 세웠다.",
+        "en": "A board from when PoR was being regrouped as one index with products on top. Index value, closing rounds, tradeable products and two indices' release dates share one screen."
+      }
+    },
+    "05-por9/002-por8-app": {
+      "title": {
+        "ko": "v8 - 나라별 지수 카드",
+        "en": "v8 - index cards by country"
+      },
+      "desc": {
+        "ko": "나라 · 업종별 지수를 사진 카드로 늘어놓고 거래가와 기준 지수를 나란히 적었다. 법무 검토 중이거나 데이터가 아직 없는 나라도 카드는 두되 값을 비웠다.",
+        "en": "Country and sector indices laid out as photo cards, trade price next to the reference index. Countries under legal review or still without data keep a card, with the value left blank."
+      }
+    },
+    "06-por-early/001-dex-restyle-por": {
+      "title": {
+        "ko": "DEX 안의 PoR 탭 - 판 다섯 장과 정산 시계",
+        "en": "PoR tab inside the DEX - five cards and a settle clock"
+      },
+      "desc": {
+        "ko": "DEX 리스타일의 왼쪽 레일에 PoR 을 한 항목으로 넣고, 오늘의 판을 카드 다섯 장으로 펼쳤다. 카드마다 질문·선택지 둘·배당·비율 알약·차트가 들어가고, 오른쪽 레일에 정산 시계와 내 증정금이 선다. 판은 도시별 현지 시각으로 같은 UTC 정각에 닫힌다.",
+        "en": "PoR sits as one item in the DEX restyle's left rail, with today's rounds as five cards. Each carries a question, two sides, payout, share pills and a chart; the right rail holds the settle clock, my credit and this week's progress. Every round closes at the same UTC hour, shown in each city's local time."
+      }
+    },
+    "06-por-early/002-por-app": {
+      "title": {
+        "ko": "PoR 앱 v1 뷰어 - 화면 21 장, 한 벌 반응형",
+        "en": "PoR app v1 viewer - twenty-one screens, one responsive build"
+      },
+      "desc": {
+        "ko": "웹 폭과 폰 폭을 한 벌로 그린 앱 화면 스물한 장을 목록으로 세우고, 가운데 노트북 프레임에 띄운다. 오른쪽에 「무엇을 보나」와 판정 대기 메모, 값이 전부 가정이라는 표시를 붙였다. 카피는 DEX 웹 기준으로 영어다.",
+        "en": "Twenty-one app screens drawn once for web and phone widths, listed on the left and rendered in a laptop frame. The right column carries what-to-look-at notes, pending decisions and a reminder that every value is invented. Copy is English, matching the DEX web."
+      }
+    },
+    "06-por-early/003-por-flow": {
+      "title": {
+        "ko": "PoR 플로우 맵 v2 - 단계 셋으로 나눈 IA",
+        "en": "PoR flow map v2 - the IA in three stages"
+      },
+      "desc": {
+        "ko": "1 단계 베팅만 먼저 내보내고 보상과 사장님 선언은 뒤 단계로 미룬 흐름이다. 진입·계정·결제처럼 가지가 안 정해진 곳은 주황 점선으로 표시했다. 아래에 단계별 표와 예외(증정금 부족, 마감 뒤 진입, 동점, 값 미발행)를 적었다.",
+        "en": "Stage one ships betting alone; rewards and owner pledges wait for later stages. Branches not yet decided - entry, account, payment - are dashed orange. A step table and the exceptions (short credit, late entry, ties, no published value) sit below."
+      }
+    },
+    "06-por-early/004-por-landing": {
+      "title": {
+        "ko": "랜딩 첫 화면 - 지구본 위에 도시 다섯",
+        "en": "Landing hero - five cities on a globe"
+      },
+      "desc": {
+        "ko": "「Call your city. Win on real data.」 두 줄 제목과 흰 CTA, 그 아래 점 지구본에 도시 핀이 찍힌다. 다크 한 색 강조 스킨이고 히어로 줌 시퀀스는 DEX 라이브 랜딩과 공유한다. 왼쪽에 절 구성 일곱을 적어 두었다.",
+        "en": "A two-line headline, a white CTA and a dotted globe with city pins beneath. Dark skin with one accent colour; the hero zoom sequence is shared with the DEX live landing. The left column lists the seven sections and what differs from the v1 app."
+      }
+    },
+    "06-por-early/005-por-v1-credit": {
+      "title": {
+        "ko": "증정금 조건 - 받기 전에 규칙 넷",
+        "en": "Credit terms - four rules before you get it"
+      },
+      "desc": {
+        "ko": "증정금이 세 단계로 풀리는 구조를 카드 셋으로, 원금은 못 빼고 상금만 1 회 회전 뒤에 뺄 수 있다는 규칙을 접이식 넷으로 두었다. 조건을 먼저 보여 주고 가입 버튼을 아래에 둔 순서가 이 화면의 판단이다. 금액 규칙은 전부 자리 표시다.",
+        "en": "Credit unlocks in three steps, shown as three cards, and the four rules - principal locked, winnings out after one turnover - as an accordion. Terms first, sign-up button after: that order is the point of the screen. Every money rule is a placeholder."
+      }
+    },
+    "06-por-early/006-por-v1-detail": {
+      "title": {
+        "ko": "상세 - 걸기 시트가 차트 위로 올라온다",
+        "en": "Detail - the stake sheet rises over the chart"
+      },
+      "desc": {
+        "ko": "대결 카드 상세에서 걸기 시트를 연 상태다. 어느 쪽인지, 금액 칩 넷, 이 비율에서의 예상 배당, 걸기 전후 증정금이 한 시트에 들어간다. 선택 전에는 버튼이 잠긴다. 배당식과 갱신 주기는 판정 대기다.",
+        "en": "The match-up detail with the stake sheet open. Side, four amount chips, estimated payout at this ratio and credit before and after fit on one sheet. The button stays locked until a side is picked. Payout formula and refresh cadence are pending."
+      }
+    },
+    "06-por-early/007-por-v1-gacha": {
+      "title": {
+        "ko": "뽑기 - 티켓은 진 판에서 나온다",
+        "en": "Gacha - tickets come from lost rounds"
+      },
+      "desc": {
+        "ko": "뽑기 티켓 수와 원형 게이지, 뽑기 전에 공개된 시드 값을 적어 결과를 운영자가 고르지 않는다고 말한다. 등급 넷에 꽝이 없고, 확률은 자리 표시다. 판당 상한과 상품 출처는 미정이다.",
+        "en": "Ticket count, a circular gauge and the seed published before the pull, saying the result is not the operator's to choose. Four tiers, no blanks; odds are placeholders. Cap per round and where prizes are funded from are open."
+      }
+    },
+    "06-por-early/008-por-v1-home": {
+      "title": {
+        "ko": "v1 홈 - 오늘의 판을 카드로 넘긴다",
+        "en": "v1 home - today's rounds as a card stack"
+      },
+      "desc": {
+        "ko": "상단에 증정금 잔액과 지갑 주소, 그 아래 오늘·이번 주·시즌·도시 칩과 판 카드다. 카드 한 장에 질문, 선택지 둘의 배당과 비율, 두 선 차트, 판 규모와 정산 시각이 들어간다. 더 많은 판이 아래로 이어진다.",
+        "en": "Credit balance and wallet address on top, then day, week, season and city chips over the round cards. One card holds the question, both sides' payout and share, a two-line chart, pool size and settle time. More rounds continue below."
+      }
+    },
+    "06-por-early/009-por-v1-locked": {
+      "title": {
+        "ko": "잠김 - 정산까지 남은 시간과 얼린 비율",
+        "en": "Locked - time to settle and the frozen split"
+      },
+      "desc": {
+        "ko": "걸고 난 뒤의 화면이다. 남은 시간을 크게, 내 픽과 반대편 값을 두 칸으로, 건 금액과 얼린 비율을 한 줄로 둔다. 차트는 정산 시각까지 계속 그려진다. 걸기를 취소할 수 있는지는 미정이라 취소 없음으로 그렸다.",
+        "en": "After staking. Time remaining in big type, my pick and the other side as two tiles, stake and frozen share in one line. The chart keeps drawing until settle time. Whether a stake can be cancelled is undecided, so it is drawn without cancel."
+      }
+    },
+    "06-por-early/010-por-v1-lotto": {
+      "title": {
+        "ko": "로또 - 대결 한 건마다 번호 하나",
+        "en": "Lotto - one number per match-up stake"
+      },
+      "desc": {
+        "ko": "주간 로또 화면이다. 대결에 걸 때마다 번호 한 자리가 쌓이고, 토요일 정해진 시각의 거래소 시세 끝자리로 당첨을 가른다. 참조 시세와 시각을 표로 적어 근거를 보이게 했다. 어떤 값을 쓸지와 도박 판정은 대기다.",
+        "en": "The weekly lotto. Each match-up stake adds a digit, and the draw comes from the trailing digits of an exchange price at a fixed Saturday time. The reference pair and time are tabled so the basis is visible. Which value counts, and the gambling question, are pending."
+      }
+    },
+    "06-por-early/011-por-v1-me": {
+      "title": {
+        "ko": "나 - 증정금 단계와 반복 보상",
+        "en": "Me - credit steps and recurring rewards"
+      },
+      "desc": {
+        "ko": "증정금 세 단계 중 끝난 것을 줄 긋고, 매주 크레딧·진 판 티켓·대결 번호 세 가지 반복 보상을 카드로 세웠다. 이번 주 내 걸기와 출금 가능액이 아래에 이어진다. 출금 자체는 지갑 화면의 일이라 여기서는 금액만 적는다.",
+        "en": "Finished credit steps struck through, then three recurring rewards - weekly credit, a ticket per lost round, a lotto digit per match-up - as cards. This week's stakes and withdrawable amount follow. Withdrawal itself belongs to the wallet screen, so only the figures appear here."
+      }
+    },
+    "06-por-early/012-por-v1-owner": {
+      "title": {
+        "ko": "사장님 선언 - 콘솔 쪽 화면",
+        "en": "Owner pledge - the console side"
+      },
+      "desc": {
+        "ko": "가게 주인이 이번 주 매출을 선언하고 참여자가 도달 여부에 거는 판의 입력 폼이다. 증명 기한, 불일치 시 재제출, 두 번 놓치면 정지 같은 규칙을 카드에 적힐 문장 그대로 보여 준다. 콘솔 페르소나의 화면이라 상단 바가 다르다.",
+        "en": "The form where a shop owner declares this week's revenue for others to call. Proof deadline, resubmission on mismatch and suspension after two misses are shown as the sentences the round card will carry. It is the console persona's screen, hence the different top bar."
+      }
+    },
+    "06-por-early/013-por-v1-result": {
+      "title": {
+        "ko": "결과 - 맞혔을 때, 두 변화율을 나란히",
+        "en": "Result - a hit, both changes side by side"
+      },
+      "desc": {
+        "ko": "「You called it」 아래 순수익을 크게 두고, 두 선택지의 변화율과 시작·정산 값을 두 칸으로 놓았다. 건 금액과 돌려받은 금액, 상금 출금 조건을 두 줄로 적었다. 동점 처리와 티켓 단위는 자리 표시다.",
+        "en": "Net winnings in big type under \"You called it\", then both sides' change with open and settle values as two tiles. Stake, return and the withdrawal condition take two lines. Tie handling and ticket units are placeholders."
+      }
+    },
+    "06-por-early/014-por-v2-home": {
+      "title": {
+        "ko": "v2 홈 - 카드 피드에서 보드로",
+        "en": "v2 home - from card feed to board"
+      },
+      "desc": {
+        "ko": "v1 의 카드 피드를 다크 보드로 다시 그렸다. 지수 활동 차트가 맨 위, 내 증정금과 다음 단계 안내, 빠른 동작, 상위 판 순이다. 판 목록보다 지수와 증정금 상태를 먼저 보여 주는 쪽으로 무게가 옮겨 갔다.",
+        "en": "The v1 card feed redrawn as a dark board. Index activity chart first, then my credit with the next-step prompt, quick actions and top rounds. The weight shifts from the round list to the index and credit state."
+      }
+    },
+    "06-por-early/015-por-v2-landing": {
+      "title": {
+        "ko": "v2 랜딩 폰 판 - 히어로와 지구본",
+        "en": "v2 landing on phone - hero and globe"
+      },
+      "desc": {
+        "ko": "랜딩을 폰 폭으로 접은 판이다. 제목 두 줄, 한 줄 설명, 흰 CTA, 점 지구본과 도시 탭이 첫 화면에 들어간다. 아래 절들은 스크롤에 맞춰 재생되는 구조라 정지 캡처에는 잡히지 않았다.",
+        "en": "The landing folded to phone width. Two-line headline, one-line pitch, white CTA, the dotted globe and city tabs fill the first screen. The sections below play on scroll, so a still capture does not show them."
+      }
+    }
+  }
+}

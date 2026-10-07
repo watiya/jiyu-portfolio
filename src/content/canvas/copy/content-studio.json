@@ -1,0 +1,96 @@
+{
+  "pages": {
+    "01-v1": { "ko": "1세대 - 만들고 제품에 반영까지", "en": "First - make it and apply it" },
+    "02-ga2": { "ko": "2세대 - 만들고 내려받기까지", "en": "Second - make it and download it" }
+  },
+  "flow": [
+    ["01-v1/001-index", "01-v1/002-token"],
+    ["02-ga2/001-index", "02-ga2/002-token"]
+  ],
+  "frames": {
+    "01-v1/001-index": {
+      "title": { "ko": "고르는 자리 - 규격이 먼저 정해져 있다", "en": "Pick a purpose - the spec is already set" },
+      "desc": {
+        "ko": "「Pick, fill, and it's made · No design skills needed」 아래 다섯 장이 목적별로 서 있고, 카드마다 규격이 이름표로 붙어 있다(1:1 SQUARE · 16:4 COVER · 1.91:1 OG · MULTIPLE RATIOS · CARD·QR POSTER). 무엇을 만들지 고르면 크기와 배치는 이미 지켜져 있다는 것이 이 화면의 약속이다.",
+        "en": "Five cards by purpose under \"pick, fill, and it's made - no design skills needed\", each labelled with the spec it produces: 1:1 square, 16:4 cover, 1.91:1 OG, multiple ratios, card and QR poster. Choosing what to make is the whole decision; size and layout are already handled."
+      }
+    },
+    "01-v1/002-token": {
+      "title": { "ko": "토큰 이미지 - 다섯 가지 만드는 법", "en": "Token image - five ways to make one" },
+      "desc": {
+        "ko": "모노그램·심볼 마크·로고+배경·풀블리드 사진·엠블럼 다섯 중에 고른다. 심볼 텍스트는 「모노그램/엠블럼에 쓰임(최대 7자)」로 쓰임과 한계를 입력칸 밑에 적었다. 오른쪽 아래 세 버튼이 Reset·Download·Apply 다 - Apply 가 있다는 것이 이 세대의 표식이다.",
+        "en": "Five ways to build one: monogram, symbol mark, logo on a background, full-bleed photo, emblem. The symbol field states its use and its limit - used in the monogram and emblem, seven characters - under the input. Three buttons sit bottom right: reset, download, apply. That apply is the marker of this generation."
+      }
+    },
+    "01-v1/003-store": {
+      "title": { "ko": "매장 사진 - 자르는 자리를 사람이 고른다", "en": "Store photo - you choose what survives the crop" },
+      "desc": {
+        "ko": "16:4 커버라 어차피 잘리므로, FIT(채우기/맞추기)와 3×3 위치 격자로 「어느 쪽을 남길지」를 먼저 묻는다. 노출·대비·채도·색온도·틴트·하이라이트·섀도 일곱 슬라이더가 붙지만 자르기가 먼저다. 목록 카드용 썸네일은 따로 올릴 수 있고, 안 올리면 커버로 대체된다.",
+        "en": "A 16:4 cover crops no matter what, so it asks which part to keep first - fill or fit, then a three-by-three position grid. Seven sliders for exposure, contrast, saturation, temperature, tint, highlights and shadows come after the crop. A separate list thumbnail can be uploaded, and falls back to the cover if not."
+      }
+    },
+    "01-v1/004-og": {
+      "title": { "ko": "공유 카드 - 같은 내용, 다른 배치", "en": "Share card - same content, different layouts" },
+      "desc": {
+        "ko": "링크를 공유했을 때 뜨는 1.91:1 카드다. 오른쪽 CASES 에 배치 일곱 벌을 미리 깔아 두고 「Same content, different layouts」라고 적었다 - 글자를 다시 쓰는 게 아니라 배치만 갈아 끼우는 것이라는 뜻이다. 매장 토큰은 토큰 에디터에서 만든 것을 끌어와 얹거나 끈다.",
+        "en": "The 1.91:1 card that appears when a link is shared. Seven layouts sit ready in the cases panel under the line \"same content, different layouts\" - you swap the arrangement rather than rewrite the words. The store token is pulled in from the token editor and can be shown or hidden."
+      }
+    },
+    "01-v1/005-event": {
+      "title": { "ko": "이벤트 배너 - 비율부터 고른다", "en": "Event banner - ratio first" },
+      "desc": {
+        "ko": "올릴 자리에 맞춰 Square·Wide·Portrait·Story 넷 중 비율을 먼저 고르고(「Pick the ratio for where you'll post it」), 그다음 배치 다섯 벌을 고른다. 배지·제목·혜택·기간 넉 줄만 채우면 되고, 그중 혜택이 배너에서 가장 큰 줄이 된다고 입력칸 밑에 적어 뒀다.",
+        "en": "Ratio comes first - square, wide, portrait, story, labelled \"pick the ratio for where you'll post it\" - then one of five layouts. Only four fields need filling: badge, title, perk, period, with a note under the perk saying it becomes the largest line on the banner."
+      }
+    },
+    "01-v1/006-launchpad": {
+      "title": { "ko": "런치패드 홍보 - 만들어 바로 보낸다", "en": "Launchpad promo - made, then sent" },
+      "desc": {
+        "ko": "판매 목표와 마감을 넣어 공유 카드나 QR 포스터를 뽑는다. 이 세대의 마지막 버튼이 「Send share card」다 - 도구가 만든 것을 그 자리에서 보내는 데까지 갔다.",
+        "en": "Enter the sale target and deadline and it produces a share card or a QR poster. The final button in this generation reads send share card - the tool went as far as sending what it made."
+      }
+    },
+    "02-ga2/001-index": {
+      "title": { "ko": "고르는 자리 - 순서가 바뀌었다", "en": "Pick a purpose - reordered" },
+      "desc": {
+        "ko": "카드도 문구도 1세대와 같은데 첫 자리가 토큰에서 매장 사진으로 바뀌었다. 픽셀로 견주면 이 화면에서 다른 곳은 그 순서뿐이다 - 새로 만들지 않고 무엇을 먼저 보여 줄지만 다시 정한 판이다.",
+        "en": "The same cards and the same words as the first generation, except the lead card moves from token to store photo. Compared pixel by pixel, the order is the only thing that differs - nothing was rebuilt, only the question of what to show first was answered again."
+      }
+    },
+    "02-ga2/002-token": {
+      "title": { "ko": "토큰 이미지 - 넷으로 줄이고 Apply 를 뺐다", "en": "Token image - four ways, and apply is gone" },
+      "desc": {
+        "ko": "스타일이 다섯에서 넷으로 줄었고(심볼 마크가 빠졌다), 대신 그라디언트를 고르면 Linear/Radial 과 각도(135°)가 열린다. 그리고 Apply 가 없어져 Reset·Download 둘만 남았다. 만든 것을 제품에 되쓰는 대신 파일로 내려받게 한 판단이 버튼 하나로 드러난다.",
+        "en": "Styles drop from five to four - the symbol mark is gone - and picking gradient now opens linear or radial with an angle. Apply has been removed, leaving only reset and download. The decision to stop writing back into the product and hand over a file instead shows up as one missing button."
+      }
+    },
+    "02-ga2/003-store": {
+      "title": { "ko": "매장 사진 - 같은 편집기, 다른 끝", "en": "Store photo - same editor, different ending" },
+      "desc": {
+        "ko": "업로드·샘플 여덟·FIT·위치 격자·슬라이더 일곱까지 1세대와 그대로다. 여기서도 Apply 만 사라졌다. 편집기를 새로 짜지 않고 마지막 한 걸음만 바꾼 것이라, 두 세대를 나란히 놓아야 무엇이 바뀌었는지 보인다.",
+        "en": "Upload, eight samples, fit, position grid and seven sliders are unchanged from the first generation. Only apply is gone here too. The editor was not rebuilt, just its last step, which is why the change is only visible with the two side by side."
+      }
+    },
+    "02-ga2/004-og": {
+      "title": { "ko": "공유 카드 - 배치 일곱 벌 그대로", "en": "Share card - the seven layouts stand" },
+      "desc": {
+        "ko": "CASES 일곱 벌과 「Same content, different layouts」가 그대로 남았다. 배치를 여러 벌 준비해 두는 방식은 1세대에서 이미 정해졌고 2세대가 손대지 않은 자리다 - 바꾼 데와 안 바꾼 데를 가르는 게 이 탭의 쓸모다.",
+        "en": "The seven cases and the line \"same content, different layouts\" carry over untouched. Preparing several arrangements was settled in the first generation and left alone in the second - telling what changed from what did not is what this tab is for."
+      }
+    },
+    "02-ga2/005-event": {
+      "title": { "ko": "이벤트 배너 - 비율 넷도 그대로", "en": "Event banner - the four ratios stand" },
+      "desc": {
+        "ko": "비율 넷·배치 다섯·입력 넉 줄이 1세대와 같다. 이 화면에서도 달라진 것은 마지막 버튼뿐이다.",
+        "en": "Four ratios, five layouts and four fields, exactly as before. Here too the only thing that changed is the last button."
+      }
+    },
+    "02-ga2/006-launchpad": {
+      "title": { "ko": "런치패드 홍보 - 여기만 늘었다", "en": "Launchpad promo - the one that grew" },
+      "desc": {
+        "ko": "여섯 중 유일하게 내용이 늘어난 화면이다. 배치 다섯 벌을 담은 CASES 가 새로 붙고, 사진 위 글자를 읽히게 하는 Scrim(배경 어둡게) 토글이 생겼다. 버튼은 「Send share card」에서 「Download share card」로 바뀌었다 - 보내던 자리가 내려받는 자리가 됐다.",
+        "en": "The only one of the six that gained anything: a cases panel with five layouts, and a scrim toggle that darkens the background so text stays readable over a photo. The button changes from send share card to download share card - the place that sent became the place that hands over a file."
+      }
+    }
+  }
+}

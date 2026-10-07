@@ -1,0 +1,299 @@
+{
+  "pages": {
+    "01-screens": { "ko": "화면과 UI 시트", "en": "Screens & UI sheets" },
+    "02-pages": { "ko": "다른 판", "en": "Another build" }
+  },
+  "flow": [
+    ["01-screens/005-home", "01-screens/006-home_tooltip"],
+    ["01-screens/017-transactions_detail1", "01-screens/018-transactions_detail2"],
+    ["01-screens/018-transactions_detail2", "01-screens/019-transactions_detail3"],
+    ["01-screens/022-tokens-nft", "01-screens/023-tokens_details1"],
+    ["01-screens/023-tokens_details1", "01-screens/024-tokens_details2"],
+    ["01-screens/025-nft_details1", "01-screens/026-nft_details2"],
+    ["01-screens/027-account_details1", "01-screens/028-account_details2"],
+    ["01-screens/028-account_details2", "01-screens/029-account_details3"],
+    ["01-screens/029-account_details3", "01-screens/030-account_details4"]
+  ],
+  "frames": {
+    "01-screens/001-scope_style-guide-01": {
+      "title": { "ko": "UI 요소 1/4 - 색과 서체", "en": "UI elements 1/4 - colour & type" },
+      "desc": {
+        "ko": "주색 #8833FF 하나에 보조색 여덟, 회색 여덟 단(Blue Gray 5~95), 본문 색 일곱을 코드까지 적어 놨다. 서체는 Roboto 세 굵기로 h1~h6·문단·목록·리드·인용을 줄높이(60·50·30)까지 정해 뒀다. 예문은 광고 문구와 달 이야기로 채운 자리표시다.",
+        "en": "One key colour #8833FF, eight secondary hues, an eight-step Blue Gray ramp and seven text colours, all with hex codes. Roboto in three weights covers h1-h6, paragraph, list, lead and blockquote with line heights spelled out; the sample text is placeholder ad copy and stray lines about the moon."
+      }
+    },
+    "01-screens/002-scope_style-guide-02": {
+      "title": { "ko": "UI 요소 2/4 - 카드와 버튼", "en": "UI elements 2/4 - cards & buttons" },
+      "desc": {
+        "ko": "모서리 5·10 카드와 그림자 여섯 단, 버튼은 둥근형·각진형 × 크기 넷 × 기본·호버·비활성에 조합 여덟 색까지. 체크박스·라디오·스위처가 뒤따르는데 섹션 제목이 「Swither」로 잘못 적혀 있다.",
+        "en": "Cards at radius 5 and 10 with a six-step shadow scale; buttons in pill and square shapes across four sizes, three states and eight colour combos. Checkbox, radio and switcher follow under a header that misspells Switcher as \"Swither\"."
+      }
+    },
+    "01-screens/003-scope_style-guide-03": {
+      "title": { "ko": "UI 요소 3/4 - 입력·드롭다운·배지", "en": "UI elements 3/4 - inputs, dropdowns, badges" },
+      "desc": {
+        "ko": "입력과 셀렉트를 모서리 30·5로 각각 크기 넷씩, 검색창은 기본·포커스·오류까지 그렸다. 페이지네이션은 첫 장·끝 장·중간 세 상태로 나눠 화살표가 언제 죽는지 보여 준다. 여기도 제목이 「Dropdowm」 오타.",
+        "en": "Inputs and selects at radius 30 and 5 in four sizes each, a search field in default, focus and error, and pagination drawn for first, last and middle pages so you can see when the arrows die. The header again slips - \"Dropdowm\"."
+      }
+    },
+    "01-screens/004-scope_style-guide-04": {
+      "title": { "ko": "UI 요소 4/4 - 모달·토스트·경고", "en": "UI elements 4/4 - modals, toasts, alerts" },
+      "desc": {
+        "ko": "모달 두 벌(취소+저장, 전체폭 확인), 토스트 여섯, 연한 경고 띠 여섯 색, 그리고 호버 판 - 표 셀 툴팁과 네트워크 드롭다운(메인넷 초록·테스트넷 주황)이 여기서 정해진다. 성공 토스트 제목은 「Sucess」로, 트랜잭션 화면이 쓰는 오타와 같다.",
+        "en": "Two modal layouts, six toasts, six tinted alert bars, and a hover sheet that fixes the cell tooltip and the network dropdown (Mainnet green, Testnet orange). The success toast is labelled \"Sucess\" - the same typo the transaction screens carry."
+      }
+    },
+    "01-screens/005-home": {
+      "title": { "ko": "홈 - 시세와 최신 목록", "en": "Home - price and latest lists" },
+      "desc": {
+        "ko": "BORA 시세와 14일 거래 추이를 위에 깔고, 최신 블록과 최신 트랜잭션을 반씩 나눠 아래를 흐리게 끊어 「더 보기」로 넘긴다. 왼쪽 레일에는 네트워크 선택·배너·소셜이 서고 계열 서비스 세 줄은 회색으로 죽어 있다.",
+        "en": "BORA price and a 14-day transaction chart on top, then latest blocks and latest transactions split half and half, faded out into a \"View More\" cut. The left rail carries the network switch, a banner and social links, with three sibling services greyed out."
+      }
+    },
+    "01-screens/006-home_tooltip": {
+      "title": { "ko": "홈 - 툴팁 켠 판", "en": "Home - tooltips shown" },
+      "desc": {
+        "ko": "FDMC 물음표·차트 꼭짓점·시각 칸의 툴팁을 한꺼번에 띄운 판. 세 자리를 한 장에 담으려고 겹쳐 둔 것이지 실제로 동시에 뜨는 상태는 아니다.",
+        "en": "The same home with three tooltips open at once - the FDMC hint, a chart point and a timestamp cell. They are stacked to document all three spots, not a state that happens in use."
+      }
+    },
+    "01-screens/007-blocks": {
+      "title": { "ko": "블록 목록 - 네트워크 펼친 판", "en": "Blocks - network dropdown open" },
+      "desc": {
+        "ko": "높이·해시·제안자·시각·TX 수·가스를 한 줄에 담은 목록 위로 네트워크 드롭다운을 펼쳐 사이드바의 Blocks·Transactions 를 덮었다. 펼친 목록은 메인넷 초록·테스트넷 주황인데 정작 위 칩의 점은 회색이라 색이 안 이어진다.",
+        "en": "The block list - height, hash, proposer, time, tx count, gas - under an open network dropdown that covers Blocks and Transactions in the sidebar. The open list colours Mainnet green and Testnet orange, yet the dot on the chip above stays grey."
+      }
+    },
+    "01-screens/008-blocks_detail": {
+      "title": { "ko": "블록 상세", "en": "Block detail" },
+      "desc": {
+        "ko": "개요 열 칸과 그 블록의 트랜잭션 표. 제목 칩은 #2297203 인데 개요의 블록 높이는 2031930 이고, 「Total TXs 25」 아래 실제 행은 셋이다. 표 머리글에는 AMOUNT 가 두 번 들어간다.",
+        "en": "A ten-field overview plus the block's transactions. The title chip reads #2297203 while the height field says 2031930, \"Total TXs 25\" sits over three rows, and the table header repeats AMOUNT twice."
+      }
+    },
+    "01-screens/009-faucet": {
+      "title": { "ko": "포싯 - 테스트 토큰 받기", "en": "Faucet - claim test tokens" },
+      "desc": {
+        "ko": "지갑 주소를 넣고 24시간에 한 번 10,000 BORA·10 KLAY·10 GAS 를 받는 화면. 메타마스크 설치부터 자산 확인까지 3단계 안내가 붙고, 성공·실패 토스트를 아래에 나란히 세워 둘 다 보인다.",
+        "en": "Enter a wallet address to claim 10,000 BORA, 10 KLAY and 10 GAS once every 24 hours, with a three-step MetaMask guide underneath and the success and failure toasts parked side by side below."
+      }
+    },
+    "01-screens/010-search_notfound": {
+      "title": { "ko": "검색 실패", "en": "Search not found" },
+      "desc": {
+        "ko": "넣은 문자열을 되비추고 「유효하지 않다」고 알리는 카드 판과, 같은 뜻을 가운데로 몰아 세운 판을 한 프레임에 겹쳐 뒀다. 안내문은 「The Search string yon entered was」로 you 가 yon 이 됐다.",
+        "en": "A card that echoes what was typed and calls it invalid, with a second centred variant stacked in the same frame. The label reads \"The Search string yon entered was\"."
+      }
+    },
+    "01-screens/011-search_404": {
+      "title": { "ko": "404", "en": "404" },
+      "desc": {
+        "ko": "없는 주소로 들어왔을 때. 검색 실패와 같은 돋보기 캐릭터를 쓰되 본문 카드를 아예 없애고 사이드바만 남겼다.",
+        "en": "The not-found page. It reuses the magnifier mascot from the search screen but drops the content card altogether, leaving only the sidebar."
+      }
+    },
+    "01-screens/012-search_result1": {
+      "title": { "ko": "검색 결과 - 블록", "en": "Search result - block" },
+      "desc": {
+        "ko": "블록 번호로 찾으면 블록 상세로 바로 보낸다. 보상이 「10,1495 GAS」로 쉼표가 소수점 자리에 찍혔고, 같은 화면인 008 과 난이도·보상 값이 서로 다르다.",
+        "en": "Searching a block number lands straight on the block page. The reward reads \"10,1495 GAS\" with a comma where the decimal belongs, and the difficulty and reward differ from 008, the same screen."
+      }
+    },
+    "01-screens/013-search_result2": {
+      "title": { "ko": "검색 결과 - 트랜잭션", "en": "Search result - transaction" },
+      "desc": {
+        "ko": "트랜잭션 해시로 찾은 결과. 상태가 「Sucess」로 적혀 있고, 금액과 수수료는 eKLAY 인데 아래 전송 목록은 tBORA 로 세어 단위가 섞인다.",
+        "en": "A transaction-hash hit. The status reads \"Sucess\", the amount and fee are denominated in eKLAY while the transfer rows below count in tBORA."
+      }
+    },
+    "01-screens/014-search_result3": {
+      "title": { "ko": "검색 결과 - 계정", "en": "Search result - account" },
+      "desc": {
+        "ko": "주소로 찾으면 계정 화면이 그대로 나온다. 027 과 같은 장인데 여기서는 표 머리글이 대문자(FROM·TO)이고 주소 옆에 복사 버튼이 붙는다 - 같은 화면이 검색 결과와 계정 상세로 두 번 들어온 셈이다.",
+        "en": "An address hit opens the account page. It is the same frame as 027 except the column headers are upper-case and a copy button sits beside the address - one screen entered twice, once as a search result and once as account detail."
+      }
+    },
+    "01-screens/015-search_result4": {
+      "title": { "ko": "검색 결과 - 토큰만", "en": "Search result - tokens only" },
+      "desc": {
+        "ko": "토큰 넷은 찾았고 NFT 칸은 「No Results Found」로 비운 판. 총 발행량이 네 줄 모두 「1,000,000,000.000000 tBORA」라 토큰마다 자기 단위가 아니라 tBORA 로 묶여 있다.",
+        "en": "Four token hits with the NFT panel left empty. All four rows carry the same \"1,000,000,000.000000 tBORA\" supply, so each token is counted in tBORA rather than its own unit."
+      }
+    },
+    "01-screens/016-search_result5": {
+      "title": { "ko": "검색 결과 - NFT만", "en": "Search result - NFTs only" },
+      "desc": {
+        "ko": "반대로 토큰 칸이 비고 NFT 셋이 찬 판. 세 줄이 이름·심볼·발행량·보유자까지 모두 같아 서로 다른 NFT 로 안 읽힌다.",
+        "en": "The mirror case - the token panel is empty and three NFT rows fill in, but all three share the same name, symbol, supply and holder count, so they do not read as different NFTs."
+      }
+    },
+    "01-screens/017-transactions_detail1": {
+      "title": { "ko": "트랜잭션 상세 - 토큰 전송", "en": "Transaction - token transfers" },
+      "desc": {
+        "ko": "개요 열두 칸 아래 탭 넷 가운데 첫째. 전송 목록에 시각 툴팁을 띄워 뒀고, 개요의 「Token Transfers 8」과 실제 행 셋이 안 맞는다.",
+        "en": "The first of four tabs under a twelve-field overview, with a timestamp tooltip open. The overview says \"Token Transfers 8\" above three rows."
+      }
+    },
+    "01-screens/018-transactions_detail2": {
+      "title": { "ko": "트랜잭션 상세 - NFT 전송", "en": "Transaction - NFT transfers" },
+      "desc": {
+        "ko": "같은 트랜잭션의 NFT 전송 탭. 다른 세 탭은 블록 높이를 78725715 로 적는데 여기만 79706864 라 한 해시가 두 블록을 가리킨다.",
+        "en": "The NFT transfer tab of the same transaction. The other three tabs place it in block 78725715 while this one says 79706864, so one hash points at two blocks."
+      }
+    },
+    "01-screens/019-transactions_detail3": {
+      "title": { "ko": "트랜잭션 상세 - 입력 데이터", "en": "Transaction - input data" },
+      "desc": {
+        "ko": "원본 16진 값과 풀어 쓴 값을 위아래로 놓아 함수 서명 transfer(address,uint256)·메서드 ID·인자를 그대로 읽게 했다.",
+        "en": "Raw hex above, decoded below - the function signature transfer(address,uint256), the method ID and the arguments laid out to be read straight off."
+      }
+    },
+    "01-screens/020-transactions_detail4": {
+      "title": { "ko": "트랜잭션 상세 - 이벤트 로그", "en": "Transaction - event logs" },
+      "desc": {
+        "ko": "컨트랙트마다 Transfer 이벤트를 From·To·Value 로 들여 써 두 벌 보여 준다. 네 탭 가운데 유일하게 세로가 늘어 프레임이 1241 이다.",
+        "en": "Two Transfer events, each indented into From, To and Value under its contract. The only one of the four tabs tall enough to push the frame to 1241px."
+      }
+    },
+    "01-screens/021-transactions": {
+      "title": { "ko": "트랜잭션 목록", "en": "Transactions" },
+      "desc": {
+        "ko": "해시·높이·시각·유형·메서드·보낸 곳/받는 곳·금액·상태 아홉 칸. 열 줄이 값까지 전부 같고, 시각은 「30 sec(s )ago」로 괄호와 공백이 어긋나 있다.",
+        "en": "Nine columns from hash to status. All ten rows carry identical values, and the time reads \"30 sec(s )ago\" with the space fallen outside the bracket."
+      }
+    },
+    "01-screens/022-tokens-nft": {
+      "title": { "ko": "토큰·NFT 목록", "en": "Tokens & NFT" },
+      "desc": {
+        "ko": "토큰과 NFT 를 한 화면에 위아래로 나눠 놨다. 위 표는 열 이름이 TICKER 인데 아래 표는 SYMBOL 이고, 검색 결과 쪽 같은 표는 둘 다 SYMBOL 을 쓴다.",
+        "en": "Tokens above, NFTs below on one page. The upper table heads the column TICKER while the lower one says SYMBOL - and the search-result version of the same table uses SYMBOL for both."
+      }
+    },
+    "01-screens/023-tokens_details1": {
+      "title": { "ko": "토큰 상세 - 전송 내역", "en": "Token detail - transfers" },
+      "desc": {
+        "ko": "BDS(Birdie Shot Token) 개요와 전송 목록. 공식 사이트 라벨이 「Offical Site」이고, 총 전송이 여기서는 50,000,000 인데 목록 화면에서는 30,598,138 이다.",
+        "en": "The BDS (Birdie Shot Token) overview and transfer list. The label reads \"Offical Site\", and total transfers say 50,000,000 here against 30,598,138 on the list page."
+      }
+    },
+    "01-screens/024-tokens_details2": {
+      "title": { "ko": "토큰 상세 - 보유자", "en": "Token detail - holders" },
+      "desc": {
+        "ko": "순위·주소·토큰 ID·수량·비중 다섯 칸. 「A total of 2,863 token holders」인데 목록 화면의 보유자는 84,251 이고, 수량 칸에는 수량 대신 「53 secs ago」가 들어가 있다. 마지막 열 제목은 「PROPOTION」.",
+        "en": "Rank, address, token ID, amount and share. It says \"A total of 2,863 token holders\" against 84,251 on the list page, the amount column shows \"53 secs ago\", and the last header reads \"PROPOTION\"."
+      }
+    },
+    "01-screens/025-nft_details1": {
+      "title": { "ko": "NFT 상세 - 전송 내역", "en": "NFT detail - transfers" },
+      "desc": {
+        "ko": "023 과 같은 장을 제목과 탭 이름만 NFT 로 바꾼 것이다. 개요 값이 그대로라 이름·심볼·발행량이 토큰 쪽과 똑같고, 마지막 열만 AMOUNT 에서 TOKEN ID 로 바뀌었다.",
+        "en": "The same frame as 023 with only the heading and tab names switched to NFT. The overview values are unchanged, so name, symbol and supply match the token page, and only the last column turns from AMOUNT into TOKEN ID."
+      }
+    },
+    "01-screens/026-nft_details2": {
+      "title": { "ko": "NFT 상세 - 보유자", "en": "NFT detail - holders" },
+      "desc": {
+        "ko": "토큰 쪽 보유자 표에서 토큰 ID 열과 총 보유자 줄을 빼고 그렸다. 토큰 ID 가 정작 필요한 쪽은 NFT 인데 반대로 갔다. 오타 「PROPOTION」은 그대로다.",
+        "en": "The token holders table with the token-ID column and the total-holders line removed - dropped from the page that would actually need an ID. The \"PROPOTION\" typo carries over."
+      }
+    },
+    "01-screens/027-account_details1": {
+      "title": { "ko": "계정 - 트랜잭션", "en": "Account - transactions" },
+      "desc": {
+        "ko": "주소·잔액·TX 수 위에 탭 다섯을 얹었다. 014 와 같은 장인데 복사 버튼 자리에 「WCODE \"a1B2c3\"」 자리표시가 남아 있고 표 머리글이 소문자다.",
+        "en": "Address, balance and tx count above five tabs. It is the same frame as 014, except a leftover `WCODE \"a1B2c3\"` placeholder stands where the copy button goes and the headers are lower-case."
+      }
+    },
+    "01-screens/028-account_details2": {
+      "title": { "ko": "계정 - 토큰 전송", "en": "Account - token transfers" },
+      "desc": {
+        "ko": "같은 계정의 토큰 전송 탭. LUNA 세 줄이 금액까지 같고, 트랜잭션 탭에 있던 상태 칸은 여기서 빠진다.",
+        "en": "The token transfer tab of the same account. Three LUNA rows match down to the amount, and the status column from the transactions tab is gone."
+      }
+    },
+    "01-screens/029-account_details3": {
+      "title": { "ko": "계정 - NFT 전송", "en": "Account - NFT transfers" },
+      "desc": {
+        "ko": "NFT 전송 탭. 마지막 열 제목은 TOKEN ID 인데 값은 0.02410254 로 수수료 숫자가 들어가 있다.",
+        "en": "The NFT transfer tab. The last column is headed TOKEN ID but carries 0.02410254, a fee figure."
+      }
+    },
+    "01-screens/030-account_details4": {
+      "title": { "ko": "계정 - 토큰 잔액", "en": "Account - token balance" },
+      "desc": {
+        "ko": "「A Total of 15 fungible token balance(s) is detected」라 적고 두 줄만 보여 준다. Wrapped LUNA Token 의 잔액에도 단위가 tBORA 로 붙는다.",
+        "en": "\"A Total of 15 fungible token balance(s) is detected\" sits above two rows, and even the Wrapped LUNA balance is denominated in tBORA."
+      }
+    },
+    "01-screens/031-none_list": {
+      "title": { "ko": "계정 - 잔액 빈 판", "en": "Account - empty balance" },
+      "desc": {
+        "ko": "030 과 같은 토큰 잔액 탭의 결과 없는 판. 시무룩한 토큰 캐릭터와 「No Results Found」만 남는다.",
+        "en": "The empty state of the same token balance tab as 030 - a glum token mascot and \"No Results Found\", nothing else."
+      }
+    },
+    "01-screens/032-account_details5": {
+      "title": { "ko": "계정 - NFT 잔액", "en": "Account - NFT balance" },
+      "desc": {
+        "ko": "「A Total of 46 Non-Fungible Token (NFT) is detected」를 빨강으로 띄운다. 토큰 잔액 탭의 같은 자리는 파랑이라 정보 줄 색이 두 탭에서 어긋난다.",
+        "en": "\"A Total of 46 Non-Fungible Token (NFT) is detected\" printed in red, while the same line on the token balance tab is blue - the info line changes colour between two tabs."
+      }
+    },
+    "02-pages/01": {
+      "title": { "ko": "홈 - 다른 판, 검색창 포커스", "en": "Home - other build, search focused" },
+      "desc": {
+        "ko": "배너가 「BIRDIE SHOT - Enjoy & Earn」 화이트리스트 이벤트로 바뀐 판. 검색창에 보라 테두리가 들어간 포커스 상태고, 네트워크 점이 주황이라 스타일 가이드가 정한 테스트넷 색을 따른다 - 화면 탭 쪽은 회색이다.",
+        "en": "The build whose banner runs the \"BIRDIE SHOT - Enjoy & Earn\" whitelist event. The search field is in its focused purple state and the network dot is orange, matching the Testnet colour the style guide sets - the Screens tab leaves it grey."
+      }
+    },
+    "02-pages/02": {
+      "title": { "ko": "트랜잭션 목록 - 다른 판", "en": "Transactions - other build" },
+      "desc": {
+        "ko": "유형이 전부 「Fee Delegated Value Transfer」이고 상태 칸이 없다. 화면 탭의 같은 목록은 「Legacy Transaction」에 상태 칸까지 있어 두 판이 다른 표를 쓴다.",
+        "en": "Every row is a \"Fee Delegated Value Transfer\" and there is no status column. The same list in the Screens tab shows \"Legacy Transaction\" with a status column, so the two builds run different tables."
+      }
+    },
+    "02-pages/03": {
+      "title": { "ko": "블록 상세 - 다른 판", "en": "Block detail - other build" },
+      "desc": {
+        "ko": "블록 높이 옆에 이전·다음 화살표가 붙고 트랜잭션 표가 금액·수수료 두 칸으로 정리됐다. 제목 칩(#2297203)과 블록 높이(2031930)가 안 맞는 것은 화면 탭과 똑같다.",
+        "en": "Prev/next arrows sit beside the block height and the transaction table settles into amount and fee columns. The title chip (#2297203) still disagrees with the height (2031930), exactly as in the Screens tab."
+      }
+    },
+    "02-pages/04": {
+      "title": { "ko": "포싯 - 다른 판", "en": "Faucet - other build" },
+      "desc": {
+        "ko": "안내문과 3단계 설명은 그대로 두고 입력칸을 넓히고 토스트를 아래로 내렸다. 안내가 가리키는 주소는 www.boraportal.cc 다.",
+        "en": "Same copy and three-step guide, with a wider input and the toasts moved further down. The guide points readers at www.boraportal.cc."
+      }
+    },
+    "02-pages/05": {
+      "title": { "ko": "UI 요소 1/4 - 큰 판", "en": "UI elements 1/4 - larger export" },
+      "desc": {
+        "ko": "화면 탭 001 과 같은 장을 2400×4500 으로 다시 받은 것이다. 색과 서체 내용은 한 글자도 안 다르고 해상도만 1.5배다.",
+        "en": "The same sheet as 001 in the Screens tab, re-exported at 2400×4500. Not a word of the colour and type content differs - only the scale, 1.5×."
+      }
+    },
+    "02-pages/06": {
+      "title": { "ko": "UI 요소 2/4 - 큰 판", "en": "UI elements 2/4 - larger export" },
+      "desc": {
+        "ko": "002 와 같은 장의 큰 판. 카드·버튼·체크박스 시트를 그대로 담고 「Swither」 오타까지 함께 넘어왔다.",
+        "en": "The larger export of 002 - the same card, button and checkbox sheet, carrying the \"Swither\" typo across with it."
+      }
+    },
+    "02-pages/07": {
+      "title": { "ko": "UI 요소 3/4 - 큰 판", "en": "UI elements 3/4 - larger export" },
+      "desc": {
+        "ko": "003 과 같은 장의 큰 판. 입력·드롭다운·배지 시트이고 「Dropdowm」 오타도 그대로다.",
+        "en": "The larger export of 003 - the input, dropdown and badge sheet, \"Dropdowm\" and all."
+      }
+    },
+    "02-pages/08": {
+      "title": { "ko": "UI 요소 4/4 - 큰 판", "en": "UI elements 4/4 - larger export" },
+      "desc": {
+        "ko": "004 와 같은 장의 큰 판. 모달·토스트·경고에 호버 판까지 같고, 여기서 테스트넷 점이 주황이라는 것을 확인할 수 있다.",
+        "en": "The larger export of 004 - modals, toasts, alerts and the hover sheet, and the place where the Testnet dot is confirmed orange."
+      }
+    }
+  }
+}

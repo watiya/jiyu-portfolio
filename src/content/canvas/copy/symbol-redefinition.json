@@ -1,0 +1,305 @@
+{
+  "frames": {
+    "001-slide-16-9---1": {
+      "title": { "ko": "표지", "en": "Cover" },
+      "desc": {
+        "ko": "제안의 결론을 표지가 먼저 보여준다. 고리 안에 3D 로 세운 별이 곧 새 심볼의 주인공이고, 뒤로 도는 화살표가 옛 핀에서 남길 부분이다.",
+        "en": "The cover states the conclusion first. The star modelled in 3D inside the ring is the new mark's subject, and the arrow curling behind it is the part of the old pin that stays."
+      }
+    },
+    "002-slide-16-9---2": {
+      "title": { "ko": "논거 1 - 의미 확장", "en": "Argument 1 - widening the meaning" },
+      "desc": {
+        "ko": "바꾸는 이유를 한 장에 세웠다. 왼쪽 옛 핀은 「위치 핀 = 단순한 위치 서비스 느낌」이고 오른쪽은 「핀 + 스타 = 도시 + 가치 창출 플랫폼」이다. 모양이 아니라 읽히는 뜻을 놓고 비교한다.",
+        "en": "The reason for the change on one slide. The old pin on the left reads as \"a location pin, a plain location service\"; the right reads as \"pin plus star, a city and a place value is made\". The comparison is about what the mark says, not how it looks."
+      }
+    },
+    "003-slide-16-9---3": {
+      "title": { "ko": "논거 1 - 영문 한 줄", "en": "Argument 1 - the English line" },
+      "desc": {
+        "ko": "같은 논지를 새 심볼 하나와 문장 하나로 줄였다. 「The new mark represents not just location, but value creation.」 아래에 「지도 서비스 느낌 → 실물경제 Web3 플랫폼으로 확장」을 적었다.",
+        "en": "The same argument reduced to one mark and one sentence: \"The new mark represents not just location, but value creation\", with the Korean line beneath reading \"from a map service to a real-economy Web3 platform\"."
+      }
+    },
+    "004-slide-16-9---4": {
+      "title": { "ko": "논거 2 - 이름과 그림을 잇다", "en": "Argument 2 - tying the name to the mark" },
+      "desc": {
+        "ko": "별 더하기 핀이 곧 Starzip = Star + Zip 이라는 것을 식으로 세웠다. Star 는 보상과 프리미엄과 Genesis 가치, Zip 은 도시와 지역과 현실 경제다. 이름의 앞 절반이 그림에 없었다는 것이 이 장의 지적이다.",
+        "en": "Star plus pin is set out as an equation: Starzip = Star + Zip. Star stands for reward, premium, and Genesis value; Zip for the city, the neighbourhood, the real economy. The point of the slide is that the first half of the name was missing from the mark."
+      }
+    },
+    "005-slide-16-9---5": {
+      "title": { "ko": "논거 3 - 키워드 넷", "en": "Argument 3 - four keywords" },
+      "desc": {
+        "ko": "겨냥하는 인상을 형용사가 아니라 낱말 넷으로 못박았다. Premium · Exclusive · Genesis · Digital Ownership 이 겹친 원으로 서고, 원의 색이 그대로 뒤 시안의 그라디언트가 된다.",
+        "en": "The impression being aimed at is pinned to four words rather than adjectives: Premium, Exclusive, Genesis, Digital Ownership, set as overlapping circles whose colours become the gradient used in the later studies."
+      }
+    },
+    "006-slide-16-9---6": {
+      "title": { "ko": "논거 3 - 앱 아이콘으로 대조", "en": "Argument 3 - compared as app icons" },
+      "desc": {
+        "ko": "논지를 가장 작은 자리에서 검증한다. 왼쪽 파란 사각 아이콘은 「네비게이션 앱 느낌」, 오른쪽 그라디언트 아이콘은 「글로벌 브랜드 느낌 · NFT / Genesis / Digital Asset」이다. 홈 화면에서 무엇으로 읽히는지가 기준이다.",
+        "en": "The argument is tested where the mark is smallest. The blue square on the left reads as a navigation app; the gradient icon on the right reads as a global brand and as NFT, Genesis, digital asset. The test is what it looks like on a home screen."
+      }
+    },
+    "007-slide-16-9---7": {
+      "title": { "ko": "논거 4 - 움직일 수 있는 모양", "en": "Argument 4 - a shape that can move" },
+      "desc": {
+        "ko": "별을 고른 실무적인 이유다. 토큰 보상 반짝임, Genesis Reveal, Airdrop 애니메이션이 전부 별에서 나오고, 랜딩과 앱과 NFT 카드와 3D 카드가 같은 동작을 쓸 수 있다. 고정된 그림이 아니라 쓸 자리를 놓고 고른 것이다.",
+        "en": "The practical reason for choosing a star. Reward sparkles, the Genesis reveal, and airdrop animations all come out of it, and the landing page, the app, the NFT card, and the 3D card can share one motion. The mark was chosen for where it has to work, not as a fixed picture."
+      }
+    },
+    "008-slide-16-9---8": {
+      "title": { "ko": "논거 5 - 시각적 장점", "en": "Argument 5 - what the shape gives you" },
+      "desc": {
+        "ko": "세 줄로 끝낸다. 단순하지만 기억에 잘 남고, 작은 크기에서도 명확하고, NFT 카드와 아이콘과 앱 아이콘 모두에서 작동한다. 뒤 두 장이 이 주장을 목업으로 증명한다.",
+        "en": "Three lines and done: simple but memorable, legible at small sizes, and working across NFT cards, icons, and app icons. The next two slides prove the claim with mockups."
+      }
+    },
+    "009-slide-16-9---9": {
+      "title": { "ko": "웹에 올린 모습", "en": "On the web" },
+      "desc": {
+        "ko": "macOS 사파리 창에 starzip.io 를 띄운 목업이다. 그라디언트 심볼과 워드마크가 히어로 한가운데 서고, 탭 제목이 「Starzip - The Global DEX for Lo…」로 잘린다.",
+        "en": "A macOS Safari window with starzip.io loaded. The gradient symbol and wordmark sit in the middle of the hero, and the tab title truncates to \"Starzip - The Global DEX for Lo…\"."
+      }
+    },
+    "010-slide-16-9---10": {
+      "title": { "ko": "소셜 프로필에 올린 모습", "en": "On a social profile" },
+      "desc": {
+        "ko": "X 프로필을 웹과 앱 두 판으로 세웠다. 앱 아이콘이 그대로 프로필 사진 자리에 들어가고, 커버는 키워드 넷의 그라디언트다. 지름 40픽셀 남짓에서도 별이 뭉개지지 않는지를 보는 자리다.",
+        "en": "An X profile in both web and app layouts. The app icon drops straight into the avatar slot and the cover is the four-keyword gradient. This is where you check whether the star survives at roughly forty pixels across."
+      }
+    },
+    "011-slide-16-9---11": {
+      "title": { "ko": "여백 규정 - starzip 가로", "en": "Clearspace - starzip, horizontal" },
+      "desc": {
+        "ko": "가로 락업 둘레에 두는 최소 여백을 격자로 적었다. 단위를 픽셀이 아니라 글자 폭으로 잡아, 로고를 키우거나 줄여도 규칙이 따라온다.",
+        "en": "The minimum clearance around the horizontal lockup, drawn as a grid. The unit is a letterform width rather than pixels, so the rule scales with the logo."
+      }
+    },
+    "012-slide-16-9---12": {
+      "title": { "ko": "여백 규정 - stargenesis 가로", "en": "Clearspace - stargenesis, horizontal" },
+      "desc": {
+        "ko": "같은 규칙을 긴 워드마크에 적용한 판이다. 글자가 길어져도 여백 단위는 그대로라, 두 브랜드가 나란히 설 때 간격이 어긋나지 않는다.",
+        "en": "The same rule applied to the longer wordmark. The clearance unit does not change with the length of the word, so the two brands keep the same spacing when they sit side by side."
+      }
+    },
+    "013-slide-16-9---13": {
+      "title": { "ko": "별 굵기 시험 둘", "en": "Two weights of the star" },
+      "desc": {
+        "ko": "핀은 그대로 두고 안쪽 별의 크기와 획 굵기만 바꿔 나란히 놨다. 별이 작으면 핀이 이기고 크면 핀의 고리가 얇아지는데, 그 사이를 눈으로 고르는 자리다.",
+        "en": "The pin stays fixed while the star inside changes size and weight. A small star lets the pin win; a large one thins the ring - this slide picks the point between them by eye."
+      }
+    },
+    "014-slide-16-9---14": {
+      "title": { "ko": "별 모양 시험 넷", "en": "Four shapes for the star" },
+      "desc": {
+        "ko": "네 벌을 늘어놓았고 마지막 하나만 사각별이 아니라 오각별이다. 오각별은 게임과 평점의 별로 먼저 읽혀 이 브랜드가 말하려는 것과 어긋난다.",
+        "en": "Four candidates in a row, the last one a five-pointed star rather than a four-pointed one. The five-pointed star reads first as a game or rating star, which is not what this brand is saying."
+      }
+    },
+    "015-slide-16-9---15": {
+      "title": { "ko": "확정 표지", "en": "Final divider" },
+      "desc": {
+        "ko": "「Symbol Final」. 여기서부터 뒤는 고르는 과정이 아니라 확정된 자산이다. 앞의 시험 장들과 섞이지 않게 표지를 끼웠다.",
+        "en": "\"Symbol Final\". From here on the deck stops exploring and starts delivering assets; the divider keeps the two halves from being read as one."
+      }
+    },
+    "016-slide-16-9---16": {
+      "title": { "ko": "확정 여백 - starzip", "en": "Final clearspace - starzip" },
+      "desc": {
+        "ko": "확정본 기준으로 여백 규정을 다시 적었다. 앞의 같은 장과 달리 번호를 떼고 「Clearspace」만 남겼는데, 제안 목차가 아니라 규정집의 한 쪽이기 때문이다.",
+        "en": "The clearance rule restated against the final mark. The section number is gone and only \"Clearspace\" remains, because this is a page of the guideline rather than an item in the proposal."
+      }
+    },
+    "017-slide-16-9---17": {
+      "title": { "ko": "확정 여백 - stargenesis", "en": "Final clearspace - stargenesis" },
+      "desc": {
+        "ko": "확정본 stargenesis 가로 락업의 여백이다. 두 브랜드가 같은 격자를 쓰므로 한쪽만 고쳐지는 일이 생기지 않는다.",
+        "en": "Clearance for the final stargenesis horizontal lockup. Both brands share one grid, so neither can drift while the other stays put."
+      }
+    },
+    "018-slide-16-9---18": {
+      "title": { "ko": "starzip 가로 - 어두운 바탕", "en": "starzip horizontal - on dark" },
+      "desc": {
+        "ko": "어두운 바탕에 흰 락업. 여기부터 아홉 장은 같은 락업을 바탕과 색만 바꿔 가며 세운 것으로, 어느 자리에 무엇을 쓰는지를 그림으로 정한다.",
+        "en": "White lockup on dark. The next nine slides run the same lockups through backgrounds and colours, settling by picture which version belongs where."
+      }
+    },
+    "019-slide-16-9---20": {
+      "title": { "ko": "stargenesis 가로 - 어두운 바탕", "en": "stargenesis horizontal - on dark" },
+      "desc": {
+        "ko": "같은 조건의 stargenesis 판이다. 글자가 길어 심볼이 상대적으로 작아 보이는데, 여백 규정이 그 비율을 고정한다.",
+        "en": "The stargenesis version under the same conditions. The longer word makes the symbol look smaller by comparison, and the clearance rule is what fixes that ratio."
+      }
+    },
+    "020-slide-16-9---21": {
+      "title": { "ko": "starzip 가로 - 밝은 바탕", "en": "starzip horizontal - on light" },
+      "desc": {
+        "ko": "밝은 바탕의 검정 락업. 색을 반전한 것이 아니라 같은 굵기로 다시 그린 판이라, 흰 로고를 그대로 뒤집었을 때 생기는 획의 번짐이 없다.",
+        "en": "Black lockup on light. It is redrawn at the same weight rather than colour-inverted, so it avoids the stroke bloom you get from simply flipping a white logo."
+      }
+    },
+    "021-slide-16-9---22": {
+      "title": { "ko": "stargenesis 가로 - 밝은 바탕", "en": "stargenesis horizontal - on light" },
+      "desc": {
+        "ko": "밝은 바탕의 stargenesis 가로 락업이다. 문서와 인쇄물처럼 바탕을 고를 수 없는 자리의 기본값이 이것이다.",
+        "en": "The stargenesis horizontal lockup on light. This is the default wherever the background cannot be chosen, such as documents and print."
+      }
+    },
+    "022-slide-16-9---23": {
+      "title": { "ko": "여백 규정 - starzip 세로", "en": "Clearspace - starzip, stacked" },
+      "desc": {
+        "ko": "심볼을 위에 두고 글자를 아래로 내린 세로 락업의 여백이다. 가로와 규칙은 같지만 기준이 되는 변이 달라 따로 적어야 한다.",
+        "en": "Clearance for the stacked lockup, symbol above and word below. The rule matches the horizontal one but measures from a different edge, so it has to be written separately."
+      }
+    },
+    "023-slide-16-9---24": {
+      "title": { "ko": "starzip 세로 - 어두운 바탕", "en": "starzip stacked - on dark" },
+      "desc": {
+        "ko": "폭이 좁은 자리에 쓰는 세로 락업이다. 가로판을 줄이는 대신 쌓는 쪽을 고른 이유는, 줄이면 글자가 먼저 안 읽히기 때문이다.",
+        "en": "The stacked lockup, for places too narrow for the horizontal one. Stacking beats shrinking because shrinking loses the word before it loses the mark."
+      }
+    },
+    "024-slide-16-9---25": {
+      "title": { "ko": "starzip 세로 - 밝은 바탕", "en": "starzip stacked - on light" },
+      "desc": {
+        "ko": "밝은 바탕의 세로 락업. 어두운 판과 나란히 두어 두 벌이 같은 자리에서 같은 크기로 보이는지 확인한다.",
+        "en": "The stacked lockup on light, set against the dark version so both can be checked for equal presence at equal size."
+      }
+    },
+    "025-slide-16-9---26": {
+      "title": { "ko": "여백 규정 - stargenesis 세로", "en": "Clearspace - stargenesis, stacked" },
+      "desc": {
+        "ko": "stargenesis 세로 락업의 여백이다. 글자가 길어 아래쪽 여백이 넓어 보이지만, 재는 단위는 starzip 과 같다.",
+        "en": "Clearance for the stacked stargenesis lockup. The longer word makes the lower margin look wider, but the unit being measured is the same as for starzip."
+      }
+    },
+    "026-slide-16-9---27": {
+      "title": { "ko": "stargenesis 세로 - 어두운 바탕", "en": "stargenesis stacked - on dark" },
+      "desc": {
+        "ko": "어두운 바탕의 stargenesis 세로 락업이다. Genesis 판매 화면처럼 배경이 검게 깔리는 자리를 겨냥한 판이다.",
+        "en": "The stacked stargenesis lockup on dark, aimed at surfaces that sit on black such as the Genesis sale screens."
+      }
+    },
+    "027-slide-16-9---28": {
+      "title": { "ko": "stargenesis 세로 - 밝은 바탕", "en": "stargenesis stacked - on light" },
+      "desc": {
+        "ko": "밝은 바탕의 stargenesis 세로 락업. 여기까지가 색을 쓰지 않는 기본 자산 한 벌이고, 다음 장부터 색이 들어간다.",
+        "en": "The stacked stargenesis lockup on light. This closes the colourless base set; colour begins on the next slide."
+      }
+    },
+    "028-slide-16-9---29": {
+      "title": { "ko": "여백 규정 - 심볼 단독", "en": "Clearspace - symbol alone" },
+      "desc": {
+        "ko": "글자 없이 심볼만 쓸 때의 여백이다. 아이콘과 파비콘과 프로필 사진이 전부 이 규정을 따르므로, 실제로 가장 자주 쓰이는 장이다.",
+        "en": "Clearance for the symbol used without the word. Icons, favicons, and avatars all follow this page, which makes it the most-used rule in the set."
+      }
+    },
+    "029-slide-16-9---30": {
+      "title": { "ko": "심볼 단독 - 어두운 바탕", "en": "Symbol alone - on dark" },
+      "desc": {
+        "ko": "흰 심볼 하나. 핀의 고리와 꼬리, 안쪽 별의 관계가 이 크기에서 가장 잘 보인다.",
+        "en": "The white symbol on its own. At this size the relationship between the ring, the tail, and the star inside is easiest to read."
+      }
+    },
+    "030-slide-16-9---31": {
+      "title": { "ko": "심볼 단독 - 밝은 바탕", "en": "Symbol alone - on light" },
+      "desc": {
+        "ko": "검정 심볼 하나. 도장이나 자수처럼 한 색으로만 찍는 자리를 위한 판이다.",
+        "en": "The black symbol on its own, for anywhere it has to be reproduced in a single colour such as a stamp or embroidery."
+      }
+    },
+    "031-slide-16-9---32": {
+      "title": { "ko": "starzip 가로 - 브랜드 파랑", "en": "starzip horizontal - brand blue" },
+      "desc": {
+        "ko": "여기부터 색이 붙는다. starzip 은 파랑 한 색으로 가고, 뒤의 stargenesis 는 그라디언트로 간다 - 두 브랜드를 색으로 갈랐다.",
+        "en": "Colour starts here. starzip takes a single blue while stargenesis, later in the deck, takes a gradient: the two brands are separated by colour treatment."
+      }
+    },
+    "032-slide-16-9---33": {
+      "title": { "ko": "starzip 세로 - 브랜드 파랑", "en": "starzip stacked - brand blue" },
+      "desc": {
+        "ko": "파란 세로 락업이다. 가로판과 같은 파랑을 쓰므로 두 배치가 한 화면에 섞여도 색이 어긋나지 않는다.",
+        "en": "The stacked lockup in brand blue, using the same blue as the horizontal one so the two arrangements never clash on one screen."
+      }
+    },
+    "033-slide-16-9---34": {
+      "title": { "ko": "심볼 단독 - 브랜드 파랑", "en": "Symbol alone - brand blue" },
+      "desc": {
+        "ko": "파란 심볼 하나. 앱 아이콘과 파비콘의 기본값이 여기서 나온다.",
+        "en": "The symbol alone in brand blue. The app icon and the favicon take their default from here."
+      }
+    },
+    "034-slide-16-9---35": {
+      "title": { "ko": "stargenesis 가로 - 그라디언트", "en": "stargenesis horizontal - gradient" },
+      "desc": {
+        "ko": "보라에서 주황으로 넘어가는 그라디언트를 심볼과 글자에 함께 걸었다. 키워드 넷의 원에서 뽑은 색이라 앞 논지와 이어진다.",
+        "en": "A violet-to-orange gradient carried across both symbol and word. The colours come from the four-keyword circles, so the treatment traces back to the argument."
+      }
+    },
+    "035-slide-16-9---36": {
+      "title": { "ko": "stargenesis 세로 - 연한 그라디언트", "en": "stargenesis stacked - soft gradient" },
+      "desc": {
+        "ko": "세로 락업에 그라디언트를 건 첫 판이다. 분홍 쪽으로 치우쳐 대비가 낮고, 다음 장이 같은 배치를 더 진하게 간다.",
+        "en": "The first gradient pass on the stacked lockup, weighted toward pink and low in contrast. The next slide runs the same arrangement harder."
+      }
+    },
+    "036-slide-16-9---37": {
+      "title": { "ko": "stargenesis 세로 - 진한 그라디언트", "en": "stargenesis stacked - strong gradient" },
+      "desc": {
+        "ko": "같은 세로 락업을 보라에서 주황까지 넓게 걸었다. 앞 장과 나란히 놓으면 그라디언트의 폭을 어디까지 벌릴지가 이 두 장의 쟁점임이 보인다.",
+        "en": "The same stacked lockup with the gradient stretched from violet to orange. Set beside the previous slide, the pair makes clear that the question being settled is how far the gradient should travel."
+      }
+    },
+    "037-slide-16-9---38": {
+      "title": { "ko": "아이콘과 글자를 나눈 판", "en": "Icon and word, split" },
+      "desc": {
+        "ko": "그라디언트를 심볼에만 두고 글자는 검정으로 남겼다. 색이 두 번 나오면 서로 겨루므로, 밝은 바탕에서는 이쪽이 안전한 조합이다.",
+        "en": "The gradient stays on the symbol and the word is left black. Two colour events compete with each other, so on light backgrounds this is the safer pairing."
+      }
+    },
+    "038-slide-16-9---39": {
+      "title": { "ko": "심볼 단독 - 그라디언트", "en": "Symbol alone - gradient" },
+      "desc": {
+        "ko": "그라디언트를 건 심볼 하나. 이 한 장이 stargenesis 쪽 앱 아이콘의 바탕이 된다.",
+        "en": "The gradient symbol on its own. This one frame is what the stargenesis app icons are built from."
+      }
+    },
+    "039-slide-16-9---40": {
+      "title": { "ko": "워드마크 단독", "en": "Wordmark alone" },
+      "desc": {
+        "ko": "심볼을 떼고 글자만 그라디언트로 남겼다. 심볼이 이미 옆이나 위에 서 있는 자리에서 같은 그림을 두 번 쓰지 않기 위한 판이다.",
+        "en": "The symbol dropped, the word left carrying the gradient. It exists so the mark is not repeated where the symbol already sits alongside or above."
+      }
+    },
+    "040-slide-16-9---41": {
+      "title": { "ko": "Dust - 별 입자", "en": "Dust - the star as particles" },
+      "desc": {
+        "ko": "별을 로고에서 떼어 낸 입자 세 벌이다. 그라디언트 큰 별, 파란 원 안의 흰 별, 거의 점에 가까운 작은 별. 논거 4 에서 말한 반짝임과 리빌 효과가 실제로 쓸 조각이 이것이다.",
+        "en": "The star lifted out of the logo as three particles: a large gradient star, a white star inside a blue disc, and one small enough to read as a dot. These are the actual pieces behind the sparkle and reveal effects promised in argument four."
+      }
+    },
+    "041-layer_1": {
+      "title": { "ko": "앱 아이콘 - 그라디언트", "en": "App icon - gradient" },
+      "desc": {
+        "ko": "1024 정사각 앱 아이콘. 보라에서 주황으로 흐르는 바탕에 흰 심볼을 얹었고, 스토어에 올리는 원본 크기 그대로다.",
+        "en": "The 1024 square app icon: a white symbol over a violet-to-orange field, at the size the stores take."
+      }
+    },
+    "042-layer_1": {
+      "title": { "ko": "앱 아이콘 - 파랑", "en": "App icon - blue" },
+      "desc": {
+        "ko": "같은 아이콘의 파란 판이다. starzip 쪽 기본값으로, 그라디언트판보다 작은 크기에서 형태가 덜 흔들린다.",
+        "en": "The blue version of the same icon and the starzip default. The shape holds steadier at small sizes than the gradient one does."
+      }
+    },
+    "043-layer_1": {
+      "title": { "ko": "앱 아이콘 - 남보라", "en": "App icon - indigo" },
+      "desc": {
+        "ko": "파랑과 그라디언트 사이에 둔 남보라 판이다. 셋을 나란히 놓고 홈 화면에서 어느 것이 가장 멀리서 읽히는지를 고르게 했다.",
+        "en": "An indigo pass sitting between the flat blue and the gradient. The three are presented together so the choice can be made on which reads from furthest away on a home screen."
+      }
+    }
+  }
+}

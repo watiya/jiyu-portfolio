@@ -1,0 +1,618 @@
+{
+  "pages": {
+    "01-screens": { "ko": "화면", "en": "Screens" },
+    "02-pages": { "ko": "옛 소개", "en": "Older pages" }
+  },
+  "flow": [
+    ["01-screens/005-moida_signup_additionalstep1-2", "01-screens/006-moida_signup_additionalstep2-2-1"],
+    ["01-screens/006-moida_signup_additionalstep2-2-1", "01-screens/007-moida_signup_additionalstep2-2-complete"],
+
+    ["01-screens/013-circles_request_order", "01-screens/014-circles_request_error_low-credits"],
+    ["01-screens/013-circles_request_order", "01-screens/016-circles_request_complete"],
+
+    ["01-screens/017-circles_mercenary_main", "01-screens/019-circles_mercenary_post"],
+    ["01-screens/020-circles_mercenary_detail_user_lol", "01-screens/021-circles_mercenary_join_user"],
+    ["01-screens/021-circles_mercenary_join_user", "01-screens/022-circles_mercenary_detail_full"],
+    ["01-screens/023-circles_mercenary_detail_manager", "01-screens/024-circles_mercenary_access_manager"],
+
+    ["01-screens/033-playfolio_info_career", "01-screens/035-playfolio_info_career_api_lol"],
+    ["01-screens/045-search", "01-screens/046-search_results"],
+
+    ["01-screens/060-settings", "01-screens/061-settings_identityverification"],
+    ["01-screens/062-settings_withdrawal_step2", "01-screens/063-settings_withdrawal_step3"],
+    ["01-screens/063-settings_withdrawal_step3", "01-screens/064-settings_withdrawal_step4"],
+    ["01-screens/071-settings_credits_purchase", "01-screens/072-settings_credits_verification"],
+    ["01-screens/071-settings_credits_purchase", "01-screens/073-payment_success-error"]
+  ],
+  "frames": {
+    "01-screens/001-home_pre-login": {
+      "title": { "ko": "홈, 들어오기 전", "en": "Home, signed out" },
+      "desc": {
+        "ko": "히어로와 검색, 파트너 카드, 모집 중인 파티, 게임 목록을 한 장에 이어 붙인 첫 화면.",
+        "en": "The whole first page in one frame - hero and search, partner cards, open parties, the game list."
+      }
+    },
+    "01-screens/002-naoda_sign-up": {
+      "title": { "ko": "가입은 NAODA 것을 쓴다", "en": "Sign-up reuses NAODA" },
+      "desc": {
+        "ko": "화면이 아니라 원본 파일에 남아 있던 쪽지다. 가입 절차는 NAODA 것을 그대로 준용한다고 적혀 있다.",
+        "en": "Not a screen but a note left in the source file: sign-up follows NAODA's flow as-is."
+      }
+    },
+    "01-screens/003-sign-in_verification": {
+      "title": { "ko": "로그인 본인확인, 미정", "en": "Sign-in verification, undecided" },
+      "desc": {
+        "ko": "「제공 방식 / 법리 검토 진행중」 한 줄만 있는 자리다. 정해지지 않아 화면을 안 그렸다.",
+        "en": "A placeholder reading \"delivery method / legal review in progress\". Undecided, so nothing was drawn."
+      }
+    },
+    "01-screens/004-sign-up_verification": {
+      "title": { "ko": "가입 본인확인, 미정", "en": "Sign-up verification, undecided" },
+      "desc": {
+        "ko": "앞 장과 같은 쪽지가 가입 쪽에도 한 번 더 서 있다.",
+        "en": "The same placeholder, repeated on the sign-up side."
+      }
+    },
+    "01-screens/005-moida_signup_additionalstep1-2": {
+      "title": { "ko": "약관 동의", "en": "Terms" },
+      "desc": {
+        "ko": "필수 둘과 선택 하나. 「모두 동의합니다」가 맨 위에 서고 아래로 항목이 갈린다.",
+        "en": "Two required, one optional. \"Agree to all\" sits on top, the items split out below."
+      }
+    },
+    "01-screens/006-moida_signup_additionalstep2-2-1": {
+      "title": { "ko": "추가 정보", "en": "Extra details" },
+      "desc": {
+        "ko": "닉네임과 네 갈래 취향을 받는다. 성별은 고르면 못 바꾸므로 저장 전에 한 번 더 묻는다.",
+        "en": "A nickname and four either-or preferences. Gender can't be changed later, so it asks once more before saving."
+      }
+    },
+    "01-screens/007-moida_signup_additionalstep2-2-complete": {
+      "title": { "ko": "가입 완료", "en": "Signed up" },
+      "desc": {
+        "ko": "한 줄과 단추 하나. 가입 직후에 더 시키지 않는다.",
+        "en": "One line and one button. Nothing more is asked right after sign-up."
+      }
+    },
+    "01-screens/008-moida_signup_additionalstep2-2-banned": {
+      "title": { "ko": "정지된 계정", "en": "Suspended account" },
+      "desc": {
+        "ko": "제재로 막힌 계정이 들어왔을 때. 문의할 곳을 본문 안에 링크로 둔다.",
+        "en": "Shown when a sanctioned account signs in. Where to appeal is linked inside the message."
+      }
+    },
+    "01-screens/009-home_logged-in": {
+      "title": { "ko": "홈, 들어온 뒤 - 상단바만", "en": "Home, signed in - top bar only" },
+      "desc": {
+        "ko": "본문을 안 그린 자리다. 로그인 뒤 헤더가 검색·알림·크레딧·프로필로 바뀌는 것만 담겨 있다.",
+        "en": "The body was never drawn. Only the signed-in header - search, alerts, credits, profile - is here."
+      }
+    },
+    "01-screens/010-circles_duo_main": {
+      "title": { "ko": "듀오 목록", "en": "Duo list" },
+      "desc": {
+        "ko": "왼쪽 기둥이 게임과 거르개, 가운데가 파트너 카드다. 카드마다 별점·의뢰 받은 수·한 판 값이 붙는다.",
+        "en": "Games and filters run down the left, partner cards fill the middle. Each card carries a rating, order count, and price per game."
+      }
+    },
+    "01-screens/011-circles_duo_filter": {
+      "title": { "ko": "듀오 거르개", "en": "Duo filters" },
+      "desc": {
+        "ko": "왼쪽 기둥을 다섯 단계로 펼쳐 본 것. 게임을 고르면 그 게임에만 있는 티어가 아래로 붙는다.",
+        "en": "The left rail opened out in five steps. Picking a game appends the tiers that only that game has."
+      }
+    },
+    "01-screens/012-circles_duo_more": {
+      "title": { "ko": "게임 더 보기", "en": "More games" },
+      "desc": {
+        "ko": "기둥에 다 안 들어가는 게임은 모달로 편다.",
+        "en": "Games that don't fit the rail open in a modal."
+      }
+    },
+    "01-screens/013-circles_request_order": {
+      "title": { "ko": "의뢰하기", "en": "Place an order" },
+      "desc": {
+        "ko": "오른쪽에서 시트가 들어온다. 서비스와 수량을 고치면 총가격·총 개수·최종 금액이 그 자리에서 다시 선다.",
+        "en": "A sheet slides in from the right. Change the service or the count and the totals restate themselves in place."
+      }
+    },
+    "01-screens/014-circles_request_error_low-credits": {
+      "title": { "ko": "크레딧이 모자랄 때", "en": "Not enough credits" },
+      "desc": {
+        "ko": "막지 않고 충전으로 보낸다. 주문 시트는 뒤에 그대로 남아 있다.",
+        "en": "It doesn't dead-end - it sends you to top up. The order sheet stays behind, untouched."
+      }
+    },
+    "01-screens/015-payment_success-error": {
+      "title": { "ko": "결제 알림 두 벌", "en": "Payment toasts" },
+      "desc": {
+        "ko": "성공과 실패를 같은 자리에 겹쳐 그려 둔 규격이다. 실제로는 하나만 뜬다.",
+        "en": "Success and failure drawn stacked in one frame to spec the slot. Only one ever shows."
+      }
+    },
+    "01-screens/016-circles_request_complete": {
+      "title": { "ko": "의뢰 완료", "en": "Order complete" },
+      "desc": {
+        "ko": "완료를 누르는 순간 값이 파트너에게 넘어가므로, 넘어간다는 말을 제목 아래에 적어 둔다.",
+        "en": "Confirming hands the payment to the partner, so the modal says so right under the title."
+      }
+    },
+    "01-screens/017-circles_mercenary_main": {
+      "title": { "ko": "용병 목록", "en": "Mercenary list" },
+      "desc": {
+        "ko": "듀오가 사람을 고르는 곳이라면 여기는 파티를 고르는 곳이다. 카드가 남은 자리 수를 앞세운다.",
+        "en": "Duo is where you pick a person; this is where you pick a party. Each card leads with seats left."
+      }
+    },
+    "01-screens/018-circles_mercenary_filter": {
+      "title": { "ko": "용병 거르개", "en": "Mercenary filters" },
+      "desc": {
+        "ko": "게임을 안 고른 상태와 고른 상태. 안 고르면 매치타입·포지션·티어가 통째로 빠진다.",
+        "en": "Before and after a game is chosen. Without one, match type, position, and tier drop out entirely."
+      }
+    },
+    "01-screens/019-circles_mercenary_post": {
+      "title": { "ko": "파티 등록", "en": "Post a party" },
+      "desc": {
+        "ko": "「용병 뛰어요」와 「용병 찾아요」 두 갈래를, 게임을 고르기 전과 뒤로 갈라 네 벌 그렸다.",
+        "en": "Two kinds of post - joining or recruiting - each drawn before and after a game is picked."
+      }
+    },
+    "01-screens/020-circles_mercenary_detail_user_lol": {
+      "title": { "ko": "파티 상세, 방문자", "en": "Party detail, visitor" },
+      "desc": {
+        "ko": "위에 조건, 아래에 자리표. 아직 안 들어간 사람에게는 입장하기와 초대하기만 보인다.",
+        "en": "Conditions above, the seat grid below. Someone who hasn't joined sees only Join and Invite."
+      }
+    },
+    "01-screens/021-circles_mercenary_join_user": {
+      "title": { "ko": "입장 신청", "en": "Ask to join" },
+      "desc": {
+        "ko": "호스트에게 보내는 한 줄은 25자다. 넘긴 상태를 옆에 나란히 그려 뒀다.",
+        "en": "The note to the host is capped at 25 characters. The over-limit state sits right beside it."
+      }
+    },
+    "01-screens/022-circles_mercenary_detail_full": {
+      "title": { "ko": "파티 상세, 들어온 뒤", "en": "Party detail, joined" },
+      "desc": {
+        "ko": "입장하기가 나가기로 바뀌고 내 카드에 Me가 붙는다. 리뷰가 없어 별점이 1.00으로 선다.",
+        "en": "Join becomes Leave and my card is marked Me. With no reviews yet the rating reads 1.00."
+      }
+    },
+    "01-screens/023-circles_mercenary_detail_manager": {
+      "title": { "ko": "파티 상세, 호스트", "en": "Party detail, host" },
+      "desc": {
+        "ko": "종료하기·초대하기·신청 관리하기가 붙는다. 한 자리는 정보를 못 불러온 상태로 그려 뒀다.",
+        "en": "End, Invite, and Manage requests appear. One seat is deliberately drawn as a failed load."
+      }
+    },
+    "01-screens/024-circles_mercenary_access_manager": {
+      "title": { "ko": "신청 관리", "en": "Manage requests" },
+      "desc": {
+        "ko": "신청자와 한 줄 글을 표로 세우고 수락·거절을 오른쪽에 둔다. 쪽수까지 붙는다.",
+        "en": "Applicants and their one-liners in a table, accept and decline on the right. It paginates."
+      }
+    },
+    "01-screens/025-circles_mercenary_detail_ongoing": {
+      "title": { "ko": "신청이 밀렸을 때", "en": "Requests waiting" },
+      "desc": {
+        "ko": "신청 관리하기에 빨간 숫자가 붙는다. 호스트가 화면을 떠나 있어도 밀린 게 보이는 자리다.",
+        "en": "A red count rides on Manage requests - the one place a host sees a backlog without opening it."
+      }
+    },
+    "01-screens/026-circles_mercenary_detail_ended": {
+      "title": { "ko": "끝난 파티", "en": "Party ended" },
+      "desc": {
+        "ko": "대기중이 진행완료로 바뀌고 단추가 죽는다. 채워지지 않은 자리는 빈 카드로 남긴다.",
+        "en": "Waiting turns to finished and the buttons go dead. Seats that never filled stay as empty cards."
+      }
+    },
+    "01-screens/027-playfolio_main": {
+      "title": { "ko": "플레이폴리오, 남의 프로필", "en": "Playfolio, someone else" },
+      "desc": {
+        "ko": "커버와 소개, 팔로우·채팅하기. 점 세 개에 신고하기와 차단하기가 들어 있다.",
+        "en": "Cover, bio, Follow and Chat. Report and Block live under the three dots."
+      }
+    },
+    "01-screens/028-playfolio_unregistered_before-login": {
+      "title": { "ko": "아직 회원이 아닌 사람", "en": "Not a member yet" },
+      "desc": {
+        "ko": "전적은 보이지만 프로필은 흐리다. 게임 기록이 먼저 있고 계정이 나중이라는 순서다.",
+        "en": "The match record shows while the profile stays blurred - the game history exists before the account does."
+      }
+    },
+    "01-screens/029-playfolio_unregistered_after-login": {
+      "title": { "ko": "같은 화면, 들어온 뒤", "en": "The same, signed in" },
+      "desc": {
+        "ko": "회원가입 자리에 프로필 링크 복사가 들어선다. 내가 부를 수 있는 사람으로 바뀐다.",
+        "en": "Sign up gives way to Copy profile link - the visitor becomes someone who can invite."
+      }
+    },
+    "01-screens/030-playfolio_main_edit_1": {
+      "title": { "ko": "내 프로필, 편집 들어가기", "en": "My profile, entering edit" },
+      "desc": {
+        "ko": "커버 위에 프로필 편집이 뜬다. 아래에 단추 습작이 남아 있다.",
+        "en": "Edit profile floats over the cover. Button studies are still parked at the bottom."
+      }
+    },
+    "01-screens/031-playfolio_main_edit_2": {
+      "title": { "ko": "내 프로필, 편집 중", "en": "My profile, editing" },
+      "desc": {
+        "ko": "소개글 200자와 취향 토글이 제자리에서 열린다. 프로필 사진은 보기와 바꾸기로 갈린다.",
+        "en": "The 200-character bio and the preference toggles open in place. The avatar splits into view and replace."
+      }
+    },
+    "01-screens/032-playfolio_profile_view": {
+      "title": { "ko": "프로필 사진 보기", "en": "Avatar, full size" },
+      "desc": {
+        "ko": "원본을 그대로 띄운다. 자르거나 덧대지 않는다.",
+        "en": "The original, shown as-is. Nothing cropped, nothing overlaid."
+      }
+    },
+    "01-screens/033-playfolio_info_career": {
+      "title": { "ko": "내 정보, 아직 빈 상태", "en": "My info, still empty" },
+      "desc": {
+        "ko": "계정 연동과 이력작성 두 빈 자리를 나란히 둔다. 자동으로 채우는 길과 손으로 쓰는 길이다.",
+        "en": "Two empty slots side by side - link an account, or write it yourself."
+      }
+    },
+    "01-screens/034-playfolio_info_career_none": {
+      "title": { "ko": "남의 프로필, 이력이 없을 때", "en": "Someone else, no history" },
+      "desc": {
+        "ko": "빈 자리에 권유를 안 넣는다. 남의 프로필이라 시킬 일이 없다.",
+        "en": "No prompt in the empty state. It's not your profile, so there's nothing to ask of you."
+      }
+    },
+    "01-screens/035-playfolio_info_career_api_lol": {
+      "title": { "ko": "게임 이력, 롤 연동", "en": "History, League linked" },
+      "desc": {
+        "ko": "랭크와 최근 20판, 칭찬도장이 한 덩어리다. 오른쪽에 연동 전후 아이콘 상태를 따로 떼 뒀다.",
+        "en": "Rank, the last twenty games, and commendations as one block. The icon states before and after linking sit off to the right."
+      }
+    },
+    "01-screens/036-playfolio_info_career_api_val": {
+      "title": { "ko": "게임 이력, 발로란트", "en": "History, Valorant" },
+      "desc": {
+        "ko": "같은 틀에 발로란트를 얹었다. 커버까지 게임을 따라가므로 화면 색이 통째로 바뀐다.",
+        "en": "The same block with Valorant in it. The cover follows the game, so the whole screen changes colour."
+      }
+    },
+    "01-screens/037-playfolio_info_career_api_tft": {
+      "title": { "ko": "게임 이력, 전략적 팀 전투", "en": "History, TFT" },
+      "desc": {
+        "ko": "승패가 아니라 등수인 게임이라 도넛 대신 등수 그래프가 들어간다.",
+        "en": "A placement game, not a win-loss one, so the donut gives way to a placement chart."
+      }
+    },
+    "01-screens/038-platfolio_info_career_edit_typea": {
+      "title": { "ko": "이력 추가와 수정", "en": "Add and edit history" },
+      "desc": {
+        "ko": "게임을 아이콘으로 고르고 기간을 월·년으로 받는다. 「지금도 하고 있어요」를 켜면 끝 날짜가 죽는다.",
+        "en": "Pick the game by icon, give a month and year. Ticking \"still playing\" kills the end date."
+      }
+    },
+    "01-screens/039-playfolio_info_career_noapi": {
+      "title": { "ko": "연동이 없는 게임", "en": "Games with no API" },
+      "desc": {
+        "ko": "메이플·블소처럼 불러올 수 없는 게임은 손으로 적는다. 자동 이력과 같은 카드 안에 섞어 세운다.",
+        "en": "Games that can't be pulled in get typed by hand, and stand in the same card as the automatic ones."
+      }
+    },
+    "01-screens/040-playfolio_services_visitor-view": {
+      "title": { "ko": "서비스 탭, 방문자", "en": "Services, visitor" },
+      "desc": {
+        "ko": "파는 것과 열린 파티가 위, 리뷰가 아래, 후원·선물 랭킹이 오른쪽 기둥이다.",
+        "en": "What's for sale and what's open on top, reviews below, the sponsor and gift rankings down the right."
+      }
+    },
+    "01-screens/041-playfolio_services_owner-view": {
+      "title": { "ko": "서비스 탭, 주인", "en": "Services, owner" },
+      "desc": {
+        "ko": "의뢰하기 자리에 서비스 관리가 들어서고, 코멘트마다 점 세 개가 생긴다.",
+        "en": "Order becomes Manage services, and every comment grows a three-dot menu."
+      }
+    },
+    "01-screens/042-playfolio_services_edit": {
+      "title": { "ko": "서비스 관리", "en": "Manage services" },
+      "desc": {
+        "ko": "프로필 숨기기가 맨 위다. 숨긴 동안은 새 의뢰가 안 들어온다는 것을 옆에 적어 둔다.",
+        "en": "Hiding the profile comes first, with a note that no new orders arrive while it's hidden."
+      }
+    },
+    "01-screens/043-playfolio_services_review": {
+      "title": { "ko": "리뷰와 코멘트", "en": "Reviews and comments" },
+      "desc": {
+        "ko": "돈이 오간 리뷰와 그냥 남기는 코멘트를 탭으로 가른다. 리뷰에만 의뢰 수가 붙는다.",
+        "en": "Paid reviews and free comments split into two tabs. Only the reviews carry an order count."
+      }
+    },
+    "01-screens/044-playfolio_services_review_submit-type-a": {
+      "title": { "ko": "리뷰·코멘트 쓰기", "en": "Writing a review" },
+      "desc": {
+        "ko": "별점과 태그 최대 셋. 코멘트 쪽은 게임을 먼저 고르게 하고, 지우기는 한 번 더 묻는다.",
+        "en": "A star rating and up to three tags. Comments pick a game first; deleting asks once more."
+      }
+    },
+    "01-screens/045-search": {
+      "title": { "ko": "검색 열기", "en": "Search, opened" },
+      "desc": {
+        "ko": "화면 위에 얹는다. 최근 검색이 없을 때를 두 크기로 그려 뒀다.",
+        "en": "It lays over the page. The no-recent-searches state is drawn at two widths."
+      }
+    },
+    "01-screens/046-search_results": {
+      "title": { "ko": "검색 결과", "en": "Results" },
+      "desc": {
+        "ko": "모이다 유저와 게임 닉네임을 갈라 센다. 같은 글자라도 찾는 대상이 둘이다.",
+        "en": "MOIDA users and in-game nicknames are counted separately - one query, two things to find."
+      }
+    },
+    "01-screens/047-search_noresult": {
+      "title": { "ko": "결과 없음", "en": "No results" },
+      "desc": {
+        "ko": "찾던 말을 그대로 되돌려 준다.",
+        "en": "It reads the typed term back to you."
+      }
+    },
+    "01-screens/048-search_skeleton": {
+      "title": { "ko": "두 글자 전과 기다리는 동안", "en": "Too short, and loading" },
+      "desc": {
+        "ko": "두 글자가 안 되면 붉은 한 줄로 막고, 넘어가면 뼈대를 깔아 둔다.",
+        "en": "Under two characters it stops with a red line; past that, a skeleton holds the space."
+      }
+    },
+    "01-screens/049-notification": {
+      "title": { "ko": "알림", "en": "Notifications" },
+      "desc": {
+        "ko": "7일까지만 본다는 것을 맨 위에 적는다. 팔로우·의뢰·제재·선물·공지가 한 줄기로 흐른다.",
+        "en": "A line at the top says only seven days are kept. Follows, orders, sanctions, gifts, and notices share one stream."
+      }
+    },
+    "01-screens/050-notification_no-alarm": {
+      "title": { "ko": "알림 없음", "en": "Nothing new" },
+      "desc": {
+        "ko": "7일 안내는 남겨 둔다. 비어 있는 것과 못 보는 것을 헷갈리지 않게.",
+        "en": "The seven-day line stays, so empty isn't mistaken for expired."
+      }
+    },
+    "01-screens/051-채팅하기_통합": {
+      "title": { "ko": "파티 채팅", "en": "Party chat" },
+      "desc": {
+        "ko": "목록과 대화가 화면 오른쪽에 겹으로 붙는다. 파티방에서는 호스트에게 강퇴가 생긴다.",
+        "en": "The list and the thread stack on the right edge. In a party room the host also gets Kick."
+      }
+    },
+    "01-screens/052-채팅하기_일반채팅": {
+      "title": { "ko": "1:1 채팅", "en": "One to one" },
+      "desc": {
+        "ko": "상대 이름을 누르면 작은 프로필이 뜨고, 거기서 바로 채팅·선물·신고로 갈린다.",
+        "en": "Tapping a name opens a small profile that branches straight into chat, gift, or report."
+      }
+    },
+    "01-screens/053-채팅하기_의뢰하기": {
+      "title": { "ko": "채팅에 서는 의뢰", "en": "Orders inside chat" },
+      "desc": {
+        "ko": "의뢰 요청·취소·도착을 시스템 말풍선으로 세운다. 요청한 쪽과 받은 쪽 문안을 갈라 뒀다.",
+        "en": "Requests, cancellations, and arrivals appear as system bubbles, worded differently for each side."
+      }
+    },
+    "01-screens/054-채팅하기_채팅없을때": {
+      "title": { "ko": "대화가 없을 때", "en": "No conversations" },
+      "desc": {
+        "ko": "목록 칸만 남고 대화 칸이 접힌다. 빈 목록에 가짜 줄을 안 깐다.",
+        "en": "Only the list panel stays; the thread panel folds away. No fake rows in an empty list."
+      }
+    },
+    "01-screens/055-채팅하기_용병이끝났을때": {
+      "title": { "ko": "파티가 끝난 방", "en": "After the party ends" },
+      "desc": {
+        "ko": "지난 말은 남기고 입력만 막는다. 막힌 이유를 입력칸 바로 위에 적는다.",
+        "en": "Past messages stay, only the input closes - with the reason written right above it."
+      }
+    },
+    "01-screens/056-gift": {
+      "title": { "ko": "선물 고르기", "en": "Picking a gift" },
+      "desc": {
+        "ko": "대화 위로 서랍이 올라온다. 값이 붙은 열두 칸과 내가 가진 도넛이 아래에 함께 선다.",
+        "en": "A drawer rises over the thread: twelve priced items, with your own balance below them."
+      }
+    },
+    "01-screens/057-gift_party": {
+      "title": { "ko": "파티방에서 선물", "en": "Gifting in a party" },
+      "desc": {
+        "ko": "같은 서랍인데 받을 사람을 먼저 고르라는 줄이 하나 더 붙는다.",
+        "en": "The same drawer, plus one more line: choose who receives it first."
+      }
+    },
+    "01-screens/058-gift_party_select": {
+      "title": { "ko": "선물이 오간 뒤", "en": "After a gift" },
+      "desc": {
+        "ko": "도착·보냄을 노란 말풍선으로 남긴다. 여럿에게 보냈으면 받은 사람 보기가 붙는다.",
+        "en": "Arrivals and sends stay as yellow bubbles; a group gift adds a link to see who got one."
+      }
+    },
+    "01-screens/059-gnb_setting": {
+      "title": { "ko": "프로필 서랍", "en": "Account drawer" },
+      "desc": {
+        "ko": "잔액이 맨 위, 설정 다섯 줄이 가운데, 파트너 지원하기가 따로 떨어져 아래에 선다.",
+        "en": "Balance on top, five settings in the middle, and Apply as a partner set apart at the bottom."
+      }
+    },
+    "01-screens/060-settings": {
+      "title": { "ko": "설정, 프로필 정보", "en": "Settings, profile" },
+      "desc": {
+        "ko": "왼쪽에 여섯 줄짜리 설정 기둥. 닉네임과 성별은 못 바꾼다고 칸마다 적어 둔다.",
+        "en": "A six-item rail on the left. Each locked field says outright that it can't be changed."
+      }
+    },
+    "01-screens/061-settings_identityverification": {
+      "title": { "ko": "본인 인증", "en": "Identity check" },
+      "desc": {
+        "ko": "수집 항목·목적·보유기간을 탭으로 나눠 읽히고 나서 휴대폰 인증으로 넘긴다.",
+        "en": "What's collected, why, and for how long - split into tabs, then on to phone verification."
+      }
+    },
+    "01-screens/062-settings_withdrawal_step2": {
+      "title": { "ko": "탈퇴 1 - 이유", "en": "Leaving 1 - why" },
+      "desc": {
+        "ko": "일곱 갈래를 겹쳐 고를 수 있다. 기타를 켜야 글칸이 살아난다.",
+        "en": "Seven reasons, multi-select. The text box only wakes up when Other is ticked."
+      }
+    },
+    "01-screens/063-settings_withdrawal_step3": {
+      "title": { "ko": "탈퇴 2 - 무엇이 사라지는지", "en": "Leaving 2 - what goes" },
+      "desc": {
+        "ko": "지워지는 것과 남는 것을 네 갈래로 갈라 적는다. 남은 도넛이 1,000원을 넘으면 탈퇴가 막힌다.",
+        "en": "Four blocks on what's erased and what isn't. Over ₩1,000 of unspent balance blocks the exit."
+      }
+    },
+    "01-screens/064-settings_withdrawal_step4": {
+      "title": { "ko": "탈퇴 3 - 끝", "en": "Leaving 3 - done" },
+      "desc": {
+        "ko": "한 줄과 홈으로. 붙잡지 않는다.",
+        "en": "One line and a way home. No last-minute hold."
+      }
+    },
+    "01-screens/065-settings_request_submitted": {
+      "title": { "ko": "의뢰 관리, 내가 보낸 것", "en": "Orders I placed" },
+      "desc": {
+        "ko": "주문한 듀오와 들어간 용병방을 표 둘로 나눈다. 상태에 따라 오른쪽 단추가 달라진다.",
+        "en": "Duos ordered and parties joined, in two tables. The right-hand button follows the state."
+      }
+    },
+    "01-screens/066-settings_request_received": {
+      "title": { "ko": "의뢰 관리, 내가 받은 것", "en": "Orders I received" },
+      "desc": {
+        "ko": "같은 표를 파트너 쪽에서 본다. 신청접수 줄에만 수락과 거절이 붙는다.",
+        "en": "The same table from the partner's side. Only the pending row gets accept and decline."
+      }
+    },
+    "01-screens/067-settings_request_detail-review": {
+      "title": { "ko": "내역과 리뷰", "en": "Usage and review" },
+      "desc": {
+        "ko": "한 판씩 언제 썼는지 세우고 거기서 바로 리뷰를 쓴다. 아무것도 없을 때를 옆에 뒀다.",
+        "en": "Each use listed by time, with the review written from that row. The empty case sits beside it."
+      }
+    },
+    "01-screens/068-settings_request_cancel": {
+      "title": { "ko": "신청 취소", "en": "Cancel a request" },
+      "desc": {
+        "ko": "되돌릴 수 없는 일이라 한 번 묻는다.",
+        "en": "One confirmation, because it can't be undone."
+      }
+    },
+    "01-screens/069-settings_credits_history": {
+      "title": { "ko": "크레딧, 내 잔고", "en": "Credits, my balance" },
+      "desc": {
+        "ko": "충전·선물·의뢰·환불이 한 표에 섞여 흐른다. 나간 것만 붉게 적는다.",
+        "en": "Top-ups, gifts, orders, and refunds share one ledger. Only what leaves is written in red."
+      }
+    },
+    "01-screens/070--settings_credits_withdraw": {
+      "title": { "ko": "크레딧, 정산", "en": "Credits, payout" },
+      "desc": {
+        "ko": "파트너가 받아 갈 쪽이다. 다음 정산일과 최소 인출액을 숫자 옆에 붙여 둔다.",
+        "en": "The partner's side. The next payout date and the minimum sit right next to the number."
+      }
+    },
+    "01-screens/071-settings_credits_purchase": {
+      "title": { "ko": "충전하기", "en": "Top up" },
+      "desc": {
+        "ko": "아홉 묶음을 격자로 놓고 고른 값과 단추를 화면 맨 아래에 고정한다.",
+        "en": "Nine bundles in a grid, with the chosen amount and the button pinned to the bottom of the screen."
+      }
+    },
+    "01-screens/072-settings_credits_verification": {
+      "title": { "ko": "충전 전 본인 확인", "en": "Verify before paying" },
+      "desc": {
+        "ko": "처음 한 번만 묻는다는 것을 먼저 알리고 나서 동의 창으로 넘긴다.",
+        "en": "It says up front that this is asked only once, then hands off to the consent sheet."
+      }
+    },
+    "01-screens/073-payment_success-error": {
+      "title": { "ko": "충전 결과", "en": "Payment result" },
+      "desc": {
+        "ko": "충전 화면 위에 성공과 실패를 겹쳐 그렸다. 자리만 정하는 규격이다.",
+        "en": "Success and failure stacked over the top-up page - the frame specs the slot, not the moment."
+      }
+    },
+    "01-screens/074-report": {
+      "title": { "ko": "신고하기", "en": "Report" },
+      "desc": {
+        "ko": "사유는 다섯 갈래에서 고르고 파일은 필수다. 안 채우면 위에서 붉은 알림이 내려온다.",
+        "en": "Five reasons to choose from and a required attachment. Skip one and a red toast drops from the top."
+      }
+    },
+    "01-screens/075-settings_creator": {
+      "title": { "ko": "파트너스 현황", "en": "Partner status" },
+      "desc": {
+        "ko": "지금 등급 한 줄과 신청 단추뿐이다. 일반 유저·Fren·Creator·Pro 네 단이다.",
+        "en": "One line for the current tier and a button to apply. Four tiers: user, Fren, Creator, Pro."
+      }
+    },
+    "01-screens/076-settings_creator": {
+      "title": { "ko": "파트너 프로그램 소개", "en": "Partner programme" },
+      "desc": {
+        "ko": "Fren과 Creator를 한 장에서 갈라 설명하고 각각 지원으로 보낸다. 왜·무엇을·누가 세 칸이 두 번 반복된다.",
+        "en": "Fren and Creator explained side by side on one page, each with its own apply button. Why, what, and who, twice over."
+      }
+    },
+    "01-screens/077-404": {
+      "title": { "ko": "없는 페이지", "en": "Not found" },
+      "desc": {
+        "ko": "마스코트를 세우고 이전 화면으로만 보낸다. 홈으로 밀지 않는다.",
+        "en": "The mascot, and one way back to the previous screen. It doesn't shove you home."
+      }
+    },
+    "01-screens/078-moida_privacy": {
+      "title": { "ko": "개인정보 보호정책", "en": "Privacy policy" },
+      "desc": {
+        "ko": "13개 조항을 세 칸으로 나눠 먼저 보여 주고 본문이 아래로 흐른다.",
+        "en": "Thirteen clauses laid out in three columns up front, with the text flowing underneath."
+      }
+    },
+
+    "02-pages/01": {
+      "title": { "ko": "프로필, 옛 시안", "en": "Profile, earlier draft" },
+      "desc": {
+        "ko": "게임 이력을 세우는 방식은 지금과 같다. 사진과 이름이 실물이던 때다.",
+        "en": "The game-history block already works the way it does now - back when the faces and names were real."
+      }
+    },
+    "02-pages/02": {
+      "title": { "ko": "경기 상세", "en": "Match detail" },
+      "desc": {
+        "ko": "한 판을 열면 양 팀이 승패 색으로 갈린다. 지금 화면에는 안 남은 자리다.",
+        "en": "Opening one match splits the two teams by win and loss. This one didn't survive into the current set."
+      }
+    },
+    "02-pages/03": {
+      "title": { "ko": "채팅, 옛 시안", "en": "Chat, earlier draft" },
+      "desc": {
+        "ko": "프로필 위에 채팅을 겹치는 구조가 여기서 굳었다.",
+        "en": "This is where laying the chat over the profile settled."
+      }
+    },
+    "02-pages/04": {
+      "title": { "ko": "선물, 옛 시안", "en": "Gifting, earlier draft" },
+      "desc": {
+        "ko": "선물 서랍이 열두 칸으로 정해진 자리.",
+        "en": "Where the gift drawer settled on twelve slots."
+      }
+    },
+    "02-pages/05": {
+      "title": { "ko": "서비스 탭, 옛 시안", "en": "Services, earlier draft" },
+      "desc": {
+        "ko": "서비스·파티·리뷰·랭킹의 배치가 지금과 같다.",
+        "en": "Services, parties, reviews, and rankings already sit where they sit now."
+      }
+    },
+    "02-pages/06": {
+      "title": { "ko": "서비스 탭, 가운데 정렬 안", "en": "Services, centred variant" },
+      "desc": {
+        "ko": "프로필을 가운데로 세우고 리뷰와 코멘트를 나란히 놓아 본 것. 이 안은 안 갔다.",
+        "en": "A try at centring the profile and running reviews and comments side by side. Not the one that shipped."
+      }
+    }
+  }
+}

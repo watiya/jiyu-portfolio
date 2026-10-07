@@ -1,0 +1,9 @@
+{
+  "pages": {
+    "01-guide": { "ko": "쓰는 법", "en": "Guide" },
+    "02-components": { "ko": "공통 부품", "en": "Components" },
+    "03-marketplace": { "ko": "마켓플레이스", "en": "Marketplace" },
+    "04-stakehouse": { "ko": "스테이크하우스", "en": "StakeHouse" },
+    "05-takeshop": { "ko": "테이크샵", "en": "TakeShop" }
+  }
+}

@@ -1,0 +1,1922 @@
+{
+  "pages": {
+    "01-season": {
+      "ko": "시즌 - 초기 탐색",
+      "en": "Season - early exploration"
+    },
+    "02-v2": {
+      "ko": "v2",
+      "en": "v2"
+    },
+    "03-v3": {
+      "ko": "v3",
+      "en": "v3"
+    },
+    "04-v4": {
+      "ko": "v4",
+      "en": "v4"
+    },
+    "05-v5": {
+      "ko": "v5",
+      "en": "v5"
+    },
+    "06-v6": {
+      "ko": "v6",
+      "en": "v6"
+    },
+    "07-v7": {
+      "ko": "v7",
+      "en": "v7"
+    },
+    "08-v8": {
+      "ko": "v8",
+      "en": "v8"
+    },
+    "09-star2": {
+      "ko": "2 · v1",
+      "en": "2 · v1"
+    },
+    "12-star2-v2": {
+      "ko": "2 · v2",
+      "en": "2 · v2"
+    },
+    "13-star2-v3": {
+      "ko": "2 · v3",
+      "en": "2 · v3"
+    },
+    "14-star2-v4": {
+      "ko": "2 · v4",
+      "en": "2 · v4"
+    },
+    "15-star2-v5": {
+      "ko": "2 · v5",
+      "en": "2 · v5"
+    },
+    "16-district": {
+      "ko": "동네 등급표 · 놀이기구",
+      "en": "District grade and rides"
+    },
+    "17-hood-ox": {
+      "ko": "O/X 픽",
+      "en": "O/X pick"
+    },
+    "18-viewer": {
+      "ko": "뷰어 · 플로우",
+      "en": "Viewer and flow"
+    }
+  },
+  "flow": [
+    [
+      "01-season/007-hub",
+      "01-season/006-home"
+    ],
+    [
+      "01-season/006-home",
+      "01-season/005-games"
+    ],
+    [
+      "01-season/005-games",
+      "01-season/001-g1-tip"
+    ],
+    [
+      "01-season/005-games",
+      "01-season/002-g2-zone"
+    ],
+    [
+      "01-season/005-games",
+      "01-season/003-g3-minority"
+    ],
+    [
+      "01-season/005-games",
+      "01-season/004-g4-receipt"
+    ],
+    [
+      "01-season/002-g2-zone",
+      "01-season/011-save"
+    ],
+    [
+      "01-season/006-home",
+      "01-season/013-shop"
+    ],
+    [
+      "01-season/008-me",
+      "01-season/010-reward"
+    ],
+    [
+      "02-v2/007-hub",
+      "02-v2/006-home"
+    ],
+    [
+      "02-v2/006-home",
+      "02-v2/005-games"
+    ],
+    [
+      "02-v2/005-games",
+      "02-v2/001-g1-tip"
+    ],
+    [
+      "02-v2/005-games",
+      "02-v2/002-g2-zone"
+    ],
+    [
+      "02-v2/005-games",
+      "02-v2/003-g3-minority"
+    ],
+    [
+      "02-v2/005-games",
+      "02-v2/004-g4-receipt"
+    ],
+    [
+      "02-v2/002-g2-zone",
+      "02-v2/010-save"
+    ],
+    [
+      "02-v2/006-home",
+      "02-v2/011-shop"
+    ],
+    [
+      "02-v2/008-me",
+      "02-v2/009-reward"
+    ],
+    [
+      "03-v3/003-hub",
+      "03-v3/002-home"
+    ],
+    [
+      "03-v3/002-home",
+      "03-v3/007-wcup"
+    ],
+    [
+      "03-v3/002-home",
+      "03-v3/001-guess"
+    ],
+    [
+      "03-v3/002-home",
+      "03-v3/006-shop"
+    ],
+    [
+      "03-v3/006-shop",
+      "03-v3/007-wcup"
+    ],
+    [
+      "03-v3/004-me",
+      "03-v3/005-reward"
+    ],
+    [
+      "04-v4/003-hub",
+      "04-v4/002-home"
+    ],
+    [
+      "04-v4/002-home",
+      "04-v4/004-map"
+    ],
+    [
+      "04-v4/004-map",
+      "04-v4/007-shop"
+    ],
+    [
+      "04-v4/002-home",
+      "04-v4/008-wcup"
+    ],
+    [
+      "04-v4/002-home",
+      "04-v4/001-guess"
+    ],
+    [
+      "04-v4/002-home",
+      "04-v4/005-me"
+    ],
+    [
+      "04-v4/005-me",
+      "04-v4/006-reward"
+    ],
+    [
+      "05-v5/003-hub",
+      "05-v5/002-home"
+    ],
+    [
+      "05-v5/002-home",
+      "05-v5/007-shop"
+    ],
+    [
+      "05-v5/002-home",
+      "05-v5/004-map"
+    ],
+    [
+      "05-v5/004-map",
+      "05-v5/008-wcup"
+    ],
+    [
+      "05-v5/004-map",
+      "05-v5/001-guess"
+    ],
+    [
+      "05-v5/005-me",
+      "05-v5/006-reward"
+    ],
+    [
+      "06-v6/003-hub",
+      "06-v6/002-home"
+    ],
+    [
+      "06-v6/002-home",
+      "06-v6/007-shop"
+    ],
+    [
+      "06-v6/002-home",
+      "06-v6/004-map"
+    ],
+    [
+      "06-v6/004-map",
+      "06-v6/008-wcup"
+    ],
+    [
+      "06-v6/004-map",
+      "06-v6/001-guess"
+    ],
+    [
+      "06-v6/005-me",
+      "06-v6/006-reward"
+    ],
+    [
+      "07-v7/003-hub",
+      "07-v7/002-home"
+    ],
+    [
+      "07-v7/002-home",
+      "07-v7/001-guess"
+    ],
+    [
+      "07-v7/001-guess",
+      "07-v7/007-save"
+    ],
+    [
+      "07-v7/001-guess",
+      "07-v7/008-share"
+    ],
+    [
+      "07-v7/002-home",
+      "07-v7/011-wcup"
+    ],
+    [
+      "07-v7/002-home",
+      "07-v7/010-stopit"
+    ],
+    [
+      "07-v7/004-map",
+      "07-v7/009-shop"
+    ],
+    [
+      "07-v7/005-me",
+      "07-v7/006-reward"
+    ],
+    [
+      "08-v8/004-hub",
+      "08-v8/003-home"
+    ],
+    [
+      "08-v8/003-home",
+      "08-v8/002-guess"
+    ],
+    [
+      "08-v8/002-guess",
+      "08-v8/008-save"
+    ],
+    [
+      "08-v8/002-guess",
+      "08-v8/009-share"
+    ],
+    [
+      "08-v8/003-home",
+      "08-v8/012-wcup"
+    ],
+    [
+      "08-v8/003-home",
+      "08-v8/011-stopit"
+    ],
+    [
+      "08-v8/005-map",
+      "08-v8/010-shop"
+    ],
+    [
+      "08-v8/007-reward",
+      "08-v8/001-coupon"
+    ],
+    [
+      "08-v8/015-web-hub",
+      "08-v8/014-web-home"
+    ],
+    [
+      "08-v8/014-web-home",
+      "08-v8/016-web-local"
+    ],
+    [
+      "08-v8/014-web-home",
+      "08-v8/013-web-coupon"
+    ],
+    [
+      "09-star2/003-home",
+      "09-star2/004-join"
+    ],
+    [
+      "09-star2/003-home",
+      "09-star2/012-wait"
+    ],
+    [
+      "09-star2/012-wait",
+      "09-star2/008-result"
+    ],
+    [
+      "09-star2/008-result",
+      "09-star2/010-share"
+    ],
+    [
+      "09-star2/003-home",
+      "09-star2/002-guess"
+    ],
+    [
+      "09-star2/005-map",
+      "09-star2/006-market"
+    ],
+    [
+      "09-star2/006-market",
+      "09-star2/011-ticker"
+    ],
+    [
+      "09-star2/007-me",
+      "09-star2/009-reward"
+    ],
+    [
+      "09-star2/009-reward",
+      "09-star2/001-coupon"
+    ],
+    [
+      "12-star2-v2/001-home",
+      "12-star2-v2/003-join"
+    ],
+    [
+      "12-star2-v2/001-home",
+      "12-star2-v2/008-wait"
+    ],
+    [
+      "12-star2-v2/008-wait",
+      "12-star2-v2/006-result"
+    ],
+    [
+      "12-star2-v2/006-result",
+      "12-star2-v2/007-share"
+    ],
+    [
+      "12-star2-v2/001-home",
+      "12-star2-v2/005-region"
+    ],
+    [
+      "12-star2-v2/004-me",
+      "12-star2-v2/002-invite"
+    ],
+    [
+      "13-star2-v3/001-home",
+      "13-star2-v3/002-market"
+    ],
+    [
+      "13-star2-v3/002-market",
+      "13-star2-v3/005-ticker"
+    ],
+    [
+      "13-star2-v3/005-ticker",
+      "13-star2-v3/003-positions"
+    ],
+    [
+      "13-star2-v3/003-positions",
+      "13-star2-v3/004-settle"
+    ],
+    [
+      "14-star2-v4/001-home",
+      "14-star2-v4/003-join"
+    ],
+    [
+      "14-star2-v4/001-home",
+      "14-star2-v4/008-wait"
+    ],
+    [
+      "14-star2-v4/008-wait",
+      "14-star2-v4/006-result"
+    ],
+    [
+      "14-star2-v4/006-result",
+      "14-star2-v4/007-share"
+    ],
+    [
+      "14-star2-v4/001-home",
+      "14-star2-v4/005-region"
+    ],
+    [
+      "14-star2-v4/004-me",
+      "14-star2-v4/002-invite"
+    ],
+    [
+      "15-star2-v5/001-web-home",
+      "15-star2-v5/003-web-join"
+    ],
+    [
+      "15-star2-v5/001-web-home",
+      "15-star2-v5/008-web-wait"
+    ],
+    [
+      "15-star2-v5/008-web-wait",
+      "15-star2-v5/006-web-result"
+    ],
+    [
+      "15-star2-v5/006-web-result",
+      "15-star2-v5/007-web-share"
+    ],
+    [
+      "15-star2-v5/001-web-home",
+      "15-star2-v5/005-web-region"
+    ],
+    [
+      "15-star2-v5/004-web-me",
+      "15-star2-v5/002-web-invite"
+    ],
+    [
+      "16-district/003-district-index",
+      "16-district/004-district-neighborhood-age"
+    ],
+    [
+      "16-district/003-district-index",
+      "16-district/007-district-store-guess"
+    ],
+    [
+      "16-district/003-district-index",
+      "16-district/005-district-neighborhood-change"
+    ],
+    [
+      "16-district/003-district-index",
+      "16-district/006-district-prediction-market"
+    ],
+    [
+      "17-hood-ox/003-hood-ox-pick",
+      "17-hood-ox/005-hood-ox-result"
+    ],
+    [
+      "17-hood-ox/005-hood-ox-result",
+      "17-hood-ox/004-hood-ox-rank"
+    ],
+    [
+      "17-hood-ox/004-hood-ox-rank",
+      "17-hood-ox/002-hood-ox-me"
+    ]
+  ],
+  "frames": {
+    "01-season/001-g1-tip": {
+      "title": {
+        "ko": "게임 ① 안 알려진 집 적기",
+        "en": "Game 1 - name an unlisted store"
+      },
+      "desc": {
+        "ko": "가게 이름을 적으면 많이 적힌 순으로 쌓이는 판. 상가정보에 없는 이름은 「확인 불가」로 두고 순위에서 뺀다. 위에 정책 판정 대기 배너가 아직 통째로 붙어 있다.",
+        "en": "Type a store name and it stacks up by how often it was named. Names missing from the registry are marked unverifiable and kept out of the ranking. The policy-pending banner still sits inline at the top."
+      }
+    },
+    "01-season/002-g2-zone": {
+      "title": {
+        "ko": "게임 ② 이번 주 가장 붐빌 골목",
+        "en": "Game 2 - the busiest alley this week"
+      },
+      "desc": {
+        "ko": "골목 다섯 곳 중 하나를 고르는 예측. 막대는 지난주 결제액을 서로 견준 것이고 금액은 안 보여 준다. 참여 무료에 틀려도 차감이 없어야 가볍게 찍는다.",
+        "en": "Pick one of five alleys. Bars compare last week's spend without showing amounts. Free to enter and no penalty for a miss, so people actually guess."
+      }
+    },
+    "01-season/003-g3-minority": {
+      "title": {
+        "ko": "게임 ③ 소수결 - 답은 참여자가 만든다",
+        "en": "Game 3 - minority wins, players make the answer"
+      },
+      "desc": {
+        "ko": "다른 사람이 가장 적게 고른 곳을 맞히는 판. 정답이 미리 없고 열 명이 모여야 열린다. 마감까지 분포를 숨기는 이유를 화면 아래에 적어 두었다.",
+        "en": "Guess the option fewest people pick. There is no preset answer and it needs ten players to open. Why the distribution stays hidden until close is spelled out at the bottom."
+      }
+    },
+    "01-season/004-g4-receipt": {
+      "title": {
+        "ko": "게임 ④ 영수증 올리기",
+        "en": "Game 4 - upload a receipt"
+      },
+      "desc": {
+        "ko": "성수에서 결제한 영수증을 24시간 안에 올리면 쌓이는 판. 상호·사업자번호·날짜를 읽고 국세청·상가정보와 맞춰 보되 카드번호는 안 본다는 원칙을 화면에 적었다.",
+        "en": "Upload a receipt from a Seongsu purchase within 24 hours. The screen states what gets read (name, business number, date) and that card numbers are never kept."
+      }
+    },
+    "01-season/005-games": {
+      "title": {
+        "ko": "오늘의 게임 - 넷을 한 자리에",
+        "en": "Today's games - four in one place"
+      },
+      "desc": {
+        "ko": "게임 네 장을 열림·곧·잠김으로 나눠 놓고 아래에 오늘의 문제와 로컬 대결 세 줄을 붙였다. 여는 조건이 게임마다 다르다는 메모가 맨 아래에 있다.",
+        "en": "Four game cards split into open, soon and locked, with today's quiz and three local match-ups below. A note at the bottom says each game opens on its own condition."
+      }
+    },
+    "01-season/006-home": {
+      "title": {
+        "ko": "홈 - 골목별 점포 수를 지도에",
+        "en": "Home - alley store counts on the map"
+      },
+      "desc": {
+        "ko": "성수 지도 위에 골목 이름과 점포 수를 라벨로 얹었다. 아래에 오늘 열린 게임 수와 1위 가게 한 줄. 이 판에서는 가게가 아니라 골목이 단위다.",
+        "en": "Alley names and store counts sit as labels on the Seongsu map. Below, how many games are open today and the top store in one line. In this build the unit is the alley, not the store."
+      }
+    },
+    "01-season/007-hub": {
+      "title": {
+        "ko": "허브 - 열린 로컬은 하나",
+        "en": "Hub - one local open"
+      },
+      "desc": {
+        "ko": "성수만 열려 있고 아홉 곳은 「곧 열림」. 로그인 없이 바로 본다. 상권 목록은 회의 결정이라 전부 「임시」 태그를 달아 두었다.",
+        "en": "Only Seongsu is open; nine more are marked coming soon. No login needed. The list of areas came from a meeting, so every row wears a temporary tag."
+      }
+    },
+    "01-season/008-me": {
+      "title": {
+        "ko": "내 기록 - 이 기기에만 있는 P",
+        "en": "My record - points that live on this device"
+      },
+      "desc": {
+        "ko": "쌓은 P·적중률·연속·순위 넷을 위에 두고 그 위에 「계정에 저장」을 얹었다. 내 픽, 내 영수증, 내가 적은 곳, P 내역이 아래로 이어진다. 연속 일수는 가정값이라고 적어 두었다.",
+        "en": "Four stats on top, with a save-to-account nudge above them. My picks, receipts, named stores and a point ledger follow. The streak count is flagged as a placeholder."
+      }
+    },
+    "01-season/009-our-hood-star": {
+      "title": {
+        "ko": "첫 웹 컨셉 - 어디 사세요?",
+        "en": "First web concept - where do you live?"
+      },
+      "desc": {
+        "ko": "동네를 고르면 그 동네에서 사람들이 가장 찾는 가게가 나온다는 한 줄과 검색창, 오른쪽에 수도권 지도. 게임이 들어오기 전, 순위 서비스로 시작한 판이다.",
+        "en": "A search box, one sentence about finding the most-visited stores in your neighbourhood, and a metro map on the right. Before any games came in, this started as a ranking service."
+      }
+    },
+    "01-season/010-reward": {
+      "title": {
+        "ko": "보상 - 쌓은 P로 바꾸기",
+        "en": "Rewards - spend the points"
+      },
+      "desc": {
+        "ko": "바꿀 수 있는 것을 글자 줄로 나열했다. 계정 없음·가입 벽·바꿈 세 상태를 위에서 고른다. 여기 값은 전부 예시이고 P는 쌓고 바꾸는 데만 쓴다고 적어 두었다.",
+        "en": "Redeemable items as plain text rows, with three preview states above. All values are examples, and points exist only to earn and spend."
+      }
+    },
+    "01-season/011-save": {
+      "title": {
+        "ko": "저장 - 게임 결과 직후 한 번",
+        "en": "Save - once, right after a result"
+      },
+      "desc": {
+        "ko": "가입을 막지 않고 결과를 본 자리에서 한 번만 저장을 권한다. 「나중에」를 고르면 그대로 논다. 왜 이 자리인지를 화면에 적었다.",
+        "en": "Sign-up never blocks play; the save prompt appears once, right where the result lands. Choose later and you keep playing. The screen explains why this spot."
+      }
+    },
+    "01-season/012-season-v2": {
+      "title": {
+        "ko": "동네시즌 - 이름이 다르던 때",
+        "en": "Before the name - neighbourhood season"
+      },
+      "desc": {
+        "ko": "「우리 동네 판 만들기」 두 단계 중 첫 단계, 어디에 사시나요. 시즌·PT·연속 표시가 헤더에 있다. 이름도 화폐도 지금과 다른 가장 이른 판이다.",
+        "en": "Step one of two, where do you live, under a season header with PT and streak. The earliest build here, with a different name and a different currency."
+      }
+    },
+    "01-season/013-shop": {
+      "title": {
+        "ko": "가게 - 순위와 점수를 붙인 판",
+        "en": "Store - rank and score attached"
+      },
+      "desc": {
+        "ko": "3위, 점수, 영수증 수, 적힘 횟수를 실명 옆에 붙였다. 정책 판정 대기 배너가 위에, 본체 연결 자리는 빈 점선 박스로 아래에 있다.",
+        "en": "Rank, score, receipt count and mention count sit next to the real store name. A policy-pending banner on top; the slot for linking to the main app is an empty dashed box below."
+      }
+    },
+    "01-season/014-ux-b": {
+      "title": {
+        "ko": "모바일 B안 - 지도 위, 목록 아래",
+        "en": "Mobile layout B - map on top, list below"
+      },
+      "desc": {
+        "ko": "지도를 위에 반, 아래에 내 동네·성동구·서울 탭과 가게 순위. 오늘의 문제가 한 줄 막대로 사이에 낀다. 하단 탭은 순위·판·나 셋뿐이다.",
+        "en": "Half map on top, ranking list with area tabs below, today's quiz as a progress bar between them. The bottom bar has only three tabs."
+      }
+    },
+    "01-season/015-ux-c": {
+      "title": {
+        "ko": "모바일 C안 - 지도가 전부",
+        "en": "Mobile layout C - the map is everything"
+      },
+      "desc": {
+        "ko": "골목 칩이 위에, 지도가 화면 전체, 오늘의 문제는 아래에 접혀 있고 1위 가게 시트가 그 밑에 걸린다. 목록은 끌어올려야 보인다.",
+        "en": "Alley chips on top, full-screen map, today's quiz collapsed at the bottom with the top store sheet under it. The list only appears when pulled up."
+      }
+    },
+    "01-season/016-ux-d": {
+      "title": {
+        "ko": "모바일 D안 - 지도에 묻는다",
+        "en": "Mobile layout D - ask the map"
+      },
+      "desc": {
+        "ko": "지도 위에 질문 칩(오늘의 문제, 우리 동네 1위, 어디가 뜨고 있어?)과 「이 동네에 무엇이 궁금하세요?」 입력창. 순위 목록 대신 대화형 입구를 시험했다.",
+        "en": "Question chips and a text field asking what you want to know about this neighbourhood, over the map. A conversational entry tried in place of a ranking list."
+      }
+    },
+    "01-season/017-ux-panel": {
+      "title": {
+        "ko": "목록 패널 자리 실험",
+        "en": "Where the list panel goes"
+      },
+      "desc": {
+        "ko": "왼쪽·오른쪽·아래·양쪽 넷 중 고르는 토글. 지금은 왼쪽이고, 지도가 오른쪽으로 넓게 남으며 상세를 열면 패널이 두 겹이 된다는 메모가 붙어 있다.",
+        "en": "A toggle between left, right, bottom and both. Left is current; the note says the map stays wide on the right and opening a detail stacks a second panel."
+      }
+    },
+    "01-season/018-web-a": {
+      "title": {
+        "ko": "웹 A안 - 지도 왼쪽, 오른쪽에 전부",
+        "en": "Web A - map left, everything right"
+      },
+      "desc": {
+        "ko": "지도가 왼쪽 2/3, 오른쪽 패널에 오늘의 게임 네 장과 가게 순위가 세로로 쌓인다. 헤더에 로컬 선택과 「계정 없음」 칩.",
+        "en": "Map takes two thirds on the left; the right panel stacks four game cards and the store ranking. The header holds the local picker and a no-account chip."
+      }
+    },
+    "01-season/019-web-b": {
+      "title": {
+        "ko": "웹 B안 - 왼쪽 사이드바",
+        "en": "Web B - left sidebar"
+      },
+      "desc": {
+        "ko": "로컬·오늘의 게임·쌓기를 왼쪽 사이드바로 빼고, 가운데 지도 옆에 순위, 아래에 게임 카드 넷을 가로로. 관리 화면에 가까운 얼개다.",
+        "en": "Locals, games and points move into a left sidebar; ranking beside the map, four game cards in a row below. Closer to an admin layout."
+      }
+    },
+    "01-season/020-web-c": {
+      "title": {
+        "ko": "웹 C안 - 지도 위 떠 있는 패널",
+        "en": "Web C - floating panels over the map"
+      },
+      "desc": {
+        "ko": "지도가 화면 전체이고 왼쪽 골목·게임 탭, 위 순위·게임·데일리 토글, 오른쪽 가게 순위가 전부 떠 있다. 지도가 주인공인 판.",
+        "en": "Full-screen map with everything floating: alley and game tabs left, a mode toggle on top, store ranking right. The map is the main character."
+      }
+    },
+    "01-season/021-web-d": {
+      "title": {
+        "ko": "웹 D안 - 지역 고르기 허브",
+        "en": "Web D - the pick-a-region hub"
+      },
+      "desc": {
+        "ko": "왼쪽에 열린 곳·곧 열릴 곳 목록, 가운데 「어디서 놀까요」와 로컬 검색, 아래 지금 열린 곳 지도 카드. 이 얼개가 v8 의 웹 허브로 그대로 간다.",
+        "en": "Open and upcoming locals on the left, a where-to-play hero with search in the middle, an open-local map card below. This layout carries straight into the v8 web hub."
+      }
+    },
+    "02-v2/001-g1-tip": {
+      "title": {
+        "ko": "적기 - 배너를 리뷰 도구로 접다",
+        "en": "Name a store - banner folded into a review tool"
+      },
+      "desc": {
+        "ko": "시즌과 같은 판인데 노란 정책 배너가 사라지고 「리뷰 도구 · 정책 판정 대기 1 · 상태 미리보기」 한 줄로 접혔다. 검토용 장치를 화면 밖으로 밀어낸 첫 판.",
+        "en": "Same game as the season build, but the yellow policy banner collapses into a single review-tool row. First build to push reviewer scaffolding out of the screen."
+      }
+    },
+    "02-v2/002-g2-zone": {
+      "title": {
+        "ko": "붐빌 골목 - 상태 칩이 접혔다",
+        "en": "Busiest alley - state chips tucked away"
+      },
+      "desc": {
+        "ko": "골목 다섯 막대와 골라 주세요 버튼은 그대로. 고르기 전·낸 뒤·적중·빗나감·무효 칩이 리뷰 도구 안으로 들어가 본문이 짧아졌다.",
+        "en": "Five alley bars and the pick button unchanged. The five preview-state chips moved inside the review tool, so the body got shorter."
+      }
+    },
+    "02-v2/003-g3-minority": {
+      "title": {
+        "ko": "소수결 - 판정 대기 하나를 접어 둠",
+        "en": "Minority - one pending item, folded"
+      },
+      "desc": {
+        "ko": "선택지 다섯과 「지금 분포는 마감까지 안 보여 드려요」 설명은 시즌과 같다. 정책 판정 대기 1건이 리뷰 도구 줄에 점으로만 남았다.",
+        "en": "Five options and the hidden-distribution note match the season build. The one pending policy item survives only as a dot in the review-tool row."
+      }
+    },
+    "02-v2/004-g4-receipt": {
+      "title": {
+        "ko": "영수증 - 두 탭은 그대로",
+        "en": "Receipt - both tabs kept"
+      },
+      "desc": {
+        "ko": "영수증 올리기·가게 1위 맞히기 탭, 사진 찍기·앨범 버튼, 확인 방법 설명이 그대로다. 상태 칩만 리뷰 도구로 들어갔다.",
+        "en": "Upload and guess-the-top-store tabs, camera and album buttons, and the verification note all stay. Only the state chips moved into the review tool."
+      }
+    },
+    "02-v2/005-games": {
+      "title": {
+        "ko": "오늘의 게임 - 시즌과 같은 네 장",
+        "en": "Today's games - the same four"
+      },
+      "desc": {
+        "ko": "그림 카드 넷, 오늘의 문제, 로컬 대결 세 줄까지 시즌 판을 그대로 가져왔다. 게임 세트를 바꾸기 전 마지막 판이라 비교 기준으로 둔다.",
+        "en": "Four illustrated cards, today's quiz and three match-ups carried over from the season build. The last build before the game set changes, kept here as the baseline."
+      }
+    },
+    "02-v2/006-home": {
+      "title": {
+        "ko": "홈 - 골목 라벨 대신 순위 핀",
+        "en": "Home - rank pins replace alley labels"
+      },
+      "desc": {
+        "ko": "지도 위 골목별 점포 수 라벨이 빠지고 가게 순위 1~7 핀이 들어왔다. 골목 칩은 위 한 줄로 올라갔다. 단위가 골목에서 가게로 옮겨 간다.",
+        "en": "Alley store-count labels leave the map; numbered store pins 1 to 7 come in. Alley chips move up to one row. The unit shifts from alley to store."
+      }
+    },
+    "02-v2/007-hub": {
+      "title": {
+        "ko": "허브 - 변경 없음",
+        "en": "Hub - unchanged"
+      },
+      "desc": {
+        "ko": "성수 하나 열림, 아홉 곳 곧 열림, 임시 태그까지 시즌과 같다. 상권 목록은 회의 결정이라 이 판에서 손대지 않았다.",
+        "en": "One local open, nine coming soon, temporary tags intact, same as the season build. The area list is a meeting decision, so it stayed untouched here."
+      }
+    },
+    "02-v2/008-me": {
+      "title": {
+        "ko": "내 기록 - 변경 없음",
+        "en": "My record - unchanged"
+      },
+      "desc": {
+        "ko": "네 숫자, 내 픽, 내 영수증, 내가 적은 곳, P 내역까지 시즌과 같다. 게임 넷이 그대로라 기록 화면도 그대로다.",
+        "en": "Four stats, picks, receipts, named stores and the ledger, same as the season build. The four games did not change, so neither did the record."
+      }
+    },
+    "02-v2/009-reward": {
+      "title": {
+        "ko": "보상 - 글자 줄에서 그림 카드로",
+        "en": "Rewards - text rows become picture cards"
+      },
+      "desc": {
+        "ko": "쌓은 P 숫자를 크게 위에 두고 바꿀 것을 2열 그림 카드로 바꿨다. 「이 기기에만 있어요」 뱃지가 저장 유도를 대신한다. 값은 여전히 전부 예시.",
+        "en": "Points as a big number on top, redeemables as a two-column grid of illustrated cards. A this-device-only badge does the save nudging. Values are still all examples."
+      }
+    },
+    "02-v2/010-save": {
+      "title": {
+        "ko": "저장 - 변경 없음",
+        "en": "Save - unchanged"
+      },
+      "desc": {
+        "ko": "결과 카드 위에 저장 시트가 뜨는 얼개와 Google·Apple·이메일 세 버튼, 나중에 링크가 시즌과 같다.",
+        "en": "Save sheet over the result card, three provider buttons and a later link, same as the season build."
+      }
+    },
+    "02-v2/011-shop": {
+      "title": {
+        "ko": "가게 - 변경 없음",
+        "en": "Store - unchanged"
+      },
+      "desc": {
+        "ko": "3위와 점수, 응원하기, 이 집 적기·영수증 올리기 두 버튼, 본체 연결 빈 자리까지 시즌과 같다. 정책 배너는 여기서만 아직 노란 채로 남아 있다.",
+        "en": "Rank, score, cheer button, two game shortcuts and the empty link slot match the season build. This is the one screen where the policy banner is still yellow."
+      }
+    },
+    "03-v3/001-guess": {
+      "title": {
+        "ko": "어디게 - 새 게임, 사진 한 조각",
+        "en": "Where is it - new game, one photo piece"
+      },
+      "desc": {
+        "ko": "오늘의 한 장에서 가게를 맞히는 새 게임. 틀릴수록 조각이 넓어지고 여섯 번까지다. 사진이 없어 업종 그림을 확대해 힌트 단계를 대신했다.",
+        "en": "A new game: guess the store from today's photo. Each miss widens the crop, up to six tries. With no real photos yet, an enlarged category illustration stands in."
+      }
+    },
+    "03-v3/002-home": {
+      "title": {
+        "ko": "홈 - 게임이 셋으로 바뀐 지도",
+        "en": "Home - the map with three new games"
+      },
+      "desc": {
+        "ko": "지도와 순위 핀은 v2 그대로. 아래 줄이 「오늘의 게임 3개 열림 · 성수 월드컵·어디게·7초에 멈춰」로 바뀌었고 하단 바가 떠 있는 어두운 알약으로 바뀌었다.",
+        "en": "Map and rank pins as in v2. The bottom line now reads three games open, and the tab bar becomes a floating dark pill."
+      }
+    },
+    "03-v3/003-hub": {
+      "title": {
+        "ko": "허브 - 성수 카드에 색이 들어옴",
+        "en": "Hub - the Seongsu card gets colour"
+      },
+      "desc": {
+        "ko": "목록과 문구는 그대로인데 열린 로컬 카드가 파란 보라로 채워졌다. 앞 판은 흰 카드에 테두리였다.",
+        "en": "Same list and copy, but the open local card is now filled blue-violet. The previous build used a white card with a border."
+      }
+    },
+    "03-v3/004-me": {
+      "title": {
+        "ko": "내 기록 - 게임 셋에 맞춰 줄임",
+        "en": "My record - trimmed for three games"
+      },
+      "desc": {
+        "ko": "네 숫자가 쌓인 P·어디게 평균·연속·7초 순위로 바뀌고, 픽·영수증·적은 곳 섹션이 빠졌다. 대신 오늘·성수 세 줄이 결과·풀기·또 하기로 이어진다.",
+        "en": "The four stats become points, guess average, streak and 7-second rank; picks, receipts and named stores are gone. Three today rows link to result, play and retry."
+      }
+    },
+    "03-v3/005-reward": {
+      "title": {
+        "ko": "보상 - 상단 카드만 색을 맞춤",
+        "en": "Rewards - only the top card recoloured"
+      },
+      "desc": {
+        "ko": "그림 카드 격자는 v2 그대로. 쌓은 P 카드가 파란 보라로 바뀌어 새 하단 바와 같은 색을 쓴다.",
+        "en": "The picture grid is the v2 one. The points card turns blue-violet to match the new tab bar."
+      }
+    },
+    "03-v3/006-shop": {
+      "title": {
+        "ko": "가게 - 영수증 대신 월드컵 득표",
+        "en": "Store - bracket votes replace receipts"
+      },
+      "desc": {
+        "ko": "3위 카드의 영수증·적힘 수가 「월드컵 우승률」로 바뀌고, 아래 두 버튼이 월드컵에서 만나요·어디게가 됐다. 게임이 바뀌니 가게가 보여 주는 숫자도 바뀐다.",
+        "en": "Receipt and mention counts on the rank card give way to a bracket win rate; the two shortcut buttons become bracket and guess. New games, new numbers on the store."
+      }
+    },
+    "03-v3/007-wcup": {
+      "title": {
+        "ko": "성수 월드컵 - 둘 중 하나, 열다섯 번",
+        "en": "Seongsu bracket - pick one of two, fifteen times"
+      },
+      "desc": {
+        "ko": "16강에서 시작해 15번 고르면 우승이 나온다. 업종 칩은 음식·카페만 열렸고, 8초 안에 안 고르면 다음으로 넘어간다. 사진 자리는 업종 그림이다.",
+        "en": "Starts at 16 and ends after fifteen picks. Only the food and cafe chip is open; skip after eight seconds. Category illustrations hold the photo slots."
+      }
+    },
+    "04-v4/001-guess": {
+      "title": {
+        "ko": "어디게 - SNS 판의 주황",
+        "en": "Where is it - orange, SNS build"
+      },
+      "desc": {
+        "ko": "게임 자체는 v3 그대로. 상단 내비가 피드·탐색·지도·게임으로 바뀌고 하단 바가 홈·검색·+·알림·프로필이 됐다. 진행 막대가 주황이다.",
+        "en": "The game is unchanged from v3. Top nav becomes feed, explore, map, games; the tab bar becomes home, search, plus, alerts, profile. Progress bar is orange."
+      }
+    },
+    "04-v4/002-home": {
+      "title": {
+        "ko": "홈 - 지도를 버리고 피드로",
+        "en": "Home - the map gives way to a feed"
+      },
+      "desc": {
+        "ko": "스토리 줄, 성수·팔로잉·가게 탭, 게임 결과 카드가 붙은 포스트와 팔로우 버튼. 지도는 탭 하나로 밀려났다. 피드에 가게 실명이 보이는 문제를 배너로 남겨 두었다.",
+        "en": "A stories row, three feed tabs, posts carrying game result cards and follow buttons. The map is pushed off to its own tab. A banner keeps the open question of store names in the feed."
+      }
+    },
+    "04-v4/003-hub": {
+      "title": {
+        "ko": "허브 - 카드가 검정으로",
+        "en": "Hub - the card goes black"
+      },
+      "desc": {
+        "ko": "목록은 그대로, 열린 로컬 카드만 검정 배경에 주황 태그로 바뀌었다. SNS 판의 팔레트를 허브에도 맞춘 것.",
+        "en": "Same list; only the open local card turns black with an orange tag, matching the SNS palette."
+      }
+    },
+    "04-v4/004-map": {
+      "title": {
+        "ko": "지도 - 홈에서 탭 하나로",
+        "en": "Map - from home to one tab"
+      },
+      "desc": {
+        "ko": "v3 홈에 있던 지도가 그대로 「지도」 탭으로 옮겨 왔다. 순위 핀 1이 주황이고, 아래 오늘의 게임 줄과 1위 시트는 그대로다.",
+        "en": "The v3 home map moves unchanged into a map tab. Pin 1 is orange; the games line and top-store sheet below are the same."
+      }
+    },
+    "04-v4/005-me": {
+      "title": {
+        "ko": "프로필 - 내 기록이 SNS 프로필로",
+        "en": "Profile - my record becomes a profile"
+      },
+      "desc": {
+        "ko": "아바타, 핸들, 한 줄 소개, 팔로잉·팔로워·포스트 숫자, 포스트·기록·응원 탭. 내 게임 결과가 포스트 카드로 쌓인다. 「계정에 저장」은 주황 버튼으로 남았다.",
+        "en": "Avatar, handle, bio, follower counts, three tabs. My game results stack as post cards. The save-to-account button survives in orange."
+      }
+    },
+    "04-v4/006-reward": {
+      "title": {
+        "ko": "보상 - 검정 카드에 주황 뱃지",
+        "en": "Rewards - black card, orange badge"
+      },
+      "desc": {
+        "ko": "격자와 항목은 v3 그대로. 쌓은 P 카드만 검정으로, 「이 기기에만 있어요」 뱃지만 주황으로 바뀌었다.",
+        "en": "Grid and items as in v3. Only the points card goes black and the device-only badge goes orange."
+      }
+    },
+    "04-v4/007-shop": {
+      "title": {
+        "ko": "가게 - 가게도 프로필이 된다",
+        "en": "Store - the store becomes a profile too"
+      },
+      "desc": {
+        "ko": "아바타형 아이콘, 가게가 적는 소개, 응원·순위·월드컵 세 숫자, 주황 응원하기, 포스트·사진·순위 탭. 이 가게를 두고 남들이 올린 게임 결과가 아래로 쌓인다.",
+        "en": "An avatar icon, a store-written intro, three numbers, an orange cheer button and post, photo, rank tabs. Other people's game results about this store stack below."
+      }
+    },
+    "04-v4/008-wcup": {
+      "title": {
+        "ko": "월드컵 - 주황으로만 바뀜",
+        "en": "Bracket - only the colour changes"
+      },
+      "desc": {
+        "ko": "16강 대진과 업종 칩, 8초 규칙은 v3 그대로. 진행 막대와 VS 뱃지가 주황이고 하단 바가 SNS 판의 다섯 아이콘이다.",
+        "en": "Bracket, category chips and the eight-second rule are v3. Progress bar and VS badge go orange; the tab bar is the five-icon SNS one."
+      }
+    },
+    "05-v5/001-guess": {
+      "title": {
+        "ko": "어디게 - 보라, 하단 바가 흰색으로",
+        "en": "Where is it - purple, white tab bar"
+      },
+      "desc": {
+        "ko": "게임은 그대로이고 강조색이 주황에서 보라로 갔다. 하단 바가 떠 있는 알약 대신 흰 바탕 다섯 아이콘이고 현재 탭만 원으로 감싼다.",
+        "en": "Same game, accent moved from orange to purple. The tab bar is a flat white row of five icons with only the active one circled."
+      }
+    },
+    "05-v5/002-home": {
+      "title": {
+        "ko": "홈 - 피드 대신 가게 한 장씩",
+        "en": "Home - one store card at a time, not a feed"
+      },
+      "desc": {
+        "ko": "「지금 보는 로컬」 아래 1위 가게 사진 카드 하나. 누르면 다음 가게로 넘어가고 열여섯 장이다. v4 피드를 버리고 카드 스택으로 갔다. 사진은 무료 스톡이라고 적어 두었다.",
+        "en": "Under the current local, one big photo card for the top store; tap to advance through sixteen. The v4 feed is dropped for a card stack. The photo is flagged as stock."
+      }
+    },
+    "05-v5/003-hub": {
+      "title": {
+        "ko": "허브 - 변경 없음",
+        "en": "Hub - unchanged"
+      },
+      "desc": {
+        "ko": "검정 카드에 주황 태그, 임시 목록 그대로. v4 와 같다.",
+        "en": "Black card, orange tag, temporary list, same as v4."
+      }
+    },
+    "05-v5/004-map": {
+      "title": {
+        "ko": "지도 - 핀만 보라로",
+        "en": "Map - only the pin turns purple"
+      },
+      "desc": {
+        "ko": "지도, 골목 칩, 오늘의 게임 줄, 1위 시트가 v4 그대로. 핀 1의 색과 하단 바만 바뀌었다.",
+        "en": "Map, alley chips, games line and top-store sheet as in v4. Only pin 1 and the tab bar change."
+      }
+    },
+    "05-v5/005-me": {
+      "title": {
+        "ko": "프로필 - 저장 버튼이 보라로",
+        "en": "Profile - save button in purple"
+      },
+      "desc": {
+        "ko": "얼개와 포스트 카드는 v4 그대로. 「계정에 저장」이 보라 버튼이 됐고 하단 바가 흰색이다.",
+        "en": "Layout and post cards as in v4. The save button is purple now and the tab bar is white."
+      }
+    },
+    "05-v5/006-reward": {
+      "title": {
+        "ko": "보상 - 뱃지만 보라로",
+        "en": "Rewards - badge goes purple"
+      },
+      "desc": {
+        "ko": "검정 쌓은 P 카드는 그대로, 「이 기기에만 있어요」 뱃지가 보라가 됐다. 격자와 예시 값은 v2 부터 변함없다.",
+        "en": "The black points card stays; the device-only badge turns purple. Grid and example values are unchanged since v2."
+      }
+    },
+    "05-v5/007-shop": {
+      "title": {
+        "ko": "가게 - 응원하기가 보라로",
+        "en": "Store - cheer button in purple"
+      },
+      "desc": {
+        "ko": "프로필형 가게 화면 그대로. 응원하기 버튼과 「당신이 3번째로 이 집을 열었어요」 띠가 보라 계열로 바뀌었다.",
+        "en": "The profile-style store screen as before. The cheer button and the you-opened-this-store strip move to purple."
+      }
+    },
+    "05-v5/008-wcup": {
+      "title": {
+        "ko": "월드컵 - 보라로만 바뀜",
+        "en": "Bracket - purple only"
+      },
+      "desc": {
+        "ko": "대진과 규칙은 그대로. 진행 막대와 VS 뱃지가 보라, 하단 바가 흰색이다.",
+        "en": "Bracket and rules unchanged. Progress bar and VS badge in purple, tab bar in white."
+      }
+    },
+    "06-v6/001-guess": {
+      "title": {
+        "ko": "어디게 - 남색, 알약 바가 돌아옴",
+        "en": "Where is it - navy, the pill bar returns"
+      },
+      "desc": {
+        "ko": "게임 그대로. 강조색이 남색 계열로 가고 하단 바가 다시 떠 있는 어두운 알약이 됐다. 상단 내비에 「픽」 항목이 하나 늘었다.",
+        "en": "Same game. Accent settles on navy and the floating dark pill tab bar comes back. One new item, pick, appears in the top nav."
+      }
+    },
+    "06-v6/002-home": {
+      "title": {
+        "ko": "홈 - v5 카드 스택 유지",
+        "en": "Home - keeps the v5 card stack"
+      },
+      "desc": {
+        "ko": "가게 한 장씩 넘기는 카드 스택 그대로. 카드 테두리와 하단 바가 남색이다. 홈 카드가 실명과 순위를 같이 보여 주는 문제는 배너로 계속 남아 있다.",
+        "en": "The one-card-at-a-time stack stays. Card border and tab bar are navy. The banner about showing names with ranks is still there."
+      }
+    },
+    "06-v6/003-hub": {
+      "title": {
+        "ko": "허브 - 카드가 다시 파란 보라로",
+        "en": "Hub - card back to blue-violet"
+      },
+      "desc": {
+        "ko": "v4·v5 의 검정 카드를 버리고 v3 의 파란 보라 카드로 돌아왔다. 목록은 여전히 임시.",
+        "en": "Drops the v4 and v5 black card for the v3 blue-violet one. The list is still temporary."
+      }
+    },
+    "06-v6/004-map": {
+      "title": {
+        "ko": "지도 - 변경 없음",
+        "en": "Map - unchanged"
+      },
+      "desc": {
+        "ko": "핀 1 색과 하단 바 색만 남색으로 맞췄다. 지도와 시트는 v3 부터 그대로다.",
+        "en": "Only pin 1 and the tab bar recoloured to navy. Map and sheet are unchanged since v3."
+      }
+    },
+    "06-v6/005-me": {
+      "title": {
+        "ko": "프로필 - 저장 버튼이 남색으로",
+        "en": "Profile - save button in navy"
+      },
+      "desc": {
+        "ko": "얼개 그대로. 「계정에 저장」이 남색이고 하단 바도 남색 알약이다.",
+        "en": "Same layout. Save button and tab bar both in navy."
+      }
+    },
+    "06-v6/006-reward": {
+      "title": {
+        "ko": "보상 - 상단 카드가 파란 보라로",
+        "en": "Rewards - top card back to blue-violet"
+      },
+      "desc": {
+        "ko": "쌓은 P 카드가 검정에서 v3 의 파란 보라로 돌아왔다. 격자는 그대로.",
+        "en": "The points card returns from black to the v3 blue-violet. Grid unchanged."
+      }
+    },
+    "06-v6/007-shop": {
+      "title": {
+        "ko": "가게 - 남색으로만 바뀜",
+        "en": "Store - navy only"
+      },
+      "desc": {
+        "ko": "프로필형 가게 화면 그대로. 응원하기가 남색이고 하단 바가 알약이다.",
+        "en": "Profile-style store screen as before. Cheer button in navy, pill tab bar."
+      }
+    },
+    "06-v6/008-wcup": {
+      "title": {
+        "ko": "월드컵 - 남색으로만 바뀜",
+        "en": "Bracket - navy only"
+      },
+      "desc": {
+        "ko": "대진과 규칙 그대로. 진행 막대와 VS 뱃지가 남색.",
+        "en": "Bracket and rules unchanged. Progress bar and VS badge in navy."
+      }
+    },
+    "07-v7/001-guess": {
+      "title": {
+        "ko": "어디게 - 진짜 사진이 들어옴",
+        "en": "Where is it - a real photo at last"
+      },
+      "desc": {
+        "ko": "업종 그림 대신 흐린 스톡 사진 조각을 쓴다. 뒤로 가기가 「게임」에서 「오늘」로 바뀌었고 하단 바가 오늘·로컬·나 셋으로 줄었다.",
+        "en": "A blurred stock photo replaces the category drawing. Back now goes to today instead of games, and the tab bar shrinks to three: today, local, me."
+      }
+    },
+    "07-v7/002-home": {
+      "title": {
+        "ko": "홈 - 오늘의 한 장이 홈이 된다",
+        "en": "Home - today's photo is the home"
+      },
+      "desc": {
+        "ko": "피드도 카드 스택도 버리고 어디게 한 판을 홈에 놓았다. 풀기 버튼, 어제 통계, 연속 일수, 다 풀었으면 열리는 월드컵·7초, 다음에 열리는 것 두 줄. 캡처에서 아래 카드 글자가 세로로 깨져 있다.",
+        "en": "Feed and card stack are gone; one guess round is the home. Play button, yesterday's stats, streak, the two games that unlock after, and two coming-next rows. The lower cards render their text vertically in this capture."
+      }
+    },
+    "07-v7/003-hub": {
+      "title": {
+        "ko": "허브 - 변경 없음",
+        "en": "Hub - unchanged"
+      },
+      "desc": {
+        "ko": "파란 보라 카드, 임시 목록 그대로. 하단 바가 없는 화면이라 v6 과 구분이 안 된다.",
+        "en": "Blue-violet card, temporary list, same as v6. With no tab bar on this screen there is nothing to tell them apart."
+      }
+    },
+    "07-v7/004-map": {
+      "title": {
+        "ko": "로컬 - 지도가 셋 중 하나가 됨",
+        "en": "Local - the map is one of three"
+      },
+      "desc": {
+        "ko": "지도 자체는 그대로인데 이름이 「로컬」이 되고 하단 바 셋 중 가운데 자리에 들어왔다. 홈이 게임으로 가면서 지도는 둘러보는 자리로 물러났다.",
+        "en": "The map is the same, renamed local and placed in the middle of a three-tab bar. With home turned into a game, the map steps back to a browsing role."
+      }
+    },
+    "07-v7/005-me": {
+      "title": {
+        "ko": "나 - 프로필 얼개는 그대로",
+        "en": "Me - profile layout unchanged"
+      },
+      "desc": {
+        "ko": "아바타·핸들·팔로우 숫자·포스트 카드가 v4 부터 그대로다. 피드가 사라진 판에서 팔로잉·팔로워 숫자가 남아 있는 것이 이 화면의 남은 숙제다.",
+        "en": "Avatar, handle, follow counts and post cards are unchanged since v4. With the feed gone, the follower numbers left on this screen are the loose end."
+      }
+    },
+    "07-v7/006-reward": {
+      "title": {
+        "ko": "보상 - 마지막 「바꾸기」 판",
+        "en": "Rewards - the last spend-your-points build"
+      },
+      "desc": {
+        "ko": "쌓은 P 로 바꾸는 격자 그대로. 하단 바만 셋이다. 다음 판에서 이 화면은 통째로 쿠폰함이 된다.",
+        "en": "The spend-points grid as before, now over a three-tab bar. In the next build this screen becomes a coupon box entirely."
+      }
+    },
+    "07-v7/007-save": {
+      "title": {
+        "ko": "저장 - 어디게 결과 뒤에",
+        "en": "Save - after a guess result"
+      },
+      "desc": {
+        "ko": "시즌의 저장 시트가 돌아왔다. 뒤 화면이 상권 1위 결과에서 어디게 「맞혔어요 · 3/6」로 바뀌었고, 버튼 셋과 나중에는 그대로.",
+        "en": "The season save sheet is back. The result behind it is now a guess round instead of the alley prediction; the three buttons and later link are the same."
+      }
+    },
+    "07-v7/008-share": {
+      "title": {
+        "ko": "공유 카드 - 정답 없이 한 장",
+        "en": "Share card - one card, no answer"
+      },
+      "desc": {
+        "ko": "몇 번 만에 맞혔는지를 여섯 칸으로 그린 검정 카드. 정답은 담지 않아 받은 사람도 그대로 한 판 할 수 있다. 이 판의 핵심이라고 화면 아래에 적어 두었다.",
+        "en": "A black card with six squares showing how many tries it took. The answer is left out so the recipient can play the same round. The screen itself says this is the point of v7."
+      }
+    },
+    "07-v7/009-shop": {
+      "title": {
+        "ko": "가게 - 변경 없음",
+        "en": "Store - unchanged"
+      },
+      "desc": {
+        "ko": "프로필형 가게 화면과 남색 응원하기 그대로. 하단 바만 셋으로 줄었다.",
+        "en": "Profile-style store and navy cheer button as before. Only the tab bar drops to three."
+      }
+    },
+    "07-v7/010-stopit": {
+      "title": {
+        "ko": "7초에 멈춰 - 감으로 누른다",
+        "en": "Stop at seven - press on instinct"
+      },
+      "desc": {
+        "ko": "숫자가 2초 뒤에 숨고 정확히 7.00초에 누르는 게임. 시작 버튼 아래 오늘 성수 순위에 내 자리가 표시된다. 목표 초는 매일 바뀐다.",
+        "en": "The counter hides after two seconds; press at exactly 7.00. Today's local ranking with my position sits under the start button. The target changes daily."
+      }
+    },
+    "07-v7/011-wcup": {
+      "title": {
+        "ko": "월드컵 - 변경 없음",
+        "en": "Bracket - unchanged"
+      },
+      "desc": {
+        "ko": "대진·칩·8초 규칙 그대로. 뒤로 가기가 「게임」이고 하단 바만 셋이다.",
+        "en": "Bracket, chips and the eight-second rule as before. Back goes to games; only the tab bar is three."
+      }
+    },
+    "08-v8/001-coupon": {
+      "title": {
+        "ko": "쿠폰 - 번호는 쓸 때 편다",
+        "en": "Coupon - reveal the code only at the till"
+      },
+      "desc": {
+        "ko": "바코드 자리를 흐리게 두고 「번호 펴기」 버튼으로 연다. 받은 날·쓸 수 있는 날·받은 이유·쓰는 곳이 표로 있고, P 는 이 쿠폰을 받아도 줄지 않는다고 적었다.",
+        "en": "The barcode stays blurred until a reveal button opens it. Received date, valid until, reason and where-to-use sit in a table, with a line saying points do not drop when a coupon arrives."
+      }
+    },
+    "08-v8/002-guess": {
+      "title": {
+        "ko": "어디게 - 변경 없음",
+        "en": "Where is it - unchanged"
+      },
+      "desc": {
+        "ko": "v7 과 같은 스톡 사진 조각, 같은 여섯 단계. 상단 내비에 쿠폰함·쿠폰이 추가된 것만 다르다.",
+        "en": "Same stock photo piece and six-step hint as v7. The only difference is the coupon entries in the top nav."
+      }
+    },
+    "08-v8/003-home": {
+      "title": {
+        "ko": "홈 - 변경 없음",
+        "en": "Home - unchanged"
+      },
+      "desc": {
+        "ko": "오늘의 한 장 홈이 v7 그대로다. 아래 카드 글자가 세로로 깨지는 것도 그대로라 캡처 폭 문제로 보인다.",
+        "en": "Today's photo home exactly as v7. The vertical text break in the lower cards is also unchanged, which points at the capture width."
+      }
+    },
+    "08-v8/004-hub": {
+      "title": {
+        "ko": "허브 - 변경 없음",
+        "en": "Hub - unchanged"
+      },
+      "desc": {
+        "ko": "파란 보라 카드, 임시 목록. v3 이후 이 화면은 색만 오갔다.",
+        "en": "Blue-violet card, temporary list. Since v3 this screen has only swapped colours."
+      }
+    },
+    "08-v8/005-map": {
+      "title": {
+        "ko": "로컬 - 변경 없음",
+        "en": "Local - unchanged"
+      },
+      "desc": {
+        "ko": "지도, 핀, 오늘의 게임 줄, 1위 시트가 v7 그대로.",
+        "en": "Map, pins, games line and top-store sheet as in v7."
+      }
+    },
+    "08-v8/006-me": {
+      "title": {
+        "ko": "나 - 변경 없음",
+        "en": "Me - unchanged"
+      },
+      "desc": {
+        "ko": "프로필 얼개와 팔로우 숫자가 v7 그대로다. 쿠폰함이 생겼는데 프로필에서 이어지는 길은 아직 없다.",
+        "en": "Profile layout and follow counts as in v7. A coupon box now exists but nothing on the profile leads to it yet."
+      }
+    },
+    "08-v8/007-reward": {
+      "title": {
+        "ko": "받은 쿠폰 - P 를 내지 않는다",
+        "en": "Coupons received - points are never spent"
+      },
+      "desc": {
+        "ko": "「쌓은 P 로 바꾸기」가 통째로 사라지고, P 가 많은 순서로 쿠폰을 보내 주는 판이 됐다. 이번 주 내 순위와 지급 기준, 받은 쿠폰 두 장. P 는 누가 받을지 정하는 기준일 뿐이라고 굵게 적었다.",
+        "en": "The spend-your-points screen is gone. Coupons are now sent to the top point holders each week: my rank, the cut-off, and two received coupons. Points only decide who gets one, in bold."
+      }
+    },
+    "08-v8/008-save": {
+      "title": {
+        "ko": "저장 - 본체 계정 하나로",
+        "en": "Save - one account, the main app's"
+      },
+      "desc": {
+        "ko": "Google·Apple·이메일 세 버튼이 본체 계정으로 저장·만들기 둘로 줄었다. 아래 한 줄이 두 앱이 계정을 같이 쓴다고 알린다. 막는 시점도 「바꿀 때」에서 「쿠폰을 보낼 때」로 바뀌었다.",
+        "en": "Three provider buttons become two: save with, or create, the main app's account. A line below says the two apps share one account. The gate also moves from spending to coupon delivery."
+      }
+    },
+    "08-v8/009-share": {
+      "title": {
+        "ko": "공유 카드 - 변경 없음",
+        "en": "Share card - unchanged"
+      },
+      "desc": {
+        "ko": "여섯 칸 카드, 이미지 저장·스토리·링크 복사, 로컬 이름 표기에 대한 판정 대기까지 v7 그대로.",
+        "en": "Six-square card, save, story and copy-link actions, and the pending item about naming the local, all as in v7."
+      }
+    },
+    "08-v8/010-shop": {
+      "title": {
+        "ko": "가게 - 변경 없음",
+        "en": "Store - unchanged"
+      },
+      "desc": {
+        "ko": "프로필형 가게 화면 그대로. 본체 연결 자리는 여전히 문구가 비어 있다.",
+        "en": "Profile-style store as before. The main-app link slot is still an empty placeholder."
+      }
+    },
+    "08-v8/011-stopit": {
+      "title": {
+        "ko": "7초에 멈춰 - 변경 없음",
+        "en": "Stop at seven - unchanged"
+      },
+      "desc": {
+        "ko": "목표 7.00, 시작 버튼, 오늘 순위 목록이 v7 그대로.",
+        "en": "Target 7.00, start button and today's ranking, same as v7."
+      }
+    },
+    "08-v8/012-wcup": {
+      "title": {
+        "ko": "월드컵 - 변경 없음",
+        "en": "Bracket - unchanged"
+      },
+      "desc": {
+        "ko": "16강 대진과 8초 규칙 그대로. 내비에 쿠폰함이 늘었을 뿐이다.",
+        "en": "Bracket and eight-second rule unchanged. Only the coupon entries in the nav are new."
+      }
+    },
+    "08-v8/013-web-coupon": {
+      "title": {
+        "ko": "웹 쿠폰함 - 목록과 상세를 나란히",
+        "en": "Web coupon box - list and detail side by side"
+      },
+      "desc": {
+        "ko": "왼쪽에 받은 쿠폰 목록과 이번 주 순위, 오른쪽에 고른 쿠폰의 바코드와 표. 모바일에서 두 화면이던 것을 한 화면에 놓았다. 쿠폰 이름에 금액을 적을지가 판정 대기로 남아 있다.",
+        "en": "Received coupons and this week's rank on the left, the chosen coupon's barcode and table on the right. Two mobile screens become one. Whether to print an amount in the coupon name is still pending."
+      }
+    },
+    "08-v8/014-web-home": {
+      "title": {
+        "ko": "웹 오늘 - 사진 위에 세 기둥",
+        "en": "Web today - three columns over the photo"
+      },
+      "desc": {
+        "ko": "흐린 오늘의 사진을 배경으로 왼쪽 오늘 성수(내 자리·이번 주 지급), 가운데 「이 사진, 성수 어디게요」 카드, 오른쪽 다 풀었으면과 어제 우승 셋. 위에 오늘·로컬·쿠폰함 알약 내비.",
+        "en": "Over today's blurred photo: my rank and this week's payout on the left, the guess card in the middle, unlockable games and yesterday's top three on the right. A pill nav on top."
+      }
+    },
+    "08-v8/015-web-hub": {
+      "title": {
+        "ko": "웹 허브 - 시즌 D안 그대로",
+        "en": "Web hub - season layout D, as it was"
+      },
+      "desc": {
+        "ko": "왼쪽 로컬 목록, 가운데 어디서 놀까요와 검색, 지금 열린 곳 지도 카드. 시즌의 웹 D안이 손대지 않은 채 v8 까지 왔다.",
+        "en": "Local list on the left, the where-to-play hero with search, an open-local map card. Season layout D arrives at v8 untouched."
+      }
+    },
+    "08-v8/016-web-local": {
+      "title": {
+        "ko": "웹 로컬 - 지도 양옆에 패널",
+        "en": "Web local - panels either side of the map"
+      },
+      "desc": {
+        "ko": "지도 전체에 순위 핀, 왼쪽에 성수 사진과 1위 가게·이번 주 참여, 오른쪽에 이번 주 순위 일곱 줄과 등락. 누르면 지도에서 그 가게가 켜진다. 점수와 순위는 지어낸 값이라고 적었다.",
+        "en": "Rank pins across a full map, the local's photo and top store on the left, this week's seven-row ranking with movement on the right. Tap a row and the map lights that store. Scores are flagged as made up."
+      }
+    },
+    "09-star2/001-coupon": {
+      "title": {
+        "ko": "쿠폰 한 장 - 번호는 받기 전까지 가린다",
+        "en": "One coupon - the code stays hidden until claimed"
+      },
+      "desc": {
+        "ko": "커피 쿠폰 한 장을 티켓 모양으로 펼쳤다. 필요 P 와 교환 비율은 「공개 전」이고, 바코드 자리는 흐리게 막아 두었다. 교환 조건이 정해지지 않은 채로 화면이 무엇을 약속할 수 있는지가 판정 대기로 남아 있다.",
+        "en": "A single coffee coupon laid out as a ticket. The points needed and the exchange rate read \"not yet published\", and the barcode area is blurred out. What the screen can promise before the terms are set stays an open question."
+      }
+    },
+    "09-star2/002-guess": {
+      "title": {
+        "ko": "오늘의 어디게 - 사진 여섯 조각으로 가게 맞히기",
+        "en": "Guess where - one shop from six photo pieces"
+      },
+      "desc": {
+        "ko": "하루 한 장짜리 서브 게임이다. 사진이 한 조각씩 넓어지고, 틀릴수록 받는 P 가 줄어드는 단계를 칩 여섯 개로 보여 준다. 힌트는 한 번뿐이고 P 를 깎는다. 예측 픽과 같은 날 여느냐가 아직 정해지지 않았다.",
+        "en": "The one-a-day side game. The photo widens piece by piece and six chips show the reward shrinking with each miss. One hint only, and it costs points. Whether it opens on the same day as the prediction pick is still undecided."
+      }
+    },
+    "09-star2/003-home": {
+      "title": {
+        "ko": "2 의 첫 홈 - 카드 하나, 고를 것 없음",
+        "en": "Star 2 first home - one card, nothing to browse"
+      },
+      "desc": {
+        "ko": "업종 둘을 나란히 놓고 「다음 집계에서 어느 쪽이 더 오르나」만 묻는다. 스파크라인과 범위, 현재 걸린 비율, 마감 카운트다운, 버튼 둘이 카드 한 장에 들어간다. 아래에는 내 최근 결과와 어디게 카드가 붙는다.",
+        "en": "Two categories side by side and one question: which rises more at the next settlement. Sparklines, range, the current split, a countdown and two buttons all sit on one card. Recent results and the guess-where card follow below."
+      }
+    },
+    "09-star2/004-join": {
+      "title": {
+        "ko": "가입 시트 - 잔액이 떨어졌을 때만 뜬다",
+        "en": "Sign-up sheet - only when the balance runs out"
+      },
+      "desc": {
+        "ko": "홈이 흐려지고 아래에서 시트가 올라온다. 닉네임 하나만 받고, 가입하면 P 를 얹어 주고 지갑 연결은 그 뒤로 미룬다. 첫 화면에서 계정 얘기를 꺼내지 않으려고 잔액이 0 이 된 순간으로 가입을 미뤘다.",
+        "en": "Home dims and a sheet slides up. A nickname is all it asks, sign-up adds points, and wallet linking waits until later. Account talk is pushed to the moment the balance hits zero so the first screen never has to mention it."
+      }
+    },
+    "09-star2/005-map": {
+      "title": {
+        "ko": "상권 고르기 - 서울 121 곳 중 열린 곳 하나",
+        "en": "Pick a zone - one open pick among Seoul's zones"
+      },
+      "desc": {
+        "ko": "서울시가 집계하는 곳들을 단순화한 지도 위에 점으로 찍고, 열림·곧·결제 없음으로 나눴다. 고른 상권은 아래 카드에서 혼잡도와 결제 집계, 업종별 상태를 칩으로 보여 준다.",
+        "en": "The zones the city publishes, dotted on a simplified map and split into open, soon and no-payment-data. The chosen zone shows crowd level, payment tally and per-category status as chips in the card below."
+      }
+    },
+    "09-star2/006-market": {
+      "title": {
+        "ko": "업종 종목 - 티커처럼 늘어선 다섯 줄",
+        "en": "Category board - five rows like tickers"
+      },
+      "desc": {
+        "ko": "한 상권의 업종 다섯을 이름·스파크라인·최신값·변화·픽 상태로 한 줄씩 세웠다. 픽은 업종 둘을 짝지어 돌아가며 열리므로, 열린 것과 대기 중인 것을 오른쪽 배지로 구분했다.",
+        "en": "Five categories in one zone, each a row of name, sparkline, latest value, change and pick status. Picks open in rotating pairs, so the badge on the right tells open from waiting."
+      }
+    },
+    "09-star2/007-me": {
+      "title": {
+        "ko": "나 - 가입 전이라 이 기기에만 있는 P",
+        "en": "Me - points that live only on this device"
+      },
+      "desc": {
+        "ko": "잔액 카드 아래에 가입·지갑 연결로 받을 수 있는 P 를 두 칸으로 놓고, 보상 진입과 오늘 내역을 이었다. 「아직 가입 전 · 이 기기에만 있어요」 한 줄로 계정 없이 시작한 상태를 설명한다.",
+        "en": "Below the balance card, two tiles show what sign-up and wallet linking would add, then rewards and today's history. One line, \"not signed up yet, on this device only\", explains the account-free start."
+      }
+    },
+    "09-star2/008-result": {
+      "title": {
+        "ko": "결과 - 맞혔을 때, 순증만 크게",
+        "en": "Result - a hit, net gain in big type"
+      },
+      "desc": {
+        "ko": "초록 카드에 판정과 순증 P 만 크게 두고, 받은 P 의 계산은 한 줄 작은 글로 뒀다. 아래에는 둘의 실제 변화율을 걸기 전 값과 나란히 보여 어느 쪽이 왜 맞았는지 확인하게 했다.",
+        "en": "A green card with the verdict and the net gain in large type; the payout arithmetic is one small line. Below, both categories' actual change sits beside the pre-stake value so the why of the call is checkable."
+      }
+    },
+    "09-star2/009-reward": {
+      "title": {
+        "ko": "보상 - 교환표는 있는데 비율은 비워 뒀다",
+        "en": "Rewards - the exchange list exists, the rates do not"
+      },
+      "desc": {
+        "ko": "교환·순위 탭 아래 쿠폰 세 장을 색으로 나눠 쌓았다. 필요 P 는 전부 「공개 전」이다. 참여 규모를 본 뒤에 비율을 정하겠다는 판단을 화면에 그대로 적었고, 예산과 법률 판정은 대기로 남겼다.",
+        "en": "Three coupons stacked by colour under exchange and ranking tabs. Every points price reads \"not yet published\". The decision to set rates after seeing participation is written on the screen itself; budget and legal calls stay pending."
+      }
+    },
+    "09-star2/010-share": {
+      "title": {
+        "ko": "공유 카드 - 결과와 P 만, 답은 빼고",
+        "en": "Share card - result and points, never the answer"
+      },
+      "desc": {
+        "ko": "남색 카드에 판정과 순증 P, 다음 픽 시각만 넣었다. 어느 쪽이 맞았는지와 집계값은 일부러 뺐다. 카드가 답을 실어 나르면 뒤에 보는 사람의 픽이 공짜가 되기 때문이다.",
+        "en": "A navy card carrying the verdict, the net points and the next pick time. Which side won and the tally are left out on purpose - a card that carries the answer makes the next viewer's pick free."
+      }
+    },
+    "09-star2/011-ticker": {
+      "title": {
+        "ko": "업종 상세 - 10 분 집계 막대와 그 밑의 픽",
+        "en": "Category detail - ten-minute bars, the pick below"
+      },
+      "desc": {
+        "ko": "최신 집계 금액을 크게 두고 지난 두 시간을 10 분 막대로 그렸다. 막대 위 짙은 띠가 도시가 주는 범위다. 가맹점·건당·10 분 결제 세 칸 아래에 같은 업종이 걸린 픽 카드를 다시 붙여, 상세에서 바로 걸 수 있게 했다.",
+        "en": "The latest tally in big type over two hours of ten-minute bars; the dark band on each bar is the range the city publishes. Three stat tiles, then the pick card for this category again, so a stake can be placed from the detail."
+      }
+    },
+    "09-star2/012-wait": {
+      "title": {
+        "ko": "걸었어요 - 마감·집계·결과 세 단계",
+        "en": "Staked - close, tally, result in three steps"
+      },
+      "desc": {
+        "ko": "걸린 쪽과 P, 마감 시각을 남색 카드에 두고 걸기·집계·결과 세 칸으로 지금 어디쯤인지 보여 준다. 집계값이 약 17 분 늦게 도착하는 사실을 숨기지 않고 단계에 그대로 적었다. 아래에 지금 걸린 비율과 다음 픽이 이어진다.",
+        "en": "The side, the stake and the close time on a navy card, with three tiles - stake, tally, result - marking where things stand. The roughly seventeen-minute lag of the published value is written into the steps rather than hidden."
+      }
+    },
+    "12-star2-v2/001-home": {
+      "title": {
+        "ko": "v2 홈 - 픽 루프만 남기고 O/X 로",
+        "en": "v2 home - just the pick loop, now as O/X"
+      },
+      "desc": {
+        "ko": "앞 판의 지도·업종·보상 탭을 걷어내고 「오늘 픽·내 포인트」 두 탭만 남겼다. 문항은 「A 가 B 보다 더 오른다」 한 문장이 되고, 답은 O/X 다. 색은 DS 토큰으로 바꿨고 상단에 집계 티커가 흐른다.",
+        "en": "Map, category and reward tabs from the first build are gone; only today's pick and my points remain. The question becomes one sentence, \"A rises more than B\", answered with O or X. Colours moved to design-system tokens and a tally ticker runs across the top."
+      }
+    },
+    "12-star2-v2/002-invite": {
+      "title": {
+        "ko": "친구 초대 - 가입이 아니라 첫 정산에 준다",
+        "en": "Invite - paid on the friend's first settlement, not sign-up"
+      },
+      "desc": {
+        "ko": "초대 보상 조건 셋을 번호로 적었다. 친구가 가입만 해서는 안 들어오고 첫 픽이 정산돼야 들어온다. 링크는 가입 뒤에 생기므로, 가입 전 상태에서는 점선 상자로 그 자리를 비워 뒀다.",
+        "en": "The three invite rules, numbered. A friend signing up pays nothing; their first settled pick does. The link only exists after sign-up, so before that a dashed box holds the empty spot."
+      }
+    },
+    "12-star2-v2/003-join": {
+      "title": {
+        "ko": "v2 가입 시트 - 같은 순간, 같은 한 칸",
+        "en": "v2 sign-up sheet - same moment, same one field"
+      },
+      "desc": {
+        "ko": "잔액이 0 이 되는 순간 올라오는 시트는 앞 판과 같다. 닉네임 한 칸, 계속 버튼, 나중에. 스킨만 DS 색으로 바뀌었고 흐려진 뒤 배경에 O/X 카드가 비친다.",
+        "en": "The sheet that rises when the balance hits zero is unchanged: one nickname field, a continue button, a later button. Only the skin moved to design-system colours, with the O/X card dimmed behind."
+      }
+    },
+    "12-star2-v2/004-me": {
+      "title": {
+        "ko": "v2 내 포인트 - 탭으로 올라온 잔액",
+        "en": "v2 my points - the balance moves into a tab"
+      },
+      "desc": {
+        "ko": "별도 화면이던 「나」가 상단 탭이 됐다. 잔액, 가입·지갑 연결 두 칸, 친구 초대 한 줄, 오늘 내역 순서는 앞 판과 같다. 초대가 이 판에서 새로 들어왔다.",
+        "en": "What was a separate Me screen is now a top tab. Balance, the sign-up and wallet tiles, an invite row and today's history keep the earlier order. The invite row is new in this build."
+      }
+    },
+    "12-star2-v2/005-region": {
+      "title": {
+        "ko": "지역 바꾸기 - 실제 지도에 핀 121 개",
+        "en": "Change zone - real map tiles, all the pins"
+      },
+      "desc": {
+        "ko": "앞 판의 단순화한 도형 지도를 실제 타일 지도로 바꿨다. 핀을 누르거나 아래 목록에서 골라도 된다. 고른 곳의 결제 흐름 요약이 지도 아래에 붙고, 분류 칩으로 긴 목록을 거른다.",
+        "en": "The simplified shape map of the first build becomes real map tiles. Tap a pin or pick from the list below. A payment-flow summary for the chosen zone sits under the map, and category chips filter the long list."
+      }
+    },
+    "12-star2-v2/006-result": {
+      "title": {
+        "ko": "v2 결과 - 정답 O 를 글자로",
+        "en": "v2 result - the answer spelled as O"
+      },
+      "desc": {
+        "ko": "초록 카드 대신 흰 카드에 「예측 성공 · 정답 O」와 순증 P 를 두었다. 둘의 변화율은 O/X 줄로 세로 배치했다. 앞 판에서 색이 하던 일을 글자와 O/X 기호가 대신한다.",
+        "en": "A white card replaces the green one, reading \"hit, answer O\" over the net points. Both changes are stacked as O and X rows. What colour did in the first build, letters and the O/X marks do here."
+      }
+    },
+    "12-star2-v2/007-share": {
+      "title": {
+        "ko": "v2 공유 카드 - 파란 판, 같은 원칙",
+        "en": "v2 share card - blue skin, same rule"
+      },
+      "desc": {
+        "ko": "카드 색이 DS 의 파랑으로 바뀌고 상권 이름이 문항 앞에 붙었다. 결과와 P 만 싣고 답과 집계값은 빼는 원칙은 그대로다.",
+        "en": "The card takes the design-system blue and the zone name joins the question line. It still carries only the result and the points, never the answer or the tally."
+      }
+    },
+    "12-star2-v2/008-wait": {
+      "title": {
+        "ko": "v2 예측 완료 - 표로 바꾼 세 단계",
+        "en": "v2 staked - the three steps become a table"
+      },
+      "desc": {
+        "ko": "걸기·집계·결과 세 칸이 세 줄 표가 되고, 현재 단계에 색을 칠했다. 내 답을 「O 그렇다 · 카페」로 문장째 적어 무엇에 걸었는지 다시 읽게 했다.",
+        "en": "The stake, tally and result tiles turn into a three-row table with the current step tinted. The pick is written as a sentence, \"O yes, cafe\", so what was staked reads back in full."
+      }
+    },
+    "13-star2-v3/001-home": {
+      "title": {
+        "ko": "v3 홈 - O/X 가 미니 거래소로 갈라진 곁가지",
+        "en": "v3 home - the O/X fork into a mini exchange"
+      },
+      "desc": {
+        "ko": "「OX 로 열고 2 주 뒤 미니 거래」 제안을 그대로 그려 본 판이다. 내 투자 카드, 오늘 많이 움직인 종목, 관심 종목이 증권 앱처럼 선다. 상승 빨강·하락 파랑은 거래소 관행을 따랐고 DS 의 초록/빨강과 다르다.",
+        "en": "A build that takes the \"open with O/X, add mini trading two weeks later\" idea literally. My investment, today's movers and a watchlist line up like a brokerage app. Red for up and blue for down follows exchange convention, not the design system."
+      }
+    },
+    "13-star2-v3/002-market": {
+      "title": {
+        "ko": "v3 종목 - 업종 다섯을 지수처럼",
+        "en": "v3 board - five categories as an index"
+      },
+      "desc": {
+        "ko": "업종·상승·하락·거래 많은 순으로 거르는 탭과 종목 다섯 줄이다. 지수를 집계 금액 그대로 쓸지, 종목 단위를 업종 x 지역으로 할지가 가정으로 남아 있다.",
+        "en": "Filter tabs for category, gainers, losers and most traded over five rows. Whether the index is the raw tally and whether a ticker means category times zone are both still assumptions."
+      }
+    },
+    "13-star2-v3/003-positions": {
+      "title": {
+        "ko": "v3 내 투자 - 포지션이 없을 때",
+        "en": "v3 my positions - the empty state"
+      },
+      "desc": {
+        "ko": "총 평가와 잔액·원금·포지션 칸 아래가 비어 있다. 평가가 시간 단위 집계라 한 시간에 한 번만 움직인다는 문제를 판정 대기로 적어 두었다. 거래소 느낌을 내려면 집계 주기부터 짧아져야 한다.",
+        "en": "Total value, balance, principal and positions, then nothing. The note underneath records the catch: valuation follows hourly tallies, so it moves once an hour. An exchange feel would need a faster tally first."
+      }
+    },
+    "13-star2-v3/004-settle": {
+      "title": {
+        "ko": "v3 만기 정산 - 계산을 표로 펼쳤다",
+        "en": "v3 settlement - the arithmetic laid out"
+      },
+      "desc": {
+        "ko": "이익 P 아래에 변화율 x 배수 x 10 이라는 가정식을 다섯 줄 표로 보여 준다. 정산 상대가 사용자끼리인지 회사인지에 따라 자금 표가 달라진다는 판정이 대기다.",
+        "en": "Under the profit, a five-row table spells out the assumed formula: change times multiplier times ten. Who the counterparty is - other users or the company - changes the funding table, and that call is pending."
+      }
+    },
+    "13-star2-v3/005-ticker": {
+      "title": {
+        "ko": "v3 종목 상세 - 오른다 매수, 내린다 매도",
+        "en": "v3 ticker detail - buy up, sell down"
+      },
+      "desc": {
+        "ko": "하루치 선 차트 아래에 집계 정보와 거래 조건 표, 그리고 빨강·파랑 버튼 둘이 고정된다. 손실 한도를 건 P 까지로 두고 자동 청산을 적었다. 배수와 x10 은 여전히 가정이다.",
+        "en": "A day's line chart, then tally info and trade terms, with red and blue buttons pinned below. Loss is capped at the stake with auto-liquidation noted. Multiplier and the times-ten are still placeholders."
+      }
+    },
+    "14-star2-v4/001-home": {
+      "title": {
+        "ko": "v4 홈 - 같은 루프, 게임형 스킨",
+        "en": "v4 home - same loop, game skin"
+      },
+      "desc": {
+        "ko": "v2 의 흐름을 그대로 두고 껍데기만 바꿨다. O 는 파랑, X 는 주황 큰 타일이 되고 마감 카운트다운이 알약으로 커졌다. 참여자 아바타 세 개가 붙었고 P 는 금색 코인 배지다.",
+        "en": "The v2 flow untouched, only the shell changed. O becomes a big blue tile, X an orange one, and the countdown grows into a pill. Three participant avatars appear and points wear a gold coin badge."
+      }
+    },
+    "14-star2-v4/002-invite": {
+      "title": {
+        "ko": "v4 친구 초대 - 분홍 카드에 같은 세 줄",
+        "en": "v4 invite - the same three rules on pink"
+      },
+      "desc": {
+        "ko": "조건 셋과 「가입하면 링크가 생긴다」는 안내가 그대로다. 카드가 분홍 그라데이션이 되고 보상이 알약 배지로 나온 것만 다르다.",
+        "en": "Three rules and the \"link appears after sign-up\" note are unchanged. The card turns pink gradient and the reward becomes a pill badge; that is the whole difference."
+      }
+    },
+    "14-star2-v4/003-join": {
+      "title": {
+        "ko": "v4 가입 시트 - 문장을 더 줄였다",
+        "en": "v4 sign-up sheet - the copy shortened again"
+      },
+      "desc": {
+        "ko": "「닉네임 하나면 돼요. 지갑을 연결하면 더.」 두 문장으로 줄였다. 계정 이름을 본문에서 뺐고, 버튼은 두툼한 그림자를 달았다. 뜨는 순간은 여전히 잔액 0 이다.",
+        "en": "Cut to two sentences: a nickname is enough, link a wallet for more. The account brand left the body copy and the button got a heavy shadow. It still appears only at zero balance."
+      }
+    },
+    "14-star2-v4/004-me": {
+      "title": {
+        "ko": "v4 내 포인트 - 카드마다 다른 색",
+        "en": "v4 my points - a colour per card"
+      },
+      "desc": {
+        "ko": "잔액은 노랑, 가입은 파랑, 지갑은 보라, 초대는 분홍이다. 내용은 v2 와 같고 내역의 「대」가 「VS」로 바뀌었다. 색으로 칸을 구분하는 대신 위계가 사라진 것이 이 스킨의 값이다.",
+        "en": "Yellow balance, blue sign-up, purple wallet, pink invite. Contents match v2 and \"vs\" replaces the Korean \"against\". Colour now separates the tiles, and the hierarchy the tints used to carry is the price."
+      }
+    },
+    "14-star2-v4/005-region": {
+      "title": {
+        "ko": "v4 지역 - 핀 색이 분류를 말한다",
+        "en": "v4 zones - pin colour speaks for category"
+      },
+      "desc": {
+        "ko": "같은 타일 지도인데 핀이 분류별 색으로 갈렸다. 고른 곳의 결제 흐름 요약은 보라 카드가 됐고, 목록 버튼은 둥근 알약이다.",
+        "en": "The same map tiles, but pins are now coloured by category. The chosen zone's payment summary becomes a purple card and the list buttons are rounded pills."
+      }
+    },
+    "14-star2-v4/006-result": {
+      "title": {
+        "ko": "v4 결과 - 초록 카드로 돌아왔다",
+        "en": "v4 result - back to the green card"
+      },
+      "desc": {
+        "ko": "v2 의 흰 카드 대신 초록 그라데이션 카드에 「맞혔어요! 정답 O」를 두었다. 둘의 변화 줄에 「맞힘」 배지가 붙고 다음 픽 버튼이 주황이다.",
+        "en": "The v2 white card gives way to a green gradient reading \"Hit! Answer O\". A \"correct\" badge marks the winning row and the next-pick button turns orange."
+      }
+    },
+    "14-star2-v4/007-share": {
+      "title": {
+        "ko": "v4 공유 카드 - 초록, 문장 하나 더 짧게",
+        "en": "v4 share card - green, one line shorter"
+      },
+      "desc": {
+        "ko": "카드가 초록이 되고 로고 배지가 붙었다. 「정답은 담지 않아요」 한 줄로 안내를 줄였다. 싣는 것과 빼는 것은 앞 판들과 같다.",
+        "en": "The card goes green with a logo badge. The note shrinks to one line, \"the answer is not included\". What goes on and what stays off is unchanged."
+      }
+    },
+    "14-star2-v4/008-wait": {
+      "title": {
+        "ko": "v4 픽 완료 - 세 단계가 알약 셋으로",
+        "en": "v4 staked - three steps as three pills"
+      },
+      "desc": {
+        "ko": "v2 의 표가 다시 가로 알약 셋이 됐다. 현재 단계만 흰색이다. 내 픽을 문장으로 적는 것과 아래의 지금 비율·다음 픽은 그대로다.",
+        "en": "The v2 table returns to three pills in a row, only the current one white. The pick as a sentence, the live split and the next pick below are unchanged."
+      }
+    },
+    "15-star2-v5/001-web-home": {
+      "title": {
+        "ko": "v5 웹 홈 - 세 기둥에 나눠 넣은 같은 화면",
+        "en": "v5 web home - the same screen across three columns"
+      },
+      "desc": {
+        "ko": "모바일 픽 루프를 데스크탑 껍데기에 옮겼다. 왼쪽에 내 자리와 오늘 내역, 가운데에 O/X 카드 한 장, 오른쪽에 지금 비율과 다음 픽, 판정 대기 메모가 선다. 배경은 흐린 사진 위에 유리 패널이다.",
+        "en": "The mobile pick loop moved into a desktop shell. My seat and today's history on the left, one O/X card in the middle, the live split, next pick and pending notes on the right. Glass panels over a blurred photo."
+      }
+    },
+    "15-star2-v5/002-web-invite": {
+      "title": {
+        "ko": "v5 웹 초대 - 오른쪽에 초대한 친구 자리",
+        "en": "v5 web invite - a column for invited friends"
+      },
+      "desc": {
+        "ko": "가운데 카드에 조건 셋을 번호 원으로 적고, 오른쪽 기둥은 「초대한 친구」 목록으로 비워 두었다. 가입 전이라 링크가 없다는 상태를 빈 기둥이 대신 말한다.",
+        "en": "The centre card lists the three rules with numbered circles; the right column is reserved for invited friends and sits empty. The empty column itself says there is no link before sign-up."
+      }
+    },
+    "15-star2-v5/003-web-join": {
+      "title": {
+        "ko": "v5 웹 가입 - 시트 대신 가운데 모달",
+        "en": "v5 web sign-up - a centred modal instead of a sheet"
+      },
+      "desc": {
+        "ko": "아래에서 올라오던 시트가 데스크탑에서는 가운데 모달이 됐다. 닉네임 한 칸, 계속, 나중에. 양쪽 기둥은 잔액 0 인 상태로 흐려진다.",
+        "en": "The bottom sheet becomes a centred modal on desktop. One nickname field, continue, later. Both side columns dim, showing a zero balance."
+      }
+    },
+    "15-star2-v5/004-web-me": {
+      "title": {
+        "ko": "v5 웹 내 포인트 - P 버는 길 셋을 가운데로",
+        "en": "v5 web my points - three ways to earn, centred"
+      },
+      "desc": {
+        "ko": "왼쪽에 잔액, 가운데에 가입·지갑·초대 세 카드, 오른쪽에 오늘 내역이다. 모바일에서 세로로 쌓이던 것을 기둥 셋에 나눠 넣었다.",
+        "en": "Balance on the left, the sign-up, wallet and invite cards in the middle, today's history on the right. What stacked vertically on mobile is split across three columns."
+      }
+    },
+    "15-star2-v5/005-web-region": {
+      "title": {
+        "ko": "v5 웹 지역 - 지도가 화면 전체",
+        "en": "v5 web zones - the map takes the whole screen"
+      },
+      "desc": {
+        "ko": "타일 지도가 배경이 되고 왼쪽에 분류 칩과 목록, 오른쪽에 고른 상권의 결제 흐름 요약과 「이 지역으로 픽 열기」 버튼이 뜬다. 핀은 시 경계 목록에서 뽑았고 값은 라이브다.",
+        "en": "The map tiles become the background; category chips and the list float on the left, the chosen zone's payment summary and an \"open picks here\" button on the right. Pins come from the city's boundary list and the values are live."
+      }
+    },
+    "15-star2-v5/006-web-result": {
+      "title": {
+        "ko": "v5 웹 결과 - 변화율을 오른쪽 기둥으로",
+        "en": "v5 web result - the changes move to the right column"
+      },
+      "desc": {
+        "ko": "가운데 카드는 판정과 순증 P, 버튼 둘만 남기고 둘의 변화율은 오른쪽 기둥으로 보냈다. 화면이 넓어지자 카드 한 장에 다 넣을 이유가 없어졌다.",
+        "en": "The centre card keeps only the verdict, net points and two buttons; both categories' changes go to the right column. With the width available, cramming it all onto one card no longer made sense."
+      }
+    },
+    "15-star2-v5/007-web-share": {
+      "title": {
+        "ko": "v5 웹 공유 - 카드를 카드 안에",
+        "en": "v5 web share - a card inside a card"
+      },
+      "desc": {
+        "ko": "공유 카드 자체는 모바일 비율을 유지하고 흰 카드 안에 넣었다. 링크 복사가 위, 이미지 저장이 아래로 순서가 바뀌었다. 답을 빼는 원칙은 같다.",
+        "en": "The share card keeps its mobile proportions and sits inside a white card. Copy link moves above save image. The answer still stays off the card."
+      }
+    },
+    "15-star2-v5/008-web-wait": {
+      "title": {
+        "ko": "v5 웹 예측 완료 - 세 칸이 다시 가로로",
+        "en": "v5 web staked - three tiles, side by side again"
+      },
+      "desc": {
+        "ko": "내 픽 문장, 마감 시각, 걸기·집계·결과 세 칸을 가운데 카드에 두고 지금 비율과 다음 픽은 오른쪽으로 보냈다. 17 분 지연은 여기서도 그대로 적혀 있다.",
+        "en": "The pick sentence, close time and the stake, tally, result tiles on the centre card; the live split and next pick on the right. The seventeen-minute lag is still written in."
+      }
+    },
+    "16-district/001-hood-grade": {
+      "title": {
+        "ko": "동네 상권 등급표 - S 부터 C 까지",
+        "en": "Neighbourhood grade table - S down to C"
+      },
+      "desc": {
+        "ko": "동네마다 등급과 변화율을 매기고 지도에 말풍선으로 띄웠다. 「핫플 격전지·떠오르는 실세·조용한 강자·저평가 우량주」 네 등급을 배지 색으로 갈랐다. 지도 자리는 회색 블록으로 비워 둔 더미다.",
+        "en": "Each neighbourhood gets a grade and a change figure, floated as callouts on a map. Four grades - hot battleground, rising force, quiet strong, undervalued - are split by badge colour. The map area is a grey-block placeholder."
+      }
+    },
+    "16-district/002-hood-grade-ds": {
+      "title": {
+        "ko": "등급표 DS 판 - 같은 데이터, 토큰 색으로",
+        "en": "Grade table, DS version - same data, token colours"
+      },
+      "desc": {
+        "ko": "앞 판을 디자인 시스템 셸 안에 다시 그렸다. 이모지 아이콘이 선 아이콘으로, 빨강·주황 배지가 틴트 배지로 바뀌었다. 지도는 격자만 남긴 자리 표시다.",
+        "en": "The previous board redrawn inside the design-system shell. Emoji icons become line icons and the red and orange badges become tints. The map is a grid placeholder."
+      }
+    },
+    "16-district/003-district-index": {
+      "title": {
+        "ko": "상권 놀이기구 컨셉 목록 - 넷을 한 장에",
+        "en": "District rides index - four concepts on one page"
+      },
+      "desc": {
+        "ko": "「우리 동네 몇 살 · 저 집 얼마 벌까 · 동네가 바뀐다 · 동네 예측 시장」 네 컨셉을 한 줄 설명과 함께 세웠다. 내부 검토용이며 시즌 보상은 비워 둔 상태라고 첫 줄에 적었다.",
+        "en": "Four concepts - how old is my neighbourhood, how much does that shop make, the neighbourhood is changing, a neighbourhood prediction market - each with a one-line pitch. The header says it is internal review with season rewards left blank."
+      }
+    },
+    "16-district/004-district-neighborhood-age": {
+      "title": {
+        "ko": "우리 동네 몇 살 - 먼저 알아본 순번만 준다",
+        "en": "How old is my neighbourhood - only the order of who found it first"
+      },
+      "desc": {
+        "ko": "동네 나이를 점수와 한 줄 상태로 매기고 지도에 띄웠다. 상단 띠가 「아직 문 열기 전인 가게를 먼저 알아본 순번이 남는다 - 받는 것은 순번뿐」이라고 못 박는다. 보상 대신 순번을 주는 것이 이 컨셉의 핵심이다.",
+        "en": "Each neighbourhood gets an age score and a one-line state, floated on the map. The top banner fixes the rule: spotting a shop before it opens leaves you a number in line, and that number is all you get. Order instead of reward is the whole idea."
+      }
+    },
+    "16-district/005-district-neighborhood-change": {
+      "title": {
+        "ko": "동네가 바뀐다 - 붐빔 랭킹과 올해 생긴 것",
+        "en": "The neighbourhood is changing - a busyness ranking and what opened this year"
+      },
+      "desc": {
+        "ko": "수도권 시군구를 붐빔 정도로 색칠한 블록 지도와 왼쪽 랭킹이다. 검은 카드 하나가 「올해 서울에서 무엇이 늘고 무엇이 줄었나」를 한 줄씩 말한다. 붐빔은 지역 단위이고 가게는 목록일 뿐이라는 주의를 하단에 길게 달았다.",
+        "en": "A block map of metro districts tinted by busyness, with a ranking on the left. One dark card states what grew and what shrank in Seoul this year. A long footnote insists busyness is a district figure and shops are only a list."
+      }
+    },
+    "16-district/006-district-prediction-market": {
+      "title": {
+        "ko": "동네 예측 시장 - 호가창을 그대로 빌렸다",
+        "en": "Neighbourhood prediction market - an order book, borrowed whole"
+      },
+      "desc": {
+        "ko": "「이번 주말 성수가 홍대보다 붐빌까」 같은 문항을 종목으로 세우고, 가운데에 매도·매수 호가창, 오른쪽에 카드 고르기와 시즌 순위를 두었다. 시즌 포인트로만 돌고 무엇을 줄지는 아직 없다고 적었다.",
+        "en": "Questions like \"will Seongsu be busier than Hongdae this weekend\" listed as tickers, a bid-ask book in the middle, card picking and a season ranking on the right. It runs on season points only; what they buy is not decided."
+      }
+    },
+    "16-district/007-district-store-guess": {
+      "title": {
+        "ko": "저 집 얼마 벌까 - 랭킹 위에 오늘의 한 판",
+        "en": "How much does that shop make - a daily match over the ranking"
+      },
+      "desc": {
+        "ko": "「동네가 바뀐다」와 같은 블록 지도 위에 「오늘의 한 판 - 어느 쪽이 더 벌까, 이건 정답이 있다」 카드를 얹었다. 진짜 숫자는 가게가 상장돼야 나오므로 지금은 지역 단위 추정치로만 돈다.",
+        "en": "The same block map as the changing-neighbourhood ride, topped with a \"today's match - which earns more, this one has an answer\" card. Real figures only arrive once a shop is listed, so for now it runs on district-level estimates."
+      }
+    },
+    "17-hood-ox/001-hood-ox-compare": {
+      "title": {
+        "ko": "픽 스킨 둘 나란히 - 게임형과 첫판",
+        "en": "Two pick skins side by side - game and first cut"
+      },
+      "desc": {
+        "ko": "같은 문항·같은 값·같은 흐름을 게임형 스킨과 첫판 스킨으로 나란히 띄웠다. 선택지 색 대비와 눌리는 느낌, 걸기 버튼 색이 비교 대상이다. 판돈 규칙(게이지냐 고정 칩이냐)은 스킨과 무관하게 미정이라 따로 적었다.",
+        "en": "Same question, values and flow in a game skin and a first-cut skin, phone by phone. Choice colour contrast, the pressed feel and the stake button colour are what gets compared. The stake rule - gauge or fixed chips - is undecided regardless of skin."
+      }
+    },
+    "17-hood-ox/002-hood-ox-me": {
+      "title": {
+        "ko": "게임형 내 포인트 - 시즌 교환표를 위에",
+        "en": "Game-skin my points - the season exchange list on top"
+      },
+      "desc": {
+        "ko": "다크 배경에 주황 잔액 카드, 승패 기록, 시즌 교환표 세 줄이다. 받을 수 있는 상품만 초록으로 켜지고 나머지는 「얼마 더」로 잠긴다. 아래는 내 픽·포인트 탭이다.",
+        "en": "An orange balance card on a dark ground, a win-loss record and a three-row season exchange list. Only the reachable item lights green; the rest read \"this much more\". My picks and points tabs follow."
+      }
+    },
+    "17-hood-ox/003-hood-ox-pick": {
+      "title": {
+        "ko": "오늘의 픽 - 네 타일 중 하나, 게이지로 걸기",
+        "en": "Today's pick - one of four tiles, stake by gauge"
+      },
+      "desc": {
+        "ko": "「어제 결제가 제일 많았던 연령대는」 같은 문항에 색 타일 넷을 두고, 아래 게이지로 거는 P 를 정한다. 선택지를 고르기 전에는 게이지와 걸기 버튼이 잠긴다. 상단 점 다섯이 오늘 남은 문항 수다.",
+        "en": "Four colour tiles under a question like \"which age group paid most yesterday\", with a gauge below to set the stake. Gauge and stake button stay locked until a tile is chosen. Five dots on top count today's remaining questions."
+      }
+    },
+    "17-hood-ox/004-hood-ox-rank": {
+      "title": {
+        "ko": "시즌 순위 - 기프티콘 컷 선을 그었다",
+        "en": "Season ranking - the gift-card cut line drawn in"
+      },
+      "desc": {
+        "ko": "내 순위 카드에 컷까지 부족한 P 와 바로 위와의 차이를 적고, 전체 순위 목록 사이에 「기프티콘 컷 · 10 위까지」 띠를 실제로 그었다. 컷 안팎을 목록에서 눈으로 가르게 한 판이다.",
+        "en": "My rank card shows the points short of the cut and the gap to the next rank, and a \"gift-card cut, top ten\" band is drawn into the list itself. Inside and outside the cut become visible in the list."
+      }
+    },
+    "17-hood-ox/005-hood-ox-result": {
+      "title": {
+        "ko": "오늘 정산 - 순위 변동과 문제별 결과",
+        "en": "Today's settlement - rank change and per-question results"
+      },
+      "desc": {
+        "ko": "초록 카드에 오늘 순증 P, 그 아래 순위가 몇 위에서 몇 위로 갔는지와 컷 진입 여부를 둔다. 문제별 결과는 내 픽과 정답, 선택지별 비율 막대로 풀었다. 맞힌 카드는 초록 테두리, 틀린 카드는 빨강이다.",
+        "en": "A green card with today's net points, then the rank move and whether the cut was made. Each question follows with my pick, the answer and a bar per choice. Hits get a green edge, misses a red one."
+      }
+    },
+    "18-viewer/001-hood-star-flow": {
+      "title": {
+        "ko": "1 의 플로우 - 탭 넷과 게임 셋",
+        "en": "Star 1 flow - four tabs and three games"
+      },
+      "desc": {
+        "ko": "첫 판의 화면 흐름을 다이어그램 뷰어로 그렸다. 첫 진입, 항상 켜진 탭 바 넷, 홈에서 갈라지는 가게 순위 시트와 게임 셋이 층으로 선다. 미정 게이트와 정책 메모를 색으로 구분하고, 판마다 탭을 갈라 앞 판과 비교한다.",
+        "en": "The first build's screen flow in the diagram viewer. First run, the always-on four-tab bar, then the shop ranking sheet and three games branching from home, in layers. Undecided gates and policy notes are colour-coded, and each build gets its own tab for comparison."
+      }
+    },
+    "18-viewer/002-hood-star2-flow": {
+      "title": {
+        "ko": "2 의 플로우 - 한 번에 픽 하나",
+        "en": "Star 2 flow - one pick at a time"
+      },
+      "desc": {
+        "ko": "예측 라운드 첫 판의 흐름이다. 홈에서 걸기 시트, 대기, 맞힘·틀림·무승부 세 결과로 갈리고, 하루 몇 판인지·범위 겹침 처리 같은 게이트가 곁에 붙는다. 밤에 판이 없을 때와 값이 안 왔을 때를 상태로 따로 그렸다.",
+        "en": "The flow of the first prediction-round build. Home leads to the stake sheet, waiting, then hit, miss or draw, with gates like rounds per day and overlap handling attached. No round at night and value-not-received are drawn as separate states."
+      }
+    }
+  }
+}

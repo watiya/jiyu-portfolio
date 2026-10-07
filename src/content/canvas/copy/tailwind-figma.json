@@ -1,0 +1,7 @@
+{
+  "pages": {
+    "01-foundation": { "ko": "기초 값", "en": "Foundation" },
+    "02-application-ui": { "ko": "애플리케이션 UI", "en": "Application UI" },
+    "03-dialogs": { "ko": "다이얼로그 사례", "en": "Dialog use cases" }
+  }
+}

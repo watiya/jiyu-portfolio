@@ -1,0 +1,326 @@
+{
+  "frames": {
+    "001-0-1---brand-guidelines": {
+      "title": { "ko": "표지", "en": "Cover" },
+      "desc": {
+        "ko": "「Brand Guidelines.」 Version 1.0, 2025년 1월 16일. 이 가이드가 시각 디자인과 말투와 사용자 상호작용을 함께 다룬다고 첫 문단이 밝히고, 가치 셋을 Ownership · Trust · Simplicity 로 못박는다. 원문 마지막 문장은 마침표가 둘이다.",
+        "en": "\"Brand Guidelines.\", version 1.0, dated 16 January 2025. The opening paragraph states that the guide covers visual design, verbal tone, and user interaction together, and fixes the three values as Ownership, Trust, and Simplicity. The last sentence in the original ends with two full stops."
+      }
+    },
+    "002-0-2---index-content": {
+      "title": { "ko": "목차", "en": "Index" },
+      "desc": {
+        "ko": "일곱 장으로 갈라 둔 목차다. 소개 · 로고 · 컬러 · 타이포 · 애플리케이션 아이콘 · 이미저리 · 무드보드 순이고, 절 번호가 곧 슬라이드 번호다. 원문에서 「1.2 - Brand Vision」과 「1.2 - Tagline」이 같은 번호를 달고 있다.",
+        "en": "A seven-chapter contents page: introduction, logo, colour, typography, application icons, imagery, moodboard, with the section number doubling as the slide number. In the original, \"1.2 - Brand Vision\" and \"1.2 - Tagline\" carry the same number."
+      }
+    },
+    "003-1-0---brand-introduction": {
+      "title": { "ko": "1장 표지 - 브랜드 소개", "en": "Chapter 1 divider - introduction" },
+      "desc": {
+        "ko": "장이 바뀔 때마다 번호와 제목만 있는 표지를 끼운다. 내용이 없는 장이 아니라, 읽는 사람이 어디까지 왔는지 알게 하는 자리다.",
+        "en": "Each chapter opens with a divider carrying only the number and the title. It holds no content; it exists so the reader knows where they are."
+      }
+    },
+    "004-1-1---brand-introduction": {
+      "title": { "ko": "미션", "en": "Mission" },
+      "desc": {
+        "ko": "「Our mission is to build the most efficient, trust-enhanced marketplace for trading gaming assets.」 파란 사선 그래픽 위에 한 문장만 세웠다. 배경 사진은 Unsplash 출처를 각주로 밝힌다.",
+        "en": "\"Our mission is to build the most efficient, trust-enhanced marketplace for trading gaming assets.\" One sentence over the blue diagonal graphic, with the background photograph credited to Unsplash in a footnote."
+      }
+    },
+    "005-1-2---brand-vision": {
+      "title": { "ko": "비전", "en": "Vision" },
+      "desc": {
+        "ko": "「Enabling a future where gamers truly own the value they create.」 미션이 무엇을 만드는지를 말한다면 비전은 그 결과로 누가 무엇을 갖는지를 말한다. 두 문장을 붙여 두지 않고 장을 나눈 이유가 그것이다.",
+        "en": "\"Enabling a future where gamers truly own the value they create.\" If the mission says what gets built, the vision says who ends up owning what - which is why the two are given separate slides rather than one."
+      }
+    },
+    "006-1-2---brand-vision": {
+      "title": { "ko": "태그라인", "en": "Tagline" },
+      "desc": {
+        "ko": "「Own Your Game」. 앞의 두 문장을 세 낱말로 줄인 자리다. 레이어 이름은 「1.2 - Brand Vision」인데 화면 제목은 Brand Tagline 이고 절 번호도 1.3 이라, 이름이 앞 장에서 복제된 채 안 고쳐졌다.",
+        "en": "\"Own Your Game\" - the previous two sentences compressed into three words. The layer is named \"1.2 - Brand Vision\" while the slide reads Brand Tagline and numbers itself 1.3, so the name was duplicated from the previous slide and never corrected."
+      }
+    },
+    "007-1-3---brand-tone": {
+      "title": { "ko": "톤", "en": "Tone" },
+      "desc": {
+        "ko": "말투를 다섯 낱말로 정한다 - Simple, Efficient, Calm, Grounded, Empowering. 절 번호와 쪽 번호(1.3 · 06)가 앞의 태그라인 장과 똑같아, 원문에서 둘 중 하나는 밀려 있어야 했다.",
+        "en": "The voice is fixed in five words: Simple, Efficient, Calm, Grounded, Empowering. The section and page numbers (1.3, 06) are identical to the tagline slide before it, so one of the two should have been renumbered."
+      }
+    },
+    "008-2-0---brand-logo": {
+      "title": { "ko": "2장 표지 - 로고", "en": "Chapter 2 divider - logo" },
+      "desc": {
+        "ko": "여기서부터 여섯 장이 로고다. 규칙을 적기 전에 로고가 무엇을 뜻하는지부터 세우는 순서를 취한다.",
+        "en": "Six slides on the logo start here, in an order that establishes what the mark means before it states any rules."
+      }
+    },
+    "009-2-1---lockup-logo": {
+      "title": { "ko": "메인 로고", "en": "Main logo" },
+      "desc": {
+        "ko": "파란 판 하나에 세로 락업을 크게 세웠다. 본문이 「clear space, 일정한 비율, 승인된 배경」 셋을 조건으로 걸고 왜곡·색 변경·효과를 금지한다. 뒤에 오는 규정들이 전부 이 세 조건의 세부다.",
+        "en": "The stacked lockup shown large on a single blue field. The body text sets three conditions - adequate clear space, consistent proportions, approved backgrounds - and forbids distortion, recolouring, and effects. Every rule that follows is a detail of those three."
+      }
+    },
+    "010-2-2---construction-logo-mark": {
+      "title": { "ko": "심볼 작도", "en": "Symbol construction" },
+      "desc": {
+        "ko": "심볼을 「관문(gateway)」으로 설명한다. 각진 정밀함과 열린 가운데가 명료함과 신뢰와 전진을 뜻한다는 것인데, 뒤의 격자 작도가 그 주장이 눈대중이 아니라는 근거다.",
+        "en": "The symbol is explained as a gateway: angular precision and an open centre standing for clarity, trust, and forward momentum. The construction grid behind it is what keeps that claim from being an assertion by eye."
+      }
+    },
+    "011-2-3---construction-horizontal-logo": {
+      "title": { "ko": "가로 락업 작도", "en": "Horizontal lockup construction" },
+      "desc": {
+        "ko": "가로 락업을 격자에 올린 장이다. 다만 본문이 세로 락업 설명(「stacked layout」, 「vertical alignment 가 필요할 때」)이라 제목과 어긋난다 - 다음 장에서 옮겨 온 문단으로 보인다.",
+        "en": "The horizontal lockup set on its grid. The body text, however, describes the vertical one - \"a stacked layout\", \"when vertical alignment is required\" - and so contradicts the title; it reads as a paragraph carried over from the next slide."
+      }
+    },
+    "012-2-4---construction-vertical-logo": {
+      "title": { "ko": "세로 락업 작도", "en": "Vertical lockup construction" },
+      "desc": {
+        "ko": "세로 락업의 격자다. 「격자는 도구가 아니라 토대」라고 적어 두었는데, 이 문장이 이 가이드 전체의 태도를 요약한다 - 규칙을 취향이 아니라 구조로 세운다.",
+        "en": "The grid for the vertical lockup, with the line \"the grid is not just a tool - it is a foundation\". That sentence summarises the whole guide's stance: rules are built as structure rather than taste."
+      }
+    },
+    "013-2-5---logo-usage-guidelines": {
+      "title": { "ko": "로고 사용 규정", "en": "Logo usage rules" },
+      "desc": {
+        "ko": "넉 칸 중 위 둘이 허용(「Default Version」·「Symbol Only」)이고 아래 둘이 「Do Not Use」다. 늘린 판과 효과를 얹은 판을 실제로 그려 놓아, 금지가 문장이 아니라 그림으로 남는다.",
+        "en": "Four cells: the top two allowed - \"Default Version\" and \"Symbol Only\" - the bottom two marked \"Do Not Use\". The stretched version and the version carrying effects are actually drawn, so the prohibition survives as a picture rather than a sentence."
+      }
+    },
+    "014-2-6---logo-color-usage-guidelines": {
+      "title": { "ko": "로고 색 사용 규정", "en": "Logo colour rules" },
+      "desc": {
+        "ko": "바탕 밝기로만 판정하게 규칙을 줄였다. 기본은 파란 바탕에 흰 로고, 어두운 바탕이면 흰 로고, 밝은 바탕이면 검정 로고. 색 이름을 외우지 않아도 되는 규칙이라 실제로 지켜진다.",
+        "en": "The rule is reduced to a judgement about background brightness: white on blue by default, white on dark, black on light. Nobody has to memorise colour names, which is why a rule like this actually gets followed."
+      }
+    },
+    "015-3-0---brand-colors": {
+      "title": { "ko": "3장 표지 - 컬러", "en": "Chapter 3 divider - colour" },
+      "desc": {
+        "ko": "컬러 장이 여덟 쪽으로 가장 길다. 팔레트를 정하는 데서 끝내지 않고 그 색 위에 로고를 어떻게 얹는지까지 이어지기 때문이다.",
+        "en": "Colour is the longest chapter at eight pages, because it does not stop at defining a palette but carries on into how the logo sits on those colours."
+      }
+    },
+    "016-3-1---primary-colors": {
+      "title": { "ko": "주 색", "en": "Primary colours" },
+      "desc": {
+        "ko": "Ice White · Pure Blue · Midnight · Hot Red-Pink 넉 장. 색마다 HEX·RGB·HSL 과 한 줄 설명을 붙였다. 원문에서 Pure Blue 는 #0018FF 인데 RGB 가 24 | 255 | 100 으로 적혀 있어 두 값이 서로 다른 색을 가리킨다.",
+        "en": "Four cards - Ice White, Pure Blue, Midnight, Hot Red-Pink - each with HEX, RGB, HSL and a one-line rationale. In the original, Pure Blue is #0018FF but its RGB reads 24 | 255 | 100, so the two values name different colours."
+      }
+    },
+    "017-3-2---secondary-colors": {
+      "title": { "ko": "보조 색", "en": "Secondary colours" },
+      "desc": {
+        "ko": "Neo Violet · Glow Green · Blaze Orange · Neon Yellow · Soft Lilac · Lime Cream · Soft Coral · Pastel Yellow 여덟 장이다. 위 줄은 진하고 아래 줄은 옅은 짝이라, 같은 결의 색을 강조와 배경 두 세기로 갖는다. 상호작용 상태와 배경과 인포그래픽에 쓴다고 범위를 밝혀 두었다. 여기서도 Blaze Orange 가 #FF5C00 인데 RGB 는 105 | 5 | 255 로 파란 쪽 값이 적혀 있다.",
+        "en": "Eight swatches - Neo Violet, Glow Green, Blaze Orange, Neon Yellow, Soft Lilac, Lime Cream, Soft Coral, Pastel Yellow - the top row saturated and the bottom row pale, so each hue exists at both an accent and a surface strength. Scoped to interaction states, backgrounds, and infographics. Blaze Orange is #FF5C00, but its RGB reads 105 | 5 | 255, which is a blue."
+      }
+    },
+    "018-3-3---grayscale-colors": {
+      "title": { "ko": "무채색", "en": "Grayscale" },
+      "desc": {
+        "ko": "Cloud · Smoke · Steel · Space · Graphite · Arsenic · Phantom · Black 여덟 단계다. 주 색·보조 색과 달리 HSL 대신 CMYK 를 적었는데, 이 층이 인쇄까지 내려가는 층이기 때문이다.",
+        "en": "Eight steps from Cloud to Black. Unlike the primary and secondary sets these carry CMYK rather than HSL, because this is the layer that has to survive print."
+      }
+    },
+    "019-3-4---primary-colors-logo-mark": {
+      "title": { "ko": "주 색 위의 심볼", "en": "Symbol on primary colours" },
+      "desc": {
+        "ko": "심볼만 떼어 주 색 넉 장 위에 얹었다. 규칙은 앞 장과 같지만 여기서는 말이 아니라 실제 조합을 그려 놓아 대비가 모자란 짝이 바로 보인다.",
+        "en": "The symbol alone placed on each of the four primary colours. The rule is the same as the earlier one, but drawing the actual pairings makes a weak-contrast combination visible instead of arguable."
+      }
+    },
+    "020-3-5---primary-colors-horizontal-logo": {
+      "title": { "ko": "주 색 위의 가로 락업", "en": "Horizontal lockup on primary colours" },
+      "desc": {
+        "ko": "가로 락업이 대부분의 자리에서 기본값이라고 못박고, 주 색을 바탕으로 쓸 때는 흰 로고나 검정 로고만 얹으라고 한정한다.",
+        "en": "States that the horizontal lockup is the default for most applications, and limits it to the white or black version whenever a primary colour is the background."
+      }
+    },
+    "021-3-6---primary-colors-vertical-logo": {
+      "title": { "ko": "주 색 위의 세로 락업", "en": "Vertical lockup on primary colours" },
+      "desc": {
+        "ko": "세로 락업이 갈 자리를 디지털 인터페이스와 소셜 게시물과 가운데 정렬 레이아웃으로 좁혔다. 가로판과 겨루지 않게 쓰임을 갈라 둔 것이다.",
+        "en": "Narrows the vertical lockup to digital interfaces, social posts, and centred layouts - splitting the use cases so it never competes with the horizontal one."
+      }
+    },
+    "022-3-7---primary-colors-logo-on-backgrounds": {
+      "title": { "ko": "사진 위의 로고", "en": "Logo on imagery" },
+      "desc": {
+        "ko": "색이 아니라 사진 위에 얹을 때의 규정이다. 복잡하거나 대비가 낮은 자리를 피하고, 필요하면 옅은 오버레이를 깔라고 적었다. 절 번호가 3.7 이어야 하는데 화면에는 3.6 으로 찍혀 앞 장과 겹친다.",
+        "en": "The rule for photographic rather than flat backgrounds: avoid busy or low-contrast areas, and lay in a subtle overlay where needed. The slide numbers itself 3.6 where it should be 3.7, duplicating the page before it."
+      }
+    },
+    "023-4-0---primary-typography": {
+      "title": { "ko": "4장 표지 - 타이포그래피", "en": "Chapter 4 divider - typography" },
+      "desc": {
+        "ko": "서체 장이다. 한 벌로 끝내지 않고 디스플레이·웹·본문 세 갈래로 나눠 각각 쓸 자리를 정한다.",
+        "en": "The typography chapter, which does not settle on one family but splits into display, web, and body, each with its own place to be used."
+      }
+    },
+    "024-4-1---primary-typography": {
+      "title": { "ko": "디스플레이 서체", "en": "Display typeface" },
+      "desc": {
+        "ko": "Gosha Sans. 동유럽과 레트로퓨처의 인상을 가져왔다고 밝히고, 헤드라인과 히어로와 브랜드 선언문에만 쓴다고 자리를 한정한다. 「Own Your Game」을 견본 문장으로 세웠다.",
+        "en": "Gosha Sans, credited to Eastern European and retrofuturist references and confined to headlines, hero sections, and brand statements. \"Own Your Game\" serves as the specimen line."
+      }
+    },
+    "025-4-2---google-typography": {
+      "title": { "ko": "웹 서체", "en": "Web typeface" },
+      "desc": {
+        "ko": "Space Grotesk. 웹 UI 와 내비게이션과 시스템 문구에 쓴다. 구글 폰트에서 받을 수 있는 것을 따로 정해 둔 것은, 라이선스가 걸리는 자리에서 대체 서체를 그때그때 고르지 않게 하려는 것이다.",
+        "en": "Space Grotesk, for web UI, navigation, and system text. Nominating a Google-hosted face separately keeps anyone from picking a substitute ad hoc wherever licensing gets in the way."
+      }
+    },
+    "026-4-2---secodary-typography": {
+      "title": { "ko": "본문 서체", "en": "Body typeface" },
+      "desc": {
+        "ko": "Geist. 본문과 UI 요소를 맡고 가변 굵기라 제목·라벨·본문을 한 벌로 덮는다. 레이어 이름의 「Secodary」는 원문 오타이고, 절 번호와 쪽 번호가 앞의 웹 서체 장과 똑같이 4.2 · 24 다.",
+        "en": "Geist, carrying body copy and UI elements, its variable weights covering headings, labels, and text in one family. \"Secodary\" is a typo in the original, and the section and page numbers repeat the web-typeface slide exactly as 4.2 and 24."
+      }
+    },
+    "027-4-3---typography-in-use": {
+      "title": { "ko": "서체를 쓴 화면", "en": "Typography in use" },
+      "desc": {
+        "ko": "규격이 아니라 실제 화면으로 보여 준다. 히어로의 「Own Your Game」, 비전 문장, 「Join Here」 버튼, 제품 절과 뉴스레터가 한 판에 선다. 다만 본문은 UI 서체를 Manrope 라고 적어, 본문 서체를 Geist 로 정한 앞 장과 어긋난다.",
+        "en": "Shown as a screen rather than a spec sheet: the hero line \"Own Your Game\", the vision sentence, a \"Join Here\" button, a products section, and a newsletter block on one board. The body text names Manrope as the UI face, which contradicts the previous slide's choice of Geist."
+      }
+    },
+    "028-4-4---icons-and-typography": {
+      "title": { "ko": "아이콘과 글자", "en": "Icons with type" },
+      "desc": {
+        "ko": "아이콘을 따로 다루지 않고 글자와 짝지어 다룬다. Dashboard · Products · Customers · Analytics · Widgets · Reports 사이드바와 체크아웃 버튼이 예시다. 아이콘의 굵기가 옆 글자와 맞아야 한다는 것이 이 장의 요지다.",
+        "en": "Icons are handled beside type rather than on their own, with a Dashboard-Products-Customers-Analytics-Widgets-Reports sidebar and a checkout button as the examples. The point is that icon weight has to match the type sitting next to it."
+      }
+    },
+    "029-5-0---applications-icon": {
+      "title": { "ko": "5장 표지 - 애플리케이션 아이콘", "en": "Chapter 5 divider - application icons" },
+      "desc": {
+        "ko": "아이콘이 실제로 놓이는 자리를 플랫폼별로 다섯 쪽에 걸쳐 다룬다. 규격을 적는 대신 그 플랫폼의 화면을 그대로 그려 놓는 방식이다.",
+        "en": "Five pages covering where the icon actually lands, platform by platform, by drawing each platform's real screen rather than listing specifications."
+      }
+    },
+    "030-5-1---browser-icon": {
+      "title": { "ko": "브라우저 아이콘", "en": "Browser icon" },
+      "desc": {
+        "ko": "탭에 놓인 파비콘을 macOS 크롬 창째로 그렸다. 「digital front door」라는 표현대로, 작은 크기에서 무너지지 않는지가 유일한 판정 기준이다.",
+        "en": "The favicon shown inside a full macOS Chrome window. As the text's \"digital front door\" suggests, the only test that matters is whether it survives at that size."
+      }
+    },
+    "031-5-2---macos-icon": {
+      "title": { "ko": "macOS 아이콘", "en": "macOS icon" },
+      "desc": {
+        "ko": "Finder 와 Dock 과 알림에 놓인 모습을 한 화면에 세웠다. 애플 휴먼 인터페이스 가이드라인을 따르되 브랜드의 기하와 색은 지킨다고 밝힌다.",
+        "en": "The icon in Finder, in the Dock, and in a notification on one screen, following Apple's Human Interface Guidelines while keeping the brand's geometry and colour."
+      }
+    },
+    "032-5-3---ios-icon": {
+      "title": { "ko": "iOS 아이콘", "en": "iOS icon" },
+      "desc": {
+        "ko": "앱스토어 목록과 홈 화면과 푸시 배너를 함께 그렸다. 평점 4.8, 리뷰 15만이라는 숫자는 실제 값이 아니라 화면을 채운 자리표시다.",
+        "en": "The App Store listing, the home screen, and a push banner drawn together. The 4.8 rating and 150K reviews are placeholder figures filling the layout, not real numbers."
+      }
+    },
+    "033-5-4---twitter--x--icon": {
+      "title": { "ko": "X 프로필 아이콘", "en": "X profile icon" },
+      "desc": {
+        "ko": "X 프로필을 밝은 판과 어두운 판으로 나란히 세웠다. 계정은 @overtake_world 이고 소개 문장이 미션을 줄인 판이다. 위치 「Spain」과 링크 「radesk.com」은 템플릿에 남은 값이다.",
+        "en": "An X profile in light and dark side by side, on @overtake_world, its bio a shortened version of the mission. The location \"Spain\" and the link \"radesk.com\" are template leftovers."
+      }
+    },
+    "034-5-5---instagram-icon": {
+      "title": { "ko": "인스타그램 아이콘", "en": "Instagram icon" },
+      "desc": {
+        "ko": "원형으로 잘리는 자리라 가운데 정렬과 크기를 따로 잡아야 한다고 적었다. 정사각 아이콘을 그대로 넣으면 각진 심볼의 모서리가 잘린다.",
+        "en": "Written up as a circular crop that needs its own centring and scale: drop the square icon in unchanged and the corners of an angular mark get cut."
+      }
+    },
+    "035-6-0---imagery-logo": {
+      "title": { "ko": "6장 표지 - 이미저리", "en": "Chapter 6 divider - imagery" },
+      "desc": {
+        "ko": "규정이 끝나고 표현이 시작되는 자리다. 앞 장들이 지키라고 적은 것이라면 여기부터 다섯 장은 그 안에서 무엇을 할 수 있는지를 보여 준다.",
+        "en": "Where the rules end and expression begins. The earlier chapters say what must be kept; the five pages from here show what can be done inside it."
+      }
+    },
+    "036-6-1---imagery-logo": {
+      "title": { "ko": "포스터", "en": "Posters" },
+      "desc": {
+        "ko": "A4 포스터를 여러 장 겹쳐 쌓았다. 이름을 「Ove / rTa / ke」로 잘라 판마다 다르게 앉히고 파랑과 빨강과 검정을 섞었다. 로고를 온전히 보여 주는 규정 장들과 정반대로, 잘려도 읽히는지를 시험하는 자리다.",
+        "en": "A stack of overlapping A4 posters, the name broken as \"Ove / rTa / ke\" and set differently on each, across blue, red, and black. Where the rule pages insist the logo stay whole, this one tests whether it still reads when cut."
+      }
+    },
+    "037-6-2---imagery-logo": {
+      "title": { "ko": "문구류", "en": "Stationery" },
+      "desc": {
+        "ko": "책자와 명함과 봉투와 펜을 어두운 바닥에 놓고 찍었다. 표지 셋이 파랑·검정·빨강이라 앞서 정한 주 색이 실물에서 어떻게 겨루는지가 여기서 보인다.",
+        "en": "Booklets, cards, an envelope, and a pen laid out on a dark surface. The three covers in blue, black, and red show how the primary colours behave against one another off-screen."
+      }
+    },
+    "038-6-3---imagery-logo": {
+      "title": { "ko": "의류와 모자", "en": "Apparel" },
+      "desc": {
+        "ko": "후드와 캡에 얹은 판이다. 후드는 심볼 뒤로 분홍 방사선을 깔았고 캡은 워드마크 가운데 글자를 심볼로 바꿔 넣었다. 자수와 프린트는 획이 뭉치므로 한 색 심볼을 정해 둔 앞의 규정이 여기서 쓰인다.",
+        "en": "A hoodie and a cap: the hoodie sets a pink burst behind the symbol, the cap swaps a letter of the wordmark for the mark itself. Embroidery and print thicken strokes, which is where the single-colour symbol rule earns its place."
+      }
+    },
+    "039-6-4---imagery-logo": {
+      "title": { "ko": "가방과 키링", "en": "Bag and keyring" },
+      "desc": {
+        "ko": "에코백과 키링이다. 가방에는 「TAKE」를 세로로 세 번 쌓아 아래로 갈수록 잘리게 두어, 반복 자체를 무늬로 썼다.",
+        "en": "A tote and a keyring. On the tote \"TAKE\" is stacked three times and allowed to crop further with each line, turning the repetition itself into the pattern."
+      }
+    },
+    "040-7-0---moodboard": {
+      "title": { "ko": "7장 표지 - 무드보드", "en": "Chapter 7 divider - moodboard" },
+      "desc": {
+        "ko": "마지막 장이다. 규정을 다 적은 뒤 그 규정이 어디서 왔는지를 뒤에 붙였다. 절 번호가 7.0 이어야 하는데 화면에는 6.0 으로 남아 있다.",
+        "en": "The last chapter, placing where the rules came from after the rules themselves. The slide numbers itself 6.0 where it should read 7.0."
+      }
+    },
+    "041-7-1---moodboard": {
+      "title": { "ko": "빛의 결", "en": "Light" },
+      "desc": {
+        "ko": "어둠 위로 세로 광선이 올라오고 그 위에 「Own Your Game」이 놓인다. 파랑을 색이 아니라 빛으로 다루는 결이다.",
+        "en": "Vertical shafts of light rising out of the dark with \"Own Your Game\" over them - blue handled as light rather than as a colour."
+      }
+    },
+    "042-7-2---moodboard": {
+      "title": { "ko": "압출한 글자", "en": "Extruded type" },
+      "desc": {
+        "ko": "OVERTAKE 를 두껍게 밀어낸 파란 3D 글자로 세우고 화면 밖으로 넘치게 잘랐다. 로고의 각진 면과 같은 어법이지만 부피를 준 판이라, 심볼의 기하가 입체로 가도 버티는지를 본다.",
+        "en": "OVERTAKE extruded into heavy blue 3D lettering and cropped so it runs off the frame. It speaks the same angular language as the logo but with volume, testing whether that geometry survives being made solid."
+      }
+    },
+    "043-7-3---moodboard": {
+      "title": { "ko": "선언 문구", "en": "The statement" },
+      "desc": {
+        "ko": "「EMPOWERING TRUST THROUGH STABILITY, TRANSPARENCY, AND INNOVATION.」을 화면 가득 세우고 그 위에 유리 방울을 얹어 글자를 일그러뜨렸다. 태그라인이 세 낱말로 말하는 것을 길게 편 판이다.",
+        "en": "\"EMPOWERING TRUST THROUGH STABILITY, TRANSPARENCY, AND INNOVATION.\" set full-bleed with a glass droplet distorting the words beneath it - the long form of what the tagline says in three."
+      }
+    },
+    "044-7-4---moodboard": {
+      "title": { "ko": "흐린 심볼과 로고", "en": "The blurred symbol beside the logo" },
+      "desc": {
+        "ko": "세로 줄무늬로 흩뜨린 심볼을 왼쪽에 두고 오른쪽에 또렷한 로고를 붙였다. 무드보드가 로고로 되돌아오며 끝나는 자리다. 쪽 번호가 42 여야 하는데 원문에는 「4.2」로 찍혀 있다.",
+        "en": "The symbol dissolved into vertical stripes on the left, the sharp logo set beside it on the right, closing the moodboard by returning to the mark. The page number should read 42 but the original prints \"4.2\"."
+      }
+    },
+    "045-brand-identity-cover": {
+      "title": { "ko": "다른 표지 - Brand Identity", "en": "Alternate cover - Brand Identity" },
+      "desc": {
+        "ko": "같은 날짜·같은 본문·같은 그래픽인데 제목만 「Brand Identity.」인 표지다. 확정본은 「Brand Guidelines.」로 갔고, 정체성을 적은 문서인지 규정을 적은 문서인지를 이름으로 가른 흔적이다.",
+        "en": "Same date, same paragraph, same graphic, titled \"Brand Identity.\" instead. The final cover went with \"Brand Guidelines.\", and the pair records the choice between naming it a statement of identity or a book of rules."
+      }
+    },
+    "046-brand-asset-page": {
+      "title": { "ko": "브랜드 자산 배포 화면", "en": "The brand asset page" },
+      "desc": {
+        "ko": "가이드가 아니라 제품 웹의 한 화면이다. 「Brand Asset」 아래 로고를 PNG 와 SVG 로 내려받게 해 두었다. 규정을 문서로만 두지 않고 파일이 나가는 자리까지 만든 것이라, 이 캔버스에서 유일하게 살아 움직이는 장이다.",
+        "en": "Not a guideline page but a screen from the product site: under \"Brand Asset\", each logo is offered as PNG and SVG. It is the one live surface in this canvas, and it is what keeps the rules from stopping at the document."
+      }
+    }
+  }
+}

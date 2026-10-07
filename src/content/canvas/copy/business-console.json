@@ -1,0 +1,1164 @@
+{
+  "pages": {
+    "01-console-ga": {
+      "ko": "콘솔 GA",
+      "en": "Console GA"
+    },
+    "02-console": {
+      "ko": "콘솔",
+      "en": "Console"
+    },
+    "03-console-v1": {
+      "ko": "콘솔 v1",
+      "en": "Console v1"
+    },
+    "04-console-v2": {
+      "ko": "콘솔 v2",
+      "en": "Console v2"
+    },
+    "05-admin": {
+      "ko": "어드민",
+      "en": "Admin"
+    },
+    "06-partner": {
+      "ko": "파트너 · 비즈니스",
+      "en": "Partner and business"
+    },
+    "07-valuation": {
+      "ko": "가치 산정 · 토크노믹스",
+      "en": "Valuation and tokenomics"
+    },
+    "08-spikes": {
+      "ko": "콘솔 스파이크",
+      "en": "Console spikes"
+    }
+  },
+  "flow": [
+    [
+      "01-console-ga/001-console",
+      "01-console-ga/012-token"
+    ],
+    [
+      "01-console-ga/012-token",
+      "01-console-ga/013-token-sale"
+    ],
+    [
+      "01-console-ga/013-token-sale",
+      "01-console-ga/007-launchpad"
+    ],
+    [
+      "01-console-ga/007-launchpad",
+      "01-console-ga/008-listed-celebrate"
+    ],
+    [
+      "01-console-ga/002-business",
+      "01-console-ga/003-business-edit"
+    ],
+    [
+      "01-console-ga/011-settlement",
+      "01-console-ga/015-withdrawal"
+    ],
+    [
+      "01-console-ga/014-wallet",
+      "01-console-ga/011-settlement"
+    ],
+    [
+      "02-console/001-console",
+      "02-console/009-token"
+    ],
+    [
+      "02-console/009-token",
+      "02-console/005-launchpad"
+    ],
+    [
+      "02-console/005-launchpad",
+      "02-console/006-listing"
+    ],
+    [
+      "02-console/001-console",
+      "02-console/004-disclosure"
+    ],
+    [
+      "02-console/004-disclosure",
+      "02-console/008-settlement"
+    ],
+    [
+      "03-console-v1/001-console-v1",
+      "03-console-v1/010-token"
+    ],
+    [
+      "03-console-v1/010-token",
+      "03-console-v1/006-launchpad"
+    ],
+    [
+      "03-console-v1/006-launchpad",
+      "03-console-v1/007-listing"
+    ],
+    [
+      "03-console-v1/002-business",
+      "03-console-v1/003-business-edit"
+    ],
+    [
+      "03-console-v1/009-settlement",
+      "03-console-v1/012-withdrawal"
+    ],
+    [
+      "03-console-v1/001-console-v1",
+      "03-console-v1/005-disclosure"
+    ],
+    [
+      "04-console-v2/001-console-v2",
+      "04-console-v2/011-start"
+    ],
+    [
+      "04-console-v2/011-start",
+      "04-console-v2/012-token"
+    ],
+    [
+      "04-console-v2/012-token",
+      "04-console-v2/006-launchpad"
+    ],
+    [
+      "04-console-v2/006-launchpad",
+      "04-console-v2/007-listed-celebrate"
+    ],
+    [
+      "04-console-v2/007-listed-celebrate",
+      "04-console-v2/008-listing"
+    ],
+    [
+      "04-console-v2/001-console-v2",
+      "04-console-v2/002-agents"
+    ],
+    [
+      "05-admin/001-admin",
+      "05-admin/005-businesses-applications"
+    ],
+    [
+      "05-admin/005-businesses-applications",
+      "05-admin/004-businesses"
+    ],
+    [
+      "05-admin/004-businesses",
+      "05-admin/006-businesses-token-image-reviews"
+    ],
+    [
+      "05-admin/010-launchpad",
+      "05-admin/011-launchpad-listing-applications"
+    ],
+    [
+      "05-admin/001-admin",
+      "05-admin/008-disclosures"
+    ],
+    [
+      "06-partner/014-welcome",
+      "06-partner/005-apply"
+    ],
+    [
+      "06-partner/005-apply",
+      "06-partner/003-partner"
+    ],
+    [
+      "06-partner/003-partner",
+      "06-partner/011-scout"
+    ],
+    [
+      "06-partner/011-scout",
+      "06-partner/012-screening"
+    ],
+    [
+      "06-partner/012-screening",
+      "06-partner/009-onboarding"
+    ],
+    [
+      "06-partner/009-onboarding",
+      "06-partner/010-pipeline"
+    ],
+    [
+      "06-partner/010-pipeline",
+      "06-partner/008-manage"
+    ],
+    [
+      "06-partner/008-manage",
+      "06-partner/006-earnings"
+    ],
+    [
+      "06-partner/001-access",
+      "06-partner/002-business-guide"
+    ],
+    [
+      "07-valuation/002-valuation",
+      "07-valuation/003-valuation-ga-business-profile"
+    ],
+    [
+      "07-valuation/003-valuation-ga-business-profile",
+      "07-valuation/004-valuation-ga-financials"
+    ],
+    [
+      "07-valuation/004-valuation-ga-financials",
+      "07-valuation/005-valuation-ga-result"
+    ],
+    [
+      "07-valuation/006-valuation-business-profile",
+      "07-valuation/009-valuation-location"
+    ],
+    [
+      "07-valuation/009-valuation-location",
+      "07-valuation/007-valuation-data-connections"
+    ],
+    [
+      "07-valuation/007-valuation-data-connections",
+      "07-valuation/008-valuation-financials"
+    ],
+    [
+      "07-valuation/008-valuation-financials",
+      "07-valuation/010-valuation-reputation"
+    ],
+    [
+      "07-valuation/010-valuation-reputation",
+      "07-valuation/012-valuation-risk"
+    ],
+    [
+      "07-valuation/012-valuation-risk",
+      "07-valuation/011-valuation-result"
+    ],
+    [
+      "07-valuation/011-valuation-result",
+      "07-valuation/001-tokenomics"
+    ],
+    [
+      "08-spikes/004-console-wizard",
+      "08-spikes/001-console-vending-dashboard"
+    ],
+    [
+      "08-spikes/001-console-vending-dashboard",
+      "08-spikes/003-console-vending-raise"
+    ],
+    [
+      "08-spikes/003-console-vending-raise",
+      "08-spikes/002-console-vending-liquidity"
+    ]
+  ],
+  "frames": {
+    "01-console-ga/001-console": {
+      "title": {
+        "ko": "GA 대시보드 - 카드 두 장뿐인 첫 화면",
+        "en": "GA dashboard - two cards and nothing else"
+      },
+      "desc": {
+        "ko": "상점 카드와 「토큰 발행하기」 카드만 두고 나머지를 비웠다. 토큰이 없는 상점에 그래프를 보여 줄 이유가 없어서, 다음 할 일 하나만 남겼다.",
+        "en": "A store card and an Issue-your-token card, nothing more. A store without a token has no charts worth showing, so only the next step is left."
+      }
+    },
+    "01-console-ga/002-business": {
+      "title": {
+        "ko": "내 상점 - 공개 페이지와 나란히",
+        "en": "My Store - side by side with the public page"
+      },
+      "desc": {
+        "ko": "왼쪽은 편집할 정보, 오른쪽은 홀더가 보는 공개 페이지 미리보기다. 소개가 비어 있으면 빈칸 대신 「소개 추가」 안내가 뜬다.",
+        "en": "Editable info on the left, a preview of the public page on the right. An empty About section shows an add-introduction prompt instead of a blank."
+      }
+    },
+    "01-console-ga/003-business-edit": {
+      "title": {
+        "ko": "상점 편집 - 메뉴·미리보기 3단",
+        "en": "Edit store - menu, preview, page in three panes"
+      },
+      "desc": {
+        "ko": "편집 메뉴, 상점 프로필 카드, 실제 페이지 렌더를 한 화면에 나란히 뒀다. 저장 전에는 공개 페이지가 바뀌지 않는다는 문장을 푸터에 고정했다.",
+        "en": "Edit menu, store profile card and the rendered page sit side by side. The footer keeps one sentence fixed: nothing goes public until you save."
+      }
+    },
+    "01-console-ga/004-community": {
+      "title": {
+        "ko": "커뮤니티 - 상점주가 직접 하는 1차 모더레이션",
+        "en": "Community - first-line moderation by the owner"
+      },
+      "desc": {
+        "ko": "홀더 채팅의 신고 큐를 상점주에게 준다. 유지·삭제·삭제 후 차단 세 버튼으로 끝나고, 고정 공지는 같은 화면에서 바꾼다.",
+        "en": "The report queue for holder chat goes to the owner. Keep, remove, or remove-and-ban, and the pinned notice is edited on the same screen."
+      }
+    },
+    "01-console-ga/005-dao": {
+      "title": {
+        "ko": "DAO - GA 이후로 미룬 자리",
+        "en": "DAO - deferred until after GA"
+      },
+      "desc": {
+        "ko": "홀더 여론 투표는 만들고 있다는 점선 상자 하나만 있다. 투표 결과는 참고용이고 상점 토큰에 의결권이 없다는 문장을 먼저 적었다.",
+        "en": "One dashed box says the holder sentiment poll is being built. It states first that results are advisory and store tokens carry no vote."
+      }
+    },
+    "01-console-ga/006-disclosure": {
+      "title": {
+        "ko": "공시 - 두 단계로 줄인 분기 제출",
+        "en": "Disclosure - quarterly submission cut to two steps"
+      },
+      "desc": {
+        "ko": "다음 제출 카드가 마감과 남은 일수를 크게 보여 준다. 매출 자료 업로드와 선택 메모 두 단계로 줄였고, 놓치면 공개 페이지에 「공시 없음」이 뜬다고 미리 알린다.",
+        "en": "The next-submission card leads with the deadline and days left. Two steps, revenue documents plus an optional note, and it warns that a missed quarter shows as No disclosure publicly."
+      }
+    },
+    "01-console-ga/007-launchpad": {
+      "title": {
+        "ko": "런치패드 설정 - 고르는 건 날짜와 한도뿐",
+        "en": "Launchpad setup - only a date and a limit to choose"
+      },
+      "desc": {
+        "ko": "판매 시작일과 참가자당 구매 한도만 입력받는다. 사전 등록 기간, 공급량, 수수료, 자동 취소 같은 나머지 조건은 고정 표로 보여 주고 손대지 못하게 했다.",
+        "en": "Only the start date and per-participant limit are inputs. Pre-registration, supply, fee and auto-cancel rules are shown as a fixed table and cannot be edited."
+      }
+    },
+    "01-console-ga/008-listed-celebrate": {
+      "title": {
+        "ko": "상장 완료 - 무엇이 이미 움직였는지",
+        "en": "Listing complete - what has already moved"
+      },
+      "desc": {
+        "ko": "상장 직후 한 장짜리 화면이다. 축하 문구 아래에 즉시 지급·초기 유동성·단계 지급·거래 시작을 각각 완료/예약/진행 상태로 나열해, 이미 벌어진 일과 앞으로의 일을 갈랐다.",
+        "en": "A single screen right after listing. Under the headline, instant payout, initial liquidity, staged payouts and live trading each carry a state, separating what already happened from what is scheduled."
+      }
+    },
+    "01-console-ga/009-listing": {
+      "title": {
+        "ko": "빈 마켓 - 토큰이 없을 때",
+        "en": "Empty market - before a token exists"
+      },
+      "desc": {
+        "ko": "가격·참가자·거래량 자리에 빈 상태 하나만 둔다. 무엇이 여기 채워질지를 한 문장으로 적고, 토큰 발행 버튼으로 바로 보낸다.",
+        "en": "One empty state where price, participants and volume would go. It says in one sentence what will fill in here and sends you to issue a token."
+      }
+    },
+    "01-console-ga/010-settings": {
+      "title": {
+        "ko": "설정 - 기기에만 저장되는 것과 아닌 것",
+        "en": "Settings - what stays on this device"
+      },
+      "desc": {
+        "ko": "프로필, 외관, 알림 세 묶음이다. 테마와 언어는 이 기기에만 저장된다고 적었고, 공시 알림은 인앱만 끌 수 있고 이메일은 항상 간다.",
+        "en": "Three groups: profile, appearance, notifications. Theme and language are marked as device-only, and disclosure reminders can be muted in-app but email always goes out."
+      }
+    },
+    "01-console-ga/011-settlement": {
+      "title": {
+        "ko": "정산 - 상장 때는 아무것도 안 준다",
+        "en": "Settlement - nothing is paid at listing"
+      },
+      "desc": {
+        "ko": "출금 가능액 위에 지급 계획 타임라인을 놓았다. 상장 시점에는 지급이 없고 매출 증빙을 통과한 달에만 라운드가 열린다는 규칙을 그림으로 먼저 보여 준다.",
+        "en": "A payout timeline sits above the withdrawable balance. It shows first that nothing is paid at listing and a round opens only in months with passing revenue proof."
+      }
+    },
+    "01-console-ga/012-token": {
+      "title": {
+        "ko": "토큰 발행 시작 - 준비물부터",
+        "en": "Start of token issuance - what to have ready"
+      },
+      "desc": {
+        "ko": "가치 평가 4단계와 발행 신청 3단계, 합쳐서 약 10분이라고 먼저 말한다. 3년 매출·영업이익·부채·현금을 준비하라는 목록을 시작 버튼 앞에 뒀다.",
+        "en": "Four valuation steps plus three application steps, about ten minutes, stated upfront. A checklist of three years of revenue, profit, debt and cash comes before the start button."
+      }
+    },
+    "01-console-ga/013-token-sale": {
+      "title": {
+        "ko": "토큰 세일 - 편집 가능한 건 시작 시각뿐",
+        "en": "Token sale - the start time is the only editable field"
+      },
+      "desc": {
+        "ko": "시작 시각 하나만 고르고 나머지 조건은 발행 정보에서 읽어 와 잠갔다. 판매·유동성·잠금·상점주 몫으로 나뉜 공급 분배를 막대 하나로 보여 준다.",
+        "en": "Pick a start time, everything else is read from issuance and locked. One bar shows the supply split across sale, liquidity, locked and owner."
+      }
+    },
+    "01-console-ga/014-wallet": {
+      "title": {
+        "ko": "지갑 - 시드 구문 없는 스마트 계정",
+        "en": "Wallet - a smart account with no seed phrase"
+      },
+      "desc": {
+        "ko": "가스비 0, 패스키 서명, 다중 기기, 자동 지급 네 타일로 계정의 성격을 먼저 설명한다. 기기를 둘 이상 등록해 두라는 안내와 가스비가 왜 0인지를 같은 화면에 적었다.",
+        "en": "Four tiles explain the account first: zero gas, passkey signing, multi-device, automatic payouts. The screen also asks you to keep two devices registered and explains why gas is free."
+      }
+    },
+    "01-console-ga/015-withdrawal": {
+      "title": {
+        "ko": "출금 - 요약을 옆에 붙인 폼",
+        "en": "Withdraw - a form with its summary alongside"
+      },
+      "desc": {
+        "ko": "금액 입력과 비율 칩, 일일 한도 막대가 왼쪽에, 수령액과 남는 잔액이 오른쪽 요약에 실시간으로 뜬다. 처리 기간은 버튼 바로 위에 뒀다.",
+        "en": "Amount, percentage chips and a daily-limit bar on the left; net amount and remaining balance update in a summary on the right. Processing time sits just above the button."
+      }
+    },
+    "02-console/001-console": {
+      "title": {
+        "ko": "대시보드 - 상점 단계별 미리보기",
+        "en": "Dashboard - preview by store stage"
+      },
+      "desc": {
+        "ko": "상단의 프로토타입 단계 칩으로 심사·발행 대기·런치패드·상장 상태를 바꿔 가며 볼 수 있다. 상장된 상태에서는 가격·거래량·수수료·홀더 타일과 베스팅 진행, 공시 D-day 가 함께 뜬다.",
+        "en": "Prototype stage chips at the top switch the view between review, pending, launchpad and listed. In the listed state, price, volume, fee and holder tiles sit with vesting progress and the disclosure countdown."
+      }
+    },
+    "02-console/002-business": {
+      "title": {
+        "ko": "비즈니스 - 홀더가 보는 대로",
+        "en": "Business - as holders see it"
+      },
+      "desc": {
+        "ko": "공개 프로필 옆에 거래소에서 보이는 상점 페이지를 브라우저 목업으로 붙였다. 편집 탭에서 바꾼 것은 게시 후에 반영된다는 문장을 미리보기 밑에 뒀다.",
+        "en": "The public profile sits next to a browser mockup of the store page on the exchange. A line under the preview says edits show up after publish."
+      }
+    },
+    "02-console/003-dao": {
+      "title": {
+        "ko": "상점 DAO - TGE 전에는 잠금",
+        "en": "Store DAO - locked until TGE"
+      },
+      "desc": {
+        "ko": "제안·투표·트레저리가 열리기 전 상태다. 소각과 가격 변경, 홀더 혜택, 24시간 타임락 같은 예정 기능을 목록으로만 적었다.",
+        "en": "The state before proposals, votes and treasury open. Burns, price changes, holder perks and a 24-hour timelock are listed as what is coming."
+      }
+    },
+    "02-console/004-disclosure": {
+      "title": {
+        "ko": "매출 공시 - 베스팅과 이어진 자리",
+        "en": "Revenue disclosure - tied to vesting"
+      },
+      "desc": {
+        "ko": "다음 제출 카드와 최근 공시 목록이 왼쪽, 베스팅 흐름과 알림 일정, 이의 제기 절차가 오른쪽이다. 공시를 하나 놓치면 베스팅이 멈추지만 몰수는 아니라는 문장을 명시했다.",
+        "en": "Next submission and recent disclosures on the left; vesting health, reminder schedule and the challenge process on the right. It states that a missed quarter pauses vesting but forfeits nothing."
+      }
+    },
+    "02-console/005-launchpad": {
+      "title": {
+        "ko": "런치패드 - 멀티팩터 DCF 자가 평가",
+        "en": "Launchpad - self-valuation on a multi-factor DCF"
+      },
+      "desc": {
+        "ko": "자가 평가 폼 옆에 추정 가치 패널이 실시간으로 따라온다. 정직한 입력이 평가를 올린다는 상자를 폼 앞에 두고, KYB 가 필요하다는 배너를 위에 걸었다. 캡처는 페이지 아래가 비어 있다.",
+        "en": "An estimated-value panel follows the self-valuation form in real time. A box on why honest input raises the number comes before the form, and a KYB banner sits on top. The capture cuts off with an empty lower half."
+      }
+    },
+    "02-console/006-listing": {
+      "title": {
+        "ko": "상장 상태 - 아직 잠긴 탭",
+        "en": "Listing status - still locked"
+      },
+      "desc": {
+        "ko": "소프트캡 이후 상장 상태, 오더북, 분기 공시 일정이 여기 온다는 문장만 있다. 만들지 않은 것을 빈 화면으로 두지 않고 무엇이 올지 적었다.",
+        "en": "One sentence says post-softcap status, order book and the disclosure schedule will land here. An unbuilt page says what it will hold rather than staying blank."
+      }
+    },
+    "02-console/007-settings": {
+      "title": {
+        "ko": "설정 - 언어는 내비게이션에만",
+        "en": "Settings - language applies to navigation only"
+      },
+      "desc": {
+        "ko": "프로필, 환경설정, 알림 세 묶음이다. 언어 전환이 내비게이션과 페이지 제목에만 적용된다고 적어, 본문이 안 바뀌어도 오해가 없게 했다.",
+        "en": "Profile, preferences and notifications. It says the language switch covers navigation and page titles only, so untranslated body text is not mistaken for a bug."
+      }
+    },
+    "02-console/008-settlement": {
+      "title": {
+        "ko": "정산 - 공시가 이 흐름을 유지한다",
+        "en": "Settlement - disclosure keeps this flowing"
+      },
+      "desc": {
+        "ko": "잔액과 출금 버튼 아래에 베스팅 해제, 런치패드 수익, 최근 활동을 배치했다. 다음 해제일 카드 옆에 공시 마감을 놓아 둘이 연결돼 있다는 것을 보여 준다.",
+        "en": "Balance and withdraw on top, then vesting released, launchpad proceeds and recent activity. The next-unlock card sits beside the disclosure deadline to show the two are linked."
+      }
+    },
+    "02-console/009-token": {
+      "title": {
+        "ko": "토큰 발행 위저드 1단계 - 고를 건 공급량뿐",
+        "en": "Issue token, step 1 - supply is the only choice"
+      },
+      "desc": {
+        "ko": "다섯 단계에 약 3분이라고 먼저 말한다. 공급량 세 가지 카드 중 하나만 고르면 토큰당 가격과 판매 목표, 소프트캡이 평가액에서 자동으로 계산돼 밑에 뜬다.",
+        "en": "Five steps, about three minutes, stated first. Pick one of three supply cards and per-token price, sale target and soft cap derive from the valuation below."
+      }
+    },
+    "02-console/010-wallet": {
+      "title": {
+        "ko": "지갑 - 잃어버릴 수 없는 계정",
+        "en": "Wallet - an account you cannot lose"
+      },
+      "desc": {
+        "ko": "패스키 등록 때 자동 생성되고 등록된 기기 아무거나로 복구된다고 계정 카드에 적었다. 토큰 표와 패스키 목록, 온체인 활동이 그 아래 이어진다.",
+        "en": "The account card says it was created on passkey registration and recovers from any registered device. A token table, passkey list and on-chain activity follow."
+      }
+    },
+    "03-console-v1/001-console-v1": {
+      "title": {
+        "ko": "v1 대시보드 - 상단 탭 내비게이션",
+        "en": "v1 dashboard - top-tab navigation"
+      },
+      "desc": {
+        "ko": "사이드바 대신 상단 탭으로 대시보드·사업장·관리·정산·서비스를 나눴다. 프로토타입 단계 칩과 KPI 타일, 정산 그래프, 베스팅, 공시 D-day 가 한 화면에 있다.",
+        "en": "Top tabs instead of a sidebar split dashboard, store, manage, settlement and service. Stage chips, KPI tiles, a payout chart, vesting and the disclosure countdown share one screen."
+      }
+    },
+    "03-console-v1/002-business": {
+      "title": {
+        "ko": "v1 사업장 - 심사 중 배지",
+        "en": "v1 store - with a review badge"
+      },
+      "desc": {
+        "ko": "상점 헤더에 심사 상태 배지를 달고, 소개와 정보 카드 옆에 상점 페이지 미리보기를 붙였다. 현재 판의 비즈니스 화면과 구조는 같고 어두운 테마다.",
+        "en": "A review-status badge on the store header, with a store page preview beside the about and info cards. Same structure as the current Business screen, dark theme."
+      }
+    },
+    "03-console-v1/003-business-edit": {
+      "title": {
+        "ko": "v1 매장 편집 - 영업시간까지",
+        "en": "v1 edit store - hours included"
+      },
+      "desc": {
+        "ko": "GA 판의 3단 편집 화면과 같은 얼개다. 정보 카드에 영업시간 줄이 추가돼 있고, 푸터의 저장 문구는 같다.",
+        "en": "The same three-pane edit layout as the GA build. The info card gains an opening-hours row, and the footer's save note is unchanged."
+      }
+    },
+    "03-console-v1/004-dao": {
+      "title": {
+        "ko": "v1 스토어 DAO - 실제로 도는 투표",
+        "en": "v1 store DAO - a vote that actually runs"
+      },
+      "desc": {
+        "ko": "GA 에서 미룬 DAO 가 v1 에는 다 있다. 트레저리·내 투표권·정족수 타일, 찬반 막대와 남은 시간이 붙은 소각 제안 카드, 제안 목록까지 그렸다.",
+        "en": "The DAO deferred in GA is fully drawn here. Treasury, voting power and quorum tiles, a burn proposal card with a for-against bar and time left, and a proposal list."
+      }
+    },
+    "03-console-v1/005-disclosure": {
+      "title": {
+        "ko": "v1 공시 - 금액이 아니라 구간",
+        "en": "v1 disclosure - a bracket, not a figure"
+      },
+      "desc": {
+        "ko": "매출을 정확한 금액이 아닌 구간으로 고른다는 점을 제출 단계 첫 줄에 적었다. 오른쪽에 베스팅 진행과 다음 해제, 이의 제기 절차가 붙는다.",
+        "en": "The first submission step says revenue is picked as a bracket, not an exact figure. Vesting progress, upcoming unlocks and the challenge process sit on the right."
+      }
+    },
+    "03-console-v1/006-launchpad": {
+      "title": {
+        "ko": "v1 런치패드 - 고정 규칙을 앞에",
+        "en": "v1 launchpad - fixed rules up front"
+      },
+      "desc": {
+        "ko": "판매 기간과 사전 등록, 결제 수단을 왼쪽에서 정하고 오른쪽 요약이 따라온다. 소프트캡 비율과 자동 취소 기준, 시작 후 기간 단축 불가를 고정 규칙으로 못 박았다.",
+        "en": "Sale window, pre-registration and currency on the left, a summary following on the right. Soft cap ratio, auto-cancel threshold and no shortening after start are pinned as fixed rules."
+      }
+    },
+    "03-console-v1/007-listing": {
+      "title": {
+        "ko": "v1 시장 - 단계가 오르면 켜진다",
+        "en": "v1 market - lights up as the stage rises"
+      },
+      "desc": {
+        "ko": "빈 마켓 위에 프로토타입 단계 칩을 두고 「단계가 오르면 숫자가 켜집니다」라고 적었다. 빈 화면이 왜 비었는지를 칩이 대신 말한다.",
+        "en": "Stage chips sit above the empty market with a note that numbers light up as the stage rises. The chips explain why the screen is empty."
+      }
+    },
+    "03-console-v1/008-settings": {
+      "title": {
+        "ko": "v1 설정 - 주간 요약 토글 추가",
+        "en": "v1 settings - with a weekly summary toggle"
+      },
+      "desc": {
+        "ko": "프로필·환경설정·알림 구성은 같고, 공시 마감 알림 옆에 주간 거래 요약 토글이 하나 더 있다.",
+        "en": "Same profile, preferences and notification groups, plus one more toggle for a weekly trading summary next to the disclosure reminder."
+      }
+    },
+    "03-console-v1/009-settlement": {
+      "title": {
+        "ko": "v1 정산 - 잠긴 유동성 자금을 따로",
+        "en": "v1 settlement - locked liquidity shown apart"
+      },
+      "desc": {
+        "ko": "출금 가능 잔액 아래에 유동성 자금으로 잠긴 금액을 따로 적었다. 런치패드 정산, 베스팅 해제, 남은 베스팅 세 타일과 누적 정산 그래프가 이어진다.",
+        "en": "The amount locked as liquidity is listed separately under the withdrawable balance. Launchpad payout, released vesting and remaining vesting tiles lead into a cumulative chart."
+      }
+    },
+    "03-console-v1/010-token": {
+      "title": {
+        "ko": "v1 토큰 - 평가 전에는 잠긴 FDV",
+        "en": "v1 token - FDV locked until valued"
+      },
+      "desc": {
+        "ko": "발행은 가치 평가에서 시작한다는 한 장짜리 카드다. 평가가 끝나야 풀리는 FDV 범위를 흐리게 보여 줘서, 무엇을 얻게 되는지 먼저 알려 준다.",
+        "en": "A single card saying issuance starts with valuation. The FDV range is shown blurred until valuation completes, so you see what you will get before you start."
+      }
+    },
+    "03-console-v1/011-wallet": {
+      "title": {
+        "ko": "v1 스마트 월렛 - 활동 없는 상태",
+        "en": "v1 smart wallet - with no activity yet"
+      },
+      "desc": {
+        "ko": "계정 카드와 네 타일, 토큰 표, 패스키 목록은 현재 판과 같다. 온체인 활동이 비어 있는 상태를 그대로 그렸다.",
+        "en": "Account card, four tiles, token table and passkey list match the current build. The on-chain activity panel is drawn in its empty state."
+      }
+    },
+    "03-console-v1/012-withdrawal": {
+      "title": {
+        "ko": "v1 출금 - 수수료를 요약에 명시",
+        "en": "v1 withdraw - fee spelled out in the summary"
+      },
+      "desc": {
+        "ko": "GA 출금 화면과 같은 폼이다. 오른쪽 요약에 플랫폼 수수료 줄이 따로 있어 수령액이 어떻게 줄었는지 보인다.",
+        "en": "The same form as the GA withdraw screen. The summary on the right has a separate platform-fee line, so the net amount is traceable."
+      }
+    },
+    "04-console-v2/001-console-v2": {
+      "title": {
+        "ko": "v2 홈 - 채팅 입력이 첫 화면",
+        "en": "v2 home - a chat prompt as the landing"
+      },
+      "desc": {
+        "ko": "대시보드 대신 「무엇을 도와드릴까요」 입력창과 추천 카드 세 장으로 시작한다. 헤더에서 AI 와 클래식 모드를 오갈 수 있고, 최근 본 화면 목록이 밑에 남는다.",
+        "en": "Instead of a dashboard, it opens on a what-can-I-help-with prompt and three suggestion cards. The header toggles AI and classic modes, and recently viewed screens sit below."
+      }
+    },
+    "04-console-v2/002-agents": {
+      "title": {
+        "ko": "v2 에이전트 - 반복 업무를 카드로",
+        "en": "v2 agents - recurring work as cards"
+      },
+      "desc": {
+        "ko": "정산서 작성, 주간 리포트, 공시 초안, 이벤트 추천을 에이전트 카드로 두고 활성·템플릿 상태를 달았다. 오른쪽 어시스턴트가 지금 화면을 설명하고 추천을 낸다.",
+        "en": "Settlement statements, weekly reports, disclosure drafts and event suggestions become agent cards with active or template states. The assistant panel on the right describes the screen and offers next steps."
+      }
+    },
+    "04-console-v2/003-business": {
+      "title": {
+        "ko": "v2 사업장 - 어시스턴트 패널을 옆에",
+        "en": "v2 store - with the assistant alongside"
+      },
+      "desc": {
+        "ko": "v1 사업장 화면을 v2 프레임에 그대로 넣고 오른쪽에 어시스턴트 패널을 붙였다. 콘텐츠는 같고 폭만 줄었다.",
+        "en": "The v1 store screen dropped into the v2 frame with the assistant panel on the right. Same content, narrower column."
+      }
+    },
+    "04-console-v2/005-disclosure": {
+      "title": {
+        "ko": "v2 공시 - 내용은 v1, 틀은 v2",
+        "en": "v2 disclosure - v1 content in the v2 frame"
+      },
+      "desc": {
+        "ko": "다음 제출, 최근 공시, 베스팅 흐름, 알림 일정, 이의 절차가 v1 과 같다. 어시스턴트 패널이 붙으면서 두 열이 좁아졌다.",
+        "en": "Next submission, recent disclosures, vesting health, reminders and the challenge process match v1. The two columns tighten to make room for the assistant."
+      }
+    },
+    "04-console-v2/006-launchpad": {
+      "title": {
+        "ko": "v2 런치패드 - 두 열로 접힌 설정",
+        "en": "v2 launchpad - setup folded into two columns"
+      },
+      "desc": {
+        "ko": "v1 의 판매 설정과 고정 규칙, 요약이 그대로다. 어시스턴트 패널 때문에 요약이 오른쪽 열 위로 올라왔다.",
+        "en": "The v1 sale setup, fixed rules and summary are unchanged. The assistant panel moves the summary up into the right column."
+      }
+    },
+    "04-console-v2/007-listed-celebrate": {
+      "title": {
+        "ko": "v2 상장 완료 - 즉시 지급·유동성·베스팅",
+        "en": "v2 listing complete - payout, liquidity, vesting"
+      },
+      "desc": {
+        "ko": "상장 직후 화면에 토큰·상장가·홀더 타일과 함께 즉시 지급 완료, 초기 유동성 완료, 베스팅 예약 세 줄을 뒀다. GA 판보다 한 줄 적고 어시스턴트가 옆에 있다.",
+        "en": "Token, listing price and holder tiles, then three rows: instant payout done, initial liquidity done, vesting scheduled. One row fewer than GA, with the assistant alongside."
+      }
+    },
+    "04-console-v2/008-listing": {
+      "title": {
+        "ko": "v2 시장 - v1 빈 상태 그대로",
+        "en": "v2 market - the v1 empty state, unchanged"
+      },
+      "desc": {
+        "ko": "단계 칩과 빈 마켓 안내, 토큰 발행 버튼이 v1 과 같다. 어시스턴트 패널만 더해졌다.",
+        "en": "Stage chips, the empty-market note and the issue button match v1. Only the assistant panel is added."
+      }
+    },
+    "04-console-v2/009-settings": {
+      "title": {
+        "ko": "v2 설정 - 어두운 테마의 같은 화면",
+        "en": "v2 settings - the same screen, dark"
+      },
+      "desc": {
+        "ko": "프로필·환경설정·알림 구성이 v1 과 같다. v2 프레임과 어시스턴트 패널 안에서 어두운 테마로 그렸다.",
+        "en": "Profile, preferences and notifications match v1, rendered in the dark theme inside the v2 frame with the assistant panel."
+      }
+    },
+    "04-console-v2/010-settlement": {
+      "title": {
+        "ko": "v2 정산 - 좁아진 개요",
+        "en": "v2 settlement - a narrower overview"
+      },
+      "desc": {
+        "ko": "출금 가능 잔액, 세 타일, 누적 정산 그래프가 v1 과 같다. 어시스턴트 패널이 오른쪽을 차지해 본문 폭이 줄었다.",
+        "en": "Withdrawable balance, three tiles and the cumulative chart match v1. The assistant takes the right side, so the body narrows."
+      }
+    },
+    "04-console-v2/011-start": {
+      "title": {
+        "ko": "v2 빠른 시작 - 네 단계와 에이전트",
+        "en": "v2 quick start - four steps and an agent"
+      },
+      "desc": {
+        "ko": "사업자 인증, 매장 설정, 토큰 발행, 런치패드 판매 네 단계에 진행률을 달았다. 토큰 발행 단계는 에이전트가 준비하고 승인만 하면 된다고 적었고, 어시스턴트가 「여기서부터 제가 맡을게요」라고 받는다.",
+        "en": "Business verification, store setup, token issuance and launchpad sale, with a progress bar. The issuance step says an agent prepares it and you only approve, and the assistant picks up with I'll take it from here."
+      }
+    },
+    "04-console-v2/012-token": {
+      "title": {
+        "ko": "v2 토큰 - 잠긴 FDV, 왼쪽 정렬",
+        "en": "v2 token - locked FDV, left-aligned"
+      },
+      "desc": {
+        "ko": "v1 의 토큰 발행 시작 카드를 왼쪽에 붙이고 오른쪽을 어시스턴트에 줬다. 내용은 같다.",
+        "en": "The v1 issuance intro card moves left and the assistant takes the right. Content unchanged."
+      }
+    },
+    "04-console-v2/013-wallet": {
+      "title": {
+        "ko": "v2 스마트 월렛 - 어시스턴트 옆의 지갑",
+        "en": "v2 smart wallet - the wallet beside the assistant"
+      },
+      "desc": {
+        "ko": "계정 카드, 네 타일, 토큰 표, 패스키와 온체인 활동이 v1 과 같다. 어시스턴트 패널이 더해졌을 뿐이다.",
+        "en": "Account card, four tiles, token table, passkeys and on-chain activity match v1. The assistant panel is the only addition."
+      }
+    },
+    "05-admin/001-admin": {
+      "title": {
+        "ko": "어드민 대시보드 - 대기 심사가 맨 위",
+        "en": "Admin dashboard - the review queue first"
+      },
+      "desc": {
+        "ko": "KYB, 재심사, 파트너 심사, 상장 승인, 공시 심사 여섯 큐를 가장 오래된 건 날짜와 함께 맨 위에 놓았다. 유저 KPI 와 채널·기기·지갑 분포는 그 밑이다.",
+        "en": "Six queues, KYB, re-reviews, partner, listing and disclosure, sit on top with the date of the oldest item. User KPIs and channel, device and wallet breakdowns come after."
+      }
+    },
+    "05-admin/003-announcements": {
+      "title": {
+        "ko": "공지사항 - 어디에 어떻게 뜨는지",
+        "en": "Announcements - where and how each one shows"
+      },
+      "desc": {
+        "ko": "공지마다 유형, 노출 앱(거래소·콘솔·파트너·멤버), 채널(상단 배너·알림 벨), 상태를 한 행에 뒀다. 채널 열이 좁아 글자가 세로로 쌓인다.",
+        "en": "Each notice carries its type, target apps (exchange, console, partner, member), channel (top banner, bell) and state in one row. The channel column is too narrow and stacks its text."
+      }
+    },
+    "05-admin/004-businesses": {
+      "title": {
+        "ko": "승인된 비즈니스 - 상태와 KYB 두 필터",
+        "en": "Approved businesses - two filter sets"
+      },
+      "desc": {
+        "ko": "총 사업자·운영·정지·탈퇴·KYB 대기 타일 아래에 운영 상태와 KYB 상태 두 필터 묶음을 나란히 뒀다. 검색은 ID·이메일·지갑으로 한다.",
+        "en": "Tiles for total, active, suspended, withdrawn and KYB-pending, then two filter groups side by side for status and KYB. Search covers ID, email and wallet."
+      }
+    },
+    "05-admin/005-businesses-applications": {
+      "title": {
+        "ko": "비즈니스 신청 - 대기중을 기본으로",
+        "en": "Business applications - pending by default"
+      },
+      "desc": {
+        "ko": "신청 목록이 대기중 필터로 열린다. 사업자명, 이메일, 전화, 도시, 신청일을 한 행에 두고 행 끝에 심사 버튼 하나만 있다.",
+        "en": "The list opens on the pending filter. Business name, email, phone, city and date per row, with a single review button at the end."
+      }
+    },
+    "05-admin/006-businesses-token-image-reviews": {
+      "title": {
+        "ko": "재심사 큐 - 종류와 상태로 거른다",
+        "en": "Re-review queue - filtered by kind and state"
+      },
+      "desc": {
+        "ko": "사업장 정보, 토큰 이미지, 발행 요건 확인 세 종류를 한 큐에 모았다. 요청 내용 열에 사유가 한 줄로 보여서 열기 전에 무슨 건인지 안다.",
+        "en": "Store info, token image and issuance-requirement checks share one queue. The request column shows the reason in one line, so you know the case before opening it."
+      }
+    },
+    "05-admin/007-contracts": {
+      "title": {
+        "ko": "컨트랙트 관리 - 체인별 탭",
+        "en": "Contract registry - tabbed by chain"
+      },
+      "desc": {
+        "ko": "테스트넷·메인넷·L2 체인을 탭으로 나누고 건수를 달았다. 이름, 체인 ID, 주소, 프록시, 구현 주소를 표로 두고 수정·삭제만 허용한다.",
+        "en": "Testnet, mainnet and the L2 chain are tabs with counts. Name, chain ID, address, proxy and implementation in a table, with edit and delete as the only actions."
+      }
+    },
+    "05-admin/008-disclosures": {
+      "title": {
+        "ko": "공시 접수 - 인출 승인은 여기서 안 한다",
+        "en": "Disclosure intake - no withdrawal approval here"
+      },
+      "desc": {
+        "ko": "접수·게시·이상 감지 레인이고 인출 해제는 승인하지 않는다는 문장을 제목 밑에 못 박았다. 접수됨, 형식 미비, 게시됨, 이의, 해제됨, 일시중지 상태 탭이 있다.",
+        "en": "A line under the title fixes the scope: intake, publishing and anomaly detection, never withdrawal release. Status tabs run from received through incomplete, published, disputed, released and paused."
+      }
+    },
+    "05-admin/009-images-ai-generator": {
+      "title": {
+        "ko": "AI 이미지 생성 - 어드민 안의 도구",
+        "en": "AI image generator - a tool inside admin"
+      },
+      "desc": {
+        "ko": "프롬프트와 비율 칩, 빈 미리보기, 생성된 이미지 그리드다. 운영자가 배너나 상점 이미지를 바로 만들 수 있게 어드민에 넣었다.",
+        "en": "Prompt, aspect-ratio chips, an empty preview and a grid of generated images. Placed in admin so operators can make banners or store images without leaving."
+      }
+    },
+    "05-admin/010-launchpad": {
+      "title": {
+        "ko": "런치패드 관리 - 상태별 건수 탭",
+        "en": "Launchpad management - tabs with counts by state"
+      },
+      "desc": {
+        "ko": "예정·진행중·성공·마감미달 탭에 건수를 달고, 목표 금액과 판매 대금, 진행률, 참여자를 한 행에 뒀다. CSV 내보내기가 유일한 액션이다.",
+        "en": "Scheduled, running, succeeded and missed tabs carry counts; target, raised, progress and participants share a row. CSV export is the only action."
+      }
+    },
+    "05-admin/011-launchpad-listing-applications": {
+      "title": {
+        "ko": "리스팅 신청 - 심사 버튼 하나",
+        "en": "Listing applications - one review button"
+      },
+      "desc": {
+        "ko": "토큰명, 심볼, 비즈니스명, 목표 금액, 상태, 신청일을 표로 두고 행마다 심사 버튼만 있다. 승인된 리스팅은 별도 화면이다.",
+        "en": "Token name, symbol, business, target, state and date in a table with a single review button per row. Approved listings live on a separate screen."
+      }
+    },
+    "05-admin/012-moderation": {
+      "title": {
+        "ko": "커뮤니티 모더레이션 - 상점주 다음 백스톱",
+        "en": "Community moderation - the backstop after the owner"
+      },
+      "desc": {
+        "ko": "상점주가 처리 못 한 에스컬레이션을 여기서 받는다. 출처를 상점주·자동+신고·사용자 분쟁으로 구분하고, 처리·차단·기각 세 버튼으로 끝낸다.",
+        "en": "Escalations the owner could not settle land here. Source is tagged as owner, auto plus reports, or user dispute, and each row closes with handle, ban or dismiss."
+      }
+    },
+    "05-admin/015-stargenesis": {
+      "title": {
+        "ko": "NFT 라운드 - VRF 설정과 운영 작업",
+        "en": "NFT rounds - VRF config and operator actions"
+      },
+      "desc": {
+        "ko": "판매 라운드 타일 아래에 난수 오라클 설정 카드를 두고, 라운드 카드마다 VRF 요청·확인, URI 업로드, 티어 조정, 시작·종료·취소 버튼을 달았다.",
+        "en": "Round tiles on top, then a randomness-oracle config card, and each round card carries VRF request and confirm, URI upload, tier adjust, and start, end, cancel."
+      }
+    },
+    "05-admin/016-users": {
+      "title": {
+        "ko": "유저 관리 - 상태와 유형 두 필터",
+        "en": "User management - status and type filters"
+      },
+      "desc": {
+        "ko": "총 회원·활성·정지·탈퇴·휴면 타일 아래에 상태 필터와 비즈니스·일반 유형 필터를 나란히 뒀다. 가입 방식 열로 이메일·구글·디스코드를 구분한다.",
+        "en": "Tiles for total, active, suspended, withdrawn and dormant, then a status filter and a business-or-general filter side by side. A sign-up column separates email, Google and Discord."
+      }
+    },
+    "06-partner/001-access": {
+      "title": {
+        "ko": "접근·컴플라이언스 - 1.0 최소 세트 지도",
+        "en": "Access and compliance - the 1.0 minimum map"
+      },
+      "desc": {
+        "ko": "지역 차단, 두 가지 로그인(지갑 연결과 패스키 가입), 동의해야 하는 약관 네 가지를 한 문서로 묶었다. 화면은 이미 있고 이 지도가 1.0 에 필요한 최소 세트를 잇는다고 적었다.",
+        "en": "Region block, two ways in (connect a wallet, sign up with a passkey) and four legal documents in one page. It says the screens already exist and this map ties the 1.0 minimum set together."
+      }
+    },
+    "06-partner/002-business-guide": {
+      "title": {
+        "ko": "비즈니스 가이드 - 상점주가 할 수 있는 것",
+        "en": "Business guide - what a store owner can do"
+      },
+      "desc": {
+        "ko": "로그인 전 공개 가이드다. 자본 조달, 세계의 단골이 파트너가 되는 것, 단계별로 들어오는 자금, 홀더에게 보여 주는 사용처 네 카드로 시작한다.",
+        "en": "A public guide shown before sign-in. It opens with four cards: raise capital, regulars worldwide as partners, funds that arrive in stages, and showing holders where it went."
+      }
+    },
+    "06-partner/003-partner": {
+      "title": {
+        "ko": "파트너 홈 - 지구본 위의 파이프라인",
+        "en": "Partner home - the pipeline on a globe"
+      },
+      "desc": {
+        "ko": "동남아 상점 클러스터를 지구본에 찍고 색으로 판매 웨이브를 구분했다. 오른쪽에 내 차례·어드민 검토·진행 중·종료 네 단계로 파이프라인을 나눠 같은 상점을 지도와 목록에서 함께 본다.",
+        "en": "Store clusters across Southeast Asia on a globe, colored by sales wave. The right rail splits the pipeline into my turn, with admin, in flight and closed, so the same shops appear on the map and in the list."
+      }
+    },
+    "06-partner/004-partner-v1": {
+      "title": {
+        "ko": "파트너 v1 - 타일 네 개와 추천 링크",
+        "en": "Partner v1 - four tiles and a referral link"
+      },
+      "desc": {
+        "ko": "상단 탭 내비게이션에 유치·온보딩·상장·출금 가능 타일, 추천 링크, 보상 세 종류 카드가 있다. 리더보드는 프리뷰 배지로 뒀다.",
+        "en": "Top-tab navigation, tiles for brought, onboarded, listed and withdrawable, a referral link and three reward cards. The leaderboard carries a preview badge."
+      }
+    },
+    "06-partner/005-apply": {
+      "title": {
+        "ko": "파트너 신청 - 어느 계정으로 신청하는지",
+        "en": "Partner application - which account is applying"
+      },
+      "desc": {
+        "ko": "폼 앞에 「이 계정으로 신청합니다」 카드를 두고 다른 계정이면 처음부터 다시라고 적었다. 개인정보 동의 문단은 임시 구글 폼 기준이라 아직 확정 아니라는 메모가 붙어 있다.",
+        "en": "A you-are-applying-with-this-account card comes before the form, warning that another account means starting over. The consent text carries a note that it still describes the interim Google form."
+      }
+    },
+    "06-partner/006-earnings": {
+      "title": {
+        "ko": "수익 - 직접 청구해야 받는다",
+        "en": "Earnings - you have to claim it yourself"
+      },
+      "desc": {
+        "ko": "보상은 자동 지급되지 않고 12개월 안에 청구하지 않으면 사라진다고 첫 카드에 적었다. 60일 안에 만료되는 건은 노란 경고로 따로 띄운다.",
+        "en": "The first card says rewards are not paid automatically and vanish if unclaimed within twelve months. Anything expiring within sixty days gets its own yellow warning."
+      }
+    },
+    "06-partner/007-leaderboard": {
+      "title": {
+        "ko": "리더보드 - 2단계 프리뷰",
+        "en": "Leaderboard - a phase 2 preview"
+      },
+      "desc": {
+        "ko": "시즌 남은 일수, 상위 셋 카드, 내 순위와 유치·온보딩·상장 숫자를 뒀다. 프리뷰 배지를 달아 아직 정식이 아님을 표시했다.",
+        "en": "Days left in the season, the top three, and your standing with brought, onboarded and listed counts. A preview badge marks it as not yet final."
+      }
+    },
+    "06-partner/008-manage": {
+      "title": {
+        "ko": "관리 - 상장 유지 조건은 파트너 책임",
+        "en": "Manage - keeping a shop listed is on the partner"
+      },
+      "desc": {
+        "ko": "상장된 상점마다 매출 기록과 현장 확인 상태를 나란히 보여 준다. 조건을 못 맞춘 상점이 있으면 책임이 파트너에게 있다는 경고가 맨 위에 뜬다.",
+        "en": "Each listed shop shows its revenue-record and on-site-check states side by side. If any shop falls short, a warning at the top says the responsibility sits with the partner."
+      }
+    },
+    "06-partner/009-onboarding": {
+      "title": {
+        "ko": "온보딩 - 승인된 상점 한 줄",
+        "en": "Onboarding - one approved shop"
+      },
+      "desc": {
+        "ko": "상점주와 나란히 앉아 진행할 승인 상점 목록이다. 이 캡처에는 한 건뿐이라 대부분 비어 있다.",
+        "en": "Approved shops to onboard side by side with the owner. This capture has a single row, so most of the page is empty."
+      }
+    },
+    "06-partner/010-pipeline": {
+      "title": {
+        "ko": "파이프라인 - 소프트캡 페이스 경고",
+        "en": "Pipeline - a softcap pace warning"
+      },
+      "desc": {
+        "ko": "등록부터 상장까지 상점을 카드로 두고 상태 필터를 달았다. 런치패드 진행 중인 상점은 소프트캡 막대와 「페이스 미달」 경고를, 미달로 끝난 상점은 환불과 보상 미적용 안내를 보여 준다.",
+        "en": "Shops from registration to listing as cards with a state filter. A shop mid-launchpad shows a softcap bar and a below-pace warning; one that missed shows the refund and that the reward may not apply."
+      }
+    },
+    "06-partner/011-scout": {
+      "title": {
+        "ko": "스카우트 - 금지 업종은 자동 차단",
+        "en": "Scout - prohibited categories blocked automatically"
+      },
+      "desc": {
+        "ko": "발굴한 상점 후보 표와 추천 여부, 상태를 뒀다. 도박, 성인, 무기, 암호화폐 거래, 대출·다단계, 담배 같은 금지 업종을 칩으로 나열하고 고르면 등록이 막힌다고 적었다.",
+        "en": "A candidates table with referral and status, then chips for prohibited categories such as gambling, adult, weapons, crypto exchange, lending and MLM, tobacco. Picking one blocks registration."
+      }
+    },
+    "06-partner/012-screening": {
+      "title": {
+        "ko": "사전 확인 - 의견은 참고용",
+        "en": "Pre-check - your opinion is advisory"
+      },
+      "desc": {
+        "ko": "KYC 사전 확인을 기다리는 후보 목록이다. 파트너 의견은 참고용이라는 문장을 제목 밑에 적었고, 이 캡처에는 한 건만 있다.",
+        "en": "Candidates waiting for the partner's KYC pre-check. The subtitle says the opinion is advisory, and this capture holds a single row."
+      }
+    },
+    "06-partner/013-settings": {
+      "title": {
+        "ko": "파트너 설정 - 이행 보증금 탭",
+        "en": "Partner settings - with a performance deposit tab"
+      },
+      "desc": {
+        "ko": "프로필, 추천 링크, 이행 보증금, 알림 네 탭이다. 프로필 탭에는 이름·소속·활동 지역만 있다.",
+        "en": "Four tabs: profile, referral, performance deposit and notifications. The profile tab holds only name, organization and active region."
+      }
+    },
+    "06-partner/014-welcome": {
+      "title": {
+        "ko": "파트너 랜딩 - 1,293개 지역, 한 곳에 한 명",
+        "en": "Partner landing - 1,293 areas, one partner each"
+      },
+      "desc": {
+        "ko": "첫 코호트 모집 페이지다. 지급 조건을 큰 숫자로 보여 주되, 거래 수수료 배분이 서비스 출시 6개월 뒤에 시작하므로 높은 요율이 실제로는 반년쯤이라는 주석을 같은 카드에 넣었다.",
+        "en": "The first-cohort recruiting page. Pay terms are shown as big numbers, with a note in the same card that fee sharing starts six months after launch, so the higher rate covers roughly half a year."
+      }
+    },
+    "07-valuation/001-tokenomics": {
+      "title": {
+        "ko": "토크노믹스 - 엔진이 정한 값과 내가 정한 값",
+        "en": "Tokenomics - what the engine fixes and what you pick"
+      },
+      "desc": {
+        "ko": "왼쪽 펀더멘털 입력에서 기업가치·FDV·예상 시장가가 산출되고, 그 값은 직접 입력이 아니라고 적었다. 공모가와 발행량 슬라이더만 사용자가 움직이고, 최소 발행량 미달이면 빨간 줄이 뜬다.",
+        "en": "Fundamentals on the left produce enterprise value, FDV and expected price, marked as engine output rather than input. Only the offer-price and supply sliders are yours, and a red line appears under the minimum supply."
+      }
+    },
+    "07-valuation/002-valuation": {
+      "title": {
+        "ko": "가치 산정 시작 - 세 가지 약속",
+        "en": "Valuation intro - three promises"
+      },
+      "desc": {
+        "ko": "지역·업종별 자본비용 보정, 데이터 연결로 신뢰도 상승, DCF·비교·스코어카드 삼중 모델 세 카드로 시작한다. 실시간으로 계산된다는 문장이 제목 밑에 있다.",
+        "en": "Three cards open it: cost of capital tuned by region and industry, data connections for credibility, and a triple model of DCF, comparables and scorecard. A line under the title says it calculates in real time."
+      }
+    },
+    "07-valuation/003-valuation-ga-business-profile": {
+      "title": {
+        "ko": "GA 가치 산정 1/3 - 자가 입력만",
+        "en": "GA valuation 1 of 3 - self-input only"
+      },
+      "desc": {
+        "ko": "출시 판은 3단계로 줄였다. 왼쪽 메모에 데이터 연결이 아직 없고 위험·위치 정보는 참고용이라 평가에 영향 없다고 적었다. 상점 주소도 지도 링크용이지 계산에 안 쓴다.",
+        "en": "The launch build is cut to three steps. A side note says data connections are not yet available and risk and location are shown for reference only. The store address is a map link, not an input."
+      }
+    },
+    "07-valuation/004-valuation-ga-financials": {
+      "title": {
+        "ko": "GA 재무 - 부채를 숨기면 생기는 일",
+        "en": "GA financials - what hiding debt leads to"
+      },
+      "desc": {
+        "ko": "3년 매출과 영업이익을 넣으면 성장률과 마진 추세를 초록 문장으로 바로 돌려준다. 왼쪽 상자에 부채를 숨기면 상장 후 동결·상장폐지까지 갈 수 있다고 적었다.",
+        "en": "Three years of revenue and profit return green feedback on growth and margin trend right away. The left box spells out that hidden debt can end in a freeze or delisting after listing."
+      }
+    },
+    "07-valuation/005-valuation-ga-result": {
+      "title": {
+        "ko": "GA 결과 - 준비도 점수가 발행을 막는다",
+        "en": "GA result - readiness gates issuance"
+      },
+      "desc": {
+        "ko": "추정 가치와 DCF·현금·부채 분해 밑에 상장 준비도 점수와 빠진 항목(KYB, 증빙)을 뒀다. 업계 평균은 참고용이지 평가에 안 들어간다고 적었고, 발행 버튼은 흐리게 잠겨 있다.",
+        "en": "Estimated value with a DCF, cash and debt breakdown, then a readiness score and missing items (KYB, evidence). Industry average is labeled reference only, and the issuance button is dimmed."
+      }
+    },
+    "07-valuation/006-valuation-business-profile": {
+      "title": {
+        "ko": "가치 산정 1/8 - 정직이 값을 올린다",
+        "en": "Valuation 1 of 8 - honesty raises the number"
+      },
+      "desc": {
+        "ko": "8단계 전체 판이다. 왼쪽에 「정직이 가치를 올린다」 상자, 오른쪽에 입력할수록 바뀌는 추정 가치와 상장 준비도 등급이 따라온다. 업종이 기준 자본비용을, 국가가 위험 프리미엄을 정한다고 설명한다.",
+        "en": "The full eight-step build. An honesty-boosts-valuation box on the left, and a live estimated value with a readiness grade on the right. It explains that industry sets base cost of capital and country adds the risk premium."
+      }
+    },
+    "07-valuation/007-valuation-data-connections": {
+      "title": {
+        "ko": "데이터 연결 - 자기 신고 대신 OAuth",
+        "en": "Data connections - why OAuth beats self-reporting"
+      },
+      "desc": {
+        "ko": "은행, 결제, POS, 회계 여섯 소스를 카드로 두고 연결 수와 자본비용 감소분을 위에 보여 준다. 읽기 전용 권한이고 언제든 해제할 수 있다는 설명을 왼쪽에 붙였다.",
+        "en": "Six sources, bank, payment, POS and accounting, as cards with the connected count and cost-of-capital reduction above. The left panel explains read-only permission and that access can be revoked any time."
+      }
+    },
+    "07-valuation/008-valuation-financials": {
+      "title": {
+        "ko": "재무 4/8 - 실시간 피드백이 붙은 입력",
+        "en": "Financials 4 of 8 - inputs with live feedback"
+      },
+      "desc": {
+        "ko": "GA 재무 화면과 같은 폼이지만 「자가 입력만」 메모가 없고, 오른쪽 레일의 추정 가치가 입력에 따라 움직인다.",
+        "en": "The same form as the GA financials screen without the self-input note, and the estimated value in the right rail moves as you type."
+      }
+    },
+    "07-valuation/009-valuation-location": {
+      "title": {
+        "ko": "위치 분석 - 업종마다 다른 가중치",
+        "en": "Location analysis - weights differ by industry"
+      },
+      "desc": {
+        "ko": "주소를 넣으면 인구·유동인구·주변 업소 밀도를 분석한다. 200m 안 앵커 시설과 재개발·관광지 같은 맥락 칩에 가점을 달았고, 지금은 데모 시뮬레이션이라고 적었다.",
+        "en": "Enter an address to analyze population, foot traffic and nearby business density. Anchor facilities within 200m and context chips like redevelopment or tourist area carry points, and it says this is a demo simulation for now."
+      }
+    },
+    "07-valuation/010-valuation-reputation": {
+      "title": {
+        "ko": "평판·디지털 지표 - 성장률 보정",
+        "en": "Reputation and digital metrics - growth-rate bonuses"
+      },
+      "desc": {
+        "ko": "지도 평점 슬라이더, 리뷰 수, 최근 추세, SNS 활동 네 입력이다. 각 지표가 성장률을 얼마나 올리는지와 실제 서비스에서는 자동 수집된다는 것을 왼쪽에 적었다.",
+        "en": "Four inputs: map rating slider, review count, recent trend and SNS activity. The left panel lists how much each lifts the growth rate and notes these are auto-collected in production."
+      }
+    },
+    "07-valuation/011-valuation-result": {
+      "title": {
+        "ko": "결과 - 일곱 조각으로 나눈 가치",
+        "en": "Result - value split into seven parts"
+      },
+      "desc": {
+        "ko": "기본 DCF 에 투명성·디지털 발자국·현금을 더하고 위험·부채·기타를 뺀 일곱 조각을 막대와 표로 보여 준다. 준비도 점수와 핵심 드라이버, 업계 평균 참고가 이어진다.",
+        "en": "Base DCF plus transparency, digital footprint and cash, minus risk, debt and other, shown as a seven-part bar and a table. Readiness score, key drivers and an industry reference follow."
+      }
+    },
+    "07-valuation/012-valuation-risk": {
+      "title": {
+        "ko": "위험 요인 - 할인율을 움직이는 세 가지",
+        "en": "Risk factors - three things that move the discount rate"
+      },
+      "desc": {
+        "ko": "남은 임대 기간, 사업주 의존도, 고객 집중도 세 입력이다. 각 답이 할인율을 얼마나 올리는지 왼쪽 상자에 표로 적어, 정직한 답이 왜 유리한지 보이게 했다.",
+        "en": "Three inputs: lease remaining, owner dependency and customer concentration. The left box lists how much each answer raises the discount rate, so it is clear why an honest answer pays."
+      }
+    },
+    "08-spikes/001-console-vending-dashboard": {
+      "title": {
+        "ko": "자판기형 대시보드 - 다 팔리면 상장",
+        "en": "Vending-style dashboard - lists when sold out"
+      },
+      "desc": {
+        "ko": "판매율 막대 하나와 현재가·상장가·환매 준비금·남은 수량 네 타일뿐이다. 마지막 토큰이 팔리면 자동 상장되고 기한이 없다는 규칙을 한 줄로 적었고, 숫자는 샘플이라고 밝혔다.",
+        "en": "One sold bar and four tiles: price now, listing price, cash held to buy back, left to sell. A single line says it lists automatically when the last token sells with no time limit, and that the figures are samples."
+      }
+    },
+    "08-spikes/002-console-vending-liquidity": {
+      "title": {
+        "ko": "유동성·베스팅 - 세 번의 회수와 긴 절벽",
+        "en": "Liquidity and vesting - three recoveries and a long cliff"
+      },
+      "desc": {
+        "ko": "유동성 회수를 완료·진행·대기 세 카드로, 상점주 몫 베스팅을 18개월 절벽 뒤 월 단위 칸으로 그렸다. 1개월차 날짜가 아직 정해지지 않았다는 문장을 남겼다.",
+        "en": "Liquidity recovery as three cards, done, in progress, waiting; the owner's vesting as monthly cells after an 18-month cliff. A line notes the month-one date is not decided yet."
+      }
+    },
+    "08-spikes/003-console-vending-raise": {
+      "title": {
+        "ko": "라운드 조달 - 해제 조건과 지급 조건을 갈라서",
+        "en": "Raise rounds - unlock and payout conditions apart"
+      },
+      "desc": {
+        "ko": "라운드 1~3 탭과 잠금·준비·판매·완료 미리보기 상태 칩이 있다. 왼쪽은 판매를 시작할 수 있는 조건, 오른쪽은 돈을 받을 수 있는 조건이라 둘을 따로 뒀고, 증빙 제출은 아직 준비 중이다.",
+        "en": "Round tabs and preview-state chips for locked, ready, selling and done. Unlock conditions on the left, payout conditions on the right, kept apart on purpose; revenue-proof submission is still marked coming soon."
+      }
+    },
+    "08-spikes/004-console-wizard": {
+      "title": {
+        "ko": "콘솔 위저드 - 경량화 안 네 가지 비교",
+        "en": "Console wizard - four lightweight variants compared"
+      },
+      "desc": {
+        "ko": "현재 배포된 7단계 위저드를 기준으로 레일 접기, 재무 접기, 용어 바꾸기, 진입 카드 등 네 가지 안을 헤더에서 바꿔 볼 수 있다. 1단계는 요건 확인 때 낸 사업장 정보를 읽기 전용으로 다시 보여 준다.",
+        "en": "Against the deployed seven-step wizard, the header switches between four variants: collapsed rail, collapsed financials, plainer terms, entry cards. Step 1 replays the store info submitted at eligibility as read-only."
+      }
+    }
+  }
+}

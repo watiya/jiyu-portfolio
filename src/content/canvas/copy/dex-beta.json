@@ -1,0 +1,970 @@
+{
+  "pages": {
+    "01-ga": {
+      "ko": "GA",
+      "en": "GA"
+    },
+    "02-beta": {
+      "ko": "베타",
+      "en": "Beta"
+    },
+    "03-beta-space": {
+      "ko": "베타 - 사이드바 셸",
+      "en": "Beta - sidebar shell"
+    },
+    "04-space": {
+      "ko": "스페이스 · 제네시스",
+      "en": "Space and Genesis"
+    },
+    "05-states": {
+      "ko": "상태 매트릭스",
+      "en": "State matrices"
+    },
+    "06-navigation": {
+      "ko": "헤더 · 내비게이션",
+      "en": "Header and navigation"
+    }
+  },
+  "flow": [
+    [
+      "01-ga/001-ga",
+      "01-ga/007-market"
+    ],
+    [
+      "01-ga/007-market",
+      "01-ga/011-trade"
+    ],
+    [
+      "01-ga/010-shops",
+      "01-ga/003-favorites"
+    ],
+    [
+      "02-beta/013-connect-wallet",
+      "02-beta/015-faucet"
+    ],
+    [
+      "02-beta/015-faucet",
+      "02-beta/014-deposit"
+    ],
+    [
+      "02-beta/014-deposit",
+      "02-beta/024-trade"
+    ],
+    [
+      "02-beta/018-market",
+      "02-beta/023-store-detail"
+    ],
+    [
+      "02-beta/023-store-detail",
+      "02-beta/024-trade"
+    ],
+    [
+      "03-beta-space/004-faucet",
+      "03-beta-space/003-deposit"
+    ],
+    [
+      "03-beta-space/003-deposit",
+      "03-beta-space/010-trade"
+    ],
+    [
+      "04-space/010-space-trade",
+      "04-space/011-space-trade-pro"
+    ],
+    [
+      "04-space/011-space-trade-pro",
+      "04-space/012-space-trade-pro-full"
+    ]
+  ],
+  "frames": {
+    "01-ga/001-ga": {
+      "title": {
+        "ko": "GA 홈, 상점과 내 계정을 한 줄에",
+        "en": "GA home - shops and your account side by side"
+      },
+      "desc": {
+        "ko": "왼쪽 아이콘 레일에 즐겨찾는 상점 아바타가 붙고, 본문은 상점 카드 셋과 토큰 세일, 오른쪽엔 계정 요약과 입금 위젯이 선다. 홈에서 바로 입금까지 가게 두었다.",
+        "en": "An icon rail with favorite-shop avatars on the left; three shop cards and token sales in the body, account summary and a deposit widget on the right. Deposit starts from home."
+      }
+    },
+    "01-ga/002-announcements": {
+      "title": {
+        "ko": "공지 - 유형 칩으로 거른다",
+        "en": "Announcements filtered by type"
+      },
+      "desc": {
+        "ko": "점검·이벤트·신규 상장·거래 정지 같은 유형 칩이 위에 서고, 진행 중인 점검에는 Ongoing 배지가 붙는다. 다크 판이다.",
+        "en": "Type chips (maintenance, event, new listing, trading halt) sit on top, and an ongoing maintenance gets its own badge. Dark theme."
+      }
+    },
+    "01-ga/003-favorites": {
+      "title": {
+        "ko": "즐겨찾기 - 하트 누른 상점만",
+        "en": "Favorites - only the shops you hearted"
+      },
+      "desc": {
+        "ko": "하트를 누른 상점이 4열 카드로 모인다. 카드마다 Live 배지와 가격·등락이 붙어 마켓과 같은 카드 규격을 쓴다.",
+        "en": "Hearted shops gather in a four-column grid. Each card carries the Live badge and price change, the same card spec as the market."
+      }
+    },
+    "01-ga/004-guide": {
+      "title": {
+        "ko": "시작 가이드 - 네 단계와 준비물",
+        "en": "Getting started in four steps"
+      },
+      "desc": {
+        "ko": "지갑 연결·입금·거래·포트폴리오 네 단계가 카드로 서고, 각 카드 버튼이 해당 화면으로 바로 보낸다. 아래에 가스용 BNB 와 거래용 USDT 준비물을 적었다.",
+        "en": "Connect, fund, trade, track as four cards, each button jumping straight to that screen. Below, what you need: BNB for gas and USDT to trade."
+      }
+    },
+    "01-ga/005-launchpad": {
+      "title": {
+        "ko": "런치패드 - 상태 탭으로 세일을 가른다",
+        "en": "Launchpad - sales split by status"
+      },
+      "desc": {
+        "ko": "Upcoming·Pre-Registration·Live·Ended 탭에 건수가 붙고, 카드에는 판매율 바와 남은 시간·참여자 수를 넣었다. 마감 임박 순 정렬이 기본이다.",
+        "en": "Upcoming, pre-registration, live and ended tabs carry counts; cards show a sold bar, time left and participants. Sorted by closing soon by default."
+      }
+    },
+    "01-ga/006-leaderboard": {
+      "title": {
+        "ko": "리더보드 - 시즌 보상을 먼저 보여준다",
+        "en": "Leaderboard - rewards before ranks"
+      },
+      "desc": {
+        "ko": "시즌 헤더 아래 순위 구간별 보상 카드가 먼저 오고, 그다음 Trading·Participation 탭과 내 순위·거래량 요약이 선다. 순위표보다 보상을 앞에 둔 구성이다.",
+        "en": "Reward cards per rank band come right under the season header, then Trading and Participation tabs with your rank and volume. Rewards before the table."
+      }
+    },
+    "01-ga/007-market": {
+      "title": {
+        "ko": "마켓 - Hot·New·상승 상위 세 패널",
+        "en": "Market - hot, new and top gainers"
+      },
+      "desc": {
+        "ko": "상단에 Hot·New·Top Gainers 패널 셋, 아래는 검색·정렬과 그리드·차트·리스트 뷰 토글이 있는 토큰 카드 그리드다. 다크 판이다.",
+        "en": "Three panels on top (hot, new, top gainers), then a token card grid with search, sort and grid/chart/list toggles. Dark theme."
+      }
+    },
+    "01-ga/008-portfolio": {
+      "title": {
+        "ko": "포트폴리오 - 두 번째 사이드바",
+        "en": "Portfolio with a second sidebar"
+      },
+      "desc": {
+        "ko": "아이콘 레일 옆에 프로필과 Overview·Asset·Activity 메뉴가 한 단 더 붙는다. 본문은 총액, 입금 대기 배너, 가용 잔액과 상점 토큰, 7일 차트, 자산·활동 목록 순이다.",
+        "en": "A second column with profile and Overview, Asset, Activity sits next to the icon rail. Body: total value, pending-deposit banner, balances, 7-day chart, assets and activity."
+      }
+    },
+    "01-ga/009-sale": {
+      "title": {
+        "ko": "토큰 세일 - 판매율 바가 카드 위에",
+        "en": "Token sale - progress bar on every card"
+      },
+      "desc": {
+        "ko": "세일 중인 토큰은 판매율 바와 남은 수량이 카드 상단에 서고, 시작 전 토큰은 Not on sale yet 로 같은 자리를 비워 둔다. 매진되면 마켓으로 넘어간다는 설명이 제목 아래 붙는다.",
+        "en": "Tokens on sale show a sold bar and units left at the top of the card; unstarted ones keep the same slot with Not on sale yet. The subtitle explains a sold-out sale moves to the market."
+      }
+    },
+    "01-ga/010-shops": {
+      "title": {
+        "ko": "상점 - 추천 세 곳과 전체 목록",
+        "en": "Shops - three featured, then everything"
+      },
+      "desc": {
+        "ko": "Featured 상점 세 곳을 큰 카드로 먼저 두고, 아래 All shops 는 Open·Coming soon·Trading·Ended 칩으로 거른다. 카드 우상단 하트로 즐겨찾기에 넣는다.",
+        "en": "Three featured shops as large cards first; All shops below filters by Open, Coming soon, Trading, Ended. The heart on each card adds it to favorites."
+      }
+    },
+    "01-ga/011-trade": {
+      "title": {
+        "ko": "거래 - 지갑 없이도 호가는 본다",
+        "en": "Trade - see the book before you connect"
+      },
+      "desc": {
+        "ko": "차트·오더북·주문 패널 3열. 지갑을 안 붙인 상태라 주문 패널만 Connect wallet 안내로 비워 두고, 차트와 호가는 그대로 보여 준다.",
+        "en": "Chart, order book and order panel in three columns. With no wallet, only the order panel is replaced by a connect prompt; chart and book stay visible."
+      }
+    },
+    "02-beta/001-connect-wallet-beta": {
+      "title": {
+        "ko": "지갑 연결 - 패스키와 외부 지갑 둘",
+        "en": "Connect a wallet - passkey or external"
+      },
+      "desc": {
+        "ko": "3단계 스텝 표시 아래 Passkey 지갑과 External 지갑 카드 둘. 사업주 기본값과 사용자 기본값 라벨로 누가 어느 쪽인지 밝혔다. 베타라 실제 서명은 없다는 안내가 아래 붙는다.",
+        "en": "Under a three-step indicator, two cards: passkey wallet and external wallet, labeled owner default and user default. A note says no real signing happens in beta."
+      }
+    },
+    "02-beta/002-dex-beta": {
+      "title": {
+        "ko": "베타 랜딩 - 히어로와 상점 넷",
+        "en": "Beta landing - hero and four shops"
+      },
+      "desc": {
+        "ko": "히어로 아래 상점 카드 네 장, 그 밑에 커뮤니티 펀딩·홀더 혜택 같은 기능 카드 넷이 이어지는 긴 페이지다. 기능 카드의 이미지 영역과 섹션 사이 여백이 비어 있다.",
+        "en": "A long page: hero, four shop cards, then four feature cards (community fundraising, holder benefits and so on). The feature card image areas and the gaps between sections are empty."
+      }
+    },
+    "02-beta/003-geo-block": {
+      "title": {
+        "ko": "지역 차단 - 왜 막혔는지 먼저",
+        "en": "Geo block - say why first"
+      },
+      "desc": {
+        "ko": "규제 지역에서 뜨는 전면 카드. 사유, IP 기반 판정이라는 설명, 문의 경로(디스코드·이메일), 약관 링크 순으로 내려간다. 다른 데로 갈 길은 일부러 두지 않았다.",
+        "en": "The full-screen card for restricted regions: reason, a note that detection is IP-based, support routes (Discord, email), then legal links. No other exit on purpose."
+      }
+    },
+    "02-beta/004-guide": {
+      "title": {
+        "ko": "사업주 가이드 - 다크 콘솔 판",
+        "en": "Owner guide - dark console build"
+      },
+      "desc": {
+        "ko": "콘솔 배지가 붙은 헤더 아래 목차 사이드바와 본문. 자본 조달·홀더 참여·단계별 지급·공시 네 카드로 상점 주인이 할 수 있는 일을 먼저 적었다. 다음 프레임이 같은 화면의 라이트 판이다.",
+        "en": "Console-badged header, table-of-contents sidebar, body. Four cards (raise capital, regulars as partners, staged payouts, disclosure) lead with what an owner can do. The next frame is the light build."
+      }
+    },
+    "02-beta/005-launchpad-detail": {
+      "title": {
+        "ko": "런치패드 상세 - 참여 폼이 오른쪽에 상주",
+        "en": "Launchpad detail - participation stays on the right"
+      },
+      "desc": {
+        "ko": "Live Status·Token Terms 카드와 진행 타임라인, 실시간 참여 목록, 상점 소개, 토크노믹스, 리스크 고지까지 한 페이지다. 오른쪽 참여 폼은 스크롤해도 따라온다.",
+        "en": "Live status and token terms cards, progress timeline, live participation list, store intro, tokenomics and a risk disclosure on one page. The participation form on the right sticks while scrolling."
+      }
+    },
+    "02-beta/006-market-category-detail": {
+      "title": {
+        "ko": "카테고리 상세 - 지역 칩과 하위 분류",
+        "en": "Category detail - region chips and sub-types"
+      },
+      "desc": {
+        "ko": "카테고리 헤더에 지역 칩, 그 아래 하위 분류 칩과 테이블. 하단에 다른 카테고리 카드를 두어 옆 카테고리로 바로 건너가게 했다. 라이트 판이다.",
+        "en": "Region chips in the category header, sub-type chips and a table below. Other-category cards at the bottom let you hop sideways. Light theme."
+      }
+    },
+    "02-beta/008-open-shop": {
+      "title": {
+        "ko": "사업주 가이드 - 라이트 판",
+        "en": "Owner guide - light build"
+      },
+      "desc": {
+        "ko": "앞 프레임과 같은 콘솔 가이드의 라이트 테마. 구조와 문안은 같고 배경·카드 톤만 바뀐다. 두 테마가 같은 컴포넌트로 도는지 확인하는 용도다.",
+        "en": "The same console guide in light theme. Structure and copy are identical, only background and card tones change. A check that both themes run on one component."
+      }
+    },
+    "02-beta/009-portfolio-v2": {
+      "title": {
+        "ko": "포트폴리오 v2 - 베스팅 알림과 Dust",
+        "en": "Portfolio v2 - vesting alert and dust"
+      },
+      "desc": {
+        "ko": "앞 판과 달리 상단에 베스팅 해제 알림 배너가 서고, 가용 잔액·상점 토큰 옆에 Dust 카드가 셋째로 붙는다. 하단에 런치패드 참여 카드가 추가됐고 헤더도 텍스트 내비로 바뀌었다.",
+        "en": "New against the earlier build: a vesting-unlock banner on top, a Dust card as the third balance tile, a launchpad participation card at the bottom, and a text header."
+      }
+    },
+    "02-beta/012-announcements": {
+      "title": {
+        "ko": "베타 공지 - 헤더만 다르다",
+        "en": "Beta announcements - same list, beta header"
+      },
+      "desc": {
+        "ko": "GA 판과 같은 공지 목록을 베타의 텍스트 헤더(Market·Store·Portfolio·Leaderboard) 아래 둔 것. 지갑 주소 버튼과 Guide 버튼이 우상단에 선다.",
+        "en": "The same announcement list under the beta text header (Market, Store, Portfolio, Leaderboard). Wallet address and Guide buttons sit top right."
+      }
+    },
+    "02-beta/013-connect-wallet": {
+      "title": {
+        "ko": "지갑 연결 - 다음에 할 일 목록",
+        "en": "Connect wallet - what comes next"
+      },
+      "desc": {
+        "ko": "연결 버튼 하나만 큰 카드에 두고, 아래에 연결·Faucet·입금 세 단계와 베타 환경 고지를 적었다. 이미 USDT 가 있으면 입금으로 바로 가는 링크를 오른쪽에 뺐다.",
+        "en": "One connect button in a big card, then the three steps (connect, faucet, deposit) and a beta notice. A link on the right skips to deposit if you already hold USDT."
+      }
+    },
+    "02-beta/014-deposit": {
+      "title": {
+        "ko": "입금 - 지갑부터 붙이라는 문",
+        "en": "Deposit - gated behind wallet connect"
+      },
+      "desc": {
+        "ko": "지갑이 없으면 입금 폼 대신 Connect your wallet first 카드 하나만 보인다. 폼을 흐리게 보여 주지 않고 아예 문을 닫아 둔 쪽을 택했다.",
+        "en": "Without a wallet, the deposit form is replaced by a single connect-first card. The form is not dimmed behind it; the door is simply closed."
+      }
+    },
+    "02-beta/015-faucet": {
+      "title": {
+        "ko": "테스트 USDT Faucet - 세 단계 안내",
+        "en": "Test USDT faucet - three steps"
+      },
+      "desc": {
+        "ko": "연결·받기·거래 세 칸과 Connect Wallet 버튼이 카드 하나에 들어간다. 가스비는 tBNB 로 따로 받아야 한다는 안내를 아래 파란 박스로 뺐다.",
+        "en": "Connect, receive, trade as three tiles plus the connect button in one card. A blue box below says gas needs tBNB from a separate faucet."
+      }
+    },
+    "02-beta/016-guide": {
+      "title": {
+        "ko": "베타 가이드 - 3단계와 FAQ",
+        "en": "Beta guide - three steps and FAQ"
+      },
+      "desc": {
+        "ko": "지갑 연결(1회 설정) 카드, 테스트 USDT·입금·거래 3단계, tBNB 받는 2단계, 자주 묻는 질문, 디스코드 CTA 순. 각 단계 버튼이 해당 화면으로 보낸다.",
+        "en": "A one-time wallet card, three steps (test USDT, deposit, trade), two steps for tBNB, an FAQ and a Discord CTA. Each step button jumps to its screen."
+      }
+    },
+    "02-beta/017-leaderboard": {
+      "title": {
+        "ko": "베타 리더보드 - 내 순위를 맨 위에",
+        "en": "Beta leaderboard - your row pinned on top"
+      },
+      "desc": {
+        "ko": "시즌 1 헤더와 내 순위·거래량·거래 수 카드. 30명 표에서 내 행을 맨 위에 고정하고 YOU 배지를 붙였다. Wash-trade 필터 배지와 Daily·Weekly·Season 토글이 있다.",
+        "en": "Season 1 header with your rank, volume and trade count. In the 30-row table your row is pinned on top with a YOU badge. Wash-trade filter badge and daily/weekly/season toggle."
+      }
+    },
+    "02-beta/018-market": {
+      "title": {
+        "ko": "베타 마켓 - 12개 상점 그리드",
+        "en": "Beta market - twelve stores in a grid"
+      },
+      "desc": {
+        "ko": "Hot·New·Top Gainers 패널 아래 상점 12곳이 4열 카드로 선다. 카드에 카테고리와 도시·국가 칩을 넣었다. 라이트 판이고 뷰 토글은 GA 와 같다.",
+        "en": "Twelve stores in a four-column grid under the hot, new and top gainer panels. Cards carry category and city-country chips. Light theme, same view toggle as GA."
+      }
+    },
+    "02-beta/019-portfolio": {
+      "title": {
+        "ko": "베타 포트폴리오 - 출금은 Soon",
+        "en": "Beta portfolio - withdraw marked Soon"
+      },
+      "desc": {
+        "ko": "총액 옆 Withdraw 버튼에 Soon 배지가 붙고, 미체결 주문·입금 대기 배너 둘이 위에 선다. 차트 없이 자산·활동 두 열로 끝낸 판이다.",
+        "en": "Withdraw carries a Soon badge, and open-order and pending-deposit banners sit on top. No chart; assets and activity in two columns finish the page."
+      }
+    },
+    "02-beta/022-store": {
+      "title": {
+        "ko": "베타 상점 - 홀더 수를 카드에",
+        "en": "Beta store - holder count on every card"
+      },
+      "desc": {
+        "ko": "GA 판과 달리 카드의 가격·등락 옆에 Holders 수가 붙고, 필터 칩이 Food·Cafe·Retail·Beauty·Service 로 바뀌었다. 다크 판이다.",
+        "en": "Three featured and the All shops grid. Unlike GA, each card adds a holder count next to price, and the filter chips are Food, Cafe, Retail, Beauty, Service. Dark theme."
+      }
+    },
+    "02-beta/023-store-detail": {
+      "title": {
+        "ko": "상점 상세 - 재무 공시까지 한 페이지",
+        "en": "Store detail - down to the financial disclosure"
+      },
+      "desc": {
+        "ko": "배너·소개·정보 표 아래 분기 수익성 차트, 연 매출, 사진, 위치 지도가 이어진다. 오른쪽 토큰 카드가 Quick trade 와 Trade page 로 갈린다. 대표자·연락처는 목업이다.",
+        "en": "Banner, about and info table, then quarterly profitability and annual revenue charts, a photo gallery and a location map. The token card on the right splits into Quick trade and Trade page. Representative and contact details are mock."
+      }
+    },
+    "02-beta/024-trade": {
+      "title": {
+        "ko": "베타 거래 - 지정가 폼과 공시·한도·서류",
+        "en": "Beta trade - limit form plus disclosure, limits, documents"
+      },
+      "desc": {
+        "ko": "차트·오더북·Limit/Market 주문 폼 3열 아래로 토큰 정보, 통계, 분기 공시 상태, 거래 한도 표, 법적 서류 목록이 내려간다. 거래 화면에 컴플라이언스 정보를 같이 실은 판이다.",
+        "en": "Chart, order book and limit/market form in three columns, then token info, statistics, quarterly disclosure status, trading limits and legal documents. Compliance data rides along on the trade screen."
+      }
+    },
+    "02-beta/025-withdraw": {
+      "title": {
+        "ko": "출금 - 입금과 같은 문",
+        "en": "Withdraw - the same gate as deposit"
+      },
+      "desc": {
+        "ko": "입금과 똑같이 지갑 연결 카드 하나만 보여 준다. 두 화면이 같은 컴포넌트를 쓰는지 확인하려고 나란히 캡처했다.",
+        "en": "Exactly like deposit: a single connect-wallet card. Captured side by side to check both screens share one component."
+      }
+    },
+    "02-beta/026-store-detail-beta": {
+      "title": {
+        "ko": "상점 상세 베타 - 24시간 차트와 체결",
+        "en": "Store detail beta - 24h chart and fills"
+      },
+      "desc": {
+        "ko": "앞의 긴 상세와 달리 헤더·24시간 가격 차트·최근 체결 6건·같은 카테고리 상점 둘로 짧게 끝낸다. 차트에 베타 목업 데이터 라벨을 붙였고 헤더 우측에 Trade 버튼을 뺐다.",
+        "en": "Shorter than the long detail: header, a 24-hour price chart, six recent fills and two same-category stores. The chart is labeled as beta mock data, and a Trade button sits in the header."
+      }
+    },
+    "03-beta-space/001-space-beta": {
+      "title": {
+        "ko": "베타 셸 홈 - 사이드바에 Quest·Faucet",
+        "en": "Beta shell home - Quest and Faucet in the sidebar"
+      },
+      "desc": {
+        "ko": "0.5 배지가 붙은 텍스트 사이드바에 Quest·Faucet 메뉴가 노출된다. 본문은 세 단계 카드, 베타 통계, 최근 활동. 1.0 과 같은 표면에 베타 메뉴만 얹었다고 제목 아래 적었다.",
+        "en": "A text sidebar with a 0.5 badge exposes Quest and Faucet. Body: three step cards, beta stats, recent activity. The subtitle says it is the 1.0 surface with beta-only menus added."
+      }
+    },
+    "03-beta-space/002-connect-wallet": {
+      "title": {
+        "ko": "셸 안의 지갑 연결",
+        "en": "Connect wallet inside the shell"
+      },
+      "desc": {
+        "ko": "02-beta 의 지갑 연결 화면을 사이드바 셸 안에 넣은 것. 문안과 카드 구조는 같고 헤더가 사라진 만큼 본문이 위로 올라왔다.",
+        "en": "The beta connect-wallet screen placed inside the sidebar shell. Copy and cards are the same; with the header gone the body moves up."
+      }
+    },
+    "03-beta-space/003-deposit": {
+      "title": {
+        "ko": "셸 안의 입금 - 다크",
+        "en": "Deposit inside the shell, dark"
+      },
+      "desc": {
+        "ko": "지갑 연결 카드 하나뿐인 입금 화면을 셸에 넣은 다크 판. 사이드바는 그대로 다크로 남고 본문만 테마를 따른다.",
+        "en": "The single-card deposit screen inside the shell, dark theme. The sidebar stays dark and only the body follows the theme."
+      }
+    },
+    "03-beta-space/004-faucet": {
+      "title": {
+        "ko": "셸 안의 Faucet",
+        "en": "Faucet inside the shell"
+      },
+      "desc": {
+        "ko": "세 단계 칸과 Connect Wallet 버튼, tBNB 안내 박스가 그대로 온다. 사이드바에서 Faucet 이 활성 표시된 것이 셸 판의 차이다.",
+        "en": "Three tiles, the connect button and the tBNB note carry over unchanged. The difference is Faucet highlighted in the sidebar."
+      }
+    },
+    "03-beta-space/005-leaderboard": {
+      "title": {
+        "ko": "셸 안의 리더보드",
+        "en": "Leaderboard inside the shell"
+      },
+      "desc": {
+        "ko": "시즌 1 헤더와 내 순위 고정 표를 셸에 넣었다. 본문 폭이 줄어 카드 세 장이 한 줄에 꽉 찬다.",
+        "en": "The season 1 header and pinned-row table inside the shell. With less width, the three stat cards fill a full row."
+      }
+    },
+    "03-beta-space/006-market": {
+      "title": {
+        "ko": "셸 안의 마켓",
+        "en": "Market inside the shell"
+      },
+      "desc": {
+        "ko": "Hot·New·Top Gainers 패널과 4열 카드 그리드가 사이드바 옆으로 들어간다. 헤더의 검색·Guide 버튼이 빠지고 지갑 주소만 우상단에 남았다.",
+        "en": "The three panels and four-column grid sit beside the sidebar. Header search and Guide are gone; only the wallet address stays top right."
+      }
+    },
+    "03-beta-space/007-portfolio": {
+      "title": {
+        "ko": "셸 안의 포트폴리오 - 차트가 돌아왔다",
+        "en": "Portfolio inside the shell - the chart is back"
+      },
+      "desc": {
+        "ko": "베타 포트폴리오에 없던 7일 가치 차트가 셸 판에는 들어간다. Withdraw Soon 배지, 미체결·입금 대기 배너는 그대로다.",
+        "en": "The 7-day value chart missing from the beta portfolio returns in the shell build. Withdraw Soon badge and the two banners stay."
+      }
+    },
+    "03-beta-space/008-store": {
+      "title": {
+        "ko": "셸 안의 상점 - 다크",
+        "en": "Store inside the shell, dark"
+      },
+      "desc": {
+        "ko": "Featured 세 곳과 All shops 그리드가 다크 본문으로 온다. 사이드바 셸에서 다크·라이트가 어떻게 갈리는지 보려고 다크로 찍었다.",
+        "en": "Featured and All shops in a dark body. Captured dark to see how the shell splits dark and light."
+      }
+    },
+    "03-beta-space/009-store-detail": {
+      "title": {
+        "ko": "셸 안의 상점 상세",
+        "en": "Store detail inside the shell"
+      },
+      "desc": {
+        "ko": "배너와 소개, 정보 표, 오른쪽 토큰 카드가 셸 폭에 맞춰 줄어든다. 재무 데이터 섹션이 이어지는 긴 페이지의 상단이다. 정보 표의 이름·연락처는 목업이다.",
+        "en": "Banner, about, info table and the token card shrink to the shell width. This is the top of the long page that continues into financial data. Names and contacts in the table are mock."
+      }
+    },
+    "03-beta-space/010-trade": {
+      "title": {
+        "ko": "셸 안의 거래 - 3열이 좁아진다",
+        "en": "Trade inside the shell - three columns squeezed"
+      },
+      "desc": {
+        "ko": "차트·오더북·주문 폼 3열이 사이드바 때문에 좁아져 차트 하단 지표 라벨이 두 줄로 꺾인다. 셸 판에서 거래 화면이 가장 먼저 부딪히는 자리다.",
+        "en": "The three columns lose width to the sidebar, and the stat labels under the chart wrap to two lines. The trade screen is where the shell hits its limit first."
+      }
+    },
+    "03-beta-space/011-withdraw": {
+      "title": {
+        "ko": "셸 안의 출금",
+        "en": "Withdraw inside the shell"
+      },
+      "desc": {
+        "ko": "입금과 같은 지갑 연결 카드. 셸 판에서도 두 화면이 한 컴포넌트로 도는지 확인한 캡처다.",
+        "en": "The same connect card as deposit. A check that both screens still share one component inside the shell."
+      }
+    },
+    "04-space/001-space": {
+      "title": {
+        "ko": "스페이스 홈 - 지구본과 검색",
+        "en": "Space home - globe and search"
+      },
+      "desc": {
+        "ko": "사이드바에 즐겨찾기 상점 다섯이 붙고, 본문은 검색창과 CTA 둘, 오른쪽에 도시별 상점 수를 찍은 지구본 카드. 아래 How it works 세 칸이 선다. 다크 판이다.",
+        "en": "Five favorite shops pinned in the text sidebar; a search box, Explore market and Token sales CTAs, and a globe card with per-city shop counts on the right. How it works in three tiles below. Dark theme."
+      }
+    },
+    "04-space/002-space-announcements": {
+      "title": {
+        "ko": "스페이스 공지",
+        "en": "Space announcements"
+      },
+      "desc": {
+        "ko": "같은 공지 목록을 텍스트 사이드바 셸에 넣은 것. 사이드바 하단에 Dark mode 토글과 알림 카운트가 있다.",
+        "en": "The same announcement list in the text-sidebar shell. Dark mode toggle and a notification count sit at the bottom of the sidebar."
+      }
+    },
+    "04-space/003-space-favorites": {
+      "title": {
+        "ko": "스페이스 즐겨찾기 - 라이트",
+        "en": "Space favorites, light"
+      },
+      "desc": {
+        "ko": "하트 누른 여섯 상점 카드. 사이드바 즐겨찾기 목록과 본문 카드가 같은 상점을 가리키는지 확인하려고 찍었다.",
+        "en": "Six hearted shop cards. Captured to check the sidebar favorites and the body cards point at the same shops."
+      }
+    },
+    "04-space/004-space-guide": {
+      "title": {
+        "ko": "스페이스 가이드",
+        "en": "Space guide"
+      },
+      "desc": {
+        "ko": "네 단계 가이드가 셸 안으로 들어간다. GA 판과 문안이 같고, 헤더 대신 지갑 주소 버튼과 아바타만 우상단에 남는다.",
+        "en": "The four-step guide inside the shell. Same copy as GA; instead of a header only the wallet address and avatar remain top right."
+      }
+    },
+    "04-space/005-space-launchpad": {
+      "title": {
+        "ko": "스페이스 런치패드 - 단계 스트립",
+        "en": "Space launchpad - stage strip"
+      },
+      "desc": {
+        "ko": "GA 판과 달리 제목 아래 사전등록·공개 세일·정산·상장 네 단계 스트립과 How it works 토글이 붙는다. 그 아래 상태 탭과 카드는 같다.",
+        "en": "Unlike GA, a stage strip (pre-registration, public sale, settlement, DEX listing) with a How it works toggle sits under the title. Status tabs and cards below are the same."
+      }
+    },
+    "04-space/006-space-leaderboard": {
+      "title": {
+        "ko": "스페이스 리더보드",
+        "en": "Space leaderboard"
+      },
+      "desc": {
+        "ko": "시즌 2 헤더와 보상 카드가 셸 안에서 그라데이션 배경째로 온다. 사이드바가 있어 본문이 중앙 정렬로 좁아졌다.",
+        "en": "The season 2 header and reward cards arrive with their gradient backdrop. With the sidebar, the body narrows to a centered column."
+      }
+    },
+    "04-space/007-space-market": {
+      "title": {
+        "ko": "스페이스 마켓 - 필터 아이콘 추가",
+        "en": "Space market - filter icon added"
+      },
+      "desc": {
+        "ko": "GA 마켓과 같은 구성인데 검색창 왼쪽에 필터 아이콘 버튼이 하나 더 붙는다. 라이트 판이고 4열 카드 그리드다.",
+        "en": "Same layout as the GA market, plus a filter icon button to the left of search. Light theme, four-column grid."
+      }
+    },
+    "04-space/008-space-portfolio": {
+      "title": {
+        "ko": "스페이스 포트폴리오 - 런치패드 카드",
+        "en": "Space portfolio - launchpad tile"
+      },
+      "desc": {
+        "ko": "두 번째 사이드바에 Token sales 메뉴가 늘고, 잔액 카드 셋째로 In Launchpad 가 붙는다. 런치패드 참여금을 포트폴리오에서 같이 세는 판이다.",
+        "en": "The second sidebar gains a Token sales item, and In Launchpad becomes the third balance tile. Launchpad money is counted inside the portfolio here."
+      }
+    },
+    "04-space/009-space-shops": {
+      "title": {
+        "ko": "스페이스 상점",
+        "en": "Space shops"
+      },
+      "desc": {
+        "ko": "Featured 와 All shops 구성이 그대로 셸에 들어간다. 상태 칩(Open·Coming soon·Trading·Ended)이 All shops 제목 오른쪽에 붙는다.",
+        "en": "Featured and All shops move into the shell unchanged. Status chips (Open, Coming soon, Trading, Ended) sit right of the All shops title."
+      }
+    },
+    "04-space/010-space-trade": {
+      "title": {
+        "ko": "스페이스 거래 - Standard·Pro·Full 토글",
+        "en": "Space trade - Standard, Pro, Full"
+      },
+      "desc": {
+        "ko": "우상단에 Standard·Pro·Full 세 단계 토글이 생겼다. Standard 는 GA 와 같은 3열이고, 사이드바 때문에 차트 지표 라벨이 줄바꿈된다.",
+        "en": "A Standard / Pro / Full toggle appears top right. Standard is the GA three-column layout, and the sidebar makes the chart stat labels wrap."
+      }
+    },
+    "04-space/011-space-trade-pro": {
+      "title": {
+        "ko": "Pro 거래 - 캔들과 미체결 표",
+        "en": "Pro trade - candles and open orders"
+      },
+      "desc": {
+        "ko": "캔들 차트, 드로잉 툴바, 시간 프레임, 오더북, Limit·Market·Stop-Limit 주문 폼, 아래 미체결·주문 내역·체결 탭까지 거래소 표준 배치다. 사이드바는 그대로 둔다.",
+        "en": "Candles, drawing toolbar, timeframes, order book, a limit/market/stop-limit form, and open orders, history and trades tabs below: the standard exchange layout, sidebar kept."
+      }
+    },
+    "04-space/012-space-trade-pro-full": {
+      "title": {
+        "ko": "Full 거래 - 사이드바를 걷어낸다",
+        "en": "Full trade - sidebar gone"
+      },
+      "desc": {
+        "ko": "Full 은 사이드바를 접고 차트·오더북·체결·주문 폼을 화면 가득 편다. 매수·매도 폼을 나란히 두고, 로고 하나만 좌상단에 남긴다.",
+        "en": "Full collapses the sidebar and spreads chart, book, trades and order forms across the screen. Buy and sell forms sit side by side; only the logo stays top left."
+      }
+    },
+    "04-space/013-star-genesis-durability": {
+      "title": {
+        "ko": "제네시스 문서 - 내구도와 런치 계획",
+        "en": "Genesis docs - durability and launch plan"
+      },
+      "desc": {
+        "ko": "문서 셸(좌측 목차·우측 On this page)에 내구도 감쇠 표와 효율 밴드 표가 선다. 아직 확정 안 된 값은 TBD 와 Phase 2 경고 박스로 그대로 드러냈다.",
+        "en": "In the docs shell (left nav, right on-this-page) sit the durability decay table and the efficiency band table. Unsettled values are left as TBD with a Phase 2 warning box."
+      }
+    },
+    "04-space/014-star-genesis-hashpower": {
+      "title": {
+        "ko": "제네시스 문서 - 해시파워 공식, 다크",
+        "en": "Genesis docs - hashpower formula, dark"
+      },
+      "desc": {
+        "ko": "H_user 계산식을 코드 블록으로 먼저 놓고 파라미터 범위 표, 설명, 티어별 기본값 표 순이다. 문서 셸의 다크 테마 판이다.",
+        "en": "The H_user formula as a code block first, then parameter ranges, descriptions and base hashpower by tier. The docs shell in dark theme."
+      }
+    },
+    "04-space/015-star-genesis-intro": {
+      "title": {
+        "ko": "제네시스 문서 - 핵심 지표 넷",
+        "en": "Genesis docs - four key metrics"
+      },
+      "desc": {
+        "ko": "총 NFT 공급, 마이닝 풀, 현재 페이즈, 클레임 주기 네 카드가 먼저 오고, 보상 두 줄기 공식과 표가 이어진다. 문서 사이트의 시작 페이지다.",
+        "en": "Four cards (NFT supply, mining pool, current phase, claim period) first, then the two-stream reward formula and table. The docs site landing page."
+      }
+    },
+    "04-space/016-star-genesis-locations": {
+      "title": {
+        "ko": "제네시스 문서 - NFT 위치 분포",
+        "en": "Genesis docs - NFT locations"
+      },
+      "desc": {
+        "ko": "국가·수도·도시 개수 카드 넷과 타입별 분배 표. 선정 기준(GDP·인구 순위)을 표 열에 같이 적었다.",
+        "en": "Four count cards (countries, capitals, cities, phase 1) and a distribution table by type, with the selection criteria (GDP, population rank) in a column."
+      }
+    },
+    "04-space/017-star-genesis-nft-tiers": {
+      "title": {
+        "ko": "제네시스 문서 - 티어 표와 우선순위",
+        "en": "Genesis docs - tier table and priority"
+      },
+      "desc": {
+        "ko": "Country·Capital·City 세 티어를 공급·기본값·슬롯·커버리지·희소성 열로 비교하고, 그 아래 Country 가 1티어인 이유를 경고 박스로 뺐다.",
+        "en": "Country, Capital and City compared by supply, base, slots, coverage and rarity, with a callout below on why Country is tier 1."
+      }
+    },
+    "04-space/018-star-genesis-reward-system": {
+      "title": {
+        "ko": "제네시스 문서 - 보상 두 줄기",
+        "en": "Genesis docs - two reward streams"
+      },
+      "desc": {
+        "ko": "고정 풀(STAR)과 상장 에어드랍(상점 토큰)을 표로 가르고, 둘이 별개라는 점을 경고 박스로 따로 강조했다. 아래에 각 줄기의 공식이 이어진다.",
+        "en": "Fixed pool (STAR) and listing airdrop (store token) split in a table, with a callout stressing they are separate. Each stream's formula follows."
+      }
+    },
+    "04-space/019-star-genesis-tokenomics": {
+      "title": {
+        "ko": "제네시스 문서 - 토크노믹스",
+        "en": "Genesis docs - tokenomics"
+      },
+      "desc": {
+        "ko": "총 공급 카드 하나와 배분 표. 마이닝 풀 규모·발행 스케줄은 따로 공지한다고 적고 빈 섹션을 남겼다. 미정 항목을 지우지 않고 그대로 둔 판이다.",
+        "en": "One total-supply card and an allocation table. Pool size and emission schedule are marked as announced separately, with the sections left empty rather than removed."
+      }
+    },
+    "05-states/002-dex-landing-desktop-states": {
+      "title": {
+        "ko": "퀘스트 섹션 - 3종 상태 비교",
+        "en": "Quest section - three states compared"
+      },
+      "desc": {
+        "ko": "미로그인·로그인 진행 중·베타 오픈 이후 세 상태를 세로로 나란히 둔다. 미로그인은 잠긴 카드 셋과 지갑 연결 CTA 하나, 로그인 뒤엔 XP 헤더와 완료·진행 카드가 선다.",
+        "en": "Signed out, signed in with progress, and after beta open, stacked vertically. Signed out shows three locked cards and one connect CTA; signed in adds an XP header and done/in-progress cards."
+      }
+    },
+    "05-states/003-gnb-desktop-states": {
+      "title": {
+        "ko": "헤더 - activeNav·compact 토글",
+        "en": "Header - activeNav and compact toggles"
+      },
+      "desc": {
+        "ko": "활성 메뉴와 compact 여부를 버튼으로 바꿔 가며 헤더 한 줄을 보는 데모. 현재 상태를 아래 텍스트로 찍어 준다.",
+        "en": "A demo that flips the active item and compact flag with buttons and shows one header row. The current state is printed as text below."
+      }
+    },
+    "05-states/004-launchpad-bottombar-states": {
+      "title": {
+        "ko": "런치패드 모바일 - 하단 고정바 8상태",
+        "en": "Launchpad mobile - bottom bar in eight states"
+      },
+      "desc": {
+        "ko": "기본 고정바, 참여 바텀시트, 서명 대기, 접수 완료, 알림 off/on, 클레임, 취소 모달까지 폰 프레임 여덟 장. 데스크톱 사이드바 두 카드를 모바일에서 어떻게 접는지 정한 자리다.",
+        "en": "Eight phone frames: default bar, participation sheet, waiting for signature, complete, post-participation with notify off and on, claim ready, cancel confirm. This decides how the two desktop sidebar cards fold on mobile."
+      }
+    },
+    "05-states/005-launchpad-desktop-states": {
+      "title": {
+        "ko": "런치패드 데스크톱 - 상주 사이드바와 중앙 모달",
+        "en": "Launchpad desktop - persistent sidebar, centered modals"
+      },
+      "desc": {
+        "ko": "참여 폼은 우측 사이드바에 상주하고, 서명 확인과 접수 완료만 중앙 모달로 띄운다. 기본·확인·완료·참여 후 알림 off/on 다섯 상태를 세로로 이었다.",
+        "en": "The participation form lives in the right sidebar; only signature confirm and completion open as centered modals. Five states stacked: default, confirm, complete, notify off, notify on."
+      }
+    },
+    "05-states/006-launchpad-error-states": {
+      "title": {
+        "ko": "런치패드 에러 - 상단 Alert, 하단 금지",
+        "en": "Launchpad errors - alert on top, never at the bottom"
+      },
+      "desc": {
+        "ko": "잔액 부족·지갑 미연결·네트워크·캡 근접·캡 초과·서명 거절 여섯 시나리오를 슬라이드아웃(400)과 모달(440) 두 폭으로 나란히 둔다. 에러는 상단 Alert 와 필드 인라인에만 둔다.",
+        "en": "Six scenarios (insufficient balance, no wallet, wrong network, near cap, over cap, signature rejected) in two widths, slideout 400 and desktop modal 440. Errors go only in a top alert and inline on the field."
+      }
+    },
+    "05-states/007-launchpad-slideout-states": {
+      "title": {
+        "ko": "런치패드 랩톱 - 우측 슬라이드아웃 3단계",
+        "en": "Launchpad laptop - right slideout in three steps"
+      },
+      "desc": {
+        "ko": "1024 폭에서는 바텀시트 대신 우측 슬라이드아웃으로 Method·Confirm·Complete 를 잇는다. 기본·세 단계·참여 후 두 상태까지 여섯 장이다.",
+        "en": "At 1024 the bottom sheet becomes a right slideout carrying Method, Confirm and Complete. Six frames: default, the three steps, and two post-participation states."
+      }
+    },
+    "05-states/008-market-desktop-states": {
+      "title": {
+        "ko": "마켓 데스크톱 - 상태 토글 여섯",
+        "en": "Market desktop - six state toggles"
+      },
+      "desc": {
+        "ko": "Default·검색 결과 없음·마켓 없음·관심목록 없음·Loading·Error 를 위 버튼으로 바꿔 보는 데모. 기본 상태는 12개 상점 리스트다.",
+        "en": "Buttons on top switch between default, no search results, no markets, empty watchlist, loading and error. The default is a twelve-store list."
+      }
+    },
+    "05-states/009-market-empty-states": {
+      "title": {
+        "ko": "마켓 빈 상태 - 원인 셋으로 가른다",
+        "en": "Market empty - split by cause"
+      },
+      "desc": {
+        "ko": "검색·필터 결과 0건, 전체 토큰 0개, 관심목록 비었음 세 시나리오. 데스크톱과 384 모바일 뷰포트를 같이 두고, 아래에 Empty 결정 노트를 적었다.",
+        "en": "Three causes: zero search results, zero tokens listed, empty watchlist. Desktop and a 384 mobile viewport side by side, with the empty-state decision notes below."
+      }
+    },
+    "05-states/010-market-error-states": {
+      "title": {
+        "ko": "마켓 에러 - 앱 레벨 오프라인",
+        "en": "Market error - app-level offline"
+      },
+      "desc": {
+        "ko": "네트워크 단절·서버 5xx·권한 만료 세 타입 중 네트워크는 앱 전체를 덮는 오프라인 화면으로 처리한다. 헤더까지 최소화한 데스크톱·모바일 판과 결정 노트다.",
+        "en": "Of three types (network, server 5xx, permission), network takes over the whole app as an offline screen with a minimal header. Desktop and mobile builds plus decision notes."
+      }
+    },
+    "05-states/011-market-filter-states": {
+      "title": {
+        "ko": "마켓 필터 - 2행 칩과 슬라이드아웃",
+        "en": "Market filter - two-row chips and slideout"
+      },
+      "desc": {
+        "ko": "필터 아이콘·검색·정렬 1행에 카테고리·지역·상태·FDV 칩 2행을 더한 안. 데스크톱 기본·슬라이드아웃 열림·적용 후 셋, 모바일 기본·풀스크린 시트 둘이다.",
+        "en": "Row one keeps filter icon, search and sort; row two adds category, region, status and FDV chips. Three desktop states (default, slideout open, applied) and two mobile (default, full-screen sheet)."
+      }
+    },
+    "05-states/012-market-loading-states": {
+      "title": {
+        "ko": "마켓 로딩 - 스켈레톤 첫 안",
+        "en": "Market loading - first skeleton pass"
+      },
+      "desc": {
+        "ko": "사각·원·텍스트·블록 스켈레톤 기본형을 먼저 보이고, 데스크톱 마켓과 384 모바일에 그대로 깔았다. 내비와 하단바는 즉시 렌더하고 콘텐츠만 스켈레톤이다.",
+        "en": "Rectangle, circle, text and block skeleton primitives first, then laid over the desktop market and a 384 mobile. Nav and bottom bar render at once; only content is skeleton."
+      }
+    },
+    "05-states/013-market-mobile-list-card": {
+      "title": {
+        "ko": "마켓 모바일 - 썸네일 카드와 차트 2뷰",
+        "en": "Market mobile - thumbnail cards and a chart view"
+      },
+      "desc": {
+        "ko": "테이블이 384 폭을 넘치는 문제를 썸네일 카드(Primary)와 스파크라인 차트(Secondary) 두 뷰로 푼 안. 카드 해부와 브레이크포인트 표를 아래 붙였다.",
+        "en": "The table overflowing 384 is solved with two views: thumbnail cards (primary) and sparkline charts (secondary). Card anatomy and a breakpoint table follow."
+      }
+    },
+    "05-states/014-market-mobile-states": {
+      "title": {
+        "ko": "마켓 홈 모바일 - 공유 카드",
+        "en": "Market home mobile - share card"
+      },
+      "desc": {
+        "ko": "375 폭 시뮬레이션. 상점 리스트 맨 위에 친구에게 공유하기 카드를 두었다. Default·Empty·Loading 토글이 위에 있다.",
+        "en": "A 375-wide simulation with a share-with-friends card above the store list. Default, Empty and Loading toggles on top."
+      }
+    },
+    "05-states/015-mobile-menu-states": {
+      "title": {
+        "ko": "모바일 메뉴 - 3 auth 상태",
+        "en": "Mobile menu - three auth states"
+      },
+      "desc": {
+        "ko": "게스트·로그인(지갑 없음)·지갑 연결 세 드로어를 나란히 둔다. 상단 Identity 블록과 Wallet 블록을 2단으로 고정하고 상태별로 슬롯만 바꾼다.",
+        "en": "Guest, signed in without a wallet, and wallet connected as three drawers. The identity and wallet blocks are fixed as two tiers, and only the slots change per state."
+      }
+    },
+    "05-states/016-portfolio-desktop-states": {
+      "title": {
+        "ko": "포트폴리오 데스크톱 - 5 상태",
+        "en": "Portfolio desktop - five states"
+      },
+      "desc": {
+        "ko": "연결됨·보유 없음·로딩·에러·테스트넷 입금 다섯 토글. Overview·Asset 두 탭만 두고 통화는 USD 주, KRW 보조로 정했다.",
+        "en": "Five toggles: connected, no holdings, loading, error, testnet deposit. Only Overview and Asset tabs, with USD primary and KRW secondary."
+      }
+    },
+    "05-states/017-trade-states": {
+      "title": {
+        "ko": "거래 주문 카드 - 상태 모음",
+        "en": "Trade order card - every state"
+      },
+      "desc": {
+        "ko": "매수·매도 기본, 정상 입력, 잔액 부족, 지갑 미연결, 슬리피지 초과, 네트워크 오류, 거래 정지, 지정가 세 가지에 오더북 패널 셋까지 한 화면에 격자로 모았다.",
+        "en": "Buy and sell defaults, valid input, insufficient balance, no wallet, slippage too high, network error, market closed, three limit cases, plus three order book panels, in one grid."
+      }
+    },
+    "05-states/018-trade-states-mobile": {
+      "title": {
+        "ko": "거래 모바일 - 커스토디얼 3단계",
+        "en": "Trade mobile - custodial three steps"
+      },
+      "desc": {
+        "ko": "지갑 서명 없이 Method·Processing·Complete 로 끝나는 모바일 흐름. 기본 화면과 매수 바텀시트, 처리 중, 완료, 매도 색 비교 다섯 장이다.",
+        "en": "A mobile flow with no wallet signature: Method, Processing, Complete. Five frames: default, buy sheet, processing, complete, and a sell color comparison."
+      }
+    },
+    "05-states/019-store-desktop-states": {
+      "title": {
+        "ko": "상점 데스크톱 - Trade·Info 두 탭",
+        "en": "Store desktop - Trade and Info tabs"
+      },
+      "desc": {
+        "ko": "Default·거래 없음·Loading 토글과 토큰 선택 칩. 탭을 Trade·Info 둘로 줄이고 Recent Trades 와 Quick Trade 두 카드로 본문을 끝냈다.",
+        "en": "Default, no trades and loading toggles plus token chips. Tabs cut down to Trade and Info, and the body ends with Recent Trades and Quick Trade cards."
+      }
+    },
+    "05-states/020-trade-desktop-states-beta": {
+      "title": {
+        "ko": "거래 데스크톱 베타 - 초록 매수",
+        "en": "Trade desktop beta - green buy"
+      },
+      "desc": {
+        "ko": "Default·Loading·Error·Testnet Badge 토글. 초기 베타 판이라 매수 버튼이 초록이고 주문 폼이 본문과 오른쪽에 두 번 나온다. 거래 한도·수수료 문구는 오른쪽 카드다.",
+        "en": "Default, loading, error and testnet badge toggles. An early beta build: the buy button is green and the order form appears twice, in the body and on the right. Limits and fee copy sit in the right card."
+      }
+    },
+    "05-states/021-trade-error-states": {
+      "title": {
+        "ko": "주문 카드 에러 - 여덟 시나리오",
+        "en": "Order card errors - eight scenarios"
+      },
+      "desc": {
+        "ko": "기본·정상 입력·지갑 미연결·잔액 부족·최소 미달·최대 초과·판매 종료·네트워크 오류. 에러 배너는 CTA 바로 위에 두고 CTA 를 비활성으로 남기는 규칙을 한 화면에서 비교한다.",
+        "en": "Default, valid, no wallet, insufficient balance, below minimum, above max, sale closed, network error. The rule under test: error banner right above the CTA, CTA left disabled."
+      }
+    },
+    "05-states/023-wallet-mobile-states-v2": {
+      "title": {
+        "ko": "월렛 앱 v2 - 일반 사용자 스토리보드",
+        "en": "Wallet app v2 - general user storyboard"
+      },
+      "desc": {
+        "ko": "앞 판과 달리 일반 사용자 페르소나로 다시 그렸고, Auth·Home·Features·Profile 네 열의 스토리보드 캔버스로 화면 흐름을 세로 점선으로 잇는다. 다크 판이다.",
+        "en": "Redrawn for the general user persona this time, as a storyboard canvas in four columns (Auth, Home, Features, Profile) with vertical dotted flow lines. Dark theme."
+      }
+    },
+    "06-navigation/002-app-navigation-header-centered": {
+      "title": {
+        "ko": "헤더 - 가운데 정렬",
+        "en": "Header - centered"
+      },
+      "desc": {
+        "ko": "로고 왼쪽, 메뉴 가운데, 로그인·CTA 오른쪽인 헤더. 아래는 지표 카드 셋과 자리표시자 본문으로 내비만 보이게 했다.",
+        "en": "Logo left, menu centered, sign-in and CTA right. Three stat cards and a placeholder body below keep the focus on the nav."
+      }
+    },
+    "06-navigation/003-app-navigation-header-tabs": {
+      "title": {
+        "ko": "헤더 - 2단 탭",
+        "en": "Header - second row of tabs"
+      },
+      "desc": {
+        "ko": "메뉴 헤더 아래 설정 하위 탭 한 줄을 더 붙인 안. 우측에 검색·설정·알림 아이콘과 계정 버튼이 선다.",
+        "en": "A row of settings sub-tabs under the menu header. Search, settings and notification icons plus an account button on the right."
+      }
+    },
+    "06-navigation/004-app-navigation-sidebar-dual-tier": {
+      "title": {
+        "ko": "사이드바 - 2단 구성, 다크",
+        "en": "Sidebar - dual tier, dark"
+      },
+      "desc": {
+        "ko": "검색과 주 메뉴가 위, Support·Settings 와 계정 카드가 아래 단으로 갈리는 사이드바. 다크 판이고 Projects 에 카운트 배지가 붙는다.",
+        "en": "Search and main menu on top, Support, Settings and an account card in the lower tier. Dark theme, with a count badge on Projects."
+      }
+    },
+    "06-navigation/005-app-navigation-sidebar-slim": {
+      "title": {
+        "ko": "사이드바 - 아이콘만",
+        "en": "Sidebar - slim, icons only"
+      },
+      "desc": {
+        "ko": "라벨을 걷어내고 아이콘만 남긴 좁은 레일. 하단에 지원·설정·아바타 순서는 2단 판과 같다.",
+        "en": "A narrow rail with labels stripped to icons. Support, settings and avatar at the bottom keep the dual-tier order."
+      }
+    },
+    "06-navigation/007-page-header-banner-avatar": {
+      "title": {
+        "ko": "페이지 헤더 - 배너와 아바타",
+        "en": "Page header - banner and avatar"
+      },
+      "desc": {
+        "ko": "그라데이션 배너 위로 큰 아바타가 겹치고, 오른쪽에 브레드크럼·이름·이메일·버튼 둘·검색이 선다. 프로필 성격의 페이지용이다. 이름과 이메일은 목업이다.",
+        "en": "A large avatar overlaps a gradient banner; breadcrumb, name, email, two buttons and search on the right. Meant for profile-type pages. Name and email are mock."
+      }
+    },
+    "06-navigation/008-page-header-simple": {
+      "title": {
+        "ko": "페이지 헤더 - 심플",
+        "en": "Page header - simple"
+      },
+      "desc": {
+        "ko": "브레드크럼, 제목과 설명, 우측 버튼 둘과 검색으로 끝나는 기본형. 배너·아바타 판과 같은 액션 구성을 쓴다.",
+        "en": "Breadcrumb, title and description, two buttons and search on the right. The base form, sharing the action set with the banner variant."
+      }
+    }
+  }
+}

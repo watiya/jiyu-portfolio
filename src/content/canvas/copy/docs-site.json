@@ -1,0 +1,230 @@
+{
+  "pages": {
+    "01-docs": {
+      "ko": "문서",
+      "en": "Docs"
+    },
+    "02-whitepaper": {
+      "ko": "백서",
+      "en": "Whitepaper"
+    }
+  },
+  "flow": [
+    [
+      "01-docs/001-docs",
+      "01-docs/008-intro"
+    ],
+    [
+      "01-docs/008-intro",
+      "01-docs/009-star-token"
+    ],
+    [
+      "01-docs/009-star-token",
+      "01-docs/006-fees"
+    ],
+    [
+      "01-docs/012-users-membership",
+      "01-docs/010-users-connect-wallet"
+    ],
+    [
+      "01-docs/010-users-connect-wallet",
+      "01-docs/013-users-trade"
+    ],
+    [
+      "01-docs/013-users-trade",
+      "01-docs/011-users-launchpad"
+    ],
+    [
+      "01-docs/004-console-intro",
+      "01-docs/003-console-business-token-issuance"
+    ],
+    [
+      "01-docs/003-console-business-token-issuance",
+      "01-docs/002-console-business-launchpad"
+    ],
+    [
+      "02-whitepaper/003-overview",
+      "02-whitepaper/002-how-it-works"
+    ],
+    [
+      "02-whitepaper/002-how-it-works",
+      "02-whitepaper/001-ecosystem"
+    ],
+    [
+      "02-whitepaper/001-ecosystem",
+      "02-whitepaper/004-technology"
+    ]
+  ],
+  "frames": {
+    "01-docs/001-docs": {
+      "title": {
+        "ko": "문서 사이트 홈",
+        "en": "Docs home"
+      },
+      "desc": {
+        "ko": "시작하기 버튼 하나와 DEX·콘솔·제네시스 세 카드로 여는 첫 화면이다. 사용자·상점·파트너가 각자의 가이드로 갈라져 들어가게 문 앞을 단순하게 뒀다.",
+        "en": "The front door: one Get Started button and three cards for DEX, Console and Genesis. Kept plain so users, stores and partners each split off into their own guide."
+      }
+    },
+    "01-docs/002-console-business-launchpad": {
+      "title": {
+        "ko": "상점용 런치패드 가이드",
+        "en": "Launchpad guide for stores"
+      },
+      "desc": {
+        "ko": "왼쪽 사이드바, 가운데 본문, 오른쪽 목차의 세 열 구조. 설정 항목은 표로 묶어 판매 목표·기간·베스팅·1인 상한이 한눈에 잡히게 했다.",
+        "en": "Three columns: sidebar, body, on-page table of contents. Configuration items sit in a table so goal, period, vesting and per-participant cap read at a glance."
+      }
+    },
+    "01-docs/003-console-business-token-issuance": {
+      "title": {
+        "ko": "토큰 발행 가이드, 절차를 번호로",
+        "en": "Token issuance, as numbered steps"
+      },
+      "desc": {
+        "ko": "발행 절차를 번호 목록으로 쓰고 전제 조건을 그 위에 따로 뺐다. 아래 표는 규칙을, 목록은 순서를 맡아 한 페이지에서 둘이 섞이지 않는다.",
+        "en": "Issuance is a numbered list with prerequisites pulled out above it. The table below holds rules, the list holds order, and the two never blur into each other."
+      }
+    },
+    "01-docs/004-console-intro": {
+      "title": {
+        "ko": "콘솔 개요, 다크",
+        "en": "Console overview, dark"
+      },
+      "desc": {
+        "ko": "무엇인지·누구를 위한 것인지·가스가 없는 이유를 세 문단으로 쓰고, 체인 설명은 콜아웃 박스로 내려 본문 흐름을 끊지 않게 했다.",
+        "en": "What it is, who it is for, why there is no gas: three short sections. The chain note drops into a callout so it does not interrupt the main line."
+      }
+    },
+    "01-docs/005-console-partner-getting-started": {
+      "title": {
+        "ko": "파트너 시작하기",
+        "en": "Getting started as a partner"
+      },
+      "desc": {
+        "ko": "파트너가 하는 일과 요건 검토의 경계를 분리해 적었다. 검토는 플랫폼이 하고 파트너의 몫은 제출까지라는 선을 문서에서 먼저 긋는다.",
+        "en": "What partners do and where the requirement check begins are written apart. The doc draws the line first: the platform reviews, the partner's job ends at filing."
+      }
+    },
+    "01-docs/006-fees": {
+      "title": {
+        "ko": "수수료 페이지, 표가 먼저",
+        "en": "Fees, table first"
+      },
+      "desc": {
+        "ko": "요약 표를 위에 두고 항목별 설명을 아래로 내렸다. 수수료는 숫자를 찾으러 오는 페이지라 표가 본문보다 먼저 보이게 했다.",
+        "en": "The summary table sits on top, per-item explanations below. People come here for a number, so the table shows before the prose."
+      }
+    },
+    "01-docs/007-glossary": {
+      "title": {
+        "ko": "용어집, 알파벳 목차",
+        "en": "Glossary with letter index"
+      },
+      "desc": {
+        "ko": "오른쪽 목차가 항목 제목 대신 알파벳 한 글자씩이다. 용어집은 훑는 페이지라 목차도 색인처럼 짧게 뒀다.",
+        "en": "The right-hand contents list is single letters instead of headings. A glossary is skimmed, so its contents work like an index."
+      }
+    },
+    "01-docs/008-intro": {
+      "title": {
+        "ko": "소개 페이지, 다크",
+        "en": "Introduction, dark"
+      },
+      "desc": {
+        "ko": "홈의 문장을 그대로 이어받아 본문으로 푼 첫 문서. 핵심 기능은 카드로 나눠 문단 사이에 숨이 들어가게 했다.",
+        "en": "The first doc, picking up the home page's line and unfolding it. Key features break into cards so the paragraphs get room to breathe."
+      }
+    },
+    "01-docs/009-star-token": {
+      "title": {
+        "ko": "STAR 토큰, 아직 정해지지 않은 것",
+        "en": "STAR token, what is not decided yet"
+      },
+      "desc": {
+        "ko": "총 공급량 하나만 표에 있고 배분과 TGE 는 미정이라는 콜아웃이 둘이다. 없는 정보를 채워 넣는 대신 없다고 적은 페이지다.",
+        "en": "One figure in the table, then two callouts saying distribution and TGE are not announced. A page that states what is missing instead of filling it in."
+      }
+    },
+    "01-docs/010-users-connect-wallet": {
+      "title": {
+        "ko": "지갑 연결 가이드",
+        "en": "Connect wallet guide"
+      },
+      "desc": {
+        "ko": "지갑 연결이 멤버십과 한 몸이라는 점을 콜아웃으로 먼저 알린다. 지원 지갑·네트워크·순서를 그 다음에 두어 막히는 지점부터 푼다.",
+        "en": "A callout first says wallet connection is tied to membership. Supported wallets, network and steps follow, so the blocking point is cleared first."
+      }
+    },
+    "01-docs/011-users-launchpad": {
+      "title": {
+        "ko": "사용자용 런치패드 가이드",
+        "en": "Launchpad guide for users"
+      },
+      "desc": {
+        "ko": "사전 등록 게이지와 소프트캡 규칙을 참여 순서보다 앞에 뒀다. 취소되는 조건을 먼저 알아야 참여 순서가 의미가 있다.",
+        "en": "The pre-registration gauge and soft-cap rule come before the how-to. Knowing when a sale gets cancelled is what makes the steps worth reading."
+      }
+    },
+    "01-docs/012-users-membership": {
+      "title": {
+        "ko": "멤버십, 계정 하나에 역할 여럿",
+        "en": "Membership, one account and several roles"
+      },
+      "desc": {
+        "ko": "멤버십이 모든 표면을 묶는 계정 층이라는 설명 뒤에 역할별 표가 온다. 무료라는 문장은 콜아웃으로 따로 뺐다.",
+        "en": "After explaining membership as the account layer under every surface, a table lists the roles. The line that it is free gets its own callout."
+      }
+    },
+    "01-docs/013-users-trade": {
+      "title": {
+        "ko": "거래 가이드, 입금이 먼저",
+        "en": "Trade guide, deposit first"
+      },
+      "desc": {
+        "ko": "첫 섹션이 거래가 아니라 입금이다. 정산 컨트랙트에 넣어야 주문이 되는 구조라 순서를 문서에서도 그대로 따랐다.",
+        "en": "The first section is deposit, not trading. Orders need funds in the settlement contract, so the doc follows that order too."
+      }
+    },
+    "02-whitepaper/001-ecosystem": {
+      "title": {
+        "ko": "백서 - 생태계와 토크노믹스",
+        "en": "Whitepaper - ecosystem and tokenomics"
+      },
+      "desc": {
+        "ko": "STAR 와 상점 토큰의 차이를 표 한 장으로 먼저 가른다. 백서는 문서와 사이드바가 다르고, 하단에 제품 링크만 남긴다.",
+        "en": "One table first separates STAR from store tokens. The whitepaper has its own sidebar, with product links tucked at the bottom."
+      }
+    },
+    "02-whitepaper/002-how-it-works": {
+      "title": {
+        "ko": "백서 - 작동 방식",
+        "en": "Whitepaper - how it works"
+      },
+      "desc": {
+        "ko": "런치패드 규칙과 수익 분배 절차를 번호와 콜아웃으로 풀었다. 에스크로 문장을 박스로 따로 두어 자금 보관 원칙이 묻히지 않게 했다.",
+        "en": "Launchpad rules and proceeds distribution as numbered steps and callouts. The escrow line gets a box so the custody principle does not get buried."
+      }
+    },
+    "02-whitepaper/003-overview": {
+      "title": {
+        "ko": "백서 개요, 면책이 먼저",
+        "en": "Whitepaper overview, disclaimer first"
+      },
+      "desc": {
+        "ko": "제목 바로 아래 유틸리티 토큰 면책 콜아웃, 그 다음 네 개 요약 카드. 읽는 사람이 무엇이 아닌지를 먼저 보게 한 배치다.",
+        "en": "Right under the title, a utility-token disclaimer, then four summary cards. The order makes the reader see what this is not before what it is."
+      }
+    },
+    "02-whitepaper/004-technology": {
+      "title": {
+        "ko": "백서 - 기술",
+        "en": "Whitepaper - technology"
+      },
+      "desc": {
+        "ko": "오프체인 매칭과 온체인 정산의 분담을 두 줄짜리 표로 보여준다. 컨트랙트 목록은 그 아래 불릿으로 이어진다.",
+        "en": "A two-row table splits off-chain matching from on-chain settlement. The contract list follows as bullets underneath."
+      }
+    }
+  }
+}

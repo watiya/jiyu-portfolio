@@ -1,0 +1,10 @@
+{
+  "pages": {
+    "01-foundation": { "ko": "기초 값", "en": "Foundation" },
+    "02-examples": { "ko": "예시 화면", "en": "Examples" },
+    "03-components": { "ko": "컴포넌트", "en": "Components" },
+    "04-blocks": { "ko": "블록", "en": "Blocks" },
+    "05-charts": { "ko": "차트", "en": "Charts" },
+    "06-themes": { "ko": "테마", "en": "Themes" }
+  }
+}

@@ -1,0 +1,524 @@
+{
+  "pages": {
+    "01-screens": { "ko": "화면", "en": "Screens" },
+    "02-pages": { "ko": "서비스 한 바퀴", "en": "Product tour" }
+  },
+  "flow": [
+    ["01-screens/001-main", "01-screens/002-main_scroll"],
+    ["01-screens/010-main_signafter", "01-screens/011-main_signafter_scroll"],
+    ["01-screens/012-main_chat", "01-screens/013-main_chat_menu"],
+    ["01-screens/048-signin_password", "01-screens/049-signin_passwordreset"],
+    ["01-screens/050-signin_otp", "01-screens/051-signin_otp2"],
+    ["01-screens/051-signin_otp2", "01-screens/052-signin_otp3"],
+    ["01-screens/053-signup", "01-screens/054-signup_certify"],
+    ["01-screens/054-signup_certify", "01-screens/055-signup_certify_popup"],
+    ["01-screens/056-signup_account", "01-screens/057-signup_complete"],
+    ["01-screens/064-main_password", "01-screens/065-main_passwordreset"],
+    ["01-screens/066-main_signup", "01-screens/067-main_signup_certify"],
+    ["01-screens/067-main_signup_certify", "01-screens/068-main_signup_account"],
+    ["01-screens/077-program_cashback_sign", "01-screens/078-program_cashback"],
+    ["01-screens/080-program_luckypot_sign", "01-screens/081-program_luckypot"],
+    ["01-screens/081-program_luckypot", "01-screens/082-program_luckypot2"],
+    ["01-screens/082-program_luckypot2", "01-screens/083-program_luckypot3"],
+    ["01-screens/084-program_referralbonus_sign", "01-screens/086-program_referralbonus"]
+  ],
+  "frames": {
+    "01-screens/001-main": {
+      "title": { "ko": "로그아웃 홈, 전체", "en": "Home, logged out" },
+      "desc": {
+        "ko": "첫 화면부터 푸터까지 한 장이다. 웰컴 팩 히어로 아래에 프로그램 카드 셋을 두고 게임 탭·Featured·All Games 가 이어진다. 상단바는 GAMES 와 SUPPORT 둘뿐이고 오른쪽에 Sign Up·Log In 이 선다.",
+        "en": "Hero to footer in one frame. Three program cards sit under the welcome-pack hero, then the game tabs, Featured, and All Games. The top bar carries only GAMES and SUPPORT, with Sign Up and Log In on the right."
+      }
+    },
+    "01-screens/002-main_scroll": {
+      "title": { "ko": "게임 목록까지 내린 자리", "en": "Scrolled to the grid" },
+      "desc": {
+        "ko": "내리면 히어로가 사라지고 게임 탭이 상단바 아래에 붙는다. 격자 두 번째 줄 한 칸이 비어 있는데 원본이 그렇다.",
+        "en": "Scrolling drops the hero and pins the game tabs under the top bar. One cell in the second row is empty - that gap is in the original."
+      }
+    },
+    "01-screens/003-main_dropdown": {
+      "title": { "ko": "SUPPORT 메뉴", "en": "The SUPPORT menu" },
+      "desc": {
+        "ko": "공지와 FAQ 둘뿐이다. 메뉴가 짧아 접지 않고 그대로 편다.",
+        "en": "Notice and FAQ, nothing else. The menu is short enough to open flat instead of nesting."
+      }
+    },
+    "01-screens/004-main_cookey": {
+      "title": { "ko": "쿠키 안내 띠", "en": "Cookie notice" },
+      "desc": {
+        "ko": "어두운 화면 아래에 흰 띠로 깔린다. 파일 이름의 cookey 는 원본 오타다.",
+        "en": "A white bar laid across the bottom of the dark page. The \"cookey\" in the filename is a typo in the original."
+      }
+    },
+    "01-screens/005-main_dropdown2": {
+      "title": { "ko": "GAMES 메뉴 - 자체 게임", "en": "The GAMES menu - house games" },
+      "desc": {
+        "ko": "여기 걸리는 건 카지노 카테고리가 아니라 자체 게임이다. Casual Betting 에 RPS·Warface·Dice·Moon, Live Lottery 에 Powerball·Hot Spot·Hit or Miss. 같은 GAMES 인데 왼쪽 패널(006)이 여는 목록과 다르다.",
+        "en": "What hangs off GAMES here is not the casino categories but the house games - Casual Betting with RPS, Warface, Dice, Moon; Live Lottery with Powerball, Hot Spot, Hit or Miss. The side panel in 006 opens a different list under the same word."
+      }
+    },
+    "01-screens/006-main_lnb": {
+      "title": { "ko": "왼쪽 패널", "en": "The side panel" },
+      "desc": {
+        "ko": "햄버거를 누르면 상단 메뉴 자리를 왼쪽 패널이 대신한다. Games 아래로 My Games·All Games·Slots·Casual·Jackpots·Tables Games·Live Casino, Support 아래로 공지·FAQ. 약관 링크는 패널 맨 아래로 내려간다.",
+        "en": "The hamburger swaps the top menu for a left panel: My Games, All Games, Slots, Casual, Jackpots, Tables Games, Live Casino under Games; Notice and FAQ under Support. The policy links move to the foot of the panel."
+      }
+    },
+    "01-screens/007-main_lnb_dropdown": {
+      "title": { "ko": "패널 안 언어 고르기", "en": "Language inside the panel" },
+      "desc": {
+        "ko": "여섯 나라 말을 국기와 함께 세우고 쓰고 있는 한국어에 체크를 둔다. 같은 스위치가 푸터에도 있어(008) 두 자리에서 닿는다.",
+        "en": "Six languages with their flags, a check on the Korean currently in use. The same switch also sits in the footer (008), so it is reachable from both."
+      }
+    },
+    "01-screens/008-main_lang": {
+      "title": { "ko": "푸터 언어 팝오버", "en": "Language popover in the footer" },
+      "desc": {
+        "ko": "푸터 셀렉트를 누르면 목록이 위로 열린다. 아래가 페이지 끝이라 아래로 열 자리가 없다.",
+        "en": "The footer select opens upward - the page ends right below it, so there is nowhere to drop."
+      }
+    },
+    "01-screens/009-main_usd": {
+      "title": { "ko": "푸터 통화 팝오버", "en": "Currency popover in the footer" },
+      "desc": {
+        "ko": "USD 에 체크가 있고 아래 항목은 흐리다. 통화는 아직 한 가지만 살아 있다.",
+        "en": "USD is checked and the entry below is dimmed - only one currency is live yet."
+      }
+    },
+    "01-screens/010-main_signafter": {
+      "title": { "ko": "로그인 후 홈, 전체", "en": "Home after signing in" },
+      "desc": {
+        "ko": "오른쪽 위가 Sign Up·Log In 에서 잔액·Deposit·아이콘 셋으로 바뀐다. 나머지 배치는 로그아웃 홈과 같다.",
+        "en": "The right of the bar turns from Sign Up / Log In into balance, Deposit, and three icons. Everything else stays where it was."
+      }
+    },
+    "01-screens/011-main_signafter_scroll": {
+      "title": { "ko": "로그인 후, 게임 목록", "en": "Signed in, scrolled to the grid" },
+      "desc": {
+        "ko": "잔액 칩이 붙어 다니는 것 말고는 002 와 같은 자리다.",
+        "en": "The same place as 002, except the balance chip rides along."
+      }
+    },
+    "01-screens/012-main_chat": {
+      "title": { "ko": "채팅 패널", "en": "The chat panel" },
+      "desc": {
+        "ko": "오른쪽에 붙는 패널이다. 레벨과 닉네임을 말풍선 위에 붙이고 운영자 알림(SPERA CASINO)은 붉은 글씨로 갈라 놓는다. 원본 렌더에서 탭 머리가 초록으로 뭉개져 첫 줄과 겹친다.",
+        "en": "A panel docked to the right. Level and nickname sit above each bubble, and the operator's line (SPERA CASINO) is split out in red. In the original render the tab header smears into green and overlaps the first message."
+      }
+    },
+    "01-screens/013-main_chat_menu": {
+      "title": { "ko": "채팅방 고르기", "en": "Picking a chat room" },
+      "desc": {
+        "ko": "Global 하나에 언어별 방 다섯을 붙였다. 화면 언어를 바꾸는 게 아니라 방을 옮기는 것이라 언어 설정과 따로 뒀다.",
+        "en": "One Global room plus five by language. This moves you to another room rather than changing the interface language, so it is kept apart from the language switch."
+      }
+    },
+    "01-screens/014-main_notification": {
+      "title": { "ko": "알림 - 있음과 없음", "en": "Notifications, both states" },
+      "desc": {
+        "ko": "한 장에 두 판을 겹쳐 뒀다. 위는 새 기기 로그인·입금 대기·2FA 등록 같은 목록, 아래는 「No new alerts found.」 빈 판이다.",
+        "en": "Two states stacked in one frame: the list on top - new-device login, deposit pending, 2FA registered - and the empty \"No new alerts found.\" below it."
+      }
+    },
+    "01-screens/015-main_account": {
+      "title": { "ko": "계정 팝오버", "en": "Account popover" },
+      "desc": {
+        "ko": "잔액·랭크·캐시백·레퍼럴을 한 줄씩 쌓고 맨 아래에 보안·거래내역·설정으로 가는 길을 둔다. 랭크 줄은 다음 등급까지 얼마나 남았는지를 막대로 보여 준다.",
+        "en": "Balance, rank, cashback, and referral stacked one per row, with Security, History, and Setting along the bottom. The rank row shows how far the next tier is as a bar."
+      }
+    },
+    "01-screens/016-main_account2": {
+      "title": { "ko": "계정 팝오버, 줄인 판", "en": "Account popover, trimmed" },
+      "desc": {
+        "ko": "같은 팝오버를 잔액 한 줄로 줄이고 오른쪽 위에 「Account >」를 달아 상세로 넘긴다. 아래 길도 보안·거래내역 둘만 남았다.",
+        "en": "The same popover cut down to the balance alone, with an \"Account >\" link at the top right handing off to the full page. Only Security and History remain below."
+      }
+    },
+    "01-screens/017-main_history": {
+      "title": { "ko": "빈 자리", "en": "An empty slot" },
+      "desc": {
+        "ko": "이름은 거래내역인데 화면에는 로그아웃 홈만 있고 아무것도 얹혀 있지 않다. 안 그린 자리다 - 거래내역 페이지는 「서비스 한 바퀴」 탭의 12 에 있다.",
+        "en": "Named for the history view, but the frame holds only the logged-out home with nothing on top of it. It was never drawn - the actual history page is frame 12 in the Product tour tab."
+      }
+    },
+    "01-screens/018-main_rank": {
+      "title": { "ko": "주간 순위 패널", "en": "Weekly standings panel" },
+      "desc": {
+        "ko": "채팅과 같은 패널의 세 번째 탭이다. 누적 상금을 머리에 두고 15위까지 세운 뒤 맨 아래에서 위클리레이스 페이지로 넘긴다. 표 머리는 원본에서 초록으로 뭉개져 있다.",
+        "en": "The third tab of the same right-hand panel. Total prize money at the head, fifteen rows of standings, and a hand-off to the Weekly Race page at the foot. The table header smears green in the original."
+      }
+    },
+    "01-screens/019-main_banner": {
+      "title": { "ko": "맨 위 공지 띠", "en": "Announcement bar" },
+      "desc": {
+        "ko": "상단바 위로 한 줄이 더 올라오고 나머지가 그만큼 내려간다. 문구는 아직 가나다 더미다.",
+        "en": "One more row pushes in above the top bar and everything shifts down by that much. The copy is still lorem."
+      }
+    },
+    "01-screens/047-signin": {
+      "title": { "ko": "로그인", "en": "Sign in" },
+      "desc": {
+        "ko": "이메일·비밀번호·버튼만 세운 판이다. 별도 페이지로 여는 쪽이고, 같은 화면을 모달로 띄운 판은 062 에 있다. 상단바가 로그인 상태 그대로라 잔액이 남아 있는데 원본이 그렇다.",
+        "en": "Email, password, one button. This is the standalone-page version; the same screen as a modal is at 062. The top bar is still in its signed-in state with a balance showing - that is how the original is."
+      }
+    },
+    "01-screens/048-signin_password": {
+      "title": { "ko": "비밀번호 재설정 - 메일 보내기", "en": "Password reset - send the mail" },
+      "desc": {
+        "ko": "파일 이름은 password 인데 실제로는 재설정을 시작하는 자리다. 가입 이메일을 받아 링크를 보낸다.",
+        "en": "The filename says password, but this is where a reset starts: it takes the signup address and sends the link."
+      }
+    },
+    "01-screens/049-signin_passwordreset": {
+      "title": { "ko": "새 비밀번호 넣기", "en": "Enter the new password" },
+      "desc": {
+        "ko": "두 번 받아 맞는지 보고, 안 맞으면 두 번째 칸 아래에 붉은 글씨가 붙는다.",
+        "en": "Typed twice and compared; a mismatch drops red text under the second field."
+      }
+    },
+    "01-screens/050-signin_otp": {
+      "title": { "ko": "구글 OTP 여섯 자리", "en": "Google OTP, six digits" },
+      "desc": {
+        "ko": "칸을 여섯으로 쪼개 한 자씩 받는다. 아래 「구글 OTP를 진행할 수 없으신가요?」가 초기화로 가는 유일한 길이다.",
+        "en": "Six separate boxes, one digit each. The line below - \"Can't use Google OTP?\" - is the only way through to a reset."
+      }
+    },
+    "01-screens/051-signin_otp2": {
+      "title": { "ko": "OTP 초기화 요청", "en": "Requesting an OTP reset" },
+      "desc": {
+        "ko": "왜 초기화가 필요한지 먼저 적고 등록 이메일로 인증 메일이 간다는 걸 알린 뒤 버튼을 준다. 회색 상자 안 문구는 초기화하지 않고 되살리는 길을 따로 안내한다.",
+        "en": "It states why a reset is needed, says a verification mail goes to the registered address, then offers the button. The grey box points to recovering the code instead of resetting it."
+      }
+    },
+    "01-screens/052-signin_otp3": {
+      "title": { "ko": "초기화 완료", "en": "Reset done" },
+      "desc": {
+        "ko": "초기화됐으니 다시 로그인하라는 한 줄과 확인 버튼뿐이다.",
+        "en": "One line saying it is done and to sign in again, plus a confirm button."
+      }
+    },
+    "01-screens/053-signup": {
+      "title": { "ko": "가입 - 이메일부터", "en": "Sign up - email first" },
+      "desc": {
+        "ko": "왼쪽에 이메일 한 칸, 오른쪽에 보너스 그림을 붙였다. 비밀번호는 인증 뒤로 미룬다.",
+        "en": "One email field on the left, the bonus artwork on the right. The password waits until after verification."
+      }
+    },
+    "01-screens/054-signup_certify": {
+      "title": { "ko": "인증 메일 보냄", "en": "Verification mail sent" },
+      "desc": {
+        "ko": "받은 주소를 초록 글씨로 되짚어 준다. 메일함으로 보내는 버튼이 주고, 재발송은 그 아래 작은 링크다.",
+        "en": "It echoes the address back in green. The button sends you to your inbox; resending is the small link below it."
+      }
+    },
+    "01-screens/055-signup_certify_popup": {
+      "title": { "ko": "재발송 알림 두 벌", "en": "Resend alerts, both" },
+      "desc": {
+        "ko": "성공(「인증메일이 재발송 되었습니다」)과 막힘(「3분 후, 다시 발송 하실 수 있습니다」)을 한 장에 나란히 뒀다.",
+        "en": "Success and cooldown side by side in one frame - the mail was resent, or you can send again in three minutes."
+      }
+    },
+    "01-screens/056-signup_account": {
+      "title": { "ko": "계정 만들기", "en": "Create the account" },
+      "desc": {
+        "ko": "인증된 이메일이 체크를 단 채로 넘어오고 닉네임·비밀번호·확인을 받는다. 동의 둘 중 나이·약관은 필수, 마케팅은 선택이라 체크 상태를 갈라 뒀다.",
+        "en": "The verified email carries over with a check on it; nickname, password, and confirmation follow. Of the two consents, age and terms are required and marketing is not - the checkbox states show which is which."
+      }
+    },
+    "01-screens/057-signup_complete": {
+      "title": { "ko": "가입 완료", "en": "Signed up" },
+      "desc": {
+        "ko": "말굽 아이콘 하나에 완료 문구, 그리고 서비스로 들어가는 버튼 하나. 제목이 두 줄로 어색하게 잘린 건 원본 텍스트 상자가 좁아서다.",
+        "en": "A horseshoe, the completion line, and one button into the service. The title breaks awkwardly because the original text box is too narrow."
+      }
+    },
+    "01-screens/058-signup_expiration": {
+      "title": { "ko": "인증 시간 만료", "en": "Verification expired" },
+      "desc": {
+        "ko": "메일 링크의 유효시간이 지난 자리. 다시 하라는 말과 홈으로 가는 버튼뿐이라 여기서 바로 재발송은 못 한다.",
+        "en": "The mail link timed out. It says to try again and offers Go Home - there is no resend from here."
+      }
+    },
+    "01-screens/059-signup_fail": {
+      "title": { "ko": "인증 실패", "en": "Verification failed" },
+      "desc": {
+        "ko": "058 과 같은 틀에 아이콘의 표시와 버튼 글자만 바뀐다. 만료와 실패를 굳이 한 화면으로 합치지 않았다.",
+        "en": "The same shell as 058 with a different mark on the icon and a different button label. Expiry and failure were kept apart rather than folded into one screen."
+      }
+    },
+    "01-screens/060-signup_email": {
+      "title": { "ko": "인증 완료", "en": "Verified" },
+      "desc": {
+        "ko": "성공 판. 셋이 아이콘 배지 하나만 갈아 끼우는 구조라 상태가 바뀌어도 자리가 안 흔들린다.",
+        "en": "The success case. All three swap only the badge on the icon, so the layout never moves as the state changes."
+      }
+    },
+    "01-screens/061-signin_otp_emailtemplate": {
+      "title": { "ko": "OTP 메일 두 통", "en": "Two OTP emails" },
+      "desc": {
+        "ko": "화면이 아니라 메일 서식이다. 왼쪽은 초기화를 눌러 달라는 안내, 오른쪽은 초기화된 뒤 계정·일시·IP·기기를 적어 보내는 통지. 사이트와 달리 흰 바탕이다.",
+        "en": "Not screens but mail templates. The left asks you to confirm the reset; the right reports it done with account, time, IP, and device. Unlike the site, these sit on white."
+      }
+    },
+    "01-screens/062-main_signin": {
+      "title": { "ko": "로그인 모달 - 두 단계", "en": "Sign-in modal, two steps" },
+      "desc": {
+        "ko": "같은 로그인을 홈 위에 모달로 띄운 판이다. 왼쪽은 빈 폼이라 버튼이 「Continue」, 오른쪽은 이메일이 채워져 「Sign In」으로 바뀌고 비밀번호 오류가 붙는다. 뒤에 깔린 히어로도 별도 페이지 판(047)과 다른 「Daily Drops & Wins」다.",
+        "en": "The same sign-in raised as a modal over the home page. Empty on the left, so the button reads \"Continue\"; filled on the right, where it becomes \"Sign In\" and a password error appears. The hero behind it is \"Daily Drops & Wins\", not the one behind the standalone page at 047."
+      }
+    },
+    "01-screens/063-main_signin2": {
+      "title": { "ko": "로그인 모달 한 벌", "en": "The sign-in modal alone" },
+      "desc": {
+        "ko": "062 의 오른쪽 상태를 한가운데 한 벌만 놓고 다시 본 장이다.",
+        "en": "The right-hand state of 062, centred and shown on its own."
+      }
+    },
+    "01-screens/064-main_password": {
+      "title": { "ko": "재설정 요청 모달", "en": "Reset-request modal" },
+      "desc": {
+        "ko": "빈 폼과 오류 두 벌에 더해 오른쪽 위에 「메일을 확인하라」는 성공 토스트까지 올려 세 갈래를 한 장에서 본다.",
+        "en": "Empty and errored side by side, plus the \"check your email\" toast at the top right - three outcomes in one frame."
+      }
+    },
+    "01-screens/065-main_passwordreset": {
+      "title": { "ko": "새 비밀번호 모달", "en": "New-password modal" },
+      "desc": {
+        "ko": "빈 판은 Confirm 이 죽어 있고 채운 판은 살아나면서 검증 문구가 붙는다.",
+        "en": "Confirm is dead on the empty one and live on the filled one, where the validation line appears."
+      }
+    },
+    "01-screens/066-main_signup": {
+      "title": { "ko": "가입 모달 - 이메일", "en": "Sign-up modal - email" },
+      "desc": {
+        "ko": "왼쪽 폼, 오른쪽 보너스 그림이라는 짜임은 별도 페이지 판(053)과 같은데 그림이 물고기 히어로로 바뀌었다.",
+        "en": "Form left, bonus art right - the same split as the standalone page at 053, but the artwork is the fish hero here."
+      }
+    },
+    "01-screens/067-main_signup_certify": {
+      "title": { "ko": "가입 모달 - 인증 안내", "en": "Sign-up modal - verify" },
+      "desc": {
+        "ko": "제목 왼쪽에 뒤로 가기 화살표가 생겨 단계가 이어진다는 걸 드러낸다.",
+        "en": "A back arrow appears left of the title, showing the steps are chained."
+      }
+    },
+    "01-screens/068-main_signup_account": {
+      "title": { "ko": "가입 모달 - 계정 만들기", "en": "Sign-up modal - create the account" },
+      "desc": {
+        "ko": "칸이 넷으로 늘면서 모달이 세로로 길어지고 그림 자리가 사라진다. 페이지 판(056)과 달리 폼만 남는다.",
+        "en": "Four fields stretch the modal and the artwork panel drops out - unlike the page version at 056, only the form is left."
+      }
+    },
+    "01-screens/076-program_vip": {
+      "title": { "ko": "VIP 혜택", "en": "VIP benefits" },
+      "desc": {
+        "ko": "히어로 다음에 세 걸음 안내, 그 아래가 Lv.0~Lv.9 표다. 누적 배팅·캐시백·레벨업 보너스·위클리레이스·프로필·전담 지원이 어느 등급부터 열리는지 체크로 가른다. 내 등급 열에는 붉은 테두리와 「My Rank」를 둘렀다. 본문은 「VIP 10레벨」이라 적었는데 표는 9 까지다.",
+        "en": "Hero, then three steps, then the Lv.0-Lv.9 table. Checks mark where wagering tier, cashback, level-up bonus, weekly race, custom profile, and VIP support switch on. The reader's own tier is boxed in red and labelled \"My Rank\". The body text says VIP level 10 while the table stops at 9."
+      }
+    },
+    "01-screens/077-program_cashback_sign": {
+      "title": { "ko": "캐시백 소개 - 로그인 전", "en": "Cashback intro, signed out" },
+      "desc": {
+        "ko": "내 숫자를 못 보여 주므로 등급별 비율만 늘어놓고 맨 아래 「로그인」으로 끝낸다. 세 걸음 중 앞 둘은 아이콘 자리가 아직 비어 있다.",
+        "en": "With no figures to show, it lays out the per-tier rates and ends on a Sign in button. Two of the three step icons are still empty."
+      }
+    },
+    "01-screens/078-program_cashback": {
+      "title": { "ko": "캐시백 - 로그인 후", "en": "Cashback, signed in" },
+      "desc": {
+        "ko": "같은 페이지 위에 내 캐시백과 지급 내역이 먼저 붙고 소개는 그 아래로 밀린다. 오늘 것은 「적립중」, 어제 것은 「수령」 버튼으로 갈린다.",
+        "en": "My cashback and the payout history land on top of the same page and push the explainer down. Today's is still accruing; yesterday's carries a claim button."
+      }
+    },
+    "01-screens/079-program_weeklyrace": {
+      "title": { "ko": "위클리레이스", "en": "Weekly race" },
+      "desc": {
+        "ko": "남은 시간을 히어로에 박고 누적 상금을 크게 세운 뒤 15위까지 표로 내린다. 내 줄만 붉은 테를 둘러 어디 있는지 바로 잡힌다. 순위 열이 4 다음 전부 5 인 건 더미다.",
+        "en": "Time remaining sits in the hero, the pooled prize follows in large type, then the table runs to fifteenth. Only the reader's row is boxed in red so it can be found at a glance. Every rank after fourth reads 5 - dummy data."
+      }
+    },
+    "01-screens/080-program_luckypot_sign": {
+      "title": { "ko": "럭키팟 - 로그인 전", "en": "Lucky Pot, signed out" },
+      "desc": {
+        "ko": "회차 상금과 남은 시간을 플립 숫자판으로 세웠다. 배분표까지만 보여 주고 「로그인」으로 끊는다. 원본에서 숫자판 마지막 자리들이 따로 떨어져 나가 있다.",
+        "en": "The round's pot and countdown are set as flip digits. It shows the distribution plan and stops at a Sign in button. In the original the last digits break away from the boards."
+      }
+    },
+    "01-screens/081-program_luckypot": {
+      "title": { "ko": "럭키팟 - 로그인 후", "en": "Lucky Pot, signed in" },
+      "desc": {
+        "ko": "티켓 발급 카드가 맨 위에 붙는다. 이번 주 배팅량으로 이미 받은 티켓과 아직 안 받은 티켓을 갈라 두고 아래는 회차별 히스토리다.",
+        "en": "The ticket card goes to the top: tickets already issued against this week's wagering versus tickets still to claim, with the per-round history below."
+      }
+    },
+    "01-screens/082-program_luckypot2": {
+      "title": { "ko": "티켓 발급 뒤 - 목록과 빈 판", "en": "After issuing - the list and the empty state" },
+      "desc": {
+        "ko": "발급 완료 알림과 티켓 리스트, 그리고 「내용이 없습니다」 빈 판까지 한 장에 겹쳐 뒀다. 목록 오른쪽 붉은 「Scrol」은 원본에 남은 디자이너 메모다.",
+        "en": "The issued alert, the ticket list, and the \"nothing here\" empty state all stacked in one frame. The red \"Scrol\" beside the list is a designer's note left in the original."
+      }
+    },
+    "01-screens/083-program_luckypot3": {
+      "title": { "ko": "당첨 수령 뒤 - 결과가 붙은 목록", "en": "After claiming - the list with results" },
+      "desc": {
+        "ko": "082 와 같은 틀인데 알림이 수령 완료로 바뀌고 표에 결과·상금 두 열이 늘었다. 맞은 자리 숫자만 흰색으로 남겨 어디가 맞았는지 표시한다.",
+        "en": "The same shell as 082 with the alert changed to a payout confirmation and two columns added for result and reward. Only the matched digits stay white, so you can see which numbers hit."
+      }
+    },
+    "01-screens/084-program_referralbonus_sign": {
+      "title": { "ko": "추천 보너스 - 로그인 전", "en": "Referral bonus, signed out" },
+      "desc": {
+        "ko": "친구가 딴 금액의 0.05%를 평생 받는다는 구조를 세 걸음으로 풀고 「로그인」으로 끝낸다. 히어로가 배경 없이 인물만 얹힌 판이다.",
+        "en": "It unpacks the lifetime 0.05% of a friend's winnings in three steps and closes on a Sign in button. The hero here is the character alone, with no scene behind her."
+      }
+    },
+    "01-screens/085-program_fairness": {
+      "title": { "ko": "공정성 공개", "en": "Fairness disclosure" },
+      "desc": {
+        "ko": "다른 프로그램 페이지와 달리 히어로 없이 제목부터 시작한다. 예치금·발행량·지급 여력 비율 셋을 카드로 세우고 그 아래 게임별 통계와 난수 생성을 각각 셀렉트로 고르게 했다. 두 셀렉트를 편 상태로 함께 그려 뒀고 표 머리는 원본에서 뭉개져 있다.",
+        "en": "Unlike the other program pages it opens on the title with no hero. Deposits held, tokens issued, and coverage ratio sit as three cards, with per-game statistics and random-number generation each behind a select below. Both selects are drawn open at once, and the table header is smeared in the original."
+      }
+    },
+    "01-screens/086-program_referralbonus": {
+      "title": { "ko": "추천 보너스 - 로그인 후", "en": "Referral bonus, signed in" },
+      "desc": {
+        "ko": "초대 링크와 복사 버튼이 맨 위에 붙고 SNS 여섯 곳으로 바로 나간다. 초대 인원·누적 배팅·커미션을 한 줄에 세우고 수령 버튼에 「계정상태 : 이용제한」 툴팁을 걸어 왜 못 받는지 그 자리에서 알린다.",
+        "en": "The invite link and its copy button come first, with six share targets beside them. Invited friends, total wagered, and commission sit in one row, and the claim button carries an \"account restricted\" tooltip that says on the spot why it cannot be used."
+      }
+    },
+    "01-screens/101-game": {
+      "title": { "ko": "자체 게임 창", "en": "A house game in its frame" },
+      "desc": {
+        "ko": "Powerball for SPERA 를 사이트 안 창으로 띄운다. 게임이 세로 비율이라 가운데만 쓰고 좌우는 게임 배경으로 남긴다. 창 머리의 Real mode 토글이 연습과 실제를 가르고, 잔액이 모자라면 왼쪽 아래 Deposit 으로 바로 나간다.",
+        "en": "Powerball for SPERA opened in a frame inside the site. The game is portrait, so it takes the middle and leaves its own art at the sides. The Real mode toggle in the header splits practice from real play, and Deposit at the bottom left is the way out when the balance runs short."
+      }
+    },
+    "01-screens/103-game_full": {
+      "title": { "ko": "외부 게임, 전체 폭", "en": "A third-party game, full width" },
+      "desc": {
+        "ko": "바깥 제공사 슬롯은 가로라 창이 화면 폭을 다 쓴다. 머리글은 「Blackjack Perfect Pairs High Roller」인데 안에서 뜨는 건 Super Sweets 다 - 원본이 어긋나 있다.",
+        "en": "A vendor slot is landscape, so the frame takes the full width. The header reads \"Blackjack Perfect Pairs High Roller\" while the game loading inside is Super Sweets - the original does not match itself."
+      }
+    },
+    "01-screens/105-game_list": {
+      "title": { "ko": "게임 목록만", "en": "The grid on its own" },
+      "desc": {
+        "ko": "탭도 제목도 없이 격자만 남긴 판이다. 카드 크기와 줄 간격만 보려고 떼어 둔 장으로 읽힌다.",
+        "en": "No tabs, no heading, just the grid - a frame kept aside to look only at card size and row rhythm."
+      }
+    },
+    "02-pages/01": {
+      "title": { "ko": "홈", "en": "Home" },
+      "desc": {
+        "ko": "이 판은 상단바에 PROGRAMS 가 하나 더 있다. 「화면」 탭 쪽에는 GAMES 와 SUPPORT 뿐이라 프로그램으로 가는 길이 카드와 푸터밖에 없었다.",
+        "en": "This build carries a third menu, PROGRAMS. In the Screens tab there are only GAMES and SUPPORT, so the programs were reachable through the cards and the footer alone."
+      }
+    },
+    "02-pages/02": {
+      "title": { "ko": "게임 목록, 푸터까지", "en": "Game list down to the footer" },
+      "desc": {
+        "ko": "격자가 끝나고 푸터가 붙는 자리까지 한 장에 담았다. 푸터 오른쪽에 테마·언어·통화 셀렉트 셋이 나란히 선다.",
+        "en": "Carried down to where the grid ends and the footer begins. Three selects - theme, language, currency - line up at the footer's right."
+      }
+    },
+    "02-pages/03": {
+      "title": { "ko": "왼쪽 패널과 언어", "en": "Side panel with the language list" },
+      "desc": {
+        "ko": "패널을 열고 언어까지 편 상태다. 「화면」 탭에서 006 과 007 로 나눠 그린 것을 여기서는 한 장으로 뒀다.",
+        "en": "Panel open with the language list unfolded - what the Screens tab splits across 006 and 007 is one frame here."
+      }
+    },
+    "02-pages/04": {
+      "title": { "ko": "채팅 패널", "en": "Chat panel" },
+      "desc": {
+        "ko": "012 와 같은 화면인데 여기서는 탭 머리가 뭉개지지 않고 제대로 나온다.",
+        "en": "The same screen as 012, but here the tab header renders cleanly instead of smearing."
+      }
+    },
+    "02-pages/05": {
+      "title": { "ko": "계정 팝오버", "en": "Account popover" },
+      "desc": {
+        "ko": "015 와 같은 팝오버가 글자 겹침 없이 나온 판이다.",
+        "en": "The popover from 015, drawn without the overlapping text."
+      }
+    },
+    "02-pages/06": {
+      "title": { "ko": "게임 목록 - 다른 판", "en": "Game list, another pass" },
+      "desc": {
+        "ko": "02 와 같은 목록인데 상단바에서 GAMES 가 빠지고 격자에 걸린 게임도 다르다. 목록 화면을 한 번 이상 다시 짰다는 흔적이다.",
+        "en": "The same list as 02 with GAMES dropped from the bar and different games in the grid - evidence the list screen was reworked more than once."
+      }
+    },
+    "02-pages/07": {
+      "title": { "ko": "게임 플레이", "en": "Playing a game" },
+      "desc": {
+        "ko": "103 과 같은 자리다. 머리글의 이름과 안에 뜬 게임이 어긋나는 것도 그대로 남아 있다.",
+        "en": "The same view as 103 - mismatched header and game included."
+      }
+    },
+    "02-pages/08": {
+      "title": { "ko": "가입 - 이메일", "en": "Sign up - email" },
+      "desc": {
+        "ko": "053 과 같은 화면이 푸터까지 붙어 나온 판이다.",
+        "en": "The screen from 053, this time with the footer attached."
+      }
+    },
+    "02-pages/09": {
+      "title": { "ko": "위클리레이스", "en": "Weekly race" },
+      "desc": {
+        "ko": "079 와 같은 페이지. 상금 옆 그림이 아직 코인 더미이고 순위 열도 1 부터 15 까지 제대로 세어 내려간다.",
+        "en": "The page from 079 - the art beside the prize is still a coin pile here, and the rank column actually counts 1 to 15."
+      }
+    },
+    "02-pages/10": {
+      "title": { "ko": "추천 보너스", "en": "Referral bonus" },
+      "desc": {
+        "ko": "086 보다 앞선 판이다. 공유처가 넷뿐이고 수령 자리에는 툴팁 대신 「Status Normal」이 붙어 있다.",
+        "en": "An earlier pass than 086: four share targets, and the claim area carries a plain \"Status: Normal\" instead of the tooltip."
+      }
+    },
+    "02-pages/11": {
+      "title": { "ko": "럭키팟", "en": "Lucky Pot" },
+      "desc": {
+        "ko": "081 과 같은 페이지인데 히어로의 숫자판이 어긋나지 않고 배분표까지 이어 붙어 있다.",
+        "en": "The page from 081, with the flip boards in the hero aligned and the distribution plan carried through."
+      }
+    },
+    "02-pages/12": {
+      "title": { "ko": "거래내역", "en": "History" },
+      "desc": {
+        "ko": "계정 탭 넷(Account·Security·History·Setting) 중 세 번째다. 기간·종류·게임 셋으로 좁히고 Export 로 뽑는다. 「화면」 탭에는 이 페이지가 없다.",
+        "en": "The third of the four account tabs. Filter by period, type, and game; Export pulls it out. This page does not exist in the Screens tab."
+      }
+    },
+    "02-pages/13": {
+      "title": { "ko": "입금", "en": "Deposit" },
+      "desc": {
+        "ko": "결제사를 왼쪽 레일로 세우고 아직 준비 안 된 곳은 「Soon」 배지로 막았다. 네 단계 중 첫 단계가 약관 동의다. 아래 최근 내역에 붙은 툴팁이 왜 늦어지는지를 묻기 전에 답한다.",
+        "en": "Payment providers stand in a left rail with the unready ones held behind a \"Soon\" badge. Step one of four is consent. The tooltip on the recent transactions answers the delay question before it is asked."
+      }
+    },
+    "02-pages/14": {
+      "title": { "ko": "출금", "en": "Withdraw" },
+      "desc": {
+        "ko": "입금과 같은 틀에 보내는 금액과 받는 코인을 양쪽에 두고 그 사이에 교환 비율·수수료·예상 시간을 미리 적는다.",
+        "en": "The same shell as deposit, with amount sent and coin received on either side and the rate, fees, and expected time spelled out between them."
+      }
+    },
+    "02-pages/15": {
+      "title": { "ko": "계정", "en": "Account" },
+      "desc": {
+        "ko": "잔액과 등급을 위에 두고 캐시백·추천·럭키팟 세 프로그램의 내 몫을 아래 한 줄로 모았다. 프로그램 페이지를 열지 않아도 여기서 잔고가 보인다.",
+        "en": "Balance and tier on top, then one row gathering what the reader holds in cashback, referral, and Lucky Pot. The tally is visible here without opening any program page."
+      }
+    },
+    "02-pages/16": {
+      "title": { "ko": "보안", "en": "Security" },
+      "desc": {
+        "ko": "OTP·비밀번호·접속 기록 셋을 카드로 갈랐다. 카드마다 마지막으로 바뀐 때를 적어 두어 뭘 손봐야 하는지 스스로 드러난다.",
+        "en": "OTP, password, and account activity split into three cards. Each carries when it last changed, so what needs attention shows itself."
+      }
+    }
+  }
+}

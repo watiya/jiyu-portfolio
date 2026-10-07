@@ -1,0 +1,421 @@
+{
+  "pages": {
+    "01-market": { "ko": "마켓 화면", "en": "Marketplace" },
+    "02-pages": { "ko": "옛 소개", "en": "Older pages" },
+    "03-responsive": { "ko": "반응형", "en": "Breakpoints" }
+  },
+  "flow": [
+    ["01-market/001-listing_account", "01-market/002-listing_account_select_class"],
+    ["01-market/002-listing_account_select_class", "01-market/003-listing_account_default"],
+    ["01-market/003-listing_account_default", "01-market/004-listing_account_verified"],
+    ["01-market/004-listing_account_verified", "01-market/005-listing_account_verified_minting"],
+
+    ["01-market/006-shop_seller", "01-market/007-shop_buyer"],
+    ["01-market/010-datails_account_default", "01-market/011-datails_account_verified"],
+    ["01-market/011-datails_account_verified", "01-market/012-datails_account_verified_sticky"],
+    ["01-market/013-datails_account_verified_description", "01-market/014-datails_account_verified_reviews"],
+    ["01-market/016-game_maplestory", "01-market/017-game_maplestory"],
+    ["01-market/019-dialog_equipment", "01-market/020-dialog_equipment"],
+    ["01-market/021-dialog_equipment2", "01-market/022-dialog_equipment3"],
+    ["01-market/037-datails_account_verified_description", "01-market/043-datails_account_verified_reviews"],
+    ["01-market/049-listing_account", "01-market/050-listing_account"],
+    ["01-market/050-listing_account", "01-market/051-listing_account"],
+    ["01-market/052-nexon-open-id", "01-market/053-nexon-open-id"]
+  ],
+  "frames": {
+    "01-market/001-listing_account": {
+      "title": { "ko": "상품 등록 1 - 게임과 서버", "en": "List 1 - game and server" },
+      "desc": {
+        "ko": "게임과 서버를 먼저 고르고 화폐인지 캐릭터인지 가른다. 무엇을 파는지가 정해져야 아래 항목이 정해진다.",
+        "en": "Game and server first, then currency or character. What's being sold decides what the form below asks."
+      }
+    },
+    "01-market/002-listing_account_select_class": {
+      "title": { "ko": "상품 등록 2 - 직업과 계정", "en": "List 2 - class and account" },
+      "desc": {
+        "ko": "직업을 고르면 그 갈래의 세부 직업이 아래 줄로 펼쳐진다. 1대주 여부는 Yes 를 눌러야 몇 대주인지 묻는 칸이 선다.",
+        "en": "Picking a class unfolds its sub-classes on a second row. The owner-count field only appears once Yes is chosen."
+      }
+    },
+    "01-market/003-listing_account_default": {
+      "title": { "ko": "상품 등록 3 - 상세정보", "en": "List 3 - details" },
+      "desc": {
+        "ko": "제목·본문·스크린샷 다섯 자리, 그리고 노출 언어. 맨 아래 Verification 은 아직 비어 있다.",
+        "en": "Title, body, five screenshot slots, and the display language. Verification at the bottom is still empty."
+      }
+    },
+    "01-market/004-listing_account_verified": {
+      "title": { "ko": "상세정보, 확인을 누른 뒤", "en": "Details, after confirming" },
+      "desc": {
+        "ko": "캐릭터 이름을 넣고 확인하면 게임에서 대표 이미지를 끌어온다. 인증 마크가 붙는다는 것을 회색 상자에 적어 둔다.",
+        "en": "Enter the character name, confirm, and the game supplies the main image. The grey box explains the verification mark."
+      }
+    },
+    "01-market/005-listing_account_verified_minting": {
+      "title": { "ko": "발행 중", "en": "Minting" },
+      "desc": {
+        "ko": "게임 API 에서 확인한 값으로 증표를 만드는 동안 기다리는 화면. 무엇을 하는 중인지 세 줄로 적는다.",
+        "en": "The wait while the token is built from what the game API returned, with three lines saying what's happening."
+      }
+    },
+    "01-market/006-shop_seller": {
+      "title": { "ko": "상점, 파는 사람", "en": "Shop, seller" },
+      "desc": {
+        "ko": "주인에게는 프로필 편집과 상품 등록이 붙는다. All 과 Verified 두 탭으로 나눠 본다.",
+        "en": "The owner gets Edit profile and List product. Stock splits into All and Verified."
+      }
+    },
+    "01-market/007-shop_buyer": {
+      "title": { "ko": "상점, 사는 사람", "en": "Shop, buyer" },
+      "desc": {
+        "ko": "같은 상점인데 단추가 Chat 하나로 바뀌고, 카드에 찜하기가 생긴다. 카드를 짚으면 그 자리에서 Chat 이 뜬다.",
+        "en": "The same shop with one button - Chat - and a heart on every card. Hovering a card raises Chat in place."
+      }
+    },
+    "01-market/008-card_account_myshop": {
+      "title": { "ko": "상품 카드 규격, 내 상점", "en": "Card spec, my shop" },
+      "desc": {
+        "ko": "일반 상품과 인증 상품(NFT)을 파는 사람·사는 사람으로 갈라 기본·눌림·거래중·뼈대 넉 장씩 세운 표다.",
+        "en": "A grid of the card in every state - default, hover, in-trade, skeleton - for plain and verified stock, seller and buyer."
+      }
+    },
+    "01-market/009-shop_seller_verified": {
+      "title": { "ko": "상점, 인증 상품만", "en": "Shop, verified only" },
+      "desc": {
+        "ko": "Verified 탭은 증표가 붙은 것만 남긴다. 점 세 개에 인증 최신화·수정·삭제가 들어 있다.",
+        "en": "The Verified tab keeps only tokenised stock. The three dots hold refresh, edit, and delete."
+      }
+    },
+    "01-market/010-datails_account_default": {
+      "title": { "ko": "상품 상세, 일반", "en": "Product detail, plain" },
+      "desc": {
+        "ko": "증표가 없는 상품은 그냥 페이지다. 빵부스러기와 제목, 오른쪽에 파는 사람과 값.",
+        "en": "Stock without a token is just a page - breadcrumb, title, and the seller and price on the right."
+      }
+    },
+    "01-market/011-datails_account_verified": {
+      "title": { "ko": "상품 상세, 인증", "en": "Product detail, verified" },
+      "desc": {
+        "ko": "증표가 붙으면 페이지가 아니라 카드 모달로 열린다. 왼쪽이 발행된 카드 그림, 오른쪽이 값과 정보다.",
+        "en": "A tokenised item opens as a card modal instead of a page - the minted artwork left, price and info right."
+      }
+    },
+    "01-market/012-datails_account_verified_sticky": {
+      "title": { "ko": "상세를 내렸을 때", "en": "Detail, scrolled" },
+      "desc": {
+        "ko": "내려도 카드 그림은 왼쪽에 붙어 있고 오른쪽만 흐른다. 스탯·장비·블록체인 정보가 차례로 나온다.",
+        "en": "Scrolling moves only the right column; the artwork stays pinned. Stat, equipment, then the blockchain block."
+      }
+    },
+    "01-market/013-datails_account_verified_description": {
+      "title": { "ko": "설명 탭", "en": "Description tab" },
+      "desc": {
+        "ko": "파는 사람이 쓴 글이 그대로 선다. 게임 안 인벤토리 캡처를 붙이는 것을 전제로 자리를 넓게 뒀다.",
+        "en": "The seller's own text, with room left wide for the in-game inventory screenshot they tend to paste in."
+      }
+    },
+    "01-market/014-datails_account_verified_reviews": {
+      "title": { "ko": "후기 탭", "en": "Reviews tab" },
+      "desc": {
+        "ko": "평균과 별점 분포를 먼저 세우고 후기를 잇는다.",
+        "en": "The average and the star distribution first, then the reviews."
+      }
+    },
+    "01-market/015-dialog1": {
+      "title": { "ko": "값 빠르게 고치기", "en": "Quick edit" },
+      "desc": {
+        "ko": "상점 카드에서 바로 여는 창. 파는 중인지 아닌지와 값, 둘만 고친다.",
+        "en": "Opened straight from a shop card. Two things only: whether it's listed, and the price."
+      }
+    },
+    "01-market/016-game_maplestory": {
+      "title": { "ko": "게임 페이지, 거르개를 편 채", "en": "Game page, filters open" },
+      "desc": {
+        "ko": "게임 안에서 서버·직업으로 좁히고 계정 유형·레벨·값 범위까지 편다. 위에 Best Offer 넉 장을 따로 세운다.",
+        "en": "Narrow by server and class inside a game, then account type, level, and price range. Four Best Offers stand apart on top."
+      }
+    },
+    "01-market/017-game_maplestory": {
+      "title": { "ko": "게임 페이지, 거르개를 접은 채", "en": "Game page, filters closed" },
+      "desc": {
+        "ko": "검색 줄을 접으면 게임 배너가 드러난다. 접고 펴는 것으로 목록에 주는 자리가 달라진다.",
+        "en": "Collapsing the search row lets the game banner show. Open or closed is how much room the list gets."
+      }
+    },
+    "01-market/018-card_account_gamelist": {
+      "title": { "ko": "상품 카드 규격, 게임 목록", "en": "Card spec, game list" },
+      "desc": {
+        "ko": "같은 카드를 게임 목록에서 쓸 때의 표. 상점 것과 달리 파는 사람 이름과 별점이 카드 아래에 붙는다.",
+        "en": "The same card as used in a game list. Unlike the shop version, the seller and rating sit under the card."
+      }
+    },
+    "01-market/019-dialog_equipment": {
+      "title": { "ko": "장비 풍선, A안 - 무기", "en": "Item tooltip, A - weapon" },
+      "desc": {
+        "ko": "게임 안 툴팁을 그대로 옮긴 안이다. 모서리를 접고 점선으로 칸을 가른다. 별 등급과 스탯 증감을 색으로 읽힌다.",
+        "en": "The in-game tooltip carried over as-is - notched corner, dashed rules, stat gains coloured by source."
+      }
+    },
+    "01-market/020-dialog_equipment": {
+      "title": { "ko": "장비 풍선, A안 - 체스피스", "en": "Item tooltip, A - chess piece" },
+      "desc": {
+        "ko": "같은 안으로 잠재옵션이 여러 겹 붙는 아이템을 그렸다. 옵션마다 등급 뱃지를 앞에 둔다.",
+        "en": "The same treatment for an item with stacked potentials, each block led by its grade badge."
+      }
+    },
+    "01-market/021-dialog_equipment2": {
+      "title": { "ko": "장비 풍선, B안 - 무기", "en": "Item tooltip, B - weapon" },
+      "desc": {
+        "ko": "접힌 모서리를 없애고 실선으로 바꾼 안. 게임 툴팁을 얼마나 흉내 낼지가 두 안의 차이다.",
+        "en": "The notch dropped and the rules made solid. How far to imitate the game tooltip is what separates A and B."
+      }
+    },
+    "01-market/022-dialog_equipment3": {
+      "title": { "ko": "장비 풍선, B안 - 체스피스", "en": "Item tooltip, B - chess piece" },
+      "desc": {
+        "ko": "B안으로 옵션이 긴 아이템까지 세워 본 것.",
+        "en": "B carried through to the long-options item."
+      }
+    },
+    "01-market/023-nft_instructions": {
+      "title": { "ko": "설명 칸에 들어온 게임 캡처", "en": "A game screenshot in the description" },
+      "desc": {
+        "ko": "파는 사람이 쓰는 글은 대개 인벤토리 캡처를 붙인 것이다. 그림이 이렇게 들어온다는 전제로 칸을 잡았다.",
+        "en": "Sellers' descriptions are mostly a pasted inventory screenshot. The block was sized on that assumption."
+      }
+    },
+    "01-market/024-datails_account_verified": {
+      "title": { "ko": "상세 한 장 전체", "en": "The whole detail page" },
+      "desc": {
+        "ko": "값·상품 정보·스탯·장비·블록체인까지 한 장에 이어 붙인 것. 폭별로 어떻게 접히는지는 「반응형」 탭에 있다.",
+        "en": "Price, product info, stat, equipment, and blockchain in one frame. How it folds by width is in the Breakpoints tab."
+      }
+    },
+    "01-market/037-datails_account_verified_description": {
+      "title": { "ko": "설명 탭, 1920", "en": "Description tab, 1920" },
+      "desc": {
+        "ko": "가장 넓은 폭의 설명 탭. 나머지 폭은 「반응형」 탭에 있다.",
+        "en": "The description tab at the widest breakpoint. The rest are in the Breakpoints tab."
+      }
+    },
+    "01-market/043-datails_account_verified_reviews": {
+      "title": { "ko": "후기 탭, 1920", "en": "Reviews tab, 1920" },
+      "desc": {
+        "ko": "가장 넓은 폭의 후기 탭. 나머지 폭은 「반응형」 탭에 있다.",
+        "en": "The reviews tab at the widest breakpoint. The rest are in the Breakpoints tab."
+      }
+    },
+    "01-market/049-listing_account": {
+      "title": { "ko": "등록 1단계, 고르기 전", "en": "Step 1, nothing chosen" },
+      "desc": {
+        "ko": "직업 갈래만 서 있고 세부 직업은 아직 없다. 위를 고르기 전에는 아래가 안 생긴다는 규칙이 여기서 보인다.",
+        "en": "Only the top-level classes stand; the sub-classes aren't there yet. The rule is visible here: nothing below appears until the row above is answered."
+      }
+    },
+    "01-market/050-listing_account": {
+      "title": { "ko": "등록 2단계, 연동 전", "en": "Step 2, before linking" },
+      "desc": {
+        "ko": "손으로 적는 칸 아래에 게임 연동 상자가 따로 선다. 아직 넥슨 ID 로그인 단추뿐이다.",
+        "en": "A separate Link game block sits under the hand-typed fields, holding just the Nexon sign-in button."
+      }
+    },
+    "01-market/051-listing_account": {
+      "title": { "ko": "등록 2단계, 연동 뒤", "en": "Step 2, after linking" },
+      "desc": {
+        "ko": "연동이 끝나면 내 아이디와 로그아웃이 서고 캐릭터가 카드로 딸려 온다. 쓸지 말지는 토글로 남긴다.",
+        "en": "Linking brings the account and a sign-out, and the characters arrive as cards. A toggle keeps the choice of using them."
+      }
+    },
+    "01-market/052-nexon-open-id": {
+      "title": { "ko": "게임사 동의 화면", "en": "Game-side consent" },
+      "desc": {
+        "ko": "게임사가 우리에게 무엇을 넘기는지 게임별로 표에 적어 보여 준다. 우리 화면이 아니라 넥슨 것이다.",
+        "en": "Nexon's own screen, not ours, listing per game exactly what data is handed over."
+      }
+    },
+    "01-market/053-nexon-open-id": {
+      "title": { "ko": "게임사 로그인", "en": "Game-side sign-in" },
+      "desc": {
+        "ko": "소유를 우리가 묻지 않고 게임사에 맡긴다. 계정을 파는 곳에서 이게 유일하게 믿을 수 있는 증거다.",
+        "en": "Ownership isn't asked by us - it's proven at the game. On a marketplace for accounts that is the only credible evidence."
+      }
+    },
+    "01-market/054-listing_account": {
+      "title": { "ko": "등록 3단계, 옛 판", "en": "Step 3, earlier version" },
+      "desc": {
+        "ko": "제목·본문·스크린샷·언어까지만 있고 Verification 칸이 없다. 인증이 붙기 전의 등록 화면이다.",
+        "en": "Title, body, screenshots, and language - no Verification block. This is listing before verification existed."
+      }
+    },
+
+    "02-pages/01-market": {
+      "title": { "ko": "상점, 옛 소개", "en": "Shop, earlier draft" },
+      "desc": {
+        "ko": "포트폴리오에 먼저 실렸던 장. 지금 화면과 같은 자리를 쓴다.",
+        "en": "The frame that went into the portfolio first. It sits where the current screen sits."
+      }
+    },
+    "02-pages/02-nft": {
+      "title": { "ko": "발행되는 카드", "en": "The minted card" },
+      "desc": {
+        "ko": "계정이 증표가 되면 이 카드가 나온다. 캐릭터 그림·이름·길드·레벨·직업이 한 장에 박힌다.",
+        "en": "What an account becomes once tokenised - the sprite, name, guild, level, and class fixed onto one card."
+      }
+    },
+
+    "03-responsive/025-datails_account_verified": {
+      "title": { "ko": "상세 1440, 전체", "en": "Detail 1440, full" },
+      "desc": {
+        "ko": "두 칸은 그대로 두고 오른쪽 칸만 좁힌다.",
+        "en": "Two columns held; only the right one narrows."
+      }
+    },
+    "03-responsive/026-datails_account_verified": {
+      "title": { "ko": "상세 1920, 첫 화면", "en": "Detail 1920, first view" },
+      "desc": {
+        "ko": "가장 넓은 폭에서 처음 보이는 만큼만 자른 것.",
+        "en": "The widest breakpoint, cropped to what lands above the fold."
+      }
+    },
+    "03-responsive/027-datails_account_verified": {
+      "title": { "ko": "상세 1440, 첫 화면", "en": "Detail 1440, first view" },
+      "desc": {
+        "ko": "값과 상품 정보까지는 여기서도 접히지 않고 들어온다.",
+        "en": "Price and product info still fit above the fold here."
+      }
+    },
+    "03-responsive/028-datails_account_verified": {
+      "title": { "ko": "상세 1280, 첫 화면", "en": "Detail 1280, first view" },
+      "desc": {
+        "ko": "카드 그림이 줄고 오른쪽 칸이 먼저 자리를 가져간다.",
+        "en": "The artwork gives up width first; the right column keeps its own."
+      }
+    },
+    "03-responsive/029-datails_account_verified": {
+      "title": { "ko": "상세 1280, 전체", "en": "Detail 1280, full" },
+      "desc": {
+        "ko": "장비 격자가 세 칸을 지키는 마지막 폭이다.",
+        "en": "The last width at which the equipment grid keeps three columns."
+      }
+    },
+    "03-responsive/030-datails_account_verified": {
+      "title": { "ko": "상세 1024, 첫 화면", "en": "Detail 1024, first view" },
+      "desc": {
+        "ko": "두 칸이 무너지고 카드 그림이 위로 올라간다.",
+        "en": "The two columns give out and the artwork moves on top."
+      }
+    },
+    "03-responsive/031-datails_account_verified": {
+      "title": { "ko": "상세 1024, 전체", "en": "Detail 1024, full" },
+      "desc": {
+        "ko": "한 칸으로 접힌 뒤의 세로 순서를 확인하는 장.",
+        "en": "Where the stacked reading order gets checked."
+      }
+    },
+    "03-responsive/032-datails_account_verified": {
+      "title": { "ko": "상세 1536, 전체", "en": "Detail 1536, full" },
+      "desc": {
+        "ko": "태블릿 가로. 한 칸이지만 아직 값과 단추가 크게 선다.",
+        "en": "Tablet landscape - one column, but the price and buttons still run large."
+      }
+    },
+    "03-responsive/033-datails_account_verified": {
+      "title": { "ko": "상세 1125, 첫 화면", "en": "Detail 1125, first view" },
+      "desc": {
+        "ko": "모바일에서는 사는 단추가 화면 아래에 붙어 따라다닌다.",
+        "en": "On mobile the buy button detaches and rides the bottom of the screen."
+      }
+    },
+    "03-responsive/034-datails_account_verified": {
+      "title": { "ko": "상세 1125, 스탯 접힘", "en": "Detail 1125, stat collapsed" },
+      "desc": {
+        "ko": "모바일 전체 스크롤. 스탯이 접혀 있고 Show More 로 더 본다.",
+        "en": "The full mobile scroll with Stat collapsed behind Show More."
+      }
+    },
+    "03-responsive/035-datails_account_verified": {
+      "title": { "ko": "상세 1125, 스탯 펼침", "en": "Detail 1125, stat expanded" },
+      "desc": {
+        "ko": "같은 장을 펼친 것. AP 배분까지 나오면서 한 화면이 두 배 넘게 길어진다.",
+        "en": "The same page opened out. With the AP breakdown showing, the page more than doubles."
+      }
+    },
+    "03-responsive/036-datails_account_verified": {
+      "title": { "ko": "상세 1536, 스탯 펼침", "en": "Detail 1536, stat expanded" },
+      "desc": {
+        "ko": "태블릿에서 같은 것을 펼친 장.",
+        "en": "The same expansion at tablet width."
+      }
+    },
+    "03-responsive/038-datails_account_verified_description": {
+      "title": { "ko": "설명 1440", "en": "Description 1440" },
+      "desc": {
+        "ko": "설명 글은 폭을 따라 늘어나되 읽는 폭 이상으로는 안 넓힌다.",
+        "en": "The text grows with the frame but never past a readable measure."
+      }
+    },
+    "03-responsive/039-datails_account_verified_description": {
+      "title": { "ko": "설명 1280", "en": "Description 1280" },
+      "desc": {
+        "ko": "붙인 캡처가 칸을 넘지 않게 줄어든다.",
+        "en": "The pasted screenshot shrinks to stay inside its block."
+      }
+    },
+    "03-responsive/040-datails_account_verified_description": {
+      "title": { "ko": "설명 1024", "en": "Description 1024" },
+      "desc": {
+        "ko": "한 칸으로 접힌 설명 탭.",
+        "en": "The description tab once it stacks."
+      }
+    },
+    "03-responsive/041-datails_account_verified_description": {
+      "title": { "ko": "설명 1536, 전체", "en": "Description 1536, full" },
+      "desc": {
+        "ko": "태블릿에서 설명이 어디까지 흐르는지 통째로 본 장.",
+        "en": "The whole run of the description at tablet width."
+      }
+    },
+    "03-responsive/042-datails_account_verified_description": {
+      "title": { "ko": "설명 1125, 전체", "en": "Description 1125, full" },
+      "desc": {
+        "ko": "모바일. 붙인 캡처가 가장 아쉬워지는 폭이다.",
+        "en": "Mobile - the width where a pasted screenshot suffers most."
+      }
+    },
+    "03-responsive/044-datails_account_verified_reviews": {
+      "title": { "ko": "후기 1440", "en": "Reviews 1440" },
+      "desc": {
+        "ko": "평균과 분포 막대가 나란히 남는다.",
+        "en": "The average and the distribution bars stay side by side."
+      }
+    },
+    "03-responsive/045-datails_account_verified_reviews": {
+      "title": { "ko": "후기 1280", "en": "Reviews 1280" },
+      "desc": {
+        "ko": "막대가 짧아질 뿐 자리는 지킨다.",
+        "en": "The bars shorten but hold their place."
+      }
+    },
+    "03-responsive/046-datails_account_verified_reviews": {
+      "title": { "ko": "후기 1024", "en": "Reviews 1024" },
+      "desc": {
+        "ko": "분포가 평균 아래로 내려간다.",
+        "en": "The distribution drops below the average."
+      }
+    },
+    "03-responsive/047-datails_account_verified_reviews": {
+      "title": { "ko": "후기 1536, 전체", "en": "Reviews 1536, full" },
+      "desc": {
+        "ko": "태블릿에서 후기가 이어지는 모습을 통째로 본 장.",
+        "en": "The whole run of reviews at tablet width."
+      }
+    },
+    "03-responsive/048-datails_account_verified_reviews": {
+      "title": { "ko": "후기 1125, 전체", "en": "Reviews 1125, full" },
+      "desc": {
+        "ko": "모바일. 후기 한 건이 차지하는 높이가 커져 목록이 길어진다.",
+        "en": "Mobile - each review takes more height, so the list runs long."
+      }
+    }
+  }
+}

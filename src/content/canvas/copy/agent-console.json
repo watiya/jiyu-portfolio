@@ -1,0 +1,168 @@
+{
+  "pages": {
+    "01-console": { "ko": "콘솔 화면", "en": "Console screens" },
+    "02-agent-flow": { "ko": "에이전트가 끄는 마법사", "en": "The agent-driven wizard" }
+  },
+  "flow": [
+    ["01-console/001-home", "01-console/002-board-revenue"],
+    ["01-console/002-board-revenue", "01-console/003-board-market"],
+    ["01-console/003-board-market", "01-console/004-board-dashboard"],
+    ["01-console/005-start", "01-console/006-agents"],
+    ["01-console/012-business", "01-console/013-business-edit"],
+    ["01-console/014-launchpad", "01-console/015-listing"],
+    ["01-console/015-listing", "01-console/016-listed-celebrate"],
+    ["02-agent-flow/001-valuation", "02-agent-flow/002-token"],
+    ["02-agent-flow/002-token", "02-agent-flow/003-launchpad"],
+    ["02-agent-flow/003-launchpad", "02-agent-flow/004-deploy"],
+    ["02-agent-flow/004-deploy", "02-agent-flow/005-done"]
+  ],
+  "frames": {
+    "01-console/001-home": {
+      "title": { "ko": "홈 - 대시보드 대신 입력칸", "en": "Home - a prompt, not a dashboard" },
+      "desc": {
+        "ko": "콘솔을 열면 지표가 아니라 「오늘은 무엇을 도와드릴까요?」가 선다. 추천 질문 셋과 최근에 본 보드가 아래 붙어, 물을 말이 없어도 누를 데가 있다. 오른쪽 위에서 AI 와 클래식을 오간다 - 옛 콘솔을 없애는 대신 병행한다.",
+        "en": "The console opens on a question rather than a metric. Three suggested prompts and the boards you looked at recently sit below, so there is something to press even with nothing to ask. The toggle top right swaps AI for classic - the old console is kept alongside, not replaced."
+      }
+    },
+    "01-console/002-board-revenue": {
+      "title": { "ko": "생성 보드 - 매출·정산", "en": "Generated board - revenue" },
+      "desc": {
+        "ko": "「이번 달 매출·정산 어때?」가 만든 보드. 머리에 「질문으로 생성됨」과 물었던 문장을 그대로 달아 두어 이 화면이 어디서 왔는지 화면 스스로 말한다. 홈에 고정하거나 공유할 수 있다.",
+        "en": "The board that the question \"how is revenue this month?\" produced. It carries a Generated-from-a-question tag and the original sentence in its header, so the screen says where it came from. It can be pinned home or shared."
+      }
+    },
+    "01-console/003-board-market": {
+      "title": { "ko": "생성 보드 - 토큰 시장", "en": "Generated board - token market" },
+      "desc": {
+        "ko": "상장까지 간 판. 시세·거래량·체결·시가총액 위에 호가창 스냅샷과 페어·컨트랙트를 붙였다. 위 단계 칩(토큰 미발행·런치패드·상장 완료)으로 생애주기를 바꿔 같은 화면의 다른 시점을 본다.",
+        "en": "The listed state. Price, volume, fills and market cap sit above an order-book snapshot and the pair and contract. The stage chips along the top switch the lifecycle, so one screen shows several points in time."
+      }
+    },
+    "01-console/004-board-dashboard": {
+      "title": { "ko": "생성 보드 - 매장 대시보드", "en": "Generated board - store dashboard" },
+      "desc": {
+        "ko": "매장 하나를 토큰 가격·거래량·누적 정산·홀더로 요약한다. 오른쪽 어시스턴트가 「매장이 건강해요」로 읽어 주고 다음에 볼 곳을 권한다 - 값을 읽는 일과 무엇을 할지 정하는 일이 한 화면에 있다.",
+        "en": "One store summarised as token price, volume, settled total and holders. The assistant on the right reads it back - the store is healthy - and proposes where to look next, so reading the numbers and deciding what to do sit on one screen."
+      }
+    },
+    "01-console/005-start": {
+      "title": { "ko": "빠른 시작 - 네 단계", "en": "Quick start - four steps" },
+      "desc": {
+        "ko": "사업자 인증·매장 설정·토큰 발행·런치패드 판매를 2/4 진행률과 함께 세운다. 진행 중인 「토큰 발행」에만 「열기」가 짙게 서고, 그 설명이 「에이전트가 단계별로 준비하고, 승인만 하면 됩니다」다 - 마법사로 들어가는 문이 여기다.",
+        "en": "Verification, store setup, token issuance and launchpad sale against a 2-of-4 bar. Only the step in progress carries a filled Open button, and its line - the agent prepares each step, you only approve - is the door into the wizard."
+      }
+    },
+    "01-console/006-agents": {
+      "title": { "ko": "에이전트 - 반복 업무를 넘긴다", "en": "Agents - handing over the repeat work" },
+      "desc": {
+        "ko": "정산서 자동 작성과 주간 매출 리포트는 이미 활성이고, 공시 초안과 이벤트 추천은 「템플릿으로 시작」 상태로 남겨 뒀다. 켜진 것과 안 켠 것을 같은 격자에 두어 무엇을 더 넘길 수 있는지가 목록으로 읽힌다.",
+        "en": "Settlement drafts and the weekly revenue report are already live; disclosure drafts and event proposals sit as start-from-template. Running and not-yet-running share one grid, so what else could be handed over reads as a list."
+      }
+    },
+    "01-console/007-settings": {
+      "title": { "ko": "설정 - 알림과 보안", "en": "Settings - notifications and security" },
+      "desc": {
+        "ko": "프로필·환경설정·알림·보안·위험 구역 순으로 내려간다. 알림은 켬/끔이 아니라 언제 보내는지까지 적었고(공시 마감 D-14·D-7·D-3·D-1), SMS 는 비용이 든다고 밝힌 뒤 기본을 꺼 뒀다.",
+        "en": "Profile, preferences, notifications, security, danger zone. Each notification states when it fires rather than just on or off - disclosure deadlines at D-14, D-7, D-3, D-1 - and SMS is defaulted off after saying it costs money per message."
+      }
+    },
+    "01-console/008-wallet": {
+      "title": { "ko": "스마트 월렛 - 가스비가 0인 이유", "en": "Smart wallet - why gas is zero" },
+      "desc": {
+        "ko": "ERC-4337 계정에 Passkey 기기 목록과 온체인 활동을 붙였다. BNB 잔액이 0.00 인데 화면 아래가 그 이유를 먼저 말한다 - Paymaster 가 가스를 선납하므로 네이티브 토큰을 들 필요가 없고, 그래서 USDT 만 보인다.",
+        "en": "An ERC-4337 account with its passkey devices and on-chain activity. The BNB balance reads 0.00 and the foot of the screen explains that before you can ask: a paymaster fronts the gas, so no native token is needed and only USDT is listed."
+      }
+    },
+    "01-console/009-settlement": {
+      "title": { "ko": "정산 - 보드가 감싸는 원본 화면", "en": "Settlement - the screen the board wraps" },
+      "desc": {
+        "ko": "출금 가능 잔액과 베스팅 해제 일정, 정산 수입 곡선. 매출·정산 보드가 AI 판 안에 끌어다 쓰는 것이 바로 이 화면이라, 둘을 나란히 놓으면 「AI 보드는 새 화면이 아니라 기존 화면을 감싼 것」이 보인다.",
+        "en": "Withdrawable balance, the vesting schedule and the settlement curve. This is the surface the revenue board pulls into its AI panel, so seeing the two together shows that a generated board wraps an existing screen rather than replacing it."
+      }
+    },
+    "01-console/010-disclosure": {
+      "title": { "ko": "공시 - 베스팅이 걸려 있다", "en": "Disclosure - vesting depends on it" },
+      "desc": {
+        "ko": "다음 제출까지 D-46 을 크게 세우고 3단계(매출 구간·상점 사진·운영 메모)로 줄여 「약 5분」이라 적었다. 옆에는 한 번 누락하면 이후 제출로 보완할 때까지 베스팅이 멈춘다는 결과를 붙였다 - 마감을 지키라고 재촉하는 대신 무엇이 걸려 있는지를 말한다.",
+        "en": "D-46 to the next filing, reduced to three steps and labelled about five minutes. Beside it sits the consequence: miss one and vesting pauses until a later filing makes it good. Rather than nagging about a deadline it names what is riding on it."
+      }
+    },
+    "01-console/011-token": {
+      "title": { "ko": "토큰 & 홀더 - 발행 전 잠긴 판", "en": "Token and holders - locked before issuance" },
+      "desc": {
+        "ko": "아직 발행 전이라 FDV 자리가 흐리게 잠겨 있고 「평가 완료 시 잠금 해제」라고 적혀 있다. 빈 화면을 두는 대신 무엇을 하면 열리는지를 그 자리에 둔 판이다.",
+        "en": "Nothing is issued yet, so the FDV figure sits blurred behind a lock that reads unlocks once the valuation is done. Instead of an empty screen, the thing that would fill it is put in its place."
+      }
+    },
+    "01-console/012-business": {
+      "title": { "ko": "사업장 - 공개 페이지 미리보기까지", "en": "Business - with the public page beside it" },
+      "desc": {
+        "ko": "대표자·등록번호·영업시간·제출 서류를 왼쪽에 세우고 오른쪽에 실제 공개 페이지를 브라우저 창째 미리 보인다. 「심사 중」 배지가 제목 옆에 붙고, 아래 타임라인이 합류부터 런치패드 완료까지를 날짜로 잇는다.",
+        "en": "Representative, registration number, opening hours and filed documents on the left, with the live public page previewed in a browser chrome on the right. An Under review badge sits by the name, and a timeline below runs from joining to launchpad completion."
+      }
+    },
+    "01-console/013-business-edit": {
+      "title": { "ko": "매장 편집 - 고치는 대로 보인다", "en": "Store editor - edit beside the result" },
+      "desc": {
+        "ko": "왼쪽 항목을 고치면 오른쪽 공개 페이지가 그대로 바뀐다. 아래에 「변경 사항은 저장 시 공개 페이지에 반영됩니다」를 적어 미리보기와 실제를 가른다. 3단이 넓어 1680 으로 찍었는데도 오른쪽 어시스턴트가 잘리고 배너 제목이 겹쳐 나온다 - 원본이 좁은 폭을 못 견딘다.",
+        "en": "Editing a field on the left redraws the public page on the right, with a line at the foot separating preview from live. The three columns are wide enough that even at 1680 the assistant is cut off and the banner title overlaps itself - the original does not survive a narrow viewport."
+      }
+    },
+    "01-console/014-launchpad": {
+      "title": { "ko": "런치패드 - 고정 규칙을 먼저 보인다", "en": "Launchpad - the fixed rules come first" },
+      "desc": {
+        "ko": "기간·사전 등록·결제 수단을 왼쪽에서 정하면 오른쪽 요약이 목표·소프트캡·수수료로 접힌다. 소프트캡 30% 미달 시 전액 환불, D-3 시점 15% 미만이면 자동 취소를 「고정 규칙」으로 못 박아, 파는 사람이 못 바꾸는 조건을 설정 화면 안에서 보게 했다.",
+        "en": "Set the window, pre-registration and payment on the left and the summary folds into target, soft cap and fee on the right. Full refund below a 30 per cent soft cap and auto-cancel under 15 per cent at D-3 are pinned as fixed rules, so the terms the seller cannot change are visible inside the settings screen."
+      }
+    },
+    "01-console/015-listing": {
+      "title": { "ko": "상장 - 아직 시장이 없는 판", "en": "Listing - before there is a market" },
+      "desc": {
+        "ko": "발행 전이라 「아직 시장이 없어요」와 「토큰 발행하기」만 서 있다. 같은 화면의 상장 완료 판이 앞의 토큰 시장 보드다 - 빈 판과 찬 판을 같이 두면 단계 칩이 무엇을 바꾸는지가 드러난다.",
+        "en": "Nothing is issued, so the screen holds only \"no market yet\" and a button to issue the token. The filled version of this same screen is the token market board earlier - empty and full together show what the stage chips actually change."
+      }
+    },
+    "01-console/016-listed-celebrate": {
+      "title": { "ko": "상장 완료 - 무엇이 같이 일어났는지", "en": "Listed - and what happened with it" },
+      "desc": {
+        "ko": "축하로 끝내지 않고 상장과 함께 진행된 넷(즉시 지급·초기 유동성·베스팅·실시간 거래)을 상태 배지와 함께 세운다. 베스팅만 「예약」으로 남아, 끝난 것과 앞으로 올 것이 한자리에서 갈린다.",
+        "en": "It does not stop at congratulations: the four things that happened alongside the listing - instant payout, initial liquidity, vesting, live trading - each carry a status. Only vesting reads scheduled, separating what is finished from what is still coming."
+      }
+    },
+    "02-agent-flow/001-valuation": {
+      "title": { "ko": "1단계 - 사업 가치평가", "en": "Step 1 - business valuation" },
+      "desc": {
+        "ko": "에이전트가 계획 넷을 먼저 펴 보이고 1단계를 돌린다. FDV 480-620M USDT 를 신뢰 구간과 함께 내놓고 DCF·Comparable·Scorecard 세 방식으로 교차 검증했다고 밝힌 뒤, 무슨 데이터를 썼는지(최근 14일 매출·정산 내역·구글 평점·상권) 카드로 편다. 사람이 하는 일은 「조정하기」와 「이 평가로 진행」 둘이다.",
+        "en": "The agent lays out all four steps, then runs the first. It returns an FDV of 480-620M USDT with a confidence band, says it cross-checked three ways - DCF, comparable, scorecard - and shows which data it used. The person has exactly two moves: adjust, or proceed with this valuation."
+      }
+    },
+    "02-agent-flow/002-token": {
+      "title": { "ko": "2단계 - 토큰 초안", "en": "Step 2 - token draft" },
+      "desc": {
+        "ko": "매장 프로필에서 이름·심볼·발행량을 초안으로 채워 준다. 앞 단계는 「가치평가 · FDV 480-620M USDT」 한 줄로 접히는데, 이 요약이 고정 문구가 아니라 방금 승인한 값에서 나온다. 심볼은 「대문자 3-5자 · 변경 불가」를 입력칸 밑에 미리 못 박는다.",
+        "en": "Name, symbol and supply arrive pre-drafted from the store profile. The finished step collapses to a single line - valuation, FDV 480-620M USDT - and that summary is derived from the value just approved rather than written in advance. The symbol field states 3-5 uppercase, never changeable, before you type."
+      }
+    },
+    "02-agent-flow/003-launchpad": {
+      "title": { "ko": "3단계 - 런치패드 설정", "en": "Step 3 - launchpad terms" },
+      "desc": {
+        "ko": "가치평가에 맞춰 기간·목표·소프트캡·수수료를 제안한다. 승인된 두 줄이 위에 쌓여 지나온 결정이 계속 보이고, 공정 발행 규칙(7일 사전 등록, D-3 에 소프트캡 절반 미만이면 자동 취소·전액 환불)을 조건표 바로 밑에 붙였다.",
+        "en": "Window, target, soft cap and fee proposed against the valuation. The two approved lines stack above so the decisions already made stay in view, and the fair-issuance rule - seven days of pre-registration, auto-cancel and full refund under half the soft cap at D-3 - sits directly under the terms."
+      }
+    },
+    "02-agent-flow/004-deploy": {
+      "title": { "ko": "4단계 - 발행 & 판매 시작", "en": "Step 4 - issue and open" },
+      "desc": {
+        "ko": "마지막 단계는 새 값을 묻지 않고 앞의 셋을 한 표로 다시 보여 준다. 「발행하면 컨트랙트가 온체인에 배포되며, 심볼과 컨트랙트 주소는 영구 고정됩니다」를 버튼 위에 두어, 되돌릴 수 없는 자리에서 되돌릴 수 없다고 말한다.",
+        "en": "The last step asks for nothing new and restates the previous three as one table. The line above the button - issuing deploys the contract on chain, and the symbol and address are permanent - puts the warning where the irreversible action is."
+      }
+    },
+    "02-agent-flow/005-done": {
+      "title": { "ko": "완료 - 승인 넷이 남는다", "en": "Done - four approvals remain" },
+      "desc": {
+        "ko": "네 단계가 모두 접혀 승인 내역으로 남는다. 가치평가·토큰·런치패드·발행 완료가 각각 실제 값을 달고 서 있어, 무엇을 승인해서 여기까지 왔는지가 결과 화면에 그대로 남는다. 다음은 대시보드나 토큰 시장으로 보낸다.",
+        "en": "All four steps collapse into a record of approvals, each carrying the real value it was approved with, so what was agreed to get here stays on the result screen. From here it hands off to the dashboard or the token market."
+      }
+    }
+  }
+}

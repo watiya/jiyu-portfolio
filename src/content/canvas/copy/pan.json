@@ -1,0 +1,360 @@
+{
+  "pages": {
+    "01-pan": {
+      "ko": "판 - 확정본",
+      "en": "Pan - confirmed"
+    },
+    "02-dark": {
+      "ko": "탐색 과정 - 다크",
+      "en": "Exploration - dark"
+    },
+    "03-ink": {
+      "ko": "탐색 과정 - 수묵",
+      "en": "Exploration - ink wash"
+    },
+    "04-design": {
+      "ko": "탐색 과정 - 디자인 보드",
+      "en": "Exploration - design board"
+    },
+    "05-before": {
+      "ko": "탐색 과정 - 회의 전 판",
+      "en": "Exploration - before the review"
+    }
+  },
+  "flow": [
+    [
+      "01-pan/001-splash",
+      "01-pan/002-home"
+    ],
+    [
+      "01-pan/002-home",
+      "01-pan/003-board-5"
+    ],
+    [
+      "01-pan/003-board-5",
+      "01-pan/004-board-2"
+    ],
+    [
+      "01-pan/004-board-2",
+      "01-pan/006-settle"
+    ],
+    [
+      "01-pan/006-settle",
+      "01-pan/005-standings"
+    ],
+    [
+      "01-pan/008-storehouse",
+      "01-pan/009-prizes"
+    ],
+    [
+      "01-pan/009-prizes",
+      "01-pan/010-prize-one"
+    ],
+    [
+      "01-pan/008-storehouse",
+      "01-pan/011-invite"
+    ],
+    [
+      "01-pan/008-storehouse",
+      "01-pan/012-attendance"
+    ],
+    [
+      "02-dark/001-splash",
+      "02-dark/002-home"
+    ],
+    [
+      "02-dark/002-home",
+      "02-dark/003-board"
+    ],
+    [
+      "03-ink/001-home",
+      "03-ink/002-board"
+    ],
+    [
+      "04-design/001-home",
+      "04-design/002-board"
+    ]
+  ],
+  "frames": {
+    "01-pan/001-splash": {
+      "title": {
+        "ko": "스플래시 - 2판4판",
+        "en": "Splash - 2pan 4pan"
+      },
+      "desc": {
+        "ko": "붓글씨 로고 한 줄과 「판을 깐다」로 시작한다. 조선 장터 말투를 쓰는 동네 맞히기 게임의 첫 화면이다.",
+        "en": "It opens with one line of brush lettering and the words lay out the round. The first screen of a neighbourhood guessing game spoken in the voice of a Joseon market."
+      }
+    },
+    "01-pan/002-home": {
+      "title": {
+        "ko": "오늘의 판 - 족자 한 폭",
+        "en": "Today's round - a hanging scroll"
+      },
+      "desc": {
+        "ko": "족자 모양 카드에 오늘의 판을 걸고, 내 곳간 잔액과 오늘 벌어진 문제 다섯을 아래에 둔다. 저잣거리 결제 데이터로 어제 동네에서 벌어진 일을 맞히는 판이다.",
+        "en": "Today's round hangs on a scroll-shaped card, with my storehouse balance and the day's five questions below. Each question asks what happened in the neighbourhood yesterday, read from local spending data."
+      }
+    },
+    "01-pan/003-board-5": {
+      "title": {
+        "ko": "판 - 네 칸 중 하나",
+        "en": "Round - one of four"
+      },
+      "desc": {
+        "ko": "갑 · 을 · 병 · 정 네 칸 중 하나를 고르고 걸 냥을 정한다. 고르기 전에는 판에 거는 버튼이 잠긴다.",
+        "en": "Pick one of four cells, gap, eul, byeong or jeong, and set how much coin to stake. The stake button stays locked until a cell is picked."
+      }
+    },
+    "01-pan/004-board-2": {
+      "title": {
+        "ko": "판 - 다음 문제",
+        "en": "Round - the next question"
+      },
+      "desc": {
+        "ko": "다섯 판을 차례로 넘기며 답한다. 머리 칸에 몇 번째 판인지와 방에 오르기까지 남은 거리를 적었다.",
+        "en": "The five questions are answered one after another. The header shows which question this is and how far it is to the top board."
+      }
+    },
+    "01-pan/005-standings": {
+      "title": {
+        "ko": "판세 - 시즌 순위",
+        "en": "Standings - season ranking"
+      },
+      "desc": {
+        "ko": "온 동네 순위와 친구 순위를 탭으로 나누고, 10위까지를 방에 오르는 선으로 표시했다. 아래에 방에 들면 받는 상을 적었다.",
+        "en": "The whole-town ranking and the friends ranking sit in tabs, with the top ten marked by a line onto the board. The prizes for making the board are listed below."
+      }
+    },
+    "01-pan/006-settle": {
+      "title": {
+        "ko": "셈 - 맞힌 날",
+        "en": "Settlement - a good day"
+      },
+      "desc": {
+        "ko": "하루 판의 손익과 순위 변동을 머리에 크게 두고, 판마다 내 답과 결과를 도장으로 찍었다.",
+        "en": "The day's gain and rank change lead in large type, and each question gets a stamp for my answer and the result."
+      }
+    },
+    "01-pan/007-settle-lost": {
+      "title": {
+        "ko": "셈 - 잃은 날",
+        "en": "Settlement - a losing day"
+      },
+      "desc": {
+        "ko": "같은 셈 화면의 손실 쪽이다. 잃은 날에도 순위 변동과 다음 판으로 가는 버튼을 같은 자리에 둔다.",
+        "en": "The losing side of the same settlement screen. Even on a bad day the rank change and the button to the next round stay in the same place."
+      }
+    },
+    "01-pan/008-storehouse": {
+      "title": {
+        "ko": "내 곳간 - 할 일과 내역",
+        "en": "My storehouse - quests and history"
+      },
+      "desc": {
+        "ko": "곳간 잔액과 첫 진입 · 가입 · 출석 · 친구 초대 같은 할 일, 이번 판 상, 지난 판 기록을 한 화면에 모았다.",
+        "en": "Storehouse balance, quests such as first visit, sign-up, attendance and inviting friends, this round's prizes and past rounds on one screen."
+      }
+    },
+    "01-pan/009-prizes": {
+      "title": {
+        "ko": "내 상 - 받은 기프티콘",
+        "en": "My prizes - gifticons received"
+      },
+      "desc": {
+        "ko": "순위로 받은 상을 목록으로 보여 준다. 아직 쓰지 않은 상의 수를 머리에 세어 둔다.",
+        "en": "Prizes earned from the ranking, as a list. The number still unused is counted at the top."
+      }
+    },
+    "01-pan/010-prize-one": {
+      "title": {
+        "ko": "상 하나 - 바코드",
+        "en": "One prize - the barcode"
+      },
+      "desc": {
+        "ko": "기프티콘 한 장의 상세다. 상품 그림과 바코드, 유효기간을 크게 두어 가게에서 바로 내밀 수 있게 했다.",
+        "en": "The detail of one gifticon. Product image, barcode and expiry are large enough to show at the counter straight away."
+      }
+    },
+    "01-pan/011-invite": {
+      "title": {
+        "ko": "친구 부르기",
+        "en": "Inviting friends"
+      },
+      "desc": {
+        "ko": "초대 링크와 코드, 친구가 되는 세 단계, 부른 친구 목록을 둔다. 하루에 인정되는 수에는 상한이 있다.",
+        "en": "Invite link and code, the three steps to becoming friends, and the list of friends invited. There is a daily cap on how many count."
+      }
+    },
+    "01-pan/012-attendance": {
+      "title": {
+        "ko": "출석부 - 하루 세 판",
+        "en": "Attendance - three rounds a day"
+      },
+      "desc": {
+        "ko": "달력 위에 출석한 날을 붉은 도장으로 찍는다. 하루 세 판에 답하면 출석으로 센다.",
+        "en": "Days attended are marked with a red seal on the calendar. Answering three rounds in a day counts as attendance."
+      }
+    },
+    "02-dark/001-splash": {
+      "title": {
+        "ko": "다크 - 스플래시",
+        "en": "Dark - splash"
+      },
+      "desc": {
+        "ko": "검정 바탕에 등불 주황을 쓰고, 등을 든 갓 쓴 검사관 캐릭터를 세운 스킨이다. 붓글씨 로고는 확정본과 같다.",
+        "en": "A skin of lantern orange on black, fronted by an inspector character in a gat holding a lantern. The brush logo is the same as in the confirmed build."
+      }
+    },
+    "02-dark/002-home": {
+      "title": {
+        "ko": "다크 - 오늘의 판",
+        "en": "Dark - today's round"
+      },
+      "desc": {
+        "ko": "검사관이 머리에서 판을 안내하고, 오늘 벌어진 문제 다섯을 주황 번호로 세운다.",
+        "en": "The inspector introduces the round at the top, and the day's five questions line up under orange numbers."
+      }
+    },
+    "02-dark/003-board": {
+      "title": {
+        "ko": "다크 - 판",
+        "en": "Dark - round"
+      },
+      "desc": {
+        "ko": "네 칸에 지금까지의 비율을 얇은 막대로 붙였다. 걸 냥 슬라이더와 판을 나누는 버튼이 아래에 선다.",
+        "en": "Each of the four cells carries a thin bar with the split so far. The stake slider and the button sit below."
+      }
+    },
+    "02-dark/004-standings": {
+      "title": {
+        "ko": "다크 - 판세",
+        "en": "Dark - standings"
+      },
+      "desc": {
+        "ko": "순위표 머리에 내 자리와 방까지 남은 냥을 두었다. 상은 아래 카드 세 장으로 정리했다.",
+        "en": "My place and the coin still needed to make the board head the table. Prizes are summed up in three cards below."
+      }
+    },
+    "02-dark/005-settle": {
+      "title": {
+        "ko": "다크 - 셈",
+        "en": "Dark - settlement"
+      },
+      "desc": {
+        "ko": "검사관 캐릭터가 하루 손익을 들고 나온다. 판마다 선택지별 비율과 내 답을 함께 적었다.",
+        "en": "The inspector character presents the day's result. Each question lists the split by answer next to mine."
+      }
+    },
+    "02-dark/006-storehouse": {
+      "title": {
+        "ko": "다크 - 내 곳간",
+        "en": "Dark - storehouse"
+      },
+      "desc": {
+        "ko": "할 일 줄마다 받을 냥을 주황 알약으로 붙였다. 지난 판은 맞힌 수만 줄로 쌓았다.",
+        "en": "Each quest row carries its coin reward in an orange pill. Past rounds stack as rows showing only how many were right."
+      }
+    },
+    "03-ink/001-home": {
+      "title": {
+        "ko": "수묵 - 오늘의 판",
+        "en": "Ink - today's round"
+      },
+      "desc": {
+        "ko": "먹 다섯 단계와 붉은 낙관 하나만 쓴 현대 수묵 스킨이다. 붓 획 하나로 판을 가르고 두 판과 네 판을 크게 적었다.",
+        "en": "A modern ink-wash skin using five ink tones and a single red seal. One brush stroke divides the page, and the two-question and four-question rounds are set large."
+      }
+    },
+    "03-ink/002-board": {
+      "title": {
+        "ko": "수묵 - 판",
+        "en": "Ink - round"
+      },
+      "desc": {
+        "ko": "테두리만 있는 네 칸 중 고른 칸만 먹으로 채운다. 맞히면 받는 냥과 틀리면 잃는 냥을 슬라이더 아래 한 줄로 적었다.",
+        "en": "Four outlined cells, with only the chosen one filled in ink. What a right answer wins and a wrong one loses is written in one line under the slider."
+      }
+    },
+    "03-ink/003-standings": {
+      "title": {
+        "ko": "수묵 - 판세",
+        "en": "Ink - standings"
+      },
+      "desc": {
+        "ko": "큰 순위 숫자 하나와 붓 획 구분선으로 순위표를 나눴다. 1위부터 3위까지만 먹 원으로 표시한다.",
+        "en": "One large rank number and brush-stroke dividers structure the table. Only the top three are marked with ink circles."
+      }
+    },
+    "03-ink/004-brand-board": {
+      "title": {
+        "ko": "수묵 - 브랜드 보드",
+        "en": "Ink - brand board"
+      },
+      "desc": {
+        "ko": "로고, 먹 다섯 단계 색, 낙관, 붓 획, 버튼 부품을 한 장에 모은 스킨 정의 보드다.",
+        "en": "A board that defines the skin on one sheet - logo, the five ink tones, the seal, brush strokes and button parts."
+      }
+    },
+    "04-design/001-home": {
+      "title": {
+        "ko": "디자인 보드 - 오늘의 판",
+        "en": "Design board - today's round"
+      },
+      "desc": {
+        "ko": "한지 바탕에 족자와 도장을 쓴 첫 디자인 보드 판이다. 두 판과 네 판을 카드로 나누고 이번 판 띠를 붙였다.",
+        "en": "The first design board build, with hanji paper, a hanging scroll and seals. Two-question and four-question rounds are separate cards with a this-round tag."
+      }
+    },
+    "04-design/002-board": {
+      "title": {
+        "ko": "디자인 보드 - 판",
+        "en": "Design board - round"
+      },
+      "desc": {
+        "ko": "갑 · 을 · 병 · 정에 색 도장을 붙이고 고른 칸을 붉은 테두리로 표시했다. 먼저 패를 고르라는 안내를 버튼 위에 둔다.",
+        "en": "Each of the four cells gets a coloured seal, and the chosen one a red outline. A prompt to pick first sits above the button."
+      }
+    },
+    "04-design/003-standings": {
+      "title": {
+        "ko": "디자인 보드 - 판세",
+        "en": "Design board - standings"
+      },
+      "desc": {
+        "ko": "내 순위를 붉은 띠로 크게, 1위부터 3위까지를 색 도장으로 구분했다. 방에 오르는 자리에 점선을 그었다.",
+        "en": "My rank sits large in a red band, and the top three get coloured seals. A dotted line marks the cut onto the board."
+      }
+    },
+    "04-design/004-brand-board": {
+      "title": {
+        "ko": "디자인 보드 - 브랜드 보드",
+        "en": "Design board - brand board"
+      },
+      "desc": {
+        "ko": "한지, 두루마리, 도장 색과 부품을 한 장에 정리한 보드다. 확정본의 바탕과 도장 문법이 여기서 나왔다.",
+        "en": "Hanji, scrolls, seal colours and parts on one sheet. The confirmed build's ground and seal grammar came from here."
+      }
+    },
+    "05-before/001-receipt-board": {
+      "title": {
+        "ko": "회의 전 판 - 영수증 판",
+        "en": "Before the review - receipt round"
+      },
+      "desc": {
+        "ko": "회의 전까지 켜 두었던 영수증 판이다. 이번 판에 오른 가게에서 산 영수증을 올리면 상 추첨에 응모한다. 회의에서 빠져 확정본에는 남지 않았다.",
+        "en": "A receipt round that was switched on until the review. Uploading a receipt from one of this round's shops entered a prize draw. It was cut in the review and is not in the confirmed build."
+      }
+    },
+    "05-before/002-storehouse-wallet": {
+      "title": {
+        "ko": "회의 전 판 - 지갑 연결 할 일",
+        "en": "Before the review - wallet quest"
+      },
+      "desc": {
+        "ko": "곳간 할 일에 지갑 연결이 들어 있던 판이다. 확정본에서는 지갑 연결을 걷어 내고 가입과 출석, 초대만 남겼다.",
+        "en": "A build where connecting a wallet was one of the storehouse quests. The confirmed build drops it and keeps only sign-up, attendance and invites."
+      }
+    }
+  }
+}

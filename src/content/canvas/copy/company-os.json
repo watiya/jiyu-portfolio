@@ -1,0 +1,212 @@
+{
+  "pages": {
+    "01-screens": {
+      "ko": "화면",
+      "en": "Screens"
+    },
+    "02-integration": {
+      "ko": "통합 셸",
+      "en": "Integration shell"
+    }
+  },
+  "flow": [
+    [
+      "01-screens/013-feed",
+      "01-screens/014-notifications"
+    ],
+    [
+      "01-screens/014-notifications",
+      "01-screens/015-audit"
+    ],
+    [
+      "02-integration/001-starnexus-integration",
+      "02-integration/004-starnexus-integration-console"
+    ],
+    [
+      "02-integration/001-starnexus-integration",
+      "02-integration/003-starnexus-integration-ai"
+    ]
+  ],
+  "frames": {
+    "01-screens/001-home": {
+      "title": {
+        "ko": "홈 - 오늘 봐둘 세 가지",
+        "en": "Home - three things for today"
+      },
+      "desc": {
+        "ko": "지표 넉 장을 먼저 세우고 그 아래 Starvis 인사이트가 원인과 권고를 한 줄씩 붙인다. 카드마다 「delivery에서 보기」로 근거가 있는 화면까지 이어 두었다. 인사이트가 링크 없이 끝나면 읽은 사람이 확인할 데가 없다.",
+        "en": "Four metrics stand first, and under them Starvis insights attach a cause and a recommendation to each. Every card carries a link through to the screen holding the evidence - an insight that ends without one leaves the reader nowhere to check it."
+      }
+    },
+    "01-screens/003-console": {
+      "title": {
+        "ko": "Starvis 콘솔 - 브리핑과 근거",
+        "en": "Starvis console - briefing with its sources"
+      },
+      "desc": {
+        "ko": "대화 한 줄기로 오늘을 정리한다. 답 밑에 우선순위 상위 세 건을 확신도(96·88·71%)와 함께 세우고 각각 원래 화면으로 보낸다. 「Thought for 0.8s」는 접어 두었다 - 과정을 감추지도, 앞세우지도 않는다.",
+        "en": "One thread sums up the day. Under the answer sit the top three items with their confidence (96 / 88 / 71%), each linking back to the screen it came from. The thinking trace is collapsed rather than hidden or foregrounded."
+      }
+    },
+    "01-screens/004-agents": {
+      "title": {
+        "ko": "에이전트 - 트리거와 가드레일",
+        "en": "Agents - triggers and guardrails"
+      },
+      "desc": {
+        "ko": "돌아가는 자동화를 카드마다 트리거·가드레일·실행/적중/절감으로 적었다. 「모든 에이전트는 가드레일 안에서만 움직입니다」를 화면 아래 못 박아 둔 것이 이 화면의 논점이다.",
+        "en": "Each running automation states its trigger, its guardrail, and its runs / hits / hours saved. The line pinned at the foot - every agent moves only inside its guardrail - is the argument of the screen."
+      }
+    },
+    "01-screens/005-calendar": {
+      "title": {
+        "ko": "캘린더 & 할 일",
+        "en": "Calendar and tasks"
+      },
+      "desc": {
+        "ko": "할 일과 일정을 한 화면에 둔다. 왼쪽 할 일은 티켓 번호와 우선순위를 달고 있고, 그중 하나는 「Starvis 위임」으로 이미 지워져 있다. 오른쪽 주간 격자에는 지금 시각이 가로선으로 지난다.",
+        "en": "Tasks and the week share one screen. Each task carries a ticket number and a priority, and one is already struck through as delegated to Starvis. A live line marks the current hour across the weekly grid."
+      }
+    },
+    "01-screens/006-people": {
+      "title": {
+        "ko": "구성원 - 사람과 권한을 같이",
+        "en": "People - a person and their access"
+      },
+      "desc": {
+        "ko": "카드를 고르면 오른쪽에 지금 하는 일과 접근 권한 요약이 같이 선다. 조직도 대신 「무엇을 물어보면 좋은지」를 사람마다 달아, 이름을 아는 것과 찾아갈 수 있는 것을 가른다.",
+        "en": "Picking a card brings up what that person is working on beside a summary of their access. Instead of an org chart each person carries what to ask them about, which separates knowing a name from knowing who to go to."
+      }
+    },
+    "01-screens/007-onboarding": {
+      "title": {
+        "ko": "온보딩 - 입사 전부터 첫 달까지",
+        "en": "Onboarding - from pre-start to first month"
+      },
+      "desc": {
+        "ko": "열네 항목을 네 구간으로 나누고 아홉 개가 끝난 자리다. 막힌 항목은 「AWS 콘솔 read 권한 - Noah 승인 대기」 하나뿐이라 병목이 사람 이름까지 좁혀진다. 이 체크리스트는 입사 이벤트에서 role=BE 템플릿으로 자동 생성됐다.",
+        "en": "Fourteen items across four stages, nine of them done. Exactly one is blocked - AWS console read, waiting on Noah - so the bottleneck narrows to a name. The checklist was generated from the hire event off a role=BE template."
+      }
+    },
+    "01-screens/009-approvals": {
+      "title": {
+        "ko": "승인 - 대기 일수가 먼저 보인다",
+        "en": "Approvals - the wait is what you see"
+      },
+      "desc": {
+        "ko": "요청 큐를 승인자와 대기 일수로 세운다. 「0일」과 「3일」이 같은 자리에 색으로 갈려 오래 선 것이 먼저 눈에 걸린다. 권한과 예산을 같은 큐에서 처리한다.",
+        "en": "The queue is ordered by approver and days waiting, with the count colour-split in place so the ones that have sat longest catch the eye first. Access and budget move through the same queue."
+      }
+    },
+    "01-screens/010-access": {
+      "title": {
+        "ko": "접근 권한 - 경고를 매트릭스 위에",
+        "en": "Access - warnings above the matrix"
+      },
+      "desc": {
+        "ko": "다섯 사람 곱하기 일곱 시스템을 한 표로 펴되, 표를 읽어야 알 수 있는 것을 위에 경고 세 줄로 먼저 뽑았다. 퇴사 예정 계정에 admin 이 남은 것, 서명자 3인이 전부 같은 시간대인 것은 표를 봐도 안 보인다.",
+        "en": "Five people by seven systems in one table, with three warnings lifted above it. That a departing account still holds admin, and that all three signers sit in one timezone, are not things the table shows on its own."
+      }
+    },
+    "01-screens/011-delivery": {
+      "title": {
+        "ko": "Delivery - GA까지 남은 것",
+        "en": "Delivery - what is left before GA"
+      },
+      "desc": {
+        "ko": "제품 매트릭스와 준비도, 사람별 캐파와 리스크를 한 장에 세운다. 캐파 110%·130% 는 빨강으로 넘어가고 리스크마다 Starvis 한 줄이 붙는다. 아래 꼬리말이 이 작업 전체의 문장이다 - 「데이터는 같다. 다른 것은, 화면이 아니라 스타비스가 먼저 읽는다는 것.」",
+        "en": "Product matrix, readiness, per-person capacity and risks on one page. Capacity crosses into red at 110 and 130 per cent, and each risk carries a line from Starvis. The footer states the whole argument: the data is the same - what changed is that Starvis reads it first."
+      }
+    },
+    "01-screens/012-launch": {
+      "title": {
+        "ko": "런처 - 도구로 가는 현관",
+        "en": "Launcher - the front door to the tools"
+      },
+      "desc": {
+        "ko": "회사가 쓰는 문서와 도구를 묶되 맨 위 세 장에는 「왜 지금 필요한지」를 한 줄로 적었다(「GA D-9라서: delivery/배포 상태」). 아래에는 제품별 서버 상태와 슬래시 명령까지 같이 둔다.",
+        "en": "Every tool and document the company uses, with the top three carrying a line on why it is needed now - \"because GA is D-9: delivery and deploy status\". Server health per product and slash commands sit below."
+      }
+    },
+    "01-screens/013-feed": {
+      "title": {
+        "ko": "사내 뉴스 - 배포·결정·합류·칭찬",
+        "en": "Company feed - ships, decisions, joins, kudos"
+      },
+      "desc": {
+        "ko": "종류가 다른 소식을 한 줄기로 흘리고 배지로만 가른다. Starvis 가 남긴 것도 사람 글과 같은 자리에 서고, 칭찬에는 「온보딩 첫 주 만에 인덱서 컨텍스트를 완전히 따라옴」처럼 무엇을 했는지가 붙는다.",
+        "en": "Different kinds of news run in one stream, separated only by a badge. What Starvis posts sits in the same column as what people post, and kudos name the actual thing done rather than the sentiment."
+      }
+    },
+    "01-screens/014-notifications": {
+      "title": {
+        "ko": "알림 센터 - Starvis와 시스템을 가른다",
+        "en": "Notifications - Starvis apart from the system"
+      },
+      "desc": {
+        "ko": "열아홉 건을 한 인박스에 두되 탭을 안읽음·Starvis·시스템으로 갈랐다. 에이전트가 보낸 알림이 배포 알림과 섞이면 어느 쪽을 꺼야 조용해지는지 알 수 없어진다.",
+        "en": "Nineteen items in one inbox, with tabs splitting unread, Starvis, and system. If agent notifications mix into deploy notifications, there is no telling which switch quiets which."
+      }
+    },
+    "01-screens/015-audit": {
+      "title": {
+        "ko": "감사 로그 - Starvis도 작업자다",
+        "en": "Audit log - Starvis is an actor too"
+      },
+      "desc": {
+        "ko": "권한 부여·승인·에이전트 실행·배포·설정 변경을 한 표에 적고, 작업자 필터에 사람들과 나란히 Starvis 를 세웠다. 자동화가 한 일이 사람이 한 일과 같은 장부에 남아야 나중에 물어볼 수 있다.",
+        "en": "Grants, approvals, agent runs, deploys and setting changes in one table, with Starvis standing in the actor filter beside the people. What the automation did has to land in the same ledger as what people did, or there is nothing to ask about later."
+      }
+    },
+    "01-screens/016-settings": {
+      "title": {
+        "ko": "설정 - 프로필",
+        "en": "Settings - profile"
+      },
+      "desc": {
+        "ko": "프로필·알림·테마·조직·연동 다섯 갈래 중 프로필. 「무엇을 물어보면 좋은지」가 여기서 입력되어 구성원 화면의 태그가 된다 - 값이 어디서 오는지 화면 둘이 서로 가리킨다.",
+        "en": "Profile, of the five sections. What to ask me about is entered here and becomes the tags on the People screen, so the two screens point at each other about where the value comes from."
+      }
+    },
+    "02-integration/001-starnexus-integration": {
+      "title": {
+        "ko": "통합 셸 홈 - 옆에 붙은 어시스턴트",
+        "en": "Integrated shell home - the assistant docked beside"
+      },
+      "desc": {
+        "ko": "기존 홈 위에 Starvis 패널을 오른쪽에 상시로 세웠다. 화면마다 따로 열던 콘솔을 어디서든 같은 자리에 두어, 보던 화면을 떠나지 않고 묻게 했다.",
+        "en": "The existing home with a Starvis panel docked on the right. Instead of a console opened per screen, the same panel sits in the same place everywhere, so a question can be asked without leaving the screen."
+      }
+    },
+    "02-integration/002-starnexus-integration-agents": {
+      "title": {
+        "ko": "에이전트 + 패널 - 지금 보는 자리를 안다",
+        "en": "Agents + panel - it knows where you are"
+      },
+      "desc": {
+        "ko": "에이전트 화면에서는 패널 첫 카드가 「여기: 에이전트」로 바뀌고 제안이 병목 보기·Delivery 열기로 갈린다. 패널이 화면 문맥을 읽는다는 것을 첫 카드로 보인다.",
+        "en": "On the agents screen the panel's first card names where you are, and its suggestions switch to the bottleneck and the delivery board. The first card shows the panel reads the screen's context."
+      }
+    },
+    "02-integration/003-starnexus-integration-ai": {
+      "title": {
+        "ko": "AI 탭 - 본문과 패널이 같은 것을 묻는다",
+        "en": "AI tab - body and panel ask the same thing"
+      },
+      "desc": {
+        "ko": "AI 탭은 전체 페이지 크기의 입력창과 추천 질문 넷을 세우는데, 오른쪽 패널에도 같은 질문 넷이 그대로 있다. 패널을 사이드바·플로팅·전체 페이지로 바꿀 수 있다는 안내가 한 줄로 붙었다.",
+        "en": "The AI tab is a full-page prompt with four suggested questions, and the same four repeat in the side panel. A single line says the panel can switch between sidebar, floating and full page."
+      }
+    },
+    "02-integration/004-starnexus-integration-console": {
+      "title": {
+        "ko": "콘솔 + 패널 - 대화 둘이 겹치는 자리",
+        "en": "Console + panel - where two conversations overlap"
+      },
+      "desc": {
+        "ko": "콘솔은 대화 한 줄기로 우선순위 세 건을 답하고, 패널은 「콘솔에서 대화 중」 카드로 물러난다. 같은 어시스턴트가 두 자리에 있을 때 무엇을 앞세울지 정한 판이다.",
+        "en": "The console answers with today's top three in one thread, while the panel steps back to a card saying a conversation is already open here. It settles which surface leads when the same assistant is in both."
+      }
+    }
+  }
+}

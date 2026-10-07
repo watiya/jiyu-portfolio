@@ -1,0 +1,411 @@
+{
+  "pages": {
+    "01-screens": { "ko": "화면", "en": "Screens" },
+    "02-pages": { "ko": "두 장씩 붙인 시트", "en": "Paired sheets" }
+  },
+  "flow": [
+    ["01-screens/003-home_scroll", "01-screens/004-home_klip"],
+    ["01-screens/004-home_klip", "01-screens/005-home_klip_terms"],
+    ["01-screens/015-mytime_upload", "01-screens/016-mytime_upload2"],
+    ["01-screens/016-mytime_upload2", "01-screens/017-mytime_upload3"],
+    ["01-screens/027-cs", "01-screens/029-cs_sub"],
+    ["01-screens/030-contact", "01-screens/031-contact_modal"],
+    ["01-screens/032-arrange", "01-screens/033-arrange_popup"],
+    ["01-screens/033-arrange_popup", "01-screens/035-arrange_modal"],
+    ["01-screens/035-arrange_modal", "01-screens/036-arrange_loading"]
+  ],
+  "frames": {
+    "01-screens/001-home_guide": {
+      "title": { "ko": "홈 - 첫 방문 안내", "en": "Home - first-visit guide" },
+      "desc": {
+        "ko": "지갑을 이은 뒤의 홈. 대표 타임슬롯 한 장을 배경째 흐리게 깔고 그 위로 남은 시간을 초 단위로 흘린다. 시계 캐릭터가 말풍선으로 「저를 터치해 주시겠어요?」 하고 소개를 권한다.",
+        "en": "Home once a wallet is connected. One featured time slot fills the screen, blurred into its own backdrop, with a live countdown ticking above it. The stopwatch mascot pops a speech bubble offering a tour."
+      }
+    },
+    "01-screens/002-home_modal": {
+      "title": { "ko": "닉네임 정하기", "en": "Set your nickname" },
+      "desc": {
+        "ko": "「입력한 닉네임은 추후에 변경이 불가능합니다」를 먼저 못 박고 입력칸을 연다. 중복이면 그 자리에서 붉은 한 줄로 막는다.",
+        "en": "Warns that the name can never be changed before it opens the field, and blocks a duplicate inline in red rather than after submit."
+      }
+    },
+    "01-screens/003-home_scroll": {
+      "title": { "ko": "홈 - 지갑 연결 전", "en": "Home - before a wallet" },
+      "desc": {
+        "ko": "지갑이 없으면 오른쪽 위가 닉네임 대신 「지갑연결」이다. 키워드 탭과 이벤트 배너 캐러셀을 지나 타임슬롯 카드가 이어진다.",
+        "en": "With no wallet the top right reads Connect instead of a nickname. Keyword tabs and an event carousel sit above the run of time-slot cards."
+      }
+    },
+    "01-screens/004-home_klip": {
+      "title": { "ko": "Klip 지갑 연결", "en": "Connect a Klip wallet" },
+      "desc": {
+        "ko": "들어오는 길은 카카오톡 Klip 하나뿐이다. 노란 버튼 한 개와 안내 링크 한 줄로 고를 게 없게 뒀다.",
+        "en": "KakaoTalk's Klip is the only way in - one yellow button and a single help link, nothing to choose between."
+      }
+    },
+    "01-screens/005-home_klip_terms": {
+      "title": { "ko": "이용약관 동의", "en": "Agree to the terms" },
+      "desc": {
+        "ko": "지갑을 잇기 전 약관 전문을 스크롤 상자에 담고, 동의 체크와 「7일간 보지않기」를 아래에 나란히 둔다.",
+        "en": "The full terms go into a scrolling box before the wallet is linked, with the consent checkbox and a \"hide for 7 days\" option below it."
+      }
+    },
+    "01-screens/006-sub": {
+      "title": { "ko": "타임슬롯 상세 - 링크 복사", "en": "Slot detail - link copied" },
+      "desc": {
+        "ko": "남의 슬롯을 열어 본 판. 「URL을 복사하였습니다」 토스트가 이미지 위에 뜨고, 아래 고정 바에 현재가와 「구매」가 붙는다.",
+        "en": "Someone else's slot, opened. A \"URL copied\" toast sits over the artwork while the pinned bar below carries the current price and Buy."
+      }
+    },
+    "01-screens/007-sub2": {
+      "title": { "ko": "타임슬롯 상세 - 내가 팔 때", "en": "Slot detail - listing my own" },
+      "desc": {
+        "ko": "내 슬롯이면 하단 바가 판매가 입력과 「판매시작」으로 바뀐다. 이전 거래가를 위에 두고, 수수료 1.2% 는 버튼 아래 붉게 적어 뒀다.",
+        "en": "When the slot is mine the bar becomes a price field and Start selling. The last trade price sits above it, and the 1.2% fee is spelled out in red under the button."
+      }
+    },
+    "01-screens/008-sub_report": {
+      "title": { "ko": "신고하기", "en": "Report" },
+      "desc": {
+        "ko": "혐오·저작권·개인정보·비방·닉네임·서비스 저해 여섯 가지를 라디오로 고르고 사유를 적는다. 「신고가능 횟수 : 5회」를 오른쪽 아래에 적어 뒀다.",
+        "en": "Six radio reasons - hate, copyright, privacy, abuse, nickname, service disruption - plus a free-text note, with the remaining report count (5) tucked bottom right."
+      }
+    },
+    "01-screens/009-sub_modal": {
+      "title": { "ko": "전송 알럿 세 벌", "en": "Transfer alerts, three states" },
+      "desc": {
+        "ko": "화면 하나가 아니라 세 벌을 겹쳐 둔 프레임이다. 받을 지갑주소 입력 → 「전송이 완료되었습니다」 → 「신고가 접수된 상태입니다」.",
+        "en": "Not one screen but three stacked in a single frame: enter the recipient wallet, transfer complete, and already-reported."
+      }
+    },
+    "01-screens/010-sub_buy": {
+      "title": { "ko": "구매 알럿 두 벌", "en": "Purchase alerts, two states" },
+      "desc": {
+        "ko": "지갑 연결을 먼저 요구하는 판과 「다른 분께서 구매 진행중인 상품입니다」를 겹쳐 뒀다. 뒤로는 상세 화면이 비친다.",
+        "en": "The wallet prompt and \"someone else is already buying this\" laid over each other, with the detail screen showing through behind."
+      }
+    },
+    "01-screens/011-timeline": {
+      "title": { "ko": "타임라인", "en": "Timeline" },
+      "desc": {
+        "ko": "하루치 타임슬롯을 4열 격자로 늘어놓고 날짜를 좌우 화살표로 넘긴다. 여기서는 아직 지갑을 안 이은 판이다.",
+        "en": "A day's slots in a four-column grid, with arrows to step the date. This pass is still logged out - the top right reads Connect."
+      }
+    },
+    "01-screens/012-mytime": {
+      "title": { "ko": "마이타임", "en": "My time" },
+      "desc": {
+        "ko": "내가 가진 슬롯. SALES·SUSPEND 배지로 판매 상태를 얹고, 빈 칸의 + 는 아직 안 채운 자리에 이야기를 올리는 입구다.",
+        "en": "The slots I own. SALES and SUSPEND badges ride on the thumbnails, and the plus tile is where an empty slot gets its story."
+      }
+    },
+    "01-screens/013-coupon_pin_input": {
+      "title": { "ko": "NFT 쿠폰", "en": "NFT coupon" },
+      "desc": {
+        "ko": "12자리 번호를 넣어 쿠폰을 쓰고, 아래에 보유 쿠폰을 티켓 모양으로 늘어놓는다. 유효기간을 제목 바로 밑에 붙여 만료를 먼저 보이게 했다.",
+        "en": "A twelve-digit code redeems a coupon; the ones already held sit below as perforated tickets, each with its expiry printed right under the name."
+      }
+    },
+    "01-screens/014-mytime_nodata": {
+      "title": { "ko": "마이타임 - 빈 판", "en": "My time - empty" },
+      "desc": {
+        "ko": "가진 슬롯이 없을 때. 시무룩한 스톱워치 하나와 「보유한 시간이 없습니다」로 자리를 메운다.",
+        "en": "Nothing owned yet: one glum stopwatch and the line \"you don't hold any time.\""
+      }
+    },
+    "01-screens/015-mytime_upload": {
+      "title": { "ko": "이야기 등록 - 사진 고르기", "en": "Add a story - pick a photo" },
+      "desc": {
+        "ko": "NFT 에 넣을 이미지 규격(PNG·JPG·JPEG, 10MB 이하, 최소 720×720)을 버튼 바로 아래에 그대로 적어 뒀다. 제목과 내용은 그 아래 빈칸으로 이어진다.",
+        "en": "The image rules - PNG/JPG/JPEG, under 10MB, at least 720×720 - are printed directly under the picker button, with the title and body fields following."
+      }
+    },
+    "01-screens/016-mytime_upload2": {
+      "title": { "ko": "고른 사진 확인", "en": "Confirm the photo" },
+      "desc": {
+        "ko": "고른 이미지를 어두운 배경 위에 통째로 띄워 한 번 더 확인받는 판.",
+        "en": "The chosen image blown up full-bleed on a dimmed backdrop for one last look."
+      }
+    },
+    "01-screens/017-mytime_upload3": {
+      "title": { "ko": "이야기 등록 - 사진 붙인 뒤", "en": "Add a story - photo in place" },
+      "desc": {
+        "ko": "사진이 자리에 앉고 오른쪽 위 휴지통으로 지운다. 제목·내용은 아직 비어 있어 「저장」이 무엇을 저장하는지 보인다.",
+        "en": "The photo settles into its slot with a trash button in the corner. Title and body are still empty, which makes plain what Save is actually saving."
+      }
+    },
+    "01-screens/018-mytime_upload_modal": {
+      "title": { "ko": "등록 알럿 세 벌", "en": "Upload alerts, three states" },
+      "desc": {
+        "ko": "나중에 쓰겠냐(작성 중이던 내용은 안 남는다) · 저장하겠냐 · 720px 보다 작아 못 올린다. 세 장을 한 프레임에 겹쳐 뒀다.",
+        "en": "Write it later (the draft won't survive), save what you wrote, and the image is under 720px - three alerts stacked in one frame."
+      }
+    },
+    "01-screens/019-mytime_default_image": {
+      "title": { "ko": "기본 이미지", "en": "Default artwork" },
+      "desc": {
+        "ko": "이야기를 안 올린 슬롯에 대신 들어가는 회색 로고 판. 화면이 아니라 자산 한 장이다.",
+        "en": "The grey logo plate that stands in for a slot with no story yet. An asset, not a screen."
+      }
+    },
+    "01-screens/020-notice": {
+      "title": { "ko": "공지사항", "en": "Notices" },
+      "desc": {
+        "ko": "제목과 날짜만 있는 목록에 5쪽 페이저. 항목 대부분이 「[공지] 업데이트 점검 안내드립니다」 하나로 채워진 더미다.",
+        "en": "A title-and-date list under a five-page pager. Most rows are the same placeholder - \"update maintenance notice\" - repeated."
+      }
+    },
+    "01-screens/021-terms": {
+      "title": { "ko": "약관 - 개인정보처리방침", "en": "Policy - privacy" },
+      "desc": {
+        "ko": "파일 이름은 terms 인데 열려 있는 건 개인정보처리방침이다. 위쪽 드롭다운으로 문서를 갈아 끼우고, 오른쪽 위는 언어(EN_GL) 선택이다.",
+        "en": "The file is named terms but the document open here is the privacy policy. A dropdown swaps documents; the top right switches language (EN_GL)."
+      }
+    },
+    "01-screens/022-maintenance": {
+      "title": { "ko": "서비스 점검", "en": "Under maintenance" },
+      "desc": {
+        "ko": "점검 시각을 붉게 못 박고 그 아래 문의 메일 주소를 둔다. 갇힌 화면이라 돌아갈 버튼을 아예 두지 않았다.",
+        "en": "The maintenance window is pinned in red with a contact address beneath it. Being a dead end, the screen offers no way back."
+      }
+    },
+    "01-screens/023-999": {
+      "title": { "ko": "999 오류", "en": "Error 999" },
+      "desc": {
+        "ko": "알 수 없는 오류. 물음표를 단 구름 캐릭터와 「홈으로」 하나뿐이다.",
+        "en": "The catch-all failure: a puzzled cloud with a question mark and a single Home button."
+      }
+    },
+    "01-screens/024-404": {
+      "title": { "ko": "404", "en": "404" },
+      "desc": {
+        "ko": "없는 페이지. 시무룩한 종이 캐릭터를 세우고 「홈으로」 하나만 남겼다.",
+        "en": "Page not found - a downcast sheet of paper and one Home button."
+      }
+    },
+    "01-screens/025-footer": {
+      "title": { "ko": "푸터 - 접힘과 펼침", "en": "Footer - collapsed and open" },
+      "desc": {
+        "ko": "사업자정보를 접은 판과 편 판을 위아래로 나란히 둔 조각이다. 화면이 아니라 부품 한 벌.",
+        "en": "The business-registration block closed and open, stacked one above the other. A component sheet, not a screen."
+      }
+    },
+    "01-screens/026-notice-_sub": {
+      "title": { "ko": "공지 상세", "en": "Notice detail" },
+      "desc": {
+        "ko": "제목은 「이벤트 타이틀 이벤트 타이틀…」 더미인데 본문은 정식 오픈 인사와 프렌즈게임즈 게임 목록이라 서로 안 맞는다. 원본이 그대로 어긋난 자리다.",
+        "en": "The headline is placeholder text while the body is a real launch announcement listing Friends Games titles. The mismatch is in the source, not the capture."
+      }
+    },
+    "01-screens/027-cs": {
+      "title": { "ko": "고객센터", "en": "Help centre" },
+      "desc": {
+        "ko": "질문 검색칸 아래 접힌 FAQ 목록과 5쪽 페이저, 맨 아래 「문의하기」. 항목이 전부 「QR 코드가 인식되지 않아요」로 채워진 더미다.",
+        "en": "A search field over a collapsed FAQ list, a five-page pager, and Contact us at the bottom. Every row is the same placeholder question about QR codes."
+      }
+    },
+    "01-screens/028-cs_nodata": {
+      "title": { "ko": "고객센터 - 결과 없음", "en": "Help centre - no results" },
+      "desc": {
+        "ko": "검색이 빈손일 때. 목록 자리를 캐릭터와 「검색 결과가 없습니다」로 대신하고 「문의하기」는 그대로 남긴다.",
+        "en": "When search finds nothing, the list is replaced by the mascot and a no-results line - but Contact us stays put."
+      }
+    },
+    "01-screens/029-cs_sub": {
+      "title": { "ko": "고객센터 - 답 펼침", "en": "Help centre - answer open" },
+      "desc": {
+        "ko": "항목 하나를 펼친 판. 답이 회색 상자로 들어오고 스캔 위치·각도·거리를 번호로 갈라 적는다.",
+        "en": "One row expanded. The answer drops into a grey block, splitting the fix into numbered causes - scan position, angle, distance."
+      }
+    },
+    "01-screens/030-contact": {
+      "title": { "ko": "문의하기", "en": "Contact us" },
+      "desc": {
+        "ko": "이메일·제목·내용에 첨부파일 다섯 개까지. 개인정보 수집 항목·목적·보유기간(3년)을 표로 먼저 보이고 동의를 받는다.",
+        "en": "Email, subject, body, and up to five attachments. Before consent it lays out what is collected, why, and for how long (three years) as a table."
+      }
+    },
+    "01-screens/031-contact_modal": {
+      "title": { "ko": "문의 접수됨", "en": "Enquiry received" },
+      "desc": {
+        "ko": "접수 알럿. 답이 어디로 가는지(등록한 이메일)를 같이 적어 뒀다.",
+        "en": "The receipt alert, which also says where the reply will land - the address on file."
+      }
+    },
+    "01-screens/032-arrange": {
+      "title": { "ko": "시간구매 - 하루 24칸", "en": "Buy time - the 24 dials" },
+      "desc": {
+        "ko": "이 서비스의 핵심 화면. 스톱워치 하나가 한 시간이고 그 안 여섯 조각이 10분 단위다. 살 수 있는 조각은 색이 차고, 흐린 시계는 통째로 닫힌 시간이다.",
+        "en": "The screen the whole product turns on. One stopwatch is one hour, and the six wedges inside it are ten minutes each. Filled wedges are for sale; a faded dial is an hour closed outright."
+      }
+    },
+    "01-screens/033-arrange_popup": {
+      "title": { "ko": "10분 조각 고르기", "en": "Pick a ten-minute wedge" },
+      "desc": {
+        "ko": "시계 하나를 열면 00~50 여섯 조각이 색으로 갈린다. 남이 팔고 있는 조각은 판매자와 값, 「해당 NFT보기」가 붙고 청약철회 불가 문구가 아래에 따라온다.",
+        "en": "Opening one dial splits it into six wedges, 00 to 50. A wedge someone is already selling shows its seller, price, and a link to the NFT, with the no-refund notice trailing below."
+      }
+    },
+    "01-screens/034-arrange_popup2": {
+      "title": { "ko": "조각 고르기 - 할인", "en": "Pick a wedge - discounted" },
+      "desc": {
+        "ko": "같은 시트에 원가를 줄 긋고 80% 를 붙인 판. 여기서는 파란 조각 둘만 남아 고를 수 있는 자리가 더 적다.",
+        "en": "The same sheet with the list price struck through and 80% stamped on it. Only two blue wedges remain open here."
+      }
+    },
+    "01-screens/035-arrange_modal": {
+      "title": { "ko": "구매 확인", "en": "Confirm the purchase" },
+      "desc": {
+        "ko": "고른 시각을 따옴표로 다시 보이고 값을 확인받는 알럿. 뒤 격자는 흐려져 어느 시간을 골랐는지만 남는다.",
+        "en": "The chosen time is quoted back with its price. The grid behind dims away so only the pick remains."
+      }
+    },
+    "01-screens/036-arrange_loading": {
+      "title": { "ko": "클레이튼 대기", "en": "Waiting on Klaytn" },
+      "desc": {
+        "ko": "결제가 체인에 얹히는 동안. 「최대 10분까지 소요될 수 있습니다」로 기다림의 길이를 먼저 알리고, 클립이 안 떴을 때 다시 여는 링크를 아래에 둔다.",
+        "en": "While the payment settles on chain. It states up front that confirmation can take ten minutes, and offers a link to reopen Klip if it never launched."
+      }
+    },
+    "01-screens/037-home": {
+      "title": { "ko": "홈 전체", "en": "Home, end to end" },
+      "desc": {
+        "ko": "안내 말풍선이 뜬 첫 화면부터 키워드 탭·배너·타임슬롯 피드·「더보기」·푸터·하단탭까지 끊지 않고 이어 붙인 한 장. 첫 화면만 어둡고 그 아래부터 흰 판으로 갈린다.",
+        "en": "One frame from the guide bubble through the keyword tabs, banner, slot feed, More button, footer, and tab bar. Only the first screen is dark; everything below it turns to white."
+      }
+    },
+    "01-screens/038-sub_full": {
+      "title": { "ko": "타임슬롯 상세 전체", "en": "Slot detail, end to end" },
+      "desc": {
+        "ko": "이미지·좋아요·소유자·컨트랙트 정보·댓글·History·하단 판매 바까지 한 장. 원본 오류가 여기 모여 있다 - 토큰 규격이 ERC-720(721 이어야 한다), 라벨은 Contract Addess.",
+        "en": "Artwork, likes, owner, contract facts, comments, History, and the selling bar in one frame. The source errors cluster here: the token standard reads ERC-720 (it should be 721) and the label is misspelled Contract Addess."
+      }
+    },
+    "01-screens/039-sub_dropdown": {
+      "title": { "ko": "상세 - 계정 메뉴", "en": "Detail - account menu" },
+      "desc": {
+        "ko": "오른쪽 위 지갑주소를 누르면 닉네임 입력·쿠폰사용하기·지갑 연결 끊기가 내려온다. 메뉴가 날짜의 시각 부분을 덮어 「2021-11-27」까지만 남는다.",
+        "en": "Tapping the wallet address drops a menu - set nickname, redeem coupon, disconnect. It also covers the time half of the date, leaving only 2021-11-27 visible."
+      }
+    },
+    "01-screens/040-sub_disable": {
+      "title": { "ko": "상세 - 버튼 잠김", "en": "Detail - actions locked" },
+      "desc": {
+        "ko": "「이야기 편집」과 「전송하기」가 회색으로 잠긴 판. 판매에 걸린 슬롯은 손댈 수 없다는 뜻이고, 나머지는 상세 전체와 같다.",
+        "en": "Edit story and Transfer greyed out - a slot that is listed cannot be touched. Everything else matches the full detail page."
+      }
+    },
+    "01-screens/041-sub_history_detail": {
+      "title": { "ko": "이야기 상세 - 댓글 있음", "en": "Story detail - with comments" },
+      "desc": {
+        "ko": "좋아요 수 아래로 댓글이 쌓이고 각 줄 오른쪽에 「삭제」가 붙는다. 다섯 줄까지 보이고 나머지는 「더보기」로 접는다.",
+        "en": "Comments stack under the like count, each with its own Delete on the right. Five rows show and the rest fold behind More."
+      }
+    },
+    "01-screens/042-sub_history_detail_nocoment": {
+      "title": { "ko": "이야기 상세 - 댓글 없음", "en": "Story detail - no comments" },
+      "desc": {
+        "ko": "같은 화면의 빈 판. 댓글 자리를 말풍선 하나와 「댓글이 없습니다」로 대신한다.",
+        "en": "The same page with nothing said yet - the comment area becomes a single bubble and one line."
+      }
+    },
+    "01-screens/043-sub_coment": {
+      "title": { "ko": "댓글 쓰기", "en": "Write a comment" },
+      "desc": {
+        "ko": "「작성한 댓글은 수정이 불가능 합니다」를 제목 자리에 먼저 세우고 입력칸을 연다. 글자수 자리는 아직 (0/##) 로 남아 있다.",
+        "en": "The warning that a comment can never be edited stands where a title would, and the field opens under it. The counter is still a placeholder, (0/##)."
+      }
+    },
+    "01-screens/044-운영정책02": {
+      "title": { "ko": "운영정책 (데스크톱 웹)", "en": "Operating policy (desktop web)" },
+      "desc": {
+        "ko": "이 캔버스에서 유일한 데스크톱 판. 이용약관·개인정보처리방침·청소년보호정책·운영정책 네 탭을 가로로 두고 이전 판본을 드롭다운으로 연다. 여기서만 회사가 Way2Bit Co., Ltd. 로 적혀 있고 나머지 화면은 전부 프렌즈게임즈다.",
+        "en": "The only desktop frame here. Four tabs run across the top - terms, privacy, youth protection, operating policy - with a dropdown for earlier revisions. It is also the one place the company is named Way2Bit Co., Ltd.; every other screen says Friends Games."
+      }
+    },
+    "01-screens/045-general": {
+      "title": { "ko": "UI ELEMENTS 1/3 - 색·서체·레이아웃", "en": "UI ELEMENTS 1/3 - colour, type, layout" },
+      "desc": {
+        "ko": "주색 Blue 와 보조색 Tomato, 시스템 네 색(Danger·Success·Warning·Info), 회색 계단. 서체는 Pretendard 다. 레이아웃 장은 메인의 상단바·하단탭과 서브의 뒤로가기·구매 바를 「Fixed」로 못 박는다. 주색 이름이 Mdinight Blue 로 잘못 적혀 있다.",
+        "en": "Primary blue and secondary tomato, four system colours, and a grey ramp; the typeface is Pretendard. The layout sheet pins what stays fixed - the top bar and tab bar on main, the back row and buy bar on sub. The primary swatch is misspelled Mdinight Blue."
+      }
+    },
+    "01-screens/046-elements01": {
+      "title": { "ko": "UI ELEMENTS 2/3 - 부품", "en": "UI ELEMENTS 2/3 - components" },
+      "desc": {
+        "ko": "버튼(주·보조 × 큰·중간·작은 × 상태 셋)·입력칸·체크와 라디오·스위치·드롭다운·2·3칸 탭. 3/3 은 받지 않아 이 킷에서 빠져 있다.",
+        "en": "Buttons (primary and secondary across three sizes and three states), fields, checkboxes and radios, switches, dropdowns, and two- and three-segment tabs. Sheet 3/3 was never pulled, so it is missing from this set."
+      }
+    },
+    "02-pages/01": {
+      "title": { "ko": "짝 시트 - 홈 둘", "en": "Pair - two homes" },
+      "desc": {
+        "ko": "안내 말풍선이 뜬 첫 홈과 지갑 연결 전 홈을 나란히 붙인 발표용 판. 두 장 다 「화면」 탭에 따로 있다(001·003).",
+        "en": "The guided first home beside the logged-out home, mounted side by side for presenting. Both also stand alone under Screens (001 and 003)."
+      }
+    },
+    "02-pages/02": {
+      "title": { "ko": "짝 시트 - 상세 둘", "en": "Pair - two details" },
+      "desc": {
+        "ko": "계정 메뉴가 내려온 상세와 구매 알럿이 겹친 상세를 나란히. 왼쪽은 039, 오른쪽은 010 과 같은 자리다.",
+        "en": "The detail page with its account menu open next to the same page under a purchase alert - 039 and 010 respectively."
+      }
+    },
+    "02-pages/03": {
+      "title": { "ko": "짝 시트 - 타임라인·이야기 등록", "en": "Pair - timeline and story upload" },
+      "desc": {
+        "ko": "하루치 격자와 사진 고르기 화면을 붙였다. 사는 쪽과 채우는 쪽을 한 장에 놓은 셈이다(011·015).",
+        "en": "The day grid next to the photo picker - the buying half and the filling-in half on one board (011 and 015)."
+      }
+    },
+    "02-pages/04": {
+      "title": { "ko": "짝 시트 - 마이타임 둘", "en": "Pair - my time, full and empty" },
+      "desc": {
+        "ko": "가진 슬롯이 있는 판과 하나도 없는 판을 나란히 두어 빈 화면이 무엇을 대신하는지 보인다(012·014).",
+        "en": "Owned slots beside the empty state, which is the clearest way to show what the empty screen stands in for (012 and 014)."
+      }
+    },
+    "02-pages/05": {
+      "title": { "ko": "짝 시트 - 시간구매 둘", "en": "Pair - buying time" },
+      "desc": {
+        "ko": "10분 조각을 고르는 팝업과 하루 24칸 격자를 나란히. 열린 판과 닫힌 판이 한눈에 붙는다(033·032).",
+        "en": "The ten-minute wedge sheet beside the 24-dial grid - open and closed states of the same screen (033 and 032)."
+      }
+    },
+    "02-pages/06": {
+      "title": { "ko": "짝 시트 - 공지·고객센터", "en": "Pair - notices and help" },
+      "desc": {
+        "ko": "공지 목록과 답을 펼친 FAQ 를 붙였다. 둘 다 5쪽 페이저를 쓰는 같은 골격이다(020·029).",
+        "en": "The notice list beside an expanded FAQ answer - the same skeleton, both on a five-page pager (020 and 029)."
+      }
+    },
+    "02-pages/07": {
+      "title": { "ko": "짝 시트 - 쿠폰·약관", "en": "Pair - coupon and terms" },
+      "desc": {
+        "ko": "쿠폰함과 약관 동의 모달을 붙였다. 하단탭이 살아 있는 판과 그 위를 덮는 판을 한 장에서 견준다(013·005).",
+        "en": "The coupon wallet next to the terms modal - a screen with its tab bar alive beside one that covers it (013 and 005)."
+      }
+    },
+    "02-pages/08": {
+      "title": { "ko": "짝 시트 - 점검·404", "en": "Pair - maintenance and 404" },
+      "desc": {
+        "ko": "막다른 화면 둘. 점검은 돌아갈 버튼이 없고 404 는 「홈으로」가 있다는 차이가 나란히 놓아야 보인다(022·024).",
+        "en": "Two dead ends side by side, which is what makes the difference visible: maintenance offers no way back, 404 does (022 and 024)."
+      }
+    },
+    "02-pages/09": {
+      "title": { "ko": "UI ELEMENTS 1/3 (중복)", "en": "UI ELEMENTS 1/3 (duplicate)" },
+      "desc": {
+        "ko": "「화면」 탭의 045 와 픽셀까지 같은 장이다. 원본 파일에서 두 페이지에 걸쳐 있어 두 번 받혔다.",
+        "en": "Pixel-for-pixel the same sheet as 045 under Screens - it lives on two pages of the source file and came through twice."
+      }
+    },
+    "02-pages/10": {
+      "title": { "ko": "UI ELEMENTS 2/3 (중복)", "en": "UI ELEMENTS 2/3 (duplicate)" },
+      "desc": {
+        "ko": "「화면」 탭의 046 과 같은 장이다. 09 와 같은 이유로 겹쳤다.",
+        "en": "The same sheet as 046 under Screens, duplicated for the same reason as 09."
+      }
+    }
+  }
+}

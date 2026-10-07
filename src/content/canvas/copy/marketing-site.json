@@ -1,0 +1,208 @@
+{
+  "pages": {
+    "01-ui": { "ko": "화면", "en": "Screens" },
+    "02-concept": { "ko": "시안", "en": "Concept" }
+  },
+  "flow": [
+    ["01-ui/009-blog", "01-ui/014-blog_details"]
+  ],
+  "frames": {
+    "01-ui/001-starzip": {
+      "title": { "ko": "마케팅 사이트 전체", "en": "The marketing site, end to end" },
+      "desc": {
+        "ko": "첫 문장부터 푸터까지 끊지 않고 이어 붙였다. 어두운 구간과 밝은 구간이 번갈아 오면서 문단이 갈린다.",
+        "en": "Hero to footer in one frame. Dark and light bands alternate, and that alternation is what separates the chapters."
+      }
+    },
+    "01-ui/002-starzip_wording": {
+      "title": { "ko": "문안을 고친 판", "en": "The rewritten pass" },
+      "desc": {
+        "ko": "구조는 그대로 두고 문장만 다시 썼다. 「Why Starzip?」이 「Infrastructure」로, 맨 끝 문장이 「Local Business. Global Market.」으로 바뀐다.",
+        "en": "Same structure, new sentences. \"Why Starzip?\" becomes \"Infrastructure\", and the closing line becomes \"Local Business. Global Market.\""
+      }
+    },
+    "01-ui/005-hero": {
+      "title": { "ko": "모바일 첫 화면", "en": "Hero on mobile" },
+      "desc": {
+        "ko": "제목을 네 줄로 떨어뜨리고 지표 넷을 가로가 아니라 세로로 세운다. 좁은 화면에서는 숫자를 줄이지 않고 쌓는 쪽을 골랐다.",
+        "en": "The headline breaks to four lines and the four figures stack instead of sitting in a row - nothing dropped, just restacked."
+      }
+    },
+    "01-ui/006-platform": {
+      "title": { "ko": "생태계 구간", "en": "The ecosystem band" },
+      "desc": {
+        "ko": "앱과 콘솔 두 갈래를 한 자리에서 가른다. 사는 쪽과 올리는 쪽이 같은 무게로 서야 해서 카드를 나란히 두었다.",
+        "en": "App and Console split in one place. Both sides had to carry equal weight, so the two cards sit level."
+      }
+    },
+    "01-ui/007-features": {
+      "title": { "ko": "기능 격자, 네 상태", "en": "Feature grid, four states" },
+      "desc": {
+        "ko": "넷 중 하나만 펴지는 격자를 네 번 그려 순서대로 세웠다. 펴진 칸만 설명을 갖고 나머지는 이름만 남는다.",
+        "en": "One of four opens at a time, drawn four times in order. Only the open cell carries its description; the rest keep just a name."
+      }
+    },
+    "01-ui/008-footer_starzip": {
+      "title": { "ko": "푸터", "en": "Footer" },
+      "desc": {
+        "ko": "이름을 크게 놓고 그 아래 한 줄과 아이콘 셋만 남긴다. 링크를 늘어놓지 않는다.",
+        "en": "The name set large, one line and three icons under it. No column of links."
+      }
+    },
+    "01-ui/009-blog": {
+      "title": { "ko": "블로그 목록", "en": "Insights list" },
+      "desc": {
+        "ko": "맨 위 한 건을 크게 세우고 옆에 둘, 아래로 여덟을 격자에 깐다. 아직 글이 적을 때도 빈 티가 안 나는 배치다.",
+        "en": "One piece runs large with two beside it and eight in a grid below - a layout that doesn't look empty while there are still few posts."
+      }
+    },
+    "01-ui/014-blog_details": {
+      "title": { "ko": "블로그 글", "en": "Article" },
+      "desc": {
+        "ko": "파란 그러데이션 띠에 제목을 얹고 본문은 한 칸으로 흐른다. 왼쪽에 돌아가기와 날짜만 붙는다.",
+        "en": "The title rides a blue gradient band and the body runs in a single column, with only a back link and a date on the left."
+      }
+    },
+    "01-ui/019-layout_scroll": {
+      "title": { "ko": "첫 구간에서 다음 구간으로", "en": "Hero into the map" },
+      "desc": {
+        "ko": "히어로가 밀려 올라가고 어두운 지도 구간이 화면을 덮는 순간. 두 장을 겹쳐 이 전환만 따로 보였다.",
+        "en": "The moment the hero slides up and the dark map band takes the screen - two frames overlapped to show just that hand-off."
+      }
+    },
+    "01-ui/020-about": {
+      "title": { "ko": "왜 이 서비스인가", "en": "Why Starzip" },
+      "desc": {
+        "ko": "세 가지를 카드로 세우되 그림을 그러데이션 도형으로 통일한 안.",
+        "en": "Three reasons as cards, the artwork unified as gradient solids."
+      }
+    },
+    "01-ui/021-platform": {
+      "title": { "ko": "생태계, 넓게 잡은 판", "en": "Ecosystem, taller crop" },
+      "desc": {
+        "ko": "같은 구간을 위아래로 더 열어 배경 곡선이 살아나게 한 판. 카드는 그대로다.",
+        "en": "The same band with more room above and below so the background curve reads. The cards don't change."
+      }
+    },
+    "01-ui/022-platform": {
+      "title": { "ko": "파트너를 찾는 자리", "en": "Recruiting partners" },
+      "desc": {
+        "ko": "상점을 데려오면 무엇을 주는지 카드 셋으로 적는다 - 거래 수수료 배분·런치패드 수수료 배분·토큰 보너스.",
+        "en": "What a scout gets, in three cards: trading fee share, launchpad fee share, and a token bonus."
+      }
+    },
+    "01-ui/023-about": {
+      "title": { "ko": "왜 이 서비스인가, 다른 그림", "en": "Why Starzip, other artwork" },
+      "desc": {
+        "ko": "같은 세 카드에 3D 렌더를 섞은 안. 도형으로 갈지 렌더로 갈지가 앞 장과의 차이다.",
+        "en": "The same three cards with a 3D render mixed in. Solids or renders - that is the whole difference from the frame before."
+      }
+    },
+    "01-ui/025-starzip": {
+      "title": { "ko": "전체, 어둡게 간 판", "en": "The full page, darker pass" },
+      "desc": {
+        "ko": "「왜 이 서비스인가」 카드와 생태계 구간을 어둡게 내리고 파트너 로고 줄을 뺐다. FAQ 가 위로 올라온다.",
+        "en": "The Why cards and the ecosystem band go dark, the partner logo strip is dropped, and the FAQ moves up."
+      }
+    },
+
+    "02-concept/001-starzip": {
+      "title": { "ko": "시안 1 - 어두운 히어로", "en": "Concept 1 - dark hero" },
+      "desc": {
+        "ko": "도시 항공 사진 위에 제목을 얹고 지표 넷을 바로 아래 붙인다. 지금 쓰는 화면이 여기서 나왔다.",
+        "en": "The headline over an aerial photo with the four figures right under it. This is where the shipped site came from."
+      }
+    },
+    "02-concept/002-starzip": {
+      "title": { "ko": "시안 2 - 밝은 히어로", "en": "Concept 2 - light hero" },
+      "desc": {
+        "ko": "사진을 걷어내고 흰 바닥에 3D 오브제 하나만 둔 안. 지표는 알약 모양 칩으로 흩뿌린다.",
+        "en": "Photo removed, one 3D object on white, and the figures scattered as pill-shaped chips."
+      }
+    },
+    "02-concept/003-starzip": {
+      "title": { "ko": "시안 3 - 가운데를 통째로 어둡게", "en": "Concept 3 - dark middle" },
+      "desc": {
+        "ko": "밝게 열고 밝게 닫되 가운데 네 구간을 한 덩어리로 어둡게 묶었다. 밝고 어둡고를 번갈지 않는 유일한 안이다.",
+        "en": "Opens and closes light but binds the four middle bands into one dark mass - the only concept that doesn't alternate."
+      }
+    },
+    "02-concept/004-starzip": {
+      "title": { "ko": "시안 4 - 글자로 미는 안", "en": "Concept 4 - typographic" },
+      "desc": {
+        "ko": "제목을 화면 폭까지 키우고 「Owns Stores Worldwide」를 사진 위 검은 덩어리 글자로 얹는다. 가장 편집물에 가깝다.",
+        "en": "The headline pushed to the full width and \"Owns Stores Worldwide\" laid over the photo as a black slab of type. The most editorial of the set."
+      }
+    },
+    "02-concept/005-starzip": {
+      "title": { "ko": "시안 5 - 지구와 선그림", "en": "Concept 5 - globe and line art" },
+      "desc": {
+        "ko": "평면 지도를 지구로 바꾸고 카드 그림을 선그림으로 통일했다. 언론 대신 공지 구간이 들어간다.",
+        "en": "The flat map becomes a globe and the card artwork turns to line drawings. Announcements take the place of the press band."
+      }
+    },
+    "02-concept/006-about": {
+      "title": { "ko": "왜 이 서비스인가, 두 칸 안", "en": "Why Starzip, two columns" },
+      "desc": {
+        "ko": "제목을 왼쪽에 붙박고 세 카드를 오른쪽에 세로로 쌓은 안. 나중에 가로 셋으로 바뀐다.",
+        "en": "Heading pinned left, the three cards stacked down the right. It later became three across."
+      }
+    },
+    "02-concept/007-starzip": {
+      "title": { "ko": "시안 7 - 문장을 바꾼 안", "en": "Concept 7 - new sentence" },
+      "desc": {
+        "ko": "「Invest in the World Around You」를 「Invest Local. Raise Global.」로 올려 구간 제목으로 삼았다. 이 문장이 살아남는다.",
+        "en": "\"Invest in the World Around You\" is promoted and rewritten as \"Invest Local. Raise Global.\" - the sentence that survived."
+      }
+    },
+    "02-concept/008-platform": {
+      "title": { "ko": "사는 쪽과 올리는 쪽", "en": "For user, for business" },
+      "desc": {
+        "ko": "한 구간 안에서 FOR USER 와 FOR BUSINESS 를 가는 선으로 갈랐다. 같은 프로토콜이 양쪽을 다 받는다는 말을 배치로 한다.",
+        "en": "One band split by a hairline into FOR USER and FOR BUSINESS - the claim that one protocol serves both, said as layout."
+      }
+    },
+    "02-concept/009-layout": {
+      "title": { "ko": "첫 세 구간 이어 보기", "en": "The first three bands" },
+      "desc": {
+        "ko": "히어로·지도·왜 이 서비스인가를 세로로 이어 붙여 어둡고 밝은 차례만 확인한 장.",
+        "en": "Hero, map, and Why stacked to check one thing only: the order of dark and light."
+      }
+    },
+    "02-concept/010-starzip": {
+      "title": { "ko": "시안 10 - 지도를 어둡게", "en": "Concept 10 - dark map" },
+      "desc": {
+        "ko": "지도 구간을 어둡게 내리고 파트너 모집과 FAQ 를 새로 넣었다. 페이지가 가장 길어진 안이다.",
+        "en": "The map band goes dark and partner recruiting and an FAQ are added - the longest the page ever gets."
+      }
+    },
+    "02-concept/011-starzip": {
+      "title": { "ko": "시안 11 - 뒤쪽을 어둡게", "en": "Concept 11 - dark tail" },
+      "desc": {
+        "ko": "앞의 밝고 어둡고를 뒤집어 목록과 FAQ 를 어둡게 깔고, 맨 끝을 지구 사진으로 닫는다.",
+        "en": "The earlier rhythm inverted - the list and FAQ go dark, and the page closes on an image of the earth."
+      }
+    },
+    "02-concept/012-blog_details": {
+      "title": { "ko": "블로그 글, 띠 없는 안", "en": "Article, no banner" },
+      "desc": {
+        "ko": "그러데이션 띠 없이 제목부터 시작하고 그림을 본문 안으로 들인 안. 쓰이는 쪽은 띠가 있는 판이다.",
+        "en": "No gradient band - the title starts the page and the image moves inside the body. The banner version is the one in use."
+      }
+    },
+    "02-concept/013-type1": {
+      "title": { "ko": "다른 자리매김 1 - 상점 쪽에서", "en": "Other positioning 1 - merchant-first" },
+      "desc": {
+        "ko": "자산과 유동성이 아니라 동네 상점에서 말을 시작한다. 로고 줄과 실적 숫자를 앞세우고 「Bring your local business on-chain, globally」로 닫는다.",
+        "en": "Starts from the local shop instead of assets and liquidity - a logo strip and hard numbers up front, closing on \"Bring your local business on-chain, globally\"."
+      }
+    },
+    "02-concept/014-type1": {
+      "title": { "ko": "다른 자리매김 2 - 파란 바탕", "en": "Other positioning 2 - gradient hero" },
+      "desc": {
+        "ko": "같은 자리매김에 사진 대신 파란 그러데이션을 깔고 숫자를 지도 옆에 붙였다.",
+        "en": "The same positioning with a blue gradient instead of a photo, and the numbers moved up beside the map."
+      }
+    }
+  }
+}

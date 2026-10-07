@@ -1,0 +1,446 @@
+{
+  "pages": {
+    "00-oct": {
+      "ko": "10월 - 캐릭터와 출시 다듬기",
+      "en": "October - character and launch polish"
+    },
+    "01-v2": {
+      "ko": "스타그라운드 v2",
+      "en": "StarGround v2"
+    },
+    "02-v1": {
+      "ko": "v1 - 카드 도감까지",
+      "en": "v1 - up to the card book"
+    },
+    "03-early": {
+      "ko": "탐색 과정 - 초기 스킨",
+      "en": "Exploration - early skins"
+    }
+  },
+  "flow": [
+    [
+      "01-v2/016-splash",
+      "01-v2/017-start-sheet"
+    ],
+    [
+      "01-v2/017-start-sheet",
+      "01-v2/001-today"
+    ],
+    [
+      "01-v2/001-today",
+      "01-v2/002-pick-sheet"
+    ],
+    [
+      "01-v2/002-pick-sheet",
+      "01-v2/003-six-choice"
+    ],
+    [
+      "01-v2/007-settle",
+      "01-v2/006-result"
+    ],
+    [
+      "01-v2/004-season",
+      "01-v2/005-crew"
+    ],
+    [
+      "01-v2/009-reward",
+      "01-v2/010-reward-pending"
+    ],
+    [
+      "01-v2/011-me",
+      "01-v2/012-invite"
+    ],
+    [
+      "01-v2/012-invite",
+      "01-v2/013-invites"
+    ],
+    [
+      "01-v2/011-me",
+      "01-v2/014-attendance"
+    ],
+    [
+      "02-v1/001-today",
+      "02-v1/002-season"
+    ],
+    [
+      "02-v1/004-cards-map",
+      "02-v1/005-cards-book"
+    ],
+    [
+      "03-early/001-dark-splash",
+      "03-early/002-dark-pick"
+    ]
+  ],
+  "frames": {
+    "00-oct/001-today": {
+      "title": {
+        "ko": "오늘 - 캐릭터가 든 대표 카드",
+        "en": "Today - the hero card with the character"
+      },
+      "desc": {
+        "ko": "별 두건을 쓴 캐릭터가 대표 카드에 들어왔다. 시간대마다 장면이 바뀌고, 나머지 화면은 v2 의 구조를 그대로 둔다.",
+        "en": "A character in a star hood now sits in the hero card, and the scene changes with the time of day. The rest of the screen keeps the v2 structure."
+      }
+    },
+    "00-oct/002-complete": {
+      "title": {
+        "ko": "오늘 - 다섯 판을 다 낸 날",
+        "en": "Today - all five answered"
+      },
+      "desc": {
+        "ko": "다섯 판에 다 답하면 대표 카드가 완료 상태로 바뀐다. 오늘 낸 답을 다시 보거나 공유하는 데로 이어진다.",
+        "en": "Once all five are answered, the hero card switches to its done state and leads to reviewing or sharing today's answers."
+      }
+    },
+    "00-oct/003-start-sheet": {
+      "title": {
+        "ko": "시작 시트 - 별명만 정하면 끝",
+        "en": "Start sheet - just pick a nickname"
+      },
+      "desc": {
+        "ko": "첫 진입에는 별명 하나만 묻는다. 캐릭터가 시트 위에서 맞는다.",
+        "en": "The first visit asks for one thing, a nickname, and the character greets you on the sheet."
+      }
+    },
+    "00-oct/004-pending": {
+      "title": {
+        "ko": "결과 대기 - 자정에 셈해요",
+        "en": "Waiting - settled at midnight"
+      },
+      "desc": {
+        "ko": "답을 낸 판은 자정 집계까지 기다린다. 기다리는 자세의 캐릭터와 내가 고른 답, 건 별포인트를 함께 둔다.",
+        "en": "An answered question waits for the midnight count. A waiting pose sits beside your choice and stake."
+      }
+    },
+    "00-oct/005-win": {
+      "title": {
+        "ko": "결과 - 맞혔어요",
+        "en": "Result - correct"
+      },
+      "desc": {
+        "ko": "맞히면 건 별포인트의 두 배. 결과 카드의 캐릭터 자세가 결과마다 다르다.",
+        "en": "A correct answer pays double the stake, and the character's pose on the result card changes with the outcome."
+      }
+    },
+    "00-oct/006-lose": {
+      "title": {
+        "ko": "결과 - 틀렸어요",
+        "en": "Result - wrong"
+      },
+      "desc": {
+        "ko": "틀리면 건 만큼 잃는다. 같은 카드 틀에 숫자와 자세만 바뀐다.",
+        "en": "A wrong answer loses the stake. Same card, only the number and the pose change."
+      }
+    },
+    "00-oct/007-season": {
+      "title": {
+        "ko": "픽 · 시즌 - 웹 모바일 QA 뒤",
+        "en": "Picks and season - after web mobile QA"
+      },
+      "desc": {
+        "ko": "긴 숫자를 한 줄로, 숫자는 오른쪽 정렬, 글씨는 한 단계 작게. 지난 픽 성적표 카드에도 캐릭터를 올렸다.",
+        "en": "Long numbers kept to one line and right aligned, type one step smaller. The past-pick report card gets the character too."
+      }
+    },
+    "00-oct/008-ranking": {
+      "title": {
+        "ko": "시즌 순위 전체 보기",
+        "en": "Full season ranking"
+      },
+      "desc": {
+        "ko": "10위 목록 아래 「전체 보기」가 하위 화면으로 열린다. 내 순위는 맨 아래에 고정한다.",
+        "en": "「See all」 under the top ten opens a sub-screen, with your own rank pinned at the bottom."
+      }
+    },
+    "00-oct/009-maintenance": {
+      "title": {
+        "ko": "점검 중",
+        "en": "Maintenance"
+      },
+      "desc": {
+        "ko": "점검 화면도 캐릭터 자세 하나로 그렸다. 다시 열리는 시각만 칩으로 둔다.",
+        "en": "Maintenance is drawn with one more pose, and only the reopening time sits in a chip."
+      }
+    },
+    "01-v2/001-today": {
+      "title": {
+        "ko": "오늘 - 서울 데이터로 만든 다섯 문제",
+        "en": "Today - five questions from Seoul data"
+      },
+      "desc": {
+        "ko": "서울시 결제 · 유동인구 집계 데이터로 만든 오늘의 문제 다섯을 한 판으로 연다. 대표 그림 카드 하나와 남은 시간, 이어서 풀 문제를 첫 화면에 둔다.",
+        "en": "Today's five questions, built from Seoul's aggregated card-spending and foot-traffic data, open as one round. One hero card, the time left and the next question to answer sit on the first screen."
+      }
+    },
+    "01-v2/002-pick-sheet": {
+      "title": {
+        "ko": "문제 시트 - 고르고 걸기",
+        "en": "Question sheet - choose and stake"
+      },
+      "desc": {
+        "ko": "선택지를 고르고 별포인트를 슬라이더로 건다. 걸기는 선택이라 0P 로도 답할 수 있고, 답을 낸 판은 바꿀 수 없다.",
+        "en": "Choose an answer and stake star points with the slider. Staking is optional, so a question can be answered with zero points, and an answer cannot be changed once sent."
+      }
+    },
+    "01-v2/003-six-choice": {
+      "title": {
+        "ko": "6지선다 - 2열 카드 격자",
+        "en": "Six choices - a two-column grid"
+      },
+      "desc": {
+        "ko": "선택지가 다섯 이상이면 시트가 2열 카드 격자로 바뀌고, 홀수면 마지막 칸이 두 칸 폭을 쓴다. 맞는 그림이 없는 선택지는 기본 그림과 A~F 배지로 구분한다.",
+        "en": "With five or more answers the sheet becomes a two-column card grid, the last card spanning both columns when the count is odd. Answers without a matching picture use a default image and an A to F badge."
+      }
+    },
+    "01-v2/004-season": {
+      "title": {
+        "ko": "시즌 - 이번 주 순위",
+        "en": "Season - this week's ranking"
+      },
+      "desc": {
+        "ko": "월요일부터 일요일까지를 한 시즌으로 정답률, 시즌 포인트, 내 순위를 보여 준다. 집계 중 띠와 컷라인 구분을 넣어 지금 자리가 확정 전임을 알린다.",
+        "en": "A season runs Monday to Sunday and shows accuracy, season points and my rank. A tallying strip and a cut line make clear the current position is not final yet."
+      }
+    },
+    "01-v2/005-crew": {
+      "title": {
+        "ko": "친구 순위",
+        "en": "Friends ranking"
+      },
+      "desc": {
+        "ko": "초대로 이어진 친구끼리의 순위를 시즌 순위와 같은 줄 문법으로 따로 보여 준다. 비회원도 순위에 들고, 동점이면 정답 수, 그다음 먼저 들어온 순으로 가른다.",
+        "en": "A ranking among friends linked by invites, in the same row grammar as the season ranking. Guests are ranked too; ties go to more correct answers, then to whoever joined first."
+      }
+    },
+    "01-v2/006-result": {
+      "title": {
+        "ko": "결과 - 지난 판을 숫자 네 칸으로",
+        "en": "Result - the last round in four numbers"
+      },
+      "desc": {
+        "ko": "지난 판의 결과를 정답 수, 건 포인트, 결과, 순위 변동 네 칸으로 줄였다. 문제별 결과와 공유 카드로 이어진다.",
+        "en": "The previous round is reduced to four numbers - correct answers, points staked, result and rank change. It leads on to per-question results and a share card."
+      }
+    },
+    "01-v2/007-settle": {
+      "title": {
+        "ko": "정산 - 맞히면 두 배",
+        "en": "Settlement - double if right"
+      },
+      "desc": {
+        "ko": "셈은 1:1 고정이다. 맞히면 건 포인트의 두 배, 틀리면 0 이고 정답이 없는 문제만 돌려준다. 자정에 정산되고 순위 변동이 함께 뜬다.",
+        "en": "Settlement is fixed at one to one. A right answer pays double the stake, a wrong one pays nothing, and only a question with no correct answer is refunded. It settles at midnight together with the rank change."
+      }
+    },
+    "01-v2/008-receipt": {
+      "title": {
+        "ko": "영수증 응모 - 가게 결제로 한 번 더",
+        "en": "Receipt entry - one more chance from a shop"
+      },
+      "desc": {
+        "ko": "지정 상점에서 결제한 영수증을 올리면 추첨에 응모된다. 이번 회차 상품과 마감, 내가 올린 영수증의 확인 상태를 한 화면에 둔다.",
+        "en": "Uploading a receipt from a listed shop enters a prize draw. This round's prize, its deadline and the review status of my receipts share one screen."
+      }
+    },
+    "01-v2/009-reward": {
+      "title": {
+        "ko": "리워드 - 순위 안에 들면 기프티콘",
+        "en": "Rewards - gifticons for the top ranks"
+      },
+      "desc": {
+        "ko": "상단 띠는 순손익 기준이고 순위는 목요일 0시에 확정된다. 구간별 기프티콘과 받은 기프티콘 칸, 보상 규칙 팝오버를 둔다.",
+        "en": "The top strip is based on net gain, and the ranking locks at midnight on Thursday. Gifticons by tier, a slot for gifticons received and a rules popover sit below."
+      }
+    },
+    "01-v2/010-reward-pending": {
+      "title": {
+        "ko": "리워드 - 확정 전",
+        "en": "Rewards - before the ranking locks"
+      },
+      "desc": {
+        "ko": "순위가 확정되기 전의 같은 화면이다. 받을 예정인 구간을 미리 보여 주되 아직 지급되지 않았음을 상태 칩으로 구분했다.",
+        "en": "The same screen before the ranking locks. The expected tier is shown ahead of time, and a status chip makes clear nothing has been paid out yet."
+      }
+    },
+    "01-v2/011-me": {
+      "title": {
+        "ko": "내 별포인트 - 할 일과 내역",
+        "en": "My star points - quests and history"
+      },
+      "desc": {
+        "ko": "별포인트 잔액과 별명 바꾸기, 첫 진입 · 가입 · 출석 · 친구 초대 같은 할 일을 모았다. 아래로 초대 링크와 내역이 이어진다.",
+        "en": "Star point balance, nickname editing and quests such as first visit, sign-up, attendance and inviting friends. The invite link and history follow below."
+      }
+    },
+    "01-v2/012-invite": {
+      "title": {
+        "ko": "친구 초대 - 링크와 코드",
+        "en": "Invite friends - link and code"
+      },
+      "desc": {
+        "ko": "비회원도 초대 링크와 코드를 받는다. 친구가 가입하고 한 판에 답하면 초대가 인정되고 별포인트가 쌓인다.",
+        "en": "Guests get an invite link and code as well. An invite counts once the friend signs up and answers one round, and star points are added."
+      }
+    },
+    "01-v2/013-invites": {
+      "title": {
+        "ko": "초대 전체 목록",
+        "en": "All invites"
+      },
+      "desc": {
+        "ko": "초대한 친구와 인정 여부, 받은 포인트를 줄마다 적고 하루 상한을 머리에 둔다. 이니셜 아바타는 별명에서 정해지는 배색을 쓴다.",
+        "en": "Each row lists an invited friend, whether the invite counted and the points earned, with the daily cap at the top. Initial avatars take a colour derived from the nickname."
+      }
+    },
+    "01-v2/014-attendance": {
+      "title": {
+        "ko": "출석 - 하루 세 판",
+        "en": "Attendance - three rounds a day"
+      },
+      "desc": {
+        "ko": "출석은 하루 세 판에 답하는 것으로 세고, 걸었는지와는 상관없다. 달력 위에 이번 달 출석과 연속 일수를 보여 준다.",
+        "en": "Attendance counts when three rounds are answered in a day, whether or not anything was staked. The calendar shows this month's attendance and the current streak."
+      }
+    },
+    "01-v2/015-history": {
+      "title": {
+        "ko": "내역 - 판별 결과",
+        "en": "History - results by round"
+      },
+      "desc": {
+        "ko": "지난 판의 문제와 내 답, 결과와 포인트 변화를 날짜별로 쌓았다. 별포인트 화면과 같은 내역 줄 부품을 쓴다.",
+        "en": "Past questions, my answers, results and point changes stacked by date. It uses the same history row part as the star points screen."
+      }
+    },
+    "01-v2/016-splash": {
+      "title": {
+        "ko": "스플래시",
+        "en": "Splash"
+      },
+      "desc": {
+        "ko": "앱 첫 진입 화면이다. 별 마스코트와 워드마크만 두고 곧바로 오늘 화면으로 넘어간다.",
+        "en": "The first screen on opening the app. Only the star mascot and the wordmark, then straight on to today."
+      }
+    },
+    "01-v2/017-start-sheet": {
+      "title": {
+        "ko": "시작 시트 - 별명 정하기",
+        "en": "Start sheet - choosing a nickname"
+      },
+      "desc": {
+        "ko": "첫 진입에서 별명이 없으면 스플래시 뒤에 시작 시트가 자동으로 뜬다. 길이와 중복 규칙을 입력칸 아래에 바로 보여 준다.",
+        "en": "On a first visit without a nickname, the start sheet opens on its own after the splash. Length and duplicate rules show right under the field."
+      }
+    },
+    "01-v2/018-web-today": {
+      "title": {
+        "ko": "데스크톱 - 오늘",
+        "en": "Desktop - today"
+      },
+      "desc": {
+        "ko": "같은 앱을 데스크톱 폭으로 연 모습이다. 하단 알약 탭 대신 왼쪽 레일을 쓰고, 본문 폭은 폰과 같게 둔다.",
+        "en": "The same app at desktop width. A left rail replaces the floating pill tab bar, and the content keeps the phone's width."
+      }
+    },
+    "02-v1/001-today": {
+      "title": {
+        "ko": "v1 오늘 - 다섯 개의 질문, 하나의 판",
+        "en": "v1 today - five questions, one round"
+      },
+      "desc": {
+        "ko": "종이 바탕에 라임과 보라를 쓴 첫 확정본이다. 오늘의 판 카드에 서울 명소 클레이를 세우고, 아래에 문제 다섯을 목록으로 둔다.",
+        "en": "The first confirmed build, with lime and purple on a paper ground. Today's round card carries a clay model of a Seoul landmark, with the five questions listed below."
+      }
+    },
+    "02-v1/002-season": {
+      "title": {
+        "ko": "v1 판 · 시즌 - 7일의 판과 정산",
+        "en": "v1 round and season - seven days and settlement"
+      },
+      "desc": {
+        "ko": "한 주 일곱 판을 칸으로 보여 주고 최근 판의 결과, 시즌 리더보드, 어제 판의 정산과 순위 변동을 한 페이지에 이었다.",
+        "en": "A week's seven rounds as cells, then the latest result, the season leaderboard, yesterday's settlement and the rank change on one page."
+      }
+    },
+    "02-v1/003-receipt": {
+      "title": {
+        "ko": "v1 영수증 - 먹고 올리면 치킨이 걸려요",
+        "en": "v1 receipt - eat, upload, win"
+      },
+      "desc": {
+        "ko": "로컬 가게 영수증을 올리면 이번 판 추첨에 응모하는 화면이다. 상품 카드와 업로드 칸, 내가 올린 영수증의 확인 상태를 둔다.",
+        "en": "Uploading a receipt from a local shop enters this round's draw. A prize card, an upload slot and the status of my receipts."
+      }
+    },
+    "02-v1/004-cards-map": {
+      "title": {
+        "ko": "v1 카드 - 지도",
+        "en": "v1 cards - map"
+      },
+      "desc": {
+        "ko": "모은 장소 카드를 서울 지도 위 구역 핀으로 보여 준다. 구역마다 모은 수와 전체 수를 적었다.",
+        "en": "Collected place cards shown as district pins on a map of Seoul. Each pin shows how many were collected out of the total."
+      }
+    },
+    "02-v1/005-cards-book": {
+      "title": {
+        "ko": "v1 카드 - 도감",
+        "en": "v1 cards - card book"
+      },
+      "desc": {
+        "ko": "영수증을 올리면 받는 장소 카드를 구역별 도감으로 모은다. 아직 못 받은 카드는 흐린 실루엣으로 자리를 남긴다.",
+        "en": "Place cards earned from receipts are collected in a book by district. Cards not yet earned keep their slot as a faded silhouette."
+      }
+    },
+    "03-early/001-dark-splash": {
+      "title": {
+        "ko": "초기 스킨 다크 - 스플래시",
+        "en": "Early dark skin - splash"
+      },
+      "desc": {
+        "ko": "이전 이름을 쓰던 시기의 다크 스킨이다. 주황 한 색 위에 워드마크를 올린 스플래시로 시작한다.",
+        "en": "The dark skin from the period under the previous name. It opens with a splash of the wordmark on solid orange."
+      }
+    },
+    "03-early/002-dark-pick": {
+      "title": {
+        "ko": "초기 스킨 다크 - 문제",
+        "en": "Early dark skin - question"
+      },
+      "desc": {
+        "ko": "검정 바탕에 짙은 회색 카드, 주황 강조를 쓴 문제 화면이다. 네 선택지와 거는 포인트 슬라이더의 배치는 v2 까지 이어졌다.",
+        "en": "A question screen with dark grey cards on black and an orange accent. The layout of four answers and a stake slider carried through to v2."
+      }
+    },
+    "03-early/003-dark-rank": {
+      "title": {
+        "ko": "초기 스킨 다크 - 시즌 순위",
+        "en": "Early dark skin - season ranking"
+      },
+      "desc": {
+        "ko": "시즌 순위표와 컷라인, 순위 상품과 순위 규칙을 한 화면에 세운 판이다. 규칙을 화면에 길게 적던 방식은 v2 에서 보상 규칙 팝오버로 옮겨 갔다.",
+        "en": "Season table, cut line, prizes and ranking rules on one screen. Writing the rules out at length later moved into a rules popover in v2."
+      }
+    },
+    "03-early/004-dark-me": {
+      "title": {
+        "ko": "초기 스킨 다크 - 내 포인트",
+        "en": "Early dark skin - my points"
+      },
+      "desc": {
+        "ko": "퀘스트와 시즌 경품, 내 픽 내역을 한 화면에 쌓았다. 내 기프티콘과 친구 초대는 머리의 두 버튼으로 뺐다.",
+        "en": "Quests, season prizes and pick history stacked on one screen. My gifticons and inviting friends are pulled up into two buttons at the top."
+      }
+    },
+    "03-early/005-light-pick": {
+      "title": {
+        "ko": "초기 스킨 라이트 - 문제",
+        "en": "Early light skin - question"
+      },
+      "desc": {
+        "ko": "같은 구조를 민트 강조의 밝은 바탕으로 옮긴 변형이다. 장소 클레이 그림을 문제 머리에 처음 올린 판이기도 하다.",
+        "en": "The same structure moved onto a light ground with a mint accent. It is also the first build to put a clay place illustration at the head of a question."
+      }
+    }
+  }
+}

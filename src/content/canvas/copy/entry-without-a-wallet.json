@@ -1,0 +1,408 @@
+{
+  "pages": {
+    "01-landing": { "ko": "랜딩", "en": "Landing" },
+    "02-purchase": { "ko": "구매와 공개", "en": "Buy and reveal" },
+    "03-nft": { "ko": "보유와 상세", "en": "Holdings" },
+    "04-concept": { "ko": "시안", "en": "Concepts" }
+  },
+  "flow": [
+    ["01-landing/013-layout_mobile_menu_sign", "01-landing/024-wallet"],
+    ["01-landing/024-wallet", "01-landing/032-layout_buy"],
+
+    ["02-purchase/001-layout_buy", "02-purchase/004-purchase-1"],
+    ["02-purchase/004-purchase-1", "02-purchase/012-purchaseb_1"],
+    ["02-purchase/012-purchaseb_1", "02-purchase/013-purchase-2"],
+    ["02-purchase/013-purchase-2", "02-purchase/014-reveal_start"],
+    ["02-purchase/014-reveal_start", "02-purchase/016-reveal_end"],
+
+    ["02-purchase/034-nft-purchase", "02-purchase/043-nft-purchase_sign"],
+    ["02-purchase/043-nft-purchase_sign", "02-purchase/036-nft-purchase_wallet"],
+
+    ["02-purchase/055-reveal", "02-purchase/062-reveal"],
+    ["02-purchase/062-reveal", "02-purchase/073-reveal"],
+    ["02-purchase/073-reveal", "02-purchase/082-reveal"]
+  ],
+  "frames": {
+    "01-landing/001-layout_wide": {
+      "title": { "ko": "랜딩", "en": "Landing" },
+      "desc": {
+        "ko": "첫 문장부터 자주 묻는 질문까지 한 장에 담은 데스크톱 랜딩.",
+        "en": "The desktop landing in one frame, from the opening line through the questions."
+      }
+    },
+    "01-landing/002-layout_buy": {
+      "title": { "ko": "구매", "en": "Buy" },
+      "desc": {
+        "ko": "도시 카드 한 장과 수량, 합계를 한 화면에 놓았다.",
+        "en": "One city card, the quantity, and the total on a single view."
+      }
+    },
+    "01-landing/011-layout_mobile": {
+      "title": { "ko": "모바일 랜딩", "en": "Landing on mobile" },
+      "desc": {
+        "ko": "같은 랜딩을 한 칸으로 접었다.",
+        "en": "The same landing folded into one column."
+      }
+    },
+    "01-landing/012-layout_mobile_menu": {
+      "title": { "ko": "모바일 메뉴, 들어오기 전", "en": "Mobile menu, signed out" },
+      "desc": {
+        "ko": "로그인 버튼 하나뿐이다. 지갑은 아직 묻지 않는다.",
+        "en": "Sign in and nothing else. The wallet is not asked for yet."
+      }
+    },
+    "01-landing/013-layout_mobile_menu_sign": {
+      "title": { "ko": "모바일 메뉴, 들어온 뒤", "en": "Mobile menu, signed in" },
+      "desc": {
+        "ko": "계정으로 들어온 다음에야 지갑 연결이 메뉴에 선다.",
+        "en": "Connect Wallet appears only after the account is in."
+      }
+    },
+    "01-landing/018-layout_scroll": {
+      "title": { "ko": "자주 묻는 질문", "en": "Questions answered" },
+      "desc": {
+        "ko": "아래로 내려간 상태. 구매 막대가 하단에 따라붙는다.",
+        "en": "Scrolled down, with the buy bar following at the foot."
+      }
+    },
+    "01-landing/024-wallet": {
+      "title": { "ko": "지갑이 붙은 상태", "en": "Wallet attached" },
+      "desc": {
+        "ko": "지갑을 연결하면 머리말에 잔액이 선다.",
+        "en": "Once a wallet is connected the header carries the balance."
+      }
+    },
+    "01-landing/032-layout_buy": {
+      "title": { "ko": "잔액이 없는 구매", "en": "Buying with an empty wallet" },
+      "desc": {
+        "ko": "지갑은 붙었으나 살 돈이 없는 자리.",
+        "en": "The wallet is attached but there is nothing in it."
+      }
+    },
+    "01-landing/034-home_wide": {
+      "title": { "ko": "홈 전체", "en": "Home, full length" },
+      "desc": {
+        "ko": "머리말부터 푸터까지 끊지 않고 이어 붙였다.",
+        "en": "Header to footer with nothing cut out."
+      }
+    },
+    "01-landing/071-home_wide_0304": {
+      "title": { "ko": "홈 전체, 개정본", "en": "Home, revised" },
+      "desc": {
+        "ko": "구간 차례와 카드 배치를 다시 짠 판.",
+        "en": "A later pass that reorders the sections and the cards."
+      }
+    },
+    "01-landing/078-privacy-policy": {
+      "title": { "ko": "개인정보 처리방침", "en": "Privacy policy" },
+      "desc": {
+        "ko": "절 번호가 1·2·6·8 로 건너뛴다. 틀만 세우고 본문은 끝까지 안 채웠다.",
+        "en": "The sections jump 1, 2, 6, 8 - the frame is up but the text was never finished."
+      }
+    },
+    "01-landing/079-terms-of-use": {
+      "title": { "ko": "이용약관", "en": "Terms of use" },
+      "desc": {
+        "ko": "런치패드와 락업, 베스팅까지 담았다. 표의 분기는 셋 다 Q1 로 남아 있다.",
+        "en": "Launchpad, lock-up, and vesting. The schedule table still reads Q1 three times."
+      }
+    },
+
+    "02-purchase/001-layout_buy": {
+      "title": { "ko": "구매", "en": "Buy" },
+      "desc": {
+        "ko": "플로우가 시작되는 자리.",
+        "en": "Where the flow starts."
+      }
+    },
+    "02-purchase/004-purchase-1": {
+      "title": { "ko": "트랜잭션 진행", "en": "Transaction in progress" },
+      "desc": {
+        "ko": "체인에 올라가는 동안 기다리는 화면.",
+        "en": "The wait while the transaction goes onto the chain."
+      }
+    },
+    "02-purchase/012-purchaseb_1": {
+      "title": { "ko": "민팅 완료", "en": "Minted" },
+      "desc": {
+        "ko": "몇 장을 받았고 얼마가 남았는지 알린다.",
+        "en": "How many arrived and how many are left."
+      }
+    },
+    "02-purchase/013-purchase-2": {
+      "title": { "ko": "구매 완료", "en": "Purchase complete" },
+      "desc": {
+        "ko": "샀다는 말과 곧 공개가 시작된다는 말만 남긴 자리.",
+        "en": "Says the purchase landed, then says the reveal is coming."
+      }
+    },
+    "02-purchase/014-reveal_start": {
+      "title": { "ko": "공개 전", "en": "Before the reveal" },
+      "desc": {
+        "ko": "카드가 뒤집힌 채 기다린다.",
+        "en": "The card waits face down."
+      }
+    },
+    "02-purchase/016-reveal_end": {
+      "title": { "ko": "공개 완료", "en": "Revealed" },
+      "desc": {
+        "ko": "어느 도시를 받았는지 카드가 앞을 보인다.",
+        "en": "The card turns over and names the city."
+      }
+    },
+    "02-purchase/026-layout_buy": {
+      "title": { "ko": "모바일 구매", "en": "Buying on mobile" },
+      "desc": {
+        "ko": "혜택 목록까지 한 칸으로 내려 붙였다.",
+        "en": "Down to one column, benefits included."
+      }
+    },
+    "02-purchase/034-nft-purchase": {
+      "title": { "ko": "구매, 곁패널", "en": "Buy with a side panel" },
+      "desc": {
+        "ko": "카드와 구매 패널을 좌우로 갈랐다. 남은 수량과 이미 산 사람 수가 서로 안 맞는다.",
+        "en": "Card on the left, buy panel on the right. The remaining count and the collector count do not agree."
+      }
+    },
+    "02-purchase/036-nft-purchase_wallet": {
+      "title": { "ko": "지갑을 묻는 자리", "en": "Where the wallet is asked for" },
+      "desc": {
+        "ko": "살 때가 되어서야 지갑을 묻는다. 이 작업의 핵심 판단이 서는 화면.",
+        "en": "The wallet is asked for at the point of buying and nowhere earlier."
+      }
+    },
+    "02-purchase/043-nft-purchase_sign": {
+      "title": { "ko": "로그인을 묻는 자리", "en": "Where sign in is asked for" },
+      "desc": {
+        "ko": "계정과 지갑을 한 문으로 묶지 않았다.",
+        "en": "Account and wallet were never bound into one door."
+      }
+    },
+    "02-purchase/053-terms-agreement": {
+      "title": { "ko": "약관 동의", "en": "Terms agreement" },
+      "desc": {
+        "ko": "사기 직전에 동의를 받는다.",
+        "en": "Consent taken immediately before the purchase."
+      }
+    },
+    "02-purchase/055-reveal": {
+      "title": { "ko": "공개", "en": "Reveal" },
+      "desc": {
+        "ko": "뒤집힌 카드 한 장과 0 / 1. 「공개 전」과 픽셀까지 같은 장이 번호만 달리해 두 번 들어왔다.",
+        "en": "One face-down card and a 0 / 1 counter - pixel for pixel the same frame as Before the reveal, filed twice under two numbers."
+      }
+    },
+    "02-purchase/062-reveal": {
+      "title": { "ko": "공개된 카드", "en": "The revealed card" },
+      "desc": {
+        "ko": "열 장 중 두 장을 뒤집은 중간 상태. 공유 버튼이 이때 붙는다.",
+        "en": "Two of ten turned over. Share appears at this point."
+      }
+    },
+    "02-purchase/073-reveal": {
+      "title": { "ko": "여러 장 공개", "en": "All revealed" },
+      "desc": {
+        "ko": "한꺼번에 여러 장을 받은 경우.",
+        "en": "When several arrive at once."
+      }
+    },
+    "02-purchase/081-reveal": {
+      "title": { "ko": "공개 후", "en": "After the reveal" },
+      "desc": {
+        "ko": "다 열었다고 알리고 보유 화면으로 보낸다. 「공개 완료」와 같은 장이다.",
+        "en": "Announces that everything is open and sends you to the holdings - the same frame as Revealed."
+      }
+    },
+    "02-purchase/082-reveal": {
+      "title": { "ko": "공유", "en": "Share" },
+      "desc": {
+        "ko": "받은 도시를 밖으로 알리는 카드.",
+        "en": "A card made for taking the city outside."
+      }
+    },
+
+    "03-nft/001-layout_menu": {
+      "title": { "ko": "계정 메뉴", "en": "Account menu" },
+      "desc": {
+        "ko": "머리말과 드롭다운만 그린 자리. 본문은 비었고 이름은 아직 자리표시다.",
+        "en": "Only the header and the dropdown were drawn; the body is empty and the name is still placeholder text."
+      }
+    },
+    "03-nft/003-details": {
+      "title": { "ko": "도시 상세", "en": "City detail" },
+      "desc": {
+        "ko": "특성과 체인 정보를 한 장에 폈다.",
+        "en": "Traits and chain details laid out together."
+      }
+    },
+    "03-nft/004-details_modal": {
+      "title": { "ko": "상세 위 공유", "en": "Share over the detail" },
+      "desc": {
+        "ko": "상세 위에 공유 카드를 띄운다. 뒤 화면과 미리보기의 도시 이름이 서로 다르다.",
+        "en": "A share card over the detail. The city named behind and the one in the preview are not the same."
+      }
+    },
+    "03-nft/005-mypage": {
+      "title": { "ko": "내 페이지", "en": "My page" },
+      "desc": {
+        "ko": "가진 도시를 모아 보는 자리.",
+        "en": "Where the cities you hold gather."
+      }
+    },
+    "03-nft/007-layout_mobile_menu_sign": {
+      "title": { "ko": "모바일 계정 메뉴", "en": "Account menu on mobile" },
+      "desc": {
+        "ko": "지갑 주소와 잔액이 메뉴 안에 들어간다.",
+        "en": "The wallet address and balance live inside the menu."
+      }
+    },
+    "03-nft/008-layout_buy": {
+      "title": { "ko": "구매", "en": "Buy" },
+      "desc": {
+        "ko": "같은 구매 화면을 이미 산 사람이 다시 연 판. 「내가 구매한 수량」이 그 자리를 대신한다.",
+        "en": "The same buy screen reopened by someone who already bought - quantity purchased takes that slot."
+      }
+    },
+    "03-nft/009-reveal": {
+      "title": { "ko": "공개", "en": "Reveal" },
+      "desc": {
+        "ko": "카드 한 장만 남기고 다 덜어냈다. 오버레이로 띄우는 판.",
+        "en": "Everything stripped away but the card. The overlay pass."
+      }
+    },
+    "03-nft/013-mypage": {
+      "title": { "ko": "내 페이지, 다른 판", "en": "My page, another pass" },
+      "desc": {
+        "ko": "배너와 프로필을 위에 얹었다. 다섯 칸이 모두 같은 도시로 채워져 있다.",
+        "en": "A banner and profile laid on top. All five slots hold the same city."
+      }
+    },
+    "03-nft/014-details": {
+      "title": { "ko": "도시 상세, 밝은 판", "en": "City detail, light" },
+      "desc": {
+        "ko": "밝은 바탕에 특성과 체인 정보를 폈다. 특성 여섯 칸이 전부 같은 값이다.",
+        "en": "Traits and chain details on a light ground. All six trait slots carry the same value."
+      }
+    },
+    "03-nft/026-mygenesis_owner": {
+      "title": { "ko": "보유자 화면", "en": "Owner view" },
+      "desc": {
+        "ko": "합계와 몫이 목록 위에 선다.",
+        "en": "Totals and share stand above the list."
+      }
+    },
+    "03-nft/031-mygenesis_guest": {
+      "title": { "ko": "손님 화면", "en": "Guest view" },
+      "desc": {
+        "ko": "남의 보유 목록을 지갑 없이 끝까지 본다.",
+        "en": "Someone else's holdings, viewable all the way through without a wallet."
+      }
+    },
+    "03-nft/032-mygenesis_empty": {
+      "title": { "ko": "빈 상태", "en": "Empty state" },
+      "desc": {
+        "ko": "아직 없는 사람에게 다음 걸음을 준다.",
+        "en": "Gives the next step to someone who holds nothing yet."
+      }
+    },
+    "03-nft/041-404-page": {
+      "title": { "ko": "없는 쪽", "en": "Not found" },
+      "desc": {
+        "ko": "들어온 상태에서도 지갑 칩을 그대로 두고 홈과 뒤로만 준다.",
+        "en": "Keeps the wallet chip even here, and offers only home and back."
+      }
+    },
+    "03-nft/046-nft": {
+      "title": { "ko": "도시 카드, 뉴욕", "en": "City card, New York" },
+      "desc": {
+        "ko": "자유의 여신상을 핀 안에 담은 앞면. 지도 바탕에 금박 테두리.",
+        "en": "The Statue of Liberty inside the pin. A map ground with a gold edge."
+      }
+    },
+    "03-nft/047-nft": {
+      "title": { "ko": "도시 카드, 두바이", "en": "City card, Dubai" },
+      "desc": {
+        "ko": "같은 틀에 부르즈 할리파를 넣었다. 이름줄 색이 뉴욕과 다르다.",
+        "en": "Burj Khalifa in the same frame. The name line is colored differently from New York."
+      }
+    },
+    "03-nft/048-back": {
+      "title": { "ko": "카드 뒷면", "en": "Card back" },
+      "desc": {
+        "ko": "공개 전에는 이 면만 보인다.",
+        "en": "The only face shown before the reveal."
+      }
+    },
+
+    "04-concept/001-type-a": {
+      "title": { "ko": "A안", "en": "Concept A" },
+      "desc": {
+        "ko": "구매 화면을 첫 문장 바로 아래로 끌어올린 안.",
+        "en": "Pulls the buy screen right under the opening line."
+      }
+    },
+    "04-concept/002-type-a": {
+      "title": { "ko": "A안 첫 화면", "en": "Concept A, hero" },
+      "desc": {
+        "ko": "히어로 바로 아래 푸터가 붙은 조각. 제목 위 알약은 아직 「Text」다.",
+        "en": "Hero with the footer right underneath. The pill above the headline still says Text."
+      }
+    },
+    "04-concept/003-type-a": {
+      "title": { "ko": "A안 전체", "en": "Concept A, full length" },
+      "desc": {
+        "ko": "히어로를 어둡게 깔고 사이에 대비 구간과 혜택을 더 넣어 늘린 판.",
+        "en": "A darker hero, stretched out with a comparison section and the privileges added in between."
+      }
+    },
+    "04-concept/004-type-a": {
+      "title": { "ko": "A안 전체, 넓은 폭", "en": "Concept A, wide" },
+      "desc": {
+        "ko": "같은 차례를 1920 폭으로 다시 짰다. 혜택 자리에 세 장짜리 「Core Fundamentals」가 선다.",
+        "en": "The same order redrawn at 1920 wide, with a three-card Core Fundamentals in the privileges slot."
+      }
+    },
+    "04-concept/006-scroll": {
+      "title": { "ko": "맺음 구간", "en": "Closing section" },
+      "desc": {
+        "ko": "맺음 문장과 시작 버튼, 푸터. 위에 놓인 큰 카드는 아직 빈 자리다.",
+        "en": "The closing line, the button, and the footer. The big card above is still empty."
+      }
+    },
+    "04-concept/015-desktop---2": {
+      "title": { "ko": "첫 화면 시안", "en": "Hero study" },
+      "desc": {
+        "ko": "같은 문장을 더 크게 놓고 그라데이션만 바꿨다.",
+        "en": "The same line set larger, with only the gradient changed."
+      }
+    },
+    "04-concept/016-desktop---6": {
+      "title": { "ko": "다른 문장으로 연 첫 화면", "en": "Hero opening on a different line" },
+      "desc": {
+        "ko": "도시가 아니라 거래소를 앞세운 판.",
+        "en": "Leads with the exchange rather than the city."
+      }
+    },
+    "04-concept/020-type-b": {
+      "title": { "ko": "B안", "en": "Concept B" },
+      "desc": {
+        "ko": "구간을 카드로 끊어 쌓은 안.",
+        "en": "Stacks the sections as separate cards."
+      }
+    },
+    "04-concept/021-type-b": {
+      "title": { "ko": "B안 변형", "en": "Concept B, variant" },
+      "desc": {
+        "ko": "구매 블록을 빼고 그 자리에 지표 넷을 세웠다. 아래 색 판들은 아직 자리표시다.",
+        "en": "Drops the buy block and puts four figures in its place; the color panels below are still placeholders."
+      }
+    },
+    "04-concept/023-type-b": {
+      "title": { "ko": "B안 전체", "en": "Concept B, full length" },
+      "desc": {
+        "ko": "구매 블록을 검게 되돌리고 세 특징에 도식과 문장을 채워 넣었다.",
+        "en": "Puts the buy block back in black and fills the three points with diagrams and real copy."
+      }
+    }
+  }
+}
