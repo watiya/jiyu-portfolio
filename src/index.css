@@ -672,8 +672,6 @@ html[data-motion="off"] .wk:hover .wk__cover img { transform: none; }
 .wk__tag { margin: 0; color: var(--text-muted); font-size: var(--text-sm); text-wrap: pretty; }
 .wk__case { margin-top: var(--space-1); color: var(--accent-text); font-size: var(--text-sm); text-decoration: none; }
 .wk__case:hover { text-decoration: underline; }
-.wk-early { margin-top: var(--space-9); }
-.wk-early > .wk__tag { margin-top: var(--space-3); max-width: 56ch; }
 
 /* ---------- 검사 모드 ---------- */
 html[data-inspect="on"] [data-token] { outline: 1px dashed color-mix(in oklab, var(--accent-default) 35%, transparent); outline-offset: -1px; }
