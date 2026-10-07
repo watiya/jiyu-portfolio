@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { EMAIL, SOCIALS, type Step } from "../data.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { formatDay, getAppDetails, getApps, getJourney, getNow, getRecentWriting, getSteps, metaValue } from "../i18n/content.ts";
@@ -38,7 +38,7 @@ export function Home({ go }: { go: (href: string) => void }) {
 // ---------- 01 Hero ----------
 
 function Hero({ go }: { go: (href: string) => void }) {
-  const { dials } = useTokens();
+  const { dials, tokens } = useTokens();
   const { lang, t } = useLang();
   const HERO_DEFAULT = HERO_DEFAULTS[lang];
   const [size, setSize] = useState(HERO_DEFAULT.size);
@@ -48,8 +48,13 @@ function Hero({ go }: { go: (href: string) => void }) {
   const family = pair.heading.split(",")[0].replace(/'/g, "") + (lang === "ko" ? " + Pretendard" : "");
   const lineBox = Math.round(size * leading);
   const now = getNow(lang);
+  const typed = useTypewriter(t.hero.headline, tokens.dials.motion !== "off");
+  const done = typed >= t.hero.headline.length;
   const sheetRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const typedRef = useRef<HTMLSpanElement>(null);
+  const restRef = useRef<HTMLSpanElement>(null);
+  const caretRef = useRef<HTMLSpanElement>(null);
 
   // 제목의 실제 줄 상자를 재서 치수선을 글자에 붙인다
   useLayoutEffect(() => {
@@ -86,13 +91,44 @@ function Hero({ go }: { go: (href: string) => void }) {
     ro.observe(h1);
     ro.observe(sheet);
     document.fonts.ready.then(measure);
-    // 단어 등장 중엔 transform 이 줄 상자를 밀어 두므로 끝날 때 다시 잰다
-    h1.addEventListener("animationend", measure);
-    return () => {
-      ro.disconnect();
-      h1.removeEventListener("animationend", measure);
-    };
+    return () => ro.disconnect();
   }, [size, leading, tracking, dials.pairing, dials.density, lang]);
+
+  // 커서는 마지막으로 친 글자의 오른쪽에 붙인다. 공백 뒤면 다음 글자 앞(줄이 바뀌면 다음 줄 첫머리)
+  useLayoutEffect(() => {
+    const sheet = sheetRef.current;
+    const caret = caretRef.current;
+    if (!sheet || !caret) return;
+    const place = () => {
+      const typedNode = typedRef.current?.firstChild;
+      const restNode = restRef.current?.firstChild;
+      const text = t.hero.headline;
+      const range = document.createRange();
+      let x: number;
+      let rect: DOMRect | undefined;
+      if (typedNode && typed > 0 && text[typed - 1] !== " ") {
+        range.setStart(typedNode, typed - 1);
+        range.setEnd(typedNode, typed);
+        rect = Array.from(range.getClientRects()).at(-1);
+        x = rect?.right ?? 0;
+      } else if (restNode) {
+        range.setStart(restNode, 0);
+        range.setEnd(restNode, 1);
+        rect = range.getClientRects()[0];
+        x = rect?.left ?? 0;
+      } else return;
+      if (!rect) return;
+      const base = sheet.getBoundingClientRect();
+      caret.style.setProperty("--cx", `${Math.round(x - base.left)}px`);
+      caret.style.setProperty("--cy", `${Math.round(rect.top - base.top + rect.height * 0.1)}px`);
+      caret.style.setProperty("--ch", `${Math.round(rect.height * 0.8)}px`);
+    };
+    place();
+    const ro = new ResizeObserver(place);
+    ro.observe(sheet);
+    document.fonts.ready.then(place);
+    return () => ro.disconnect();
+  }, [typed, size, leading, tracking, dials.pairing, dials.density, lang, t.hero.headline]);
 
   const style = {
     "--hero-size": `${size}px`,
@@ -102,21 +138,19 @@ function Hero({ go }: { go: (href: string) => void }) {
   } as React.CSSProperties;
 
   return (
-    <section className="hero container" style={style} aria-labelledby="hero-title">
+    <section className="hero container" style={style} aria-labelledby="hero-title" data-typed={done || undefined}>
       <SectionLabel index="01" title={t.sections.hero} aside={<>{t.hero.aside}</>} />
 
       <div className="hero__sheet" ref={sheetRef}>
         <Corners />
-        <h1 id="hero-title" className="hero__title" ref={titleRef} data-token="text.default font.heading">
-          {t.hero.headline.split(" ").map((w, i, all) => (
-            <Fragment key={i}>
-              <span className="hero__w" style={{ "--i": i } as React.CSSProperties}>
-                {w}
-              </span>
-              {i < all.length - 1 && " "}
-            </Fragment>
-          ))}
+        {/* 아직 안 친 글자도 자리는 차지한다. 줄이 미리 정해져 있어 치수선과 줄바꿈이 흔들리지 않는다 */}
+        <h1 id="hero-title" className="hero__title" ref={titleRef} aria-label={t.hero.headline} data-token="text.default font.heading">
+          <span ref={typedRef} aria-hidden="true">{t.hero.headline.slice(0, typed)}</span>
+          <span ref={restRef} className="hero__rest" aria-hidden="true">
+            {t.hero.headline.slice(typed)}
+          </span>
         </h1>
+        <span ref={caretRef} className="hero__caret" data-done={done || undefined} aria-hidden="true" />
 
         {/* 크기: 첫 줄 왼쪽의 세로 치수선 */}
         <div className="dim dim--size">
@@ -192,6 +226,27 @@ function Hero({ go }: { go: (href: string) => void }) {
       </div>
     </section>
   );
+}
+
+// 제목을 한 글자씩 친다. 공백·문장부호 뒤엔 사람처럼 조금 쉰다. 모션이 꺼져 있으면 처음부터 다 보인다
+function useTypewriter(text: string, on: boolean) {
+  const [n, setN] = useState(0);
+  useEffect(() => {
+    if (!on) return;
+    let i = 0;
+    let id = 0;
+    const tick = () => {
+      i += 1;
+      setN(i);
+      if (i >= text.length) return;
+      const ch = text[i - 1];
+      const pause = /[.,]/.test(ch) ? 220 : ch === " " ? 90 : 0;
+      id = window.setTimeout(tick, 38 + Math.random() * 34 + pause);
+    };
+    id = window.setTimeout(tick, 450);
+    return () => window.clearTimeout(id);
+  }, [text, on]);
+  return on ? n : text.length;
 }
 
 // ---------- 02 Apps ----------

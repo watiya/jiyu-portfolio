@@ -932,23 +932,25 @@ html[data-motion="off"] .landing { animation: none !important; }
 /* ---------- /projects 진입 모션 ----------
    길이는 모션 다이얼(--duration-3)을 따른다. calm 이면 짧고 차분하게, lively 면 길고 튀게. off 면 전부 끈다 */
 .hero { --enter: calc(var(--duration-3) * 2.2); }
-.hero__w { display: inline-block; animation: hero-word var(--enter) var(--ease-emphasis) both; animation-delay: calc(var(--i) * 70ms + 80ms); }
-@keyframes hero-word {
-  from { opacity: 0; transform: translateY(0.4em) rotate(3deg); filter: blur(8px); }
-  to { opacity: 1; transform: none; filter: blur(0); }
+/* 제목은 타자기처럼 한 글자씩(useTypewriter). 커서는 디자인 툴의 글자 입력 커서 - 주석색 얇은 막대 */
+.hero__rest { visibility: hidden; }
+.hero__caret {
+  position: absolute; left: 0; top: 0; width: max(2px, calc(var(--hero-size) * 0.03)); height: var(--ch, 0);
+  transform: translate(calc(var(--cx, 0px) + 2px), var(--cy, 0px)); background: var(--annot-color); pointer-events: none;
 }
-.hero .seclabel { animation: hero-up var(--enter) var(--ease-default) both; }
-.hero__sheet { animation: hero-rule calc(var(--enter) * 1.4) var(--ease-default) both; }
-@keyframes hero-rule { from { border-top-color: transparent; } }
-/* 치수선은 제목이 선 다음 그려진다 */
-.dim__line { transform-origin: top; animation: dim-y var(--enter) var(--ease-emphasis) both 700ms; }
-.dim__ruler { transform-origin: left; animation: dim-x var(--enter) var(--ease-emphasis) both 900ms; }
-.dim__label { animation: hero-fade var(--enter) var(--ease-default) both 950ms; }
-.dim--leading .dim__label { animation-delay: 1050ms; }
-.dim--tracking .dim__label { animation-delay: 1150ms; }
-.hero__spec > span { animation: hero-up var(--enter) var(--ease-default) both; animation-delay: calc(var(--i) * 60ms + 1000ms); }
-.hero__who { animation: hero-up var(--enter) var(--ease-default) both 650ms; }
-.hero__cta { animation: hero-up var(--enter) var(--ease-default) both 800ms; }
+.hero__caret[data-done] { animation: caret-blink 1.06s steps(1) 4 both, hero-fade 1ms linear 4.3s reverse forwards; }
+@keyframes caret-blink { 50% { opacity: 0; } }
+/* 다 친 다음에 치수를 잰다: 치수선이 그려지고 값이 붙고 스펙 줄이 찍힌다 */
+.hero:not([data-typed]) :is(.dim__line, .dim__ruler, .dim__label, .hero__spec > span) { opacity: 0; }
+.hero[data-typed] .dim__line { transform-origin: top; animation: dim-y var(--enter) var(--ease-emphasis) both 150ms; }
+.hero[data-typed] .dim__ruler { transform-origin: left; animation: dim-x var(--enter) var(--ease-emphasis) both 300ms; }
+.hero[data-typed] .dim__label { animation: hero-fade var(--enter) var(--ease-default) both 350ms; }
+.hero[data-typed] .dim--leading .dim__label { animation-delay: 450ms; }
+.hero[data-typed] .dim--tracking .dim__label { animation-delay: 550ms; }
+.hero[data-typed] .hero__spec > span { animation: hero-type-in 1ms steps(1) both; animation-delay: calc(var(--i) * 110ms + 500ms); }
+@keyframes hero-type-in { from { opacity: 0; } }
+.hero__who { animation: hero-up var(--enter) var(--ease-default) both 900ms; }
+.hero__cta { animation: hero-up var(--enter) var(--ease-default) both 1050ms; }
 @keyframes dim-y { from { transform: scaleY(0); } }
 @keyframes dim-x { from { transform: scaleX(0); } }
 @keyframes hero-fade { from { opacity: 0; } }
@@ -970,6 +972,7 @@ html[data-motion="off"] .landing { animation: none !important; }
 }
 
 html[data-motion="off"] .hero *, html[data-motion="off"] .hero { animation: none !important; }
+html[data-motion="off"] .hero__caret { display: none; }
 html[data-motion="off"] .card-wrap { opacity: 1; transform: none; transition: none; }
 html[data-motion="off"] .card:hover .card__stage .phone { transform: none; }
 html[data-motion="off"] .card__stage::after { display: none; }
