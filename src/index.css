@@ -1063,7 +1063,9 @@ html[data-motion="off"] .card__stage::after { display: none; }
 }
 
 /* ---------- /work/<slug> ---------- */
-.workdoc .caseimg img { aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+/* 표지는 원본 비율대로 다 보인다. 비율이 제각각(0.4~3.0)이라 한 비율로 잘라 내면 넓은 장은 양옆이, 긴 장은 아래가 날아간다.
+   긴 장만 높이를 눌러 두고, 남는 자리는 바탕 토큰(surface.sunken)으로 채운다. 목록 카드(.wk__cover)는 그대로 cover 다 */
+.workdoc .caseimg img { aspect-ratio: auto; height: auto; max-height: min(72vh, 720px); object-fit: contain; }
 .workdoc .prose p:first-child { margin-top: 0; }
 /* 캔버스 첫 장들의 띠. 한 줄로 흘리고 넘치면 가로로 민다. 누르면 캔버스로 */
 .wkshots { display: flex; gap: var(--space-2); margin-top: var(--space-7); padding: var(--space-2); overflow-x: auto; background: var(--card-bg); border: 1px solid var(--card-line); border-radius: var(--card-radius); scrollbar-width: thin; }
