@@ -8,6 +8,7 @@ import { PRESETS, PAIRING_META, ACCENT_STEPS, NEUTRAL_STEPS } from "../tokens/en
 import { activePresetOf, slugOf } from "../lib.ts";
 import { useTokens } from "../tokens/useTokens.ts";
 import { internalClick } from "../router.ts";
+import { EXPORTS, download } from "../tokens/export.ts";
 import { useClock, useReveal } from "../hooks.ts";
 import { Scrub } from "../components/Scrub.tsx";
 import { Corners, SectionLabel, TokenTag } from "../components/Annot.tsx";
@@ -371,7 +372,7 @@ type Layer = "primitive" | "semantic" | "component" | "screen";
 const LAYER_IDS: Layer[] = ["primitive", "semantic", "component", "screen"];
 
 function Layers() {
-  const { tokens } = useTokens();
+  const { tokens, toast, setPanelOpen } = useTokens();
   const { lang, t } = useLang();
   const steps = getSteps(lang);
   const LAYERS: { id: Layer; name: string; step: Step }[] = LAYER_IDS.map((id, i) => ({ id, name: t.layers.names[id], step: steps[i] }));
@@ -522,6 +523,32 @@ function Layers() {
         <span className="layers__check-result" data-fixed={tokens.fixes.length > 0 || undefined}>
           {tokens.fixes.length === 0 ? t.layers.contrastOk : t.layers.contrastFixed(tokens.fixes.length, tokens.fixes.map((f) => f.token).join(", "))}
         </span>
+      </div>
+
+      {/* 06 가져가기: 토큰 패널의 내보내기를 섹션 안에서도 보인다 */}
+      <div className="layers__take">
+        <p className="layers__take-text mono">
+          <span className="seclabel__index">06</span> <strong>{t.layers.take}.</strong> {t.layers.takeBody}{" "}
+          <button type="button" className="layers__take-dials" onClick={() => setPanelOpen(true)}>
+            {t.layers.takeDials} →
+          </button>
+        </p>
+        <div className="layers__take-files">
+          {EXPORTS.map((x) => (
+            <button
+              key={x.file}
+              type="button"
+              className={`btn btn--sm mono${x.file === "DESIGN.md" ? "" : " btn--ghost"}`}
+              onClick={() => {
+                download(x.file, x.build(tokens), x.type);
+                toast(t.toasts.downloaded(x.file));
+              }}
+              data-token={x.file === "DESIGN.md" ? "button.bg button.fg button.radius" : "line.strong button.radius"}
+            >
+              {x.file} ↓
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

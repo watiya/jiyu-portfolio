@@ -72,6 +72,9 @@ const en = {
     check: "Check",
     contrastOk: "Contrast: all AA, nothing to fix",
     contrastFixed: (n: number, names: string) => `Contrast: fixed ${n} (${names})`,
+    take: "Take",
+    takeBody: "Everything above, as files. Built from the dials you see right now.",
+    takeDials: "Turn the dials first",
   },
   // 사례
   cases: {
@@ -310,6 +313,9 @@ const ko: UI = {
     check: "검사",
     contrastOk: "대비: 전부 AA, 고칠 것 없음",
     contrastFixed: (n, names) => `대비: ${n}개 보정 (${names})`,
+    take: "가져가기",
+    takeBody: "위의 모든 것을 파일로. 지금 보이는 다이얼 그대로 만들어집니다.",
+    takeDials: "다이얼 먼저 돌려 보기",
   },
   cases: {
     aside: (n) => `릴리스 ${n} · 전체 노트 →`,
