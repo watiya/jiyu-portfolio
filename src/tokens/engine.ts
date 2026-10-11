@@ -406,12 +406,12 @@ const ALL_PRESETS: Preset[] = [
     slug: "runpop",
     name: "Runpop",
     swatches: [
-      { hex: "#ea1763", label: "pink" },
-      { hex: "#00c5c5", label: "teal" },
-      { hex: "#ea8917", label: "orange" },
-      { hex: "#8c6bff", label: "violet" },
+      { hex: "#fa114f", label: "pink" },
+      { hex: "#2ee6d6", label: "teal" },
+      { hex: "#ff9f0a", label: "orange" },
+      { hex: "#7b5cff", label: "violet" },
     ],
-    dials: { hue: hueOf("#ea1763"), secondary: "#00c5c5", neutral: "cool", radius: 14, theme: "dark", pairing: "grotesk" },
+    dials: { hue: hueOf("#fa114f"), secondary: "#2ee6d6", neutral: "cool", radius: 14, theme: "dark", pairing: "grotesk" },
   },
   {
     slug: "ttokuoka",
