@@ -89,7 +89,7 @@ const ALL_APP_DETAILS: AppDetail[] = [
         ],
       },
     ],
-    shots: ["/apps/runpop/running.png", "/apps/runpop/plan.png", "/apps/runpop/detail.png", "/apps/runpop/watch.png"],
+    shots: ["/apps/runpop/running.png", "/apps/runpop/detail.png", "/apps/runpop/map.png", "/apps/runpop/watch.png"],
   },
   {
     slug: "ttokuoka",
