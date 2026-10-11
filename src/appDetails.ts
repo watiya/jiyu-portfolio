@@ -62,7 +62,7 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Platform", value: "iOS + watchOS, native" },
       { label: "Status", value: "On device, App Store prep" },
     ],
-    stack: ["SwiftUI", "watchOS", "HealthKit", "Live Activities", "WidgetKit", "XcodeGen"],
+    stack: ["SwiftUI", "watchOS", "HealthKit", "MapKit", "Core Location", "Live Activities", "WidgetKit", "XcodeGen"],
     sections: [
       {
         heading: "The problem",
@@ -74,18 +74,18 @@ const ALL_APP_DETAILS: AppDetail[] = [
       {
         heading: "What I built",
         body: [
-          "A native iPhone app with run plans, four click sounds, pause and resume, a summary, and a history with per-run detail: heart rate, cadence, stride, pace, and splits. 46 tests pass.",
-          "An Apple Watch app that can run on its own, with complications and a widget extension, plus a Live Activity on the phone that shows the current segment of the plan.",
-          "Workouts are saved to the Health app from the watch, and the phone reads heart rate and calories back from HealthKit.",
+          "A native iPhone app with run plans, four click sounds, pause and resume, a summary, and a history with per-run detail: heart rate, cadence, stride, pace, splits, a route map, and temperature, humidity, elevation gain and running power. 83 tests pass.",
+          "An Apple Watch app that can run on its own. Like the built-in Workout app, its running screen has three vertical pages (beat ring / heart rate, live cadence, pace and distance / heart rate zones), and it records its own GPS route and elevation gain. It has complications and a widget extension, plus a Live Activity on the phone that shows the current segment of the plan.",
+          "Workouts are saved to the Health app from the watch along with the route, and the phone reads heart rate, calories, route and weather back from HealthKit. There is no server.",
         ],
       },
       {
         heading: "Decisions worth noting",
         body: [
-          "The running screen shows only the target, not live measurements. Measured cadence lives in the history, where it is useful instead of distracting.",
+          "The first running screen leads with the target beat, with just live heart rate and distance in one line. Measured cadence, pace and heart rate zones sit one swipe away, where they are useful instead of distracting.",
           "On the phone the click sits over your music, and on the watch the beat is a vibration. Matching the tempo of a track is left out, because Apple Music does not give out BPM.",
           "Screens and widgets were designed first as a web canvas, reviewed, then rebuilt natively, so design review never waited on a simulator.",
-          "The run detail with heart rate came from tester feedback: the first history had no measured cadence and no detail screen.",
+          "The run detail with heart rate came from tester feedback: the first history had no measured cadence and no detail screen. After a real run, “heart rate matters as much as cadence” turned the watch screen into three pages, and the watch now records its own route so the map shows up without the Workout app.",
         ],
       },
     ],
