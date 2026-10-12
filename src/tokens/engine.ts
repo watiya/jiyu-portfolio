@@ -475,11 +475,11 @@ const ALL_PRESETS: Preset[] = [
     slug: "finishline",
     name: "Finishline",
     swatches: [
-      { hex: "#ff1715", label: "red" },
-      { hex: "#172021", label: "ink" },
+      { hex: "#75fc96", label: "lime" },
+      { hex: "#161618", label: "ink" },
       { hex: "#f6f6f6", label: "muted" },
     ],
-    dials: { hue: hueOf("#ff1715"), secondary: "#172021", neutral: "neutral", radius: 24, theme: "light", pairing: "geist" },
+    dials: { hue: hueOf("#75fc96"), secondary: "#161618", neutral: "neutral", radius: 24, theme: "light", pairing: "geist" },
   },
 ];
 

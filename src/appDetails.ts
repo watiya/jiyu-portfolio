@@ -335,10 +335,10 @@ const ALL_APP_DETAILS: AppDetail[] = [
     date: "Oct 2026",
     meta: [
       { label: "Role", value: "Product, design, and build" },
-      { label: "Platform", value: "iOS, Apple Health" },
-      { label: "Status", value: "In progress" },
+      { label: "Platform", value: "iOS, Apple Health, web" },
+      { label: "Status", value: "On my phone, web live" },
     ],
-    stack: ["Expo", "React Native", "TypeScript", "HealthKit"],
+    stack: ["Expo", "React Native", "TypeScript", "HealthKit", "Vite"],
     sections: [
       {
         heading: "The problem",
@@ -350,10 +350,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       {
         heading: "What I built",
         body: [
-          "A three-step onboarding: the race and its date, your current long run, and the days you can train. Races come from a public race calendar, searchable by name, region, or venue, with open registration listed first.",
-          "A plan generator for 5K, 10K, 15K, and the half. It starts on the day you save or the next Monday, runs up to sixteen weeks, and grows the long run by no more than ten percent a week toward a peak.",
+          "A three-step onboarding: the race and its date, your current long run, and the days you can train. Races come from two public race calendars merged into one list of about two hundred, searchable by name, region, or venue, with open registration listed first.",
+          "A plan generator for 5K, 10K, 15K, the half, and the full marathon. It starts on the day you save or the next Monday, runs up to sixteen weeks (twenty for the full), and grows the long run by no more than ten percent a week toward a peak. The full peaks at a 32 km long run with a two-week taper.",
           "Two goals. Finish keeps three easy runs a week. A time goal adds a fourth day with intervals and tempo, and every pace is derived from the target time.",
           "More than one race. A spring half and an autumn 10K can sit side by side, each with its own checks and logs. Once race day passes, it moves to past races with the finish time, pace, sessions done, and distance trained.",
+          "A web version and a second app. The same plan data runs in a browser at finishline-mu.vercel.app, and a second React Native app wears that lighter lime look with the first app's tab bar and motion. Both carry a checkered flag logo.",
         ],
       },
       {
@@ -364,6 +365,7 @@ const ALL_APP_DETAILS: AppDetail[] = [
           "Intervals and tempo start in week three. The first two weeks are easy running only.",
           "Progress belongs to a race, not to the app. A session id like week 3 Tuesday means a different workout in another plan, so switching races shelves the current one with all its checks and brings the other back as it was.",
           "The finish time is just the log on the race session. There is no separate result form; the record screen reads what you already entered on race day.",
+          "One plan engine, three faces. The generator and race list live in a shared folder, so the iOS app, the web app, and the second app all build the same weeks from the same inputs.",
         ],
       },
     ],

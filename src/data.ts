@@ -62,6 +62,6 @@ const ALL_APPS: App[] = [
   { name: "Tory", badge: "Prototype", kind: "Couples", note: "Web prototype", line: "A couple app built on one shared thread: a timeline and a live date mode.", image: "/side/tory.png", href: "https://tory-ashen.vercel.app" },
   { name: "Bapsim", badge: "In design", kind: "Food", note: "Design canvas", line: "Korean meal logging as a tray: rice, soup, and sides in four taps.", image: "/side/bapsim.png", href: "https://bapsim-app.vercel.app/design/" },
   { name: "Wishrun", badge: "iPhone + Health", kind: "Running", note: "iOS", line: "A seven-week plan for a first 5K, turned into an app that reads runs from Apple Health.", image: "/side/wishrun.png" },
-  { name: "Finishline", badge: "iPhone + Health", kind: "Running", note: "iOS", line: "Pick a race and a date, and the app builds the training plan backward from race day.", image: "/side/finishline.png" },
+  { name: "Finishline", badge: "5K to full", kind: "Running", note: "iPhone + web", line: "From 5K to the full marathon: pick a race and a date, and the app builds the training plan backward from race day.", image: "/side/finishline.png", href: "https://finishline-mu.vercel.app" },
 ];
 export const APPS: App[] = ALL_APPS.filter((a) => !isHiddenApp(a.name.toLowerCase().replace(/\s+/g, "-")));
