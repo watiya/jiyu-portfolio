@@ -1,19 +1,16 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { EMAIL, SOCIALS, type Step } from "../data.ts";
+import { EMAIL, SOCIALS } from "../data.ts";
 import { useLang } from "../i18n/useLang.ts";
-import { formatDay, getAppDetails, getApps, getJourney, getNow, getRecentWriting, getSteps, metaValue } from "../i18n/content.ts";
+import { formatDay, getApps, getJourney, getNow, getRecentWriting } from "../i18n/content.ts";
 import { getCases } from "../cases/content.ts";
 import type { Lang } from "../i18n/lang.ts";
-import { PRESETS, PAIRING_META, ACCENT_STEPS, NEUTRAL_STEPS } from "../tokens/engine.ts";
-import { activePresetOf, slugOf } from "../lib.ts";
+import { PAIRING_META } from "../tokens/engine.ts";
 import { useTokens } from "../tokens/useTokens.ts";
 import { internalClick } from "../router.ts";
-import { EXPORTS, download } from "../tokens/export.ts";
 import { useClock, useReveal } from "../hooks.ts";
 import { Scrub } from "../components/Scrub.tsx";
 import { Corners, SectionLabel, TokenTag } from "../components/Annot.tsx";
-import { PhoneFrame } from "../components/PhoneFrame.tsx";
-import { Craft } from "../components/Craft.tsx";
+import { AppShelf } from "../components/AppShelf.tsx";
 import { Dials } from "../components/Dials.tsx";
 import { HIDE_PRIVATE } from "../hidden.ts";
 
@@ -30,9 +27,8 @@ export function Home({ go }: { go: (href: string) => void }) {
     <>
       <Hero key={lang} go={go} />
       <Apps go={go} />
-      <Layers />
+      {/* 층 설명(Layers)과 크래프트는 /system 으로 옮겼다. 홈에는 다이얼 보드 하나만 */}
       <Dials />
-      <Craft go={go} />
       {/* 사례·경력은 잠시 내렸다(hidden.ts) */}
       {!HIDE_PRIVATE && <CaseStudies go={go} />}
       {!HIDE_PRIVATE && <Journey />}
@@ -262,16 +258,9 @@ function useTypewriter(text: string, on: boolean) {
 // ---------- 02 Apps ----------
 
 function Apps({ go }: { go: (href: string) => void }) {
-  const { dials } = useTokens();
   const { lang, t } = useLang();
-  const all = getApps(lang);
-  // 홈은 토큰 쇼케이스라 featured 만 세운다. 전부는 /apps
-  const apps = all.filter((a) => a.featured);
-  const details = getAppDetails(lang);
-  const active = activePresetOf(dials);
-  const onClick = internalClick(go);
+  const apps = getApps(lang);
   const ref = useReveal<HTMLElement>();
-  const listRef = useCardReveal();
   return (
     <section id="apps" className="apps container reveal" ref={ref} aria-labelledby="apps-title">
       <SectionLabel index="02" title={t.sections.apps} aside={<>{t.apps.aside(apps.length)}</>} />
@@ -281,316 +270,8 @@ function Apps({ go }: { go: (href: string) => void }) {
         </h2>
         <p className="lede">{t.apps.lede}</p>
       </div>
-
-      <ul className="cards" role="list" ref={listRef} data-count={apps.length}>
-        {apps.map((app, i) => {
-          const slug = slugOf(app.name);
-          const detail = details.find((d) => d.slug === slug);
-          const preset = PRESETS.find((p) => p.slug === slug);
-          const status = (detail && metaValue(detail, "Status")) ?? app.badge;
-          const platform = (detail && metaValue(detail, "Platform")) ?? app.note;
-          const wearing = active?.slug === slug;
-          return (
-            <li key={slug} className="card-wrap">
-              <a className="card" href={`/apps/${slug}`} onClick={onClick} onPointerMove={trackPointer} aria-label={`${app.name}: ${app.line}`} data-token="card.bg card.line card.radius card.pad">
-                <div className="card__top mono">
-                  <span>app / {String(i + 1).padStart(2, "0")}</span>
-                  <span className="chip" data-current={wearing || undefined} data-token={wearing ? "badge.bg badge.fg" : "chip.bg chip.fg chip.radius"}>
-                    {wearing ? t.apps.wearing : app.badge}
-                  </span>
-                </div>
-                <div className="card__stage" data-token="surface.sunken radius.2">
-                  <Corners />
-                  <TokenTag>card.stage → surface.sunken</TokenTag>
-                  <PhoneFrame src={app.image} alt={t.apps.screen(app.name)} priority={i < 3} />
-                </div>
-                <div className="card__body">
-                  <h3 className="card__name">
-                    {app.name}
-                    {app.koName && <span className="card__koname"> {app.koName}</span>}
-                  </h3>
-                  <p className="card__line">{app.line}</p>
-                  <dl className="spec mono">
-                    <dt>{t.apps.platform}</dt>
-                    <dd>{platform}</dd>
-                    <dt>{t.apps.status}</dt>
-                    <dd>{status}</dd>
-                    <dt>{t.apps.stack}</dt>
-                    <dd>{detail ? detail.stack.slice(0, 4).join(" · ") : app.kind}</dd>
-                  </dl>
-                  {preset && (
-                    <div className="swatches" aria-label={t.apps.colors(app.name)}>
-                      {preset.swatches.map((s) => (
-                        <span key={s.hex} className="swatch mono" title={s.label}>
-                          <i style={{ background: s.hex }} aria-hidden="true" />
-                          {s.hex}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <span className="card__arrow mono" aria-hidden="true">
-                  /apps/{slug} →
-                </span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-      <a className="apps__more" href="/apps" onClick={onClick}>
-        <span>{t.apps.more(all.length)}</span>
-        <span className="mono apps__more-path" aria-hidden="true">
-          /apps →
-        </span>
-      </a>
+      <AppShelf apps={apps} go={go} level={3} />
     </section>
-  );
-}
-
-// 카드마다 화면에 들어올 때 등장. 같은 줄의 카드는 열 순서대로 조금씩 늦게
-function useCardReveal() {
-  const ref = useRef<HTMLUListElement>(null);
-  useEffect(() => {
-    const list = ref.current;
-    if (!list) return;
-    const items = Array.from(list.children) as HTMLElement[];
-    if (!("IntersectionObserver" in window)) {
-      items.forEach((el) => (el.dataset.revealed = "true"));
-      return;
-    }
-    const io = new IntersectionObserver(
-      (entries) => {
-        const top = entries.filter((e) => e.isIntersecting).map((e) => e.target as HTMLElement);
-        top.forEach((el, k) => {
-          el.style.setProperty("--d", String(k));
-          el.dataset.revealed = "true";
-          io.unobserve(el);
-        });
-      },
-      { rootMargin: "0px 0px -6% 0px" },
-    );
-    items.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-  return ref;
-}
-
-// 포인터 위치를 카드 안의 0~1 좌표로. 무대의 빛과 폰 기울기가 이걸 읽는다
-function trackPointer(e: React.PointerEvent<HTMLAnchorElement>) {
-  if (e.pointerType !== "mouse") return;
-  const r = e.currentTarget.getBoundingClientRect();
-  e.currentTarget.style.setProperty("--mx", ((e.clientX - r.left) / r.width).toFixed(3));
-  e.currentTarget.style.setProperty("--my", ((e.clientY - r.top) / r.height).toFixed(3));
-}
-
-// ---------- 03 How a system works ----------
-
-type Layer = "primitive" | "semantic" | "component" | "screen";
-const LAYER_IDS: Layer[] = ["primitive", "semantic", "component", "screen"];
-
-function Layers() {
-  const { tokens, toast, setPanelOpen } = useTokens();
-  const { lang, t } = useLang();
-  const steps = getSteps(lang);
-  const LAYERS: { id: Layer; name: string; step: Step }[] = LAYER_IDS.map((id, i) => ({ id, name: t.layers.names[id], step: steps[i] }));
-  const [hot, setHot] = useState<Layer | null>(null);
-  const ref = useReveal<HTMLElement>();
-  const s = tokens.semantic;
-  const stepOf = (hex: string) => {
-    const ai = tokens.accent.indexOf(hex);
-    if (ai >= 0) return `accent.${ACCENT_STEPS[ai]}`;
-    const ni = tokens.neutral.indexOf(hex);
-    if (ni >= 0) return `neutral.${NEUTRAL_STEPS[ni]}`;
-    return "adjusted";
-  };
-  const semanticRows: [string, string][] = [
-    ["surface.canvas", s.surface.canvas],
-    ["surface.raised", s.surface.raised],
-    ["text.default", s.text.default],
-    ["text.muted", s.text.muted],
-    ["line.default", s.line.default],
-    ["accent.default", s.accent.default],
-    ["accent.on", s.accent.on],
-  ];
-
-  return (
-    <section id="system" className="layers container reveal" ref={ref} aria-labelledby="layers-title" data-hot={hot ?? undefined}>
-      <SectionLabel index="03" title={t.sections.system} aside={<>{t.layers.aside}</>} />
-      <div className="section__head">
-        <h2 id="layers-title" className="h2">
-          {t.layers.title}
-        </h2>
-        <p className="lede">{t.layers.lede}</p>
-      </div>
-
-      <div className="layers__grid">
-        {LAYERS.map((layer, i) => (
-          <div
-            key={layer.id}
-            className="layer"
-            data-layer={layer.id}
-            tabIndex={0}
-            onMouseEnter={() => setHot(layer.id)}
-            onMouseLeave={() => setHot(null)}
-            onFocus={() => setHot(layer.id)}
-            onBlur={() => setHot(null)}
-            aria-label={t.layers.layerLabel(layer.name, layer.step.title)}
-          >
-            <div className="layer__head mono">
-              <span>
-                <span className="seclabel__index">{String(i + 1).padStart(2, "0")}</span> {layer.name}
-              </span>
-              {i < LAYERS.length - 1 && <span aria-hidden="true">→</span>}
-            </div>
-
-            <div className="layer__body">
-              {layer.id === "primitive" && (
-                <>
-                  <div className="prim">
-                    <span className="prim__name mono">accent</span>
-                    <div className="scale" aria-hidden="true">
-                      {tokens.accent.map((hex, j) => (
-                        <span key={ACCENT_STEPS[j]} className="scale__step" style={{ background: hex }} />
-                      ))}
-                    </div>
-                    <span className="mono prim__hex">
-                      500 {tokens.accent[5]} · 600 {tokens.accent[6]}
-                    </span>
-                  </div>
-                  <div className="prim">
-                    <span className="prim__name mono">neutral</span>
-                    <div className="scale scale--13" aria-hidden="true">
-                      {tokens.neutral.map((hex, j) => (
-                        <span key={NEUTRAL_STEPS[j]} className="scale__step" style={{ background: hex }} />
-                      ))}
-                    </div>
-                    <span className="mono prim__hex">
-                      0 {tokens.neutral[0]} · 1000 {tokens.neutral[12]}
-                    </span>
-                  </div>
-                  <div className="prim">
-                    <span className="prim__name mono">space</span>
-                    <div className="spaces" aria-hidden="true">
-                      {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-                        <i key={n} style={{ width: `var(--space-${n})` }} />
-                      ))}
-                    </div>
-                    <span className="mono prim__hex">
-                      unit {tokens.vars["--space-unit"]} · radius {tokens.vars["--radius-2"]}
-                    </span>
-                  </div>
-                </>
-              )}
-
-              {layer.id === "semantic" && (
-                <dl className="sem mono">
-                  {semanticRows.map(([name, hex]) => (
-                    <div key={name} className="sem__row">
-                      <dt>
-                        <i style={{ background: hex }} aria-hidden="true" />
-                        {name}
-                      </dt>
-                      <dd>
-                        {stepOf(hex)} <span className="sem__hex">{hex}</span>
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              )}
-
-              {layer.id === "component" && (
-                <div className="comps">
-                  <span className="btn btn--sm" aria-hidden="true">
-                    {t.layers.button}
-                  </span>
-                  <span className="btn btn--ghost btn--sm" aria-hidden="true">
-                    {t.layers.ghost}
-                  </span>
-                  <span className="chip" aria-hidden="true">
-                    {t.layers.chip}
-                  </span>
-                  <span className="chip" data-current aria-hidden="true">
-                    {t.layers.badge}
-                  </span>
-                  <div className="comps__card" aria-hidden="true">
-                    <span className="comps__title" />
-                    <span className="comps__text" />
-                    <span className="comps__text comps__text--short" />
-                  </div>
-                  <ul className="mono comps__list">
-                    <li>button.bg → accent.default</li>
-                    <li>card.bg → surface.raised</li>
-                    <li>chip.bg → surface.sunken</li>
-                  </ul>
-                </div>
-              )}
-
-              {layer.id === "screen" && <MiniScreen />}
-            </div>
-
-            <p className="layer__cap">
-              <strong>{layer.step.title}.</strong> {layer.step.body}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      <div className="layers__check mono" data-token="accent.text">
-        <span className="seclabel__index">05</span> {t.layers.check} · <strong>{steps[4].title}.</strong> {steps[4].body}{" "}
-        <span className="layers__check-result" data-fixed={tokens.fixes.length > 0 || undefined}>
-          {tokens.fixes.length === 0 ? t.layers.contrastOk : t.layers.contrastFixed(tokens.fixes.length, tokens.fixes.map((f) => f.token).join(", "))}
-        </span>
-      </div>
-
-      {/* 06 가져가기: 토큰 패널의 내보내기를 섹션 안에서도 보인다 */}
-      <div className="layers__take">
-        <p className="layers__take-text mono">
-          <span className="seclabel__index">06</span> <strong>{t.layers.take}.</strong> {t.layers.takeBody}{" "}
-          <button type="button" className="layers__take-dials" onClick={() => setPanelOpen(true)}>
-            {t.layers.takeDials} →
-          </button>
-        </p>
-        <div className="layers__take-files">
-          {EXPORTS.map((x) => (
-            <button
-              key={x.file}
-              type="button"
-              className={`btn btn--sm mono${x.file === "DESIGN.md" ? "" : " btn--ghost"}`}
-              onClick={() => {
-                download(x.file, x.build(tokens), x.type);
-                toast(t.toasts.downloaded(x.file));
-              }}
-              data-token={x.file === "DESIGN.md" ? "button.bg button.fg button.radius" : "line.strong button.radius"}
-            >
-              {x.file} ↓
-            </button>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// 이 사이트의 축소판. 각 조각에 소유 층을 적어 두면 호버 시 그 층이 빛난다
-function MiniScreen() {
-  return (
-    <div className="mini" data-owner="screen" aria-hidden="true">
-      <div className="mini__bar" data-owner="semantic">
-        <i data-owner="semantic" />
-        <b data-owner="component" />
-      </div>
-      <div className="mini__hero">
-        <span className="mini__h" data-owner="semantic primitive" />
-        <span className="mini__h mini__h--2" data-owner="semantic primitive" />
-        <span className="mini__p" data-owner="semantic" />
-        <span className="mini__btn" data-owner="component primitive" />
-      </div>
-      <div className="mini__cards">
-        <span className="mini__card" data-owner="component" />
-        <span className="mini__card" data-owner="component" />
-        <span className="mini__card" data-owner="component" />
-      </div>
-    </div>
   );
 }
 
@@ -605,7 +286,7 @@ function CaseStudies({ go }: { go: (href: string) => void }) {
   return (
     <section id="work" className="changelog container reveal" ref={ref} aria-labelledby="work-title">
       <SectionLabel
-        index="06"
+        index="04"
         title={t.sections.cases}
         aside={
           <a href="/cases" onClick={onClick} className="seclabel__link">
@@ -671,7 +352,7 @@ function Journey() {
   const n = rows.length;
   return (
     <section id="journey" className="journey container reveal" ref={ref} aria-labelledby="journey-title">
-      <SectionLabel index="07" title={t.sections.journey} aside={<>{t.journey.aside(n, rows[n - 1].year)}</>} />
+      <SectionLabel index="05" title={t.sections.journey} aside={<>{t.journey.aside(n, rows[n - 1].year)}</>} />
       <div className="section__head">
         <h2 id="journey-title" className="h2">
           {t.journey.title}
@@ -712,7 +393,7 @@ function Contact({ go }: { go: (href: string) => void }) {
   };
   return (
     <section id="contact" className="contact container reveal" ref={ref} aria-labelledby="contact-title">
-      <SectionLabel index={HIDE_PRIVATE ? "06" : "08"} title={t.sections.contact} aside={<>{t.contact.aside}</>} />
+      <SectionLabel index={HIDE_PRIVATE ? "04" : "06"} title={t.sections.contact} aside={<>{t.contact.aside}</>} />
       <h2 id="contact-title" className="sr-only">
         {t.sections.contact}
       </h2>

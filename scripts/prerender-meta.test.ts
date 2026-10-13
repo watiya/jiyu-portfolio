@@ -11,8 +11,8 @@ import { CANVAS_SLUGS, SITE, applyMeta, buildRobots, buildRoutes, buildSitemap, 
 const ROOT = new URL("..", import.meta.url).pathname;
 const sizeOf = (p: string) => imageSize(readFileSync(join(ROOT, "public", p)));
 const routes = buildRoutes({ cases: readEnglishCases(ROOT), appDetails: APP_DETAILS, works: WORKS, canvasSlugs: CANVAS_SLUGS, ui: STRINGS.en }, sizeOf);
-// 고정 6(/·/projects·/cases·/apps·/work·/resume) + 사례 11 + 앱 9 + 작업 57 + 캔버스 49
-const ROUTE_COUNT = 6 + 11 + 9 + WORKS.length + CANVAS_SLUGS.length;
+// 고정 7(/·/projects·/cases·/apps·/system·/work·/resume) + 사례 11 + 앱 9 + 작업 57 + 캔버스 49
+const ROUTE_COUNT = 7 + 11 + 9 + WORKS.length + CANVAS_SLUGS.length;
 
 const TEMPLATE = `<!doctype html>
 <html lang="en">
@@ -45,7 +45,7 @@ test("경로 목록: 첫 화면·홈·사례 목록·사례 11·앱 목록·앱 
   // 캔버스 경로는 전부 작업 상세가 있는 슬러그다
   for (const s of CANVAS_SLUGS) assert.ok(paths.includes(`/work/${s}`), s);
   assert.equal(new Set(paths).size, paths.length);
-  for (const p of ["/", "/projects", "/cases", "/apps", "/work", "/resume"]) assert.ok(paths.includes(p), p);
+  for (const p of ["/", "/projects", "/cases", "/apps", "/system", "/work", "/resume"]) assert.ok(paths.includes(p), p);
   assert.equal(paths.filter((p) => p.startsWith("/cases/")).length, 11);
   assert.equal(paths.filter((p) => p.startsWith("/apps/")).length, 9);
   for (const s of ["hangul-boom", "menchi-kana", "menchi-voca", "puzzle-lounge"]) assert.ok(paths.includes(`/apps/${s}`), s);

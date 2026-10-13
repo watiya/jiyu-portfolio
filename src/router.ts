@@ -6,6 +6,7 @@ export type Route =
   | { name: "landing" }
   | { name: "home" }
   | { name: "apps" }
+  | { name: "system" }
   | { name: "app"; slug: string }
   | { name: "cases" }
   | { name: "case"; slug: string }
@@ -28,6 +29,8 @@ export function parseRoute(path: string): Route {
   if (clean === "/cases" || clean === "/case-studies") return { name: "cases" };
   if (clean === "/work") return { name: "work" };
   if (clean === "/resume") return { name: "resume" };
+  // 홈에서 내린 층 설명과 크래프트
+  if (clean === "/system") return { name: "system" };
   // 앱 전체 목록. 상세는 /apps/<slug> 라 겹치지 않는다
   if (clean === "/apps") return { name: "apps" };
   const app = clean.match(/^\/apps\/([a-z0-9-]+)$/);

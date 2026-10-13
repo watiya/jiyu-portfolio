@@ -685,37 +685,59 @@ html[data-motion="off"] .wk:hover .wk__cover img { transform: none; }
 .wk__case { margin-top: var(--space-1); color: var(--accent-text); font-size: var(--text-sm); text-decoration: none; }
 .wk__case:hover { text-decoration: underline; }
 
-/* ---------- 앱 전체 (/apps) ---------- */
-/* 머리말·거르기·격자·카드는 /work(.work .wkfilters .wk-grid .wk) 를 그대로 쓴다. 여기는 표지와 카드 발치만 */
-/* 표지: 모눈 바탕에서 폰 세 대가 올라온다. 가운데가 카드 화면, 양옆은 살짝 기울여 뒤에. 폰 아랫부분은 표지 밖으로 잘린다 */
-/* 격자 칸(1fr = minmax(auto, 1fr))이 안쪽 최소 폭에 밀려 넓어지지 않게 */
-.apptile { min-width: 0; }
-.apptile__cover {
-  position: relative; display: block;
-  background-image: linear-gradient(var(--line-default) 1px, transparent 1px), linear-gradient(90deg, var(--line-default) 1px, transparent 1px);
-  background-size: 16px 16px; background-position: center top;
+/* ---------- 앱 선반 (홈 #apps · /apps) ---------- */
+/* 시리즈 묶음마다 머리(마스코트·도시 한 줄·개수) 아래 카드 격자. 묶음 첫 앱은 두 칸을 다 쓰는 넓은 카드 */
+/* 틀은 모든 카드가 같고, 표지 바탕만 그 앱 프리셋의 첫 스와치 색이다. 몸통은 card.bg 그대로라 글자 대비가 흔들리지 않는다 */
+.shelf { display: grid; gap: var(--space-9); }
+.appsidx .shelf { margin-top: var(--space-7); }
+.shelf__head { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: var(--space-4); row-gap: var(--space-1); padding-top: var(--space-4); border-top: 1px solid var(--line-strong); margin-bottom: var(--space-5); }
+.shelf__mascot { flex-basis: 100%; color: var(--annot-color); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.06em; }
+.shelf__title { margin: 0; font-size: var(--text-xl); font-weight: 500; letter-spacing: -0.01em; }
+.shelf__line { flex: 1 1 24ch; margin: 0; color: var(--text-muted); text-wrap: pretty; }
+.shelf__count { color: var(--text-subtle); }
+.shelf__grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+@media (min-width: 640px) {
+  .shelf__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sh[data-wide] { grid-column: 1 / -1; }
 }
-.apptile__phones { position: absolute; inset: 0; display: flex; justify-content: center; align-items: flex-start; padding-top: var(--space-6); }
-.apptile__phones .phone { width: 31% !important; max-width: 132px; padding: 12px 4px 4px; border-radius: 22px; box-shadow: 0 0 0 1px var(--line-default), 0 18px 36px -24px rgb(0 0 0 / 0.45); transition: transform var(--duration-3) var(--ease-emphasis); }
-.apptile__phones .phone .phone__screen { border-radius: 18px; }
-.apptile__phones .phone .phone__island { top: 4px; height: 5px; }
-.wk__cover.apptile__cover img { width: 100%; height: auto; object-fit: initial; }
-.wk:hover .apptile__cover img { transform: none; }
-.apptile__phones[data-count="3"] .phone:nth-child(1) { z-index: 0; transform: translate(18%, 10%) rotate(-5deg); }
-.apptile__phones[data-count="3"] .phone:nth-child(2) { z-index: 1; }
-.apptile__phones[data-count="3"] .phone:nth-child(3) { z-index: 0; transform: translate(-18%, 10%) rotate(5deg); }
-.wk:hover .apptile__phones .phone:nth-child(2), .apptile__phones[data-count="1"] .phone:hover { transform: translateY(calc(var(--space-2) * -1)); }
-.wk:hover .apptile__phones[data-count="3"] .phone:nth-child(1) { transform: translate(8%, 8%) rotate(-7deg); }
-.wk:hover .apptile__phones[data-count="3"] .phone:nth-child(3) { transform: translate(-8%, 8%) rotate(7deg); }
-html[data-motion="off"] .apptile__phones .phone { transition: none; }
-.apptile__no { position: absolute; z-index: 2; left: var(--space-3); top: var(--space-2); font-family: var(--font-pixel); font-size: var(--text-sm); color: var(--annot-color); }
-/* 시리즈 표: 붐치·멘치. 마스코트로 묶인 앱이라는 것만 짧게 */
-.apptile__series { position: absolute; z-index: 2; right: var(--space-2); top: var(--space-2); display: inline-flex; align-items: center; gap: var(--space-1); height: 22px; padding: 0 var(--space-2); border-radius: var(--radius-full); background: var(--card-bg); color: var(--text-muted); font-size: var(--text-xs); box-shadow: 0 0 0 1px var(--line-default); }
-.apptile__series::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--annot-color); }
-.apptile__home { color: var(--annot-color); }
-.apptile__foot { display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-2); padding-top: var(--space-2); border-top: 1px dashed var(--line-default); }
-.apptile__foot .chip { flex: none; margin-left: auto; }
-.apptile__status { flex: 1; min-width: 0; color: var(--text-subtle); font-size: var(--text-xs); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sh { display: flex; flex-direction: column; min-width: 0; overflow: hidden; background: var(--card-bg); border: 1px solid var(--card-line); border-radius: var(--card-radius); transition: border-color var(--duration-2) var(--ease-default); }
+.sh:hover { border-color: var(--card-line-hover); }
+/* 표지: 스와치 색 바탕에서 폰이 올라온다. 폰 아랫부분은 표지 밖으로 잘린다 */
+.sh__cover { position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--app-bg, var(--surface-sunken)); }
+.sh__phones { position: absolute; inset: 0; display: flex; justify-content: center; align-items: flex-start; padding-top: var(--space-6); }
+.sh__phones .phone { width: 36% !important; max-width: 168px; padding: 12px 4px 4px; border-radius: 22px; box-shadow: 0 0 0 1px rgb(0 0 0 / 0.08), 0 24px 40px -24px rgb(0 0 0 / 0.5); transition: transform var(--duration-3) var(--ease-emphasis); }
+.sh__phones .phone .phone__screen { border-radius: 18px; }
+.sh__phones .phone .phone__island { top: 4px; height: 5px; }
+.sh__phones[data-count="3"] .phone { width: 24% !important; max-width: 150px; }
+.sh__phones[data-count="3"] .phone:nth-child(1) { z-index: 0; transform: translate(14%, 12%) rotate(-4deg); }
+.sh__phones[data-count="3"] .phone:nth-child(2) { z-index: 1; }
+.sh__phones[data-count="3"] .phone:nth-child(3) { z-index: 0; transform: translate(-14%, 12%) rotate(4deg); }
+.sh:hover .sh__phones .phone:nth-child(2), .sh:hover .sh__phones[data-count="1"] .phone { transform: translateY(calc(var(--space-2) * -1)); }
+.sh:hover .sh__phones[data-count="3"] .phone:nth-child(1) { transform: translate(6%, 10%) rotate(-6deg); }
+.sh:hover .sh__phones[data-count="3"] .phone:nth-child(3) { transform: translate(-6%, 10%) rotate(6deg); }
+html[data-motion="off"] .sh__phones .phone { transition: none; }
+html[data-motion="off"] .sh:hover .sh__phones[data-count="1"] .phone, html[data-motion="off"] .sh:hover .sh__phones .phone:nth-child(2) { transform: none; }
+.sh__body { flex: 1; display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-4); }
+.sh__meta { color: var(--text-subtle); }
+.sh__name { margin: 0; font-size: var(--text-xl); font-weight: 500; line-height: 1.2; letter-spacing: -0.01em; }
+.sh__name a { color: var(--text-default); text-decoration: none; }
+.sh__name a:hover { text-decoration: underline; text-decoration-color: var(--accent-default); text-underline-offset: 4px; }
+.sh__line { margin: 0; color: var(--text-muted); text-wrap: pretty; }
+/* 상태 신호는 크게. 날짜와 상태 문구는 데이터에 있는 그대로 */
+.sh__status { display: grid; gap: 2px; margin-top: var(--space-2); }
+.sh__label { color: var(--text-subtle); }
+.sh__status strong { font-size: var(--text-lg); font-weight: 500; line-height: 1.25; text-wrap: pretty; }
+.sh__foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); margin-top: auto; padding-top: var(--space-3); border-top: 1px dashed var(--line-default); }
+.sh__cta, .sh__nolink { margin-left: auto; }
+.sh__nolink { color: var(--text-subtle); }
+/* 넓은 카드: 1024 이상에서 표지와 몸통이 나란히 */
+@media (min-width: 1024px) {
+  .sh[data-wide] { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+  .sh[data-wide] .sh__cover { aspect-ratio: auto; min-height: 400px; }
+  .sh[data-wide] .sh__body { padding: var(--space-6); }
+  .sh[data-wide] .sh__name { font-size: var(--text-2xl); }
+  .sh[data-wide] .sh__status strong { font-size: var(--text-xl); }
+}
 .apptile__dots { display: inline-flex; flex: none; }
 .apptile__dots i { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 0 1.5px var(--card-bg), inset 0 0 0 1px rgb(0 0 0 / 0.1); }
 .apptile__dots i + i { margin-left: -3px; }
@@ -1422,6 +1444,5 @@ body:has(.canvas) .toasts { top: var(--space-3); }
 .dl-css__btns { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 @media (pointer: coarse) { .dl-ring__app::before { inset: -14px; } }
 
-/* /apps 머리말 아래 시리즈 의도 한 단락 */
-.appsidx__series { display: grid; gap: var(--space-1); max-width: 62ch; margin: var(--space-4) 0 0; padding-left: var(--space-3); border-left: 2px solid var(--annot-mark); color: var(--text-muted); }
-.appsidx__series .mono { color: var(--annot-color); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.06em; }
+/* 시스템(/system) 머리말. 아래 두 섹션이 자기 SectionLabel 을 가진다 */
+.sysidx { padding-top: var(--space-7); }

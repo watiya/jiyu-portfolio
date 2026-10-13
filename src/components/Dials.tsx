@@ -97,7 +97,7 @@ export function Dials() {
 
   return (
     <section id="dials" className="dials container reveal" ref={ref} aria-labelledby="dials-title">
-      <SectionLabel index="04" title={t.sections.dials} aside={<>{D.aside(CELLS.length)}</>} />
+      <SectionLabel index="03" title={t.sections.dials} aside={<>{D.aside(CELLS.length)}</>} />
       <div className="section__head">
         <h2 id="dials-title" className="h2">
           {D.title}

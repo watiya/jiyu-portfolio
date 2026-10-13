@@ -21,7 +21,7 @@ const en = {
     title: "Brainchild",
   },
   // 헤더
-  nav: { apps: "Apps", craft: "Craft", cases: "Case studies", work: "Work", writing: "Writing", resume: "Resume", contact: "Contact" },
+  nav: { apps: "Apps", system: "System", craft: "Craft", cases: "Case studies", work: "Work", writing: "Writing", resume: "Resume", contact: "Contact" },
   resume: { print: "Print / PDF" },
   tools: {
     search: "Search",
@@ -34,7 +34,7 @@ const en = {
     menu: "Menu",
   },
   // 섹션 라벨
-  sections: { hero: "Hero", apps: "Apps", system: "How a system works", dials: "Dials", craft: "Craft", cases: "Case studies", work: "Work", journey: "Journey", contact: "Contact", writing: "Writing", notFound: "Not found" },
+  sections: { hero: "Hero", apps: "Apps", system: "How a system works", dials: "How this site runs", craft: "Craft", cases: "Case studies", work: "Work", journey: "Journey", contact: "Contact", writing: "Writing", notFound: "Not found" },
   // 히어로
   hero: {
     headline: "Every app has its own color. This site wears it.",
@@ -55,28 +55,39 @@ const en = {
   // 앱
   apps: {
     aside: (n: number) => `${n} components · tokens: live`,
-    title: "Component library",
-    lede: "Apps I designed and built on my own, shown as components. The cards wear whatever tokens you set.",
+    title: "App shelf",
+    lede: "Grouped by series. Each card sits on its app's own color, and wears the tokens you set.",
     wearing: "Wearing",
     platform: "Platform",
     status: "Status",
     stack: "Stack",
     colors: (name: string) => `${name} brand colors`,
     screen: (name: string) => `${name} screen`,
-    more: (n: number) => `View all apps (${n})`,
+    // 앱 선반: 시리즈 머리와 상태에 맞춘 행동
+    shelf: {
+      boomchi: { mascot: "Boomchi · Seoul", line: "Apps that share Seoul Boom's look and its mascot, Boomchi." },
+      menchi: { mascot: "Menchi · Fukuoka", line: "Apps for a trip to Fukuoka, with the mascot Menchi." },
+      other: { mascot: "Everyday", line: "Running and a hospital visit day, outside the travel series." },
+    } as Record<"boomchi" | "menchi" | "other", { mascot: string; line: string }>,
+    others: "Other apps",
+    count: (n: number) => `${n} apps`,
+    cta: { web: "Open on the web", site: "Visit the site", prototype: "Open the prototype" } as Record<"web" | "site" | "prototype", string>,
+    noLink: "No public link yet",
   },
   // 앱 전체 목록 (/apps)
   appsPage: {
     title: "All apps",
-    lede: "Every app I designed and built on my own. The home page shows a few as token components; this is the full shelf. Each card opens its spec sheet.",
-    aside: (n: number, featured: number) => `${n} apps · ${featured} on home`,
+    lede: "Every app I designed and built on my own, grouped by series. Each card opens its spec sheet.",
+    aside: (n: number) => `${n} apps`,
     filter: "Filter by kind",
     all: "All",
     count: (n: number) => `${n} shown`,
-    home: "On home",
     series: { boomchi: "Boomchi series", menchi: "Menchi series" } as Record<"boomchi" | "menchi", string>,
-    seriesLabel: "Why a series",
-    seriesNote: "A series born from travel: apps to work through one by one on the flight.",
+  },
+  // 시스템 (/system): 홈에서 내린 층 설명과 크래프트
+  systemPage: {
+    title: "System",
+    lede: "How this site is built. One token change runs through four layers to the screen, and the small crafts sit on top.",
   },
   // 층
   layers: {
@@ -312,6 +323,7 @@ const en = {
     case: (title: string) => `${title} | Brainchild`,
     work: "Work | Brainchild",
     apps: "Apps | Brainchild",
+    system: "System | Brainchild",
     resume: "Resume | Brainchild",
     app: (name: string) => `${name} | Brainchild`,
     workDetail: (name: string) => `${name} | Work | Brainchild`,
@@ -338,7 +350,7 @@ const ko: UI = {
     hint: "T 를 눌러 색조를 돌려 보세요. 이 화면도 따라옵니다.",
     title: "Brainchild",
   },
-  nav: { apps: "앱", craft: "크래프트", cases: "사례", work: "작업", writing: "글", resume: "이력서", contact: "연락" },
+  nav: { apps: "앱", system: "시스템", craft: "크래프트", cases: "사례", work: "작업", writing: "글", resume: "이력서", contact: "연락" },
   resume: { print: "인쇄 / PDF" },
   tools: {
     search: "검색",
@@ -350,7 +362,7 @@ const ko: UI = {
     language: "언어",
     menu: "메뉴",
   },
-  sections: { hero: "히어로", apps: "앱", system: "시스템이 움직이는 법", dials: "다이얼", craft: "크래프트", cases: "사례", work: "작업", journey: "여정", contact: "연락", writing: "글", notFound: "없는 경로" },
+  sections: { hero: "히어로", apps: "앱", system: "시스템이 움직이는 법", dials: "이 사이트가 도는 방식", craft: "크래프트", cases: "사례", work: "작업", journey: "여정", contact: "연락", writing: "글", notFound: "없는 경로" },
   hero: {
     // 한 글자 낱말(이·그)이 줄 끝에 홀로 남지 않게 뒷말과 붙임 공백으로 묶는다
     headline: "앱마다 색이 있고, 이\u00a0사이트는 그\u00a0색을 입습니다.",
@@ -370,27 +382,36 @@ const ko: UI = {
   },
   apps: {
     aside: (n) => `컴포넌트 ${n} · 토큰: 실시간`,
-    title: "컴포넌트 라이브러리",
-    lede: "혼자 설계하고 만든 앱을 컴포넌트로 보여 줍니다. 카드는 지금 설정한 토큰을 입습니다.",
+    title: "앱 선반",
+    lede: "시리즈별로 묶었습니다. 카드마다 그 앱의 색 위에 서고, 지금 설정한 토큰을 입습니다.",
     wearing: "입는 중",
     platform: "플랫폼",
     status: "상태",
     stack: "스택",
     colors: (name) => `${name} 브랜드 색`,
     screen: (name) => `${name} 화면`,
-    more: (n) => `앱 전체 보기 (${n})`,
+    shelf: {
+      boomchi: { mascot: "붐치 · 서울", line: "서울붐의 겉모습과 마스코트 붐치를 함께 쓰는 앱." },
+      menchi: { mascot: "멘치 · 후쿠오카", line: "후쿠오카 여행에 맞춘 앱. 마스코트는 멘치." },
+      other: { mascot: "생활", line: "달리기와 병원 가는 날. 여행 시리즈 밖의 앱." },
+    },
+    others: "그 밖의 앱",
+    count: (n) => `앱 ${n}`,
+    cta: { web: "웹에서 열기", site: "사이트 보기", prototype: "프로토타입 열기" },
+    noLink: "공개 주소 없음",
   },
   appsPage: {
     title: "앱 전체",
-    lede: "혼자 설계하고 만든 앱 전부. 홈에는 토큰 컴포넌트로 일부만, 여기에는 전부. 카드마다 스펙 시트로 연결.",
-    aside: (n, featured) => `앱 ${n} · 홈 ${featured}`,
+    lede: "혼자 설계하고 만든 앱 전부를 시리즈별로. 카드마다 스펙 시트로 연결.",
+    aside: (n) => `앱 ${n}`,
     filter: "종류로 거르기",
     all: "전체",
     count: (n) => `${n}개 표시`,
-    home: "홈 노출",
     series: { boomchi: "붐치 시리즈", menchi: "멘치 시리즈" },
-    seriesLabel: "시리즈인 이유",
-    seriesNote: "여행에서 출발한 시리즈. 비행기에서 하나씩 해 보는 앱 묶음.",
+  },
+  systemPage: {
+    title: "시스템",
+    lede: "이 사이트가 지어진 방식. 토큰 하나를 바꾸면 네 층을 지나 화면까지 가고, 그 위에 작은 크래프트가 있습니다.",
   },
   layers: {
     aside: "4개 층 · 층에 올려 보세요",
@@ -609,6 +630,7 @@ const ko: UI = {
     case: (title) => `${title} | Brainchild`,
     work: "작업 | Brainchild",
     apps: "앱 | Brainchild",
+    system: "시스템 | Brainchild",
     resume: "이력서 | Brainchild",
     app: (name) => `${name} | Brainchild`,
     workDetail: (name) => `${name} | 작업 | Brainchild`,

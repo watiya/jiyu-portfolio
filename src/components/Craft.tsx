@@ -31,7 +31,7 @@ export function Craft({ go }: { go: (href: string) => void }) {
   const C = t.craft;
   return (
     <section id="craft" className="craft container reveal" ref={ref} aria-labelledby="craft-title">
-      <SectionLabel index="05" title={t.sections.craft} aside={<>{C.aside(DEMOS.length)}</>} />
+      <SectionLabel index="02" title={t.sections.craft} aside={<>{C.aside(DEMOS.length)}</>} />
       <div className="section__head">
         <h2 id="craft-title" className="h2">
           {C.title}
