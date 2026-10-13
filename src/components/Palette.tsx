@@ -7,6 +7,7 @@ import { isPrivatePath } from "../hidden.ts";
 import { PRESETS } from "../tokens/engine.ts";
 import { EXPORTS } from "../tokens/export.ts";
 import { useTokens } from "../tokens/useTokens.ts";
+import { TOOL_SLUGS } from "../router.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { fuzzyScore } from "../lib.ts";
 
@@ -29,7 +30,11 @@ export function Palette({ go }: { go: (href: string) => void }) {
       go(href);
     };
     return [
-      { id: "home", label: p.home, hint: "/projects", group: g.go, run: nav("/projects") },
+      { id: "home", label: p.home, hint: "/", group: g.go, run: nav("/") },
+      { id: "play", label: t.front.kicker, hint: "/#play", group: g.go, run: nav("/#play") },
+      { id: "tools", label: t.toolsPage.title, hint: "/tools", group: g.go, run: nav("/tools") },
+      ...TOOL_SLUGS.map((s) => ({ id: `tool-${s}`, label: t.toolsPage.items[s].name, hint: `/tools/${s}`, group: g.tools, run: nav(`/tools/${s}`) })),
+      { id: "studio", label: p.studio, hint: "/projects", group: g.go, run: nav("/projects") },
       { id: "apps", label: t.sections.apps, hint: "/projects#apps", group: g.go, run: nav("/projects#apps") },
       { id: "all-apps", label: t.appsPage.title, hint: "/apps", group: g.go, run: nav("/apps") },
       { id: "system", label: t.sections.system, hint: "/system", group: g.go, run: nav("/system") },

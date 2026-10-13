@@ -81,8 +81,26 @@ function usePointerDrag(onPoint: (e: PointerEvent<HTMLElement>) => void) {
 export function Dials() {
   const { t } = useLang();
   const D = t.dials;
-  const { dials, tokens, isDefault, reset, setPanelOpen } = useTokens();
   const ref = useReveal<HTMLElement>();
+  return (
+    <section id="dials" className="dials container reveal" ref={ref} aria-labelledby="dials-title">
+      <SectionLabel index="03" title={t.sections.dials} aside={<>{D.aside(CELLS.length)}</>} />
+      <div className="section__head">
+        <h2 id="dials-title" className="h2">
+          {D.title}
+        </h2>
+        <p className="lede">{D.lede}</p>
+      </div>
+      <DialBoard />
+    </section>
+  );
+}
+
+// 보드만. 홈(/projects)의 다이얼 섹션과 첫 화면의 놀이터가 같이 쓴다
+export function DialBoard() {
+  const { t } = useLang();
+  const D = t.dials;
+  const { dials, tokens, isDefault, reset, setPanelOpen } = useTokens();
   const preset = activePresetOf(dials);
   const source = isDefault ? t.panel.source : preset ? t.panel.preset(preset.name) : t.panel.custom;
   const fixes = tokens.fixes.length;
@@ -96,15 +114,6 @@ export function Dials() {
   };
 
   return (
-    <section id="dials" className="dials container reveal" ref={ref} aria-labelledby="dials-title">
-      <SectionLabel index="03" title={t.sections.dials} aside={<>{D.aside(CELLS.length)}</>} />
-      <div className="section__head">
-        <h2 id="dials-title" className="h2">
-          {D.title}
-        </h2>
-        <p className="lede">{D.lede}</p>
-      </div>
-
       <div className="dl-board" data-token="card.radius line.default">
         <div className="dl-bar mono">
           <span className="dl-bar__state" aria-live="polite">
@@ -150,7 +159,6 @@ export function Dials() {
           </article>
         ))}
       </div>
-    </section>
   );
 }
 

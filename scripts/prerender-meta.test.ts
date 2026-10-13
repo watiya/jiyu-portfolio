@@ -11,8 +11,8 @@ import { CANVAS_SLUGS, SITE, applyMeta, buildRobots, buildRoutes, buildSitemap, 
 const ROOT = new URL("..", import.meta.url).pathname;
 const sizeOf = (p: string) => imageSize(readFileSync(join(ROOT, "public", p)));
 const routes = buildRoutes({ cases: readEnglishCases(ROOT), appDetails: APP_DETAILS, works: WORKS, canvasSlugs: CANVAS_SLUGS, ui: STRINGS.en }, sizeOf);
-// 고정 8(/·/projects·/cases·/apps·/system·/about·/work·/resume) + 사례 11 + 앱 9 + 작업 57 + 캔버스 49
-const ROUTE_COUNT = 8 + 11 + 9 + WORKS.length + CANVAS_SLUGS.length;
+// 고정 8(/·/projects·/cases·/apps·/system·/about·/work·/resume) + 재미요소 1 + 도구 4 + 사례 11 + 앱 9 + 작업 57 + 캔버스 49
+const ROUTE_COUNT = 8 + 1 + 4 + 11 + 9 + WORKS.length + CANVAS_SLUGS.length;
 
 const TEMPLATE = `<!doctype html>
 <html lang="en">
@@ -45,7 +45,7 @@ test("경로 목록: 첫 화면·홈·사례 목록·사례 11·앱 목록·앱 
   // 캔버스 경로는 전부 작업 상세가 있는 슬러그다
   for (const s of CANVAS_SLUGS) assert.ok(paths.includes(`/work/${s}`), s);
   assert.equal(new Set(paths).size, paths.length);
-  for (const p of ["/", "/projects", "/cases", "/apps", "/system", "/about", "/work", "/resume"]) assert.ok(paths.includes(p), p);
+  for (const p of ["/", "/projects", "/cases", "/apps", "/system", "/about", "/work", "/resume", "/tools", "/tools/saju", "/tools/mbti", "/tools/tarot", "/tools/gunghap"]) assert.ok(paths.includes(p), p);
   assert.equal(paths.filter((p) => p.startsWith("/cases/")).length, 11);
   assert.equal(paths.filter((p) => p.startsWith("/apps/")).length, 9);
   for (const s of ["hangul-boom", "menchi-kana", "menchi-voca", "puzzle-lounge"]) assert.ok(paths.includes(`/apps/${s}`), s);
@@ -55,8 +55,11 @@ test("경로 목록: 첫 화면·홈·사례 목록·사례 11·앱 목록·앱 
 test("제목은 앱의 document.title 규칙과 같다", () => {
   const t = STRINGS.en;
   const by = (p: string) => routes.find((r) => r.path === p)!;
-  assert.equal(by("/").title, t.landing.title);
+  assert.equal(by("/").title, t.front.title);
   assert.equal(by("/projects").title, t.titles.home);
+  assert.equal(by("/tools").title, t.titles.tools);
+  assert.equal(by("/tools/saju").title, t.titles.tool(t.toolsPage.items.saju.name));
+  assert.equal(by("/tools/tarot").description, t.toolsPage.items.tarot.line);
   assert.equal(by("/cases").title, t.titles.cases);
   assert.equal(by("/work").title, t.titles.work);
   assert.equal(by("/apps").title, t.titles.apps);

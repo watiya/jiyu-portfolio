@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { Cursor } from "./components/Cursor.tsx";
 import { Header } from "./components/Header.tsx";
 import { Inspector } from "./components/Inspector.tsx";
@@ -6,7 +6,13 @@ import { Palette } from "./components/Palette.tsx";
 import { TokenPanel } from "./components/TokenPanel.tsx";
 import { Toasts } from "./components/Toast.tsx";
 import { Home } from "./pages/Home.tsx";
-import { Landing } from "./pages/Landing.tsx";
+import { Front } from "./pages/Front.tsx";
+import { Tools } from "./pages/Tools.tsx";
+// 도구 넷은 따로 싣는다. 사주 만세력(lunar-typescript)이 커서 첫 화면 묶음에 넣지 않는다
+const Saju = lazy(() => import("./pages/tools/Saju.tsx").then((m) => ({ default: m.Saju })));
+const Mbti = lazy(() => import("./pages/tools/Mbti.tsx").then((m) => ({ default: m.Mbti })));
+const Tarot = lazy(() => import("./pages/tools/Tarot.tsx").then((m) => ({ default: m.Tarot })));
+const Gunghap = lazy(() => import("./pages/tools/Gunghap.tsx").then((m) => ({ default: m.Gunghap })));
 import { AppDetail, NotFound } from "./pages/AppDetail.tsx";
 import { AppsIndex } from "./pages/AppsIndex.tsx";
 import { System } from "./pages/System.tsx";
@@ -51,12 +57,13 @@ function Shell() {
 
   // 문서 제목과 설명은 경로와 언어를 따른다
   useEffect(() => {
-    const titles: Record<string, string> = { landing: t.landing.title, home: t.titles.home, cases: t.titles.cases, work: t.titles.work, apps: t.titles.apps, system: t.titles.system, about: t.titles.about, resume: t.titles.resume };
+    const titles: Record<string, string> = { front: t.front.title, tools: t.titles.tools, home: t.titles.home, cases: t.titles.cases, work: t.titles.work, apps: t.titles.apps, system: t.titles.system, about: t.titles.about, resume: t.titles.resume };
     const appName = route.name === "app" ? APP_DETAILS.find((d) => d.slug === route.slug)?.name : undefined;
     const kase = route.name === "case" ? getCase(lang, route.slug) : undefined;
     const work = route.name === "workDetail" || route.name === "canvas" ? WORKS.find((w) => w.slug === route.slug) : undefined;
     document.title =
-      route.name === "app" ? (appName ? t.titles.app(appName) : t.titles.notFound)
+      route.name === "tool" ? t.titles.tool(t.toolsPage.items[route.slug].name)
+      : route.name === "app" ? (appName ? t.titles.app(appName) : t.titles.notFound)
       : route.name === "case" ? (kase ? t.titles.case(kase.title) : t.titles.notFound)
       : route.name === "workDetail" ? (work ? t.titles.workDetail(work.name) : t.titles.notFound)
       : route.name === "canvas" ? (work ? t.titles.canvas(work.name) : t.titles.notFound)
@@ -65,22 +72,7 @@ function Shell() {
     document.querySelector('meta[name="description"]')?.setAttribute("content", kase?.summary ?? appDek ?? work?.tagline[lang] ?? t.metaDescription);
   }, [route, t, lang]);
 
-  const current = route.name === "apps" || route.name === "app" ? "/apps" : route.name === "cases" || route.name === "case" ? "/cases" : route.name === "work" || route.name === "workDetail" || route.name === "canvas" ? "/work" : route.name === "resume" ? "/resume" : route.name === "system" ? "/system" : route.name === "about" ? "/about" : route.name === "home" ? "/projects" : "";
-
-  // 첫 화면은 헤더·격자 없이 한 장으로 둔다. 토큰 패널과 단축키는 그대로 산다
-  if (route.name === "landing")
-    return (
-      <>
-        <main id="main">
-          <Landing go={go} />
-        </main>
-        <TokenPanel />
-        {inspect && <Inspector />}
-        {paletteOpen && <Palette go={go} />}
-        <Toasts />
-        <Cursor />
-      </>
-    );
+  const current = route.name === "tools" || route.name === "tool" ? "/tools" : route.name === "apps" || route.name === "app" ? "/apps" : route.name === "cases" || route.name === "case" ? "/cases" : route.name === "work" || route.name === "workDetail" || route.name === "canvas" ? "/work" : route.name === "resume" ? "/resume" : route.name === "system" ? "/system" : route.name === "about" ? "/about" : route.name === "home" ? "/projects" : "";
 
   return (
     <>
@@ -90,6 +82,16 @@ function Shell() {
       {/* 캔버스는 사이트 헤더 없이 화면 전체를 쓴다. 돌아가는 길은 캔버스 줄의 ← Back 이 맡고, 단축키(⌘K·I·T)는 전역이라 그대로 산다 */}
       {route.name !== "canvas" && <Header go={go} current={current} />}
       <main id="main">
+        {route.name === "front" && <Front go={go} />}
+        {route.name === "tools" && <Tools go={go} />}
+        {route.name === "tool" && (
+          <Suspense fallback={null}>
+            {route.slug === "saju" && <Saju go={go} />}
+            {route.slug === "mbti" && <Mbti go={go} />}
+            {route.slug === "tarot" && <Tarot go={go} />}
+            {route.slug === "gunghap" && <Gunghap go={go} />}
+          </Suspense>
+        )}
         {route.name === "home" && <Home go={go} />}
         {route.name === "apps" && <AppsIndex go={go} />}
         {route.name === "system" && <System go={go} />}

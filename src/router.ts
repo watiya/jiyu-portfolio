@@ -2,8 +2,13 @@
 import { useCallback, useEffect, useState, type MouseEvent } from "react";
 import { isPrivatePath } from "./hidden.ts";
 
+import { isToolSlug, type ToolSlug } from "./tools/slugs.ts";
+export { TOOL_SLUGS, type ToolSlug } from "./tools/slugs.ts";
+
 export type Route =
-  | { name: "landing" }
+  | { name: "front" }
+  | { name: "tools" }
+  | { name: "tool"; slug: ToolSlug }
   | { name: "home" }
   | { name: "apps" }
   | { name: "system" }
@@ -19,8 +24,12 @@ export type Route =
 
 export function parseRoute(path: string): Route {
   const clean = path.replace(/\/+$/, "") || "/";
-  // 루트는 brainchild.kr 의 첫 화면, 포트폴리오 홈은 옛 주소 그대로 /projects
-  if (clean === "/") return { name: "landing" };
+  // 루트는 토큰 놀이터가 주인공인 첫 화면(2026-10-14). 포트폴리오 홈은 옛 주소 그대로 /projects
+  if (clean === "/") return { name: "front" };
+  // 재미요소: 목록과 도구 넷
+  if (clean === "/tools") return { name: "tools" };
+  const tool = clean.match(/^\/tools\/([a-z]+)$/);
+  if (tool && isToolSlug(tool[1])) return { name: "tool", slug: tool[1] };
   // 잠시 내린 경로(hidden.ts). 스위치를 끄면 아래 분기가 그대로 산다
   if (isPrivatePath(clean)) return { name: "notfound", path: clean };
   if (clean === "/projects") return { name: "home" };
@@ -63,8 +72,12 @@ export function useRoute(): [Route, (href: string) => void] {
       window.history.replaceState(null, "", url.pathname + window.location.search + url.hash);
       return;
     }
-    // 토큰 쿼리는 유지한 채 경로만 바꾼다
-    window.history.pushState(null, "", url.pathname + window.location.search + url.hash);
+    // 토큰 쿼리는 유지한 채 경로만 바꾼다. 도구 결과 코드(r)는 그 화면 것이라 경로가 바뀌면 버린다
+    const search = new URLSearchParams(window.location.search);
+    search.delete("r");
+    new URLSearchParams(url.search).forEach((v, k) => search.set(k, v));
+    const q = search.toString();
+    window.history.pushState(null, "", url.pathname + (q ? `?${q}` : "") + url.hash);
     setPath(url.pathname);
     if (url.hash) requestAnimationFrame(() => requestAnimationFrame(scrollToHash));
     else window.scrollTo(0, 0);

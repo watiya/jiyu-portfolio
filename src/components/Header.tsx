@@ -6,8 +6,9 @@ import { LANGS } from "../i18n/lang.ts";
 import { isPrivatePath } from "../hidden.ts";
 
 // match 는 이 항목이 활성인 경로들. Apps 는 /work 처럼 독립 페이지(/apps)로 간다. 상세(/apps/<slug>)도 App.tsx 가 /apps 로 넘긴다
-type NavItem = { key: "apps" | "system" | "about" | "cases" | "work" | "resume" | "contact"; href: string; match: string[] };
+type NavItem = { key: "tools" | "apps" | "system" | "about" | "cases" | "work" | "resume" | "contact"; href: string; match: string[] };
 const NAV: NavItem[] = ([
+  { key: "tools", href: "/tools", match: ["/tools"] },
   { key: "apps", href: "/apps", match: ["/apps"] },
   { key: "system", href: "/system", match: ["/system"] },
   { key: "about", href: "/about", match: ["/about"] },
@@ -37,7 +38,7 @@ export function Header({ go, current }: { go: (href: string) => void; current: s
   return (
     <header className="hdr" data-token="surface.canvas line.default">
       <div className="container hdr__row">
-        <a href="/projects" className="hdr__brand" onClick={onClick}>
+        <a href="/" className="hdr__brand" onClick={onClick}>
           {t.siteName}
         </a>
         <nav className="hdr__nav" aria-label="Primary">

@@ -375,7 +375,8 @@ function Journey() {
 
 // ---------- 07 Contact ----------
 
-function Contact({ go }: { go: (href: string) => void }) {
+// 첫 화면(Front)도 같은 연락 섹션을 쓴다
+export function Contact({ go }: { go: (href: string) => void }) {
   const { toast } = useTokens();
   const { lang, t } = useLang();
   const time = useClock("Asia/Seoul");

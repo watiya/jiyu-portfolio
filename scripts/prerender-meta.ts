@@ -9,6 +9,7 @@ import { APP_DETAILS, type AppDetail } from "../src/appDetails.ts";
 import { STRINGS, type UI } from "../src/i18n/ui.ts";
 import { WORKS, type Work } from "../src/works.ts";
 import { isPrivatePath } from "../src/hidden.ts";
+import { TOOL_SLUGS } from "../src/tools/slugs.ts";
 import canvasIndex from "../src/content/canvas/index.json" with { type: "json" };
 
 export const SITE = "https://www.brainchild.kr";
@@ -48,9 +49,12 @@ export function buildRoutes({ cases, appDetails, works, canvasSlugs, ui }: Sourc
   });
 
   return [
-    // 첫 화면 제목은 앱의 document.title 과 같고, 공유 제목만 기존 값(홈 제목)을 쓴다
-    generic("/", ui.landing.title, ui.titles.home),
+    // 첫 화면(토큰 놀이터) 제목은 앱의 document.title 과 같고, 공유 제목만 기존 값(홈 제목)을 쓴다
+    generic("/", ui.front.title, ui.titles.home),
     generic("/projects", ui.titles.home),
+    // 재미요소 목록과 도구 넷
+    generic("/tools", ui.titles.tools),
+    ...TOOL_SLUGS.map((s): RouteMeta => ({ path: `/tools/${s}`, title: ui.titles.tool(ui.toolsPage.items[s].name), description: ui.toolsPage.items[s].line, ogDescription: ui.toolsPage.items[s].line, image: image(DEFAULT_IMAGE) })),
     generic("/cases", ui.titles.cases),
     generic("/apps", ui.titles.apps),
     generic("/system", ui.titles.system),
