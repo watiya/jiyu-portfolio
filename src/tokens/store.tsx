@@ -6,7 +6,7 @@ import { useLang } from "../i18n/useLang.ts";
 import { DEFAULT_LANG } from "../i18n/lang.ts";
 
 const STORAGE_KEY = "v8.tokens";
-const QUERY_KEYS = ["hue", "sec", "neutral", "pairing", "radius", "density", "motion", "theme"];
+const QUERY_KEYS = ["hue", "sec", "neutral", "pairing", "radius", "scale", "density", "motion", "theme"];
 
 function readInitial(): Dials {
   if (typeof window === "undefined") return DEFAULT_DIALS;

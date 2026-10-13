@@ -8,6 +8,8 @@ import {
   PAIRINGS,
   PAIRING_META,
   PRESETS,
+  SCALE_MAX,
+  SCALE_MIN,
   THEMES,
   type Dials,
 } from "../tokens/engine.ts";
@@ -47,6 +49,7 @@ export function TokenPanel() {
   const ref = useRef<HTMLElement>(null);
   const hueId = useId();
   const radiusId = useId();
+  const scaleId = useId();
 
   // 열리면 첫 컨트롤로 포커스, Escape 로 닫기
   useEffect(() => {
@@ -138,6 +141,21 @@ export function TokenPanel() {
               <input id={radiusId} className="range" type="range" min={0} max={24} step={1} value={dials.radius} onChange={(e) => set({ radius: Number(e.target.value) })} />
               <span className="radius-demo" aria-hidden="true" />
             </div>
+          </Field>
+
+          <Field label={L.scale} value={`×${(dials.scale / 100).toFixed(2)}`}>
+            <label htmlFor={scaleId} className="sr-only">{L.scale}</label>
+            <input
+              id={scaleId}
+              className="range"
+              type="range"
+              min={SCALE_MIN}
+              max={SCALE_MAX}
+              step={5}
+              value={dials.scale}
+              aria-valuetext={`×${(dials.scale / 100).toFixed(2)}, 3xl ${tokens.vars["--text-3xl"]}`}
+              onChange={(e) => set({ scale: Number(e.target.value) })}
+            />
           </Field>
 
           <Field label={L.density}>

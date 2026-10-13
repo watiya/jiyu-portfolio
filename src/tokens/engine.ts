@@ -14,6 +14,7 @@ export type Dials = {
   neutral: Neutral;
   pairing: Pairing;
   radius: number; // 0..24
+  scale: number; // 60..140. 타입 스케일 대비(%). 100 이 손으로 맞춘 기본 단계
   density: Density;
   motion: Motion;
   theme: Theme;
@@ -26,6 +27,7 @@ export const DEFAULT_DIALS: Dials = {
   neutral: "warm",
   pairing: "geist",
   radius: 6,
+  scale: 100,
   density: "regular",
   motion: "calm",
   theme: "light",
@@ -115,6 +117,19 @@ export function neutralScale(temp: Neutral): string[] {
     return oklchToHex({ l, c: c * edge, h });
   });
 }
+
+// 타입 단계. 본문(base) 아래는 주석·메타 글자라 읽히는 하한으로 고정하고, 위 단계만 scale 로 벌리거나 좁힌다.
+// 단계 k 의 크기 = base * (기본값/base)^(scale/100). scale 100 이면 손으로 맞춘 값 그대로다
+export const TYPE_BASE = 17;
+export const TYPE_STEPS = [
+  { name: "lg", px: 20 },
+  { name: "xl", px: 24 },
+  { name: "2xl", px: 32 },
+  { name: "3xl", px: 44 },
+] as const;
+export const SCALE_MIN = 60;
+export const SCALE_MAX = 140;
+export const typeStep = (px: number, scale: number) => round(TYPE_BASE * Math.pow(px / TYPE_BASE, scale / 100));
 
 const SPACE_MULT: Record<Density, number> = { compact: 0.85, regular: 1, airy: 1.2 };
 // 간격 스케일(px, 배수 전). 이 밖의 값은 쓰지 않는다.
@@ -271,6 +286,8 @@ export function buildTokens(dials: Dials): Tokens {
   vars["--radius-3"] = `${round(r * 1.5)}px`;
   vars["--radius-4"] = `${round(r * 2)}px`;
   vars["--radius-full"] = "999px";
+  vars["--text-base"] = `${TYPE_BASE}px`;
+  TYPE_STEPS.forEach((st) => (vars[`--text-${st.name}`] = `${typeStep(st.px, dials.scale)}px`));
   vars["--font-heading"] = pair.heading;
   vars["--font-body"] = pair.body;
   vars["--font-mono"] = pair.mono;
@@ -489,8 +506,8 @@ export const presetBySlug = (slug: string) => PRESETS.find((p) => p.slug === slu
 
 // ---------- URL 직렬화 ----------
 
-const KEYS: (keyof Dials)[] = ["hue", "secondary", "neutral", "pairing", "radius", "density", "motion", "theme"];
-const QUERY_KEY: Record<keyof Dials, string> = { hue: "hue", secondary: "sec", neutral: "neutral", pairing: "pairing", radius: "radius", density: "density", motion: "motion", theme: "theme" };
+const KEYS: (keyof Dials)[] = ["hue", "secondary", "neutral", "pairing", "radius", "scale", "density", "motion", "theme"];
+const QUERY_KEY: Record<keyof Dials, string> = { hue: "hue", secondary: "sec", neutral: "neutral", pairing: "pairing", radius: "radius", scale: "scale", density: "density", motion: "motion", theme: "theme" };
 
 export function dialsToQuery(d: Dials): string {
   const q = new URLSearchParams();
@@ -513,6 +530,8 @@ export function parseDials(input: URLSearchParams | Record<string, unknown> | nu
   if (get("hue") !== undefined && Number.isFinite(hue)) out.hue = clampNum(Math.round(hue), 0, 360);
   const radius = Number(get("radius"));
   if (get("radius") !== undefined && Number.isFinite(radius)) out.radius = clampNum(Math.round(radius), 0, 24);
+  const scale = Number(get("scale"));
+  if (get("scale") !== undefined && Number.isFinite(scale)) out.scale = clampNum(Math.round(scale), SCALE_MIN, SCALE_MAX);
   const sec = get(input instanceof URLSearchParams ? "sec" : "secondary");
   if (sec === null || sec === "") out.secondary = null;
   else if (typeof sec === "string") {

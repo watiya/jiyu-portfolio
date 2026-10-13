@@ -30,7 +30,7 @@ const en = {
     menu: "Menu",
   },
   // 섹션 라벨
-  sections: { hero: "Hero", apps: "Apps", system: "How a system works", craft: "Craft", cases: "Case studies", work: "Work", journey: "Journey", contact: "Contact", writing: "Writing", notFound: "Not found" },
+  sections: { hero: "Hero", apps: "Apps", system: "How a system works", dials: "Dials", craft: "Craft", cases: "Case studies", work: "Work", journey: "Journey", contact: "Contact", writing: "Writing", notFound: "Not found" },
   // 히어로
   hero: {
     headline: "I turn messy product rules into systems that ship.",
@@ -144,6 +144,27 @@ const en = {
     title: "Version history",
     lede: "Each role as a release. Latest first, numbered from the data.",
   },
+  // 다이얼 보드: 토큰 패널과 같은 다이얼을 손으로 돌리는 컨트롤. 값은 사이트 전체에 바로 들어간다
+  dials: {
+    aside: (n: number) => `${n} controls · same state as the token panel`,
+    title: "Turn the system by hand",
+    lede: "Six controls on the same dials as the token panel. Every value goes straight into the real tokens on :root, so the whole page, header to footer, moves as you turn.",
+    all: "All dials",
+    affects: "Moves",
+    items: {
+      hue: { title: "Accent ring", line: "Drag around the ring. Buttons, links, focus rings and section numbers take the new hue.", affects: "button.bg · annot.color · focus.ring" },
+      radius: { title: "Corner handle", line: "Pull the handle along the edge. Drawn at 4x here, applied at 1x to cards, buttons and chips.", affects: "card.radius · button.radius · chip.radius" },
+      scale: { title: "Type scale", line: "Spread or pull the heading steps. Body text holds at 17px.", affects: "h1 · h2 · h3 · lede" },
+      density: { title: "Spacing density", line: "The hatching is real padding and gap. Every space token moves together.", affects: "card.pad · gutter · section gaps" },
+      motion: { title: "Motion switch", line: "Three detents. The curve is the emphasis easing, the dot runs on the slowest duration.", affects: "duration.1-3 · ease.emphasis" },
+      css: { title: "Take it as CSS", line: "The lines these dials just wrote. Copy the whole :root block, or a link that rebuilds this exact theme.", affects: "tokens.css" },
+    },
+    hue: { label: "Accent hue", deg: (n: number) => `${n} degrees`, apps: "App hues", pick: (name: string) => `Use the ${name} hue` },
+    radius: { label: "Corner radius", zoom: "4x" },
+    scale: { label: "Type scale contrast" },
+    motion: { label: "Motion", reduced: "Reduced motion is on in your system, so motion stays off." },
+    css: { copy: "Copy :root", link: "Copy theme link", label: "Live tokens from these dials" },
+  },
   // 크래프트: 직접 만든 부품을 카드 안에서 바로 만져 보는 데모
   craft: {
     aside: (n: number) => `${n} parts · all running`,
@@ -211,6 +232,7 @@ const en = {
     neutrals: { cool: "Cool", neutral: "Neutral", warm: "Warm" } as Record<string, string>,
     pairing: "Type pairing",
     radius: "Radius",
+    scale: "Type scale",
     density: "Density",
     densities: { compact: "Compact", regular: "Regular", airy: "Airy" } as Record<string, string>,
     motion: "Motion",
@@ -304,7 +326,7 @@ const ko: UI = {
     language: "언어",
     menu: "메뉴",
   },
-  sections: { hero: "히어로", apps: "앱", system: "시스템이 움직이는 법", craft: "크래프트", cases: "사례", work: "작업", journey: "여정", contact: "연락", writing: "글", notFound: "없는 경로" },
+  sections: { hero: "히어로", apps: "앱", system: "시스템이 움직이는 법", dials: "다이얼", craft: "크래프트", cases: "사례", work: "작업", journey: "여정", contact: "연락", writing: "글", notFound: "없는 경로" },
   hero: {
     headline: "복잡한 제품 규칙을 출시되는 시스템으로 바꿉니다.",
     aside: "타입 스펙 · 숫자를 끌어 보세요",
@@ -410,6 +432,26 @@ const ko: UI = {
     title: "버전 이력",
     lede: "경력 하나가 릴리스 하나입니다. 최신이 위, 번호는 데이터에서 셉니다.",
   },
+  dials: {
+    aside: (n) => `컨트롤 ${n} · 토큰 패널과 같은 상태`,
+    title: "손으로 돌리는 시스템",
+    lede: "토큰 패널과 같은 다이얼에 물린 컨트롤 여섯 개. 값은 곧바로 :root 의 실제 토큰으로 들어가고, 헤더부터 푸터까지 페이지 전체가 함께 변경.",
+    all: "전체 다이얼",
+    affects: "변경 대상",
+    items: {
+      hue: { title: "강조색 링", line: "링을 따라 끌기. 버튼, 링크, 포커스 링, 섹션 번호까지 새 색조로 변경.", affects: "button.bg · annot.color · focus.ring" },
+      radius: { title: "모서리 핸들", line: "손잡이를 가장자리 따라 끌기. 여기는 4배 확대, 카드·버튼·칩에는 실제 크기로 반영.", affects: "card.radius · button.radius · chip.radius" },
+      scale: { title: "타입 스케일", line: "제목 단계 사이를 벌리거나 좁히기. 본문은 17px 고정.", affects: "h1 · h2 · h3 · lede" },
+      density: { title: "간격 밀도", line: "빗금이 실제 여백과 간격. 간격 토큰 전체가 함께 이동.", affects: "card.pad · gutter · section gaps" },
+      motion: { title: "모션 스위치", line: "세 단계 스위치. 곡선은 강조 이징, 점은 가장 긴 지속 시간으로 이동.", affects: "duration.1-3 · ease.emphasis" },
+      css: { title: "CSS 로 가져가기", line: "방금 다이얼이 쓴 줄. :root 전체, 또는 이 테마를 그대로 다시 여는 링크 복사.", affects: "tokens.css" },
+    },
+    hue: { label: "강조 색상", deg: (n) => `${n}도`, apps: "앱 색조", pick: (name) => `${name} 색조로 변경` },
+    radius: { label: "모서리 반경", zoom: "4배" },
+    scale: { label: "타입 스케일 대비" },
+    motion: { label: "모션", reduced: "시스템의 동작 줄이기 설정으로 모션은 꺼짐 유지." },
+    css: { copy: ":root 복사", link: "테마 링크 복사", label: "이 다이얼이 쓴 실시간 토큰" },
+  },
   craft: {
     aside: (n) => `부품 ${n} · 전부 작동합니다`,
     title: "직접 만든 부품",
@@ -471,6 +513,7 @@ const ko: UI = {
     neutrals: { cool: "차갑게", neutral: "중립", warm: "따뜻하게" },
     pairing: "서체 조합",
     radius: "모서리",
+    scale: "타입 스케일",
     density: "밀도",
     densities: { compact: "촘촘", regular: "보통", airy: "여유" },
     motion: "모션",

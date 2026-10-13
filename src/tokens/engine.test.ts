@@ -128,7 +128,7 @@ test("presets build and pass AA", () => {
 
 test("query round trip: only non-default keys, unknown values ignored", () => {
   assert.equal(dialsToQuery(DEFAULT_DIALS), "");
-  const d: Dials = { hue: 12, secondary: null, neutral: "cool", pairing: "editorial", radius: 0, density: "airy", motion: "off", theme: "dark" };
+  const d: Dials = { hue: 12, secondary: null, neutral: "cool", pairing: "editorial", radius: 0, scale: 130, density: "airy", motion: "off", theme: "dark" };
   const q = dialsToQuery(d);
   assert.deepEqual(parseDials(new URLSearchParams(q)), d);
   const junk = parseDials(new URLSearchParams("hue=999&neutral=hot&radius=-5&pairing=comic&theme=dark"));
@@ -149,6 +149,20 @@ test("spacing comes from the scale and follows density", () => {
   assert.equal(airy["--space-4"], "19.2px");
   assert.equal(regular["--radius-2"], "6px");
   assert.equal(buildTokens({ ...DEFAULT_DIALS, motion: "off" }).vars["--duration-2"], "0ms");
+});
+
+test("type scale: 100 keeps the hand-set steps, other values spread or pull them, body stays", () => {
+  const at = (scale: number) => buildTokens({ ...DEFAULT_DIALS, scale }).vars;
+  const src = at(100);
+  assert.deepEqual([src["--text-base"], src["--text-lg"], src["--text-xl"], src["--text-2xl"], src["--text-3xl"]], ["17px", "20px", "24px", "32px", "44px"]);
+  const tight = at(60);
+  const loud = at(140);
+  for (const k of ["--text-lg", "--text-xl", "--text-2xl", "--text-3xl"]) {
+    assert.ok(parseFloat(tight[k]) < parseFloat(src[k]) && parseFloat(src[k]) < parseFloat(loud[k]), k);
+  }
+  assert.equal(loud["--text-base"], "17px");
+  assert.equal(parseDials(new URLSearchParams("scale=999")).scale, 140);
+  assert.equal(parseDials(new URLSearchParams("scale=abc")).scale, 100);
 });
 
 test("accent.secondary: source equals accent, presets keep brand hex or nudge it, on-color passes AA", () => {
