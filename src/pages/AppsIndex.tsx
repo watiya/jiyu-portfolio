@@ -34,6 +34,10 @@ export function AppsIndex({ go }: { go: (href: string) => void }) {
       <SectionLabel index="02" title={t.sections.apps} aside={<>{P.aside(apps.length, featured)}</>} />
       <h1 className="h1">{P.title}</h1>
       <p className="lede">{P.lede}</p>
+      <p className="appsidx__series">
+        <span className="mono">{P.seriesLabel}</span>
+        {P.seriesNote}
+      </p>
 
       {kinds.length > 1 && (
         <div className="wkfilters" role="group" aria-label={P.filter}>

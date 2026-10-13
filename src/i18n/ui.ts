@@ -71,6 +71,8 @@ const en = {
     count: (n: number) => `${n} shown`,
     home: "On home",
     series: { boomchi: "Boomchi series", menchi: "Menchi series" } as Record<"boomchi" | "menchi", string>,
+    seriesLabel: "Why a series",
+    seriesNote: "Every Boomchi and Menchi app comes from travel. The idea was a series to work through on the flight: letters and words before landing, a puzzle for the hours left over, then a city guide once you arrive. One mascot per city carries you from app to app.",
   },
   // 층
   layers: {
@@ -378,6 +380,8 @@ const ko: UI = {
     count: (n) => `${n}개 표시`,
     home: "홈 노출",
     series: { boomchi: "붐치 시리즈", menchi: "멘치 시리즈" },
+    seriesLabel: "시리즈인 이유",
+    seriesNote: "붐치와 멘치는 전부 여행에서 출발. 비행기 타고 가는 동안 하나씩 해 볼 앱을 시리즈로 만들고 싶어서 시작. 도착 전에 익히는 글자와 단어, 남는 시간엔 퍼즐, 내려서는 도시 안내 앱. 도시마다 한 마스코트가 앱과 앱 사이를 잇는 구성.",
   },
   layers: {
     aside: "4개 층 · 층에 올려 보세요",
