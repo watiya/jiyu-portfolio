@@ -17,10 +17,11 @@ import { Craft } from "../components/Craft.tsx";
 import { Dials } from "../components/Dials.tsx";
 import { HIDE_PRIVATE } from "../hidden.ts";
 
-// 한글 제목은 글자가 넓고 어센더가 없어 기본값을 따로 둔다
+// 한글 제목은 글자가 넓고 어센더가 없어 기본값을 따로 둔다.
+// ko 90 은 지금 문장이 두 줄에 들어가는 크기(100 이면 1440 폭에서 세 줄로 꺾인다)
 const HERO_DEFAULTS: Record<Lang, { size: number; leading: number; tracking: number }> = {
   en: { size: 120, leading: 0.95, tracking: -0.03 },
-  ko: { size: 100, leading: 1.0, tracking: -0.015 },
+  ko: { size: 90, leading: 1.0, tracking: -0.015 },
 };
 
 export function Home({ go }: { go: (href: string) => void }) {

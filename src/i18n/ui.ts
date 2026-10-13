@@ -10,8 +10,12 @@ const en = {
     "Design engineer. I turn messy product rules into systems that ship. 14 years in product design, building the source of truth in code. This site is a living design system: turn the tokens and everything follows.",
   // 첫 화면 (brainchild.kr)
   landing: {
-    lead: "UX, brand, and code as one source of truth.",
+    lead: "Every app has its own color. This site wears it.",
     enter: "Enter the portfolio",
+    pick: "Point at a phone to try its colors. Press to keep them.",
+    trying: (name: string) => `Trying ${name}`,
+    wearing: (name: string) => `Wearing ${name}`,
+    wear: (name: string) => `Wear ${name} colors`,
     nav: { projects: "Projects", cases: "Case studies", contact: "Contact", team: "Team" },
     hint: "Press T and turn the hue. This page follows too.",
     title: "Brainchild",
@@ -33,7 +37,7 @@ const en = {
   sections: { hero: "Hero", apps: "Apps", system: "How a system works", dials: "Dials", craft: "Craft", cases: "Case studies", work: "Work", journey: "Journey", contact: "Contact", writing: "Writing", notFound: "Not found" },
   // 히어로
   hero: {
-    headline: "I turn messy product rules into systems that ship.",
+    headline: "Every app has its own color. This site wears it.",
     aside: "type spec · drag the numbers",
     fontSize: "Font size",
     lineHeight: "Line height",
@@ -324,8 +328,12 @@ const ko: UI = {
   tagline: "복잡한 제품 규칙을 출시되는 시스템으로 바꿉니다",
   metaDescription: "디자인 엔지니어. 복잡한 제품 규칙을 출시되는 시스템으로 바꿉니다. 제품 디자인 14년, 기준을 코드로 짓습니다. 이 사이트는 살아 있는 디자인 시스템입니다. 토큰을 돌리면 전부 따라옵니다.",
   landing: {
-    lead: "UX, 브랜드, 코드를 하나의 기준으로.",
+    lead: "앱마다 색이 있고, 이 사이트는 그 색을 입습니다.",
     enter: "포트폴리오 보기",
+    pick: "폰을 가리키면 그 앱의 색을 잠깐 입습니다. 누르면 그대로 둡니다.",
+    trying: (name) => `${name} 색을 미리 보는 중`,
+    wearing: (name) => `${name} 색을 입는 중`,
+    wear: (name) => `${name} 색 입히기`,
     nav: { projects: "프로젝트", cases: "사례", contact: "연락", team: "팀" },
     hint: "T 를 눌러 색조를 돌려 보세요. 이 화면도 따라옵니다.",
     title: "Brainchild",
@@ -344,7 +352,8 @@ const ko: UI = {
   },
   sections: { hero: "히어로", apps: "앱", system: "시스템이 움직이는 법", dials: "다이얼", craft: "크래프트", cases: "사례", work: "작업", journey: "여정", contact: "연락", writing: "글", notFound: "없는 경로" },
   hero: {
-    headline: "복잡한 제품 규칙을 출시되는 시스템으로 바꿉니다.",
+    // 한 글자 낱말(이·그)이 줄 끝에 홀로 남지 않게 뒷말과 붙임 공백으로 묶는다
+    headline: "앱마다 색이 있고, 이\u00a0사이트는 그\u00a0색을 입습니다.",
     aside: "타입 스펙 · 숫자를 끌어 보세요",
     fontSize: "글자 크기",
     lineHeight: "행간",

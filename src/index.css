@@ -817,13 +817,16 @@ html[data-motion="off"] .cursor *, html[data-motion="off"] .cursor { transition:
   position: relative;
   min-height: 100svh;
   display: grid;
-  grid-template-rows: auto auto 1fr auto auto auto;
+  grid-template-rows: auto auto 1fr auto auto auto auto auto;
   justify-items: center;
   overflow: hidden;
   color: var(--text-inverse);
-  background:
+  /* 바탕색만 따로 둬야 프리셋을 미리 입힐 때 색이 부드럽게 넘어간다 */
+  background-color: var(--surface-inverse);
+  background-image:
     radial-gradient(60% 50% at 50% 50%, color-mix(in oklab, var(--accent-default) 14%, transparent), transparent 70%),
-    linear-gradient(135deg, var(--surface-inverse), color-mix(in oklab, var(--surface-inverse) 88%, var(--text-inverse)) 50%, var(--surface-inverse));
+    linear-gradient(135deg, transparent, color-mix(in oklab, var(--text-inverse) 12%, transparent) 50%, transparent);
+  transition: background-color var(--duration-3) var(--ease-default), color var(--duration-3) var(--ease-default);
 }
 .landing__particles { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; animation: landing-fade 2s var(--ease-default) both; }
 .landing > :not(.landing__particles) { position: relative; z-index: 1; }
@@ -872,14 +875,60 @@ html[data-motion="off"] .cursor *, html[data-motion="off"] .cursor { transition:
 }
 .landing__mark-sub { font-size: 0.36em; letter-spacing: -0.01em; vertical-align: baseline; }
 .landing__lead {
-  margin: var(--space-7) var(--space-4) 0;
+  margin: var(--space-4) var(--space-4) 0;
   text-align: center;
-  font-size: var(--text-sm);
-  color: color-mix(in oklab, var(--text-inverse) 55%, transparent);
+  font-size: var(--text-lg);
+  color: color-mix(in oklab, var(--text-inverse) 72%, transparent);
+  text-wrap: balance;
   animation: landing-fade 1.6s 0.6s var(--ease-default) both;
 }
+.landing__lead span { display: inline-block; }
+/* 앱 폰 줄. 기울이거나 겹치지 않고 나란히 세우고, 높이만 엇갈려 리듬을 준다 */
+.landing__apps {
+  justify-self: stretch;
+  list-style: none;
+  margin: var(--space-6) 0 0;
+  padding: var(--space-3) var(--space-5);
+  display: flex;
+  justify-content: safe center;
+  align-items: flex-start;
+  gap: var(--space-5);
+  animation: landing-fade 1.6s 0.75s var(--ease-default) both;
+}
+.landing__app { flex: none; }
+.landing__app:nth-child(even) { margin-top: var(--space-6); }
+.landing__phone {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 32px;
+  transition: opacity var(--duration-2) var(--ease-default);
+}
+.landing__phone .phone { box-shadow: 0 0 0 1px color-mix(in oklab, var(--text-inverse) 14%, transparent), 0 24px 48px -28px rgb(0 0 0 / 0.6); transition: transform var(--duration-3) var(--ease-emphasis), box-shadow var(--duration-3) var(--ease-default); }
+.landing__phone:hover .phone, .landing__phone:focus-visible .phone { transform: translateY(calc(var(--space-2) * -1)); box-shadow: 0 0 0 2px var(--accent-default), 0 28px 56px -28px rgb(0 0 0 / 0.65); }
+.landing__phone[aria-pressed="true"] .phone { box-shadow: 0 0 0 2px var(--accent-default), 0 24px 48px -28px rgb(0 0 0 / 0.6); }
+.landing__phone:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 6px; }
+/* 하나를 미리 입는 동안 나머지는 한 발 물러난다 */
+.landing[data-preview] .landing__phone:not(:hover, :focus-visible) { opacity: 0.55; }
+.landing__app-name { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-xs); letter-spacing: 0.04em; color: color-mix(in oklab, var(--text-inverse) 70%, transparent); }
+.landing__dots { display: inline-flex; gap: 3px; }
+.landing__dots i { width: 8px; height: 8px; border-radius: 50%; box-shadow: 0 0 0 1px color-mix(in oklab, var(--text-inverse) 20%, transparent); }
+.landing__status {
+  margin: var(--space-4) var(--space-4) 0;
+  min-height: 1.5em;
+  text-align: center;
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: color-mix(in oklab, var(--text-inverse) 50%, transparent);
+}
 .landing__enter {
-  margin: var(--space-5) 0 var(--space-7);
+  margin: var(--space-4) 0 var(--space-6);
   padding: var(--space-2) var(--space-4);
   border: 1px solid color-mix(in oklab, var(--text-inverse) 25%, transparent);
   border-radius: var(--radius-full);
@@ -928,10 +977,15 @@ html[data-motion="off"] .cursor *, html[data-motion="off"] .cursor { transition:
   .landing__hint { display: none; }
   .landing__foot { justify-content: flex-end; }
   .landing__line { display: none; }
+  /* 모바일은 폰을 가로 스와이프 한 줄로. 화면 끝에서 잘려 "더 있다" 를 보인다 */
+  .landing__apps { justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; padding-inline: 16px; gap: var(--space-4); scrollbar-width: none; overscroll-behavior-x: contain; }
+  .landing__apps::-webkit-scrollbar { display: none; }
+  .landing__app { scroll-snap-align: start; }
+  .landing__app .phone { width: 128px !important; }
 }
 html[data-motion="off"] .landing *,
-html[data-motion="off"] .landing { animation: none !important; }
-@media (prefers-reduced-motion: reduce) { .landing * { animation: none !important; } }
+html[data-motion="off"] .landing { animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) { .landing, .landing * { animation: none !important; transition: none !important; } }
 
 /* ---------- 04 크래프트 ---------- */
 .craft__grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
