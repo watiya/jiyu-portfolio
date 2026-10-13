@@ -54,6 +54,7 @@ export function buildRoutes({ cases, appDetails, works, canvasSlugs, ui }: Sourc
     generic("/cases", ui.titles.cases),
     generic("/apps", ui.titles.apps),
     generic("/system", ui.titles.system),
+    generic("/about", ui.titles.about),
     ...cases.map((c): RouteMeta => ({
       path: `/cases/${c.slug}`,
       title: ui.titles.case(c.title),

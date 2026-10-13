@@ -21,7 +21,7 @@ const en = {
     title: "Brainchild",
   },
   // 헤더
-  nav: { apps: "Apps", system: "System", craft: "Craft", cases: "Case studies", work: "Work", writing: "Writing", resume: "Resume", contact: "Contact" },
+  nav: { apps: "Apps", system: "System", about: "About", craft: "Craft", cases: "Case studies", work: "Work", writing: "Writing", resume: "Resume", contact: "Contact" },
   resume: { print: "Print / PDF" },
   tools: {
     search: "Search",
@@ -83,6 +83,25 @@ const en = {
     all: "All",
     count: (n: number) => `${n} shown`,
     series: { boomchi: "Boomchi series", menchi: "Menchi series" } as Record<"boomchi" | "menchi", string>,
+  },
+  // 소개 (/about): 무엇인지, 화면을 읽는 기준, 앱별 처리방침
+  aboutPage: {
+    title: "About",
+    lede: "Brainchild is a set of small apps that start from everyday snags, and the one design system they share. Planning, screens, and code come from the same hands.",
+    readTitle: "How to read these pages",
+    read: [
+      { label: "Screens", body: "Most screens are captures of the running app. A few come from the design canvas, drawn before the build." },
+      { label: "Data", body: "Names, records, and numbers on public screens are sample data. The patient in Carenote is made up." },
+      { label: "Status", body: "Each app says where it stands today: live, installed on a phone, or still in design." },
+      { label: "Numbers", body: "Counts like 208 kana or 120 words are what the app actually holds. Usage numbers are never made up." },
+      { label: "Corrections", body: "If something looks wrong or out of date, write to the address below." },
+    ],
+    privacyTitle: "Privacy and support",
+    privacyLede: "Each app's policy pages, in one place.",
+    privacy: "Privacy policy",
+    support: "Support",
+    pending: "In preparation",
+    contactTitle: "Contact",
   },
   // 시스템 (/system): 홈에서 내린 층 설명과 크래프트
   systemPage: {
@@ -331,6 +350,7 @@ const en = {
     work: "Work | Brainchild",
     apps: "Apps | Brainchild",
     system: "System | Brainchild",
+    about: "About | Brainchild",
     resume: "Resume | Brainchild",
     app: (name: string) => `${name} | Brainchild`,
     workDetail: (name: string) => `${name} | Work | Brainchild`,
@@ -357,7 +377,7 @@ const ko: UI = {
     hint: "T 를 눌러 색조를 돌려 보세요. 이 화면도 따라옵니다.",
     title: "Brainchild",
   },
-  nav: { apps: "앱", system: "시스템", craft: "크래프트", cases: "사례", work: "작업", writing: "글", resume: "이력서", contact: "연락" },
+  nav: { apps: "앱", system: "시스템", about: "소개", craft: "크래프트", cases: "사례", work: "작업", writing: "글", resume: "이력서", contact: "연락" },
   resume: { print: "인쇄 / PDF" },
   tools: {
     search: "검색",
@@ -415,6 +435,24 @@ const ko: UI = {
     all: "전체",
     count: (n) => `${n}개 표시`,
     series: { boomchi: "붐치 시리즈", menchi: "멘치 시리즈" },
+  },
+  aboutPage: {
+    title: "소개",
+    lede: "Brainchild 는 생활 속 작은 불편에서 출발한 앱들과, 그 앱들이 함께 쓰는 디자인 시스템 하나입니다. 기획과 화면, 코드를 한 손으로 만듭니다.",
+    readTitle: "이 페이지를 읽는 법",
+    read: [
+      { label: "화면", body: "대부분 실제로 도는 앱의 캡처입니다. 일부는 만들기 전 설계 캔버스에서 그린 화면입니다." },
+      { label: "데이터", body: "공개 화면의 이름, 기록, 숫자는 예시 데이터입니다. 케어노트의 환자도 가상 인물입니다." },
+      { label: "상태", body: "앱마다 오늘 어디까지 왔는지 적어 둡니다. 라이브, 폰 설치, 설계 중 같은 식입니다." },
+      { label: "숫자", body: "가나 208자, 단어 120개 같은 숫자는 앱 안의 실제 개수입니다. 사용자 수 같은 숫자는 지어내지 않습니다." },
+      { label: "고침", body: "틀리거나 지난 내용이 보이면 아래 주소로 알려 주세요." },
+    ],
+    privacyTitle: "처리방침과 지원",
+    privacyLede: "앱마다 있는 처리방침과 지원 페이지를 한곳에 모았습니다.",
+    privacy: "개인정보처리방침",
+    support: "지원",
+    pending: "준비 중",
+    contactTitle: "연락",
   },
   systemPage: {
     title: "시스템",
@@ -645,6 +683,7 @@ const ko: UI = {
     work: "작업 | Brainchild",
     apps: "앱 | Brainchild",
     system: "시스템 | Brainchild",
+    about: "소개 | Brainchild",
     resume: "이력서 | Brainchild",
     app: (name) => `${name} | Brainchild`,
     workDetail: (name) => `${name} | 작업 | Brainchild`,

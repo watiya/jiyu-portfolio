@@ -33,6 +33,7 @@ export function Palette({ go }: { go: (href: string) => void }) {
       { id: "apps", label: t.sections.apps, hint: "/projects#apps", group: g.go, run: nav("/projects#apps") },
       { id: "all-apps", label: t.appsPage.title, hint: "/apps", group: g.go, run: nav("/apps") },
       { id: "system", label: t.sections.system, hint: "/system", group: g.go, run: nav("/system") },
+      { id: "about", label: t.nav.about, hint: "/about", group: g.go, run: nav("/about") },
       { id: "craft", label: t.sections.craft, hint: "/system#craft", group: g.go, run: nav("/system#craft") },
       { id: "cases", label: t.sections.cases, hint: "/cases", group: g.go, run: nav("/cases") },
       { id: "work", label: t.sections.work, hint: "/work", group: g.go, run: nav("/work") },

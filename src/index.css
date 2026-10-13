@@ -145,6 +145,9 @@ html[data-inspect="on"] :is(.card, .hero__sheet, .dim, .panel):is(:hover, :focus
 .tool__dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent-default); box-shadow: 0 0 0 1px var(--surface-raised), 0 0 0 2px var(--accent-default); transition: background-color var(--duration-2) var(--ease-default); }
 .tool__meta { color: var(--text-subtle); }
 .tool[aria-pressed="true"] .tool__meta { color: color-mix(in oklab, var(--text-inverse) 70%, transparent); }
+/* 헤더 도구 접기(P4). 검색·검사는 넓은 폭에서도 아이콘만, 단축키는 title 에 둔다. 토큰만 이름과 현재 값을 보인다 */
+.tool--palette .tool__label, .tool--inspect .tool__label, .tool--palette kbd, .tool--inspect kbd, .tool--tokens kbd { display: none; }
+.tool--palette, .tool--inspect { min-width: 32px; justify-content: center; }
 .tool__icon { flex: none; }
 /* 언어 토글: 도구 버튼과 같은 높이·반지름. 켜진 쪽은 inverse */
 .lang { display: inline-flex; height: 32px; border: 1px solid var(--line-default); border-radius: var(--button-radius); overflow: hidden; }
@@ -1484,3 +1487,21 @@ body:has(.canvas) .toasts { top: var(--space-3); }
 
 /* 시스템(/system) 머리말. 아래 두 섹션이 자기 SectionLabel 을 가진다 */
 .sysidx { padding-top: var(--space-7); }
+
+/* 소개(/about). 기준은 이름-설명 두 칸, 처리방침은 앱 한 줄씩 */
+.about { padding-top: var(--space-7); }
+.about__read { margin: var(--space-4) 0 0; display: grid; gap: 0; max-width: 72ch; }
+.about__row { display: grid; grid-template-columns: 9rem 1fr; gap: var(--space-4); padding: var(--space-3) 0; border-top: 1px solid var(--line-default); }
+.about__row dt { font-size: var(--text-xs); letter-spacing: 0.04em; color: var(--text-subtle); padding-top: 3px; }
+.about__row dd { margin: 0; color: var(--text-default); line-height: 1.55; text-wrap: pretty; }
+.about__policies { list-style: none; margin: var(--space-4) 0 0; padding: 0; max-width: 72ch; }
+.about__policy { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-2) var(--space-4); padding: var(--space-3) 0; border-top: 1px solid var(--line-default); }
+.about__app { font-weight: 600; }
+.about__links { display: inline-flex; flex-wrap: wrap; gap: var(--space-4); }
+.about__links a { color: var(--accent-text); text-decoration: none; }
+.about__links a:hover { text-decoration: underline; }
+.about__pending { font-size: var(--text-xs); color: var(--text-subtle); }
+.about__mail { display: inline-block; margin-top: var(--space-4); font-family: var(--font-heading); font-size: clamp(1.5rem, 4vw, 2.5rem); color: var(--text-default); text-decoration: none; word-break: break-all; }
+.about__mail:hover { color: var(--accent-text); }
+.about:last-of-type { padding-bottom: var(--space-8); }
+@media (max-width: 639px) { .about__row { grid-template-columns: 1fr; gap: var(--space-1); } }
