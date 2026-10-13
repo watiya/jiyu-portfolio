@@ -42,6 +42,10 @@ export const APPS_KO: Record<string, { koName: string; badge: string; kind: stri
   Tory: { koName: "토리", badge: "프로토타입", kind: "커플", note: "웹 프로토타입", line: "하나의 실로 이어진 커플 앱. 타임라인과 실시간 데이트 모드." },
   Wishrun: { koName: "위시런", badge: "iPhone + 건강", kind: "러닝", note: "iOS", line: "첫 5km 대회를 위한 7주 플랜을 앱으로. 애플 건강에서 달리기 기록을 읽습니다." },
   Finishline: { koName: "피니시라인", badge: "5km~풀코스", kind: "러닝", note: "iPhone + 웹", line: "5km 부터 풀코스까지, 대회와 날짜를 고르면 D-day 에서 거꾸로 훈련 플랜을 짜 주는 러닝 코치." },
+  "Hangul Boom": { koName: "한글붐", badge: "정거장 9", kind: "언어", note: "iPhone + 웹", line: "서울행 비행 중에 한글 읽기. 붐치와 정거장 아홉 곳, 완전 오프라인." },
+  "Menchi Kana": { koName: "멘치카나", badge: "가나 208자", kind: "언어", note: "iPhone + 웹", line: "후쿠오카 지하철 노선을 따라 히라가나·가타카나. 손글씨는 획마다 채점." },
+  "Menchi Voca": { koName: "멘치보카", badge: "단어 120", kind: "언어", note: "iPhone + 웹", line: "후쿠오카 여행 일본어 단어 120개를 장면별로. 틀린 단어는 1·3·7일 뒤 다시." },
+  "Puzzle Lounge": { koName: "퍼즐 라운지", badge: "퍼즐 5종", kind: "퍼즐", note: "iPhone", line: "오프라인 퍼즐 다섯 종. 끝없는 레벨, 난이도 6단계, 5레벨마다 수집품." },
   Bapsim: { koName: "밥심", badge: "설계 중", kind: "식단", note: "설계 캔버스", line: "한 상 그대로 기록하는 한식 식단. 밥, 국, 반찬을 네 번 탭으로." },
 };
 

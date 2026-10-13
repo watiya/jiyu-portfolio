@@ -686,62 +686,42 @@ html[data-motion="off"] .wk:hover .wk__cover img { transform: none; }
 .wk__case:hover { text-decoration: underline; }
 
 /* ---------- 앱 전체 (/apps) ---------- */
-.appsidx { padding-block: var(--space-7) var(--space-10); }
-/* 치수선: 격자 폭을 재는 가로 자. 끝 눈금 둘, 가운데 라벨 */
-.appsidx__rule { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-6); color: var(--text-subtle); }
-.appsidx__rule i { position: relative; flex: 1; height: 1px; background: var(--annot-line); }
-.appsidx__rule i:first-child::before, .appsidx__rule i:last-child::after { content: ""; position: absolute; top: -4px; width: 1px; height: 9px; background: var(--annot-line); }
-.appsidx__rule i:first-child::before { left: 0; }
-.appsidx__rule i:last-child::after { right: 0; }
-.appgrid { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
-@media (min-width: 560px) { .appgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 900px) { .appgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (min-width: 1200px) { .appgrid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-.appcard {
-  display: flex; flex-direction: column; gap: var(--space-3); height: 100%;
-  padding: var(--space-3); background: var(--card-bg); border: 1px solid var(--card-line); border-radius: var(--card-radius);
-  color: inherit; text-decoration: none;
-  transition: border-color var(--duration-2) var(--ease-default), background-color var(--duration-2) var(--ease-default), transform var(--duration-1) var(--ease-default);
-}
-.appcard:hover { border-color: var(--card-line-hover); }
-.appcard:active { transform: translateY(1px); }
-.appcard:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
-/* 화면은 폰 윗부분만 보이게 자른다. 촘촘한 목록이라 전체 화면은 상세에서 */
-.appcard__stage {
-  position: relative; overflow: hidden; flex: none; display: flex; justify-content: center; align-items: flex-start;
-  height: 216px; padding-top: var(--space-6); background: var(--surface-sunken); border-radius: var(--radius-2);
+/* 머리말·거르기·격자·카드는 /work(.work .wkfilters .wk-grid .wk) 를 그대로 쓴다. 여기는 표지와 카드 발치만 */
+/* 표지: 모눈 바탕에서 폰 세 대가 올라온다. 가운데가 카드 화면, 양옆은 살짝 기울여 뒤에. 폰 아랫부분은 표지 밖으로 잘린다 */
+/* 격자 칸(1fr = minmax(auto, 1fr))이 안쪽 최소 폭에 밀려 넓어지지 않게 */
+.apptile { min-width: 0; }
+.apptile__cover {
+  position: relative; display: block;
   background-image: linear-gradient(var(--line-default) 1px, transparent 1px), linear-gradient(90deg, var(--line-default) 1px, transparent 1px);
   background-size: 16px 16px; background-position: center top;
 }
-.appcard__stage .corners i { opacity: 0.9; }
-.appcard__stage .phone { transition: transform var(--duration-3) var(--ease-emphasis); }
-.appcard:hover .appcard__stage .phone { transform: translateY(calc(var(--space-2) * -1)); }
-html[data-motion="off"] .appcard:hover .appcard__stage .phone { transform: none; }
-.appcard__no { position: absolute; left: var(--space-3); top: var(--space-2); font-family: var(--font-pixel); font-size: var(--text-sm); color: var(--annot-color); }
-.appcard__home { position: absolute; right: var(--space-3); top: var(--space-2); display: inline-flex; align-items: center; gap: var(--space-1); color: var(--text-subtle); }
-.appcard__home::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--annot-color); }
-.appcard__body { display: flex; flex-direction: column; gap: var(--space-2); flex: 1; min-width: 0; padding: 0 var(--space-1) var(--space-1); }
-.appcard__meta { display: flex; justify-content: space-between; align-items: center; gap: var(--space-2); color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.06em; }
-.appcard__meta .chip { text-transform: none; letter-spacing: 0; overflow: hidden; text-overflow: ellipsis; max-width: 60%; }
-.appcard__name { margin: 0; font-family: var(--font-heading); font-weight: var(--heading-weight); font-style: var(--heading-style); font-size: var(--text-lg); line-height: 1.2; letter-spacing: -0.01em; }
-.appcard__line { margin: 0; color: var(--text-muted); font-size: var(--text-sm); line-height: 1.5; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.appcard__spec { gap: 2px var(--space-3); }
-.appcard__foot { display: flex; justify-content: space-between; align-items: center; gap: var(--space-2); margin-top: auto; padding-top: var(--space-2); border-top: 1px dashed var(--line-default); }
-.appcard__dots { display: inline-flex; }
-.appcard__dots i { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 0 1.5px var(--card-bg), inset 0 0 0 1px rgb(0 0 0 / 0.1); }
-.appcard__dots i + i { margin-left: -3px; }
-.appcard__arrow { margin-left: auto; color: var(--text-subtle); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color var(--duration-1) var(--ease-default), transform var(--duration-2) var(--ease-emphasis); }
-.appcard:hover .appcard__arrow { color: var(--annot-color); transform: translateX(2px); }
-/* 좁은 화면: 가로 카드. 왼쪽 화면 조각, 오른쪽 정보 */
-@media (max-width: 559px) {
-  .appcard { flex-direction: row; align-items: stretch; }
-  .appcard__stage { width: 116px; height: auto; min-height: 196px; padding-top: var(--space-6); }
-  .appcard__stage .phone { width: 96px !important; padding: 14px 4px 4px; border-radius: 22px; }
-  .appcard__stage .phone .phone__screen { border-radius: 18px; }
-  .appcard__stage .phone .phone__island { top: 5px; height: 5px; }
-  .appcard__home { right: var(--space-2); font-size: 10px; letter-spacing: 0; }
-  .appcard__arrow { display: none; }
-}
+.apptile__phones { position: absolute; inset: 0; display: flex; justify-content: center; align-items: flex-start; padding-top: var(--space-6); }
+.apptile__phones .phone { width: 31% !important; max-width: 132px; padding: 12px 4px 4px; border-radius: 22px; box-shadow: 0 0 0 1px var(--line-default), 0 18px 36px -24px rgb(0 0 0 / 0.45); transition: transform var(--duration-3) var(--ease-emphasis); }
+.apptile__phones .phone .phone__screen { border-radius: 18px; }
+.apptile__phones .phone .phone__island { top: 4px; height: 5px; }
+.wk__cover.apptile__cover img { width: 100%; height: auto; object-fit: initial; }
+.wk:hover .apptile__cover img { transform: none; }
+.apptile__phones[data-count="3"] .phone:nth-child(1) { z-index: 0; transform: translate(18%, 10%) rotate(-5deg); }
+.apptile__phones[data-count="3"] .phone:nth-child(2) { z-index: 1; }
+.apptile__phones[data-count="3"] .phone:nth-child(3) { z-index: 0; transform: translate(-18%, 10%) rotate(5deg); }
+.wk:hover .apptile__phones .phone:nth-child(2), .apptile__phones[data-count="1"] .phone:hover { transform: translateY(calc(var(--space-2) * -1)); }
+.wk:hover .apptile__phones[data-count="3"] .phone:nth-child(1) { transform: translate(8%, 8%) rotate(-7deg); }
+.wk:hover .apptile__phones[data-count="3"] .phone:nth-child(3) { transform: translate(-8%, 8%) rotate(7deg); }
+html[data-motion="off"] .apptile__phones .phone { transition: none; }
+.apptile__no { position: absolute; z-index: 2; left: var(--space-3); top: var(--space-2); font-family: var(--font-pixel); font-size: var(--text-sm); color: var(--annot-color); }
+/* 시리즈 표: 붐치·멘치. 마스코트로 묶인 앱이라는 것만 짧게 */
+.apptile__series { position: absolute; z-index: 2; right: var(--space-2); top: var(--space-2); display: inline-flex; align-items: center; gap: var(--space-1); height: 22px; padding: 0 var(--space-2); border-radius: var(--radius-full); background: var(--card-bg); color: var(--text-muted); font-size: var(--text-xs); box-shadow: 0 0 0 1px var(--line-default); }
+.apptile__series::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--annot-color); }
+.apptile__home { color: var(--annot-color); }
+.apptile__foot { display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-2); padding-top: var(--space-2); border-top: 1px dashed var(--line-default); }
+.apptile__foot .chip { flex: none; margin-left: auto; }
+.apptile__status { flex: 1; min-width: 0; color: var(--text-subtle); font-size: var(--text-xs); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.apptile__dots { display: inline-flex; flex: none; }
+.apptile__dots i { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 0 1.5px var(--card-bg), inset 0 0 0 1px rgb(0 0 0 / 0.1); }
+.apptile__dots i + i { margin-left: -3px; }
+/* 상세 스펙의 시리즈 줄: 형제 앱 링크 */
+.spec dd a { color: var(--text-default); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
+.spec dd a:hover { text-decoration-color: var(--accent-default); }
 
 /* ---------- 검사 모드 ---------- */
 html[data-inspect="on"] [data-token] { outline: 1px dashed color-mix(in oklab, var(--accent-default) 35%, transparent); outline-offset: -1px; }

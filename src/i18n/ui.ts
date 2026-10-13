@@ -70,6 +70,7 @@ const en = {
     all: "All",
     count: (n: number) => `${n} shown`,
     home: "On home",
+    series: { boomchi: "Boomchi series", menchi: "Menchi series" } as Record<"boomchi" | "menchi", string>,
   },
   // 층
   layers: {
@@ -227,6 +228,7 @@ const en = {
     screenN: (name: string, n: number) => `${name} screen ${n}`,
     all: "All apps",
     otherApps: "Other apps",
+    series: "Series",
   },
   // 토큰 패널
   panel: {
@@ -375,6 +377,7 @@ const ko: UI = {
     all: "전체",
     count: (n) => `${n}개 표시`,
     home: "홈 노출",
+    series: { boomchi: "붐치 시리즈", menchi: "멘치 시리즈" },
   },
   layers: {
     aside: "4개 층 · 층에 올려 보세요",
@@ -520,6 +523,7 @@ const ko: UI = {
     screenN: (name, n) => `${name} 화면 ${n}`,
     all: "전체 앱",
     otherApps: "다른 앱",
+    series: "시리즈",
   },
   panel: {
     title: "토큰",

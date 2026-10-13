@@ -509,6 +509,52 @@ const ALL_PRESETS: Preset[] = [
     ],
     dials: { hue: hueOf("#75fc96"), primary: "#75fc96", secondary: "#161618", neutral: "neutral", radius: 24, theme: "light", pairing: "geist" },
   },
+  // 붐치·멘치 시리즈 새 앱. 색은 각 앱 :root 변수 그대로(hangul-boom·puzzle-lounge src/styles.css, menchi-kana·menchi-voca src/index.css)
+  // 한글붐: 라임 타일 + 먹색 버튼이 주, 바이올렛은 로마자·강조에만. 라임이 주색이라 primary 로 그대로
+  {
+    slug: "hangul-boom",
+    name: "Hangul Boom",
+    swatches: [
+      { hex: "#d9ff5b", label: "lime" },
+      { hex: "#10131a", label: "ink" },
+      { hex: "#7557ff", label: "violet" },
+      { hex: "#f5f4ef", label: "paper" },
+    ],
+    dials: { hue: hueOf("#7557ff"), primary: "#d9ff5b", secondary: "#10131a", neutral: "warm", radius: 22, theme: "light", pairing: "geist" },
+  },
+  // 멘치카나: 명란 핑크 키 컬러가 주. 둘째는 진한 명란
+  {
+    slug: "menchi-kana",
+    name: "Menchi Kana",
+    swatches: [
+      { hex: "#ffa9c4", label: "mentai" },
+      { hex: "#e8456b", label: "mentai deep" },
+      { hex: "#10131a", label: "ink" },
+    ],
+    dials: { hue: hueOf("#e8456b"), primary: "#ffa9c4", secondary: "#e8456b", neutral: "warm", radius: 22, theme: "light", pairing: "geist" },
+  },
+  // 멘치보카: 멘치카나와 같은 토큰. 버튼·배지에 더 자주 쓰는 진한 명란(accent)을 주로, 글자색(accent-ink)을 둘째로
+  {
+    slug: "menchi-voca",
+    name: "Menchi Voca",
+    swatches: [
+      { hex: "#e8456b", label: "mentai deep" },
+      { hex: "#ffa9c4", label: "mentai" },
+      { hex: "#b8264c", label: "mentai ink" },
+    ],
+    dials: { hue: hueOf("#e8456b"), primary: "#e8456b", secondary: "#b8264c", neutral: "warm", radius: 22, theme: "light", pairing: "geist" },
+  },
+  // 퍼즐 라운지: 「붐 아케이드 나이트」. 허브·결과의 먹색 무대 위 라임이 얼굴이라 어두운 테마에 라임 primary
+  {
+    slug: "puzzle-lounge",
+    name: "Puzzle Lounge",
+    swatches: [
+      { hex: "#151826", label: "stage" },
+      { hex: "#d9ff5b", label: "lime" },
+      { hex: "#7557ff", label: "violet" },
+    ],
+    dials: { hue: hueOf("#7557ff"), primary: "#d9ff5b", secondary: "#7557ff", neutral: "cool", radius: 18, theme: "dark", pairing: "geist" },
+  },
 ];
 
 export const PRESETS: Preset[] = ALL_PRESETS.filter((p) => !isHiddenApp(p.slug));

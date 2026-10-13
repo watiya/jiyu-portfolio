@@ -1,7 +1,8 @@
-// 앱 전체 목록(/apps). 홈 #apps 는 featured 만 세우는 토큰 쇼케이스이고, 여기는 숨김이 아닌 앱 전부를 촘촘한 격자로 둔다.
-// 카드는 기존 상세(/apps/<slug>)로 간다. 거르기는 데이터에 있는 kind(앱 종류)만 쓴다.
+// 앱 전체 목록(/apps). /work 와 같은 머리말·거르기·격자(wk-grid)·카드(wk) 리듬으로 선 독립 페이지다.
+// 홈 #apps 는 featured 만 세우는 토큰 쇼케이스이고, 여기는 숨김이 아닌 앱 전부. 카드는 상세(/apps/<slug>)로 간다.
+// 표지만 /work 와 다르다: 표지 사진 대신 그 앱 화면 세 장이 폰째로 바닥에서 올라온다.
 import { useState } from "react";
-import { SectionLabel, Corners } from "../components/Annot.tsx";
+import { SectionLabel } from "../components/Annot.tsx";
 import { PhoneFrame } from "../components/PhoneFrame.tsx";
 import { useLang } from "../i18n/useLang.ts";
 import { getAppDetails, getApps, metaValue } from "../i18n/content.ts";
@@ -29,7 +30,7 @@ export function AppsIndex({ go }: { go: (href: string) => void }) {
   const markHome = featured < apps.length;
 
   return (
-    <section className="container appsidx">
+    <section className="container work appsidx">
       <SectionLabel index="02" title={t.sections.apps} aside={<>{P.aside(apps.length, featured)}</>} />
       <h1 className="h1">{P.title}</h1>
       <p className="lede">{P.lede}</p>
@@ -44,71 +45,64 @@ export function AppsIndex({ go }: { go: (href: string) => void }) {
               {k} <span className="mono">{apps.filter((a) => a.kind === k).length}</span>
             </button>
           ))}
+          <span className="mono wkfilters__count" aria-live="polite">
+            {P.count(shown.length)}
+          </span>
         </div>
       )}
 
-      {/* 치수선: 격자 폭 전체를 잰다. 라벨이 지금 보이는 개수다 */}
-      <div className="appsidx__rule" aria-hidden="true">
-        <i />
-        <span className="mono">{P.count(shown.length)}</span>
-        <i />
-      </div>
-      <p className="sr-only" aria-live="polite">
-        {P.count(shown.length)}
-      </p>
-
-      <ul className="appgrid" role="list">
+      <ul className="wk-grid" role="list">
         {shown.map((app, i) => {
           const slug = slugOf(app.name);
+          const href = `/apps/${slug}`;
           const detail = details.find((d) => d.slug === slug);
           const preset = PRESETS.find((p) => p.slug === slug);
           const status = (detail && metaValue(detail, "Status")) ?? app.badge;
           const platform = (detail && metaValue(detail, "Platform")) ?? app.note;
           const wearing = active?.slug === slug;
           const n = apps.indexOf(app) + 1;
+          // 가운데는 카드 화면, 양옆은 상세 화면 둘째·셋째 장(첫 장은 대개 카드 화면과 같다). 세로로 긴 캡처만
+          const sides = (detail?.shots ?? []).slice(1, 3);
+          const phones = sides.length === 2 ? [sides[0], app.image, sides[1]] : [app.image];
           return (
-            <li key={slug}>
-              <a className="appcard" href={`/apps/${slug}`} onClick={onClick} aria-label={`${app.name}: ${app.line}`} data-token="card.bg card.line card.radius">
-                <div className="appcard__stage" data-token="surface.sunken radius.2">
-                  <Corners />
-                  <span className="appcard__no mono" aria-hidden="true">
-                    {String(n).padStart(2, "0")}
-                  </span>
-                  {markHome && app.featured && <span className="appcard__home mono">{P.home}</span>}
-                  <PhoneFrame src={app.image} alt={t.apps.screen(app.name)} width={128} priority={i < 4} />
-                </div>
-                <div className="appcard__body">
-                  <span className="appcard__meta mono">
-                    <span>{app.kind}</span>
-                    <span className="chip" data-current={wearing || undefined} data-token={wearing ? "badge.bg badge.fg" : "chip.bg chip.fg chip.radius"}>
-                      {wearing ? t.apps.wearing : app.badge}
-                    </span>
-                  </span>
-                  <h2 className="appcard__name">
-                    {app.name}
-                    {app.koName && <span className="card__koname"> {app.koName}</span>}
-                  </h2>
-                  <p className="appcard__line">{app.line}</p>
-                  <dl className="spec mono appcard__spec">
-                    <dt>{t.apps.platform}</dt>
-                    <dd>{platform}</dd>
-                    <dt>{t.apps.status}</dt>
-                    <dd>{status}</dd>
-                  </dl>
-                  <div className="appcard__foot">
-                    {preset && (
-                      <span className="appcard__dots" role="img" aria-label={t.apps.colors(app.name)}>
-                        {preset.swatches.map((s) => (
-                          <i key={s.hex} style={{ background: s.hex }} title={`${s.label} ${s.hex}`} />
-                        ))}
-                      </span>
-                    )}
-                    <span className="appcard__arrow mono" aria-hidden="true">
-                      /apps/{slug} →
-                    </span>
-                  </div>
-                </div>
+            <li key={slug} className="wk apptile" data-token="card.bg card.line card.radius">
+              <a className="wk__cover apptile__cover" href={href} onClick={onClick} aria-label={app.name} data-token="surface.sunken radius.2">
+                <span className="apptile__no mono" aria-hidden="true">
+                  {String(n).padStart(2, "0")}
+                </span>
+                {app.series && <span className="apptile__series mono">{P.series[app.series]}</span>}
+                <span className="apptile__phones" data-count={phones.length}>
+                  {phones.map((src, k) => (
+                    <PhoneFrame key={src} src={src} alt={k === (phones.length - 1) / 2 ? t.apps.screen(app.name) : ""} width={120} priority={i < 3} />
+                  ))}
+                </span>
               </a>
+              <div className="wk__body">
+                <span className="mono wk__meta">
+                  {app.kind} · {platform}
+                  {markHome && app.featured && <span className="apptile__home"> · {P.home}</span>}
+                </span>
+                <a className="wk__name" href={href} onClick={onClick}>
+                  {app.name}
+                  {app.koName && <span className="card__koname"> {app.koName}</span>} <span aria-hidden="true">→</span>
+                </a>
+                <p className="wk__tag">{app.line}</p>
+                <div className="apptile__foot">
+                  {preset && (
+                    <span className="apptile__dots" role="img" aria-label={t.apps.colors(app.name)}>
+                      {preset.swatches.map((s) => (
+                        <i key={s.hex} style={{ background: s.hex }} title={`${s.label} ${s.hex}`} />
+                      ))}
+                    </span>
+                  )}
+                  <span className="apptile__status mono" title={status}>
+                    {status}
+                  </span>
+                  <span className="chip" data-current={wearing || undefined} data-token={wearing ? "badge.bg badge.fg" : "chip.bg chip.fg chip.radius"}>
+                    {wearing ? t.apps.wearing : app.badge}
+                  </span>
+                </div>
+              </div>
             </li>
           );
         })}

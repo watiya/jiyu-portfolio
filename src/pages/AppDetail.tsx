@@ -6,7 +6,7 @@ import { useTokens } from "../tokens/useTokens.ts";
 import { internalClick } from "../router.ts";
 import { PhoneFrame } from "../components/PhoneFrame.tsx";
 import { SectionLabel } from "../components/Annot.tsx";
-import { activePresetOf } from "../lib.ts";
+import { activePresetOf, slugOf } from "../lib.ts";
 
 export function AppDetail({ slug, go }: { slug: string; go: (href: string) => void }) {
   const { lang, t } = useLang();
@@ -15,7 +15,10 @@ export function AppDetail({ slug, go }: { slug: string; go: (href: string) => vo
   const { applyPreset, dials } = useTokens();
   const onClick = internalClick(go);
   if (!detail) return <NotFound path={`/apps/${slug}`} go={go} />;
-  const app = getApps(lang).find((a) => a.name === detail.name);
+  const apps = getApps(lang);
+  const app = apps.find((a) => a.name === detail.name);
+  // 같은 마스코트 시리즈의 다른 앱. 숨김 앱은 getApps 에서 이미 빠진다
+  const siblings = app?.series ? apps.filter((a) => a.series === app.series && a !== app) : [];
   const preset = PRESETS.find((p) => p.slug === slug);
   const wearing = activePresetOf(dials)?.slug === slug;
   const i = details.indexOf(detail);
@@ -35,6 +38,22 @@ export function AppDetail({ slug, go }: { slug: string; go: (href: string) => vo
                 <dd>{m.value}</dd>
               </div>
             ))}
+            {app?.series && siblings.length > 0 && (
+              <div className="spec__row">
+                <dt>{D.series}</dt>
+                <dd>
+                  {t.appsPage.series[app.series]} ·{" "}
+                  {siblings.map((s, k) => (
+                    <span key={s.name}>
+                      {k > 0 && ", "}
+                      <a href={`/apps/${slugOf(s.name)}`} onClick={onClick}>
+                        {s.koName ?? s.name}
+                      </a>
+                    </span>
+                  ))}
+                </dd>
+              </div>
+            )}
             <div className="spec__row">
               <dt>{D.stack}</dt>
               <dd>{detail.stack.join(" · ")}</dd>
