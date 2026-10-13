@@ -14,6 +14,7 @@ import { Scrub } from "../components/Scrub.tsx";
 import { Corners, SectionLabel, TokenTag } from "../components/Annot.tsx";
 import { PhoneFrame } from "../components/PhoneFrame.tsx";
 import { Craft } from "../components/Craft.tsx";
+import { Lucian } from "../components/Lucian.tsx";
 
 // 한글 제목은 글자가 넓고 어센더가 없어 기본값을 따로 둔다
 const HERO_DEFAULTS: Record<Lang, { size: number; leading: number; tracking: number }> = {
@@ -29,6 +30,7 @@ export function Home({ go }: { go: (href: string) => void }) {
       <Apps go={go} />
       <Layers />
       <Craft go={go} />
+      <Lucian go={go} />
       <CaseStudies go={go} />
       <Journey />
       <Contact go={go} />
@@ -577,7 +579,7 @@ function MiniScreen() {
   );
 }
 
-// ---------- 05 Case studies ----------
+// ---------- 06 Case studies ----------
 
 function CaseStudies({ go }: { go: (href: string) => void }) {
   const ref = useReveal<HTMLElement>();
@@ -588,7 +590,7 @@ function CaseStudies({ go }: { go: (href: string) => void }) {
   return (
     <section id="work" className="changelog container reveal" ref={ref} aria-labelledby="work-title">
       <SectionLabel
-        index="05"
+        index="06"
         title={t.sections.cases}
         aside={
           <a href="/cases" onClick={onClick} className="seclabel__link">
@@ -645,7 +647,7 @@ function CaseStudies({ go }: { go: (href: string) => void }) {
   );
 }
 
-// ---------- 06 Journey ----------
+// ---------- 07 Journey ----------
 
 function Journey() {
   const ref = useReveal<HTMLElement>();
@@ -654,7 +656,7 @@ function Journey() {
   const n = rows.length;
   return (
     <section id="journey" className="journey container reveal" ref={ref} aria-labelledby="journey-title">
-      <SectionLabel index="06" title={t.sections.journey} aside={<>{t.journey.aside(n, rows[n - 1].year)}</>} />
+      <SectionLabel index="07" title={t.sections.journey} aside={<>{t.journey.aside(n, rows[n - 1].year)}</>} />
       <div className="section__head">
         <h2 id="journey-title" className="h2">
           {t.journey.title}
@@ -675,7 +677,7 @@ function Journey() {
   );
 }
 
-// ---------- 07 Contact ----------
+// ---------- 08 Contact ----------
 
 function Contact({ go }: { go: (href: string) => void }) {
   const { toast } = useTokens();
@@ -695,7 +697,7 @@ function Contact({ go }: { go: (href: string) => void }) {
   };
   return (
     <section id="contact" className="contact container reveal" ref={ref} aria-labelledby="contact-title">
-      <SectionLabel index="07" title={t.sections.contact} aside={<>{t.contact.aside}</>} />
+      <SectionLabel index="08" title={t.sections.contact} aside={<>{t.contact.aside}</>} />
       <h2 id="contact-title" className="sr-only">
         {t.sections.contact}
       </h2>

@@ -1,0 +1,37 @@
+/* Lucian UX/UI Prompt #095 · MIT License (c) 2026 Seokwoooo · https://lucianlabs.dev/uxui-prompt/#095 */
+.u095{position:relative;width:340px;height:410px;display:flex;flex-direction:column;padding:20px 18px 14px;border-radius:30px;background:var(--ux-surface);box-shadow:0 0 0 1px var(--ux-line),0 30px 60px -36px var(--ux-shadow-strong);overflow:hidden}
+.u095-h{display:flex;align-items:flex-start;justify-content:space-between}
+.u095-h small{display:block;font-size:12.5px;font-weight:700;color:var(--ux-ink-3)}
+.u095-v{margin-top:2px}
+.u095-v b{font-size:29px;font-weight:850;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.u095-top{display:flex;align-items:baseline;gap:6px}
+.u095-dl{font-size:12px;font-weight:800;color:var(--ux-mint);white-space:nowrap}
+.u095-dl.dn{color:var(--ux-danger)}
+.u095-seg{position:relative;display:flex;padding:3px;border-radius:12px;background:var(--ux-surface-2)}
+.u095-seg::before{content:"";position:absolute;top:3px;bottom:3px;left:3px;width:36px;border-radius:9px;background:var(--ux-surface);box-shadow:0 1px 4px -1px var(--ux-shadow-strong);transform:translateX(calc(var(--k,0) * 36px));transition:transform .45s var(--ux-spring)}
+.u095-seg button{position:relative;width:36px;height:30px;border:0;padding:0;background:transparent;font-size:12.5px;font-weight:800;color:var(--ux-ink-3);transition:color .2s}
+.u095-seg button[aria-pressed="true"]{color:var(--ux-ink)}
+.u095-ch{position:relative;flex:1;margin-top:18px;padding-right:44px}
+.u095-grid{position:absolute;inset:0 0 26px 0}
+.u095-gl{position:absolute;left:0;right:0;height:0;border-top:1px dashed var(--ux-line-2)}
+.u095-gl span{position:absolute;right:0;top:-7px;transition:opacity .3s;font-size:10.5px;font-weight:700;color:var(--ux-ink-3);font-variant-numeric:tabular-nums}
+.u095-gl:first-child{border-top-style:solid}
+.u095-avg{position:absolute;left:0;right:40px;bottom:calc(26px + var(--a,0) * (100% - 26px));height:0;border-top:1.5px dashed var(--ux-accent);transition:bottom .6s var(--ux-spring);z-index:2;pointer-events:none}
+.u095-avg span{position:absolute;right:-44px;top:-10px;height:20px;padding:0 6px;border-radius:6px;display:grid;place-items:center;background:var(--ux-accent);color:var(--ux-accent-ink);font-size:10px;font-weight:800}
+.u095-bars{position:absolute;left:0;right:44px;top:0;bottom:0;display:flex;align-items:stretch}
+.u095-b{position:relative;flex:var(--on,1) 1 0;min-width:0;padding:0 var(--pad,4px);border:0;background:transparent;display:flex;flex-direction:column;justify-content:flex-end;transition:flex-grow .55s var(--ux-ease),padding .55s var(--ux-ease),opacity .3s}
+.u095-b.off{--on:0;padding:0;opacity:0;pointer-events:none}
+.u095-b i{display:block;height:calc(var(--h,0) * (100% - 26px));margin-bottom:26px;border-radius:8px 8px 4px 4px;background:var(--ux-surface-3);transition:height .65s var(--ux-spring),background-color .25s,opacity .25s;transition-delay:calc(var(--d,0) * 28ms),0s,0s}
+.u095-b.last i{background:var(--ux-grad)}
+.u095-b em{position:absolute;left:-6px;right:-6px;bottom:4px;font-style:normal;text-align:center;font-size:11px;font-weight:700;color:var(--ux-ink-3);white-space:nowrap;transition:color .2s}
+.u095.has .u095-b:not(.on) i{opacity:.5}
+.u095-b.on i{background:var(--ux-accent);opacity:1}
+.u095-b.on em{color:var(--ux-ink)}
+.u095-b.pin i{box-shadow:0 0 0 2px var(--ux-surface),0 0 0 4px var(--ux-accent)}
+.u095-b:focus-visible{outline:none}
+.u095-b:focus-visible i{box-shadow:0 0 0 2px var(--ux-surface),0 0 0 4px var(--ux-accent)}
+.u095-tip{position:absolute;left:0;top:0;z-index:3;height:28px;padding:0 10px;border-radius:9px;display:flex;align-items:center;gap:6px;background:var(--ux-ink);color:var(--ux-page);font-size:12px;font-weight:800;white-space:nowrap;pointer-events:none;transform:translate(var(--tx),var(--ty));opacity:0;transition:opacity .2s,transform .3s var(--ux-ease)}
+.u095.has .u095-tip{opacity:1}
+.u095-tip small{font-size:11px;font-weight:800;color:var(--ux-mint)}
+.u095-tip small.dn{color:#FF8F92}
+.u095-seg button:focus-visible{outline:2px solid var(--ux-accent);outline-offset:1px;border-radius:9px}
