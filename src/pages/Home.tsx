@@ -257,7 +257,9 @@ function useTypewriter(text: string, on: boolean) {
 function Apps({ go }: { go: (href: string) => void }) {
   const { dials } = useTokens();
   const { lang, t } = useLang();
-  const apps = getApps(lang);
+  const all = getApps(lang);
+  // 홈은 토큰 쇼케이스라 featured 만 세운다. 전부는 /apps
+  const apps = all.filter((a) => a.featured);
   const details = getAppDetails(lang);
   const active = activePresetOf(dials);
   const onClick = internalClick(go);
@@ -273,7 +275,7 @@ function Apps({ go }: { go: (href: string) => void }) {
         <p className="lede">{t.apps.lede}</p>
       </div>
 
-      <ul className="cards" role="list" ref={listRef}>
+      <ul className="cards" role="list" ref={listRef} data-count={apps.length}>
         {apps.map((app, i) => {
           const slug = slugOf(app.name);
           const detail = details.find((d) => d.slug === slug);
@@ -328,6 +330,12 @@ function Apps({ go }: { go: (href: string) => void }) {
           );
         })}
       </ul>
+      <a className="apps__more" href="/apps" onClick={onClick}>
+        <span>{t.apps.more(all.length)}</span>
+        <span className="mono apps__more-path" aria-hidden="true">
+          /apps →
+        </span>
+      </a>
     </section>
   );
 }

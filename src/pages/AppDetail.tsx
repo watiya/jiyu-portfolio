@@ -88,7 +88,7 @@ export function AppDetail({ slug, go }: { slug: string; go: (href: string) => vo
         <a href={`/apps/${prev.slug}`} onClick={onClick}>
           ← {prev.name}
         </a>
-        <a href="/projects#apps" onClick={onClick}>
+        <a href="/apps" onClick={onClick}>
           {D.all}
         </a>
         <a href={`/apps/${next.slug}`} onClick={onClick}>

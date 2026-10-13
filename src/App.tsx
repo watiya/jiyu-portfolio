@@ -8,6 +8,7 @@ import { Toasts } from "./components/Toast.tsx";
 import { Home } from "./pages/Home.tsx";
 import { Landing } from "./pages/Landing.tsx";
 import { AppDetail, NotFound } from "./pages/AppDetail.tsx";
+import { AppsIndex } from "./pages/AppsIndex.tsx";
 import { Cases } from "./pages/Cases.tsx";
 import { CaseDetail } from "./pages/CaseDetail.tsx";
 import { Work } from "./pages/Work.tsx";
@@ -48,7 +49,7 @@ function Shell() {
 
   // 문서 제목과 설명은 경로와 언어를 따른다
   useEffect(() => {
-    const titles: Record<string, string> = { landing: t.landing.title, home: t.titles.home, cases: t.titles.cases, work: t.titles.work, resume: t.titles.resume };
+    const titles: Record<string, string> = { landing: t.landing.title, home: t.titles.home, cases: t.titles.cases, work: t.titles.work, apps: t.titles.apps, resume: t.titles.resume };
     const appName = route.name === "app" ? APP_DETAILS.find((d) => d.slug === route.slug)?.name : undefined;
     const kase = route.name === "case" ? getCase(lang, route.slug) : undefined;
     const work = route.name === "workDetail" || route.name === "canvas" ? WORKS.find((w) => w.slug === route.slug) : undefined;
@@ -62,7 +63,7 @@ function Shell() {
     document.querySelector('meta[name="description"]')?.setAttribute("content", kase?.summary ?? appDek ?? work?.tagline[lang] ?? t.metaDescription);
   }, [route, t, lang]);
 
-  const current = route.name === "cases" || route.name === "case" ? "/cases" : route.name === "work" || route.name === "workDetail" || route.name === "canvas" ? "/work" : route.name === "resume" ? "/resume" : route.name === "home" ? "/projects" : "";
+  const current = route.name === "apps" || route.name === "app" ? "/apps" : route.name === "cases" || route.name === "case" ? "/cases" : route.name === "work" || route.name === "workDetail" || route.name === "canvas" ? "/work" : route.name === "resume" ? "/resume" : route.name === "home" ? "/projects" : "";
 
   // 첫 화면은 헤더·격자 없이 한 장으로 둔다. 토큰 패널과 단축키는 그대로 산다
   if (route.name === "landing")
@@ -88,6 +89,7 @@ function Shell() {
       {route.name !== "canvas" && <Header go={go} current={current} />}
       <main id="main">
         {route.name === "home" && <Home go={go} />}
+        {route.name === "apps" && <AppsIndex go={go} />}
         {route.name === "app" && <AppDetail slug={route.slug} go={go} />}
         {route.name === "cases" && <Cases go={go} />}
         {route.name === "case" && <CaseDetail slug={route.slug} go={go} />}

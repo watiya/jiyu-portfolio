@@ -59,6 +59,17 @@ const en = {
     stack: "Stack",
     colors: (name: string) => `${name} brand colors`,
     screen: (name: string) => `${name} screen`,
+    more: (n: number) => `View all apps (${n})`,
+  },
+  // 앱 전체 목록 (/apps)
+  appsPage: {
+    title: "All apps",
+    lede: "Every app I designed and built on my own. The home page shows a few as token components; this is the full shelf. Each card opens its spec sheet.",
+    aside: (n: number, featured: number) => `${n} apps · ${featured} on home`,
+    filter: "Filter by kind",
+    all: "All",
+    count: (n: number) => `${n} shown`,
+    home: "On home",
   },
   // 층
   layers: {
@@ -292,6 +303,7 @@ const en = {
     cases: "Case studies | Brainchild-Jiyu",
     case: (title: string) => `${title} | Brainchild-Jiyu`,
     work: "Work | Brainchild-Jiyu",
+    apps: "Apps | Brainchild-Jiyu",
     resume: "Resume | Brainchild-Jiyu",
     app: (name: string) => `${name} | Brainchild-Jiyu`,
     workDetail: (name: string) => `${name} | Work | Brainchild-Jiyu`,
@@ -353,6 +365,16 @@ const ko: UI = {
     stack: "스택",
     colors: (name) => `${name} 브랜드 색`,
     screen: (name) => `${name} 화면`,
+    more: (n) => `앱 전체 보기 (${n})`,
+  },
+  appsPage: {
+    title: "앱 전체",
+    lede: "혼자 설계하고 만든 앱 전부. 홈에는 토큰 컴포넌트로 일부만, 여기에는 전부. 카드마다 스펙 시트로 연결.",
+    aside: (n, featured) => `앱 ${n} · 홈 ${featured}`,
+    filter: "종류로 거르기",
+    all: "전체",
+    count: (n) => `${n}개 표시`,
+    home: "홈 노출",
   },
   layers: {
     aside: "4개 층 · 층에 올려 보세요",
@@ -569,6 +591,7 @@ const ko: UI = {
     cases: "사례 | Brainchild-Jiyu",
     case: (title) => `${title} | Brainchild-Jiyu`,
     work: "작업 | Brainchild-Jiyu",
+    apps: "앱 | Brainchild-Jiyu",
     resume: "이력서 | Brainchild-Jiyu",
     app: (name) => `${name} | Brainchild-Jiyu`,
     workDetail: (name) => `${name} | 작업 | Brainchild-Jiyu`,

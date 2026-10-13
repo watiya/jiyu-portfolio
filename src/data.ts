@@ -51,17 +51,18 @@ export const NOW: { asOf: string; items: string[] } = {
 
 // v6(Kaden) 의 중심: 개인 신규 앱. 화면은 라이브 캡처(밥심은 설계 화면, 런팝은 스토어 스크린샷)
 // href 가 없으면 공개 주소가 없는 앱(개인 기기 설치만)이다
-export type App = { name: string; badge: string; kind: string; note: string; line: string; image: string; href?: string };
+// featured 는 홈 #apps(토큰 쇼케이스)에 세우는 앱. 나머지는 /apps 목록에만 나온다. 숨김은 src/hidden.ts 가 따로 맡는다
+export type App = { name: string; badge: string; kind: string; note: string; line: string; image: string; href?: string; featured?: boolean };
 
 const ALL_APPS: App[] = [
-  { name: "Seoul Boom", badge: "Live now", kind: "Travel", note: "iPhone + web", line: "Live crowd levels for Seoul's busiest spots, with widgets and quiet-hour alerts.", image: "/side/seoulboom.png", href: "https://seoulboom.com" },
-  { name: "Runpop", badge: "iPhone + Watch", kind: "Running", note: "iOS + watchOS", line: "A running metronome that keeps your music and adds one quiet click per step.", image: "/side/runpop.png", href: "https://runpop.app" },
-  { name: "Ttokuoka", badge: "Newest", kind: "Travel", note: "iPhone + web", line: "A Fukuoka companion in Korean: yatai, phrases, tax-free help, works offline.", image: "/side/ttokuoka.png", href: "https://ttokuoka.vercel.app" },
-  { name: "Carenote", badge: "iPhone prototype", kind: "Health", note: "iPhone + web", line: "A hospital app redesigned around a transplant patient's visit day, meds, and lab trends.", image: "/side/carenote.png", href: "https://carenote-sooty.vercel.app" },
+  { name: "Seoul Boom", badge: "Live now", kind: "Travel", note: "iPhone + web", line: "Live crowd levels for Seoul's busiest spots, with widgets and quiet-hour alerts.", image: "/side/seoulboom.png", href: "https://seoulboom.com", featured: true },
+  { name: "Runpop", badge: "iPhone + Watch", kind: "Running", note: "iOS + watchOS", line: "A running metronome that keeps your music and adds one quiet click per step.", image: "/side/runpop.png", href: "https://runpop.app", featured: true },
+  { name: "Ttokuoka", badge: "Newest", kind: "Travel", note: "iPhone + web", line: "A Fukuoka companion in Korean: yatai, phrases, tax-free help, works offline.", image: "/side/ttokuoka.png", href: "https://ttokuoka.vercel.app", featured: true },
+  { name: "Carenote", badge: "iPhone prototype", kind: "Health", note: "iPhone + web", line: "A hospital app redesigned around a transplant patient's visit day, meds, and lab trends.", image: "/side/carenote.png", href: "https://carenote-sooty.vercel.app", featured: true },
   { name: "Ppopjido", badge: "Map + cards", kind: "Collectors", note: "Web", line: "A map for capsule toys and Pokemon cards across Korea and Japan.", image: "/side/ppopjido.png", href: "https://ppopjido.vercel.app" },
   { name: "Tory", badge: "Prototype", kind: "Couples", note: "Web prototype", line: "A couple app built on one shared thread: a timeline and a live date mode.", image: "/side/tory.png", href: "https://tory-ashen.vercel.app" },
   { name: "Bapsim", badge: "In design", kind: "Food", note: "Design canvas", line: "Korean meal logging as a tray: rice, soup, and sides in four taps.", image: "/side/bapsim.png", href: "https://bapsim-app.vercel.app/design/" },
   { name: "Wishrun", badge: "iPhone + Health", kind: "Running", note: "iOS", line: "A seven-week plan for a first 5K, turned into an app that reads runs from Apple Health.", image: "/side/wishrun.png" },
-  { name: "Finishline", badge: "5K to full", kind: "Running", note: "iPhone + web", line: "From 5K to the full marathon: pick a race and a date, and the app builds the training plan backward from race day.", image: "/side/finishline.png", href: "https://finishline-mu.vercel.app" },
+  { name: "Finishline", badge: "5K to full", kind: "Running", note: "iPhone + web", line: "From 5K to the full marathon: pick a race and a date, and the app builds the training plan backward from race day.", image: "/side/finishline.png", href: "https://finishline-mu.vercel.app", featured: true },
 ];
 export const APPS: App[] = ALL_APPS.filter((a) => !isHiddenApp(a.name.toLowerCase().replace(/\s+/g, "-")));

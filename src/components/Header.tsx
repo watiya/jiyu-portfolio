@@ -4,14 +4,15 @@ import { useTokens } from "../tokens/useTokens.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { LANGS } from "../i18n/lang.ts";
 
-const NAV = [
-  { key: "apps", href: "/projects#apps", match: "/projects" },
-  { key: "craft", href: "/projects#craft", match: "" },
-  { key: "cases", href: "/cases", match: "/cases" },
-  { key: "work", href: "/work", match: "/work" },
-  { key: "resume", href: "/resume", match: "/resume" },
-  { key: "contact", href: "/projects#contact", match: "" },
-] as const;
+// match 는 이 항목이 활성인 경로들. Apps 는 홈 쇼케이스(#apps)로 가되 /apps 목록과 상세에서도 켜진다
+const NAV: { key: "apps" | "craft" | "cases" | "work" | "resume" | "contact"; href: string; match: string[] }[] = [
+  { key: "apps", href: "/projects#apps", match: ["/projects", "/apps"] },
+  { key: "craft", href: "/projects#craft", match: [] },
+  { key: "cases", href: "/cases", match: ["/cases"] },
+  { key: "work", href: "/work", match: ["/work"] },
+  { key: "resume", href: "/resume", match: ["/resume"] },
+  { key: "contact", href: "/projects#contact", match: [] },
+];
 
 export function Header({ go, current }: { go: (href: string) => void; current: string }) {
   const { panelOpen, setPanelOpen, inspect, setInspect, setPaletteOpen, dials } = useTokens();
@@ -38,7 +39,7 @@ export function Header({ go, current }: { go: (href: string) => void; current: s
         </a>
         <nav className="hdr__nav" aria-label="Primary">
           {NAV.map((n) => (
-            <a key={n.key} href={n.href} onClick={onClick} aria-current={n.match && current === n.match ? "page" : undefined} data-token="nav.active">
+            <a key={n.key} href={n.href} onClick={onClick} aria-current={n.match.includes(current) ? "page" : undefined} data-token="nav.active">
               {t.nav[n.key]}
             </a>
           ))}
@@ -105,7 +106,7 @@ export function Header({ go, current }: { go: (href: string) => void; current: s
       <nav id="hdr-menu" className="hdr__menu" data-open={menuOpen || undefined} aria-label="Primary" hidden={!menuOpen}>
         <div className="container">
           {NAV.map((n) => (
-            <a key={n.key} href={n.href} onClick={onMenuClick} aria-current={n.match && current === n.match ? "page" : undefined}>
+            <a key={n.key} href={n.href} onClick={onMenuClick} aria-current={n.match.includes(current) ? "page" : undefined}>
               {t.nav[n.key]}
             </a>
           ))}
