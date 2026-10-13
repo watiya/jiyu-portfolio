@@ -346,6 +346,8 @@ export function buildTokens(dials: Dials): Tokens {
   vars["--selection-bg"] = "var(--accent-secondary)";
   vars["--selection-fg"] = "var(--accent-secondary-on)";
   vars["--annot-color"] = "var(--accent-text)";
+  // 글자가 아닌 장식(커서 막대·선·눈금)은 대비 보정 없이 포인트색 그대로. 라임 프리셋이 라임으로 보이게
+  vars["--annot-mark"] = "var(--accent-default)";
   vars["--annot-line"] = "var(--line-strong)";
   vars["--panel-bg"] = "var(--surface-raised)";
   vars["--panel-line"] = "var(--line-default)";

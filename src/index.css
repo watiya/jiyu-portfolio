@@ -936,7 +936,7 @@ html[data-motion="off"] .landing { animation: none !important; }
 /* 토큰 사슬 */
 .cr-ins__stage { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
 .cr-ins__stage > span { display: inline-flex; align-items: center; justify-content: center; font-size: var(--text-sm); cursor: default; outline-offset: 2px; transition: box-shadow var(--duration-1) var(--ease-default); }
-.cr-ins__stage > span[data-active] { box-shadow: 0 0 0 2px var(--accent-text); }
+.cr-ins__stage > span[data-active] { box-shadow: 0 0 0 2px var(--annot-mark); }
 .cr-ins__card { width: 100%; min-height: 56px; background: var(--card-bg); border: 1px solid var(--card-line); border-radius: var(--card-radius); }
 .cr-ins__button { height: 32px; padding: 0 var(--space-4); background: var(--button-bg); color: var(--button-fg); border-radius: var(--button-radius); font-weight: 500; }
 .cr-ins__chip { height: 22px; padding: 0 var(--space-2); background: var(--chip-bg); color: var(--chip-fg); border-radius: var(--chip-radius); font-size: var(--text-xs) !important; }
@@ -984,11 +984,11 @@ html[data-motion="off"] .landing { animation: none !important; }
 /* ---------- /projects 진입 모션 ----------
    길이는 모션 다이얼(--duration-3)을 따른다. calm 이면 짧고 차분하게, lively 면 길고 튀게. off 면 전부 끈다 */
 .hero { --enter: calc(var(--duration-3) * 2.2); }
-/* 제목은 타자기처럼 한 글자씩(useTypewriter). 커서는 디자인 툴의 글자 입력 커서 - 주석색 얇은 막대 */
+/* 제목은 타자기처럼 한 글자씩(useTypewriter). 커서는 디자인 툴의 글자 입력 커서 - 포인트색 얇은 막대 */
 .hero__rest { visibility: hidden; }
 .hero__caret {
   position: absolute; left: 0; top: 0; width: max(2px, calc(var(--hero-size) * 0.03)); height: var(--ch, 0);
-  transform: translate(calc(var(--cx, 0px) + 2px), var(--cy, 0px)); background: var(--annot-color); pointer-events: none;
+  transform: translate(calc(var(--cx, 0px) + 2px), var(--cy, 0px)); background: var(--annot-mark); pointer-events: none;
 }
 .hero__caret[data-done] { animation: caret-blink 1.06s steps(1) 4 both, hero-fade 1ms linear 4.3s reverse forwards; }
 @keyframes caret-blink { 50% { opacity: 0; } }
@@ -1185,7 +1185,7 @@ body:has(.canvas) .toasts { top: var(--space-3); }
 .knob__track { stroke: var(--line-default); }
 .knob__fill { stroke: var(--accent-default); }
 .knob__tick { stroke: var(--line-strong); stroke-width: 1.5; stroke-linecap: round; }
-.knob__tick[data-on] { stroke: var(--accent-text); }
+.knob__tick[data-on] { stroke: var(--annot-mark); }
 .knob__cap { transform-box: view-box; transform-origin: 66px 66px; transition: transform var(--duration-1) var(--ease-emphasis); }
 .knob__body { fill: var(--surface-raised); stroke: var(--line-strong); stroke-width: 1; filter: drop-shadow(0 2px 3px rgb(0 0 0 / 0.12)); }
 .knob__mark { stroke: var(--text-default); stroke-width: 2.5; stroke-linecap: round; }
@@ -1287,7 +1287,7 @@ body:has(.canvas) .toasts { top: var(--space-3); }
 .dl-curve__guide { stroke: var(--line-default); stroke-dasharray: 2 3; }
 .dl-curve__arm { stroke: var(--annot-line); stroke-width: 1; }
 .dl-curve__pt { fill: var(--surface-raised); stroke: var(--annot-line); }
-.dl-curve__line { fill: none; stroke: var(--accent-text); stroke-width: 2; stroke-linecap: round; }
+.dl-curve__line { fill: none; stroke: var(--annot-mark); stroke-width: 2; stroke-linecap: round; }
 .dl-run { position: relative; height: 14px; border-radius: var(--radius-full); background: var(--surface-raised); box-shadow: inset 0 0 0 1px var(--line-default); }
 .dl-run i { position: absolute; top: 2px; left: 2px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-default); transition: left var(--duration-3) var(--ease-emphasis); }
 .dl-run[data-side] i { left: calc(100% - 12px); }
