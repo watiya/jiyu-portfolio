@@ -8,6 +8,7 @@ import { buildCase, type CaseDoc } from "../src/cases/parse.ts";
 import { APP_DETAILS, type AppDetail } from "../src/appDetails.ts";
 import { STRINGS, type UI } from "../src/i18n/ui.ts";
 import { WORKS, type Work } from "../src/works.ts";
+import { isPrivatePath } from "../src/hidden.ts";
 import canvasIndex from "../src/content/canvas/index.json" with { type: "json" };
 
 export const SITE = "https://www.brainchild.kr";
@@ -180,7 +181,8 @@ function main() {
     const file = join(ROOT, "public", p);
     return existsSync(file) ? imageSize(readFileSync(file)) : undefined;
   };
-  const routes = buildRoutes({ cases: readEnglishCases(ROOT), appDetails: APP_DETAILS, works: WORKS, canvasSlugs: CANVAS_SLUGS, ui: STRINGS.en }, sizeOf);
+  // 잠시 내린 경로(hidden.ts)는 미리보기 파일도 사이트맵도 만들지 않는다
+  const routes = buildRoutes({ cases: readEnglishCases(ROOT), appDetails: APP_DETAILS, works: WORKS, canvasSlugs: CANVAS_SLUGS, ui: STRINGS.en }, sizeOf).filter((r) => !isPrivatePath(r.path));
 
   for (const m of routes) {
     const out = join(dist, m.path === "/" ? "" : m.path, "index.html");

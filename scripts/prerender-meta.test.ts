@@ -17,10 +17,10 @@ const ROUTE_COUNT = 6 + 11 + 9 + WORKS.length + CANVAS_SLUGS.length;
 const TEMPLATE = `<!doctype html>
 <html lang="en">
   <head>
-    <title>Brainchild-Jiyu</title>
+    <title>Brainchild</title>
     <meta name="description" content="base" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Brainchild-Jiyu" />
+    <meta property="og:site_name" content="Brainchild" />
     <meta property="og:title" content="base title" />
     <meta property="og:description" content="base og description" />
     <meta property="og:url" content="https://www.brainchild.kr/" />
@@ -64,7 +64,7 @@ test("제목은 앱의 document.title 규칙과 같다", () => {
   assert.equal(by("/work/starground/canvas").title, t.titles.canvas("스타그라운드"));
   assert.equal(by("/work/starground").description, WORKS.find((w) => w.slug === "starground")!.tagline.en);
   assert.equal(by("/apps/seoul-boom").title, t.titles.app("Seoul Boom"));
-  assert.match(by("/cases/dex-beta").title, / \| Brainchild-Jiyu$/);
+  assert.match(by("/cases/dex-beta").title, / \| Brainchild$/);
 });
 
 test("og:image: 사례 표지, 앱 첫 화면, 없으면 /og.png. 크기는 실제 파일에서 읽는다", () => {

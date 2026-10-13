@@ -5,6 +5,7 @@ import { internalClick } from "../router.ts";
 import { useTokens } from "../tokens/useTokens.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { LANGS } from "../i18n/lang.ts";
+import { isPrivatePath } from "../hidden.ts";
 
 type Dot = { x: number; y: number; z: number; vx: number; vy: number };
 
@@ -100,7 +101,7 @@ export function Landing({ go }: { go: (href: string) => void }) {
     { href: "/projects", label: t.landing.nav.projects },
     { href: "/cases", label: t.landing.nav.cases },
     { href: "/projects#contact", label: t.landing.nav.contact },
-  ];
+  ].filter((n) => !isPrivatePath(n.href));
 
   return (
     <div className="landing" data-token="surface.inverse text.inverse accent.default">
@@ -126,7 +127,7 @@ export function Landing({ go }: { go: (href: string) => void }) {
 
       <div className="landing__center">
         <div className="landing__line landing__line--l" aria-hidden="true" />
-        <h1 className="landing__mark">Brainchild<span className="landing__mark-sub">-Jiyu</span></h1>
+        <h1 className="landing__mark">Brainchild</h1>
         <div className="landing__line landing__line--r" aria-hidden="true" />
       </div>
 

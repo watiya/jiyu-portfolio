@@ -8,6 +8,7 @@ import { useReveal } from "../hooks.ts";
 import { fuzzyScore } from "../lib.ts";
 import { Scrub } from "./Scrub.tsx";
 import { Corners, SectionLabel } from "./Annot.tsx";
+import { HIDE_PRIVATE } from "../hidden.ts";
 
 // 레포는 비공개라 소스는 경로만 적는다. 공개로 바꾸면 이 값을 켠다
 const SOURCE_BASE = "https://github.com/watiya/jiyu-portfolio/blob/master/";
@@ -265,7 +266,7 @@ function PaletteDemo({ go }: { go: (href: string) => void }) {
   const uid = useId();
   const cmds: MiniCmd[] = [
     { id: "apps", label: t.sections.apps, hint: "/projects#apps", run: () => go("/projects#apps") },
-    { id: "cases", label: t.sections.cases, hint: "/cases", run: () => go("/cases") },
+    ...(HIDE_PRIVATE ? [] : [{ id: "cases", label: t.sections.cases, hint: "/cases", run: () => go("/cases") }]),
     ...PRESETS.slice(0, 3).map((p) => ({ id: `wear-${p.slug}`, label: t.palette.wear(p.name), hint: p.swatches[0].hex, run: () => applyPreset(p.slug, true) })),
     { id: "theme", label: dials.theme === "dark" ? t.palette.toLight : t.palette.toDark, hint: t.palette.hintTheme, run: () => set({ theme: dials.theme === "dark" ? "light" : "dark" }) },
   ];

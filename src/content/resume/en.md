@@ -4,7 +4,7 @@
 
 I turn messy product rules into systems that ship.
 
-- brainchild.jiyu@gmail.com
+- brainchild.idea@gmail.com
 - Portfolio [brainchild.kr](https://www.brainchild.kr/projects)
 - GitHub [github.com/watiya](https://github.com/watiya)
 

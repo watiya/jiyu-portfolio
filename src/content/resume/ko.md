@@ -4,7 +4,7 @@
 
 복잡한 제품 규칙을 출시되는 시스템으로 바꿉니다.
 
-- brainchild.jiyu@gmail.com
+- brainchild.idea@gmail.com
 - 포트폴리오 [brainchild.kr](https://www.brainchild.kr/projects)
 - GitHub [github.com/watiya](https://github.com/watiya)
 

@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { APP_DETAILS } from "../appDetails.ts";
 import { getCases } from "../cases/content.ts";
 import { EMAIL } from "../data.ts";
+import { isPrivatePath } from "../hidden.ts";
 import { PRESETS } from "../tokens/engine.ts";
 import { EXPORTS } from "../tokens/export.ts";
 import { useTokens } from "../tokens/useTokens.ts";
@@ -134,7 +135,7 @@ export function Palette({ go }: { go: (href: string) => void }) {
             .catch(() => toast(t.contact.emailIs(EMAIL)));
         },
       },
-    ];
+    ].filter((c) => !isPrivatePath(c.hint));
   }, [applyPreset, copyLink, dials.theme, tokens, go, lang, reset, set, setInspect, setLang, setPaletteOpen, setPanelOpen, t, toast]);
 
   const results = useMemo(() => {

@@ -3,16 +3,18 @@ import { internalClick } from "../router.ts";
 import { useTokens } from "../tokens/useTokens.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { LANGS } from "../i18n/lang.ts";
+import { isPrivatePath } from "../hidden.ts";
 
 // match 는 이 항목이 활성인 경로들. Apps 는 /work 처럼 독립 페이지(/apps)로 간다. 상세(/apps/<slug>)도 App.tsx 가 /apps 로 넘긴다
-const NAV: { key: "apps" | "craft" | "cases" | "work" | "resume" | "contact"; href: string; match: string[] }[] = [
+type NavItem = { key: "apps" | "craft" | "cases" | "work" | "resume" | "contact"; href: string; match: string[] };
+const NAV: NavItem[] = ([
   { key: "apps", href: "/apps", match: ["/apps"] },
   { key: "craft", href: "/projects#craft", match: [] },
   { key: "cases", href: "/cases", match: ["/cases"] },
   { key: "work", href: "/work", match: ["/work"] },
   { key: "resume", href: "/resume", match: ["/resume"] },
   { key: "contact", href: "/projects#contact", match: [] },
-];
+] satisfies NavItem[]).filter((n) => !isPrivatePath(n.href));
 
 export function Header({ go, current }: { go: (href: string) => void; current: string }) {
   const { panelOpen, setPanelOpen, inspect, setInspect, setPaletteOpen, dials } = useTokens();

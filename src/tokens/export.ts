@@ -17,7 +17,7 @@ const dialLine = (tokens: Tokens) =>
 export function toCss(tokens: Tokens): string {
   const lines = Object.entries(tokens.vars).map(([k, v]) => `  ${k}: ${v};`);
   return [
-    "/* Brainchild-Jiyu tokens",
+    "/* Brainchild tokens",
     ` * dials: ${dialLine(tokens)}`,
     ` * theme: ${themeLink(tokens)}`,
     " * fonts are referenced by name, load them yourself (Fontsource, Pretendard)",
@@ -54,7 +54,7 @@ function leaf(name: string, value: string): Leaf {
 
 export function toJson(tokens: Tokens): string {
   const root: Group = {
-    $description: `Brainchild-Jiyu tokens · ${dialLine(tokens)}`,
+    $description: `Brainchild tokens · ${dialLine(tokens)}`,
     $extensions: { "kr.brainchild": { dials: tokens.dials, theme: themeLink(tokens) } },
   };
   for (const [name, value] of Object.entries(tokens.vars)) {
@@ -78,7 +78,7 @@ export function toDesignMd(tokens: Tokens): string {
   const scale = (steps: readonly number[], hexes: string[]) => steps.map((st, i) => `\`${st}\` ${hexes[i]}`).join(" · ");
   const space = SPACE_SCALE.map((_, i) => vars[`--space-${i + 1}`]);
   return `---
-name: Brainchild-Jiyu
+name: Brainchild
 theme: ${dials.theme}
 source: ${themeLink(tokens)}
 colors:
@@ -103,7 +103,7 @@ spacing: [${space.join(", ")}]
 motion: { fast: ${vars["--duration-1"]}, base: ${vars["--duration-2"]}, slow: ${vars["--duration-3"]}, ease: "${vars["--ease-default"]}" }
 ---
 
-# Brainchild-Jiyu design system
+# Brainchild design system
 
 A living spec sheet. The page reads like a design file: mono annotations, dimension lines, crosshair corners, token names shown next to what they paint. Calm surfaces, one accent, and the accent is mostly used to *annotate*, not to decorate.
 

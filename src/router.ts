@@ -1,5 +1,6 @@
 // history API 위의 작은 라우터. 경로가 열이라 라이브러리는 두지 않는다.
 import { useCallback, useEffect, useState, type MouseEvent } from "react";
+import { isPrivatePath } from "./hidden.ts";
 
 export type Route =
   | { name: "landing" }
@@ -18,6 +19,8 @@ export function parseRoute(path: string): Route {
   const clean = path.replace(/\/+$/, "") || "/";
   // 루트는 brainchild.kr 의 첫 화면, 포트폴리오 홈은 옛 주소 그대로 /projects
   if (clean === "/") return { name: "landing" };
+  // 잠시 내린 경로(hidden.ts). 스위치를 끄면 아래 분기가 그대로 산다
+  if (isPrivatePath(clean)) return { name: "notfound", path: clean };
   if (clean === "/projects") return { name: "home" };
   // /writing 은 사례와 겹쳐 10-07 에 접었다. 남은 링크는 사례 목록으로 받는다
   if (clean === "/writing") return { name: "cases" };

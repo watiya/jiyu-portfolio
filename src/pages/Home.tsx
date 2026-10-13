@@ -15,6 +15,7 @@ import { Corners, SectionLabel, TokenTag } from "../components/Annot.tsx";
 import { PhoneFrame } from "../components/PhoneFrame.tsx";
 import { Craft } from "../components/Craft.tsx";
 import { Dials } from "../components/Dials.tsx";
+import { HIDE_PRIVATE } from "../hidden.ts";
 
 // 한글 제목은 글자가 넓고 어센더가 없어 기본값을 따로 둔다
 const HERO_DEFAULTS: Record<Lang, { size: number; leading: number; tracking: number }> = {
@@ -31,8 +32,9 @@ export function Home({ go }: { go: (href: string) => void }) {
       <Layers />
       <Dials />
       <Craft go={go} />
-      <CaseStudies go={go} />
-      <Journey />
+      {/* 사례·경력은 잠시 내렸다(hidden.ts) */}
+      {!HIDE_PRIVATE && <CaseStudies go={go} />}
+      {!HIDE_PRIVATE && <Journey />}
       <Contact go={go} />
     </>
   );
@@ -198,12 +200,16 @@ function Hero({ go }: { go: (href: string) => void }) {
       <div className="hero__foot grid12">
         <div className="hero__who">
           <p className="hero__name">{t.hero.name}</p>
-          <p className="hero__role" data-token="text.muted">
-            {t.hero.role}
-          </p>
-          <p className="hero__intro" data-token="text.default font.body">
-            {t.hero.intro}
-          </p>
+          {!HIDE_PRIVATE && (
+            <>
+              <p className="hero__role" data-token="text.muted">
+                {t.hero.role}
+              </p>
+              <p className="hero__intro" data-token="text.default font.body">
+                {t.hero.intro}
+              </p>
+            </>
+          )}
           <p className="hero__now">
             <span className="mono hero__now-label" data-token="accent.text">
               {t.hero.now} · <time dateTime={now.asOf}>{formatDay(now.asOf, lang)}</time>
@@ -705,7 +711,7 @@ function Contact({ go }: { go: (href: string) => void }) {
   };
   return (
     <section id="contact" className="contact container reveal" ref={ref} aria-labelledby="contact-title">
-      <SectionLabel index="08" title={t.sections.contact} aside={<>{t.contact.aside}</>} />
+      <SectionLabel index={HIDE_PRIVATE ? "06" : "08"} title={t.sections.contact} aside={<>{t.contact.aside}</>} />
       <h2 id="contact-title" className="sr-only">
         {t.sections.contact}
       </h2>
@@ -727,10 +733,15 @@ function Contact({ go }: { go: (href: string) => void }) {
         </span>
       </div>
       <p className="mono contact__ver">
-        <a href="/projects#work" onClick={internalClick(go)}>
-          {t.contact.changelog}
-        </a>{" "}
-        · {t.contact.updated(updated)}
+        {!HIDE_PRIVATE && (
+          <>
+            <a href="/projects#work" onClick={internalClick(go)}>
+              {t.contact.changelog}
+            </a>{" "}
+            ·{" "}
+          </>
+        )}
+        {t.contact.updated(updated)}
       </p>
     </section>
   );

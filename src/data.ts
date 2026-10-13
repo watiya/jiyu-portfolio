@@ -1,6 +1,6 @@
 // 콘텐츠 정본은 resume/resume.en.md 와 brainchild/content/projects. 여기는 화면용 발췌다.
 import { isHiddenApp } from "./hidden.ts";
-export const EMAIL = "brainchild.jiyu@gmail.com";
+export const EMAIL = "brainchild.idea@gmail.com";
 export const SOCIALS = [
   { label: "GitHub", href: "https://github.com/watiya" },
   { label: "Team · Brainchild Works", href: "https://brainchild.works" },

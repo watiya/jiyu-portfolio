@@ -25,7 +25,7 @@ test("JSON 별칭은 실제로 있는 토큰을 가리킨다", () => {
 
 test("DESIGN.md 는 지금 색을 담고 em-dash 를 쓰지 않는다", () => {
   const md = toDesignMd(buildTokens({ ...DEFAULT_DIALS, hue: 20, theme: "dark" }));
-  assert.match(md, /^---\nname: Brainchild-Jiyu\ntheme: dark/);
+  assert.match(md, /^---\nname: Brainchild\ntheme: dark/);
   assert.ok(md.includes("hue=20"));
   assert.ok(!md.includes("—"));
 });

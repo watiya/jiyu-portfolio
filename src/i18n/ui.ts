@@ -4,7 +4,7 @@ import type { Lang } from "./lang.ts";
 const en = {
   // 공통
   skip: "Skip to content",
-  siteName: "Brainchild-Jiyu",
+  siteName: "Brainchild",
   tagline: "I turn messy product rules into systems that ship",
   metaDescription:
     "Design engineer. I turn messy product rules into systems that ship. 14 years in product design, building the source of truth in code. This site is a living design system: turn the tokens and everything follows.",
@@ -14,7 +14,7 @@ const en = {
     enter: "Enter the portfolio",
     nav: { projects: "Projects", cases: "Case studies", contact: "Contact", team: "Team" },
     hint: "Press T and turn the hue. This page follows too.",
-    title: "Brainchild-Jiyu",
+    title: "Brainchild",
   },
   // 헤더
   nav: { apps: "Apps", craft: "Craft", cases: "Case studies", work: "Work", writing: "Writing", resume: "Resume", contact: "Contact" },
@@ -302,17 +302,17 @@ const en = {
   },
   // 문서 제목
   titles: {
-    home: "Brainchild-Jiyu | Design Engineer",
-    writing: "Writing | Brainchild-Jiyu",
-    cases: "Case studies | Brainchild-Jiyu",
-    case: (title: string) => `${title} | Brainchild-Jiyu`,
-    work: "Work | Brainchild-Jiyu",
-    apps: "Apps | Brainchild-Jiyu",
-    resume: "Resume | Brainchild-Jiyu",
-    app: (name: string) => `${name} | Brainchild-Jiyu`,
-    workDetail: (name: string) => `${name} | Work | Brainchild-Jiyu`,
-    canvas: (name: string) => `${name} | Canvas | Brainchild-Jiyu`,
-    notFound: "Not found | Brainchild-Jiyu",
+    home: "Brainchild | Design Engineer",
+    writing: "Writing | Brainchild",
+    cases: "Case studies | Brainchild",
+    case: (title: string) => `${title} | Brainchild`,
+    work: "Work | Brainchild",
+    apps: "Apps | Brainchild",
+    resume: "Resume | Brainchild",
+    app: (name: string) => `${name} | Brainchild`,
+    workDetail: (name: string) => `${name} | Work | Brainchild`,
+    canvas: (name: string) => `${name} | Canvas | Brainchild`,
+    notFound: "Not found | Brainchild",
   },
 };
 
@@ -320,7 +320,7 @@ export type UI = typeof en;
 
 const ko: UI = {
   skip: "본문으로 건너뛰기",
-  siteName: "Brainchild-Jiyu",
+  siteName: "Brainchild",
   tagline: "복잡한 제품 규칙을 출시되는 시스템으로 바꿉니다",
   metaDescription: "디자인 엔지니어. 복잡한 제품 규칙을 출시되는 시스템으로 바꿉니다. 제품 디자인 14년, 기준을 코드로 짓습니다. 이 사이트는 살아 있는 디자인 시스템입니다. 토큰을 돌리면 전부 따라옵니다.",
   landing: {
@@ -328,7 +328,7 @@ const ko: UI = {
     enter: "포트폴리오 보기",
     nav: { projects: "프로젝트", cases: "사례", contact: "연락", team: "팀" },
     hint: "T 를 눌러 색조를 돌려 보세요. 이 화면도 따라옵니다.",
-    title: "Brainchild-Jiyu",
+    title: "Brainchild",
   },
   nav: { apps: "앱", craft: "크래프트", cases: "사례", work: "작업", writing: "글", resume: "이력서", contact: "연락" },
   resume: { print: "인쇄 / PDF" },
@@ -594,17 +594,17 @@ const ko: UI = {
     hintLang: "English",
   },
   titles: {
-    home: "Brainchild-Jiyu | 디자인 엔지니어",
-    writing: "글 | Brainchild-Jiyu",
-    cases: "사례 | Brainchild-Jiyu",
-    case: (title) => `${title} | Brainchild-Jiyu`,
-    work: "작업 | Brainchild-Jiyu",
-    apps: "앱 | Brainchild-Jiyu",
-    resume: "이력서 | Brainchild-Jiyu",
-    app: (name) => `${name} | Brainchild-Jiyu`,
-    workDetail: (name) => `${name} | 작업 | Brainchild-Jiyu`,
-    canvas: (name) => `${name} | 캔버스 | Brainchild-Jiyu`,
-    notFound: "없는 경로 | Brainchild-Jiyu",
+    home: "Brainchild | 디자인 엔지니어",
+    writing: "글 | Brainchild",
+    cases: "사례 | Brainchild",
+    case: (title) => `${title} | Brainchild`,
+    work: "작업 | Brainchild",
+    apps: "앱 | Brainchild",
+    resume: "이력서 | Brainchild",
+    app: (name) => `${name} | Brainchild`,
+    workDetail: (name) => `${name} | 작업 | Brainchild`,
+    canvas: (name) => `${name} | 캔버스 | Brainchild`,
+    notFound: "없는 경로 | Brainchild",
   },
 };
 
