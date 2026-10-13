@@ -128,7 +128,7 @@ test("presets build and pass AA", () => {
 
 test("query round trip: only non-default keys, unknown values ignored", () => {
   assert.equal(dialsToQuery(DEFAULT_DIALS), "");
-  const d: Dials = { hue: 12, secondary: null, neutral: "cool", pairing: "editorial", radius: 0, scale: 130, density: "airy", motion: "off", theme: "dark" };
+  const d: Dials = { hue: 12, primary: null, secondary: null, neutral: "cool", pairing: "editorial", radius: 0, scale: 130, density: "airy", motion: "off", theme: "dark" };
   const q = dialsToQuery(d);
   assert.deepEqual(parseDials(new URLSearchParams(q)), d);
   const junk = parseDials(new URLSearchParams("hue=999&neutral=hot&radius=-5&pairing=comic&theme=dark"));
@@ -216,4 +216,13 @@ test("pairings: every stack ends in the Pretendard fallback, funnel carries Funn
   assert.match(PAIRING_META.funnel.mono, /^'Geist Mono Variable'/);
   assert.equal(parseDials(new URLSearchParams("pairing=funnel")).pairing, "funnel");
   assert.match(buildTokens(DEFAULT_DIALS).vars["--font-pixel"], /^'Geist Pixel'/);
+});
+
+test("accent.primary: preset brand hex stays as accent.default with a readable on-color", () => {
+  const lime = buildTokens({ ...DEFAULT_DIALS, primary: "#75fc96" });
+  assert.equal(lime.semantic.accent.default, "#75fc96");
+  assert.ok(contrast(lime.semantic.accent.on, lime.semantic.accent.default) >= AA_TEXT);
+  const q = dialsToQuery({ ...DEFAULT_DIALS, primary: "#75fc96" });
+  assert.equal(parseDials(new URLSearchParams(q)).primary, "#75fc96");
+  assert.equal(parseDials(new URLSearchParams("pri=zzz")).primary, null);
 });

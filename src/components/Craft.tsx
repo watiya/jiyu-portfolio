@@ -116,7 +116,7 @@ function HueDemo() {
   const id = useId();
   const [hue, setHue] = useState(dials.hue);
   // 이 카드 안에서만 쓰는 토큰. 사이트의 다이얼은 건드리지 않는다
-  const local = buildTokens({ ...dials, hue, secondary: null });
+  const local = buildTokens({ ...dials, hue, primary: null, secondary: null });
   return (
     <div className="cr cr--hue" style={local.vars as CSSProperties}>
       <div className="cr-hue__card">

@@ -10,6 +10,7 @@ export type Theme = "light" | "dark";
 
 export type Dials = {
   hue: number; // 0..360
+  primary: string | null; // 앱 프리셋의 브랜드 색(hex) 그대로. 있으면 hue 램프 대신 accent.default 가 된다
   secondary: string | null; // 앱 프리셋의 둘째 브랜드 색(hex). 없으면 accent 와 같다
   neutral: Neutral;
   pairing: Pairing;
@@ -23,6 +24,7 @@ export type Dials = {
 // 기본값: 종이 위에 파랑 한 점. 보정 0 건으로 통과하는 조합이어야 한다 (테스트가 지킨다).
 export const DEFAULT_DIALS: Dials = {
   hue: 264,
+  primary: null,
   secondary: null,
   neutral: "warm",
   pairing: "geist",
@@ -218,7 +220,7 @@ export function buildSemantic(dials: Dials, accent: string[], neutral: string[])
   // 포인트색 위 글자는 밝은 테마 흰색, 어두운 테마 먹. 안 넘으면 포인트색 밝기를 민다
   const white = neutral[0];
   const ink = neutral[neutral.length - 1];
-  const on = dark ? ink : white;
+  let on = dark ? ink : white;
   const accentStep = idx(ACCENT_STEPS, dark ? 400 : 600);
   const accentDir: 1 | -1 = dark ? 1 : -1; // 밝은 테마는 어둡게, 어두운 테마는 밝게
   let accentDefault = a(ACCENT_STEPS[accentStep]);
@@ -226,6 +228,13 @@ export function buildSemantic(dials: Dials, accent: string[], neutral: string[])
     const fixed = nudgeForContrast(dials.hue, ACCENT_L[accentStep], ACCENT_C[accentStep], accentDir, [on]);
     fixes.push({ token: "accent.default", from: accentDefault, to: fixed, reason: "AA for text on accent" });
     accentDefault = fixed;
+  }
+  // 프리셋 브랜드 색: 밝기를 누르지 않고 흰/먹 중 잘 보이는 글자를 고른다 (라임 위 먹 글자)
+  if (dials.primary) {
+    const fit = fitOnColor(dials.primary, white, ink);
+    accentDefault = fit.bg;
+    on = fit.on;
+    if (fit.moved) fixes.push({ token: "accent.default", from: dials.primary, to: fit.bg, reason: "AA for text on accent" });
   }
 
   // 포인트색 글자(링크·주석 숫자): canvas/raised/soft 위에서 AA
@@ -496,7 +505,7 @@ const ALL_PRESETS: Preset[] = [
       { hex: "#161618", label: "ink" },
       { hex: "#f6f6f6", label: "muted" },
     ],
-    dials: { hue: hueOf("#75fc96"), secondary: "#161618", neutral: "neutral", radius: 24, theme: "light", pairing: "geist" },
+    dials: { hue: hueOf("#75fc96"), primary: "#75fc96", secondary: "#161618", neutral: "neutral", radius: 24, theme: "light", pairing: "geist" },
   },
 ];
 
@@ -506,14 +515,15 @@ export const presetBySlug = (slug: string) => PRESETS.find((p) => p.slug === slu
 
 // ---------- URL 직렬화 ----------
 
-const KEYS: (keyof Dials)[] = ["hue", "secondary", "neutral", "pairing", "radius", "scale", "density", "motion", "theme"];
-const QUERY_KEY: Record<keyof Dials, string> = { hue: "hue", secondary: "sec", neutral: "neutral", pairing: "pairing", radius: "radius", scale: "scale", density: "density", motion: "motion", theme: "theme" };
+const KEYS: (keyof Dials)[] = ["hue", "primary", "secondary", "neutral", "pairing", "radius", "scale", "density", "motion", "theme"];
+const QUERY_KEY: Record<keyof Dials, string> = { hue: "hue", primary: "pri", secondary: "sec", neutral: "neutral", pairing: "pairing", radius: "radius", scale: "scale", density: "density", motion: "motion", theme: "theme" };
 
 export function dialsToQuery(d: Dials): string {
   const q = new URLSearchParams();
   for (const k of KEYS) {
     if (d[k] === DEFAULT_DIALS[k]) continue;
     if (k === "secondary") q.set("sec", (d.secondary ?? "").replace("#", ""));
+    else if (k === "primary") q.set("pri", (d.primary ?? "").replace("#", ""));
     else q.set(QUERY_KEY[k], String(d[k]));
   }
   return q.toString();
@@ -532,11 +542,13 @@ export function parseDials(input: URLSearchParams | Record<string, unknown> | nu
   if (get("radius") !== undefined && Number.isFinite(radius)) out.radius = clampNum(Math.round(radius), 0, 24);
   const scale = Number(get("scale"));
   if (get("scale") !== undefined && Number.isFinite(scale)) out.scale = clampNum(Math.round(scale), SCALE_MIN, SCALE_MAX);
-  const sec = get(input instanceof URLSearchParams ? "sec" : "secondary");
-  if (sec === null || sec === "") out.secondary = null;
-  else if (typeof sec === "string") {
-    const hex = sec.startsWith("#") ? sec : `#${sec}`;
-    if (/^#[0-9a-f]{6}$/i.test(hex)) out.secondary = hex.toLowerCase();
+  for (const [k, q] of [["secondary", "sec"], ["primary", "pri"]] as const) {
+    const v = get(input instanceof URLSearchParams ? q : k);
+    if (v === null || v === "") out[k] = null;
+    else if (typeof v === "string") {
+      const hex = v.startsWith("#") ? v : `#${v}`;
+      if (/^#[0-9a-f]{6}$/i.test(hex)) out[k] = hex.toLowerCase();
+    }
   }
   const pickEnum = <T extends string>(k: keyof Dials, allowed: readonly T[]) => {
     const v = get(k);

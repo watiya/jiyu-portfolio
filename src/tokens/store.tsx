@@ -101,9 +101,19 @@ export function TokenProvider({ children }: { children: ReactNode }) {
     document.documentElement.dataset.panel = panelOpen ? "open" : "closed";
   }, [panelOpen]);
 
-  // 색상 다이얼을 직접 돌리면 프리셋의 둘째 색은 내려놓는다
+  // 색상 다이얼을 직접 돌리면 프리셋의 브랜드 색(primary·secondary)은 내려놓는다
   const set = useCallback((patch: Partial<Dials>) => {
-    setDials((d) => parseDials({ ...d, ...patch, ...(patch.hue !== undefined && patch.secondary === undefined ? { secondary: null } : {}) }, d));
+    setDials((d) =>
+      parseDials(
+        {
+          ...d,
+          ...patch,
+          ...(patch.hue !== undefined && patch.secondary === undefined ? { secondary: null } : {}),
+          ...(patch.hue !== undefined && patch.primary === undefined ? { primary: null } : {}),
+        },
+        d,
+      ),
+    );
   }, []);
   const reset = useCallback(() => {
     setDials(DEFAULT_DIALS);
