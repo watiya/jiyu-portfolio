@@ -972,6 +972,16 @@ html[data-motion="off"] .cursor *, html[data-motion="off"] .cursor { transition:
 @keyframes landing-sweep-l { from { transform: translateX(-100%); opacity: 0; } to { transform: none; opacity: 0.6; } }
 @keyframes landing-sweep-r { from { transform: translateX(100%); opacity: 0; } to { transform: none; opacity: 0.6; } }
 @keyframes landing-glow { 50% { opacity: 1; } }
+/* 데스크톱은 첫 화면 한 장에 띠까지 들어오게 높이를 따라 워드마크·폰을 줄인다 (1280x800 기준) */
+@media (min-width: 641px) {
+  .landing__nav { margin-top: var(--space-5); }
+  .landing__mark { font-size: clamp(3rem, min(14vw, 17svh), 10rem); padding-block: var(--space-2); }
+  .landing__apps { margin-top: var(--space-5); padding-block: var(--space-2); }
+  .landing__app:nth-child(even) { margin-top: var(--space-5); }
+  .landing__app .phone { width: clamp(104px, 14svh, 148px) !important; }
+  .landing__status { margin-top: var(--space-3); }
+  .landing__enter { margin: var(--space-3) 0 var(--space-4); }
+}
 @media (max-width: 640px) {
   .landing__meta, .landing__foot { padding-inline: var(--space-4); }
   .landing__hint { display: none; }

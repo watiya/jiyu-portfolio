@@ -46,7 +46,8 @@ export function Cursor() {
         r.style.transform = "translate3d(0, 0, 0)";
       }
 
-      const tok = t?.closest("[data-token]")?.getAttribute("data-token")?.split(/\s+/)[0];
+      // data-cursor="plain" 안에서는 토큰 이름을 읽지 않는다(첫 화면). 토큰은 검사 모드(I)가 보여 준다
+      const tok = t?.closest("[data-cursor='plain']") ? undefined : t?.closest("[data-token]")?.getAttribute("data-token")?.split(/\s+/)[0];
       lb.textContent = slider ? "drag ↔" : hit && tok ? tok : `${Math.round(e.clientX)}, ${Math.round(e.clientY)}`;
     };
     const onLeave = () => delete el.dataset.on;

@@ -143,7 +143,7 @@ export function Landing({ go }: { go: (href: string) => void }) {
   const leave = (slug: string) => setPreview((p) => (p === slug ? null : p));
 
   return (
-    <div className="landing" style={style} data-preview={preview ?? undefined} data-token="surface.inverse text.inverse accent.default">
+    <div className="landing" style={style} data-preview={preview ?? undefined} data-cursor="plain" data-token="surface.inverse text.inverse accent.default">
       {!still && <Particles preview={preview} />}
 
       <div className="landing__meta mono" aria-hidden="true">

@@ -5,9 +5,9 @@ const en = {
   // 공통
   skip: "Skip to content",
   siteName: "Brainchild",
-  tagline: "I turn messy product rules into systems that ship",
+  tagline: "Small apps from everyday life, tied together by one design system",
   metaDescription:
-    "Design engineer. I turn messy product rules into systems that ship. 14 years in product design, building the source of truth in code. This site is a living design system: turn the tokens and everything follows.",
+    "Small apps from everyday life, tied together by one design system. Every app has its own color. This site wears it.",
   // 첫 화면 (brainchild.kr)
   landing: {
     lead: "Every app has its own color. This site wears it.",
@@ -45,8 +45,8 @@ const en = {
     scrubHint: "Drag or use arrow keys. Backspace resets.",
     live: "live",
     name: "Design Engineer",
-    role: "Now Head of UX/UI, PM/PO and Design at Starzip. Planning and design at Brainchild Works.",
-    intro: "14 years in product design. Tokens, policy, and screens in one codebase. At Starzip I run design and PM/PO for four products beside a three-person engineering team, alone in that seat, with 2,621 commits in 3.8 months, all shipped as running code. This site is the system: turn the dials and everything follows.",
+    role: "Designs and builds small apps, and the system they share.",
+    intro: "Tokens, policy, and screens in one codebase, shipped as running code. This site is the system: turn the dials and everything follows.",
     place: "Seoul · GMT+9",
     now: "Now",
     email: "Email me",
@@ -325,8 +325,8 @@ export type UI = typeof en;
 const ko: UI = {
   skip: "본문으로 건너뛰기",
   siteName: "Brainchild",
-  tagline: "복잡한 제품 규칙을 출시되는 시스템으로 바꿉니다",
-  metaDescription: "디자인 엔지니어. 복잡한 제품 규칙을 출시되는 시스템으로 바꿉니다. 제품 디자인 14년, 기준을 코드로 짓습니다. 이 사이트는 살아 있는 디자인 시스템입니다. 토큰을 돌리면 전부 따라옵니다.",
+  tagline: "생활에서 나온 작은 앱들을 하나의 디자인 시스템으로 묶습니다",
+  metaDescription: "생활에서 나온 작은 앱들을 하나의 디자인 시스템으로 묶는 곳. 앱마다 색이 있고, 이 사이트는 그 색을 입습니다.",
   landing: {
     lead: "앱마다 색이 있고, 이 사이트는 그 색을 입습니다.",
     enter: "포트폴리오 보기",
@@ -361,8 +361,8 @@ const ko: UI = {
     scrubHint: "끌거나 방향키로 조절합니다. Backspace 로 되돌립니다.",
     live: "실시간",
     name: "디자인 엔지니어",
-    role: "현재 Starzip UX/UI · PM/PO · Design 총괄. Brainchild Works 기획·디자인.",
-    intro: "제품 디자인 14년. 토큰, 정책, 화면을 한 코드베이스에 둡니다. Starzip 에서 개발 3인 팀 옆에 단독으로 디자인과 PM/PO 를 맡아 제품 넷을 관리하고, 3.8개월에 커밋 2,621개를 냈습니다. 전부 실행되는 코드로 냅니다. 이 사이트가 곧 시스템입니다. 다이얼을 돌리면 전부 따라옵니다.",
+    role: "작은 앱과 그 앱들이 함께 쓰는 시스템을 설계하고 만듭니다.",
+    intro: "토큰, 정책, 화면을 한 코드베이스에 두고 실행되는 코드로 냅니다. 이 사이트가 곧 시스템입니다. 다이얼을 돌리면 전부 따라옵니다.",
     place: "서울 · GMT+9",
     now: "지금",
     email: "메일 보내기",
