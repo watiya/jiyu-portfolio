@@ -47,7 +47,7 @@ export function getAppDetails(lang: Lang): AppDetail[] {
   if (lang === "en") return APP_DETAILS;
   return APP_DETAILS.map((d) => {
     const k = APP_DETAILS_KO[d.slug];
-    return k ? { ...d, title: k.title, dek: k.dek, date: k.date, meta: k.meta, sections: k.sections } : d;
+    return k ? { ...d, title: k.title, dek: k.dek, date: k.date, meta: k.meta, sections: k.sections, day: k.day ?? d.day } : d;
   });
 }
 

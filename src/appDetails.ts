@@ -9,7 +9,19 @@ export type AppDetail = {
   meta: { label: string; value: string }[];
   stack: string[];
   sections: { heading: string; body: string[] }[];
+  // 쓰는 하루 세 장면. 본문(sections)에 이미 있는 기능으로만 쓴다
+  day?: { title: string; body: string }[];
   shots: string[]; // public/apps/<slug>/ 아래 화면들. 비어 있으면 카드 화면 하나만 쓴다
+};
+
+// 상세의 보조 링크. 각 앱 배포본에 실제로 있는 페이지만 둔다(스토어 등록 문서와 같은 주소, 10-14 응답 확인)
+export const APP_LINKS: Record<string, { privacy?: string; support?: string }> = {
+  "seoul-boom": { privacy: "https://seoulboom.com/privacy.html", support: "https://seoulboom.com/support.html" },
+  runpop: { privacy: "https://runpop.app/privacy.html", support: "https://runpop.app/support.html" },
+  ttokuoka: { privacy: "https://ttokuoka.vercel.app/privacy.html" },
+  "hangul-boom": { privacy: "https://hangul-boom.vercel.app/privacy.html" },
+  "menchi-kana": { privacy: "https://menchi-kana.vercel.app/privacy.html" },
+  "menchi-voca": { privacy: "https://menchi-voca.vercel.app/privacy.html" },
 };
 
 const ALL_APP_DETAILS: AppDetail[] = [
@@ -25,6 +37,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Status", value: "Live, App Store in review prep" },
     ],
     stack: ["React", "TypeScript", "Capacitor", "WidgetKit", "APNs", "Upstash", "Leaflet"],
+    day: [
+      { title: "Before heading out", body: "The home or lock screen widget shows how busy your places are right now." },
+      { title: "Picking a time", body: "On the map, slide the 12-hour forecast to find when a place is easy to visit. On a rainy or bad-air day, the indoor picks come up instead." },
+      { title: "Waiting for quiet", body: "Watch a crowded place and a push alert arrives when it turns quiet. On site, the Korean phrase card fits the situation." },
+    ],
     sections: [
       {
         heading: "The problem",
@@ -63,6 +80,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Status", value: "On device, App Store prep" },
     ],
     stack: ["SwiftUI", "watchOS", "HealthKit", "MapKit", "Core Location", "Live Activities", "WidgetKit", "XcodeGen"],
+    day: [
+      { title: "Before the run", body: "Pick a run plan and one of four click sounds. The target cadence can change across the run." },
+      { title: "On the run", body: "Your playlist keeps playing with one quiet click per step. On the watch the beat is a vibration, with measured cadence and pace a swipe away." },
+      { title: "After the run", body: "The workout saves to Health with its route. The history shows heart rate, cadence, stride, splits, and a route map." },
+    ],
     sections: [
       {
         heading: "The problem",
@@ -103,6 +125,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Status", value: "On device, for a trip in late November" },
     ],
     stack: ["React", "TypeScript", "Capacitor", "Service worker", "Vercel functions"],
+    day: [
+      { title: "Departure day", body: "Departure-day mode reads Incheon's passenger forecast and live departure-hall waits, and works out when to leave." },
+      { title: "Evening at the yatai", body: "Find stalls likely open tonight from regular hours and the rain chance. Later, check the nearest station's last train, or show the driver card." },
+      { title: "Tax-free and the log", body: "Keep tax-free receipts with the departure-day checklist. The Log tab keeps places and spending day by day." },
+    ],
     sections: [
       {
         heading: "The problem",
@@ -142,6 +169,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Status", value: "Prototype, on device" },
     ],
     stack: ["React", "TypeScript", "Capacitor", "PWA", "Hand-drawn SVG charts"],
+    day: [
+      { title: "Morning of the visit", body: "Home leads with the visit, a countdown, and a checklist. The meds tab reminds you that the morning dose waits until after the blood draw." },
+      { title: "At the hospital", body: "Visit-day mode steps through check-in, blood draw, waiting, the doctor, payment, and the pharmacy, with a queue count and a floor map." },
+      { title: "Reading the results", body: "The tests tab puts kidney function first, each value placed on its reference range." },
+    ],
     sections: [
       {
         heading: "Why I made it",
@@ -339,6 +371,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Status", value: "On my phone, web live" },
     ],
     stack: ["Expo", "React Native", "TypeScript", "HealthKit", "Vite"],
+    day: [
+      { title: "Signing up", body: "Pick the race and its date, your current long run, and the days you can train. The weeks up to the start line are written for you." },
+      { title: "Training days", body: "Today shows the session the plan wrote. The first two weeks are easy running, and intervals and tempo start in week three." },
+      { title: "Race day", body: "Log the race session. The finish time and pace move to past races with the distance trained." },
+    ],
     sections: [
       {
         heading: "The problem",
@@ -383,6 +420,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Status", value: "On two iPhones, App Store listing drafted" },
     ],
     stack: ["React", "TypeScript", "Vite", "Capacitor", "Motion", "Google Cloud TTS", "Playwright"],
+    day: [
+      { title: "Boarding", body: "Pick a 2, 5, or 10+ hour flight, and the app suggests a pace for it." },
+      { title: "In the air, no signal", body: "Fly stop by stop: learn a few letters, snap them into syllable blocks, flip loanword cards, then pass a 10-question checkpoint." },
+      { title: "Landing", body: "Read 13 real Seoul signs, from exits and metro lines to a pharmacy and a money exchange, and collect the entry stamp." },
+    ],
     sections: [
       {
         heading: "The problem",
@@ -425,6 +467,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Status", value: "On two iPhones, App Store listing drafted" },
     ],
     stack: ["React", "TypeScript", "Vite", "Capacitor", "KanjiVG", "Google Cloud TTS", "Playwright"],
+    day: [
+      { title: "Before the trip", body: "Ride the Airport Line one stop at a time. Each card has the Korean sound, a memory hook, a recording, and stroke order." },
+      { title: "Writing it down", body: "Trace, write from the letter alone, then write into a blank square. Every stroke is checked for order, direction, position, and shape." },
+      { title: "Reading for real", body: "The reading page shows phrases and loanwords from menus, signs, and hotels, with letters not learned yet dimmed." },
+    ],
     sections: [
       {
         heading: "The problem",
@@ -465,6 +512,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Status", value: "On two iPhones, App Store listing drafted" },
     ],
     stack: ["React", "TypeScript", "Vite", "Capacitor", "Google Cloud TTS"],
+    day: [
+      { title: "After Menchi Kana", body: "Open a scene and read large word cards with furigana, an example sentence, and a recording." },
+      { title: "Checking yourself", body: "Pick the meaning, then pick what you heard. Finishing a scene shows travel sentences built from its words." },
+      { title: "The days after", body: "Missed words come back a day later, then after 3 and 7 days, and graduate after that." },
+    ],
     sections: [
       {
         heading: "The problem",
@@ -506,6 +558,11 @@ const ALL_APP_DETAILS: AppDetail[] = [
       { label: "Status", value: "On two iPhones, before store release" },
     ],
     stack: ["React", "TypeScript", "Vite", "Capacitor", "Motion", "Haptics"],
+    day: [
+      { title: "Airplane mode on", body: "Tap a game card and a board opens. No ads, no login, no network." },
+      { title: "A few spare minutes", body: "Play the daily board, the same for everyone, with three lives per board." },
+      { title: "Coming back", body: "Every five levels earns a collectible for the album on the Records tab, and the streak calendar fills in." },
+    ],
     sections: [
       {
         heading: "The problem",

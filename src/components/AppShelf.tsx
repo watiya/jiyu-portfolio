@@ -5,26 +5,16 @@ import type { CSSProperties } from "react";
 import { PhoneFrame } from "./PhoneFrame.tsx";
 import { useLang } from "../i18n/useLang.ts";
 import { getAppDetails, metaValue, type LocalApp } from "../i18n/content.ts";
-import { APPS } from "../data.ts";
-import { APP_DETAILS } from "../appDetails.ts";
 import { PRESETS } from "../tokens/engine.ts";
 import { useTokens } from "../tokens/useTokens.ts";
-import { activePresetOf, slugOf } from "../lib.ts";
+import { activePresetOf, ctaOf, slugOf } from "../lib.ts";
 import { internalClick } from "../router.ts";
 
 type Group = "boomchi" | "menchi" | "other";
 const GROUPS: Group[] = ["boomchi", "menchi", "other"];
 
-// 행동 문구는 영문 원본 데이터로 고른다. 주소가 없으면 버튼 없이 상태만
-function ctaOf(name: string, slug: string): { kind: "web" | "site" | "prototype"; href: string } | null {
-  const app = APPS.find((a) => a.name === name);
-  if (!app?.href) return null;
-  const status = APP_DETAILS.find((d) => d.slug === slug)?.meta.find((m) => m.label === "Status")?.value ?? "";
-  const kind = /prototype/i.test(status) ? "prototype" : /web/i.test(app.note) ? "web" : "site";
-  return { kind, href: app.href };
-}
-
-export function AppShelf({ apps, go, level }: { apps: LocalApp[]; go: (href: string) => void; level: 2 | 3 }) {
+// lead 를 끄면 넓은 카드 없이 두 칸만 쓴다(상세 아래 "같은 시리즈" 처럼 둘셋만 놓일 때)
+export function AppShelf({ apps, go, level, lead = true }: { apps: LocalApp[]; go: (href: string) => void; level: 2 | 3; lead?: boolean }) {
   const { lang, t } = useLang();
   const { dials } = useTokens();
   const details = getAppDetails(lang);
@@ -58,7 +48,7 @@ export function AppShelf({ apps, go, level }: { apps: LocalApp[]; go: (href: str
                 const status = (detail && metaValue(detail, "Status")) ?? app.badge;
                 const platform = (detail && metaValue(detail, "Platform")) ?? app.note;
                 const wearing = active?.slug === slug;
-                const wide = i === 0;
+                const wide = lead && i === 0;
                 const cta = ctaOf(app.name, slug);
                 // 넓은 카드는 상세 화면 둘째·셋째 장을 양옆에. 세로로 긴 캡처만 있을 때
                 const sides = (detail?.shots ?? []).slice(1, 3);

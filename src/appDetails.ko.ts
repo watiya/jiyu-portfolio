@@ -6,6 +6,7 @@ export type AppDetailKo = {
   date: string;
   meta: { label: string; value: string }[];
   sections: { heading: string; body: string[] }[];
+  day?: { title: string; body: string }[];
 };
 
 const H = { problem: "문제", built: "만든 것", decisions: "눈여겨볼 결정" };
@@ -20,6 +21,11 @@ export const APP_DETAILS_KO: Record<string, AppDetailKo> = {
       { label: L.role, value: "설계와 구현, 혼자" },
       { label: L.platform, value: "iPhone 앱 + 웹" },
       { label: L.status, value: "운영 중, App Store 심사 준비" },
+    ],
+    day: [
+      { title: "나가기 전", body: "홈·잠금 화면 위젯에서 갈 곳들의 지금 혼잡도를 봅니다." },
+      { title: "시간 고르기", body: "지도에서 12시간 예보 슬라이더를 밀어 한산한 시간을 찾습니다. 비가 오거나 공기가 나쁜 날은 실내 추천이 대신 뜹니다." },
+      { title: "한산해질 때까지", body: "붐비는 곳을 지켜 두면 한산해질 때 알림이 옵니다. 현장에서는 상황에 맞는 한국어 문장 카드를 꺼냅니다." },
     ],
     sections: [
       {
@@ -54,6 +60,11 @@ export const APP_DETAILS_KO: Record<string, AppDetailKo> = {
       { label: L.role, value: "설계와 구현, 혼자" },
       { label: L.platform, value: "iOS + watchOS, 네이티브" },
       { label: L.status, value: "실기기 설치, App Store 준비" },
+    ],
+    day: [
+      { title: "달리기 전", body: "러닝 계획과 클릭 소리 네 가지 중 하나를 고릅니다. 목표 케이던스는 달리는 동안 계획대로 바뀝니다." },
+      { title: "달리는 중", body: "듣던 음악 위에 한 걸음에 한 번 조용한 클릭. 워치에서는 박자가 진동이고, 실측 케이던스와 페이스는 한 번 넘기면 나옵니다." },
+      { title: "달린 뒤", body: "운동이 경로와 함께 건강 앱에 저장됩니다. 히스토리에 심박, 케이던스, 보폭, 구간 기록, 길 지도." },
     ],
     sections: [
       {
@@ -91,6 +102,11 @@ export const APP_DETAILS_KO: Record<string, AppDetailKo> = {
       { label: L.platform, value: "iPhone 앱 + 웹" },
       { label: L.status, value: "실기기 설치, 11월 말 여행에서 사용 예정" },
     ],
+    day: [
+      { title: "출국일", body: "인천 출국일 모드가 공항 승객 예고와 출국장 대기를 실시간으로 읽어 몇 시에 나설지 계산합니다." },
+      { title: "야타이의 저녁", body: "평소 영업시간과 강수 확률로 오늘 열 만한 포장마차를 찾습니다. 돌아갈 때는 가까운 역의 막차나 기사님께 보여 주는 카드." },
+      { title: "면세와 기록", body: "면세 영수증을 출국일 체크리스트와 함께 모읍니다. 기록 탭에는 간 곳과 쓴 돈이 하루 단위로 남습니다." },
+    ],
     sections: [
       {
         heading: H.problem,
@@ -125,6 +141,11 @@ export const APP_DETAILS_KO: Record<string, AppDetailKo> = {
       { label: L.role, value: "리서치, 설계, 구현" },
       { label: L.platform, value: "iPhone 앱 + 웹" },
       { label: L.status, value: "프로토타입, 실기기 설치" },
+    ],
+    day: [
+      { title: "진료일 아침", body: "홈 맨 위에 진료와 남은 시간, 준비 체크리스트. 약 탭은 아침 약을 채혈 뒤로 미루라고 알려 줍니다." },
+      { title: "병원에서", body: "진료일 모드가 접수, 채혈, 대기, 진료, 수납, 약국을 한 단계씩 안내합니다. 단계마다 대기 인원과 층 지도." },
+      { title: "결과 읽기", body: "검사 탭은 신장 기능을 맨 앞에 두고, 값마다 기준 범위 위에 놓아 보여 줍니다." },
     ],
     sections: [
       {
@@ -303,6 +324,11 @@ export const APP_DETAILS_KO: Record<string, AppDetailKo> = {
       { label: L.platform, value: "iOS, 애플 건강, 웹" },
       { label: L.status, value: "내 폰에서 사용 중, 웹 공개" },
     ],
+    day: [
+      { title: "등록", body: "대회와 날짜, 지금 달리는 가장 긴 거리, 훈련할 수 있는 요일을 고르면 출발선까지의 주차가 짜입니다." },
+      { title: "훈련하는 날", body: "오늘 화면에 플랜이 정한 세션이 뜹니다. 처음 두 주는 가볍게 달리기만, 인터벌과 템포는 3주차부터." },
+      { title: "대회 날", body: "대회 세션에 기록을 남기면 완주 시간과 페이스가 훈련한 거리와 함께 지난 대회로 옮겨 갑니다." },
+    ],
     sections: [
       {
         heading: H.problem,
@@ -343,6 +369,11 @@ export const APP_DETAILS_KO: Record<string, AppDetailKo> = {
       { label: L.platform, value: "iPhone 앱 + 웹" },
       { label: L.status, value: "iPhone 두 대에 설치, App Store 등록 문구 준비" },
     ],
+    day: [
+      { title: "탑승", body: "비행 시간을 2, 5, 10시간 이상 중에서 고르면 앱이 진도를 제안합니다." },
+      { title: "하늘 위, 신호 없음", body: "정거장을 하나씩 지납니다. 글자 몇 개를 배우고 음절 블록으로 끼우고 외래어 카드를 뒤집은 뒤 10문제 체크포인트." },
+      { title: "착륙", body: "출구, 지하철 노선부터 약국, 환전소까지 실제 서울 간판 13개를 읽고 입국 도장을 받습니다." },
+    ],
     sections: [
       {
         heading: H.problem,
@@ -381,6 +412,11 @@ export const APP_DETAILS_KO: Record<string, AppDetailKo> = {
       { label: L.platform, value: "iPhone 앱 + 웹" },
       { label: L.status, value: "iPhone 두 대에 설치, App Store 등록 문구 준비" },
     ],
+    day: [
+      { title: "여행 전", body: "공항선을 한 정거장씩 탑니다. 카드마다 한국어 소리, 외우는 한 줄, 녹음, 획순." },
+      { title: "손으로 쓰기", body: "따라 쓰고, 글자만 보고 쓰고, 빈칸에 씁니다. 획마다 순서, 방향, 위치, 모양을 봅니다." },
+      { title: "실전 읽기", body: "읽기 페이지에 메뉴, 간판, 호텔에서 만날 문구와 외래어가 나오고, 아직 안 배운 글자는 흐리게 표시됩니다." },
+    ],
     sections: [
       {
         heading: H.problem,
@@ -416,6 +452,11 @@ export const APP_DETAILS_KO: Record<string, AppDetailKo> = {
       { label: L.role, value: "조사, 설계, 구현" },
       { label: L.platform, value: "iPhone 앱 + 웹" },
       { label: L.status, value: "iPhone 두 대에 설치, App Store 등록 문구 준비" },
+    ],
+    day: [
+      { title: "멘치카나 다음", body: "장면 하나를 열어 후리가나, 예문, 녹음이 달린 큰 단어 카드를 읽습니다." },
+      { title: "스스로 확인", body: "뜻 고르기와 들은 것 고르기. 장면을 끝내면 그 단어로 만든 여행 문장이 나옵니다." },
+      { title: "다음 날들", body: "틀린 단어는 하루 뒤, 다시 3일과 7일 뒤에 돌아오고 그다음 졸업합니다." },
     ],
     sections: [
       {
@@ -453,6 +494,11 @@ export const APP_DETAILS_KO: Record<string, AppDetailKo> = {
       { label: L.role, value: "설계와 구현, 혼자" },
       { label: L.platform, value: "iPhone 앱" },
       { label: L.status, value: "iPhone 두 대에 설치, 스토어 출시 전" },
+    ],
+    day: [
+      { title: "비행기 모드", body: "게임 카드를 한 번 누르면 판이 열립니다. 광고, 로그인, 네트워크 없음." },
+      { title: "잠깐 비는 시간", body: "모두에게 같은 오늘의 판을 목숨 세 개로 풉니다." },
+      { title: "다시 열었을 때", body: "다섯 레벨마다 기록 탭 앨범에 수집품이 하나씩 쌓이고, 연속 기록 달력이 채워집니다." },
     ],
     sections: [
       {
