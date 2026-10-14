@@ -5,6 +5,7 @@ import { AA_TEXT, contrast, hexToOklch, luminance, oklchToHex } from "./color.ts
 import {
   ACCENT_STEPS,
   DEFAULT_DIALS,
+  PRESET_BASE,
   NEUTRAL_STEPS,
   PAIRINGS,
   PAIRING_META,
@@ -60,16 +61,29 @@ test("oklchToHex clips chroma into sRGB instead of clamping channels", () => {
   assert.ok(Math.abs(back.h - 150) < 4, `hue kept: ${back.h}`);
 });
 
-test("defaults need zero contrast fixes", () => {
-  const t = buildTokens(DEFAULT_DIALS);
+test("preset base needs zero contrast fixes", () => {
+  const t = buildTokens(PRESET_BASE);
   assert.deepEqual(t.fixes, []);
+});
+
+test("defaults are Ink: only the green link text is nudged, and everything passes AA", () => {
+  const ink = presetBySlug("ink");
+  if (!ink) throw new Error("ink preset missing");
+  assert.equal(PRESETS[0].slug, "ink");
+  assert.deepEqual(parseDials({ ...PRESET_BASE, ...ink.dials }), DEFAULT_DIALS);
+  const t = buildTokens(DEFAULT_DIALS);
+  assert.deepEqual(t.fixes.map((f) => f.token), ["accent.text"]);
+  const s = t.semantic;
+  assert.equal(s.surface.canvas, "#ffffff");
+  assert.equal(s.accent.default, "#0e0e0e");
+  for (const bg of [s.surface.canvas, s.surface.raised, s.accent.soft]) assert.ok(contrast(s.accent.text, bg) >= AA_TEXT);
 });
 
 const everyCombo = (): Dials[] => {
   const out: Dials[] = [];
   for (const theme of ["light", "dark"] as const)
     for (const neutral of ["cool", "neutral", "warm"] as const)
-      for (let hue = 0; hue < 360; hue += 15) out.push({ ...DEFAULT_DIALS, theme, neutral, hue });
+      for (let hue = 0; hue < 360; hue += 15) out.push({ ...PRESET_BASE, theme, neutral, hue });
   return out;
 };
 
@@ -88,7 +102,7 @@ test("every hue x theme x neutral passes AA after fixes", () => {
 });
 
 test("contrast fix: a teal accent in light gets nudged and reported", () => {
-  const t = buildTokens({ ...DEFAULT_DIALS, hue: 180 });
+  const t = buildTokens({ ...PRESET_BASE, hue: 180 });
   const fixed = t.fixes.find((f) => f.token === "accent.text");
   if (!fixed) throw new Error("accent.text was not fixed");
   assert.notEqual(fixed.from, fixed.to);
@@ -102,7 +116,7 @@ test("contrast fix: a teal accent in light gets nudged and reported", () => {
 test("contrast fix: a grey accent scale forces accent.default to move", () => {
   // 모든 단계가 중간 회색이면 흰 글자가 안 보이므로 accent.default 를 어둡게 밀어야 한다
   const greys = ACCENT_STEPS.map(() => "#8a8a8a");
-  const { semantic, fixes } = buildSemantic(DEFAULT_DIALS, greys, neutralScale("warm"));
+  const { semantic, fixes } = buildSemantic(PRESET_BASE, greys, neutralScale("warm"));
   assert.ok(fixes.some((f) => f.token === "accent.default"));
   assert.ok(contrast(semantic.accent.on, semantic.accent.default) >= AA_TEXT);
 });
@@ -112,7 +126,7 @@ test("contrast fix: muted text that is too light walks toward ink", () => {
   // 700 자리에 400 색을 넣어 일부러 실패시킨다
   const broken = [...neutral];
   broken[NEUTRAL_STEPS.indexOf(700)] = neutral[NEUTRAL_STEPS.indexOf(400)];
-  const { semantic, fixes } = buildSemantic(DEFAULT_DIALS, accentScale(264), broken);
+  const { semantic, fixes } = buildSemantic(PRESET_BASE, accentScale(264), broken);
   assert.ok(fixes.some((f) => f.token === "text.muted"));
   assert.ok(contrast(semantic.text.muted, semantic.surface.canvas) >= AA_TEXT);
 });
@@ -120,7 +134,7 @@ test("contrast fix: muted text that is too light walks toward ink", () => {
 test("presets build and pass AA", () => {
   assert.equal(PRESETS.length, 10);
   for (const p of PRESETS) {
-    const { semantic: s } = buildTokens({ ...DEFAULT_DIALS, ...p.dials });
+    const { semantic: s } = buildTokens({ ...PRESET_BASE, ...p.dials });
     assert.ok(contrast(s.accent.on, s.accent.default) >= AA_TEXT, p.name);
     assert.ok(contrast(s.text.default, s.surface.canvas) >= AA_TEXT, p.name);
     for (const sw of p.swatches) assert.match(sw.hex, HEX);
@@ -134,26 +148,26 @@ test("query round trip: only non-default keys, unknown values ignored", () => {
   assert.deepEqual(parseDials(new URLSearchParams(q)), d);
   const junk = parseDials(new URLSearchParams("hue=999&neutral=hot&radius=-5&pairing=comic&theme=dark"));
   assert.equal(junk.hue, 360);
-  assert.equal(junk.neutral, "warm");
+  assert.equal(junk.neutral, DEFAULT_DIALS.neutral);
   assert.equal(junk.radius, 0);
-  assert.equal(junk.pairing, "geist");
+  assert.equal(junk.pairing, DEFAULT_DIALS.pairing);
   assert.equal(junk.theme, "dark");
   assert.deepEqual(parseDials(null), DEFAULT_DIALS);
 });
 
 test("spacing comes from the scale and follows density", () => {
-  const compact = buildTokens({ ...DEFAULT_DIALS, density: "compact" }).vars;
-  const regular = buildTokens(DEFAULT_DIALS).vars;
-  const airy = buildTokens({ ...DEFAULT_DIALS, density: "airy" }).vars;
+  const compact = buildTokens({ ...PRESET_BASE, density: "compact" }).vars;
+  const regular = buildTokens(PRESET_BASE).vars;
+  const airy = buildTokens({ ...PRESET_BASE, density: "airy" }).vars;
   assert.equal(regular["--space-4"], "16px");
   assert.equal(compact["--space-4"], "13.6px");
   assert.equal(airy["--space-4"], "19.2px");
   assert.equal(regular["--radius-2"], "6px");
-  assert.equal(buildTokens({ ...DEFAULT_DIALS, motion: "off" }).vars["--duration-2"], "0ms");
+  assert.equal(buildTokens({ ...PRESET_BASE, motion: "off" }).vars["--duration-2"], "0ms");
 });
 
 test("type scale: 100 keeps the hand-set steps, other values spread or pull them, body stays", () => {
-  const at = (scale: number) => buildTokens({ ...DEFAULT_DIALS, scale }).vars;
+  const at = (scale: number) => buildTokens({ ...PRESET_BASE, scale }).vars;
   const src = at(100);
   assert.deepEqual([src["--text-base"], src["--text-lg"], src["--text-xl"], src["--text-2xl"], src["--text-3xl"]], ["17px", "20px", "24px", "32px", "44px"]);
   const tight = at(60);
@@ -167,11 +181,11 @@ test("type scale: 100 keeps the hand-set steps, other values spread or pull them
 });
 
 test("accent.secondary: source equals accent, presets keep brand hex or nudge it, on-color passes AA", () => {
-  const src = buildTokens(DEFAULT_DIALS).semantic.accent;
+  const src = buildTokens(PRESET_BASE).semantic.accent;
   assert.equal(src.secondary, src.default);
   assert.equal(src.secondaryOn, src.on);
   for (const p of PRESETS) {
-    const t = buildTokens({ ...DEFAULT_DIALS, ...p.dials });
+    const t = buildTokens({ ...PRESET_BASE, ...p.dials });
     const { secondary, secondaryOn } = t.semantic.accent;
     assert.ok(contrast(secondaryOn, secondary) >= AA_TEXT, `${p.name} secondary on-color`);
     const moved = t.fixes.some((f) => f.token === "accent.secondary");
@@ -179,18 +193,18 @@ test("accent.secondary: source equals accent, presets keep brand hex or nudge it
     else assert.ok(Math.abs(hexToOklch(secondary).h - hexToOklch(p.dials.secondary!).h) < 4, `${p.name} nudge keeps hue`);
   }
   // 중간 회색 브랜드 색은 흰/먹 모두 미달이라 밝기가 움직여야 한다
-  const grey = buildTokens({ ...DEFAULT_DIALS, secondary: "#7a7a7a" });
+  const grey = buildTokens({ ...PRESET_BASE, secondary: "#7a7a7a" });
   assert.ok(grey.fixes.some((f) => f.token === "accent.secondary"));
   assert.ok(contrast(grey.semantic.accent.secondaryOn, grey.semantic.accent.secondary) >= AA_TEXT);
   // 쿼리 왕복
   const q = dialsToQuery({ ...DEFAULT_DIALS, secondary: "#d9ff5b" });
   assert.equal(q, "sec=d9ff5b");
   assert.equal(parseDials(new URLSearchParams(q)).secondary, "#d9ff5b");
-  assert.equal(parseDials(new URLSearchParams("sec=zzz")).secondary, null);
+  assert.equal(parseDials(new URLSearchParams("sec=zzz"), PRESET_BASE).secondary, null);
 });
 
 test("token chain resolver follows var() links down to the primitive", () => {
-  const t = buildTokens(DEFAULT_DIALS);
+  const t = buildTokens(PRESET_BASE);
   const card = resolveToken("card.bg", t);
   assert.ok(card);
   assert.deepEqual(card.links.map((l) => l.name), ["card.bg", "surface.raised", "neutral.0"]);
@@ -201,7 +215,7 @@ test("token chain resolver follows var() links down to the primitive", () => {
   const pad = resolveToken("card.pad", t);
   assert.equal(pad?.text, "card.pad → space.5 = 24px");
   // 보정으로 밀린 포인트색은 가장 가까운 단계에 * 표시
-  const teal = buildTokens({ ...DEFAULT_DIALS, hue: 180 });
+  const teal = buildTokens({ ...PRESET_BASE, hue: 180 });
   const txt = resolveToken("accent.text", teal);
   assert.ok(txt && /accent\.\d+\*/.test(txt.links[txt.links.length - 1].name), txt?.text);
   assert.equal(resolveToken("nope.token", t), null);
@@ -216,16 +230,16 @@ test("pairings: every stack ends in the Pretendard fallback, funnel carries Funn
   assert.match(PAIRING_META.funnel.body, /^'Funnel Sans Variable'/);
   assert.match(PAIRING_META.funnel.mono, /^'Geist Mono Variable'/);
   assert.equal(parseDials(new URLSearchParams("pairing=funnel")).pairing, "funnel");
-  assert.match(buildTokens(DEFAULT_DIALS).vars["--font-pixel"], /^'Geist Pixel'/);
+  assert.match(buildTokens(PRESET_BASE).vars["--font-pixel"], /^'Geist Pixel'/);
 });
 
 test("accent.primary: preset brand hex stays as accent.default with a readable on-color", () => {
-  const lime = buildTokens({ ...DEFAULT_DIALS, primary: "#75fc96" });
+  const lime = buildTokens({ ...PRESET_BASE, primary: "#75fc96" });
   assert.equal(lime.semantic.accent.default, "#75fc96");
   assert.ok(contrast(lime.semantic.accent.on, lime.semantic.accent.default) >= AA_TEXT);
-  const q = dialsToQuery({ ...DEFAULT_DIALS, primary: "#75fc96" });
+  const q = dialsToQuery({ ...PRESET_BASE, primary: "#75fc96" });
   assert.equal(parseDials(new URLSearchParams(q)).primary, "#75fc96");
-  assert.equal(parseDials(new URLSearchParams("pri=zzz")).primary, null);
+  assert.equal(parseDials(new URLSearchParams("pri=zzz"), PRESET_BASE).primary, null);
 });
 
 test("mono pairing: headings and body both mono, annotations in JetBrains Mono, leading opens up", () => {
@@ -235,12 +249,12 @@ test("mono pairing: headings and body both mono, annotations in JetBrains Mono, 
   assert.match(m.mono, /^'JetBrains Mono Variable'/);
   for (const stack of [m.heading, m.body]) assert.doesNotMatch(stack, /serif'|Serif/, "no serif in an all-mono pairing");
   assert.equal(parseDials(new URLSearchParams("pairing=mono")).pairing, "mono");
-  const v = buildTokens({ ...DEFAULT_DIALS, pairing: "mono" }).vars;
+  const v = buildTokens({ ...PRESET_BASE, pairing: "mono" }).vars;
   assert.equal(v["--font-heading"], m.heading);
   assert.equal(v["--heading-leading"], String(m.leading));
   assert.ok(m.leading > PAIRING_META.geist.leading);
   // 다른 조합은 손으로 맞춘 줄간 그대로
-  assert.equal(buildTokens(DEFAULT_DIALS).vars["--heading-leading"], "1.05");
+  assert.equal(buildTokens(PRESET_BASE).vars["--heading-leading"], "1.05");
 });
 
 test("ink preset: white paper, ink buttons, radius 0, mono, AA in both themes", () => {
@@ -250,7 +264,7 @@ test("ink preset: white paper, ink buttons, radius 0, mono, AA in both themes", 
   assert.equal(p.dials.radius, 0);
   assert.equal(p.dials.pairing, "mono");
   for (const theme of ["light", "dark"] as const) {
-    const t = buildTokens({ ...DEFAULT_DIALS, ...p.dials, theme });
+    const t = buildTokens({ ...PRESET_BASE, ...p.dials, theme });
     const s = t.semantic;
     if (theme === "light") {
       // 견본의 아이보리·먹은 실제 canvas·글자 색과 같아야 한다

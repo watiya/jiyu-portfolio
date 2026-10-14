@@ -2,7 +2,7 @@
 // 변경 기록(되돌리기·다시하기)과 검사 모드에서 짚은 메모도 여기서 들고 있다.
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { TokenContext, type ToastItem, type TokenCtx } from "./context.ts";
-import { DEFAULT_DIALS, buildTokens, dialsToQuery, parseDials, presetBySlug, sameDials, type Dials } from "./engine.ts";
+import { DEFAULT_DIALS, PRESET_BASE, buildTokens, dialsToQuery, parseDials, presetBySlug, sameDials, type Dials } from "./engine.ts";
 import { record, redo as redoStep, seal, startHistory, undo as undoStep } from "./history.ts";
 import { parseNotes, toAgentBundle, type Note } from "./bundle.ts";
 import { themeLink } from "./export.ts";
@@ -12,14 +12,14 @@ import { DEFAULT_LANG } from "../i18n/lang.ts";
 const STORAGE_KEY = "v8.tokens";
 // 메모는 세션 동안만. 탭을 닫으면 사라진다
 const NOTES_KEY = "v8.notes";
-const QUERY_KEYS = ["hue", "sec", "neutral", "pairing", "radius", "scale", "density", "motion", "theme"];
+const QUERY_KEYS = ["hue", "pri", "sec", "neutral", "paper", "pairing", "radius", "scale", "density", "motion", "theme"];
 
 function readInitial(): Dials {
   if (typeof window === "undefined") return DEFAULT_DIALS;
   const q = new URLSearchParams(window.location.search);
   // ?preset=<slug> 는 그 앱의 토큰으로 시작한다
   const preset = q.get("preset") ? presetBySlug(q.get("preset") as string) : undefined;
-  if (preset) return { ...DEFAULT_DIALS, ...preset.dials };
+  if (preset) return { ...PRESET_BASE, ...preset.dials };
   if (QUERY_KEYS.some((k) => q.has(k))) return parseDials(q);
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
@@ -209,7 +209,7 @@ export function TokenProvider({ children }: { children: ReactNode }) {
       const p = presetBySlug(slug);
       if (!p) return;
       setDials((prev) => {
-        const next = parseDials({ ...DEFAULT_DIALS, ...p.dials });
+        const next = parseDials({ ...PRESET_BASE, ...p.dials });
         if (withUndo) {
           const before = prev;
           toast(T.wearing(p.name), { label: T.undo, onClick: () => setDials(before) });

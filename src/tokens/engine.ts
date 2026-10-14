@@ -23,8 +23,9 @@ export type Dials = {
   theme: Theme;
 };
 
-// 기본값: 종이 위에 파랑 한 점. 보정 0 건으로 통과하는 조합이어야 한다 (테스트가 지킨다).
-export const DEFAULT_DIALS: Dials = {
+// 프리셋 밑바탕: 앱 프리셋은 이 위에 자기 값만 덮는다. 10-14 까지의 기본값(종이 위에 파랑 한 점)이고,
+// 브랜드 색 없이 램프만으로 보정 0 건이라 엔진 테스트의 기준점으로도 쓴다.
+export const PRESET_BASE: Dials = {
   hue: 264,
   primary: null,
   secondary: null,
@@ -32,6 +33,22 @@ export const DEFAULT_DIALS: Dials = {
   paper: "tint",
   pairing: "geist",
   radius: 6,
+  scale: 100,
+  density: "regular",
+  motion: "calm",
+  theme: "light",
+};
+
+// 기본값: Ink 프리셋과 같다(2026-10-14). 흰 종이 + 먹 버튼 + 모노 글자, 색은 초록 하나만 작게.
+// 초록은 어떤 색조도 링크 글자(accent.text)가 살짝 밀려야 AA 라 보정 1 건이 정상이다 (테스트가 지킨다).
+export const DEFAULT_DIALS: Dials = {
+  hue: 157,
+  primary: "#0e0e0e",
+  secondary: "#1f7a4d",
+  neutral: "neutral",
+  paper: "white",
+  pairing: "mono",
+  radius: 0,
   scale: 100,
   density: "regular",
   motion: "calm",
@@ -247,7 +264,8 @@ export function buildSemantic(dials: Dials, accent: string[], neutral: string[])
   const accentStep = idx(ACCENT_STEPS, dark ? 400 : 600);
   const accentDir: 1 | -1 = dark ? 1 : -1; // 밝은 테마는 어둡게, 어두운 테마는 밝게
   let accentDefault = a(ACCENT_STEPS[accentStep]);
-  if (contrast(on, accentDefault) < AA_TEXT) {
+  // 브랜드 색이 있으면 아래에서 덮어쓰므로 램프 쪽 보정은 하지도 알리지도 않는다
+  if (!dials.primary && contrast(on, accentDefault) < AA_TEXT) {
     const fixed = nudgeForContrast(dials.hue, ACCENT_L[accentStep], ACCENT_C[accentStep], accentDir, [on]);
     fixes.push({ token: "accent.default", from: accentDefault, to: fixed, reason: "AA for text on accent" });
     accentDefault = fixed;
@@ -451,6 +469,19 @@ export type Preset = {
 export const hueOf = (hex: string) => Math.round(hexToOklch(hex).h);
 
 const ALL_PRESETS: Preset[] = [
+  // 앱이 아닌 사이트 프리셋. 순백 바탕 + 먹 + 모노 글자 + 각진 모서리. 버튼도 먹이고, 색은 초록 하나만 작게(번호·디더 비탈).
+  // 회색은 색조 없는 neutral. 먹은 그 중립 1000 단계(text.default) 그대로라 견본·버튼도 그 값을 적는다
+  {
+    slug: "ink",
+    name: "Ink",
+    swatches: [
+      { hex: "#ffffff", label: "paper" },
+      { hex: "#0e0e0e", label: "ink" },
+      { hex: "#1f7a4d", label: "signal" },
+    ],
+    dials: { hue: hueOf("#1f7a4d"), primary: "#0e0e0e", secondary: "#1f7a4d", neutral: "neutral", paper: "white", radius: 0, theme: "light", pairing: "mono" },
+    system: true,
+  },
   {
     slug: "seoul-boom",
     name: "Seoul Boom",
@@ -585,19 +616,6 @@ const ALL_PRESETS: Preset[] = [
       { hex: "#7557ff", label: "violet" },
     ],
     dials: { hue: hueOf("#7557ff"), primary: "#d9ff5b", secondary: "#7557ff", neutral: "cool", radius: 18, theme: "dark", pairing: "geist" },
-  },
-  // 앱이 아닌 사이트 프리셋. 순백 바탕 + 먹 + 모노 글자 + 각진 모서리. 버튼도 먹이고, 색은 초록 하나만 작게(번호·디더 비탈).
-  // 회색은 색조 없는 neutral. 먹은 그 중립 1000 단계(text.default) 그대로라 견본·버튼도 그 값을 적는다
-  {
-    slug: "ink",
-    name: "Ink",
-    swatches: [
-      { hex: "#ffffff", label: "paper" },
-      { hex: "#0e0e0e", label: "ink" },
-      { hex: "#1f7a4d", label: "signal" },
-    ],
-    dials: { hue: hueOf("#1f7a4d"), primary: "#0e0e0e", secondary: "#1f7a4d", neutral: "neutral", paper: "white", radius: 0, theme: "light", pairing: "mono" },
-    system: true,
   },
 ];
 
