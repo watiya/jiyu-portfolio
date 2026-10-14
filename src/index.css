@@ -1588,3 +1588,11 @@ html[data-motion="off"] .tcard__inner { transition: none; }
 .gres__saju summary { cursor: pointer; color: var(--text-muted); }
 .gres__saju summary:hover { color: var(--text-default); }
 .gres__saju .sres { margin: var(--space-4) 0; }
+
+/* 01 놀이터: 변경 기록 */
+.take__history { display: flex; align-items: center; gap: var(--space-1); padding-top: var(--space-2); border-top: 1px solid var(--line-default); color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.08em; font-size: var(--text-xs); }
+.take__history .iconbtn:disabled { opacity: 0.35; cursor: not-allowed; background: none; }
+.take__history span { margin-left: var(--space-2); }
+@media (pointer: coarse) {
+  .take__history .iconbtn { width: 44px; height: 44px; }
+}

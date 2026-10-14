@@ -32,7 +32,8 @@ export function Front({ go }: { go: (href: string) => void }) {
 function Playground() {
   const { t } = useLang();
   const F = t.front;
-  const { tokens, dials, isDefault, reset, copyLink, toast } = useTokens();
+  const { tokens, dials, isDefault, reset, copyLink, toast, history, undo, redo } = useTokens();
+  const H = F.history;
   const preset = activePresetOf(dials);
   const source = isDefault ? t.panel.source : preset ? t.panel.preset(preset.name) : t.panel.custom;
   return (
@@ -80,6 +81,19 @@ function Playground() {
               <button type="button" className="btn btn--ghost btn--sm" onClick={reset} disabled={isDefault}>
                 {F.take.reset}
               </button>
+            </div>
+            <div className="take__history mono" role="group" aria-label={H.label}>
+              <button type="button" className="iconbtn" onClick={undo} disabled={history.back === 0} aria-label={H.undo} title={`${H.undo} · ⌘Z`}>
+                <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M5.5 3L2.5 6l3 3M3 6h6.5a3.5 3.5 0 010 7H7" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              <button type="button" className="iconbtn" onClick={redo} disabled={history.fwd === 0} aria-label={H.redo} title={`${H.redo} · ⇧⌘Z`}>
+                <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M10.5 3l3 3-3 3M13 6H6.5a3.5 3.5 0 000 7H9" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              <span aria-live="polite">{H.steps(history.back)}</span>
             </div>
           </div>
         </div>

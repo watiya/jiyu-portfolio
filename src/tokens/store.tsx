@@ -1,7 +1,9 @@
 // 다이얼 상태: URL 쿼리 > localStorage > 기본값. 변경 시 :root 에 CSS 변수를 심고 보정 건수를 알린다.
+// 변경 기록(되돌리기·다시하기)도 여기서 들고 있다.
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { TokenContext, type ToastItem, type TokenCtx } from "./context.ts";
 import { DEFAULT_DIALS, buildTokens, dialsToQuery, parseDials, presetBySlug, sameDials, type Dials } from "./engine.ts";
+import { record, redo as redoStep, seal, startHistory, undo as undoStep } from "./history.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { DEFAULT_LANG } from "../i18n/lang.ts";
 
@@ -32,6 +34,12 @@ function persist(d: Dials) {
   }
 }
 
+// 입력칸에서는 ⌘Z 를 그 칸에 맡긴다
+const typing = (el: EventTarget | null) => {
+  const t = el as HTMLElement | null;
+  return !!t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || t.isContentEditable);
+};
+
 const mqReduced = () => (typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)") : null);
 
 export function TokenProvider({ children }: { children: ReactNode }) {
@@ -52,6 +60,9 @@ export function TokenProvider({ children }: { children: ReactNode }) {
   const tokens = useMemo(() => buildTokens(reducedMotion ? { ...dials, motion: "off" } : dials), [dials, reducedMotion]);
   const toastId = useRef(0);
   const firstRun = useRef(true);
+  // 기록 본체는 ref, 화면에는 단계 수만 상태로 내보낸다
+  const hist = useRef(startHistory(dials));
+  const [steps, setSteps] = useState({ back: 0, fwd: 0 });
 
   useEffect(() => {
     const mq = mqReduced();
@@ -93,6 +104,44 @@ export function TokenProvider({ children }: { children: ReactNode }) {
       toast(TRef.current.fixed(n, names));
     }
   }, [dials, tokens, toast]);
+
+  // 다이얼이 바뀔 때마다 기록. 되돌리기로 온 값은 present 와 같아서 다시 쌓이지 않는다
+  useEffect(() => {
+    const next = record(hist.current, dials, Date.now());
+    if (next === hist.current) return;
+    hist.current = next;
+    setSteps({ back: next.past.length, fwd: next.future.length });
+  }, [dials]);
+
+  const step = useCallback((dir: "back" | "fwd") => {
+    const next = dir === "back" ? undoStep(hist.current) : redoStep(hist.current);
+    if (next === hist.current) return;
+    hist.current = next;
+    setSteps({ back: next.past.length, fwd: next.future.length });
+    setDials(next.present);
+  }, []);
+  const undo = useCallback(() => step("back"), [step]);
+  const redo = useCallback(() => step("fwd"), [step]);
+
+  // 누르고 뗄 때 묶음을 닫는다: 드래그 한 번, 키 한 번이 한 단계. ⌘Z · ⇧⌘Z 는 사이트 어디서나
+  useEffect(() => {
+    const close = () => (hist.current = seal(hist.current));
+    const onKey = (e: KeyboardEvent) => {
+      if (!(e.metaKey || e.ctrlKey) || e.altKey || (e.key !== "z" && e.key !== "Z") || typing(e.target)) return;
+      e.preventDefault();
+      step(e.shiftKey ? "fwd" : "back");
+    };
+    window.addEventListener("pointerdown", close, true);
+    window.addEventListener("pointerup", close);
+    window.addEventListener("keyup", close);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("pointerdown", close, true);
+      window.removeEventListener("pointerup", close);
+      window.removeEventListener("keyup", close);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [step]);
 
   useEffect(() => {
     document.documentElement.dataset.inspect = inspect ? "on" : "off";
@@ -170,8 +219,11 @@ export function TokenProvider({ children }: { children: ReactNode }) {
       toasts,
       toast,
       dismissToast,
+      history: steps,
+      undo,
+      redo,
     }),
-    [dials, tokens, reducedMotion, set, reset, applyPreset, copyLink, panelOpen, inspect, paletteOpen, toasts, toast, dismissToast],
+    [dials, tokens, reducedMotion, set, reset, applyPreset, copyLink, panelOpen, inspect, paletteOpen, toasts, toast, dismissToast, steps, undo, redo],
   );
 
   return <TokenContext.Provider value={value}>{children}</TokenContext.Provider>;

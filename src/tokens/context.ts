@@ -22,6 +22,10 @@ export type TokenCtx = {
   toasts: ToastItem[];
   toast: (text: string, action?: ToastItem["action"]) => void;
   dismissToast: (id: number) => void;
+  // 변경 기록: 되돌릴 수 있는 단계(back)와 다시 할 수 있는 단계(fwd)
+  history: { back: number; fwd: number };
+  undo: () => void;
+  redo: () => void;
 };
 
 export const TokenContext = createContext<TokenCtx | null>(null);

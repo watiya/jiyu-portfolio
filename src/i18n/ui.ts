@@ -38,6 +38,12 @@ const en = {
       reset: "Reset",
       source: "Wearing",
     },
+    history: {
+      label: "History",
+      undo: "Undo",
+      redo: "Redo",
+      steps: (n: number) => `${n} step${n === 1 ? "" : "s"} back`,
+    },
     fun: {
       kicker: "For fun",
       aside: "4 tools · inputs are never stored",
@@ -521,6 +527,12 @@ const ko: UI = {
       link: "이 설정 링크 복사",
       reset: "처음으로",
       source: "입은 것",
+    },
+    history: {
+      label: "기록",
+      undo: "되돌리기",
+      redo: "다시하기",
+      steps: (n) => `${n}단계 되돌리기 가능`,
     },
     fun: {
       kicker: "재미요소",
