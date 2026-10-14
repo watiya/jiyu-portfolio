@@ -11,6 +11,7 @@ import { internalClick } from "../router.ts";
 import { useReveal } from "../hooks.ts";
 import { Corners, SectionLabel } from "../components/Annot.tsx";
 import { DialBoard } from "../components/Dials.tsx";
+import { Dither } from "../components/Dither.tsx";
 import { VariantBoard } from "../components/Variants.tsx";
 import { NotesBox } from "../components/Notes.tsx";
 import { PhoneFrame } from "../components/PhoneFrame.tsx";
@@ -41,11 +42,14 @@ function Playground() {
   return (
     <section id="play" className="play container" aria-labelledby="play-title">
       <SectionLabel index="01" title={F.kicker} aside={<>{F.aside}</>} />
-      <div className="play__head">
-        <h1 id="play-title" className="h1">
-          {F.h1}
-        </h1>
-        <p className="lede">{F.lede}</p>
+      <div className="play__top">
+        <div className="play__head">
+          <h1 id="play-title" className="h1">
+            {F.h1}
+          </h1>
+          <p className="lede">{F.lede}</p>
+        </div>
+        <Dither />
       </div>
 
       <div className="play__grid">

@@ -1347,8 +1347,26 @@ body:has(.canvas) .toasts { top: var(--space-3); }
 /* ---------- 첫 화면: 토큰 놀이터 (2026-10-14) ----------
    주인공은 다이얼 보드. 왼쪽 견본(폰 한 대 + 부품 한 장)은 :root 의 살아 있는 토큰을 읽어 다이얼을 돌리면 그 자리에서 바뀐다 */
 .play { padding-top: var(--space-7); }
-.play__head { margin-bottom: var(--space-7); max-width: 64ch; }
+.play__top { display: grid; gap: var(--space-5); grid-template-columns: minmax(0, 1fr); margin-bottom: var(--space-7); }
+.play__head { max-width: 64ch; }
 .play__head .h1 { font-size: clamp(32px, 5vw, var(--text-3xl)); }
+@media (min-width: 1100px) {
+  .play__top { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-7); align-items: stretch; }
+}
+
+/* 토큰 디더 필드. 점 색·간격·모양·속도는 Dither.tsx 가 토큰에서 읽고, 여기선 틀만 둔다 */
+.dither { display: flex; flex-direction: column; gap: var(--space-2); margin: 0; min-width: 0; }
+.dither__head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-1) var(--space-3); font-size: var(--text-xs); color: var(--text-subtle); text-transform: lowercase; }
+.dither__idx, .dither__val { color: var(--annot-color); }
+.dither__stage { position: relative; flex: 1; min-height: calc(var(--space-9) * 2); border: 1px solid var(--line-default); border-radius: var(--radius-3); background: var(--surface-canvas); transition: border-radius var(--duration-2) var(--ease-default); }
+@media (min-width: 1100px) { .dither__stage { min-height: calc(var(--space-10) * 2); } }
+.dither__canvas { position: absolute; inset: var(--space-2); width: calc(100% - var(--space-2) * 2); height: calc(100% - var(--space-2) * 2); display: block; }
+.dither__legend { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); font-size: var(--text-xs); color: var(--text-subtle); }
+.dither__key { display: inline-flex; align-items: center; gap: var(--space-1); min-width: 0; }
+.dither__key i { width: var(--space-2); height: var(--space-2); flex: none; border-radius: 0; }
+.dither__key i[data-round] { border-radius: var(--radius-full); }
+.dither__key b { font-weight: 400; color: var(--text-muted); }
+.dither__still { margin-left: auto; }
 .play__grid { display: grid; gap: var(--space-6); grid-template-columns: minmax(0, 1fr); }
 .play__side { display: grid; gap: var(--space-5); align-content: start; }
 .play__board { min-width: 0; }
