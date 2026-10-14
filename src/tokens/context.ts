@@ -1,6 +1,7 @@
 // 토큰 컨텍스트의 모양. 훅과 Provider 는 각자 파일에 둔다 (fast refresh 때문에 분리).
 import { createContext } from "react";
 import type { Dials, Tokens } from "./engine.ts";
+import type { Note } from "./bundle.ts";
 
 export type ToastItem = { id: number; text: string; action?: { label: string; onClick: () => void } };
 
@@ -26,6 +27,12 @@ export type TokenCtx = {
   history: { back: number; fwd: number };
   undo: () => void;
   redo: () => void;
+  // 검사 모드에서 짚은 메모 (세션 동안)
+  notes: Note[];
+  addNote: (note: Omit<Note, "id">) => void;
+  removeNote: (id: number) => void;
+  clearNotes: () => void;
+  copyBundle: () => Promise<boolean>;
 };
 
 export const TokenContext = createContext<TokenCtx | null>(null);

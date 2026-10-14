@@ -790,14 +790,37 @@ html[data-motion="off"] .sh:hover .sh__phones[data-count="1"] .phone, html[data-
 html[data-inspect="on"] [data-token] { outline: 1px dashed color-mix(in oklab, var(--accent-default) 35%, transparent); outline-offset: -1px; }
 html[data-inspect="on"] [data-token]:hover { outline-color: var(--accent-default); }
 .inspector { position: fixed; inset: 0; z-index: 50; pointer-events: none; }
-.inspector__status { position: fixed; left: 50%; bottom: var(--space-5); transform: translateX(-50%); display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-3); background: var(--surface-inverse); color: var(--text-inverse); border-radius: var(--radius-full); white-space: nowrap; box-shadow: 0 8px 24px -12px rgb(0 0 0 / 0.35); }
-.inspector__status kbd { padding: 1px 5px; border-radius: var(--radius-1); background: color-mix(in oklab, var(--text-inverse) 14%, transparent); font: inherit; }
-.inspector__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-secondary); animation: pulse 2.4s var(--ease-default) infinite; }
-html[data-motion="off"] .inspector__dot { animation: none; }
+/* 상태 바: 그림자 없이 1px 선, 고정폭 대문자 */
+.inspector__status { position: fixed; z-index: 3; left: 50%; bottom: var(--space-4); transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 8px 0 12px; background: var(--surface-raised); color: var(--text-default); border: 1px solid var(--line-strong); border-radius: var(--radius-1); white-space: nowrap; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.08em; }
+.inspector__status kbd { padding: 1px 5px; border: 1px solid var(--line-strong); border-radius: 2px; font: inherit; }
+.inspector__sep { color: var(--text-subtle); }
+.inspector__notes { color: var(--accent-text); }
+.inspector__done { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; padding-left: 8px; border-left: 1px solid var(--line-default); }
+.inspector__dot { width: 6px; height: 6px; background: var(--accent-default); }
+/* 8px 가로 격자. 열 격자(.gridlines)와 겹쳐 모눈이 된다 */
+.inspector__rows { position: fixed; inset: 0; background-image: linear-gradient(to bottom, color-mix(in oklab, var(--accent-default) 7%, transparent) 1px, transparent 1px); background-size: 100% 8px; }
+.crosshair { position: fixed; display: block; }
+.crosshair--x { left: 0; right: 0; height: 0; border-top: 1px dashed color-mix(in oklab, var(--accent-default) 55%, transparent); }
+.crosshair--y { top: 0; bottom: 0; width: 0; border-left: 1px dashed color-mix(in oklab, var(--accent-default) 55%, transparent); }
+.ruler { position: fixed; z-index: 2; overflow: hidden; background-color: var(--surface-raised); color: var(--text-subtle); font-size: 9px; line-height: 1; }
+.ruler--x { top: 0; left: 0; right: 0; height: 18px; border-bottom: 1px solid var(--line-strong);
+  background-image: linear-gradient(to right, var(--line-strong) 1px, transparent 1px), linear-gradient(to right, var(--text-subtle) 1px, transparent 1px);
+  background-size: 8px 4px, 80px 100%; background-position: 0 100%, 0 0; background-repeat: repeat-x; }
+.ruler--y { top: 0; left: 0; bottom: 0; width: 18px; border-right: 1px solid var(--line-strong);
+  background-image: linear-gradient(to bottom, var(--line-strong) 1px, transparent 1px), linear-gradient(to bottom, var(--text-subtle) 1px, transparent 1px);
+  background-size: 4px 8px, 100% 80px; background-position: 100% 0, 0 0; background-repeat: repeat-y; }
+.ruler__n { position: absolute; }
+.ruler--x .ruler__n { top: 3px; padding-left: 3px; }
+.ruler--y .ruler__n { left: 3px; padding-top: 3px; writing-mode: vertical-rl; transform: rotate(180deg); }
+.ruler__mark { position: absolute; background: var(--accent-default); color: var(--accent-on); font-weight: 600; z-index: 1; }
+.ruler--x .ruler__mark { top: 0; height: 17px; padding: 0 4px; line-height: 17px; transform: translateX(-50%); }
+.ruler--y .ruler__mark { left: 0; width: 17px; padding: 4px 0; text-align: center; line-height: 17px; writing-mode: vertical-rl; transform: translateY(-50%) rotate(180deg); }
+.ruler__corner { position: fixed; z-index: 2; top: 0; left: 0; width: 18px; height: 18px; background: var(--accent-default); }
 .redline { position: fixed; box-shadow: 0 0 0 1px var(--accent-default); }
 .redline__pad { position: absolute; display: grid; place-items: center; background: color-mix(in oklab, var(--accent-default) 14%, transparent); }
 .redline__pad span { font-family: var(--font-mono); font-size: 10px; line-height: 1; padding: 1px 3px; border-radius: 2px; background: var(--accent-default); color: var(--accent-on); }
-.redline__size { position: absolute; right: 0; top: 100%; margin-top: 2px; padding: 1px 4px; border-radius: 2px; background: var(--accent-default); color: var(--accent-on); font-size: 10px; }
+.redline__size { position: absolute; left: -1px; bottom: 100%; padding: 2px 5px; background: var(--accent-default); color: var(--accent-on); font-size: 10px; white-space: nowrap; }
+.redline__size[data-below] { bottom: auto; top: 100%; }
 .chain { position: fixed; max-width: 420px; padding: var(--space-2) var(--space-3); background: var(--surface-inverse); color: var(--text-inverse); border-radius: var(--radius-2); box-shadow: 0 8px 24px -12px rgb(0 0 0 / 0.35); display: flex; flex-direction: column; gap: 3px; }
 .chain__row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
 .chain__link { display: inline-flex; align-items: center; gap: 4px; }
@@ -1630,7 +1653,31 @@ html[data-motion="off"] .tcard__inner { transition: none; }
 .vcard__name:hover { border-color: var(--line-default); }
 .vcard__name:focus-visible { outline: none; border-color: var(--accent-default); background: var(--surface-canvas); }
 .vcard__del { width: 28px; height: 28px; }
+
+/* 01 놀이터: 짚은 메모와 에이전트용 묶음 */
+.notes { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--line-default); border-radius: var(--card-radius); }
+.notes__empty { margin: 0; color: var(--text-muted); font-size: var(--text-sm); }
+.notes__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid var(--line-default); }
+.notechip { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line-default); }
+.notechip__text { display: flex; flex-direction: column; min-width: 0; }
+.notechip__label { font-size: var(--text-xs); color: var(--text-subtle); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.notechip__body { font-size: var(--text-sm); color: var(--text-default); overflow-wrap: anywhere; }
+.notechip__del { width: 28px; height: 28px; }
+/* 메모 핀: 강조색 네모 번호. 부품 왼쪽 위 모서리에 꽂는다 */
+.pin { position: fixed; display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 4px; border-radius: 2px; background: var(--accent-default); color: var(--accent-on); font-size: 11px; font-weight: 600; transform: translate(-50%, -50%); box-shadow: 0 0 0 1px var(--surface-canvas); }
+.pin--inline { position: static; transform: none; box-shadow: none; flex: none; }
+.notedraft { position: fixed; width: min(320px, calc(100vw - 16px)); display: grid; gap: 8px; padding: 16px 12px 12px; pointer-events: auto; background: var(--panel-bg); border: 1px solid var(--line-strong); border-radius: var(--radius-1); animation: toast-in var(--duration-2) var(--ease-emphasis) both; }
+.notedraft__label { font-size: var(--text-xs); color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.08em; }
+.notedraft__tokens { font-size: var(--text-xs); color: var(--accent-text); overflow-wrap: anywhere; }
+.notedraft__input { height: auto; min-height: 60px; padding: var(--space-2) var(--space-3); resize: vertical; line-height: 1.4; }
+.notedraft__row { display: flex; gap: var(--space-2); }
+html[data-motion="off"] .notedraft { animation: none; }
 @media (pointer: coarse) {
   .vcard__name { height: 44px; }
-  .take__history .iconbtn, .vcard__del { width: 44px; height: 44px; }
+  .vcard__del, .notechip__del, .take__history .iconbtn { width: 44px; height: 44px; }
+}
+/* 좁은 폭: 검사 안내가 화면 밖으로 나가지 않게 줄바꿈 */
+@media (max-width: 639px) {
+  .inspector__status { width: calc(100vw - 32px); height: auto; min-height: 32px; flex-wrap: wrap; justify-content: center; padding: 6px 8px; white-space: normal; }
+  .inspector__hint, .inspector__done { display: none; }
 }

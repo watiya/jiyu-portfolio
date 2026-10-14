@@ -12,6 +12,7 @@ import { useReveal } from "../hooks.ts";
 import { Corners, SectionLabel } from "../components/Annot.tsx";
 import { DialBoard } from "../components/Dials.tsx";
 import { VariantBoard } from "../components/Variants.tsx";
+import { NotesBox } from "../components/Notes.tsx";
 import { PhoneFrame } from "../components/PhoneFrame.tsx";
 import { Radar, Ring } from "../tools/Charts.tsx";
 import { ToolCards } from "./tools/Shell.tsx";
@@ -97,6 +98,7 @@ function Playground() {
               <span aria-live="polite">{H.steps(history.back)}</span>
             </div>
           </div>
+          <NotesBox />
         </div>
         <div className="play__board">
           <DialBoard />

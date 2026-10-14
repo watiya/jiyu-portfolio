@@ -1,13 +1,17 @@
 // 다이얼 상태: URL 쿼리 > localStorage > 기본값. 변경 시 :root 에 CSS 변수를 심고 보정 건수를 알린다.
-// 변경 기록(되돌리기·다시하기)도 여기서 들고 있다.
+// 변경 기록(되돌리기·다시하기)과 검사 모드에서 짚은 메모도 여기서 들고 있다.
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { TokenContext, type ToastItem, type TokenCtx } from "./context.ts";
 import { DEFAULT_DIALS, buildTokens, dialsToQuery, parseDials, presetBySlug, sameDials, type Dials } from "./engine.ts";
 import { record, redo as redoStep, seal, startHistory, undo as undoStep } from "./history.ts";
+import { parseNotes, toAgentBundle, type Note } from "./bundle.ts";
+import { themeLink } from "./export.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { DEFAULT_LANG } from "../i18n/lang.ts";
 
 const STORAGE_KEY = "v8.tokens";
+// 메모는 세션 동안만. 탭을 닫으면 사라진다
+const NOTES_KEY = "v8.notes";
 const QUERY_KEYS = ["hue", "sec", "neutral", "pairing", "radius", "scale", "density", "motion", "theme"];
 
 function readInitial(): Dials {
@@ -31,6 +35,14 @@ function persist(d: Dials) {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(d));
   } catch {
     // 무시
+  }
+}
+
+function readNotes(): Note[] {
+  try {
+    return parseNotes(JSON.parse(window.sessionStorage.getItem(NOTES_KEY) ?? "[]"));
+  } catch {
+    return [];
   }
 }
 
@@ -63,6 +75,7 @@ export function TokenProvider({ children }: { children: ReactNode }) {
   // 기록 본체는 ref, 화면에는 단계 수만 상태로 내보낸다
   const hist = useRef(startHistory(dials));
   const [steps, setSteps] = useState({ back: 0, fwd: 0 });
+  const [notes, setNotes] = useState<Note[]>(readNotes);
 
   useEffect(() => {
     const mq = mqReduced();
@@ -144,6 +157,29 @@ export function TokenProvider({ children }: { children: ReactNode }) {
   }, [step]);
 
   useEffect(() => {
+    try {
+      window.sessionStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+    } catch {
+      // 무시
+    }
+  }, [notes]);
+  const addNote = useCallback((n: Omit<Note, "id">) => setNotes((list) => [...list, { ...n, id: Math.max(0, ...list.map((x) => x.id)) + 1 }]), []);
+  const removeNote = useCallback((id: number) => setNotes((list) => list.filter((x) => x.id !== id)), []);
+  const clearNotes = useCallback(() => setNotes([]), []);
+  // 링크와 값은 사용자가 고른 다이얼 그대로 (모션 줄이기 보정 전)
+  const copyBundle = useCallback(async () => {
+    const chosen = buildTokens(dials);
+    try {
+      await navigator.clipboard.writeText(toAgentBundle(chosen, notes, themeLink(chosen)));
+      toast(T.bundleCopied(notes.length));
+      return true;
+    } catch {
+      toast(T.copyFailed);
+      return false;
+    }
+  }, [dials, notes, toast, T]);
+
+  useEffect(() => {
     document.documentElement.dataset.inspect = inspect ? "on" : "off";
   }, [inspect]);
   useEffect(() => {
@@ -222,8 +258,13 @@ export function TokenProvider({ children }: { children: ReactNode }) {
       history: steps,
       undo,
       redo,
+      notes,
+      addNote,
+      removeNote,
+      clearNotes,
+      copyBundle,
     }),
-    [dials, tokens, reducedMotion, set, reset, applyPreset, copyLink, panelOpen, inspect, paletteOpen, toasts, toast, dismissToast, steps, undo, redo],
+    [dials, tokens, reducedMotion, set, reset, applyPreset, copyLink, panelOpen, inspect, paletteOpen, toasts, toast, dismissToast, steps, undo, redo, notes, addNote, removeNote, clearNotes, copyBundle],
   );
 
   return <TokenContext.Provider value={value}>{children}</TokenContext.Provider>;

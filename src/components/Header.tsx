@@ -48,7 +48,7 @@ export function Header({ go, current }: { go: (href: string) => void; current: s
             </a>
           ))}
         </nav>
-        <div className="hdr__tools">
+        <div className="hdr__tools" data-note-skip="">
           <button
             type="button"
             className="tool tool--menu"
