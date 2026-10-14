@@ -1453,7 +1453,13 @@ select.fx-input { appearance: none; padding-right: var(--space-6); background-im
 .front-apps__row { list-style: none; margin: 0; padding: var(--space-2) 0 var(--space-4); display: flex; gap: var(--space-5); overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; }
 .front-apps__row::-webkit-scrollbar { display: none; }
 .front-app { flex: none; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); scroll-snap-align: start; }
-.front-app__phone { padding: 0; border: 0; background: none; cursor: pointer; border-radius: 34px; transition: transform var(--duration-2) var(--ease-emphasis); }
+.front-app__phone { padding: 0; border: 0; background: none; cursor: pointer; border-radius: var(--phone-r, 16px); transition: transform var(--duration-2) var(--ease-emphasis); }
+/* 앞 줄 폰은 크기를 하나로: 화면 비율 9:19.5 에 맞춰 위쪽부터 채운다. 작은 폰이라 모서리도 줄인다(실기 비율 약 13%) */
+.front-app { --phone-r: calc(var(--radius-2) * 0.5 + 16px); }
+.front-app .phone { --phone-r: inherit; }
+.front-app .phone__screen { aspect-ratio: 9 / 19.5; }
+.front-app .phone[data-native] .phone__screen { aspect-ratio: 112 / 257; }
+.front-app .phone__screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .front-app__phone:hover { transform: translateY(-4px); }
 .front-app__phone:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 4px; }
 .front-app[data-on] .front-app__phone { box-shadow: 0 0 0 2px var(--surface-canvas), 0 0 0 4px var(--accent-default); }
