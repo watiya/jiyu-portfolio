@@ -9,7 +9,8 @@ import { themeLink } from "./export.ts";
 import { useLang } from "../i18n/useLang.ts";
 import { DEFAULT_LANG } from "../i18n/lang.ts";
 
-const STORAGE_KEY = "v8.tokens";
+// 10-14 기본값을 Ink 로 바꾸며 키를 갈았다. 예전 저장값은 한 번 버리고 모두 Ink 로 시작한다
+const STORAGE_KEY = "v8.tokens.2";
 // 메모는 세션 동안만. 탭을 닫으면 사라진다
 const NOTES_KEY = "v8.notes";
 const QUERY_KEYS = ["hue", "pri", "sec", "neutral", "paper", "pairing", "radius", "scale", "density", "motion", "theme"];
