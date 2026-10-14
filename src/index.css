@@ -636,9 +636,9 @@ html[data-motion="off"] .reveal { opacity: 1; transform: none; transition: none;
 }
 
 /* ---------- 06 연락 ---------- */
-.contact__mail { display: block; width: fit-content; max-width: 100%; margin-top: var(--space-4); font-family: var(--font-heading); font-weight: var(--heading-weight); font-style: var(--heading-style); letter-spacing: var(--heading-tracking); font-size: clamp(28px, 6.2vw, 88px); line-height: 1.05; text-decoration: none; overflow-wrap: anywhere; border-bottom: 2px solid transparent; transition: border-color var(--duration-1) var(--ease-default); }
+.contact__mail { display: block; width: fit-content; max-width: 100%; margin-top: var(--space-4); font-family: var(--font-heading); font-weight: var(--heading-weight); font-style: var(--heading-style); letter-spacing: var(--heading-tracking); font-size: clamp(24px, 3.4vw, 48px); line-height: 1.1; text-decoration: none; overflow-wrap: anywhere; border-bottom: 2px solid transparent; transition: border-color var(--duration-1) var(--ease-default); }
 .contact__mail:hover { border-bottom-color: var(--accent-default); }
-.contact__foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid var(--line-default); }
+.contact__foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--line-default); }
 .contact__socials { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
 .contact__socials a { display: inline-block; padding-block: var(--space-2); color: var(--text-muted); text-decoration: none; font-size: var(--text-sm); }
 .contact__socials a:hover { color: var(--text-default); }
