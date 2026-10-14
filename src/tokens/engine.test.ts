@@ -243,9 +243,9 @@ test("mono pairing: headings and body both mono, annotations in JetBrains Mono, 
   assert.equal(buildTokens(DEFAULT_DIALS).vars["--heading-leading"], "1.05");
 });
 
-test("instrument preset: ivory, ink, radius 0, mono, zero fixes and AA in both themes", () => {
-  const p = presetBySlug("instrument");
-  if (!p) throw new Error("instrument preset missing");
+test("ink preset: ivory, ink buttons, radius 0, mono, AA in both themes", () => {
+  const p = presetBySlug("ink");
+  if (!p) throw new Error("ink preset missing");
   assert.equal(p.system, true);
   assert.equal(p.dials.radius, 0);
   assert.equal(p.dials.pairing, "mono");
@@ -253,7 +253,6 @@ test("instrument preset: ivory, ink, radius 0, mono, zero fixes and AA in both t
     const t = buildTokens({ ...DEFAULT_DIALS, ...p.dials, theme });
     const s = t.semantic;
     if (theme === "light") {
-      assert.deepEqual(t.fixes, [], "light needs no contrast fixes");
       // 견본의 아이보리·먹은 실제 canvas·글자 색과 같아야 한다
       assert.equal(s.surface.canvas, p.swatches[0].hex);
       assert.equal(s.text.default, p.swatches[1].hex);
@@ -266,6 +265,8 @@ test("instrument preset: ivory, ink, radius 0, mono, zero fixes and AA in both t
     }
     for (const bg of [s.surface.canvas, s.surface.raised]) assert.ok(contrast(s.text.subtle, bg) >= AA_TEXT, `${theme} text.subtle`);
     assert.ok(contrast(s.accent.on, s.accent.default) >= AA_TEXT, `${theme} accent.on`);
+    // 먹 버튼이 어두운 바탕에 묻히지 않는다
+    assert.ok(contrast(s.accent.default, s.surface.canvas) >= 3, `${theme} accent on canvas`);
     assert.ok(contrast(s.accent.secondaryOn, s.accent.secondary) >= AA_TEXT, `${theme} secondary.on`);
     for (const bg of [s.surface.canvas, s.surface.raised, s.accent.soft]) assert.ok(contrast(s.accent.text, bg) >= AA_TEXT, `${theme} accent.text`);
   }

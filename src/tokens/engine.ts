@@ -252,6 +252,12 @@ export function buildSemantic(dials: Dials, accent: string[], neutral: string[])
     accentDefault = fit.bg;
     on = fit.on;
     if (fit.moved) fixes.push({ token: "accent.default", from: dials.primary, to: fit.bg, reason: "AA for text on accent" });
+    // 먹 버튼이 어두운 바탕에 묻히면 글자색으로 뒤집는다 (Ink 의 dark)
+    if (dark && contrast(accentDefault, surface.canvas) < 3) {
+      fixes.push({ token: "accent.default", from: accentDefault, to: textDefault, reason: "visible on canvas" });
+      accentDefault = textDefault;
+      on = textInverse;
+    }
   }
 
   // 포인트색 글자(링크·주석 숫자): canvas/raised/soft 위에서 AA
@@ -574,17 +580,17 @@ const ALL_PRESETS: Preset[] = [
     ],
     dials: { hue: hueOf("#7557ff"), primary: "#d9ff5b", secondary: "#7557ff", neutral: "cool", radius: 18, theme: "dark", pairing: "geist" },
   },
-  // 앱이 아닌 사이트 프리셋. 아이보리 종이 + 먹 + 모노 글자 + 각진 모서리, 포인트는 차분한 산화철 하나.
+  // 앱이 아닌 사이트 프리셋. 아이보리 종이 + 먹 + 모노 글자 + 각진 모서리. 버튼도 먹이고, 색은 초록 하나만 작게(번호·디더 비탈).
   // 아이보리는 warm 중립 50 단계(surface.canvas) 그대로라 견본도 그 값을 적는다
   {
-    slug: "instrument",
-    name: "Instrument",
+    slug: "ink",
+    name: "Ink",
     swatches: [
       { hex: "#f8f3e9", label: "ivory" },
       { hex: "#100e0b", label: "ink" },
-      { hex: "#9a4a2c", label: "oxide" },
+      { hex: "#1f7a4d", label: "signal" },
     ],
-    dials: { hue: hueOf("#9a4a2c"), primary: "#9a4a2c", secondary: "#100e0b", neutral: "warm", radius: 0, theme: "light", pairing: "mono" },
+    dials: { hue: hueOf("#1f7a4d"), primary: "#100e0b", secondary: "#1f7a4d", neutral: "warm", radius: 0, theme: "light", pairing: "mono" },
     system: true,
   },
 ];
