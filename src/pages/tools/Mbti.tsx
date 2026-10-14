@@ -58,7 +58,8 @@ export function Mbti({ go }: { go: (href: string) => void }) {
   const closest = useMemo(() => {
     if (!wear?.hue) return null;
     const h = wear.hue;
-    return [...PRESETS].sort((a, b) => hueDist(a.dials.hue ?? 0, h) - hueDist(b.dials.hue ?? 0, h))[0] ?? null;
+    // 사이트 프리셋(Instrument 등)은 앱이 아니라 뺀다
+    return PRESETS.filter((p) => !p.system).sort((a, b) => hueDist(a.dials.hue ?? 0, h) - hueDist(b.dials.hue ?? 0, h))[0] ?? null;
   }, [wear]);
 
   return (

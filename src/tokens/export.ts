@@ -98,6 +98,7 @@ typography:
   mono: "${first(pair.mono)}"
   hangul: "Pretendard Variable"
   heading-weight: ${pair.weight}
+  heading-leading: ${pair.leading}
 radius: { sm: ${vars["--radius-1"]}, md: ${vars["--radius-2"]}, lg: ${vars["--radius-3"]} }
 spacing: [${space.join(", ")}]
 motion: { fast: ${vars["--duration-1"]}, base: ${vars["--duration-2"]}, slow: ${vars["--duration-3"]}, ease: "${vars["--ease-default"]}" }
@@ -144,7 +145,7 @@ Primitive scales (OKLCH, generated from hue ${dials.hue}):
 
 ## Typography
 
-- **Headings** ${first(pair.heading)}, weight ${pair.weight}, tracking ${pair.tracking} (Hangul ${pair.trackingKo})${pair.italic ? ", italic" : ""}. Hero runs very large (around 120px, line-height 0.95) and tight.
+- **Headings** ${first(pair.heading)}, weight ${pair.weight}, tracking ${pair.tracking} (Hangul ${pair.trackingKo}), line-height ${pair.leading}${pair.italic ? ", italic" : ""}. Hero runs very large (around 120px) and tight.${dials.pairing === "mono" ? " Everything is set in mono: headings and body share one fixed-width face, so size, weight, hairlines and spacing carry the hierarchy instead of a second face." : ""}
 - **Body** ${first(pair.body)}, 16-18px, line-height 1.5-1.6, max 60ch.
 - **Steps** base ${vars["--text-base"]} · lg ${vars["--text-lg"]} · xl ${vars["--text-xl"]} · 2xl ${vars["--text-2xl"]} · 3xl ${vars["--text-3xl"]} (type scale ${dials.scale}%). Steps below base stay fixed for annotations.
 - **Mono** ${first(pair.mono)} for every annotation: section indices, token names, spec rows, dimension values. Small (11-13px), often uppercase with 0.06em tracking.

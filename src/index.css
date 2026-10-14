@@ -80,8 +80,9 @@ a { color: inherit; }
 /* ---------- 타이포 ---------- */
 .mono { font-family: var(--font-mono); font-size: var(--text-xs); line-height: 1.4; font-variant-numeric: tabular-nums; }
 .h1, .h2, .h3 { font-family: var(--font-heading); font-weight: var(--heading-weight); font-style: var(--heading-style); letter-spacing: var(--heading-tracking); text-wrap: balance; margin: 0; }
-.h1 { font-size: var(--text-3xl); line-height: 1.05; }
-.h2 { font-size: var(--text-2xl); line-height: 1.1; }
+/* 줄간은 서체 조합이 정한다(--heading-leading). h2 는 그보다 조금 넉넉하게 */
+.h1 { font-size: var(--text-3xl); line-height: var(--heading-leading, 1.05); }
+.h2 { font-size: var(--text-2xl); line-height: calc(var(--heading-leading, 1.05) + 0.05); }
 .h3 { font-size: var(--text-xl); line-height: 1.2; letter-spacing: -0.01em; }
 .lede { font-size: var(--text-lg); line-height: 1.45; color: var(--text-muted); max-width: 56ch; margin: var(--space-3) 0 0; text-wrap: pretty; }
 

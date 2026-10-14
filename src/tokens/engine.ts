@@ -3,7 +3,7 @@ import { AA_TEXT, contrast, hexToOklch, oklchToHex } from "./color.ts";
 import { isHiddenApp } from "../hidden.ts";
 
 export type Neutral = "cool" | "neutral" | "warm";
-export type Pairing = "geist" | "editorial" | "grotesk" | "funnel";
+export type Pairing = "geist" | "editorial" | "grotesk" | "funnel" | "mono";
 export type Density = "compact" | "regular" | "airy";
 export type Motion = "off" | "calm" | "lively";
 export type Theme = "light" | "dark";
@@ -36,14 +36,15 @@ export const DEFAULT_DIALS: Dials = {
 };
 
 export const NEUTRALS: Neutral[] = ["cool", "neutral", "warm"];
-export const PAIRINGS: Pairing[] = ["geist", "editorial", "grotesk", "funnel"];
+export const PAIRINGS: Pairing[] = ["geist", "editorial", "grotesk", "funnel", "mono"];
 export const DENSITIES: Density[] = ["compact", "regular", "airy"];
 export const MOTIONS: Motion[] = ["off", "calm", "lively"];
 export const THEMES: Theme[] = ["light", "dark"];
 
 // 모든 스택은 1순위 서체 뒤에 Pretendard Variable 을 한글 대체로 둔다. trackingKo 는 한글 제목용(html[lang=ko])
+// leading 은 큰 제목(h1)의 줄간. 글자 폭이 고른 모노는 줄이 길어 보여 조금 벌린다
 export const HANGUL = "'Pretendard Variable'";
-export const PAIRING_META: Record<Pairing, { label: string; heading: string; body: string; mono: string; weight: number; tracking: string; trackingKo: string; italic: boolean }> = {
+export const PAIRING_META: Record<Pairing, { label: string; heading: string; body: string; mono: string; weight: number; tracking: string; trackingKo: string; leading: number; italic: boolean }> = {
   geist: {
     label: "Geist + Geist Mono",
     heading: "'Geist Variable', 'Pretendard Variable', ui-sans-serif, system-ui, sans-serif",
@@ -52,6 +53,7 @@ export const PAIRING_META: Record<Pairing, { label: string; heading: string; bod
     weight: 600,
     tracking: "-0.03em",
     trackingKo: "-0.015em",
+    leading: 1.05,
     italic: false,
   },
   editorial: {
@@ -62,6 +64,7 @@ export const PAIRING_META: Record<Pairing, { label: string; heading: string; bod
     weight: 400,
     tracking: "-0.01em",
     trackingKo: "-0.01em",
+    leading: 1.05,
     italic: true,
   },
   grotesk: {
@@ -72,6 +75,7 @@ export const PAIRING_META: Record<Pairing, { label: string; heading: string; bod
     weight: 500,
     tracking: "-0.035em",
     trackingKo: "-0.015em",
+    leading: 1.05,
     italic: false,
   },
   funnel: {
@@ -82,6 +86,19 @@ export const PAIRING_META: Record<Pairing, { label: string; heading: string; bod
     weight: 600,
     tracking: "-0.025em",
     trackingKo: "-0.015em",
+    leading: 1.05,
+    italic: false,
+  },
+  // 제목·본문 모두 모노. 주석은 JetBrains Mono 로 갈라 본문과 구분한다. 고정폭이라 큰 제목은 자간을 더 조이고 줄간을 벌린다
+  mono: {
+    label: "Geist Mono + JetBrains Mono",
+    heading: "'Geist Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
+    body: "'Geist Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
+    mono: "'JetBrains Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
+    weight: 500,
+    tracking: "-0.045em",
+    trackingKo: "-0.02em",
+    leading: 1.12,
     italic: false,
   },
 };
@@ -304,6 +321,7 @@ export function buildTokens(dials: Dials): Tokens {
   vars["--heading-weight"] = String(pair.weight);
   vars["--heading-tracking-latin"] = pair.tracking;
   vars["--heading-tracking-hangul"] = pair.trackingKo;
+  vars["--heading-leading"] = String(pair.leading);
   vars["--heading-style"] = pair.italic ? "italic" : "normal";
   vars["--duration-1"] = `${m.d1}ms`;
   vars["--duration-2"] = `${m.d2}ms`;
@@ -415,6 +433,7 @@ export type Preset = {
   name: string;
   swatches: { hex: string; label: string }[]; // 알려진 값만. 추정치는 label 에 sampled 로 표시
   dials: Partial<Dials>;
+  system?: true; // 앱이 아닌 사이트 자체의 프리셋. "색조가 가까운 앱" 같은 앱 비교에서 뺀다
 };
 
 export const hueOf = (hex: string) => Math.round(hexToOklch(hex).h);
@@ -554,6 +573,19 @@ const ALL_PRESETS: Preset[] = [
       { hex: "#7557ff", label: "violet" },
     ],
     dials: { hue: hueOf("#7557ff"), primary: "#d9ff5b", secondary: "#7557ff", neutral: "cool", radius: 18, theme: "dark", pairing: "geist" },
+  },
+  // 앱이 아닌 사이트 프리셋. 아이보리 종이 + 먹 + 모노 글자 + 각진 모서리, 포인트는 차분한 산화철 하나.
+  // 아이보리는 warm 중립 50 단계(surface.canvas) 그대로라 견본도 그 값을 적는다
+  {
+    slug: "instrument",
+    name: "Instrument",
+    swatches: [
+      { hex: "#f8f3e9", label: "ivory" },
+      { hex: "#100e0b", label: "ink" },
+      { hex: "#9a4a2c", label: "oxide" },
+    ],
+    dials: { hue: hueOf("#9a4a2c"), primary: "#9a4a2c", secondary: "#100e0b", neutral: "warm", radius: 0, theme: "light", pairing: "mono" },
+    system: true,
   },
 ];
 

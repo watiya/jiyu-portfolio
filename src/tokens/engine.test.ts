@@ -15,6 +15,7 @@ import {
   dialsToQuery,
   neutralScale,
   parseDials,
+  presetBySlug,
   resolveToken,
   type Dials,
 } from "./engine.ts";
@@ -117,7 +118,7 @@ test("contrast fix: muted text that is too light walks toward ink", () => {
 });
 
 test("presets build and pass AA", () => {
-  assert.equal(PRESETS.length, 9);
+  assert.equal(PRESETS.length, 10);
   for (const p of PRESETS) {
     const { semantic: s } = buildTokens({ ...DEFAULT_DIALS, ...p.dials });
     assert.ok(contrast(s.accent.on, s.accent.default) >= AA_TEXT, p.name);
@@ -225,4 +226,47 @@ test("accent.primary: preset brand hex stays as accent.default with a readable o
   const q = dialsToQuery({ ...DEFAULT_DIALS, primary: "#75fc96" });
   assert.equal(parseDials(new URLSearchParams(q)).primary, "#75fc96");
   assert.equal(parseDials(new URLSearchParams("pri=zzz")).primary, null);
+});
+
+test("mono pairing: headings and body both mono, annotations in JetBrains Mono, leading opens up", () => {
+  const m = PAIRING_META.mono;
+  assert.match(m.heading, /^'Geist Mono Variable'/);
+  assert.match(m.body, /^'Geist Mono Variable'/);
+  assert.match(m.mono, /^'JetBrains Mono Variable'/);
+  for (const stack of [m.heading, m.body]) assert.doesNotMatch(stack, /serif'|Serif/, "no serif in an all-mono pairing");
+  assert.equal(parseDials(new URLSearchParams("pairing=mono")).pairing, "mono");
+  const v = buildTokens({ ...DEFAULT_DIALS, pairing: "mono" }).vars;
+  assert.equal(v["--font-heading"], m.heading);
+  assert.equal(v["--heading-leading"], String(m.leading));
+  assert.ok(m.leading > PAIRING_META.geist.leading);
+  // 다른 조합은 손으로 맞춘 줄간 그대로
+  assert.equal(buildTokens(DEFAULT_DIALS).vars["--heading-leading"], "1.05");
+});
+
+test("instrument preset: ivory, ink, radius 0, mono, zero fixes and AA in both themes", () => {
+  const p = presetBySlug("instrument");
+  if (!p) throw new Error("instrument preset missing");
+  assert.equal(p.system, true);
+  assert.equal(p.dials.radius, 0);
+  assert.equal(p.dials.pairing, "mono");
+  for (const theme of ["light", "dark"] as const) {
+    const t = buildTokens({ ...DEFAULT_DIALS, ...p.dials, theme });
+    const s = t.semantic;
+    if (theme === "light") {
+      assert.deepEqual(t.fixes, [], "light needs no contrast fixes");
+      // 견본의 아이보리·먹은 실제 canvas·글자 색과 같아야 한다
+      assert.equal(s.surface.canvas, p.swatches[0].hex);
+      assert.equal(s.text.default, p.swatches[1].hex);
+      assert.equal(s.accent.default, p.dials.primary);
+      assert.equal(t.vars["--radius-2"], "0px");
+    }
+    for (const bg of [s.surface.canvas, s.surface.raised, s.surface.sunken]) {
+      assert.ok(contrast(s.text.default, bg) >= AA_TEXT, `${theme} text.default`);
+      assert.ok(contrast(s.text.muted, bg) >= AA_TEXT, `${theme} text.muted`);
+    }
+    for (const bg of [s.surface.canvas, s.surface.raised]) assert.ok(contrast(s.text.subtle, bg) >= AA_TEXT, `${theme} text.subtle`);
+    assert.ok(contrast(s.accent.on, s.accent.default) >= AA_TEXT, `${theme} accent.on`);
+    assert.ok(contrast(s.accent.secondaryOn, s.accent.secondary) >= AA_TEXT, `${theme} secondary.on`);
+    for (const bg of [s.surface.canvas, s.surface.raised, s.accent.soft]) assert.ok(contrast(s.accent.text, bg) >= AA_TEXT, `${theme} accent.text`);
+  }
 });
