@@ -5,6 +5,7 @@ import {
   DENSITIES,
   MOTIONS,
   NEUTRALS,
+  PAPERS,
   PAIRINGS,
   PAIRING_META,
   PRESETS,
@@ -116,6 +117,10 @@ export function TokenPanel() {
 
           <Field label={L.neutral}>
             <Segmented name={L.neutral} value={dials.neutral} options={NEUTRALS} labels={L.neutrals} onChange={(neutral) => set({ neutral })} />
+          </Field>
+
+          <Field label={L.paper}>
+            <Segmented name={L.paper} value={dials.paper} options={PAPERS} labels={L.papers} onChange={(paper) => set({ paper })} />
           </Field>
 
           <Field label={L.pairing}>

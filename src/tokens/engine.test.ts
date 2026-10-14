@@ -129,7 +129,7 @@ test("presets build and pass AA", () => {
 
 test("query round trip: only non-default keys, unknown values ignored", () => {
   assert.equal(dialsToQuery(DEFAULT_DIALS), "");
-  const d: Dials = { hue: 12, primary: null, secondary: null, neutral: "cool", pairing: "editorial", radius: 0, scale: 130, density: "airy", motion: "off", theme: "dark" };
+  const d: Dials = { hue: 12, primary: null, secondary: null, neutral: "cool", paper: "white", pairing: "editorial", radius: 0, scale: 130, density: "airy", motion: "off", theme: "dark" };
   const q = dialsToQuery(d);
   assert.deepEqual(parseDials(new URLSearchParams(q)), d);
   const junk = parseDials(new URLSearchParams("hue=999&neutral=hot&radius=-5&pairing=comic&theme=dark"));
@@ -243,7 +243,7 @@ test("mono pairing: headings and body both mono, annotations in JetBrains Mono, 
   assert.equal(buildTokens(DEFAULT_DIALS).vars["--heading-leading"], "1.05");
 });
 
-test("ink preset: ivory, ink buttons, radius 0, mono, AA in both themes", () => {
+test("ink preset: white paper, ink buttons, radius 0, mono, AA in both themes", () => {
   const p = presetBySlug("ink");
   if (!p) throw new Error("ink preset missing");
   assert.equal(p.system, true);

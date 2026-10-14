@@ -7,12 +7,14 @@ export type Pairing = "geist" | "editorial" | "grotesk" | "funnel" | "mono";
 export type Density = "compact" | "regular" | "airy";
 export type Motion = "off" | "calm" | "lively";
 export type Theme = "light" | "dark";
+export type Paper = "tint" | "white";
 
 export type Dials = {
   hue: number; // 0..360
   primary: string | null; // 앱 프리셋의 브랜드 색(hex) 그대로. 있으면 hue 램프 대신 accent.default 가 된다
   secondary: string | null; // 앱 프리셋의 둘째 브랜드 색(hex). 없으면 accent 와 같다
   neutral: Neutral;
+  paper: Paper; // 밝은 테마 바탕. tint 는 중립색 50 단계, white 는 순백(카드는 선으로 가른다)
   pairing: Pairing;
   radius: number; // 0..24
   scale: number; // 60..140. 타입 스케일 대비(%). 100 이 손으로 맞춘 기본 단계
@@ -27,6 +29,7 @@ export const DEFAULT_DIALS: Dials = {
   primary: null,
   secondary: null,
   neutral: "warm",
+  paper: "tint",
   pairing: "geist",
   radius: 6,
   scale: 100,
@@ -40,6 +43,7 @@ export const PAIRINGS: Pairing[] = ["geist", "editorial", "grotesk", "funnel", "
 export const DENSITIES: Density[] = ["compact", "regular", "airy"];
 export const MOTIONS: Motion[] = ["off", "calm", "lively"];
 export const THEMES: Theme[] = ["light", "dark"];
+export const PAPERS: Paper[] = ["tint", "white"];
 
 // 모든 스택은 1순위 서체 뒤에 Pretendard Variable 을 한글 대체로 둔다. trackingKo 는 한글 제목용(html[lang=ko])
 // leading 은 큰 제목(h1)의 줄간. 글자 폭이 고른 모노는 줄이 길어 보여 조금 벌린다
@@ -213,7 +217,9 @@ export function buildSemantic(dials: Dials, accent: string[], neutral: string[])
 
   const surface = dark
     ? { canvas: n(1000), raised: n(950), sunken: n(900), inverse: n(50) }
-    : { canvas: n(50), raised: n(0), sunken: n(100), inverse: n(1000) };
+    : dials.paper === "white"
+      ? { canvas: "#ffffff", raised: "#ffffff", sunken: n(50), inverse: n(1000) }
+      : { canvas: n(50), raised: n(0), sunken: n(100), inverse: n(1000) };
   const textDefault = dark ? n(50) : n(1000);
   const textInverse = dark ? n(1000) : n(50);
   const line = dark ? { default: n(900), strong: n(700) } : { default: n(200), strong: n(400) };
@@ -580,17 +586,17 @@ const ALL_PRESETS: Preset[] = [
     ],
     dials: { hue: hueOf("#7557ff"), primary: "#d9ff5b", secondary: "#7557ff", neutral: "cool", radius: 18, theme: "dark", pairing: "geist" },
   },
-  // 앱이 아닌 사이트 프리셋. 아이보리 종이 + 먹 + 모노 글자 + 각진 모서리. 버튼도 먹이고, 색은 초록 하나만 작게(번호·디더 비탈).
-  // 아이보리는 warm 중립 50 단계(surface.canvas) 그대로라 견본도 그 값을 적는다
+  // 앱이 아닌 사이트 프리셋. 순백 바탕 + 먹 + 모노 글자 + 각진 모서리. 버튼도 먹이고, 색은 초록 하나만 작게(번호·디더 비탈).
+  // 회색은 색조 없는 neutral. 먹은 그 중립 1000 단계(text.default) 그대로라 견본·버튼도 그 값을 적는다
   {
     slug: "ink",
     name: "Ink",
     swatches: [
-      { hex: "#f8f3e9", label: "ivory" },
-      { hex: "#100e0b", label: "ink" },
+      { hex: "#ffffff", label: "paper" },
+      { hex: "#0e0e0e", label: "ink" },
       { hex: "#1f7a4d", label: "signal" },
     ],
-    dials: { hue: hueOf("#1f7a4d"), primary: "#100e0b", secondary: "#1f7a4d", neutral: "warm", radius: 0, theme: "light", pairing: "mono" },
+    dials: { hue: hueOf("#1f7a4d"), primary: "#0e0e0e", secondary: "#1f7a4d", neutral: "neutral", paper: "white", radius: 0, theme: "light", pairing: "mono" },
     system: true,
   },
 ];
@@ -601,8 +607,8 @@ export const presetBySlug = (slug: string) => PRESETS.find((p) => p.slug === slu
 
 // ---------- URL 직렬화 ----------
 
-const KEYS: (keyof Dials)[] = ["hue", "primary", "secondary", "neutral", "pairing", "radius", "scale", "density", "motion", "theme"];
-const QUERY_KEY: Record<keyof Dials, string> = { hue: "hue", primary: "pri", secondary: "sec", neutral: "neutral", pairing: "pairing", radius: "radius", scale: "scale", density: "density", motion: "motion", theme: "theme" };
+const KEYS: (keyof Dials)[] = ["hue", "primary", "secondary", "neutral", "paper", "pairing", "radius", "scale", "density", "motion", "theme"];
+const QUERY_KEY: Record<keyof Dials, string> = { hue: "hue", primary: "pri", secondary: "sec", neutral: "neutral", paper: "paper", pairing: "pairing", radius: "radius", scale: "scale", density: "density", motion: "motion", theme: "theme" };
 
 export function dialsToQuery(d: Dials): string {
   const q = new URLSearchParams();
@@ -645,6 +651,7 @@ export function parseDials(input: URLSearchParams | Record<string, unknown> | nu
   pickEnum("density", DENSITIES);
   pickEnum("motion", MOTIONS);
   pickEnum("theme", THEMES);
+  pickEnum("paper", PAPERS);
   return out;
 }
 
