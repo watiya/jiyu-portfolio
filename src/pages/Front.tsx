@@ -11,6 +11,7 @@ import { internalClick } from "../router.ts";
 import { useReveal } from "../hooks.ts";
 import { Corners, SectionLabel } from "../components/Annot.tsx";
 import { DialBoard } from "../components/Dials.tsx";
+import { VariantBoard } from "../components/Variants.tsx";
 import { PhoneFrame } from "../components/PhoneFrame.tsx";
 import { Radar, Ring } from "../tools/Charts.tsx";
 import { ToolCards } from "./tools/Shell.tsx";
@@ -101,6 +102,7 @@ function Playground() {
           <DialBoard />
         </div>
       </div>
+      <VariantBoard />
     </section>
   );
 }

@@ -1593,6 +1593,44 @@ html[data-motion="off"] .tcard__inner { transition: none; }
 .take__history { display: flex; align-items: center; gap: var(--space-1); padding-top: var(--space-2); border-top: 1px solid var(--line-default); color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.08em; font-size: var(--text-xs); }
 .take__history .iconbtn:disabled { opacity: 0.35; cursor: not-allowed; background: none; }
 .take__history span { margin-left: var(--space-2); }
+
+/* 01 놀이터: 시안 비교 보드. 카드마다 그 시안의 토큰이 inline 으로 심겨 있어 var() 는 그 시안 값을 읽는다 */
+.variants { display: grid; gap: var(--space-3); margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--line-default); }
+.variants__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-subtle); }
+.variants__tools { display: inline-flex; align-items: center; gap: var(--space-3); }
+.variants__tools .btn { text-transform: none; letter-spacing: 0; }
+.variants__empty { margin: 0; padding: var(--space-5); color: var(--text-muted); font-size: var(--text-sm); border: 1px dashed var(--line-strong); border-radius: var(--card-radius); }
+.variants__list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 720px) { .variants__list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .variants__list { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+.vcard {
+  display: flex; flex-direction: column; min-width: 0; overflow: hidden;
+  background: var(--surface-canvas); color: var(--text-default); font-family: var(--font-body);
+  border: 1px solid var(--line-default); border-radius: var(--card-radius);
+  transition: border-color var(--duration-1) var(--ease-default), transform var(--duration-2) var(--ease-emphasis);
+}
+.vcard:hover { border-color: var(--line-strong); }
+.vcard[data-on] { border-color: var(--accent-default); }
+.vcard__wear { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 12px; text-align: left; color: inherit; }
+.vcard__wear:focus-visible { outline-offset: -3px; }
+.vcard__wear .corners i { opacity: 0.6; }
+.vcard__top { display: flex; justify-content: space-between; gap: 8px; font-size: 10px; color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; overflow: hidden; }
+.vcard__on { color: var(--accent-text); }
+.vcard__top span:last-child { overflow: hidden; text-overflow: ellipsis; }
+.vcard__greet { font-family: var(--font-heading); font-weight: var(--heading-weight); font-style: var(--heading-style); letter-spacing: var(--heading-tracking); font-size: calc(var(--text-xl) * 0.7); line-height: 1.15; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vcard__bars { display: flex; align-items: flex-end; gap: 3px; height: 28px; padding: 6px; background: var(--card-bg); border: 1px solid var(--card-line); border-radius: var(--radius-2); }
+.vcard__bars i { flex: 1; background: var(--accent-soft); border-radius: 2px 2px 0 0; }
+.vcard__bars i[data-on] { background: var(--accent-default); }
+.vcard__row { display: flex; align-items: center; gap: 4px; min-width: 0; }
+.vcard__btn { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; font-size: 11px; font-weight: 500; white-space: nowrap; background: var(--button-bg); color: var(--button-fg); border: 1px solid transparent; border-radius: var(--button-radius); }
+.vcard__btn--ghost { background: transparent; color: var(--text-default); border-color: var(--line-strong); }
+.vcard__row .chip { height: 18px; font-size: 10px; overflow: hidden; }
+.vcard__foot { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 0 4px; padding: 4px 4px 4px 12px; background: var(--surface-raised); border-top: 1px solid var(--line-default); }
+.vcard__name { width: 100%; min-width: 0; height: 26px; padding: 0 4px; margin-left: -4px; font-size: 12px; font-weight: 600; color: var(--text-default); background: transparent; border: 1px solid transparent; border-radius: var(--radius-1); }
+.vcard__name:hover { border-color: var(--line-default); }
+.vcard__name:focus-visible { outline: none; border-color: var(--accent-default); background: var(--surface-canvas); }
+.vcard__del { width: 28px; height: 28px; }
 @media (pointer: coarse) {
-  .take__history .iconbtn { width: 44px; height: 44px; }
+  .vcard__name { height: 44px; }
+  .take__history .iconbtn, .vcard__del { width: 44px; height: 44px; }
 }
