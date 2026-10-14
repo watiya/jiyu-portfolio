@@ -111,7 +111,15 @@ export function ToolShell({ slug, go, children }: { slug: ToolSlug; go: (href: s
   );
 }
 
-/** 결과 아래 공통 행동 줄: 링크 복사·다이얼 열기 등 */
-export function ToolActions({ children }: { children: ReactNode }) {
-  return <div className="fx__actions">{children}</div>;
+/** 결과 아래 공통 행동 줄: 링크 복사·다이얼 열기 등. 끝에 Naro 바로가기(href 는 naroLink 로 만든다) */
+export function ToolActions({ naro, children }: { naro: string; children: ReactNode }) {
+  const { t } = useLang();
+  return (
+    <div className="fx__actions">
+      {children}
+      <a className="btn btn--ghost btn--sm" href={naro} target="_blank" rel="noopener">
+        {t.toolsPage.naro} ↗
+      </a>
+    </div>
+  );
 }

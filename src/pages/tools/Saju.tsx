@@ -7,6 +7,7 @@ import { computeSaju, decodeSaju, encodeSaju, DAY_MASTER, ELEMENTS, ELEMENT_META
 import { copyText, readCode, shareUrl, writeCode } from "../../tools/share.ts";
 import { Radar, Stack } from "../../tools/Charts.tsx";
 import { EMPTY_FORM, SajuFields, formOf, inputOf, type SajuForm } from "./SajuForm.tsx";
+import { naroLink } from "../../tools/naro.ts";
 import { ToolActions, ToolShell } from "./Shell.tsx";
 
 export function Saju({ go }: { go: (href: string) => void }) {
@@ -72,7 +73,7 @@ export function Saju({ go }: { go: (href: string) => void }) {
         {result && input && (
           <div id="saju-result" className="fx__result">
             <SajuResultView result={result} />
-            <ToolActions>
+            <ToolActions naro={naroLink("saju", { birth: input })}>
               <WearElement result={result} />
               <a className="btn btn--ghost btn--sm" href={`/tools/gunghap?r=g${encodeSaju(input)}`} onClick={internalClick(go)}>
                 {S.toGunghap} →

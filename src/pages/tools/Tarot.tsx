@@ -5,6 +5,7 @@ import { useTokens } from "../../tokens/useTokens.ts";
 import { CARDS, decodeTarot, draw, encodeTarot, summarize, type Draw, type Shape, type Spread } from "../../tools/tarot.ts";
 import { copyText, readCode, shareUrl, writeCode } from "../../tools/share.ts";
 import { Corners } from "../../components/Annot.tsx";
+import { naroLink } from "../../tools/naro.ts";
 import { ToolActions, ToolShell } from "./Shell.tsx";
 
 const FILL: Record<string, string> = { a: "var(--accent-default)", b: "var(--accent-secondary)", i: "var(--text-default)", s: "var(--accent-soft)", l: "var(--line-strong)", n: "none" };
@@ -168,7 +169,7 @@ export function Tarot({ go }: { go: (href: string) => void }) {
               <span className="mono fx__label">{R.summary}</span>
               <p>{summarize(draws, lang)}</p>
             </div>
-            <ToolActions>
+            <ToolActions naro={naroLink("tarot")}>
               <button type="button" className="btn btn--ghost btn--sm" onClick={() => void share()}>
                 {T.share}
               </button>

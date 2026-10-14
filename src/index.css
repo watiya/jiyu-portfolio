@@ -1445,6 +1445,8 @@ select.fx-input { appearance: none; padding-right: var(--space-6); background-im
 
 /* ---------- 재미요소 도구 화면 (/tools/*) ---------- */
 .toolsidx .fx__principles { margin-top: var(--space-7); }
+.toolsidx .toolsidx__naro { margin-top: var(--space-4); }
+.toolsidx__naro a { color: var(--text-default); }
 .fx__head { display: flex; align-items: flex-start; gap: var(--space-4); margin-bottom: var(--space-7); }
 .fx__glyph { flex: none; display: grid; place-items: center; width: 64px; height: 64px; background: var(--surface-sunken); border-radius: var(--radius-2); }
 .fx__head .h1 { font-size: clamp(28px, 4vw, var(--text-3xl)); }

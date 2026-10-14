@@ -6,6 +6,7 @@ import { PRESETS } from "../../tokens/engine.ts";
 import { AXES, AXIS_META, QUESTIONS, TYPES, decodeMbti, dialsOf, encodeMbti, scoreMbti, type MbtiResult } from "../../tools/mbti.ts";
 import { copyText, readCode, shareUrl, writeCode } from "../../tools/share.ts";
 import { Bipolar } from "../../tools/Charts.tsx";
+import { naroLink } from "../../tools/naro.ts";
 import { ToolActions, ToolShell } from "./Shell.tsx";
 
 const hueDist = (a: number, b: number) => {
@@ -115,7 +116,7 @@ export function Mbti({ go }: { go: (href: string) => void }) {
               <Bipolar key={a} left={AXIS_META[a].left[lang]} right={AXIS_META[a].right[lang]} pct={result.percent[a]} />
             ))}
           </div>
-          <ToolActions>
+          <ToolActions naro={naroLink("mbti", { type: result.type })}>
             <button
               type="button"
               className="btn btn--sm"

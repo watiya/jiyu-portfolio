@@ -1,7 +1,8 @@
-// 재미요소 목록 (/tools). 도구 넷과 원칙 세 줄
+// 재미요소 목록 (/tools). 도구 넷과 원칙 세 줄, 깊은 풀이는 Naro 로
 import { useLang } from "../i18n/useLang.ts";
 import { useReveal } from "../hooks.ts";
 import { SectionLabel } from "../components/Annot.tsx";
+import { NARO_URL } from "../tools/naro.ts";
 import { ToolCards } from "./tools/Shell.tsx";
 
 export function Tools({ go }: { go: (href: string) => void }) {
@@ -23,6 +24,12 @@ export function Tools({ go }: { go: (href: string) => void }) {
           <li key={i}>{p}</li>
         ))}
       </ol>
+      <p className="fx__note mono toolsidx__naro">
+        {T.naroNote}{" "}
+        <a href={NARO_URL} target="_blank" rel="noopener">
+          Naro ↗
+        </a>
+      </p>
     </section>
   );
 }

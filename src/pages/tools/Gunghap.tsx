@@ -9,6 +9,7 @@ import { copyText, readCode, shareUrl, writeCode } from "../../tools/share.ts";
 import { Radar, Ring } from "../../tools/Charts.tsx";
 import { EMPTY_FORM, SajuFields, formOf, inputOf, type SajuForm } from "./SajuForm.tsx";
 import { SajuResultView } from "./Saju.tsx";
+import { naroLink } from "../../tools/naro.ts";
 import { ToolActions, ToolShell } from "./Shell.tsx";
 
 const encode = (a: SajuInput, b: SajuInput) => `g${encodeSaju(a)}_${encodeSaju(b)}`;
@@ -150,7 +151,7 @@ export function Gunghap({ go }: { go: (href: string) => void }) {
               </details>
             ))}
           </div>
-          <ToolActions>
+          <ToolActions naro={naroLink("gunghap", { birth: inputs[0], partner: inputs[1] })}>
             <button type="button" className="btn btn--ghost btn--sm" onClick={() => void share()}>
               {T.share}
             </button>
