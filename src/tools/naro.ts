@@ -3,7 +3,7 @@
 import type { ToolSlug } from "../router.ts";
 import type { SajuInput } from "./saju.ts";
 
-export const NARO_URL = "https://naro-gamma.vercel.app";
+export const NARO_URL = "https://akashicrecord.vercel.app";
 
 const MENU: Record<ToolSlug, string> = { saju: "saju", mbti: "type", tarot: "tarot", gunghap: "match" };
 
