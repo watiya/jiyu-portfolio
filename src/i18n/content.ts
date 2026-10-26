@@ -43,11 +43,12 @@ export function formatDay(iso: string, lang: Lang): string {
   return `${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][m - 1]} ${d}, ${y}`;
 }
 
+// 장면 문구만 한국어로 바꾸고, 장면에 이은 화면(shot)은 영문 정본의 같은 자리를 따른다
 export function getAppDetails(lang: Lang): AppDetail[] {
   if (lang === "en") return APP_DETAILS;
   return APP_DETAILS.map((d) => {
     const k = APP_DETAILS_KO[d.slug];
-    return k ? { ...d, title: k.title, dek: k.dek, date: k.date, meta: k.meta, sections: k.sections, day: k.day ?? d.day } : d;
+    return k ? { ...d, title: k.title, dek: k.dek, date: k.date, meta: k.meta, sections: k.sections, day: k.day?.map((s, i) => ({ ...s, shot: d.day?.[i]?.shot })) ?? d.day } : d;
   });
 }
 

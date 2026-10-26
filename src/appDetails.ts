@@ -9,8 +9,9 @@ export type AppDetail = {
   meta: { label: string; value: string }[];
   stack: string[];
   sections: { heading: string; body: string[] }[];
-  // 쓰는 하루 세 장면. 본문(sections)에 이미 있는 기능으로만 쓴다
-  day?: { title: string; body: string }[];
+  // 쓰는 하루 세 장면. 본문(sections)에 이미 있는 기능으로만 쓴다.
+  // shot 은 그 장면 옆에 띄울 화면. 장면과 맞는 캡처만 잇는다(없으면 shots 의 같은 자리)
+  day?: { title: string; body: string; shot?: string }[];
   shots: string[]; // public/apps/<slug>/ 아래 화면들. 비어 있으면 카드 화면 하나만 쓴다
 };
 
@@ -38,9 +39,9 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     stack: ["React", "TypeScript", "Capacitor", "WidgetKit", "APNs", "Upstash", "Leaflet"],
     day: [
-      { title: "Before heading out", body: "The home or lock screen widget shows how busy your places are right now." },
-      { title: "Picking a time", body: "On the map, slide the 12-hour forecast to find when a place is easy to visit. On a rainy or bad-air day, the indoor picks come up instead." },
-      { title: "Waiting for quiet", body: "Watch a crowded place and a push alert arrives when it turns quiet. On site, the Korean phrase card fits the situation." },
+      { title: "Before heading out", body: "The home or lock screen widget shows how busy your places are right now.", shot: "/apps/seoul-boom/plan.png" },
+      { title: "Picking a time", body: "On the map, slide the 12-hour forecast to find when a place is easy to visit. On a rainy or bad-air day, the indoor picks come up instead.", shot: "/apps/seoul-boom/map.png" },
+      { title: "Waiting for quiet", body: "Watch a crowded place and a push alert arrives when it turns quiet. On site, the Korean phrase card fits the situation.", shot: "/apps/seoul-boom/korean.png" },
     ],
     sections: [
       {
@@ -81,9 +82,9 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     stack: ["SwiftUI", "watchOS", "HealthKit", "MapKit", "Core Location", "Live Activities", "WidgetKit", "XcodeGen"],
     day: [
-      { title: "Before the run", body: "Pick a run plan and one of four click sounds. The target cadence can change across the run." },
-      { title: "On the run", body: "Your playlist keeps playing with one quiet click per step. On the watch the beat is a vibration, with measured cadence and pace a swipe away." },
-      { title: "After the run", body: "The workout saves to Health with its route. The history shows heart rate, cadence, stride, splits, and a route map." },
+      { title: "Before the run", body: "Pick a run plan and one of four click sounds. The target cadence can change across the run.", shot: "/apps/runpop/plan.png" },
+      { title: "On the run", body: "Your playlist keeps playing with one quiet click per step. On the watch the beat is a vibration, with measured cadence and pace a swipe away.", shot: "/apps/runpop/running.png" },
+      { title: "After the run", body: "The workout saves to Health with its route. The history shows heart rate, cadence, stride, splits, and a route map.", shot: "/apps/runpop/detail.png" },
     ],
     sections: [
       {
@@ -126,9 +127,9 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     stack: ["React", "TypeScript", "Capacitor", "Service worker", "Vercel functions"],
     day: [
-      { title: "Departure day", body: "Departure-day mode reads Incheon's passenger forecast and live departure-hall waits, and works out when to leave." },
-      { title: "Evening at the yatai", body: "Find stalls likely open tonight from regular hours and the rain chance. Later, check the nearest station's last train, or show the driver card." },
-      { title: "Tax-free and the log", body: "Keep tax-free receipts with the departure-day checklist. The Log tab keeps places and spending day by day." },
+      { title: "Departure day", body: "Departure-day mode reads Incheon's passenger forecast and live departure-hall waits, and works out when to leave.", shot: "/apps/ttokuoka/info.png" },
+      { title: "Evening at the yatai", body: "Find stalls likely open tonight from regular hours and the rain chance. Later, check the nearest station's last train, or show the driver card.", shot: "/apps/ttokuoka/food.png" },
+      { title: "Tax-free and the log", body: "Keep tax-free receipts with the departure-day checklist. The Log tab keeps places and spending day by day.", shot: "/apps/ttokuoka/shop.png" },
     ],
     sections: [
       {
@@ -170,9 +171,9 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     stack: ["React", "TypeScript", "Capacitor", "PWA", "Hand-drawn SVG charts"],
     day: [
-      { title: "Morning of the visit", body: "Home leads with the visit, a countdown, and a checklist. The meds tab reminds you that the morning dose waits until after the blood draw." },
-      { title: "At the hospital", body: "Visit-day mode steps through check-in, blood draw, waiting, the doctor, payment, and the pharmacy, with a queue count and a floor map." },
-      { title: "Reading the results", body: "The tests tab puts kidney function first, each value placed on its reference range." },
+      { title: "Morning of the visit", body: "Home leads with the visit, a countdown, and a checklist. The meds tab reminds you that the morning dose waits until after the blood draw.", shot: "/apps/carenote/meds.png" },
+      { title: "At the hospital", body: "Visit-day mode steps through check-in, blood draw, waiting, the doctor, payment, and the pharmacy, with a queue count and a floor map.", shot: "/apps/carenote/visit.png" },
+      { title: "Reading the results", body: "The tests tab puts kidney function first, each value placed on its reference range.", shot: "/apps/carenote/labs.png" },
     ],
     sections: [
       {
@@ -372,9 +373,9 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     stack: ["Expo", "React Native", "TypeScript", "HealthKit", "Vite"],
     day: [
-      { title: "Signing up", body: "Pick the race and its date, your current long run, and the days you can train. The weeks up to the start line are written for you." },
-      { title: "Training days", body: "Today shows the session the plan wrote. The first two weeks are easy running, and intervals and tempo start in week three." },
-      { title: "Race day", body: "Log the race session. The finish time and pace move to past races with the distance trained." },
+      { title: "Signing up", body: "Pick the race and its date, your current long run, and the days you can train. The weeks up to the start line are written for you.", shot: "/apps/finishline/races.png" },
+      { title: "Training days", body: "Today shows the session the plan wrote. The first two weeks are easy running, and intervals and tempo start in week three.", shot: "/apps/finishline/today.png" },
+      { title: "Race day", body: "Log the race session. The finish time and pace move to past races with the distance trained.", shot: "/apps/finishline/past-race.png" },
     ],
     sections: [
       {
@@ -421,9 +422,9 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     stack: ["React", "TypeScript", "Vite", "Capacitor", "Motion", "Google Cloud TTS", "Playwright"],
     day: [
-      { title: "Boarding", body: "Pick a 2, 5, or 10+ hour flight, and the app suggests a pace for it." },
-      { title: "In the air, no signal", body: "Fly stop by stop: learn a few letters, snap them into syllable blocks, flip loanword cards, then pass a 10-question checkpoint." },
-      { title: "Landing", body: "Read 13 real Seoul signs, from exits and metro lines to a pharmacy and a money exchange, and collect the entry stamp." },
+      { title: "Boarding", body: "Pick a 2, 5, or 10+ hour flight, and the app suggests a pace for it.", shot: "/apps/hangul-boom/map.png" },
+      { title: "In the air, no signal", body: "Fly stop by stop: learn a few letters, snap them into syllable blocks, flip loanword cards, then pass a 10-question checkpoint.", shot: "/apps/hangul-boom/build.png" },
+      { title: "Landing", body: "Read 13 real Seoul signs, from exits and metro lines to a pharmacy and a money exchange, and collect the entry stamp.", shot: "/apps/hangul-boom/aha.png" },
     ],
     sections: [
       {
@@ -468,9 +469,9 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     stack: ["React", "TypeScript", "Vite", "Capacitor", "KanjiVG", "Google Cloud TTS", "Playwright"],
     day: [
-      { title: "Before the trip", body: "Ride the Airport Line one stop at a time. Each card has the Korean sound, a memory hook, a recording, and stroke order." },
-      { title: "Writing it down", body: "Trace, write from the letter alone, then write into a blank square. Every stroke is checked for order, direction, position, and shape." },
-      { title: "Reading for real", body: "The reading page shows phrases and loanwords from menus, signs, and hotels, with letters not learned yet dimmed." },
+      { title: "Before the trip", body: "Ride the Airport Line one stop at a time. Each card has the Korean sound, a memory hook, a recording, and stroke order.", shot: "/apps/menchi-kana/card.png" },
+      { title: "Writing it down", body: "Trace, write from the letter alone, then write into a blank square. Every stroke is checked for order, direction, position, and shape.", shot: "/apps/menchi-kana/write.png" },
+      { title: "Reading for real", body: "The reading page shows phrases and loanwords from menus, signs, and hotels, with letters not learned yet dimmed.", shot: "/apps/menchi-kana/table.png" },
     ],
     sections: [
       {
@@ -513,9 +514,9 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     stack: ["React", "TypeScript", "Vite", "Capacitor", "Google Cloud TTS"],
     day: [
-      { title: "After Menchi Kana", body: "Open a scene and read large word cards with furigana, an example sentence, and a recording." },
-      { title: "Checking yourself", body: "Pick the meaning, then pick what you heard. Finishing a scene shows travel sentences built from its words." },
-      { title: "The days after", body: "Missed words come back a day later, then after 3 and 7 days, and graduate after that." },
+      { title: "After Menchi Kana", body: "Open a scene and read large word cards with furigana, an example sentence, and a recording.", shot: "/apps/menchi-voca/card.png" },
+      { title: "Checking yourself", body: "Pick the meaning, then pick what you heard. Finishing a scene shows travel sentences built from its words.", shot: "/apps/menchi-voca/quiz.png" },
+      { title: "The days after", body: "Missed words come back a day later, then after 3 and 7 days, and graduate after that.", shot: "/apps/menchi-voca/review.png" },
     ],
     sections: [
       {
@@ -559,9 +560,9 @@ const ALL_APP_DETAILS: AppDetail[] = [
     ],
     stack: ["React", "TypeScript", "Vite", "Capacitor", "Motion", "Haptics"],
     day: [
-      { title: "Airplane mode on", body: "Tap a game card and a board opens. No ads, no login, no network." },
-      { title: "A few spare minutes", body: "Play the daily board, the same for everyone, with three lives per board." },
-      { title: "Coming back", body: "Every five levels earns a collectible for the album on the Records tab, and the streak calendar fills in." },
+      { title: "Airplane mode on", body: "Tap a game card and a board opens. No ads, no login, no network.", shot: "/apps/puzzle-lounge/lounge.png" },
+      { title: "A few spare minutes", body: "Play the daily board, the same for everyone, with three lives per board.", shot: "/apps/puzzle-lounge/boomdoku.png" },
+      { title: "Coming back", body: "Every five levels earns a collectible for the album on the Records tab, and the streak calendar fills in.", shot: "/apps/puzzle-lounge/records.png" },
     ],
     sections: [
       {
