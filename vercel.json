@@ -17,7 +17,51 @@
       "permanent": true
     },
     {
-      "source": "/en/:section(work|cases)",
+      "source": "/:lang(en|ko)/work",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://work.brainchild.kr/",
+      "permanent": true
+    },
+    {
+      "source": "/work",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://work.brainchild.kr/",
+      "permanent": true
+    },
+    {
+      "source": "/:lang(en|ko)/work/:slug/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://work.brainchild.kr/work/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/work/:slug/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio.brainchild.kr"
+        }
+      ],
+      "destination": "https://work.brainchild.kr/work/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/:section(cases)",
       "has": [
         {
           "type": "host",
@@ -28,7 +72,7 @@
       "permanent": true
     },
     {
-      "source": "/ko/:section(work|cases)",
+      "source": "/ko/:section(cases)",
       "has": [
         {
           "type": "host",
@@ -39,7 +83,7 @@
       "permanent": true
     },
     {
-      "source": "/:section(work|cases)",
+      "source": "/:section(cases)",
       "has": [
         {
           "type": "host",
@@ -50,7 +94,7 @@
       "permanent": true
     },
     {
-      "source": "/en/:section(work|cases)/:rest+",
+      "source": "/en/:section(cases)/:rest+",
       "has": [
         {
           "type": "host",
@@ -61,7 +105,7 @@
       "permanent": true
     },
     {
-      "source": "/ko/:section(work|cases)/:rest+",
+      "source": "/ko/:section(cases)/:rest+",
       "has": [
         {
           "type": "host",
@@ -72,7 +116,7 @@
       "permanent": true
     },
     {
-      "source": "/:section(work|cases)/:rest+",
+      "source": "/:section(cases)/:rest+",
       "has": [
         {
           "type": "host",
