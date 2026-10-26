@@ -4,7 +4,7 @@
 export const STEPS_KO: { title: string; body: string }[] = [
   { title: "기준을 찾습니다", body: "지금 기준이 어디에 있고 어디서 갈라졌는지 찾습니다." },
   { title: "경계를 적습니다", body: "프로덕트가 정할 것과 개발이 정할 것을 가릅니다." },
-  { title: "시스템을 설계합니다", body: "낱 화면보다 토큰·구조·정책이 먼저입니다." },
+  { title: "시스템을 설계합니다", body: "낱 화면보다 토큰, 구조, 정책이 먼저입니다." },
   { title: "코드로 짓습니다", body: "화면과 그 기준을 실행되는 코드로 냅니다." },
   { title: "규칙을 검사로 바꿉니다", body: "조용히 지나가던 실패가 크게 울리는 검사가 됩니다." },
 ];
@@ -34,18 +34,18 @@ export const WRITING_KO: Record<string, { title: string }> = {
 
 // 키는 영문 name. koName 은 앱 자체가 쓰는 한국어 이름
 export const APPS_KO: Record<string, { koName: string; badge: string; kind: string; note: string; line: string }> = {
-  "Seoul Boom": { koName: "서울붐", badge: "운영 중", kind: "여행", note: "iPhone + 웹", line: "서울 주요 장소의 실시간 혼잡도. 위젯과 한산 알림까지." },
-  Runpop: { koName: "런팝", badge: "iPhone + Watch", kind: "러닝", note: "iOS + watchOS", line: "음악은 그대로 두고 한 걸음에 한 번 조용히 클릭하는 러닝 메트로놈." },
-  Ttokuoka: { koName: "또쿠오카", badge: "최신", kind: "여행", note: "iPhone + 웹", line: "한국어 후쿠오카 길잡이. 야타이, 회화, 면세 도움, 오프라인에서도 됩니다." },
-  Carenote: { koName: "케어노트", badge: "iPhone 프로토타입", kind: "건강", note: "iPhone + 웹", line: "이식 환자의 진료일, 약, 검사 추이를 중심으로 다시 설계한 병원 앱." },
+  "Seoul Boom": { koName: "서울붐", badge: "운영 중", kind: "여행", note: "iPhone + 웹", line: "서울 주요 장소의 실시간 혼잡도를 보여 줍니다. 위젯과 한산 알림도 있습니다." },
+  Runpop: { koName: "런팝", badge: "iPhone + Watch", kind: "러닝", note: "iOS + watchOS", line: "음악은 그대로 두고 한 걸음에 한 번 조용히 클릭하는 러닝 메트로놈입니다." },
+  Ttokuoka: { koName: "또쿠오카", badge: "최신", kind: "여행", note: "iPhone + 웹", line: "한국어로 된 후쿠오카 길잡이입니다. 야타이, 회화, 면세 도움을 담았고 오프라인에서도 됩니다." },
+  Carenote: { koName: "케어노트", badge: "iPhone 프로토타입", kind: "건강", note: "iPhone + 웹", line: "이식 환자의 진료일, 약, 검사 추이를 중심으로 다시 설계한 병원 앱입니다." },
   Ppopjido: { koName: "뽑지도", badge: "지도 + 카드", kind: "수집", note: "웹", line: "한국과 일본의 캡슐토이와 포켓몬 카드 지도." },
   Tory: { koName: "토리", badge: "프로토타입", kind: "커플", note: "웹 프로토타입", line: "하나의 실로 이어진 커플 앱. 타임라인과 실시간 데이트 모드." },
   Wishrun: { koName: "위시런", badge: "iPhone + 건강", kind: "러닝", note: "iOS", line: "첫 5km 대회를 위한 7주 플랜을 앱으로. 애플 건강에서 달리기 기록을 읽습니다." },
-  Finishline: { koName: "피니시라인", badge: "5km~풀코스", kind: "러닝", note: "iPhone + 웹", line: "5km 부터 풀코스까지, 대회와 날짜를 고르면 D-day 에서 거꾸로 훈련 플랜을 짜 주는 러닝 코치." },
-  "Hangul Boom": { koName: "한글붐", badge: "정거장 9", kind: "언어", note: "iPhone + 웹", line: "서울행 비행 중에 한글 읽기. 붐치와 정거장 아홉 곳, 완전 오프라인." },
-  "Menchi Kana": { koName: "멘치카나", badge: "가나 208자", kind: "언어", note: "iPhone + 웹", line: "후쿠오카 지하철 노선을 따라 히라가나·가타카나. 손글씨는 획마다 채점." },
-  "Menchi Voca": { koName: "멘치보카", badge: "단어 120", kind: "언어", note: "iPhone + 웹", line: "후쿠오카 여행 일본어 단어 120개를 장면별로. 틀린 단어는 1·3·7일 뒤 다시." },
-  "Puzzle Lounge": { koName: "퍼즐 라운지", badge: "퍼즐 5종", kind: "퍼즐", note: "iPhone", line: "오프라인 퍼즐 다섯 종. 끝없는 레벨, 난이도 6단계, 5레벨마다 수집품." },
+  Finishline: { koName: "피니시라인", badge: "5km~풀코스", kind: "러닝", note: "iPhone + 웹", line: "5km부터 풀코스까지, 대회와 날짜를 고르면 D-day에서 거꾸로 훈련 플랜을 짜 주는 러닝 코치입니다." },
+  "Hangul Boom": { koName: "한글붐", badge: "정거장 9", kind: "언어", note: "iPhone + 웹", line: "서울행 비행 중에 한글 읽기를 배웁니다. 붐치와 함께 정거장 아홉 곳을 지나고, 완전 오프라인입니다." },
+  "Menchi Kana": { koName: "멘치카나", badge: "일본어 글자 208자", kind: "언어", note: "iPhone + 웹", line: "후쿠오카 지하철 노선을 따라 히라가나와 가타카나를 배웁니다. 손글씨는 획마다 채점합니다." },
+  "Menchi Voca": { koName: "멘치보카", badge: "단어 120", kind: "언어", note: "iPhone + 웹", line: "후쿠오카 여행 일본어 단어 120개를 장면별로 익힙니다. 틀린 단어는 1일, 3일, 7일 뒤에 다시 나옵니다." },
+  "Puzzle Lounge": { koName: "퍼즐 라운지", badge: "퍼즐 5종", kind: "퍼즐", note: "iPhone", line: "오프라인 퍼즐 다섯 종입니다. 끝없는 레벨과 난이도 6단계가 있고, 5레벨마다 수집품이 나옵니다." },
   Bapsim: { koName: "밥심", badge: "설계 중", kind: "식단", note: "설계 캔버스", line: "한 상 그대로 기록하는 한식 식단. 밥, 국, 반찬을 네 번 탭으로." },
 };
 

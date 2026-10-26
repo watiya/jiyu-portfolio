@@ -1,5 +1,6 @@
 // 궁합. 두 사람의 사주(saju.ts 결과)를 겹쳐 본다. 일간 관계(생·극·비화·천간합), 지지의 합·충, 오행 보완을 각각 적고 점수는 그 합이다.
 // 점수는 재미용 지표다. 계산 근거는 result.notes 로 전부 드러낸다.
+import { josa } from "../i18n/josa.ts";
 import type { Lang } from "../i18n/lang.ts";
 import { ELEMENTS, ELEMENT_META, type Element, type Pillar, type SajuResult } from "./saju.ts";
 
@@ -45,10 +46,10 @@ export function computeGunghap(a: SajuResult, b: SajuResult, names: [string, str
   const eb = ELEMENT_META[db.ganEl];
   const rel: Record<DayRelation, { delta: number; kind: Note["kind"]; ko: string; en: string }> = {
     same: { delta: 8, kind: "good", ko: `두 사람의 일간이 같은 ${ea.koWord}입니다. 말하지 않아도 통하는 쪽이지만, 같은 자리에서 부딪히기도 합니다.`, en: `Both day masters are ${ea.en}. Much goes unsaid, and the same ground is where you collide.` },
-    aGivesB: { delta: 14, kind: "good", ko: `${na}의 ${ea.koWord}이 ${nb}의 ${eb.koWord}을 살립니다. ${na}가 먼저 내어 주고 ${nb}가 자라는 흐름입니다.`, en: `${na}'s ${ea.en} feeds ${nb}'s ${eb.en}. ${na} gives first and ${nb} grows.` },
-    bGivesA: { delta: 14, kind: "good", ko: `${nb}의 ${eb.koWord}이 ${na}의 ${ea.koWord}을 살립니다. ${nb}가 먼저 내어 주고 ${na}가 자라는 흐름입니다.`, en: `${nb}'s ${eb.en} feeds ${na}'s ${ea.en}. ${nb} gives first and ${na} grows.` },
-    aControlsB: { delta: -6, kind: "clash", ko: `${na}의 ${ea.koWord}이 ${nb}의 ${eb.koWord}을 누르는 자리입니다. 기준을 ${na}가 정하기 쉽고, ${nb}에게는 숨 쉴 틈이 필요합니다.`, en: `${na}'s ${ea.en} presses on ${nb}'s ${eb.en}. ${na} tends to set the terms; ${nb} needs room to breathe.` },
-    bControlsA: { delta: -6, kind: "clash", ko: `${nb}의 ${eb.koWord}이 ${na}의 ${ea.koWord}을 누르는 자리입니다. 기준을 ${nb}가 정하기 쉽고, ${na}에게는 숨 쉴 틈이 필요합니다.`, en: `${nb}'s ${eb.en} presses on ${na}'s ${ea.en}. ${nb} tends to set the terms; ${na} needs room to breathe.` },
+    aGivesB: { delta: 14, kind: "good", ko: `${na}의 ${ea.koWord}${josa(ea.koWord, "이/가")} ${nb}의 ${eb.koWord}${josa(eb.koWord, "을/를")} 살립니다. ${na}${josa(na, "이/가")} 먼저 내어 주고 ${nb}${josa(nb, "이/가")} 자라는 흐름입니다.`, en: `${na}'s ${ea.en} feeds ${nb}'s ${eb.en}. ${na} gives first and ${nb} grows.` },
+    bGivesA: { delta: 14, kind: "good", ko: `${nb}의 ${eb.koWord}${josa(eb.koWord, "이/가")} ${na}의 ${ea.koWord}${josa(ea.koWord, "을/를")} 살립니다. ${nb}${josa(nb, "이/가")} 먼저 내어 주고 ${na}${josa(na, "이/가")} 자라는 흐름입니다.`, en: `${nb}'s ${eb.en} feeds ${na}'s ${ea.en}. ${nb} gives first and ${na} grows.` },
+    aControlsB: { delta: -6, kind: "clash", ko: `${na}의 ${ea.koWord}${josa(ea.koWord, "이/가")} ${nb}의 ${eb.koWord}${josa(eb.koWord, "을/를")} 누르는 자리입니다. 기준을 ${na}${josa(na, "이/가")} 정하기 쉽고, ${nb}에게는 숨 쉴 틈이 필요합니다.`, en: `${na}'s ${ea.en} presses on ${nb}'s ${eb.en}. ${na} tends to set the terms; ${nb} needs room to breathe.` },
+    bControlsA: { delta: -6, kind: "clash", ko: `${nb}의 ${eb.koWord}${josa(eb.koWord, "이/가")} ${na}의 ${ea.koWord}${josa(ea.koWord, "을/를")} 누르는 자리입니다. 기준을 ${nb}${josa(nb, "이/가")} 정하기 쉽고, ${na}에게는 숨 쉴 틈이 필요합니다.`, en: `${nb}'s ${eb.en} presses on ${na}'s ${ea.en}. ${nb} tends to set the terms; ${na} needs room to breathe.` },
   };
   score += rel[relation].delta;
   notes.push({ kind: rel[relation].kind, text: { ko: rel[relation].ko, en: rel[relation].en } });
@@ -56,7 +57,7 @@ export function computeGunghap(a: SajuResult, b: SajuResult, names: [string, str
   const ganHe = pairIn(GAN_HE, da.gan, db.gan);
   if (ganHe) {
     score += 10;
-    notes.push({ kind: "good", text: { ko: `일간 ${da.ganKo}과 ${db.ganKo}은 천간합입니다. 서로를 끌어당기는 짝으로 봅니다.`, en: `Day stems ${da.gan} and ${db.gan} form a stem pair, read as a natural pull toward each other.` } });
+    notes.push({ kind: "good", text: { ko: `일간 ${da.ganKo}${josa(da.ganKo, "과/와")} ${db.ganKo}${josa(db.ganKo, "은/는")} 천간합입니다. 서로를 끌어당기는 짝으로 봅니다.`, en: `Day stems ${da.gan} and ${db.gan} form a stem pair, read as a natural pull toward each other.` } });
   }
 
   // 2. 지지의 합·충: 같은 자리끼리 + 일지와 상대 전부
@@ -77,11 +78,11 @@ export function computeGunghap(a: SajuResult, b: SajuResult, names: [string, str
     if (pairIn(LIU_HE, x.zhi, y.zhi) || sanHe(x.zhi, y.zhi)) {
       he += 1;
       score += 6 * weight;
-      notes.push({ kind: "good", text: { ko: `${where("ko")}의 ${x.zhiKo}와 ${y.zhiKo}가 합을 이룹니다. 같이 있을 때 편한 자리입니다.`, en: `${x.zhi} and ${y.zhi} (${where("en")}) combine. An easy place to be together.` } });
+      notes.push({ kind: "good", text: { ko: `${where("ko")}의 ${x.zhiKo}${josa(x.zhiKo, "과/와")} ${y.zhiKo}${josa(y.zhiKo, "이/가")} 합을 이룹니다. 같이 있을 때 편한 자리입니다.`, en: `${x.zhi} and ${y.zhi} (${where("en")}) combine. An easy place to be together.` } });
     } else if (pairIn(CHONG, x.zhi, y.zhi)) {
       chong += 1;
       score -= 8 * weight;
-      notes.push({ kind: "clash", text: { ko: `${where("ko")}의 ${x.zhiKo}와 ${y.zhiKo}가 충입니다. 생활 리듬이나 속도가 엇갈리기 쉬운 자리입니다.`, en: `${x.zhi} and ${y.zhi} (${where("en")}) clash. Rhythm and pace can cross here.` } });
+      notes.push({ kind: "clash", text: { ko: `${where("ko")}의 ${x.zhiKo}${josa(x.zhiKo, "과/와")} ${y.zhiKo}${josa(y.zhiKo, "이/가")} 충입니다. 생활 리듬이나 속도가 엇갈리기 쉬운 자리입니다.`, en: `${x.zhi} and ${y.zhi} (${where("en")}) clash. Rhythm and pace can cross here.` } });
     }
   };
   for (let i = 0; i < 4; i++) check(i, i, i === 2 ? 1.5 : 1);
@@ -94,11 +95,11 @@ export function computeGunghap(a: SajuResult, b: SajuResult, names: [string, str
     const m = ELEMENT_META[el];
     if (a.percent[el] <= 8 && b.percent[el] >= 20) {
       fills += 1;
-      notes.push({ kind: "fill", text: { ko: `${na}에게 적은 ${m.koWord}(${m.ko})을 ${nb}가 넉넉히 갖고 있습니다.`, en: `${nb} carries plenty of the ${m.en} that ${na} has little of.` } });
+      notes.push({ kind: "fill", text: { ko: `${na}에게 적은 ${m.koWord}(${m.ko})${josa(m.ko, "을/를")} ${nb}${josa(nb, "이/가")} 넉넉히 갖고 있습니다.`, en: `${nb} carries plenty of the ${m.en} that ${na} has little of.` } });
     }
     if (b.percent[el] <= 8 && a.percent[el] >= 20) {
       fills += 1;
-      notes.push({ kind: "fill", text: { ko: `${nb}에게 적은 ${m.koWord}(${m.ko})을 ${na}가 넉넉히 갖고 있습니다.`, en: `${na} carries plenty of the ${m.en} that ${nb} has little of.` } });
+      notes.push({ kind: "fill", text: { ko: `${nb}에게 적은 ${m.koWord}(${m.ko})${josa(m.ko, "을/를")} ${na}${josa(na, "이/가")} 넉넉히 갖고 있습니다.`, en: `${na} carries plenty of the ${m.en} that ${nb} has little of.` } });
     }
   }
   score += fills * 4;
