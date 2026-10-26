@@ -375,6 +375,9 @@ function Journey() {
 
 // ---------- 07 Contact ----------
 
+// 링크 옆에 찍는 주소. 프로토콜과 끝 / 는 뺀다
+const hostOf = (href: string) => href.replace(/^https?:\/\//, "").replace(/\/$/, "");
+
 // 첫 화면(Front)도 같은 연락 섹션을 쓴다
 export function Contact({ go }: { go: (href: string) => void }) {
   const { toast } = useTokens();
@@ -398,22 +401,42 @@ export function Contact({ go }: { go: (href: string) => void }) {
       <h2 id="contact-title" className="sr-only">
         {t.sections.contact}
       </h2>
-      <a className="contact__mail" href={`mailto:${EMAIL}`} onClick={(e) => void copy(e)} data-token="text.default font.heading">
-        {EMAIL}
-      </a>
-      <div className="contact__foot">
-        <ul className="contact__socials" role="list">
-          {SOCIALS.map((s) => (
-            <li key={s.label}>
-              <a href={s.href} target="_blank" rel="noreferrer">
-                {t.contact.socials[s.label] ?? s.label} ↗
-              </a>
-            </li>
-          ))}
-        </ul>
-        <span className="mono contact__time">
-          {t.contact.place} · <time dateTime={time}>{time}</time>
-        </span>
+      <div className="contact__grid">
+        <div className="contact__lead">
+          <p className="contact__invite" data-token="text.muted">
+            {t.contact.invite}
+          </p>
+          <a className="contact__mail" href={`mailto:${EMAIL}`} onClick={(e) => void copy(e)} data-token="text.default font.heading">
+            {EMAIL}
+          </a>
+          <span className="mono contact__time">
+            <span className="contact__dot" aria-hidden="true" />
+            {t.contact.place} · <time dateTime={time}>{time}</time>
+          </span>
+        </div>
+        <div className="contact__elsewhere">
+          <p className="mono contact__kicker">{t.contact.elsewhere}</p>
+          <ul className="contact__links" role="list" data-token="line.default">
+            {SOCIALS.map((s, i) => {
+              const l = t.contact.links[s.key];
+              return (
+                <li key={s.key}>
+                  <a className="contact__link" href={s.href} target="_blank" rel="noreferrer">
+                    <span className="mono contact__idx">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="contact__body">
+                      <span className="contact__label">{l.label}</span>
+                      <span className="contact__note">{l.note}</span>
+                    </span>
+                    <span className="mono contact__host">{hostOf(s.href)}</span>
+                    <span className="contact__arrow" aria-hidden="true">
+                      ↗
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
       <p className="mono contact__ver">
         {!HIDE_PRIVATE && (

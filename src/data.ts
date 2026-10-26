@@ -1,9 +1,11 @@
 // 콘텐츠 정본은 resume/resume.en.md 와 brainchild/content/projects. 여기는 화면용 발췌다.
 import { isHiddenApp } from "./hidden.ts";
 export const EMAIL = "brainchild.idea@gmail.com";
+// 연락 섹션 링크. 이름·설명은 i18n contact.links 의 같은 key 에 있다
 export const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/watiya" },
-  { label: "Team · Brainchild Works", href: "https://brainchild.works" },
+  { key: "apps", href: "https://apps.brainchild.studio" },
+  { key: "github", href: "https://github.com/watiya" },
+  { key: "team", href: "https://brainchild.works" },
 ] as const;
 
 // 회사 사례는 src/cases/(md 원문), 이전 포트폴리오 작업 색인은 src/works.ts 에 있다.

@@ -403,10 +403,16 @@ const en = {
   // 연락
   contact: {
     aside: "click the address to copy",
+    invite: "Questions and app feedback are welcome by email.",
     copied: "Email copied",
     emailIs: (email: string) => `Email: ${email}`,
     place: "Seoul · GMT+9",
-    socials: { GitHub: "GitHub", X: "X", Portfolio: "Portfolio" } as Record<string, string>,
+    elsewhere: "Elsewhere",
+    links: {
+      apps: { label: "Apps", note: "App pages, support and privacy" },
+      github: { label: "GitHub", note: "Public code" },
+      team: { label: "Team", note: "Brainchild Works, my team studio" },
+    },
     changelog: "Changelog",
     updated: (date: string) => `Updated ${date}`,
   },
@@ -924,10 +930,16 @@ const ko: UI = {
   },
   contact: {
     aside: "주소를 누르면 복사됩니다",
+    invite: "궁금한 점이나 앱 의견은 메일로.",
     copied: "이메일을 복사했습니다",
     emailIs: (email) => `이메일: ${email}`,
     place: "서울 · GMT+9",
-    socials: { GitHub: "GitHub", X: "X", Portfolio: "포트폴리오" },
+    elsewhere: "다른 곳",
+    links: {
+      apps: { label: "앱", note: "앱 소개와 지원, 처리방침" },
+      github: { label: "GitHub", note: "공개 코드" },
+      team: { label: "팀", note: "팀 스튜디오 Brainchild Works" },
+    },
     changelog: "체인지로그",
     updated: (date) => `${date} 갱신`,
   },

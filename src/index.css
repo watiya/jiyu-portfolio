@@ -638,13 +638,35 @@ html[data-motion="off"] .reveal { opacity: 1; transform: none; transition: none;
 }
 
 /* ---------- 06 연락 ---------- */
-.contact__mail { display: block; width: fit-content; max-width: 100%; margin-top: var(--space-4); font-family: var(--font-heading); font-weight: var(--heading-weight); font-style: var(--heading-style); letter-spacing: var(--heading-tracking); font-size: clamp(24px, 3.4vw, 48px); line-height: 1.1; text-decoration: none; overflow-wrap: anywhere; border-bottom: 2px solid transparent; transition: border-color var(--duration-1) var(--ease-default); }
+/* 왼쪽은 이메일(주 행동), 오른쪽은 줄 친 링크 색인. 좁으면 위아래로 쌓는다 */
+.contact__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-7); margin-top: var(--space-4); }
+@media (min-width: 900px) { .contact__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--space-8); align-items: start; } }
+.contact__lead { min-width: 0; }
+.contact__invite { margin: 0; max-width: 40ch; font-size: var(--text-lg); line-height: 1.45; color: var(--text-muted); text-wrap: pretty; }
+.contact__mail { display: block; width: fit-content; max-width: 100%; margin-top: var(--space-3); font-family: var(--font-heading); font-weight: var(--heading-weight); font-style: var(--heading-style); letter-spacing: var(--heading-tracking); font-size: clamp(24px, 3.4vw, 48px); line-height: 1.1; text-decoration: none; overflow-wrap: anywhere; border-bottom: 2px solid transparent; transition: border-color var(--duration-1) var(--ease-default); }
 .contact__mail:hover { border-bottom-color: var(--accent-default); }
-.contact__foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--line-default); }
-.contact__socials { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
-.contact__socials a { display: inline-block; padding-block: var(--space-2); color: var(--text-muted); text-decoration: none; font-size: var(--text-sm); }
-.contact__socials a:hover { color: var(--text-default); }
-.contact__time { color: var(--text-subtle); align-self: center; }
+.contact__time { display: inline-flex; align-items: center; gap: var(--space-2); margin-top: var(--space-5); color: var(--text-subtle); }
+.contact__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--annot-color); }
+.contact__kicker { margin: 0 0 var(--space-3); color: var(--text-subtle); text-transform: uppercase; letter-spacing: 0.08em; }
+.contact__links { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-default); }
+.contact__links li { border-bottom: 1px solid var(--line-default); }
+.contact__link { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto auto; gap: var(--space-3); align-items: baseline; padding: var(--space-4) 0; color: var(--text-default); text-decoration: none; }
+.contact__idx { color: var(--text-subtle); }
+.contact__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.contact__label { font-size: var(--text-lg); font-weight: 500; letter-spacing: -0.01em; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color var(--duration-1) var(--ease-default); }
+.contact__note { color: var(--text-muted); font-size: var(--text-sm); text-wrap: pretty; }
+.contact__host { color: var(--text-subtle); white-space: nowrap; }
+.contact__arrow { color: var(--text-subtle); transition: transform var(--duration-1) var(--ease-default), color var(--duration-1) var(--ease-default); }
+.contact__link:hover .contact__label, .contact__link:focus-visible .contact__label { text-decoration-color: var(--accent-default); }
+.contact__link:hover .contact__arrow, .contact__link:focus-visible .contact__arrow { color: var(--accent-text); transform: translate(2px, -2px); }
+/* 좁은 화면은 주소를 빼고 이름과 설명만 둔다 */
+@media (max-width: 639px) {
+  /* 375px 에서도 주소가 한 줄에 들어가게 폭에 맞춰 줄인다 */
+  .contact__invite { font-size: var(--text-md); }
+  .contact__mail { font-size: clamp(18px, 5.4vw, 32px); }
+  .contact__link { grid-template-columns: 28px minmax(0, 1fr) auto; }
+  .contact__host { display: none; }
+}
 
 /* ---------- /case-studies ---------- */
 .cases { padding-block: var(--space-7) var(--space-10); }
@@ -853,7 +875,7 @@ html[data-inspect="on"] [data-token]:hover { outline-color: var(--accent-default
   .tool, .iconbtn, .seg__item, .preset, .pair, .toast__close, .palette__item, .btn--sm { min-height: 44px; }
   .lang { height: 44px; }
   .lang__opt { min-width: 44px; }
-  .hdr__nav a, .contact__socials a, .detail__nav a, .rel__title, .case__title { padding-block: var(--space-3); }
+  .hdr__nav a, .detail__nav a, .rel__title, .case__title { padding-block: var(--space-3); }
   /* 본문 속 인라인 링크는 줄 높이를 바꾸지 않고 손가락 폭만 넓힌다 */
   .wk__name, .wk__case, .row__title, .seclabel__link, .craft__meta a, .cases__more a, .rel__more a, .prose a, .caseimg figcaption a { padding-block: var(--space-3); }
   .layers__take-dials { padding-block: var(--space-3); margin-block: calc(var(--space-3) * -1); }
