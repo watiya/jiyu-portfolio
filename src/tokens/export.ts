@@ -2,7 +2,7 @@
 // 이름 규칙은 화면과 같다: --card-line-hover 는 card.line-hover, var(--surface-raised) 는 별칭 {surface.raised}
 import { ACCENT_STEPS, NEUTRAL_STEPS, PAIRING_META, SPACE_SCALE, dialsToQuery, type Tokens } from "./engine.ts";
 
-const SITE = "https://www.brainchild.kr/projects";
+const SITE = "https://www.brainchild.studio/projects";
 
 export function themeLink(tokens: Tokens): string {
   const q = dialsToQuery(tokens.dials);

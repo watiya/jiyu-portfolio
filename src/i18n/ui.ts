@@ -9,7 +9,7 @@ const en = {
   tagline: "Small apps from everyday life, tied together by one design system",
   metaDescription:
     "Small apps from everyday life, tied together by one design system. Every app has its own color. This site wears it.",
-  // 첫 화면 (brainchild.kr): 토큰 놀이터 > 재미요소 > 앱
+  // 첫 화면 (brainchild.studio): 토큰 놀이터 > 재미요소 > 앱
   front: {
     title: "Brainchild | Token playground",
     kicker: "Token playground",

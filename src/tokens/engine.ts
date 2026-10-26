@@ -62,15 +62,15 @@ export const MOTIONS: Motion[] = ["off", "calm", "lively"];
 export const THEMES: Theme[] = ["light", "dark"];
 export const PAPERS: Paper[] = ["tint", "white"];
 
-// 모든 스택은 1순위 서체 뒤에 Pretendard Variable 을 한글 대체로 둔다. trackingKo 는 한글 제목용(html[lang=ko])
+// 모든 스택은 1순위 서체 뒤에 Pretendard Variable 을 한글 대체로 둔다. Pretendard 를 못 받으면 일반 serif·monospace 로 떨어지기 전에 한글 고딕 시스템 서체가 받는다. trackingKo 는 한글 제목용(html[lang=ko])
 // leading 은 큰 제목(h1)의 줄간. 글자 폭이 고른 모노는 줄이 길어 보여 조금 벌린다
 export const HANGUL = "'Pretendard Variable'";
 export const PAIRING_META: Record<Pairing, { label: string; heading: string; body: string; mono: string; weight: number; tracking: string; trackingKo: string; leading: number; italic: boolean }> = {
   geist: {
     label: "Geist + Geist Mono",
-    heading: "'Geist Variable', 'Pretendard Variable', ui-sans-serif, system-ui, sans-serif",
-    body: "'Geist Variable', 'Pretendard Variable', ui-sans-serif, system-ui, sans-serif",
-    mono: "'Geist Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
+    heading: "'Geist Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif",
+    body: "'Geist Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif",
+    mono: "'Geist Mono Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-monospace, 'SF Mono', Menlo, monospace",
     weight: 600,
     tracking: "-0.03em",
     trackingKo: "-0.015em",
@@ -79,9 +79,9 @@ export const PAIRING_META: Record<Pairing, { label: string; heading: string; bod
   },
   editorial: {
     label: "Instrument Serif + Inter",
-    heading: "'Instrument Serif', 'Pretendard Variable', ui-serif, Georgia, serif",
-    body: "'Inter Variable', 'Pretendard Variable', ui-sans-serif, system-ui, sans-serif",
-    mono: "'JetBrains Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
+    heading: "'Instrument Serif', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-serif, Georgia, serif",
+    body: "'Inter Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif",
+    mono: "'JetBrains Mono Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-monospace, 'SF Mono', Menlo, monospace",
     weight: 400,
     tracking: "-0.01em",
     trackingKo: "-0.01em",
@@ -90,9 +90,9 @@ export const PAIRING_META: Record<Pairing, { label: string; heading: string; bod
   },
   grotesk: {
     label: "Space Grotesk + JetBrains Mono",
-    heading: "'Space Grotesk Variable', 'Pretendard Variable', ui-sans-serif, system-ui, sans-serif",
-    body: "'Space Grotesk Variable', 'Pretendard Variable', ui-sans-serif, system-ui, sans-serif",
-    mono: "'JetBrains Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
+    heading: "'Space Grotesk Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif",
+    body: "'Space Grotesk Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif",
+    mono: "'JetBrains Mono Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-monospace, 'SF Mono', Menlo, monospace",
     weight: 500,
     tracking: "-0.035em",
     trackingKo: "-0.015em",
@@ -101,9 +101,9 @@ export const PAIRING_META: Record<Pairing, { label: string; heading: string; bod
   },
   funnel: {
     label: "Funnel Display + Funnel Sans",
-    heading: "'Funnel Display Variable', 'Pretendard Variable', ui-sans-serif, system-ui, sans-serif",
-    body: "'Funnel Sans Variable', 'Pretendard Variable', ui-sans-serif, system-ui, sans-serif",
-    mono: "'Geist Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
+    heading: "'Funnel Display Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif",
+    body: "'Funnel Sans Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif",
+    mono: "'Geist Mono Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-monospace, 'SF Mono', Menlo, monospace",
     weight: 600,
     tracking: "-0.025em",
     trackingKo: "-0.015em",
@@ -113,9 +113,9 @@ export const PAIRING_META: Record<Pairing, { label: string; heading: string; bod
   // 제목·본문 모두 모노. 주석은 JetBrains Mono 로 갈라 본문과 구분한다. 고정폭이라 큰 제목은 자간을 더 조이고 줄간을 벌린다
   mono: {
     label: "Geist Mono + JetBrains Mono",
-    heading: "'Geist Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
-    body: "'Geist Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
-    mono: "'JetBrains Mono Variable', 'Pretendard Variable', ui-monospace, 'SF Mono', Menlo, monospace",
+    heading: "'Geist Mono Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-monospace, 'SF Mono', Menlo, monospace",
+    body: "'Geist Mono Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-monospace, 'SF Mono', Menlo, monospace",
+    mono: "'JetBrains Mono Variable', 'Pretendard Variable', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ui-monospace, 'SF Mono', Menlo, monospace",
     weight: 500,
     tracking: "-0.045em",
     trackingKo: "-0.02em",

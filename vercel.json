@@ -13,7 +13,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/projects",
+      "destination": "https://www.brainchild.studio/projects",
       "permanent": true
     },
     {
@@ -24,7 +24,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/:section",
+      "destination": "https://www.brainchild.studio/:section",
       "permanent": true
     },
     {
@@ -35,7 +35,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/:section?lang=ko",
+      "destination": "https://www.brainchild.studio/:section?lang=ko",
       "permanent": true
     },
     {
@@ -46,7 +46,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/:section",
+      "destination": "https://www.brainchild.studio/:section",
       "permanent": true
     },
     {
@@ -57,7 +57,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/:section/:rest+",
+      "destination": "https://www.brainchild.studio/:section/:rest+",
       "permanent": true
     },
     {
@@ -68,7 +68,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/:section/:rest+?lang=ko",
+      "destination": "https://www.brainchild.studio/:section/:rest+?lang=ko",
       "permanent": true
     },
     {
@@ -79,7 +79,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/:section/:rest+",
+      "destination": "https://www.brainchild.studio/:section/:rest+",
       "permanent": true
     },
     {
@@ -90,7 +90,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/resume",
+      "destination": "https://www.brainchild.studio/resume",
       "permanent": true
     },
     {
@@ -101,7 +101,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/resume?lang=ko",
+      "destination": "https://www.brainchild.studio/resume?lang=ko",
       "permanent": true
     },
     {
@@ -112,7 +112,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/resume",
+      "destination": "https://www.brainchild.studio/resume",
       "permanent": true
     },
     {
@@ -123,7 +123,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/resume?lang=ko",
+      "destination": "https://www.brainchild.studio/resume?lang=ko",
       "permanent": true
     },
     {
@@ -134,7 +134,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/resume",
+      "destination": "https://www.brainchild.studio/resume",
       "permanent": true
     },
     {
@@ -167,7 +167,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/projects?lang=ko",
+      "destination": "https://www.brainchild.studio/projects?lang=ko",
       "permanent": true
     },
     {
@@ -178,7 +178,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.kr/projects",
+      "destination": "https://www.brainchild.studio/projects",
       "permanent": true
     },
     {

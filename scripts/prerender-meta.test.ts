@@ -6,7 +6,7 @@ import { join } from "node:path";
 import { APP_DETAILS } from "../src/appDetails.ts";
 import { STRINGS } from "../src/i18n/ui.ts";
 import { WORKS } from "../src/works.ts";
-import { CANVAS_SLUGS, SITE, applyMeta, buildRobots, buildRoutes, buildSitemap, escapeHtml, imageSize, readEnglishCases, type RouteMeta } from "./prerender-meta.ts";
+import { CANVAS_SLUGS, SITE, applyMeta, buildRobots, buildRoutes, buildSitemap, escapeHtml, imageSize, readCases, readEnglishCases, type RouteMeta } from "./prerender-meta.ts";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const sizeOf = (p: string) => imageSize(readFileSync(join(ROOT, "public", p)));
@@ -23,8 +23,8 @@ const TEMPLATE = `<!doctype html>
     <meta property="og:site_name" content="Brainchild" />
     <meta property="og:title" content="base title" />
     <meta property="og:description" content="base og description" />
-    <meta property="og:url" content="https://www.brainchild.kr/" />
-    <meta property="og:image" content="https://www.brainchild.kr/og.png" />
+    <meta property="og:url" content="https://www.brainchild.studio/" />
+    <meta property="og:image" content="https://www.brainchild.studio/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -103,6 +103,26 @@ test("applyMeta: 기본 경로는 템플릿의 og:description 을 지키고, 크
   assert.ok(html.includes('content="base og description"'));
   assert.ok(!html.includes("og:image:width") && !html.includes("og:image:height"));
   assert.ok(html.includes('<meta name="twitter:description" content="d" />'));
+});
+
+test("applyMeta 한국어판: html lang·주소·locale·hreflang, 다시 돌려도 같다", () => {
+  const koRoutes = buildRoutes({ cases: readCases(ROOT, "ko"), appDetails: APP_DETAILS, works: WORKS, canvasSlugs: CANVAS_SLUGS, ui: STRINGS.ko, lang: "ko" }, sizeOf);
+  assert.equal(koRoutes.length, ROUTE_COUNT);
+  const m = koRoutes.find((r) => r.path === "/tools/saju")!;
+  assert.equal(m.title, STRINGS.ko.titles.tool(STRINGS.ko.toolsPage.items.saju.name));
+  assert.equal(koRoutes.find((r) => r.path === "/apps")!.ogDescription, STRINGS.ko.metaDescription);
+  assert.equal(koRoutes.find((r) => r.path === "/work/starground")!.description, WORKS.find((w) => w.slug === "starground")!.tagline.ko);
+  const html = applyMeta(TEMPLATE, m, "ko");
+  assert.ok(html.includes('<html lang="ko">'));
+  assert.ok(html.includes(`<link rel="canonical" href="${SITE}/tools/saju?lang=ko" />`));
+  assert.ok(html.includes(`<meta property="og:url" content="${SITE}/tools/saju?lang=ko" />`));
+  assert.ok(html.includes('<meta property="og:locale" content="ko_KR" />') && html.includes('<meta property="og:locale:alternate" content="en_US" />'));
+  assert.ok(html.includes(`<link rel="alternate" hreflang="en" href="${SITE}/tools/saju" />`));
+  assert.ok(html.includes(`<link rel="alternate" hreflang="ko" href="${SITE}/tools/saju?lang=ko" />`));
+  assert.equal(applyMeta(html, m, "ko"), html, "다시 돌려도 같다");
+  const en = applyMeta(html, routes.find((r) => r.path === "/tools/saju")!);
+  assert.ok(en.includes('<html lang="en">') && en.includes('<meta property="og:locale" content="en_US" />'));
+  assert.equal(count(en, 'rel="alternate"'), 3);
 });
 
 test("이스케이프: 따옴표·꺾쇠·앰퍼샌드, 그리고 $ 치환 패턴이 새지 않는다", () => {

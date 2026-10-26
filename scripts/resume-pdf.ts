@@ -10,7 +10,7 @@ import { renderResume } from "../src/resume/render.ts";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const OUT = join(ROOT, "../../resume");
-const SITE = "https://www.brainchild.kr";
+const SITE = "https://www.brainchild.studio";
 const CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
 const nameFile = join(OUT, "name.json");

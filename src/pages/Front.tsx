@@ -1,4 +1,4 @@
-// brainchild.kr 첫 화면 (2026-10-14 개편). 주인공은 토큰 놀이터: 다이얼을 돌리면 견본 화면과 사이트가 같이 바뀌고,
+// brainchild.studio 첫 화면 (2026-10-14 개편). 주인공은 토큰 놀이터: 다이얼을 돌리면 견본 화면과 사이트가 같이 바뀌고,
 // 결과를 DESIGN.md·tokens.css·tokens.json 으로 가져간다. 그 아래 재미요소 띠, 그 아래 앱, 맨 끝 연락.
 import { useLang } from "../i18n/useLang.ts";
 import { getAppDetails, getApps } from "../i18n/content.ts";
