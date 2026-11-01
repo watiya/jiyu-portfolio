@@ -571,6 +571,17 @@ const ALL_PRESETS: Preset[] = [
     ],
     dials: { hue: hueOf("#75fc96"), primary: "#75fc96", secondary: "#161618", neutral: "neutral", radius: 24, theme: "light", pairing: "geist" },
   },
+  // 지하철대통합: 먹색 버튼과 탭 바가 주, 색은 노선 색이 맡는다. 둘째는 2호선 초록(apps/subway-daetonghap src/styles/tokens.css)
+  {
+    slug: "seoul-subway",
+    name: "Seoul Subway",
+    swatches: [
+      { hex: "#171717", label: "ink" },
+      { hex: "#00a84d", label: "line 2" },
+      { hex: "#f7f7f7", label: "paper" },
+    ],
+    dials: { hue: hueOf("#00a84d"), primary: "#171717", secondary: "#00a84d", neutral: "neutral", radius: 20, theme: "light", pairing: "geist" },
+  },
   // 붐치·멘치 시리즈 새 앱. 색은 각 앱 :root 변수 그대로(hangul-boom·puzzle-lounge src/styles.css, menchi-kana·menchi-voca src/index.css)
   // 한글붐: 라임 타일 + 먹색 버튼이 주, 바이올렛은 로마자·강조에만. 라임이 주색이라 primary 로 그대로
   {

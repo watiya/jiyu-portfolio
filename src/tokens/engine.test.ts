@@ -132,7 +132,7 @@ test("contrast fix: muted text that is too light walks toward ink", () => {
 });
 
 test("presets build and pass AA", () => {
-  assert.equal(PRESETS.length, 10);
+  assert.equal(PRESETS.length, 11);
   for (const p of PRESETS) {
     const { semantic: s } = buildTokens({ ...PRESET_BASE, ...p.dials });
     assert.ok(contrast(s.accent.on, s.accent.default) >= AA_TEXT, p.name);

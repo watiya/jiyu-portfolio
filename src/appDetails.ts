@@ -23,9 +23,57 @@ export const APP_LINKS: Record<string, { privacy?: string; support?: string }> =
   "hangul-boom": { privacy: "https://hangul-boom.vercel.app/privacy.html" },
   "menchi-kana": { privacy: "https://menchi-kana.vercel.app/privacy.html" },
   "menchi-voca": { privacy: "https://menchi-voca.vercel.app/privacy.html" },
+  "seoul-subway": { privacy: "https://subway.brainchild.studio/privacy", support: "https://subway.brainchild.studio/support" },
 };
 
 const ALL_APP_DETAILS: AppDetail[] = [
+  {
+    slug: "seoul-subway",
+    name: "Seoul Subway",
+    title: "The whole Seoul area subway in one app",
+    dek: "A subway map, live arrivals, and routes for 655 stations on 24 lines, plus a stamp for every station you get off at.",
+    date: "Oct 2026",
+    meta: [
+      { label: "Role", value: "Product, design, and build" },
+      { label: "Platform", value: "iPhone app + web" },
+      { label: "Status", value: "On an iPhone, App Store listing drafted" },
+    ],
+    stack: ["React", "TypeScript", "Vite", "Capacitor", "OpenStreetMap"],
+    day: [
+      { title: "Planning the trip", body: "Pick a start and a destination to see travel time, transfers, and the wait when you change trains.", shot: "/apps/seoul-subway/route.png" },
+      { title: "At the platform", body: "Open a station for live arrivals, the full timetable by direction, first and last trains, restrooms, and elevators.", shot: "/apps/seoul-subway/arrival.png" },
+      { title: "Getting off", body: "Check your location once, within 400 m of the station, and the stamp goes into that line's collection.", shot: "/apps/seoul-subway/stamp.png" },
+    ],
+    sections: [
+      {
+        heading: "The problem",
+        body: [
+          "Getting around the Seoul area by subway means a map in one app, arrivals in another, and timetables or restroom locations somewhere else again.",
+          "The app puts them on one map, and adds a reason to go somewhere new: a stamp for each station you actually get off at.",
+        ],
+      },
+      {
+        heading: "What I built",
+        body: [
+          "655 stations on 24 lines, from Lines 1 to 9 to Gyeongui-Jungang, Suin-Bundang, Shinbundang, AREX, GTX-A, Incheon Lines 1 and 2, and the Gimpo Goldline. The map is based on the official Seoul Metro Map, and start, via, and destination can be set right on it.",
+          "Live arrivals on 19 lines, and the next train from the timetable on the rest. Each station has full timetables by direction, first and last trains, an alert 20 minutes before the last train, and the last train that runs all the way to the end of the line.",
+          "Routes count travel time, transfers, and the wait when you change trains, and an On the way screen shows where you are.",
+          "Stamps: check your location once within 400 m of the station, or photograph the station sign where GPS is weak. Each line has a collection that colors in the stations you have visited and gives a badge when the line is done.",
+          "A meeting point finder suggests a fair station for two or more friends, and 7,438 cafes, restaurants, and parks within 600 m of stations come from OpenStreetMap.",
+        ],
+      },
+      {
+        heading: "Decisions worth noting",
+        body: [
+          "No account and no ads. Stamps and history stay on the device, and location and photos never leave it. The station sign photo is read on the device and not saved.",
+          "Station data and timetables are built into the app, so it opens without a connection. Only live arrivals need the network, through a small relay that sends a station name and nothing about the user.",
+          "Where a line has no live data, the app falls back to the timetable instead of showing nothing. Everline timetables are estimates built from service intervals, and the app says so.",
+          "Korean and English, light and dark, chosen in Settings.",
+        ],
+      },
+    ],
+    shots: ["/apps/seoul-subway/map.png", "/apps/seoul-subway/route.png", "/apps/seoul-subway/arrival.png", "/apps/seoul-subway/collect.png"],
+  },
   {
     slug: "seoul-boom",
     name: "Seoul Boom",

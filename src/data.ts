@@ -71,6 +71,7 @@ const ALL_APPS: App[] = [
   { name: "Hangul Boom", badge: "9 stops", kind: "Language", note: "iPhone + web", line: "Learn to read Hangul on the flight to Seoul: nine stops with Boomchi, fully offline.", image: "/side/hangul-boom.png", href: "https://hangulboom.brainchild.studio", series: "boomchi" },
   { name: "Menchi Kana", badge: "208 kana", kind: "Language", note: "iPhone + web", line: "Hiragana and katakana along Fukuoka's subway lines, with handwriting checked stroke by stroke.", image: "/side/menchi-kana.png", href: "https://menchikana.brainchild.studio", series: "menchi" },
   { name: "Menchi Voca", badge: "120 words", kind: "Language", note: "iPhone + web", line: "120 Japanese words for a Fukuoka trip, by scene. Missed words come back after 1, 3 and 7 days.", image: "/side/menchi-voca.png", href: "https://menchivoca.brainchild.studio", series: "menchi" },
+  { name: "Seoul Subway", badge: "24 lines", kind: "Transit", note: "iPhone + web", line: "The Seoul area subway in one app: map, live arrivals, routes, and a stamp for every station you get off at.", image: "/side/seoul-subway.png", href: "https://subway.brainchild.studio" },
   { name: "Puzzle Lounge", badge: "5 puzzles", kind: "Puzzles", note: "iPhone", line: "Five offline puzzles with endless levels, six difficulties, and a collectible every five levels.", image: "/side/puzzle-lounge.png", series: "boomchi" },
 ];
 export const APPS: App[] = ALL_APPS.filter((a) => !isHiddenApp(a.name.toLowerCase().replace(/\s+/g, "-")));
