@@ -243,7 +243,7 @@ const en = {
   // 앱 전체 목록 (/apps)
   appsPage: {
     title: "All apps",
-    lede: "Every app I designed and built on my own, grouped by series. Each card opens its spec sheet.",
+    lede: "Every app the team designed and built, grouped by series. Each card opens its spec sheet.",
     aside: (n: number) => `${n} apps`,
     filter: "Filter by kind",
     all: "All",
@@ -253,7 +253,7 @@ const en = {
   // 소개 (/about): 무엇인지, 화면을 읽는 기준, 앱별 처리방침
   aboutPage: {
     title: "About",
-    lede: "Brainchild is a set of small apps that start from everyday snags, and the one design system they share. Planning, screens, and code come from the same hands.",
+    lede: "Brainchild is a set of small apps that start from everyday snags, and the one design system they share. Planning, screens, and code are made together by the team, Brainchild Works.",
     readTitle: "How to read these pages",
     read: [
       { label: "Screens", body: "Most screens are captures of the running app. A few come from the design canvas, drawn before the build." },
@@ -411,8 +411,9 @@ const en = {
     elsewhere: "Elsewhere",
     links: {
       apps: { label: "Apps", note: "App pages, support and privacy" },
-      github: { label: "GitHub", note: "Public code" },
-      team: { label: "Team", note: "Brainchild Works, my team studio" },
+      instagram: { label: "Instagram", note: "@brainchild.works_official" },
+      threads: { label: "Threads", note: "@brainchild.works_official" },
+      team: { label: "Team", note: "Brainchild Works, the team studio" },
     },
     changelog: "Changelog",
     updated: (date: string) => `Updated ${date}`,
@@ -783,7 +784,7 @@ const ko: UI = {
   },
   appsPage: {
     title: "앱 전체",
-    lede: "혼자 설계하고 만든 앱을 전부 시리즈별로 모았습니다. 카드를 누르면 스펙 시트가 열립니다.",
+    lede: "팀이 설계하고 만든 앱을 전부 시리즈별로 모았습니다. 카드를 누르면 스펙 시트가 열립니다.",
     aside: (n) => `앱 ${n}`,
     filter: "종류로 거르기",
     all: "전체",
@@ -792,7 +793,7 @@ const ko: UI = {
   },
   aboutPage: {
     title: "소개",
-    lede: "Brainchild는 생활 속 작은 불편에서 출발한 앱들과, 그 앱들이 함께 쓰는 디자인 시스템 하나입니다. 기획과 화면, 코드를 혼자 만듭니다.",
+    lede: "Brainchild는 생활 속 작은 불편에서 출발한 앱들과, 그 앱들이 함께 쓰는 디자인 시스템 하나입니다. 기획과 화면, 코드를 팀 Brainchild Works가 함께 만듭니다.",
     readTitle: "이 페이지를 읽는 법",
     read: [
       { label: "화면", body: "대부분 실제로 도는 앱의 캡처입니다. 일부는 만들기 전 설계 캔버스에서 그린 화면입니다." },
@@ -940,7 +941,8 @@ const ko: UI = {
     elsewhere: "다른 곳",
     links: {
       apps: { label: "앱", note: "앱 소개와 지원, 처리방침" },
-      github: { label: "GitHub", note: "공개 코드" },
+      instagram: { label: "인스타그램", note: "@brainchild.works_official" },
+      threads: { label: "스레드", note: "@brainchild.works_official" },
       team: { label: "팀", note: "팀 스튜디오 Brainchild Works" },
     },
     changelog: "체인지로그",

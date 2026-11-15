@@ -376,7 +376,8 @@ function Journey() {
 // ---------- 07 Contact ----------
 
 // 링크 옆에 찍는 주소. 프로토콜과 끝 / 는 뺀다
-const hostOf = (href: string) => href.replace(/^https?:\/\//, "").replace(/\/$/, "");
+// 주소 칸에는 도메인만 보인다 (긴 계정 주소가 제목과 겹치지 않게)
+const hostOf = (href: string) => new URL(href).host.replace(/^www\./, "");
 
 // 첫 화면(Front)도 같은 연락 섹션을 쓴다
 export function Contact({ go }: { go: (href: string) => void }) {
