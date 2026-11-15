@@ -44,11 +44,10 @@ export const WRITING: { slug: string; title: string }[] = [
 
 // 지금 하는 일. asOf 는 이 목록을 마지막으로 확인한 날(YYYY-MM-DD)이고, 푸터의 갱신일이 이 값을 따른다.
 export const NOW: { asOf: string; items: string[] } = {
-  asOf: "2026-10-07",
+  asOf: "2026-11-15",
   items: [
     "Finishing Ttokuoka before a real trip to Fukuoka in late November",
-    "Preparing Seoul Boom for App Store submission",
-    "Testing Runpop on a real Apple Watch",
+    "Testing Fillo's widgets and Face ID lock on a real iPhone",
   ],
 };
 
@@ -73,6 +72,7 @@ const ALL_APPS: App[] = [
   { name: "Menchi Kana", badge: "208 kana", kind: "Language", note: "iPhone + web", line: "Hiragana and katakana along Fukuoka's subway lines, with handwriting checked stroke by stroke.", image: "/side/menchi-kana.png", href: "https://menchikana.brainchild.studio", series: "menchi" },
   { name: "Menchi Voca", badge: "120 words", kind: "Language", note: "iPhone + web", line: "120 Japanese words for a Fukuoka trip, by scene. Missed words come back after 1, 3 and 7 days.", image: "/side/menchi-voca.png", href: "https://menchivoca.brainchild.studio", series: "menchi" },
   { name: "Seoul Subway", badge: "24 lines", kind: "Transit", note: "iPhone + web", line: "The Seoul area subway in one app: map, live arrivals, routes, and a stamp for every station you get off at.", image: "/side/seoul-subway.png", href: "https://subway.brainchild.studio" },
+  { name: "Fillo", badge: "4 kinds of jars", kind: "Money", note: "iPhone + web", line: "Debts, installments and subscriptions, savings, and a trip budget, each kept as a jar that fills with every entry.", image: "/side/fillo.png", href: "https://fillo.brainchild.studio" },
   { name: "Puzzle Lounge", badge: "5 puzzles", kind: "Puzzles", note: "iPhone", line: "Five offline puzzles with endless levels, six difficulties, and a collectible every five levels.", image: "/side/puzzle-lounge.png", series: "boomchi" },
 ];
 export const APPS: App[] = ALL_APPS.filter((a) => !isHiddenApp(a.name.toLowerCase().replace(/\s+/g, "-")));

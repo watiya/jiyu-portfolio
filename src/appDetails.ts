@@ -23,10 +23,56 @@ export const APP_LINKS: Record<string, { privacy?: string; support?: string }> =
   "hangul-boom": { privacy: "https://hangul-boom.vercel.app/privacy.html" },
   "menchi-kana": { privacy: "https://menchi-kana.vercel.app/privacy.html" },
   "menchi-voca": { privacy: "https://menchi-voca.vercel.app/privacy.html" },
+  fillo: { privacy: "https://fillo.brainchild.studio/privacy", support: "https://fillo.brainchild.studio/support" },
   "seoul-subway": { privacy: "https://subway.brainchild.studio/privacy", support: "https://subway.brainchild.studio/support" },
 };
 
 const ALL_APP_DETAILS: AppDetail[] = [
+  {
+    slug: "fillo",
+    name: "Fillo",
+    title: "Every money goal as a jar that fills",
+    dek: "Debts, installments and subscriptions, savings, and a trip budget in one app. Each goal is a jar with an amount and a date, and every entry fills it a little.",
+    date: "Nov 2026",
+    meta: [
+      { label: "Role", value: "Product, design, and build" },
+      { label: "Platform", value: "iPhone app + web" },
+      { label: "Status", value: "On an iPhone, intro page and privacy policy live" },
+    ],
+    stack: ["React", "TypeScript", "Vite", "Capacitor", "SwiftUI widgets"],
+    day: [
+      { title: "On payday", body: "The home screen shows what is left to pay down and what is left to save, with the next payment dates in a short list.", shot: "/apps/fillo/home.png" },
+      { title: "When a payment goes out", body: "A payment date that has passed waits for a tap to confirm. The jar fills, and the remaining count and last payment date update.", shot: "/apps/fillo/inst.png" },
+      { title: "On the trip", body: "A trip jar turns the budget into money left for today in the local currency, day by day.", shot: "/apps/fillo/trip.png" },
+    ],
+    sections: [
+      {
+        heading: "The problem",
+        body: [
+          "Paying off a loan, keeping track of installments and subscriptions, saving up, and sticking to a trip budget usually live in different apps, or in none.",
+          "They are all the same shape: an amount, a date, and steady progress toward it. Fillo keeps each one as a jar, so the four sit on one screen.",
+        ],
+      },
+      {
+        heading: "What I built",
+        body: [
+          "Four kinds of jars, each with its own color: debt, installments and subscriptions, savings, and trip. Loans support equal payments, equal principal, and lump sum at maturity.",
+          "A Plan tab with the estimated date every debt is paid off, a comparison of paying the smallest or the highest interest first, a monthly budget, and milestones. When a debt ends, its monthly payment can roll into another jar.",
+          "A Review tab with a monthly summary, six months of bars, totals by kind, interest saved, and jars finished this year.",
+          "On the iPhone: payment reminders, Face ID lock, home screen and lock screen widgets, dark mode, and a backup file export.",
+        ],
+      },
+      {
+        heading: "Decisions worth noting",
+        body: [
+          "No bank connection, no server, and no login. Everything is entered by hand and stays on the phone.",
+          "No financial product suggestions. Every calculated date and amount is marked as an estimate.",
+          "One switch hides amounts in notifications and widgets, and the app covers itself in the app switcher.",
+        ],
+      },
+    ],
+    shots: ["/apps/fillo/home.png", "/apps/fillo/inst.png", "/apps/fillo/plan.png", "/apps/fillo/trip.png"],
+  },
   {
     slug: "seoul-subway",
     name: "Seoul Subway",

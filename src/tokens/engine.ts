@@ -582,6 +582,18 @@ const ALL_PRESETS: Preset[] = [
     ],
     dials: { hue: hueOf("#00a84d"), primary: "#171717", secondary: "#00a84d", neutral: "neutral", radius: 20, theme: "light", pairing: "geist" },
   },
+  // 필로: 기본 강조는 먹색, 통 색은 종류마다(빚 주황 · 저축 초록). apps/fillo src/design/screens.css .lj-*
+  {
+    slug: "fillo",
+    name: "Fillo",
+    swatches: [
+      { hex: "#0e0e0e", label: "ink" },
+      { hex: "#ff4a1c", label: "debt" },
+      { hex: "#16a34a", label: "save" },
+      { hex: "#ffffff", label: "paper" },
+    ],
+    dials: { hue: hueOf("#ff4a1c"), primary: "#0e0e0e", secondary: "#ff4a1c", neutral: "neutral", paper: "white", radius: 20, theme: "light", pairing: "geist" },
+  },
   // 붐치·멘치 시리즈 새 앱. 색은 각 앱 :root 변수 그대로(hangul-boom·puzzle-lounge src/styles.css, menchi-kana·menchi-voca src/index.css)
   // 한글붐: 라임 타일 + 먹색 버튼이 주, 바이올렛은 로마자·강조에만. 라임이 주색이라 primary 로 그대로
   {

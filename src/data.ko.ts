@@ -46,6 +46,7 @@ export const APPS_KO: Record<string, { koName: string; badge: string; kind: stri
   "Menchi Kana": { koName: "멘치카나", badge: "일본어 글자 208자", kind: "언어", note: "iPhone + 웹", line: "후쿠오카 지하철 노선을 따라 히라가나와 가타카나를 배웁니다. 손글씨는 획마다 채점합니다." },
   "Menchi Voca": { koName: "멘치보카", badge: "단어 120", kind: "언어", note: "iPhone + 웹", line: "후쿠오카 여행 일본어 단어 120개를 장면별로 익힙니다. 틀린 단어는 1일, 3일, 7일 뒤에 다시 나옵니다." },
   "Seoul Subway": { koName: "지하철대통합", badge: "노선 24개", kind: "교통", note: "iPhone + 웹", line: "수도권 지하철 노선도, 실시간 도착, 길찾기를 한 앱에 담고, 내려 본 역마다 도장을 찍습니다." },
+  Fillo: { koName: "필로", badge: "통 4종", kind: "돈 관리", note: "iPhone + 웹", line: "빚, 할부와 구독, 저축, 여행 예산을 통 하나씩으로 다룹니다. 기록할 때마다 통이 찹니다." },
   "Puzzle Lounge": { koName: "퍼즐 라운지", badge: "퍼즐 5종", kind: "퍼즐", note: "iPhone", line: "오프라인 퍼즐 다섯 종입니다. 끝없는 레벨과 난이도 6단계가 있고, 5레벨마다 수집품이 나옵니다." },
   Bapsim: { koName: "밥심", badge: "설계 중", kind: "식단", note: "설계 캔버스", line: "한 상 그대로 기록하는 한식 식단. 밥, 국, 반찬을 네 번 탭으로." },
 };
@@ -53,6 +54,5 @@ export const APPS_KO: Record<string, { koName: string; badge: string; kind: stri
 // data.ts 의 NOW.items 와 같은 순서
 export const NOW_KO: string[] = [
   "11월 말 후쿠오카 여행 전에 또쿠오카를 마무리하고 있습니다",
-  "서울붐 App Store 제출을 준비하고 있습니다",
-  "런팝을 Apple Watch 실기기로 시험하고 있습니다",
+  "필로의 위젯과 Face ID 잠금을 iPhone 실기기로 시험하고 있습니다",
 ];
