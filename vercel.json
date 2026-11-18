@@ -1,6 +1,28 @@
 {
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "brainchild.studio"
+        }
+      ],
+      "destination": "https://play.brainchild.kr/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.brainchild.studio"
+        }
+      ],
+      "destination": "https://play.brainchild.kr/:path*",
+      "permanent": false
+    },
+    {
       "source": "/writing",
       "destination": "/cases",
       "permanent": true
@@ -13,7 +35,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/projects",
+      "destination": "https://play.brainchild.kr/projects",
       "permanent": true
     },
     {
@@ -68,7 +90,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/:section",
+      "destination": "https://play.brainchild.kr/:section",
       "permanent": true
     },
     {
@@ -79,7 +101,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/:section?lang=ko",
+      "destination": "https://play.brainchild.kr/:section?lang=ko",
       "permanent": true
     },
     {
@@ -90,7 +112,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/:section",
+      "destination": "https://play.brainchild.kr/:section",
       "permanent": true
     },
     {
@@ -101,7 +123,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/:section/:rest+",
+      "destination": "https://play.brainchild.kr/:section/:rest+",
       "permanent": true
     },
     {
@@ -112,7 +134,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/:section/:rest+?lang=ko",
+      "destination": "https://play.brainchild.kr/:section/:rest+?lang=ko",
       "permanent": true
     },
     {
@@ -123,7 +145,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/:section/:rest+",
+      "destination": "https://play.brainchild.kr/:section/:rest+",
       "permanent": true
     },
     {
@@ -134,7 +156,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/resume",
+      "destination": "https://play.brainchild.kr/resume",
       "permanent": true
     },
     {
@@ -145,7 +167,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/resume?lang=ko",
+      "destination": "https://play.brainchild.kr/resume?lang=ko",
       "permanent": true
     },
     {
@@ -156,7 +178,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/resume",
+      "destination": "https://play.brainchild.kr/resume",
       "permanent": true
     },
     {
@@ -167,7 +189,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/resume?lang=ko",
+      "destination": "https://play.brainchild.kr/resume?lang=ko",
       "permanent": true
     },
     {
@@ -178,7 +200,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/resume",
+      "destination": "https://play.brainchild.kr/resume",
       "permanent": true
     },
     {
@@ -211,7 +233,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/projects?lang=ko",
+      "destination": "https://play.brainchild.kr/projects?lang=ko",
       "permanent": true
     },
     {
@@ -222,7 +244,7 @@
           "value": "portfolio.brainchild.kr"
         }
       ],
-      "destination": "https://www.brainchild.studio/projects",
+      "destination": "https://play.brainchild.kr/projects",
       "permanent": true
     },
     {

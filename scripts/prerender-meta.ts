@@ -14,7 +14,7 @@ import { isPrivatePath } from "../src/hidden.ts";
 import { TOOL_SLUGS } from "../src/tools/slugs.ts";
 import canvasIndex from "../src/content/canvas/index.json" with { type: "json" };
 
-export const SITE = "https://www.brainchild.studio";
+export const SITE = "https://play.brainchild.kr";
 export const DEFAULT_IMAGE = "/og.png";
 /** 한국어판 프리렌더가 들어가는 dist 아래 폴더 */
 export const KO_DIR = "__ko";
