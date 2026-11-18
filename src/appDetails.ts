@@ -23,8 +23,8 @@ export const APP_LINKS: Record<string, { privacy?: string; support?: string }> =
   "hangul-boom": { privacy: "https://hangul-boom.vercel.app/privacy.html" },
   "menchi-kana": { privacy: "https://menchi-kana.vercel.app/privacy.html" },
   "menchi-voca": { privacy: "https://menchi-voca.vercel.app/privacy.html" },
-  fillo: { privacy: "https://fillo.brainchild.kr/privacy", support: "https://fillo.brainchild.kr/support" },
-  "seoul-subway": { privacy: "https://subway.brainchild.kr/privacy", support: "https://subway.brainchild.kr/support" },
+  fillo: { privacy: "https://fillo.brainchild.studio/privacy", support: "https://fillo.brainchild.studio/support" },
+  "seoul-subway": { privacy: "https://subway.brainchild.studio/privacy", support: "https://subway.brainchild.studio/support" },
 };
 
 const ALL_APP_DETAILS: AppDetail[] = [
