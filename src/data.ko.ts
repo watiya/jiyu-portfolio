@@ -38,8 +38,6 @@ export const APPS_KO: Record<string, { koName: string; badge: string; kind: stri
   Runpop: { koName: "런팝", badge: "iPhone + Watch", kind: "러닝", note: "iOS + watchOS", line: "음악은 그대로 두고 한 걸음에 한 번 조용히 클릭하는 러닝 메트로놈입니다." },
   Ttokuoka: { koName: "또쿠오카", badge: "최신", kind: "여행", note: "iPhone + 웹", line: "한국어로 된 후쿠오카 길잡이입니다. 야타이, 회화, 면세 도움을 담았고 오프라인에서도 됩니다." },
   Carenote: { koName: "케어노트", badge: "iPhone 프로토타입", kind: "건강", note: "iPhone + 웹", line: "이식 환자의 진료일, 약, 검사 추이를 중심으로 다시 설계한 병원 앱입니다." },
-  Ppopjido: { koName: "뽑지도", badge: "지도 + 카드", kind: "수집", note: "웹", line: "한국과 일본의 캡슐토이와 포켓몬 카드 지도." },
-  Tory: { koName: "토리", badge: "프로토타입", kind: "커플", note: "웹 프로토타입", line: "하나의 실로 이어진 커플 앱. 타임라인과 실시간 데이트 모드." },
   Wishrun: { koName: "위시런", badge: "iPhone + 건강", kind: "러닝", note: "iOS", line: "첫 5km 대회를 위한 7주 플랜을 앱으로. 애플 건강에서 달리기 기록을 읽습니다." },
   Finishline: { koName: "피니시라인", badge: "5km~풀코스", kind: "러닝", note: "iPhone + 웹", line: "5km부터 풀코스까지, 대회와 날짜를 고르면 D-day에서 거꾸로 훈련 플랜을 짜 주는 러닝 코치입니다." },
   "Hangul Boom": { koName: "한글붐", badge: "정거장 9", kind: "언어", note: "iPhone + 웹", line: "서울행 비행 중에 한글 읽기를 배웁니다. 붐치와 함께 정거장 아홉 곳을 지나고, 완전 오프라인입니다." },
@@ -48,7 +46,6 @@ export const APPS_KO: Record<string, { koName: string; badge: string; kind: stri
   "Seoul Subway": { koName: "지하철대통합", badge: "노선 24개", kind: "교통", note: "iPhone + 웹", line: "수도권 지하철 노선도, 실시간 도착, 길찾기를 한 앱에 담고, 내려 본 역마다 도장을 찍습니다." },
   Fillo: { koName: "필로", badge: "통 4종", kind: "돈 관리", note: "iPhone + 웹", line: "빚, 할부와 구독, 저축, 여행 예산을 통 하나씩으로 다룹니다. 기록할 때마다 통이 찹니다." },
   "Puzzle Lounge": { koName: "퍼즐 라운지", badge: "퍼즐 5종", kind: "퍼즐", note: "iPhone", line: "오프라인 퍼즐 다섯 종입니다. 끝없는 레벨과 난이도 6단계가 있고, 5레벨마다 수집품이 나옵니다." },
-  Bapsim: { koName: "밥심", badge: "설계 중", kind: "식단", note: "설계 캔버스", line: "한 상 그대로 기록하는 한식 식단. 밥, 국, 반찬을 네 번 탭으로." },
 };
 
 // data.ts 의 NOW.items 와 같은 순서

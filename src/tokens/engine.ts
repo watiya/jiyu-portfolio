@@ -523,35 +523,6 @@ const ALL_PRESETS: Preset[] = [
     dials: { hue: hueOf("#2f3fbf"), secondary: "#2f9e6b", neutral: "warm", radius: 18, theme: "light", pairing: "geist" },
   },
   {
-    slug: "ppopjido",
-    name: "Ppopjido",
-    swatches: [
-      { hex: "#8f78f7", label: "violet, sampled" },
-      { hex: "#d8f070", label: "lime, sampled" },
-      { hex: "#f8f8f0", label: "paper, sampled" },
-    ],
-    dials: { hue: hueOf("#8f78f7"), secondary: "#d8f070", neutral: "neutral", radius: 12, theme: "light", pairing: "grotesk" },
-  },
-  {
-    slug: "tory",
-    name: "Tory",
-    swatches: [
-      { hex: "#1b1b1a", label: "ink" },
-      { hex: "#c94a33", label: "vermilion" },
-    ],
-    dials: { hue: hueOf("#c94a33"), secondary: "#1b1b1a", neutral: "neutral", radius: 10, theme: "light", pairing: "editorial" },
-  },
-  {
-    slug: "bapsim",
-    name: "Bapsim",
-    swatches: [
-      { hex: "#f8875f", label: "orange, sampled" },
-      { hex: "#f5e9c8", label: "cream, sampled" },
-      { hex: "#121212", label: "night, sampled" },
-    ],
-    dials: { hue: hueOf("#f8875f"), secondary: "#f5e9c8", neutral: "warm", radius: 22, theme: "dark", pairing: "geist" },
-  },
-  {
     slug: "wishrun",
     name: "Wishrun",
     swatches: [
